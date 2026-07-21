@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Tree of Renée &amp; Léon Bundervoet</title>
+<style>
+  :root{
+    --bg:#f6f1e7; --panel:#fffdf8; --ink:#2c2a26; --muted:#6f695f; --line:#c9bda6;
+    --verified:#2f7d54; --provided:#2f5d8a; --assumed:#6d4a9c; --unknown:#9a938a; --unknown-bg:#efeae0;
+    --accent:#8a5a2b; --note:#a9781f; --note-bg:#fbf1dc; --pat:#8a5a2b; --mat:#3d6b74; --shadow:0 2px 10px rgba(60,50,30,.10);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;line-height:1.5;}
+  .wrap{max-width:1180px;margin:0 auto;padding:34px 22px 80px}
+  header.masthead{text-align:center;border-bottom:2px solid var(--line);padding-bottom:22px;margin-bottom:8px}
+  .crest{font-size:30px;letter-spacing:.35em;color:var(--accent);margin-bottom:6px}
+  h1{font-size:2.05rem;margin:.1em 0 .15em;font-weight:600}
+  .subtitle{color:var(--muted);font-size:1.02rem;font-style:italic;margin:0}
+  .compiled{color:var(--muted);font-size:.82rem;margin-top:10px;letter-spacing:.03em}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin:24px 0 6px;font-size:.8rem}
+  .legend span{display:inline-flex;align-items:center;gap:7px;color:var(--muted)}
+  .dot{width:13px;height:13px;border-radius:3px;display:inline-block;border:1px solid rgba(0,0,0,.15)}
+  .dot.v{background:#e8f4ec;border-color:var(--verified)} .dot.p{background:#e7eff7;border-color:var(--provided)}
+  .dot.a{background:#efe9f6;border-color:var(--assumed)} .dot.u{background:var(--unknown-bg);border-color:var(--line);border-style:dashed}
+  h2.section{font-size:1.35rem;margin:44px 0 6px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:6px;font-weight:600}
+  h2.pat{color:var(--pat);border-color:#d8c2a0} h2.mat{color:var(--mat);border-color:#bcd0d0}
+  h3.line{font-size:1.05rem;margin:24px 0 2px}
+  h3.pat{color:var(--pat)} h3.mat{color:var(--mat)}
+  .lead{color:var(--muted);margin:.1em 0 1em;font-size:.95rem}
+  .story{background:linear-gradient(180deg,#fbf5e9,#f4ecdc);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:18px 0 4px;font-size:.95rem}
+  .story h3{margin:0 0 6px;color:var(--accent);font-size:1.08rem} .story p{margin:.4em 0}
+
+  .tree{margin:20px 0 10px}
+  .gen{display:flex;flex-direction:column;align-items:center}
+  .genlabel{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:12px}
+  .couple{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap}
+  .couples{display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
+  .heart{display:flex;align-items:center;color:var(--accent);font-size:1.05rem;padding:0 11px}
+  .row-of{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+  .connector{width:2px;height:24px;background:var(--line);margin:6px auto}
+  .siblingaside{font-size:.8rem;color:var(--muted);text-align:center;margin:8px auto 0;max-width:600px;font-style:italic}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 15px;min-width:198px;max-width:250px;box-shadow:var(--shadow);position:relative}
+  .card .name{font-weight:600;font-size:1.02rem;line-height:1.25} .card .rel{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+  .card .fact{font-size:.82rem;margin:2px 0} .card .fact .k{color:var(--muted)}
+  .badge{position:absolute;top:-9px;right:12px;font-size:.6rem;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:20px;border:1px solid;background:var(--panel)}
+  .card.verified{border-color:var(--verified)} .card.verified .badge{background:#e8f4ec;color:var(--verified);border-color:var(--verified)}
+  .card.provided{border-color:var(--provided)} .card.provided .badge{background:#e7eff7;color:var(--provided);border-color:var(--provided)}
+  .card.child{border-color:var(--accent);border-width:2px} .card.child .badge{background:#f4ecdc;color:var(--accent);border-color:var(--accent)}
+  .card.unknown{border-style:dashed;background:var(--unknown-bg)} .card.unknown .name{color:#7d766a} .card.unknown .badge{background:var(--unknown-bg);color:#7d766a;border-color:var(--line)}
+
+  .spine{position:relative;margin:14px auto 0;max-width:840px}
+  .anc{position:relative;padding:0 0 8px 32px;border-left:2px solid var(--line);margin-left:13px}
+  .anc:last-child{border-left-color:transparent}
+  .anc .gnum{position:absolute;left:-14px;top:2px;width:26px;height:26px;border-radius:50%;background:var(--verified);color:#fff;font-size:.66rem;display:flex;align-items:center;justify-content:center;font-weight:600;box-shadow:var(--shadow)}
+  .anc.prov .gnum{background:var(--provided)} .anc.asm .gnum{background:var(--assumed)} .anc.you .gnum{background:var(--accent)} .anc.unk .gnum{background:var(--unknown)} .anc.mat .gnum{background:var(--mat)}
+  .anc .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 14px;box-shadow:var(--shadow);margin-bottom:5px}
+  .anc.asm .box{border-color:var(--assumed);background:#efe9f6} .anc.prov .box{border-color:#a9c0d8} .anc.you .box{border-color:var(--accent)} .anc.unk .box{border-style:dashed;background:var(--unknown-bg)} .anc.mat .box{border-color:#bcd0d0}
+  .anc .nm{font-weight:600;font-size:.98rem} .anc .sp{color:var(--muted);font-weight:400}
+  .anc .meta{font-size:.82rem;color:var(--muted);margin-top:2px}
+  .anc .src{font-size:.71rem;color:var(--verified);margin-top:3px}
+  .anc .yrtag{display:inline-block;font-size:.71rem;color:var(--accent);font-weight:600;margin-right:8px}
+  .disc{display:flex;gap:7px;align-items:flex-start;margin-top:5px;background:var(--note-bg);border:1px solid #e6cf9a;border-radius:8px;padding:6px 10px}
+  .disc .lab{color:var(--note);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;flex-shrink:0;margin-top:1px} .disc .txt{font-size:.82rem;color:#5f5334}
+
+  .surnames{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+  .surname{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 15px;box-shadow:var(--shadow)}
+  .surname h3{margin:0 0 2px;font-size:1.08rem;color:var(--accent)} .surname .gloss{font-size:.81rem;color:var(--muted);font-style:italic;margin-bottom:5px}
+  .stat{display:flex;gap:8px;font-size:.8rem;margin:3px 0} .stat .k{color:var(--muted);min-width:74px;flex-shrink:0}
+  .minor-names{font-size:.84rem;color:var(--muted);margin-top:12px;font-style:italic;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 15px}
+  .callout{background:#e8f4ec;border:1px solid var(--verified);border-radius:10px;padding:16px 20px;margin-top:22px}
+  .callout h3{margin:0 0 8px;color:var(--verified);font-size:1.05rem} .callout ol{margin:6px 0 0;padding-left:20px} .callout li{margin:6px 0;font-size:.9rem}
+  .log{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:6px 20px;margin-top:16px}
+  .log .row{display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px dotted #e2d8c4;font-size:.88rem} .log .row:last-child{border-bottom:none}
+  .log .icon{font-size:1rem;flex-shrink:0;width:20px;text-align:center} .log .hit{color:var(--verified)} .log .part{color:var(--assumed)} .log .miss{color:#b06a2a} .log b{color:var(--ink)}
+  .resources{columns:2;column-gap:28px;margin-top:14px} .resources .res{break-inside:avoid;margin-bottom:12px;font-size:.86rem} .resources .res b{color:var(--accent)}
+  .resources a{color:var(--provided);text-decoration:none;border-bottom:1px solid rgba(47,93,138,.3);word-break:break-word}
+  .sources{font-size:.78rem;color:var(--muted);margin-top:14px} .sources a{color:var(--muted)}
+  footer{margin-top:44px;text-align:center;color:var(--muted);font-size:.78rem;border-top:1px solid var(--line);padding-top:18px}
+  @media (max-width:820px){.surnames{grid-template-columns:1fr} .couples{gap:18px} .resources{columns:1} .heart{width:100%;padding:6px 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="crest">❦</div>
+    <h1>The Family Tree of Renée &amp; Léon Bundervoet</h1>
+    <p class="subtitle">Bundervoet–De Keyser of the Flemish coast &amp; Thumas–Janssens of the Brussels edge, meeting in Leuven</p>
+    <p class="compiled">Updated 21 July 2026 · family knowledge + Belgian civil records + Geneanet trees + a memorial card</p>
+  </header>
+
+  <div class="legend">
+    <span><i class="dot v"></i> Documented (records)</span>
+    <span><i class="dot p"></i> From you / family</span>
+    <span><i class="dot a"></i> Strongly supported</span>
+    <span><i class="dot u"></i> Unknown — to research</span>
+  </div>
+
+  <div class="story">
+    <h3>The family in one paragraph</h3>
+    <p>Renée (2017) and Léon (2019) were born in <b>Leuven</b>. Their father's families run to the <b>Flemish coast</b>: the Bundervoets, documented to <b>Evergem</b> farmers of the early 1700s and then dock-workers of <b>Oostende</b>; the Dekeysers and Devriendts of Oostende, one branch of which took wartime refuge in <b>London</b>. Deep collateral lines (Vanstechelman) reach back to the <b>1660s</b>. Their mother Dorien's families belong to the <b>Brussels periphery</b> — Thumas, Janssens, Vandenhoeck and Van&nbsp;Craenenbroeck of <b>Kraainem and Zaventem</b>. Two very different corners of Belgium, joined in these two children.</p>
+  </div>
+
+  <!-- CHILDREN & PARENTS -->
+  <h2 class="section">Renée &amp; Léon and Their Parents</h2>
+  <div class="tree">
+    <div class="gen"><div class="genlabel">Parents</div>
+      <div class="couple">
+        <div class="card verified"><span class="badge">father</span><div class="rel">Father</div><div class="name">Shaun Bundervoet</div>
+          <div class="fact"><span class="k">Field:</span> MSc, VUB (ETRO); later KBC</div></div>
+        <div class="heart">❦</div>
+        <div class="card provided"><span class="badge">mother</span><div class="rel">Mother</div><div class="name">Dorien Thumas</div>
+          <div class="fact"><span class="k">Born:</span> 9 September 1988</div>
+          <div class="fact"><span class="k">Note:</span> Shaun &amp; Dorien — former partners, close co-parents</div></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+    <div class="gen"><div class="genlabel">The children</div>
+      <div class="row-of">
+        <div class="card child"><span class="badge">★</span><div class="rel">Daughter</div><div class="name">Renée Bundervoet</div><div class="fact"><span class="k">Born:</span> 21 June 2017 · Leuven</div></div>
+        <div class="card child"><span class="badge">★</span><div class="rel">Son</div><div class="name">Léon Bundervoet</div><div class="fact"><span class="k">Born:</span> 9 August 2019 · Leuven</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FATHER'S SIDE ============ -->
+  <h2 class="section pat">Father's Side · Bundervoet &amp; De Keyser</h2>
+  <div class="tree">
+    <div class="gen"><div class="genlabel">Paternal grandparents (Shaun's parents)</div>
+      <div class="couple">
+        <div class="card provided"><span class="badge">from you</span><div class="rel">Grandfather</div><div class="name">Ronny Bundervoet</div><div class="fact"><span class="k">Born:</span> 20 January 1964</div></div>
+        <div class="heart">❦</div>
+        <div class="card provided"><span class="badge">from you</span><div class="rel">Grandmother</div><div class="name">Cosette De Keyser</div><div class="fact"><span class="k">Born:</span> 30 November 1963</div></div>
+      </div>
+      <div class="siblingaside">Cosette's sister: <b>Sancha Dekeyser</b> ❦ Christophe Develder.</div>
+    </div>
+  </div>
+
+  <h3 class="line pat">1 · The Bundervoet line — to 1760 (Evergem → Oostende)</h3>
+  <div class="spine">
+    <div class="anc"><div class="gnum">1</div><div class="box"><div class="nm">Joannes Bundervoet <span class="sp">❦ Livina De Wilde</span></div><div class="meta"><span class="yrtag">–1760</span>Evergem. Livina d. 1750.</div>
+      <div class="disc"><span class="lab">Note</span><span class="txt">The earliest ancestor found — an established Evergem family by the early 1700s.</span></div></div></div>
+    <div class="anc"><div class="gnum">2</div><div class="box"><div class="nm">Christoffel Bundervoet <span class="sp">❦ Petronilla Bogaert</span></div><div class="meta"><span class="yrtag">–1786</span>Evergem. Petronilla d. 1792.</div></div></div>
+    <div class="anc"><div class="gnum">3</div><div class="box"><div class="nm">Philippus Jacobus Bundervoet <span class="sp">❦ Joanna Adriaenssens</span></div><div class="meta"><span class="yrtag">1756–1832</span>Married 1784. Joanna 1761–1833.</div></div></div>
+    <div class="anc"><div class="gnum">4</div><div class="box"><div class="nm">Judocus Bundervoet <span class="sp">❦ Francisca Roegiers</span></div><div class="meta"><span class="yrtag">1794–1860</span>Married 1834. Francisca (1808–1887), farm woman of Sleidinge. (1st wife Livina Segers, d. 1834.)</div>
+      <div class="disc"><span class="lab">Note</span><span class="txt">The branch point of the surname — your line runs through his son Bernardus; the other Bundervoet genealogy through his son Joannes-Baptista.</span></div></div></div>
+    <div class="anc"><div class="gnum">5</div><div class="box"><div class="nm">Bernardus Bundervoet <span class="sp">❦ Marie Eulalie Goethals</span></div><div class="meta"><span class="yrtag">1837–1900</span>Married 1875. Marie Eulalie (1842–1879), farm woman. (He remarried Rosalia Dhooge, 1881.)</div>
+      <div class="src">✓ Evergem birth akte 16 · marriage 16 · death 61</div>
+      <div class="disc"><span class="lab">Note</span><span class="txt">Bernardus was a farmer, innkeeper, tavern-keeper and shopkeeper.</span></div></div></div>
+    <div class="anc"><div class="gnum">6</div><div class="box"><div class="nm">Petrus Franciscus Bundervoet <span class="sp">❦ Augusta Vanstechelman</span></div><div class="meta"><span class="yrtag">1879–1943</span>Born Evergem · died Oostende. Married 1904. Augusta (1882 Mariakerke – 1922).</div>
+      <div class="src">✓ Evergem birth akte 41 · Augusta death akte 583 Oostende</div>
+      <div class="disc"><span class="lab">Note</span><span class="txt">The great migration — Evergem-born, he moved ~40 km to Oostende as a <i>werkman / meestergast</i>. His wife's Vanstechelman line is walked in section 2.</span></div></div></div>
+    <div class="anc asm"><div class="gnum">7</div><div class="box"><div class="nm">Alphonsus Bernardus Bundervoet <span class="sp">❦ Elodia Octavia Bostyn</span></div><div class="meta"><span class="yrtag">1905–1980</span>Oostende, labourer. Elodia (b. 1908 Oostende, a <i>werkster</i>). Married 1930.</div>
+      <div class="src">✓ Strongly supported — the Bostyn family is named on Marcel's memorial card</div></div></div>
+    <div class="anc prov"><div class="gnum">8</div><div class="box"><div class="nm">Marcel Bundervoet <span class="sp">❦ Rosette Van Iseghem</span> (later ❦ Francine Bisschop)</div><div class="meta"><span class="yrtag">1933–2015</span>Born &amp; died Oostende. Rosette (1st wife) was Ronny's mother.</div>
+      <div class="src">✓ Memorial card, Uitvaartcentrum Raes, Oostende</div></div></div>
+    <div class="anc prov"><div class="gnum">9</div><div class="box"><div class="nm">Ronny Bundervoet <span class="sp">❦ Cosette De Keyser</span></div><div class="meta"><span class="yrtag">b. 1964</span>Shaun's father.</div></div></div>
+    <div class="anc you"><div class="gnum">10</div><div class="box"><div class="nm">Shaun Bundervoet <span class="sp">→ Renée &amp; Léon (gen 11)</span></div></div></div>
+  </div>
+
+  <h3 class="line pat">2 · The Vanstechelman line — to 1667 (into the Bundervoet family via Augusta)</h3>
+  <p class="lead">Augusta Vanstechelman married Petrus Franciscus Bundervoet in 1904. Her own line — coastal West Flanders (Woumen, Zevekote, Mariakerke) — runs back nearly 360 years.</p>
+  <div class="spine">
+    <div class="anc"><div class="gnum">a</div><div class="box"><div class="nm">Andreas Van Stechelman <span class="sp">❦ Elisabeth Pluvier</span></div><div class="meta"><span class="yrtag">b. 1667</span>The deepest ancestor yet found in the whole tree.</div></div></div>
+    <div class="anc"><div class="gnum">b</div><div class="box"><div class="nm">Andreas Andries Vanstechelman <span class="sp">❦ Maria Anna Theresia Boxoens</span></div><div class="meta"><span class="yrtag">1698–&lt;1748</span>Maria Anna d. 1767.</div></div></div>
+    <div class="anc"><div class="gnum">c</div><div class="box"><div class="nm">Silvester Engelbertus Vanstechelman <span class="sp">❦ Angela Jacoba Casteleyn</span></div><div class="meta"><span class="yrtag">1740–1809</span>Born Woumen, died Zevekote. Angela 1741–1792. (Also wed Petronella Van Walleghem &amp; Maria Theresia Vanhille.)</div></div></div>
+    <div class="anc"><div class="gnum">d</div><div class="box"><div class="nm">Pieter Jacobus Vanstechelman <span class="sp">❦ Carolina Van Hille</span></div><div class="meta"><span class="yrtag">1770–1827</span>Carolina 1773–1809.</div></div></div>
+    <div class="anc"><div class="gnum">e</div><div class="box"><div class="nm">Felix Guillielmus Vanstechelman <span class="sp">❦ Sophia Van den Broucke</span></div><div class="meta"><span class="yrtag">1800–1869</span>An <i>herbergier</i> (innkeeper) of Zevekote/Mariakerke. Sophia 1815–1896. (1st wife Barbara Catharina Van Blaere, 1784–1844.)</div></div></div>
+    <div class="anc"><div class="gnum">f</div><div class="box"><div class="nm">Petrus Jacobus Vanstechelman <span class="sp">❦ Clementia Sophia Wagebaert</span></div><div class="meta"><span class="yrtag">1854–1927</span>Clementia 1853–1927 (her parents: Henricus Wagebaert ❦ Angela Vandillen).</div></div></div>
+    <div class="anc"><div class="gnum">g</div><div class="box"><div class="nm">Augusta Vanstechelman <span class="sp">→ ❦ Petrus Franciscus Bundervoet (1904)</span></div><div class="meta"><span class="yrtag">1882–1922</span>Joins the Bundervoet line at generation 6.</div></div></div>
+  </div>
+  <p class="lead" style="margin-top:10px">Other paternal mothers — <b>Marie Eulalie Goethals</b> (1842), <b>Francisca Roegiers</b> (1808 Sleidinge), <b>Joanna Adriaenssens</b> (1761), Petronilla Bogaert, Livina De Wilde, <b>Elodia Bostyn</b> (1908) and <b>Rosette Van Iseghem</b> — are dated but their parents aren't yet in the trees: the next female lines to walk.</p>
+
+  <!-- ============ COSETTE'S SIDE ============ -->
+  <h2 class="section mat">Cosette's Side · De Keyser, Vandewalle, Devriendt &amp; Smessaert</h2>
+
+  <h3 class="line mat">3 · The De Keyser line — Roland's father's side</h3>
+  <div class="spine">
+    <div class="anc mat"><div class="gnum">GG</div><div class="box"><div class="nm">Camillius Dekeyser <span class="sp">❦ Maria Justina Pollet</span></div><div class="meta"><span class="yrtag">1887 · 1885</span>Camillius b. 28 Jul 1887 Bredene, d. 24 Jul 1977 Oostende; Maria Justina b. 9 May 1885 Oostende. Married 10 Jan 1914 (civil only). Lived at Kaaistraat 30, Oostende.</div>
+      <div class="disc"><span class="lab">Discovery</span><span class="txt">Camillius later remarried Valeria Vandenbroucke. His &amp; Maria's parents aren't in the tree yet — the frontier of this branch.</span></div></div></div>
+    <div class="anc mat"><div class="gnum">G</div><div class="box"><div class="nm">Gustaaf Audomarus Dekeyser <span class="sp">❦ Simonne Vandewalle</span></div><div class="meta"><span class="yrtag">b. 1917</span>Gustaaf b. 20 Mar 1917 Oostende. Simonne Vandewalle (confirmed).</div>
+      <div class="disc"><span class="lab">Discovery</span><span class="txt">Gustaaf &amp; Simonne are the couple who fled to England in the war — their son Roland was born in Tottenham in 1943.</span></div></div></div>
+    <div class="anc prov"><div class="gnum">R</div><div class="box"><div class="nm">Roland De Keyser <span class="sp">❦ Huguette Devriendt</span></div><div class="meta"><span class="yrtag">1943–2003</span>Born Tottenham, London; buried Stene, Oostende.</div></div></div>
+    <div class="anc prov"><div class="gnum">C</div><div class="box"><div class="nm">Cosette De Keyser <span class="sp">❦ Ronny Bundervoet</span> · sister Sancha ❦ Christophe Develder</div><div class="meta"><span class="yrtag">b. 1963</span>Shaun's mother.</div></div></div>
+  </div>
+
+  <h3 class="line mat">4 · The Devriendt line — Huguette's father's side</h3>
+  <div class="spine">
+    <div class="anc mat"><div class="gnum">GG</div><div class="box"><div class="nm">Camiel Theophiel Devriendt <span class="sp">❦ Mathildis Clothildis Declercq</span></div><div class="meta"><span class="yrtag">late 1800s</span>Stene / Oostende. Parents of Marcel Devriendt.</div></div></div>
+    <div class="anc mat"><div class="gnum">G</div><div class="box"><div class="nm">Marcel Désiré Devriendt <span class="sp">❦ Yvonne Smessaert</span></div><div class="meta"><span class="yrtag">1914–2000</span>Marcel b. 1 Aug 1914 Stene, d. 26 Feb 2000 Oostende — a <i>smid</i> (blacksmith). Married 16 Oct 1937, Stene.</div></div></div>
+    <div class="anc prov"><div class="gnum">H</div><div class="box"><div class="nm">Huguette Devriendt <span class="sp">❦ Roland De Keyser</span></div><div class="meta"><span class="yrtag">b. 1943</span>Living. Siblings: <b>René</b> &amp; <b>Sonja</b> Devriendt.</div></div></div>
+  </div>
+
+  <h3 class="line mat">5 · The Smessaert line — Huguette's mother's side (to ~1830)</h3>
+  <div class="spine">
+    <div class="anc mat"><div class="gnum">a</div><div class="box"><div class="nm">Franciscus Leopoldus Smessaert <span class="sp">❦ Anna Francisca Morree</span></div><div class="meta"><span class="yrtag">~1830s</span>Parents of Joannes Franciscus.</div></div></div>
+    <div class="anc mat"><div class="gnum">b</div><div class="box"><div class="nm">Joannes Franciscus Smessaert <span class="sp">❦ Eugenia Mathildis Ramon</span></div><div class="meta"><span class="yrtag">1857–&lt;1919</span>Born Oostende, a <i>werkman</i>. Married 1882. Eugenia b. 1860. (Fifteen children — many died in infancy.)</div></div></div>
+    <div class="anc mat"><div class="gnum">c</div><div class="box"><div class="nm">Georgius Antonius Julianus Smessaert <span class="sp">❦ Joanna Paula Devos</span></div><div class="meta"><span class="yrtag">1894 · 1896</span>Joanna Paula Devos (her parents: Petrus Jacobus Franciscus Devos ❦ Charlotte Maria Loncke).</div></div></div>
+    <div class="anc mat"><div class="gnum">d</div><div class="box"><div class="nm">Yvonne Smessaert <span class="sp">❦ Marcel Devriendt</span></div><div class="meta"><span class="yrtag">b. 1914</span>Born Oostende. Siblings Daniël (1917) &amp; Isabella (1919). → Huguette's mother.</div></div></div>
+  </div>
+
+  <!-- ============ DORIEN'S SIDE ============ -->
+  <h2 class="section mat">Mother's Side · Thumas &amp; Janssens (Kraainem / Zaventem)</h2>
+  <div class="tree">
+    <div class="gen"><div class="genlabel">Maternal grandparents (Dorien's parents)</div>
+      <div class="couple">
+        <div class="card provided"><span class="badge">from you</span><div class="rel">Grandfather</div><div class="name">Thiery Thumas</div><div class="fact"><span class="k">Born:</span> 29 March 1960</div></div>
+        <div class="heart">❦</div>
+        <div class="card provided"><span class="badge">from you</span><div class="rel">Grandmother</div><div class="name">Christiane Janssens</div><div class="fact"><span class="k">Born:</span> 10 March 1961</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="spine">
+    <div class="anc mat"><div class="gnum">GG</div><div class="box"><div class="nm">— Thumas <span class="sp">❦ Juliette Vandenhoeck</span> &nbsp;|&nbsp; René Janssens <span class="sp">❦ Anna Van Craenenbroeck</span></div>
+      <div class="meta"><span class="yrtag">great-grandparents</span>Thiery's mother <b>Juliette Vandenhoeck</b> (b. 4 Jan 1937); his father a Thumas. Christiane's parents <b>René Janssens</b> &amp; <b>Anna Van Craenenbroeck</b>.</div>
+      <div class="disc"><span class="lab">Note</span><span class="txt">The Zaventem cemetery records two Thumas men of that generation — Julien (1933–2006) and Georges (1937–2017, ❦ Mariette Vandenbrandt) — one may be Thiery's father or uncle. Van Craenenbroeck clusters near Kraainem (Wezembeek-Oppem). These 20th-century grandparents sit behind the privacy wall.</span></div></div></div>
+    <div class="anc prov"><div class="gnum">G</div><div class="box"><div class="nm">Thiery Thumas <span class="sp">❦ Christiane Janssens</span></div><div class="meta"><span class="yrtag">1960 · 1961</span>Dorien's parents.</div></div></div>
+    <div class="anc prov"><div class="gnum">D</div><div class="box"><div class="nm">Dorien Thumas <span class="sp">❦ (with Shaun Bundervoet)</span></div><div class="meta"><span class="yrtag">b. 1988</span>Mother of Renée &amp; Léon.</div></div></div>
+    <div class="anc you"><div class="gnum">★</div><div class="box"><div class="nm">Renée (2017) &amp; Léon (2019) <span class="sp">— born Leuven</span></div></div></div>
+  </div>
+
+  <!-- ============ RESEARCH LOG ============ -->
+  <h2 class="section">Research Log</h2>
+  <div class="log">
+    <div class="row"><span class="icon hit">✓</span><div><b>Roland's Dekeyser line back to 1885.</b> Roland → <b>Gustaaf Audomarus Dekeyser</b> (b. 1917 Oostende) → <b>Camillius Dekeyser</b> (1887 Bredene – 1977 Oostende) &amp; <b>Maria Justina Pollet</b> (1885 Oostende), married 1914, of Kaaistraat 30. Gustaaf &amp; Simonne Vandewalle are the couple who fled to wartime London.</div></div>
+    <div class="row"><span class="icon hit">✓</span><div><b>The Vanstechelman line reaches 1667</b> — Augusta → Petrus Jacobus (1854) → Felix Guillielmus (1800, innkeeper) → Pieter Jacobus (1770) → Silvester Engelbertus (1740) → Andreas Andries (1698) → <b>Andreas Van Stechelman (b. 1667)</b>, bringing in Van Hille, Casteleyn, Boxoens, Pluvier, Van Walleghem, Van den Broucke, Wagebaert &amp; Vandillen.</div></div>
+    <div class="row"><span class="icon hit">✓</span><div><b>The Devriendt &amp; Smessaert lines extended.</b> Huguette → Marcel Devriendt (blacksmith, 1914) &amp; Yvonne Smessaert (1914) → Smessaert back to <b>Franciscus Leopoldus Smessaert × Anna Morree</b> (~1830s), with the Ramon, Devos &amp; Loncke lines. Marcel's parents: Camiel Theophiel Devriendt × Mathildis Declercq. Huguette's siblings: René &amp; Sonja.</div></div>
+    <div class="row"><span class="icon hit">✓</span><div><b>A living relative found.</b> Camillius Dekeyser appears as a <i>direct ancestor</i> (Sosa 24) in the Geneanet tree of <b>Sandra Dekeyser</b> — she descends from the same Camillius × Maria Pollet, via their son Alfons (1905–1972). A real cousin, and a possible contact for the Dekeyser line.</div></div>
+    <div class="row"><span class="icon miss">—</span><div><b>Online trees now exhausted for the frontiers.</b> With full (premium) access I checked every tree carrying these people: Camillius Dekeyser's &amp; Maria Pollet's parents, Simonne Vandewalle's, Elodia Bostyn's, and the Goethals (1842) &amp; Roegiers (1808) mothers' parents are in <i>no one's</i> tree — they survive only in the primary <b>civil-registration scans</b> (e.g. Camillius's 1914 Oostende marriage, or the Evergem/Sleidinge marriage acts, which name the parents). Reading those on <a href="https://search.arch.be">search.arch.be</a> is the way onward.</div></div>
+    <div class="row"><span class="icon part">≈</span><div><b>Behind the modern privacy wall:</b> Dorien's Brabant grandparents (Vandenhoeck, Janssens, Van Craenenbroeck) — 20th-century, so not yet in open records regardless of access.</div></div>
+  </div>
+
+  <!-- ============ SURNAMES ============ -->
+  <h2 class="section">The Surnames</h2>
+  <div class="surnames">
+    <div class="surname"><h3>Bundervoet</h3><div class="gloss">rare Flemish name, from a field/place</div><div class="stat"><span class="k">Cradle</span><span>Evergem since the 1700s; → Oostende c.1900</span></div></div>
+    <div class="surname"><h3>De Keyser / Dekeyser</h3><div class="gloss">“the Emperor” (from <i>keizer</i>)</div><div class="stat"><span class="k">Branch</span><span>Oostende / Bredene</span></div></div>
+    <div class="surname"><h3>Devriendt</h3><div class="gloss">“the friend / kinsman”</div><div class="stat"><span class="k">Branch</span><span>Stene / Oostende (blacksmiths)</span></div></div>
+    <div class="surname"><h3>Vandewalle</h3><div class="gloss">“from the rampart / wall”</div><div class="stat"><span class="k">Enters via</span><span>Roland's mother Simonne</span></div></div>
+    <div class="surname"><h3>Vanstechelman</h3><div class="gloss">deep coastal line to 1667</div><div class="stat"><span class="k">Home</span><span>Woumen · Zevekote · Mariakerke</span></div></div>
+    <div class="surname"><h3>Thumas · Janssens</h3><div class="gloss">Dorien's side — Brussels edge</div><div class="stat"><span class="k">Meaning</span><span>“son of Thomas” · “son of Jan”</span></div></div>
+  </div>
+  <p class="minor-names"><b>Ancestral surnames now in the tree.</b> Bundervoet branch: Goethals, Roegiers, Adriaenssens, Bogaert, De Wilde, Segers, Van Iseghem, Bostyn, Bisschop; Vanstechelman sub-line — Van Hille, Casteleyn, Boxoens, Pluvier, Van Walleghem, Van den Broucke, Van Blaere, Wagebaert, Vandillen. De Keyser branch: Pollet, Vandenbroucke. Devriendt branch: Declercq, Smessaert, Morree, Ramon, Devos, Loncke. Thumas branch: Vandenhoeck, Van Craenenbroeck, Vandenbrandt.</p>
+
+  <!-- ============ GO DEEPER ============ -->
+  <h2 class="section">How to Go Deeper</h2>
+  <div class="callout">
+    <h3>The highest-value next steps</h3>
+    <ol>
+      <li><b>Camillius Dekeyser's parents</b> (b. 1887 Bredene) — the Bredene &amp; Oostende registers on <a href="https://search.arch.be">search.arch.be</a> would extend Roland's direct line further.</li>
+      <li><b>Simonne Vandewalle's line</b> — several Ostend Simonnes exist; her exact record (or a family note) would fix her parents.</li>
+      <li><b>Elodia Bostyn's and the Goethals/Roegiers mothers' parents</b> — the remaining Bundervoet-side female lines.</li>
+      <li><b>Dorien's Brabant grandparents</b> — Kraainem, Zaventem &amp; Wezembeek-Oppem registers for Vandenhoeck, Janssens &amp; Van Craenenbroeck.</li>
+      <li><b>Ask the living elders</b> (Huguette; Dorien's parents) to confirm names &amp; the wartime story.</li>
+    </ol>
+  </div>
+  <div class="resources">
+    <div class="res"><b>State Archives of Belgium</b> — <a href="https://search.arch.be">search.arch.be</a>. Evergem, Oostende, Bredene, Zaventem &amp; Kraainem registers.</div>
+    <div class="res"><b>Carlo Fauconier's tree</b> — <a href="https://gw.geneanet.org/fauconier?n=bundervoet">geneanet.org/fauconier</a> (Bundervoets).</div>
+    <div class="res"><b>Dina Vanhoorne's tree</b> — <a href="https://gw.geneanet.org/dvanhoorne?n=dekeyser">geneanet.org/dvanhoorne</a> (Dekeyser / Oostende).</div>
+    <div class="res"><b>Werner Osaer's tree</b> — <a href="https://gw.geneanet.org/wernero?n=devriendt">geneanet.org/wernero</a> (Devriendt / Smessaert).</div>
+    <div class="res"><b>Christian Vanstechelman's tree</b> — <a href="https://gw.geneanet.org/stechec?n=vanstechelman">geneanet.org/stechec</a> (deep Vanstechelman).</div>
+    <div class="res"><b>Patrick Loncke's tree</b> — <a href="https://gw.geneanet.org/nanook56?n=dekeyser">geneanet.org/nanook56</a> (Dekeyser / Devriendt).</div>
+  </div>
+
+  <p class="sources"><b>Sources:</b> Marcel Bundervoet memorial card (family); Geneanet trees of Carlo Fauconier, Dina Vanhoorne, Werner Osaer, Christian Vanstechelman &amp; Patrick Loncke (with Evergem/Oostende/Sleidinge/Mariakerke civil-record citations); Geneanet record &amp; cemetery indexes; <a href="http://www.bauwens-gent.be/bundervermeu/parenteelJoannesBundervoet.htm">Bauwens parenteel</a>; surname-etymology references; VUB/ResearchGate for Shaun. Names, dates &amp; places for living generations as provided by the family.</p>
+
+  <footer>
+    The family tree of Renée &amp; Léon Bundervoet. Documented lines rest on Belgian civil records via Geneanet trees; Marcel's parentage is strongly supported by his memorial card; living generations are as the family provided. Private living individuals were not researched beyond the names given.<br>
+    Updated 21 July 2026
+  </footer>
+
+</div>
+</body>
+</html>
