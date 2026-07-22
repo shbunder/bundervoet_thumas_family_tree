@@ -24,7 +24,14 @@ FamilyTree.groups([
       "christoffel",
       "bogaert",
       "joannes_b",
-      "livina_dewilde"
+      "livina_dewilde",
+      "livina_stockman",
+      "joannes_b1637",
+      "joanna_verbrugghe",
+      "segerius_bundervoet",
+      "joanna_vanhecke",
+      "livinus_bundervoet",
+      "petrus_bundervoet1560"
     ],
   },
   {

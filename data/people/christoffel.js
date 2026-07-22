@@ -7,8 +7,8 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   father: "joannes_b",
-  mother: "livina_dewilde",
+  mother: "livina_stockman",
   spouse: { name: "Petronilla Bogaert", detail: "d. 1792" },
-  source: "Geneanet trees wernervols, wvermeire1, koenlaga, dyderick (Evergem, par. Sint-Christoffel)",
-  note: "Born 1709, Evergem. Parents Joannes Bundervoet x Livina De Wilde (confirmed across several Evergem trees). Children with Petronilla Bogaert: Guillaume (1731-1814), Joanna Maria (1741-1815), Maria Anna (1746-1825) and Philippus Jacobus (1756-1832).",
+  source: "Geneanet trees paulderidder, glorieuxp, wernervols (Evergem, par. Sint-Christoffel)",
+  note: "Born 1709, Evergem. Son of Joannes Bundervoet's FIRST marriage, to Livina Stockman (not his second wife De Wilde). Children with Petronilla Bogaert: Guillaume (1731), Joanna Maria (1741), Maria Anna (1746), Philippus Jacobus (1756).",
 });
