@@ -2,7 +2,7 @@
 
 *Compiled during the Cowork research sessions. This is the companion dossier to the interactive tree (`Renee-Leon-family-tree.html`). It records what is documented, what is inferred, where each line ends, and — most usefully — the **exact archive record** that would break each remaining wall.*
 
-**Status:** 148 people. Deepest documented roots reach the early 1600s.
+**Status:** 156 people. Deepest documented roots reach the early 1600s.
 **Confidence coding in the tree:** green = documented record · blue = family knowledge · purple = strongly supported/inferred · grey dashed = unknown.
 
 ---
@@ -136,5 +136,26 @@ worth checking against Huguette's Devriendt line, though probably unrelated.
 
 **Also this session:** Marcel's full name recorded as **Marcel Henri Bundervoet**. Trees added
 to the source list: `bartvanhooren` and `gverdievel` (deep Van Iseghem-Vincke ancestry, Oostende).
+
+## 9. Update — Bostyn & Stroobandt lines extended (Marcel's mother's side)
+
+Using the marriage-act / sibling strategy (a marriage act names both spouses' parents),
+two frontiers on Elodia Bostyn's ancestry were opened:
+
+- **Henricus Josephus Bostyn (b. 18 Dec 1841 Varsenare, innkeeper)** — parents now
+  documented via his 1867 Sint-Andries marriage act (Geneanet tree `stefanieschil`):
+  **Henricus Josephus Bostin (1801–1867) × Anna Theresia Perquy (1806)**. One generation
+  higher on the Perquy side: **Joannes Perquy × Agatha Stekelorum (d. 1855)**.
+- **Juliana Stroobandt (12 Sep 1839 Oedelem – 11 Feb 1921 Oostkamp)** — parents now
+  documented (Geneanet tree `kathrynann`): **Florentinus Stroobandt (1811–1876) × Rosalia
+  Caeckaert (1815)**; grandparents **Jacobus Stroobandt (1782–1821) × Joanna Keirsebilck
+  (1791–1866)**.
+- **Mathilde Desmet** (Henricus's wife) precisely dated: **b. 21 Feb 1841 Sint-Andries**;
+  her own parents remain the frontier (her 1841 Sint-Andries birth act).
+
+New frontiers to pull next: parents of **Henricus Josephus Bostin (1801)**; parents of
+**Joannes Perquy** and **Agatha Stekelorum**; parents of **Rosalia Caeckaert (1815)**;
+parents of **Jacobus Stroobandt (1782)** and **Joanna Keirsebilck (1791)**; and
+**Mathilde Desmet's** parents. Trees added to the source list: `stefanieschil`, `kathrynann`.
 
 *End of log.*

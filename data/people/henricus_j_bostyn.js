@@ -6,9 +6,12 @@ FamilyTree.person({
   confidence: "doc",
   role: "herbergier (innkeeper)",
   branch: "Bundervoet",
+  father: "henr_jos_bostin",
+  mother: "anna_perquy",
   spouse: {
     name: "Mathilde Desmet",
     detail: "Sint-Andries, 11 Sep 1867",
   },
-  note: "FRONTIER — his own parents aren’t in the tree; they are in his 18 Dec 1841 Varsenare birth act (Rijksarchief).",
+  source: "1867 Sint-Andries marriage act (via Geneanet tree stefanieschil)",
+  note: "Parents named in his 18 Dec 1841 Varsenare birth act and 1867 Sint-Andries marriage act: Henricus Josephus Bostin (1801–1867) × Anna Theresia Perquy (1806).",
 });

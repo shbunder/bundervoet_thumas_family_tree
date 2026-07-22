@@ -6,6 +6,8 @@ FamilyTree.person({
   died: "11 Feb 1921 Oostkamp",
   confidence: "doc",
   branch: "Bundervoet",
-  source: "1960dirk (Dirk Teerlinck) tree; Oostkamp acts",
-  note: "FRONTIER — born Oedelem (not Oostkamp), married Carel Cappaert 1863. Her parents are in her Oedelem 1839 birth act, not yet transcribed online.",
+  father: "florentinus_stroobandt",
+  mother: "rosalia_caeckaert",
+  source: "1960dirk (Dirk Teerlinck) & kathrynann Geneanet trees; Oostkamp acts",
+  note: "Married Carel Cappaert 1863. Parents Florentinus Stroobandt (1811–1876) × Rosalia Caeckaert (1815); grandparents Jacobus Stroobandt (1782–1821) × Joanna Keirsebilck (1791–1866).",
 });

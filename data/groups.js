@@ -61,7 +61,15 @@ FamilyTree.groups([
       "carel_cappaert",
       "bernardus_cap",
       "sophia_vh",
-      "juliana_stroobandt"
+      "juliana_stroobandt",
+      "henr_jos_bostin",
+      "anna_perquy",
+      "joannes_perquy",
+      "agatha_stekelorum",
+      "florentinus_stroobandt",
+      "rosalia_caeckaert",
+      "jacobus_stroobandt",
+      "joanna_keirsebilck"
     ],
   },
   {

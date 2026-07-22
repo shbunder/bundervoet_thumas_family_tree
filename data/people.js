@@ -147,5 +147,13 @@ FamilyTree.roster([
   "eugenius_dv",
   "octavia_schal",
   "diane_vi",
-  "edi_vi"
+  "edi_vi",
+  "henr_jos_bostin",
+  "anna_perquy",
+  "joannes_perquy",
+  "agatha_stekelorum",
+  "florentinus_stroobandt",
+  "rosalia_caeckaert",
+  "jacobus_stroobandt",
+  "joanna_keirsebilck"
 ]);
