@@ -1,16 +1,15 @@
 FamilyTree.person({
   id: "vandenbemden",
   name: "Joanna Vandenbemden",
-  dates: "15 Jun 1882 Sint-Stevens-Woluwe –",
+  dates: "15 Jun 1882 Sint-Stevens-Woluwe – 29 Apr 1948 Kraainem",
   born: "15 Jun 1882 Sint-Stevens-Woluwe",
+  died: "29 Apr 1948 Kraainem",
   confidence: "doc",
-  role: "naaister",
+  role: "naaister (seamstress)",
   branch: "Thumas",
   father: "hendrik_vdb",
   mother: "coekelberghs",
-  spouse: {
-    name: "J.B. Georgius Thumas",
-    detail: "Kraainem, 3 Feb 1902",
-  },
-  note: "Her parents are named in her 1902 Kraainem marriage act (Belgian marriage-notice collection).",
+  spouse: { name: "J.B. Georgius Thumas", detail: "Kraainem, 3 Feb 1902" },
+  source: "Geneanet (jswaelens); her 1902 Kraainem marriage act",
+  note: "A seamstress; married J.B. Georgius Thumas in Kraainem in 1902. Her parents are named in that marriage act. Several of her children died in infancy.",
 });

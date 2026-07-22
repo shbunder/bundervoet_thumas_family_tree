@@ -1,14 +1,15 @@
 FamilyTree.person({
   id: "georges1_t",
   name: "Georges Thumas",
-  dates: "1744–1808",
-  born: "1744",
-  died: "1808",
+  dates: "14 Mar 1744 – 20 Nov 1808 · Grez-Doiceau",
+  born: "14 Mar 1744 Grez-Doiceau",
+  died: "20 Nov 1808 Grez-Doiceau",
   confidence: "doc",
+  role: "menuisier (schrijnwerker / carpenter)",
   branch: "Thumas",
   father: "jeanlambert_t",
   mother: "leclercq_t",
-  spouse: {
-    name: "Marie Catherine Noel",
-  },
+  spouse: { name: "Marie Catherine Noël", detail: "Grez-Doiceau, 3 Jan 1771" },
+  source: "Geneanet Thumas tree (m2155); Grez-Doiceau registers",
+  note: "The first of FOUR consecutive carpenter (menuisier) generations of Thumas in Grez-Doiceau. Recorded as a godfather (1771) and marriage witness (1775).",
 });

@@ -458,3 +458,28 @@ the Hamme (Oost-Vlaanderen) registers (AGATHA / FamilySearch).
 Validator green — 301 people.
 
 *End of log.
+
+## 33. Enrichment pass — Thumas line (Dorien's paternal side), Grez-Doiceau → Kraainem
+
+Full-line enrichment (dates, places, occupations, life detail) from the Geneanet Thumas trees
+(m2155, jswaelens) and Grez-Doiceau/Kraainem civil registers, verified generation-by-generation
+by parent/child links (not surname alone). Highlights now recorded on each person:
+- Antoine Thumas (1656 Biez–1707) — **bailiff (bailli) of Piétrebais**.
+- Jean Lambert (1701–1776) — **church warden & parish clerk**; our line is from his 2nd marriage
+  (Leclercq, Wavre 1743), not the 1st (Crèvecœur).
+- **Four consecutive carpenter (menuisier) generations** in Grez-Doiceau: Georges 1744 →
+  Georges Lambert 1772 → Georges 1804 (civil records correct the old "1805"). Marie Catherine
+  Noël (1751–1812), wife of the first, was a **beer seller**.
+- Georges Carolus Josephus (1836) — broke the carpentry tradition to become a **farmer &
+  innkeeper**, migrating to Kraainem / Sint-Stevens-Woluwe.
+- J.B. Georgius (1876–1944 Brussel) — factory worker and **municipal alderman (schepen)** of
+  Kraainem; m. Joanna Vandenbemden (seamstress) 1902.
+- Hendrik Vandenbemden b. Everberg 1849, d. Sint-Stevens-Woluwe 1889 (place corrected).
+
+Frontiers surfaced (recorded in notes, NOT yet grafted pending verification): Antoine's parents
+(Philippe Thumas × Anne Dujardin), Daix's (Henry Daix × Gertrude Hombroeck), Hendrik
+Vandenbemden's (J.B. Vandenbemden × Agatha Langa).
+
+Validator green — 301 people.
+
+*End of log.

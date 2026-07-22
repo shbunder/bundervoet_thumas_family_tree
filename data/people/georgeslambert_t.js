@@ -1,14 +1,15 @@
 FamilyTree.person({
   id: "georgeslambert_t",
   name: "Georges Lambert Thumas",
-  dates: "1772–1863",
-  born: "1772",
-  died: "1863",
+  dates: "17 Feb 1772 – 22 Jan 1863 · Grez-Doiceau",
+  born: "17 Feb 1772 Grez-Doiceau",
+  died: "22 Jan 1863 Grez-Doiceau",
   confidence: "doc",
+  role: "menuisier (carpenter)",
   branch: "Thumas",
   father: "georges1_t",
   mother: "noel_t",
-  spouse: {
-    name: "Marie Anne Catherine Quinart (Kinart)",
-  },
+  spouse: { name: "Marie Anne Catherine Quinart (Kinart)", detail: "Grez-Doiceau, 9 Feb 1801" },
+  source: "Geneanet / Grez-Doiceau civil records",
+  note: "Second of the four carpenter generations; had ten children and lived to age 90.",
 });

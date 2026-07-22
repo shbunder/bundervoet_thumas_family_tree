@@ -1,14 +1,15 @@
 FamilyTree.person({
   id: "georges2_t",
   name: "Georges Thumas",
-  dates: "1805–1864",
-  born: "1805",
-  died: "1864",
+  dates: "24 Jan 1804 – 12 Jan 1864 · Grez-Doiceau",
+  born: "24 Jan 1804 Grez-Doiceau",
+  died: "12 Jan 1864 Grez-Doiceau",
   confidence: "doc",
+  role: "menuisier (carpenter)",
   branch: "Thumas",
   father: "georgeslambert_t",
   mother: "quinart",
-  spouse: {
-    name: "Marie Catharina Joostens",
-  },
+  spouse: { name: "Marie Catharina Joostens", detail: "Grez-Doiceau, 17 Feb 1835" },
+  source: "Grez-Doiceau civil registration (via Geneanet index)",
+  note: "Third of the four carpenter generations. Civil records give his birth as 24 Jan 1804 (earlier trees said 1805).",
 });

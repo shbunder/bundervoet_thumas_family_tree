@@ -1,14 +1,15 @@
 FamilyTree.person({
   id: "jeanlambert_t",
   name: "Jean Lambert Thumas",
-  dates: "1701–1776",
-  born: "1701",
-  died: "1776",
+  dates: "26 Sep 1701 – 3 Mar 1776 · Grez-Doiceau",
+  born: "26 Sep 1701 Grez-Doiceau",
+  died: "3 Mar 1776 Grez-Doiceau",
   confidence: "doc",
+  role: "marguillier & greffier (church warden / parish clerk)",
   branch: "Thumas",
   father: "antoine_t",
   mother: "daix",
-  spouse: {
-    name: "Marie Jacqueline Leclercq",
-  },
+  spouse: { name: "Marie Jacqueline Leclercq", detail: "Wavre, 23 Feb 1743 (his 2nd marriage)" },
+  source: "Geneanet Thumas tree (m2155); Grez-Doiceau/Wavre registers",
+  note: "Church warden and parish clerk of Grez-Doiceau. Our line descends from his SECOND marriage, to Marie Jacqueline Leclercq (Wavre, 1743) — their son Georges (1744) continues the line. His first wife was Marie Catherine Crèvecœur (m. 1727, d. 1742).",
 });
