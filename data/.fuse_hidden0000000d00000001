@@ -27,31 +27,6 @@ FamilyTree.groups([
     ],
   },
   {
-    title: "Van Iseghem line — Rosette (Ronny's mother), to the 1780s",
-    people: [
-      "joannes_vi",
-      "adrienne_dv",
-      "eduardus_vi",
-      "emma_vincke",
-      "joannes_vi2",
-      "hermanie_janssen",
-      "joannes_jos_vi",
-      "anna_gautiert",
-      "judocus_vi",
-      "victoria_engelsen",
-      "albertus_gautiert",
-      "theresia_robbe",
-      "josephus_janssen",
-      "appolonia_huyghebaert",
-      "lucien_vincke",
-      "ludovica_vanald",
-      "eugenius_dv",
-      "octavia_schal",
-      "diane_vi",
-      "edi_vi"
-    ],
-  },
-  {
     title: "Bostyn & Cappaert (Marcel’s mother)",
     people: [
       "henricus_bostyn",

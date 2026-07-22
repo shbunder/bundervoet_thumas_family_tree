@@ -2,7 +2,7 @@
 
 *Compiled during the Cowork research sessions. This is the companion dossier to the interactive tree (`Renee-Leon-family-tree.html`). It records what is documented, what is inferred, where each line ends, and — most usefully — the **exact archive record** that would break each remaining wall.*
 
-**Status:** 128 people. Deepest documented roots reach the early 1600s.
+**Status:** 148 people. Deepest documented roots reach the early 1600s.
 **Confidence coding in the tree:** green = documented record · blue = family knowledge · purple = strongly supported/inferred · grey dashed = unknown.
 
 ---
@@ -102,5 +102,39 @@ Cosette confirms **Jerome Dekeyser (1897–1972) is Roland's grandfather**, so G
 - The winning move for a 19th-century frontier is to find a Geneanet tree that used the **Rijksarchief zoekrobot** and transcribed the parents (as `isavdw` and `vxnce13` did). Search the couple, then open the person's fiche in each candidate tree until one shows an "Ouders" section.
 - Marriage acts are the richest single record: they name **both** spouses' parents. Prioritise them (e.g. the 1901 Hamme-Merchtem De Keyser × Bocklandt act).
 - For the truly sealed 20th-century links, the family memorial cards (bidprentjes) are the only key — they name parents and children and sit outside the civil-registration privacy rule.
+
+---
+
+## 8. Update — Van Iseghem line (Rosette / Ronny's mother) opened to 1787
+
+Rosette Van Iseghem was a dead-end leaf; she is now one of the deepest branches, via the
+`bartvanhooren` (Bart Vanhooren) and `gverdievel` (Guy Verdievel) Geneanet trees:
+
+- Rosette -> **Joannes Van Iseghem (11 May 1903 Lens, France - 5 May 1969 Oostende)** x
+  **Adrienne Margaretha Devriendt (12 Apr 1908 Stene - 22 Sep 1991 Oostende)**. Joannes was
+  born in Lens (Pas-de-Calais) - the family had migrated to the French coal-mining region -
+  and returned to Oostende. Rosette's siblings: Diane (deceased) and Edi.
+- -> **Eduardus Ludovicus Rudolphus Van Iseghem (1880-1945)** x **Emma Celesta Vincke
+  (23 Jan 1880 Diksmuide - 6 Oct 1974 Oostende)**, married 1907 Oostende.
+- -> **Joannes Van Iseghem (1852-1933)** x **Hermanie Ludovica Janssen (1853-1926)**, m. 1872.
+- -> **Joannes Josephus Van Iseghem (1819-1861)** x **Anna Maria Gautiert (1819-1860)**.
+- -> **Judocus Franciscus Van Iseghem (19 Nov 1787 - 19 Apr 1832, Oostende)** x **Victoria
+  Eugenia Engelsen (1791-1849)**, married 25 Mar 1810 - born under the Austrian Netherlands,
+  married under the French Empire. **Top of the Van Iseghem line.**
+
+Side branches captured: Emma Vincke's parents **Lucien Julianus Vincke (1840) x Ludovica
+Maria Vanalderweireldt (1845-1914)**; Adrienne Devriendt's parents **Eugenius Alphonsius
+Devriendt (1882) x Octavia Maria Schalandrijn (1886)**; Hermanie Janssen's parents
+**Josephus Joannes Janssen (1820) x Appolonia Joanna Huyghebaert (1830)**; and the Gautiert
+couple **Albertus Jacobus Gautiert (1784) x Theresia Joanna Monica Robbe (1787)**.
+
+**New Van Iseghem frontiers** (likely extendable - gverdievel's tree is deep and
+Rijksarchief-sourced): parents of **Judocus Van Iseghem (1787)** (pre-1796 Oostende parish),
+**Eugenius Devriendt (1882)**, **Lucien Vincke (1840)**, **Josephus Janssen (1820)**,
+**Albertus Gautiert (1784)**, **Victoria Engelsen (1791)**. Adrienne is a Devriendt of Stene -
+worth checking against Huguette's Devriendt line, though probably unrelated.
+
+**Also this session:** Marcel's full name recorded as **Marcel Henri Bundervoet**. Trees added
+to the source list: `bartvanhooren` and `gverdievel` (deep Van Iseghem-Vincke ancestry, Oostende).
 
 *End of log.*

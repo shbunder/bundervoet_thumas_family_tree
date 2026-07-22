@@ -1,6 +1,6 @@
 FamilyTree.person({
   id: "marcel_b",
-  name: "Marcel Bundervoet",
+  name: "Marcel Henri Bundervoet",
   dates: "1933–2015 · Oostende",
   confidence: "doc",
   branch: "Bundervoet",
@@ -10,5 +10,5 @@ FamilyTree.person({
     name: "Rosette Van Iseghem, later Francine Bisschop",
   },
   source: "Memorial card (Uitvaartcentrum Raes, Oostende) + family",
-  note: "Confirmed by his memorial card, which named the Bostyn family — pointing to his mother Elodia Bostyn and father Alphonsus.",
+  note: "Full name Marcel Henri Bundervoet. Confirmed by his memorial card, which named the Bostyn family — pointing to his mother Elodia Bostyn and father Alphonsus.",
 });
