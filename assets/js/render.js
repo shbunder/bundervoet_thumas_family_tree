@@ -157,6 +157,126 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
       .join('');
   }
 
+  // ---------- search results ----------
+
+  // Wraps the matched stretches of a string in <mark>, escaping around them.
+  function mark(raw, ranges) {
+    if (!ranges || !ranges.length) return esc(raw);
+    const merged = [];
+    for (const [s, e] of [...ranges].sort((a, b) => a[0] - b[0])) {
+      const last = merged[merged.length - 1];
+      if (last && s <= last[1]) last[1] = Math.max(last[1], e);
+      else merged.push([s, e]);
+    }
+    let out = '';
+    let at = 0;
+    for (const [s, e] of merged) {
+      out += esc(raw.slice(at, s)) + '<mark>' + esc(raw.slice(s, e)) + '</mark>';
+      at = e;
+    }
+    return out + esc(raw.slice(at));
+  }
+
+  // Long notes get windowed around the first match rather than shown whole.
+  function excerpt(raw, ranges, limit = 150) {
+    if (raw.length <= limit || !ranges || !ranges.length) return mark(raw, ranges);
+    const first = [...ranges].sort((a, b) => a[0] - b[0])[0];
+    let from = Math.max(0, first[0] - 50);
+    let to = Math.min(raw.length, from + limit);
+    if (from > 0) from = raw.lastIndexOf(' ', from) + 1 || from;
+    const shifted = ranges
+      .filter(r => r[0] >= from && r[1] <= to)
+      .map(r => [r[0] - from, r[1] - from]);
+    return (from > 0 ? '… ' : '') + mark(raw.slice(from, to), shifted) + (to < raw.length ? ' …' : '');
+  }
+
+  function searchResults(results, term) {
+    if (!term.trim()) {
+      return '<p class="hint">Search for a name, a year, or a place — “Oostende”, “1943”, “Evergem 1879”.</p>';
+    }
+    if (!results.length) {
+      return `<p class="hint">Nobody matches “${esc(term.trim())}”.</p>`;
+    }
+    const rows = results
+      .map(r => {
+        const p = people[r.id];
+        const meta = [kin.relationship(r.id), p.dates].filter(Boolean).join(' · ');
+        const ctx = r.context
+          ? `<div class="hc"><span class="hk">${esc(r.context.label)}</span>` +
+            `${excerpt(r.context.raw, r.ranges[r.context.key])}</div>`
+          : '';
+        return (
+          `<div class="hit ${conf(r.id)}" data-id="${esc(r.id)}">` +
+          `<div class="hn">${mark(p.name, r.ranges.name)}</div>` +
+          (meta ? `<div class="hm">${esc(meta)}</div>` : '') +
+          ctx +
+          '</div>'
+        );
+      })
+      .join('');
+    const n = results.length;
+    return (
+      `<p class="rescount">${n} ${n === 1 ? 'person' : 'people'} of ` +
+      `${Object.keys(people).length} · click to open in the tree</p>` +
+      `<div class="results">${rows}</div>`
+    );
+  }
+
+  // ---------- line of descent ----------
+
+  // The single thread from whoever is in focus down to the children.
+  function descent(id) {
+    const line = kin.lineOfDescent(id);
+
+    if (line.kind === 'none') {
+      return (
+        `<p class="lnote">${esc(people[id].name)} is not linked to Renée &amp; Léon by ` +
+        'any recorded parent, so there is no line to walk yet.</p>'
+      );
+    }
+
+    let head = '';
+    if (line.kind === 'collateral') {
+      const via = people[line.branchesFrom];
+      head =
+        `<p class="lnote">${esc(people[id].name)} is not a direct ancestor. ` +
+        `The line below is ${esc(via.name)}’s — where ${esc(people[id].name)} branches off.</p>` +
+        `<div class="lstep off"><div class="lname">${esc(people[id].name)}</div>` +
+        `<div class="lrel">off the direct line</div></div>` +
+        '<div class="lconn dashed"><span>child of</span></div>';
+    }
+
+    const steps = line.path
+      .map((pid, i) => {
+        const p = people[pid];
+        const isFocus = pid === id;
+        const generations = line.path.length - 1 - i;
+        const label =
+          pid === kin.ROOT
+            ? 'the children'
+            : generations === 1
+              ? 'parent'
+              : `${generations} generations up`;
+        return (
+          `<div class="lstep ${conf(pid)}${isFocus ? ' here' : ''}" data-id="${esc(pid)}">` +
+          `<div class="lname">${esc(p.name)}</div>` +
+          (p.dates ? `<div class="ldt">${esc(p.dates)}</div>` : '') +
+          `<div class="lrel">${esc(label)}</div>` +
+          '</div>' +
+          (i < line.path.length - 1 ? '<div class="lconn"><span>↓</span></div>' : '')
+        );
+      })
+      .join('');
+
+    const depth = line.path.length - 1;
+    const from = line.kind === 'collateral' ? ` from ${esc(people[line.branchesFrom].name)}` : '';
+    return (
+      head +
+      `<div class="lthread">${steps}</div>` +
+      `<p class="ldepth">${depth} generation${depth === 1 ? '' : 's'}${from} down to Renée &amp; Léon</p>`
+    );
+  }
+
   const legend = () =>
     Object.entries(meta.confidenceLabels)
       .map(([key, label]) => `<span><i class="swatch sw-${key}"></i>${esc(label)}</span>`)
@@ -185,7 +305,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
       .join('');
   }
 
-  return { tooltip, pedigree, detail, lineageColumns, indexCards, legend };
+  return { tooltip, pedigree, detail, lineageColumns, indexCards, legend, searchResults, descent };
 };
 
 })();

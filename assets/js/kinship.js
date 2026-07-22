@@ -4,22 +4,56 @@
 FamilyTree.createKinship = function ({ meta, people, branches }) {
   const ROOT = meta.root;
 
-  // Distance in generations from the root, walking up through father/mother.
-  const distance = (() => {
-    const d = { [ROOT]: 0 };
+  // Walk up from the root through father/mother, recording both how many
+  // generations away each ancestor is and which child they were reached through.
+  // That second map is what lets us replay a single line back down again.
+  const distance = { [ROOT]: 0 };
+  const descendant = {};
+  (() => {
     const queue = [ROOT];
     for (let i = 0; i < queue.length; i++) {
       const p = people[queue[i]];
       if (!p) continue;
       for (const parent of [p.father, p.mother]) {
-        if (parent && people[parent] && !(parent in d)) {
-          d[parent] = d[queue[i]] + 1;
+        if (parent && people[parent] && !(parent in distance)) {
+          distance[parent] = distance[queue[i]] + 1;
+          descendant[parent] = queue[i];
           queue.push(parent);
         }
       }
     }
-    return d;
   })();
+
+  // The single thread from an ancestor down to the root, oldest first.
+  const descentFrom = id => {
+    if (!(id in distance)) return null;
+    const path = [id];
+    let at = id;
+    while (at !== ROOT) {
+      at = descendant[at];
+      path.push(at);
+    }
+    return path;
+  };
+
+  // How anyone connects to the root — directly, or as the child of someone who does.
+  // Aunts, uncles and siblings have no descent of their own, but the line they
+  // branch off is still the interesting thing to show.
+  function lineOfDescent(id) {
+    const direct = descentFrom(id);
+    if (direct) return { kind: 'direct', path: direct };
+
+    const p = people[id];
+    if (p) {
+      const parents = [p.father, p.mother].filter(x => x && x in distance);
+      if (parents.length) {
+        // Prefer whichever parent sits closest to the root.
+        const via = parents.sort((a, b) => distance[a] - distance[b])[0];
+        return { kind: 'collateral', path: descentFrom(via), branchesFrom: via, person: id };
+      }
+    }
+    return { kind: 'none', path: null };
+  }
 
   // Inferred from the role a person plays for their children, since the records
   // carry no gender field of their own.
@@ -67,5 +101,8 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
   const confidenceOf = id => people[id]?.confidence || 'doc';
   const isResearchable = id => Boolean(people[id]) && confidenceOf(id) !== 'unk';
 
-  return { ROOT, relationship, childrenOf, sourceFor, confidenceOf, isResearchable, distance };
+  return {
+    ROOT, relationship, childrenOf, sourceFor, confidenceOf, isResearchable,
+    distance, descentFrom, lineOfDescent,
+  };
 };

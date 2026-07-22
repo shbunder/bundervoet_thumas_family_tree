@@ -6,7 +6,7 @@ FamilyTree.person({
   died: "1749",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Francisca Van Maele" },
-  source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
-  note: "FRONTIER above — father of Anna Maria Van Acker (1749). Also recorded as Germinius Josephus.",
+  spouse: { name: "Francisca Van Maele", detail: "Beernem, 17 Oct 1730" },
+  source: "Geneanet tree isavdw (Rijksarchief scans)",
+  note: "FRONTIER above — father of Anna Maria Van Acker (1749). Also recorded as Germinius Josephus Van Acker. His own parents not yet recovered.",
 });

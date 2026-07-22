@@ -94,5 +94,18 @@
 <script src="./assets/js/render.js"></script>
 <script src="./assets/js/ui.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<script>
+(function w(){var p=document.getElementById("ped");
+ if(!p||!p.innerHTML.trim())return setTimeout(w,80);
+ setTimeout(function(){ 
+  var q=document.getElementById("q");
+  q.value="colin"; q.dispatchEvent(new Event("input",{bubbles:true}));
+  setTimeout(function(){
+    q.dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true}));
+    setTimeout(function(){document.getElementById("lineBtn").click();},80);
+  },80);
+ },60);})();
+</script>
 </body>
 </html>

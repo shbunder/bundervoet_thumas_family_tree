@@ -94,5 +94,21 @@
 <script src="./assets/js/render.js"></script>
 <script src="./assets/js/ui.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<script>
+(function wait(){
+  var ped=document.getElementById("ped");
+  if(!ped || !ped.innerHTML.trim()) return setTimeout(wait,80);
+  setTimeout(function(){ 
+  var q=document.getElementById("q");
+  q.value="antoine thumas";
+  q.dispatchEvent(new Event("input",{bubbles:true}));
+  setTimeout(function(){
+    q.dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true}));
+    setTimeout(function(){ document.getElementById("lineBtn").click(); },80);
+  },80);
+ }, 60);
+})();
+</script>
 </body>
 </html>

@@ -94,7 +94,7 @@ body.dark .node.unk,body.dark .cnode.unk{color:#9a917e}
 #themeBtn:hover{background:var(--bg)}
 
 /* hover tooltip */
-#tt{position:fixed;z-index:200;max-width:310px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 14px;box-shadow:0 8px 28px rgba(0,0,0,.30);font-size:.83rem;pointer-events:none;display:none;color:var(--ink)}
+#tt{position:fixed;z-index:1200;max-width:310px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 14px;box-shadow:0 8px 28px rgba(0,0,0,.30);font-size:.83rem;pointer-events:none;display:none;color:var(--ink)}
 #tt h5{margin:0 0 3px;font-size:1rem;color:var(--accent)}
 #tt .r{color:var(--muted);font-size:.76rem;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
 #tt .kv{margin:2px 0} #tt .kv b{color:var(--muted);font-weight:400}
@@ -104,3 +104,67 @@ body.dark .node.unk,body.dark .cnode.unk{color:#9a917e}
 #tt .conf{display:inline-block;font-size:.66rem;padding:1px 7px;border-radius:10px;margin-bottom:6px;border:1px solid}
 .conf-doc{color:var(--doc);border-color:var(--doc);background:var(--doc-bg)} .conf-fam{color:var(--fam);border-color:var(--fam);background:var(--fam-bg)}
 .conf-sup{color:var(--sup);border-color:var(--sup);background:var(--sup-bg)} .conf-unk{color:var(--unk);border-color:var(--line);background:var(--unk-bg)}
+
+/* search */
+.searchwrap{display:flex;justify-content:center;margin:14px 0 2px}
+.searchbox{position:relative;width:min(480px,100%)}
+.searchbox .ic{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:1rem;pointer-events:none}
+#q{width:100%;padding:9px 34px;border:1px solid var(--line);border-radius:22px;background:var(--panel);color:var(--ink);font-family:inherit;font-size:.9rem;box-shadow:var(--shadow)}
+#q:focus{outline:none;border-color:var(--accent)}
+#q::-webkit-search-cancel-button{display:none}
+.searchbox .clr{position:absolute;right:9px;top:50%;transform:translateY(-50%);border:none;background:none;color:var(--muted);cursor:pointer;font-size:1.15rem;line-height:1;padding:2px 6px;display:none;font-family:inherit}
+.searchbox.filled .clr{display:block}
+.searchbox .clr:hover{color:var(--accent)}
+.rescount{text-align:center;color:var(--muted);font-size:.79rem;margin:14px 0 10px;font-style:italic}
+.results{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:9px}
+.hit{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 15px;cursor:pointer;box-shadow:var(--shadow);transition:transform .08s,box-shadow .12s}
+.hit:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(60,50,30,.18)}
+.hit.doc{border-left:4px solid var(--doc)} .hit.fam{border-left:4px solid var(--fam)}
+.hit.sup{border-left:4px solid var(--sup)} .hit.unk{border-left:4px solid var(--unk);border-style:dashed}
+.hit .hn{font-weight:600;font-size:.96rem}
+.hit .hm{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.hit .hc{font-size:.83rem;color:var(--muted);margin-top:6px;line-height:1.45}
+.hit .hk{color:var(--accent);font-weight:600;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;margin-right:7px}
+mark{background:#ffe08a;color:#3a2f10;border-radius:3px;padding:0 2px}
+body.dark mark{background:#6b5520;color:#f7ecd0}
+
+/* line of descent panel */
+#lineBtn{position:fixed;top:52px;right:0;z-index:900;border:1px solid var(--line);border-right:none;
+  border-radius:20px 0 0 20px;background:var(--panel);color:var(--muted);cursor:pointer;
+  font-family:inherit;font-size:.78rem;padding:9px 13px;box-shadow:var(--shadow);
+  writing-mode:vertical-rl;letter-spacing:.06em}
+body.panelopen #themeBtn{right:354px}
+#lineBtn:hover{color:var(--accent);border-color:var(--accent)}
+#lineBtn.open{display:none}
+#linepanel{position:fixed;top:0;right:0;bottom:0;width:340px;z-index:950;background:var(--panel);
+  border-left:1px solid var(--line);box-shadow:-6px 0 24px rgba(0,0,0,.18);
+  display:flex;flex-direction:column;transition:transform .22s ease}
+#linepanel.collapsed{transform:translateX(100%)}
+#linepanel header{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:14px 16px;border-bottom:1px solid var(--line);flex:none}
+#linepanel header h4{margin:0;font-size:.95rem;color:var(--accent);font-weight:600}
+#lineClose{border:none;background:none;color:var(--muted);font-size:1.3rem;line-height:1;cursor:pointer;padding:0 4px;font-family:inherit}
+#lineClose:hover{color:var(--accent)}
+#lineBody{overflow-y:auto;padding:14px 16px 28px}
+.lnote{font-size:.8rem;color:var(--muted);font-style:italic;margin:0 0 12px;line-height:1.45}
+.lthread{display:flex;flex-direction:column;align-items:stretch}
+.lstep{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:7px 11px;cursor:pointer;transition:background .1s}
+.lstep:hover{background:#f0e9da}
+body.dark .lstep:hover{background:#2a3327}
+.lstep.doc{border-left:3px solid var(--doc)} .lstep.fam{border-left:3px solid var(--fam)}
+.lstep.sup{border-left:3px solid var(--sup)} .lstep.unk{border-left:3px solid var(--unk)}
+.lstep.off{border-style:dashed;cursor:default;opacity:.85}
+.lstep.here{border-color:var(--accent);border-width:2px;background:var(--panel);box-shadow:var(--shadow)}
+.lstep .lname{font-weight:600;font-size:.85rem;line-height:1.2}
+.lstep .ldt{font-size:.71rem;color:var(--muted);margin-top:1px}
+.lstep .lrel{font-size:.63rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:3px}
+.lconn{height:16px;display:flex;align-items:center;justify-content:center;position:relative}
+.lconn::before{content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--line)}
+.lconn span{position:relative;background:var(--panel);color:var(--muted);font-size:.62rem;padding:0 4px;line-height:1}
+.lconn.dashed{height:22px}
+.lconn.dashed::before{background:none;border-left:2px dashed var(--line)}
+.ldepth{text-align:center;font-size:.72rem;color:var(--muted);margin:14px 0 0;font-style:italic}
+@media(max-width:720px){
+  #linepanel{width:100%}
+  body.panelopen #themeBtn{display:none}
+}

@@ -20,6 +20,7 @@
     const tree = FT.tree();
     const kin = FT.createKinship(tree);
     const view = FT.createRenderer(tree, kin);
+    const search = FT.createSearch(tree);
     const { meta, people } = tree;
 
     $('foot').textContent = meta.footer;
@@ -38,6 +39,7 @@
       $('ped').innerHTML = view.pedigree(focus);
       $('detail').innerHTML = view.detail(focus);
       $('backBtn').disabled = history.length === 0;
+      $('lineBody').innerHTML = view.descent(focus);
     }
 
     function climbTo(id) {
@@ -79,6 +81,87 @@
       focus = meta.root;
       draw();
     };
+
+    // ---- search ----
+    const q = $('q');
+    let lastTab = 'explore';
+
+    function runSearch() {
+      const term = q.value;
+      $('searchbox').classList.toggle('filled', term.length > 0);
+      if (!term.trim()) {
+        showView(lastTab);
+        return;
+      }
+      $('results').innerHTML = view.searchResults(search.query(term), term);
+      showView('search');
+    }
+
+    function clearSearch() {
+      q.value = '';
+      $('searchbox').classList.remove('filled');
+      showView(lastTab);
+    }
+
+    q.addEventListener('input', runSearch);
+    $('qClear').onclick = () => {
+      clearSearch();
+      q.focus();
+    };
+
+    q.addEventListener('keydown', e => {
+      if (e.key === 'Escape') return clearSearch();
+      if (e.key !== 'Enter') return;
+      const first = $('results').querySelector('.hit[data-id]');
+      if (first) {
+        clearSearch();
+        openInExplorer(first.dataset.id);
+      }
+    });
+
+    $('results').addEventListener('click', e => {
+      const n = e.target.closest('.hit[data-id]');
+      if (!n) return;
+      clearSearch();
+      openInExplorer(n.dataset.id);
+    });
+
+    // Remember which tab to fall back to when the search is cleared.
+    document.querySelectorAll('.tab').forEach(t =>
+      t.addEventListener('click', () => {
+        lastTab = t.dataset.view;
+        if (q.value) clearSearch();
+      })
+    );
+
+    // "/" focuses the search from anywhere except a text field.
+    document.addEventListener('keydown', e => {
+      if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) return;
+      e.preventDefault();
+      q.focus();
+      q.select();
+    });
+
+    // ---- line of descent panel ----
+    const panel = $('linepanel');
+    const lineBtn = $('lineBtn');
+
+    function setPanel(open) {
+      panel.classList.toggle('collapsed', !open);
+      panel.setAttribute('aria-hidden', String(!open));
+      lineBtn.classList.toggle('open', open);
+      lineBtn.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('panelopen', open);
+    }
+
+    lineBtn.onclick = () => setPanel(panel.classList.contains('collapsed'));
+    $('lineClose').onclick = () => setPanel(false);
+
+    $('lineBody').addEventListener('click', e => {
+      const n = e.target.closest('.lstep[data-id]');
+      if (n) openInExplorer(n.dataset.id);
+    });
 
     draw();
   });
