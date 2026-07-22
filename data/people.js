@@ -258,5 +258,12 @@ FamilyTree.roster([
   "barbara_wittenheyns",
   "petrus_vanrenterghem",
   "petrus_wittenheyns",
-  "judoca_tjonck"
+  "judoca_tjonck",
+  "willem_sabbe_y",
+  "clara_vandeputte",
+  "willem_sabbe_o",
+  "magdalena_demeulemeester",
+  "petrus_sabbe_1504",
+  "judocus_sabbe_1475",
+  "gillis_sabbe"
 ]);
