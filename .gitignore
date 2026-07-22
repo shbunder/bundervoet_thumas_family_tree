@@ -1,5 +1,9 @@
 .DS_Store
 **/.DS_Store
+
+# Left behind by FUSE mounts when a file is replaced while still open elsewhere
+.fuse_hidden*
+**/.fuse_hidden*
 *.swp
 *~
 .vscode/
