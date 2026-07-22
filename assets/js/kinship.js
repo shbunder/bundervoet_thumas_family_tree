@@ -24,6 +24,13 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     }
   })();
 
+  // Everyone the walk above reached is, by construction, a direct ancestor:
+  // it only ever steps through father/mother, so siblings, aunts, uncles and
+  // spouses who are nobody's parent are not in it. Distance 0 is the root pair
+  // themselves, who are not their own ancestors. Someone appearing in two lines
+  // is counted once.
+  const directAncestorCount = () => Object.keys(distance).filter(id => distance[id] > 0).length;
+
   // The single thread from an ancestor down to the root, oldest first.
   const descentFrom = id => {
     if (!(id in distance)) return null;
@@ -103,6 +110,6 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
 
   return {
     ROOT, relationship, childrenOf, sourceFor, confidenceOf, isResearchable,
-    distance, descentFrom, lineOfDescent,
+    distance, descentFrom, lineOfDescent, directAncestorCount,
   };
 };

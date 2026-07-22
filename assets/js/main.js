@@ -23,6 +23,10 @@
     const search = FT.createSearch(tree);
     const { meta, people } = tree;
 
+    const ancestors = kin.directAncestorCount();
+    $('subtitle').textContent =
+      `${ancestors} direct ancestor${ancestors === 1 ? '' : 's'} recorded`;
+
     $('foot').textContent = meta.footer;
     $('legend').innerHTML = view.legend();
     $('cols').innerHTML = view.lineageColumns();
