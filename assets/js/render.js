@@ -138,11 +138,23 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
   // ---------- lineages ----------
 
+  // Resolve a lineage's people: an explicit chain if given, otherwise walk
+  // father-links up from `head` so the chain always tracks the data.
+  function lineageChain(line) {
+    if (line.chain) return line.chain;
+    const out = [];
+    const seen = new Set();
+    let id = line.head;
+    while (id && people[id] && !seen.has(id)) { seen.add(id); out.push(id); id = people[id].father; }
+    return out.reverse();
+  }
+
   function lineageColumns() {
     return lineages
       .map(line => {
-        const known = line.chain.filter(id => kin.isResearchable(id)).length;
-        const chain = line.chain
+        const ids = lineageChain(line);
+        const known = ids.filter(id => kin.isResearchable(id)).length;
+        const chain = ids
           .map((id, i) => {
             const p = people[id];
             return (
@@ -150,7 +162,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
               `<div class="nm">${esc(p.name)}</div>` +
               (p.dates ? `<div class="dt">${esc(p.dates)}</div>` : '') +
               '</div>' +
-              (i < line.chain.length - 1 ? '<div class="cconn"></div>' : '')
+              (i < ids.length - 1 ? '<div class="cconn"></div>' : '')
             );
           })
           .join('');

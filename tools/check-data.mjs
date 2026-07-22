@@ -85,15 +85,24 @@ for (const start of Object.keys(people)) {
 
 // Config files only reference people who exist.
 if (!people[meta.root]) fail(`meta.js: root "${meta.root}" does not exist`);
+function lineageChain(l) {
+  if (l.chain) return l.chain;
+  const out = [];
+  const seen = new Set();
+  let id = l.head;
+  while (id && people[id] && !seen.has(id)) { seen.add(id); out.push(id); id = people[id].father; }
+  return out.reverse();
+}
 for (const l of lineages) {
-  for (const id of l.chain) if (!people[id]) fail(`lineages.js (${l.key}): "${id}" does not exist`);
+  if (l.head && !people[l.head]) fail(`lineages.js (${l.key}): head "${l.head}" does not exist`);
+  for (const id of lineageChain(l)) if (!people[id]) fail(`lineages.js (${l.key}): "${id}" does not exist`);
 }
 for (const g of groups) {
   for (const id of g.people) if (!people[id]) fail(`groups.js (${g.title}): "${id}" does not exist`);
 }
 
 // Not fatal, but usually a mistake: someone unreachable from every view.
-const listed = new Set([...groups.flatMap(g => g.people), ...lineages.flatMap(l => l.chain)]);
+const listed = new Set([...groups.flatMap(g => g.people), ...lineages.flatMap(lineageChain)]);
 const reachable = new Set([meta.root]);
 const queue = [meta.root];
 for (let i = 0; i < queue.length; i++) {
