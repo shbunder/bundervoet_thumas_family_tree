@@ -39,10 +39,14 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     '</div>';
 
   // A parent's own parents, shown as a couple with a drop line beneath them.
+  // The caption only shows on narrow screens: there the two couples sit one
+  // above the other, where the drop line would wrongly read as descent, so it
+  // is hidden and this says whose parents each couple is instead.
   function grandparentCouple(parentId) {
     const p = parentId && people[parentId];
     if (!p || (!p.father && !p.mother)) return '';
     return (
+      `<div class="gplab">${esc(p.name)}’s parents</div>` +
       `<div class="couple">${node(p.father)}<span class="xmark">×</span>${node(p.mother)}</div>` +
       '<div class="vline"></div>'
     );

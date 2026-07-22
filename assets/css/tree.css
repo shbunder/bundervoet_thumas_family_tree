@@ -51,6 +51,7 @@ h1{font-size:1.9rem;margin:.1em 0 .1em;font-weight:600}
 .node.unk:hover{transform:none;box-shadow:var(--shadow)}
 .node .climb{position:absolute;top:-8px;right:-8px;background:var(--accent);color:#fff;font-size:.62rem;border-radius:10px;padding:1px 6px;opacity:0;transition:opacity .12s}
 .node:not(.unk):not(.focus):hover .climb{opacity:1}
+.gplab{display:none}
 .childlab{text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin:2px auto 6px}
 
 .detail{max-width:640px;margin:22px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow)}
@@ -85,7 +86,14 @@ footer{margin-top:36px;text-align:center;color:var(--muted);font-size:.76rem;bor
 @media(max-width:900px){
   .pgrid.gp{grid-template-columns:1fr;row-gap:0}
   .pgrid.gp .pcol:empty{display:none}
-  .pgrid.gp .couple{margin-top:2px}
+  /* The drop line under a couple means "and their child", which only reads
+     correctly when the two couples sit side by side. Stacked, it looks as if the
+     upper couple were the parents of the lower one, so it goes and a caption
+     saying whose parents each couple is takes its place. */
+  .pgrid.gp .vline{display:none}
+  .gplab{display:block;text-align:center;font-size:.63rem;text-transform:uppercase;
+    letter-spacing:.05em;color:var(--muted);margin:12px 0 5px;line-height:1.3}
+  .pgrid.gp .pcol:first-child .gplab{margin-top:0}
 }
 @media(max-width:860px){.cols{grid-template-columns:repeat(2,1fr)} .branchgrid{columns:1}}
 @media(max-width:520px){
