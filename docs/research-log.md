@@ -510,3 +510,26 @@ No unverified links grafted; corrections folded in (e.g. carolina_vh confirmed a
 person, not Jan Baptist Paelinck's wife). Validator green — 301 people.
 
 *End of log.
+
+## 35. Enrichment pass — Vanstechelman & Vincke/Vanalderweireldt lines
+
+Two more verified passes (Geneanet trees stechec, bartvanhooren). 28 ancestors enriched.
+Highlights:
+
+**Vanstechelman (Woumen → Zevekote → Mariakerke):** the line settled at Zevekote with Silvester
+(1740, married three times); Felix (1800) was an **innkeeper** who moved the family to coastal
+Mariakerke; Petrus Jacobus (1854) a **mason** with fifteen children. Augusta (1882) married
+Petrus Bundervoet — the Vanstechelman–Bundervoet junction.
+
+**Ramon (the sea):** two generations lost at sea — Pierre Ramon drowned 1858, and his son
+**Carolus Ramon, an Oostende fisherman, drowned 1883**, leaving Cornelia Verkouille (a
+charwoman) widowed for 27 years.
+
+**Vincke / Vanalderweireldt (Diksmuide):** Lucien Vincke a **mason's assistant**; Antoine
+Vanalderweireldt died at 28 (1808), months after his son Carolus was born (who was thus born
+the year his father died); the **Scottish-origin surname Wyllie** appears via Brigitte Wyllie.
+
+Corrections folded in: Antonius Vincke's "1797" is his Westvleteren marriage year, not a death.
+Validator green — 301 people.
+
+*End of log.

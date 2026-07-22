@@ -1,14 +1,15 @@
 FamilyTree.person({
   id: "carolus_ramon",
   name: "Carolus Ludovicus Ramon",
-  dates: "1835–1883 · Oostende",
-  born: "1835",
-  died: "1883 · Oostende",
+  dates: "29 Oct 1835 Oostende – 4 Apr 1883 (op zee, lost at sea)",
+  born: "29 Oct 1835 Oostende",
+  died: "4 Apr 1883 · op zee (lost at sea)",
   confidence: "doc",
+  role: "visser (fisherman)",
   branch: "Devriendt",
   father: "pierre_ramon",
   mother: "joanna_daneel",
-  spouse: {
-    name: "Cornelia Coleta Verkouille",
-  },
+  spouse: { name: "Cornelia Coleta Verkouille", detail: "Oostende, 14 Sep 1859" },
+  source: "Geneanet; Oostende civil records",
+  note: "An Oostende fisherman who drowned at sea in 1883 — as his father Pierre Ramon had drowned in 1858. Son of Pierre Ramon & Joanna Daneel.",
 });

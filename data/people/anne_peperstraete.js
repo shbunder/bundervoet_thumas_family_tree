@@ -4,6 +4,6 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "Antonius Vincke", detail: "Westvleteren, 9 May 1797" },
-  source: "Geneanet tree bartvanhooren (van Horne/Vanhooren project; Diksmuide civil records)",
-  note: "FRONTIER above — grandmother of Lucien Vincke.",
+  source: "Geneanet tree bartvanhooren",
+  note: "Mother of Engel Antonius Vincke.",
 });

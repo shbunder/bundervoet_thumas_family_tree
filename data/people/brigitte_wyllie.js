@@ -1,12 +1,12 @@
 FamilyTree.person({
   id: "brigitte_wyllie",
   name: "Brigitte Josephine Joanna Wyllie",
-  dates: "1779–1824",
-  born: "1779",
-  died: "1824",
+  dates: "22 Feb 1779 – 8 Nov 1824 · Diksmuide",
+  born: "22 Feb 1779 Diksmuide",
+  died: "8 Nov 1824 Diksmuide",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Antoine Joseph Albert Vanalderweireldt" },
-  source: "Geneanet tree bartvanhooren (van Horne/Vanhooren project; Diksmuide civil records)",
-  note: "FRONTIER above — grandmother of Ludovica Vanalderweireldt. The Wyllie surname is of British (Scottish/English) origin — a non-Flemish thread in the Diksmuide line.",
+  spouse: { name: "Antoine Vanalderweireldt", detail: "Diksmuide, 8 Jun 1803" },
+  source: "Geneanet tree bartvanhooren",
+  note: "Bore the Scottish-origin surname Wyllie in West-Flanders; widowed young in 1808.",
 });

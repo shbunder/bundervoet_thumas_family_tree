@@ -1,12 +1,12 @@
 FamilyTree.person({
   id: "antoine_vanald",
   name: "Antoine Joseph Albert Vanalderweireldt",
-  dates: "1780–1808",
-  born: "1780",
-  died: "1808",
+  dates: "9 May 1780 – 21 Jul 1808 · Diksmuide",
+  born: "9 May 1780 Diksmuide",
+  died: "21 Jul 1808 Diksmuide",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Brigitte Josephine Joanna Wyllie" },
-  source: "Geneanet tree bartvanhooren (van Horne/Vanhooren project; Diksmuide civil records)",
-  note: "FRONTIER above — grandfather of Ludovica Vanalderweireldt; died young (1808). Top of the Vanalderweireldt surname here.",
+  spouse: { name: "Brigitte Josephine Joanna Wyllie", detail: "Diksmuide, 8 Jun 1803" },
+  source: "Geneanet tree bartvanhooren",
+  note: "Died very young, at 28, only months after the birth of his son Carolus.",
 });

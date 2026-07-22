@@ -6,6 +6,6 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "Engel Antonius Vincke" },
-  source: "Geneanet tree bartvanhooren (van Horne/Vanhooren project; Diksmuide civil records)",
-  note: "FRONTIER above — mother of Lucien Julianus Vincke (1840). Her own parents not recorded.",
+  source: "Geneanet tree bartvanhooren",
+  note: "Second wife of Engel Antonius Vincke; mother of Lucien Vincke (1840).",
 });

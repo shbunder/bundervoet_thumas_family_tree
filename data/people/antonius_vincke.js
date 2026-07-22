@@ -6,6 +6,6 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "Anne Therese Peperstraete", detail: "Westvleteren, 9 May 1797" },
-  source: "Geneanet tree bartvanhooren (van Horne/Vanhooren project; Diksmuide civil records)",
-  note: "FRONTIER above — grandfather of Lucien Vincke; married at Westvleteren 1797. Top of the Vincke line in this tree.",
+  source: "Geneanet tree bartvanhooren",
+  note: "Married at Westvleteren in 1797; father of Engel Antonius Vincke.",
 });

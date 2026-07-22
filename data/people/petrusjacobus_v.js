@@ -1,14 +1,15 @@
 FamilyTree.person({
   id: "petrusjacobus_v",
   name: "Petrus Jacobus Vanstechelman",
-  dates: "1854–1927",
-  born: "1854",
-  died: "1927",
+  dates: "28 Feb 1854 – 26 Nov 1927 · Mariakerke",
+  born: "28 Feb 1854 Mariakerke",
+  died: "26 Nov 1927 Mariakerke",
   confidence: "doc",
+  role: "metser (mason)",
   branch: "Vanstechelman",
   father: "felix_v",
   mother: "sophiavdb",
-  spouse: {
-    name: "Clementia Sophia Wagebaert",
-  },
+  spouse: { name: "Clementia Sophia Wagebaert", detail: "Mariakerke, 21 Jan 1875" },
+  source: "Geneanet tree stechec",
+  note: "A mason who fathered fifteen children (including Augusta); he and his wife both died in 1927.",
 });

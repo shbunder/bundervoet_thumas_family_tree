@@ -1,9 +1,12 @@
 FamilyTree.person({
   id: "carolina_vh",
   name: "Carolina Van Hille",
-  dates: "1773–1809",
-  born: "1773",
-  died: "1809",
+  dates: "28 Apr 1773 – 11 Oct 1809 · Zevekote",
+  born: "28 Apr 1773 Zevekote",
+  died: "11 Oct 1809 Zevekote",
   confidence: "doc",
   branch: "Vanstechelman",
+  spouse: { name: "Pieter Jacobus Vanstechelman" },
+  source: "Geneanet tree stechec",
+  note: "Wife of Pieter Jacobus Vanstechelman; mother of eight including Felix (1800); died at 36.",
 });

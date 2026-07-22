@@ -1,16 +1,15 @@
 FamilyTree.person({
   id: "felix_v",
   name: "Felix Guillielmus Vanstechelman",
-  dates: "1800 Zevekote – 1869 Mariakerke",
-  born: "1800 Zevekote",
-  died: "1869 Mariakerke",
+  dates: "13 Feb 1800 Zevekote – 9 Nov 1869 Mariakerke",
+  born: "13 Feb 1800 Zevekote",
+  died: "9 Nov 1869 Mariakerke",
   confidence: "doc",
   role: "herbergier (innkeeper)",
   branch: "Vanstechelman",
   father: "pieterjacobus_v",
   mother: "carolina_vh",
-  spouse: {
-    name: "Sophia Van den Broucke",
-  },
-  note: "First wife Barbara Catharina Van Blaere (1784–1844).",
+  spouse: { name: "Sophia Van den Broucke", detail: "Mariakerke, 19 Dec 1844 (his 2nd marriage)" },
+  source: "Geneanet tree stechec",
+  note: "An innkeeper who moved the family from inland Zevekote to the coastal village of Mariakerke, near Oostende. Our line is via his 2nd wife, Sophia Van den Broucke.",
 });

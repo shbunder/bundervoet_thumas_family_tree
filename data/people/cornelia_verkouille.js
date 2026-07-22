@@ -1,10 +1,15 @@
 FamilyTree.person({
   id: "cornelia_verkouille",
   name: "Cornelia Coleta Verkouille",
-  dates: "b. 1836",
-  born: "1836",
+  dates: "11 Oct 1836 – 6 Apr 1910 · Oostende",
+  born: "11 Oct 1836 Oostende",
+  died: "6 Apr 1910 Oostende",
   confidence: "doc",
+  role: "werkster (charwoman)",
   branch: "Devriendt",
   father: "livinus_verkouille",
   mother: "maria_malfait",
+  spouse: { name: "Carolus Ludovicus Ramon", detail: "Oostende, 14 Sep 1859" },
+  source: "Geneanet; Oostende civil records",
+  note: "Daughter of Livinus Verkouille & Maria Malfait; widowed in 1883 when her fisherman husband was lost at sea, she outlived him by 27 years.",
 });
