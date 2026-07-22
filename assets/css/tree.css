@@ -90,7 +90,7 @@ body.dark{--bg:#151b13;--panel:#1e261c;--ink:#e6efdc;--muted:#9aa892;--line:#374
 body.dark .tab{background:var(--panel)}
 body.dark .node.unk,body.dark .cnode.unk{color:#9a917e}
 .toprow{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:8px}
-#themeBtn{position:fixed;top:12px;right:14px;z-index:1000;padding:6px 13px;border:1px solid var(--line);border-radius:20px;background:var(--panel);color:var(--muted);cursor:pointer;font-family:inherit;font-size:.82rem;box-shadow:var(--shadow)}
+#themeBtn{position:fixed;top:12px;left:14px;z-index:1000;padding:6px 13px;border:1px solid var(--line);border-radius:20px;background:var(--panel);color:var(--muted);cursor:pointer;font-family:inherit;font-size:.82rem;box-shadow:var(--shadow)}
 #themeBtn:hover{background:var(--bg)}
 
 /* hover tooltip */
@@ -106,8 +106,7 @@ body.dark .node.unk,body.dark .cnode.unk{color:#9a917e}
 .conf-sup{color:var(--sup);border-color:var(--sup);background:var(--sup-bg)} .conf-unk{color:var(--unk);border-color:var(--line);background:var(--unk-bg)}
 
 /* search */
-.searchwrap{display:flex;justify-content:center;margin:14px 0 2px}
-.searchbox{position:relative;width:min(480px,100%)}
+.searchbox{position:relative;width:320px;margin-left:6px}
 .searchbox .ic{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:1rem;pointer-events:none}
 #q{width:100%;padding:9px 34px;border:1px solid var(--line);border-radius:22px;background:var(--panel);color:var(--ink);font-family:inherit;font-size:.9rem;box-shadow:var(--shadow)}
 #q:focus{outline:none;border-color:var(--accent)}
@@ -133,7 +132,6 @@ body.dark mark{background:#6b5520;color:#f7ecd0}
   border-radius:20px 0 0 20px;background:var(--panel);color:var(--muted);cursor:pointer;
   font-family:inherit;font-size:.78rem;padding:9px 13px;box-shadow:var(--shadow);
   writing-mode:vertical-rl;letter-spacing:.06em}
-body.panelopen #themeBtn{right:354px}
 #lineBtn:hover{color:var(--accent);border-color:var(--accent)}
 #lineBtn.open{display:none}
 #linepanel{position:fixed;top:0;right:0;bottom:0;width:340px;z-index:950;background:var(--panel);
@@ -165,6 +163,10 @@ body.dark .lstep:hover{background:#2a3327}
 .lconn.dashed::before{background:none;border-left:2px dashed var(--line)}
 .ldepth{text-align:center;font-size:.72rem;color:var(--muted);margin:14px 0 0;font-style:italic}
 @media(max-width:720px){
+  .searchbox{flex-basis:100%;width:auto;margin-left:0;margin-top:4px}
+  /* the pedigree cards have a fixed width; let them scroll in place rather
+     than dragging the whole page sideways on a phone */
+  .ped{overflow-x:auto;overflow-y:hidden;padding-bottom:6px}
+  .pgrid,.crow{min-width:max-content}
   #linepanel{width:100%}
-  body.panelopen #themeBtn{display:none}
 }

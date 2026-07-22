@@ -152,7 +152,6 @@
       panel.setAttribute('aria-hidden', String(!open));
       lineBtn.classList.toggle('open', open);
       lineBtn.setAttribute('aria-expanded', String(open));
-      document.body.classList.toggle('panelopen', open);
     }
 
     lineBtn.onclick = () => setPanel(panel.classList.contains('collapsed'));
