@@ -235,6 +235,8 @@ FamilyTree.groups([
       "maria_dk",
       "leonie_p",
       "edouard_dk",
+      "desiderius_dk",
+      "mtheresia_vandenbroeck",
       "bertha_dk",
       "louise_bocklandt",
       "edouard_bocklandt",

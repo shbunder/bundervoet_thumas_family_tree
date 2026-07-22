@@ -423,3 +423,38 @@ parent among the 1902–18 siblings still needs a family-side source).
 Validator green — 299 people.
 
 *End of log.
+
+## 32. BREAKTHROUGH — Édouard Dekeyser's parents found (FamilySearch, primary act)
+
+The De Keyser wall — open since the start of this project — is **broken**, from the primary
+document. FamilySearch's "Belgium, West Flanders, Civil Registration, 1582-1950" (a deeper index
+than AGATHA or Ancestry, and reachable once logged in) holds **Édouard's own 1946 remarriage
+act** (Oostende, act nr. 81, 9 May 1946). The act image, read directly, states:
+
+  "Eduardus De Keyser, werkman, geboren te Hamme den twaalfden November 1876 ... echtgescheiden
+   van Louisa Maria Bocklandt (echtscheiding uitgesproken, Rechtbank van eersten aanleg Brugge,
+   ~1923) ... zoon van Desiderius en van Maria Theresia Van den Broeck, beiden overleden."
+
+Every identifier matches our Édouard (werkman; born 12 Nov 1876; first wife Louisa Maria
+Bocklandt), so this is unambiguously him. Results:
+
+1. **PARENTS: Desiderius De Keyser × Maria Theresia Van den Broeck** (both deceased by 1946).
+   Added `desiderius_dk` and `mtheresia_vandenbroeck` (confidence "doc").
+2. **BIRTHPLACE: Hamme (Oost-Vlaanderen)** — the SAME Waasland town Louise Bocklandt was born
+   in. They were fellow Hamme natives who both moved to Oostende. This is the real origin of the
+   whole "Hamme" confusion: a shared BIRTH-town, never Hamme-Merchtem, never a marriage place.
+3. **They divorced (~1923, decree at Brugge)** — not "married till death" as assumed. Édouard
+   then **remarried Leontine Schreel** (b. Aartrijke 11 Jan 1890, herself divorced from Benoni
+   Joseph Rossel) in Oostende on 9 May 1946. (Leontine's parents on the act: Henricus Schreel ×
+   Virginia Vandamme.) Leontine is a step-relation, not in the bloodline, so not added as a node.
+
+Corroboration: Édouard's brother **Mauritius Eduardus de Keyser (b.1892)** carries the same
+parents (Desiderius × Van den Broeck) and married in **Hamme (O.-Vl.)** in 1912 — same family,
+same town.
+
+NEW FRONTIER: Desiderius De Keyser & Maria Theresia Van den Broeck's own dates and parents, in
+the Hamme (Oost-Vlaanderen) registers (AGATHA / FamilySearch).
+
+Validator green — 301 people.
+
+*End of log.

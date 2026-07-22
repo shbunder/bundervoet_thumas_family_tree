@@ -1,16 +1,18 @@
 FamilyTree.person({
   id: "edouard_dk",
   name: "Édouard Dekeyser",
-  dates: "12 Nov 1876 (birthplace uncertain) – 8 Sep 1951 Oostende",
-  born: "12 Nov 1876 · birthplace uncertain (see note)",
+  dates: "12 Nov 1876 Hamme (O.-Vl.) – 8 Sep 1951 Oostende",
+  born: "12 Nov 1876 · Hamme (Oost-Vlaanderen)",
   died: "8 Sep 1951 Oostende",
   confidence: "doc",
   role: "werkman",
   branch: "DeKeyser",
+  father: "desiderius_dk",
+  mother: "mtheresia_vandenbroeck",
   spouse: {
     name: "Louise Marie Bocklandt",
-    detail: "married 4 May 1901 (likely Oostende) — legitimized their 2 eldest children",
+    detail: "m. 4 May 1901 (legitimized 2 children); divorced ~1923; he remarried Leontine Schreel 1946",
   },
-  source: "Geneanet trees stefpaelinck, natamarcelle & wete1998 (top-of-branch in all three — no parents); Rijksarchief AGATHA + Ancestry/Geneanet West-Vlaanderen index (Oostende acts of his children)",
-  note: "A werkman (labourer) in Oostende. Children with Louise (all from indexed Oostende civil acts): Jérôme Josephus (1897), Gustavus Josephus (1899), Bertha Alida Theresia (7 Aug 1901), Maria (1902), Angela Luciana (†1903, infant) and Cesar Mauritius (b.~1904, †1905, infant). MARRIAGE = 4 May 1901 (the marginal note 'Gewettigd 4 5 1901' on the 1897 & 1899 birth acts proves the marriage legitimized the two children born before it; place almost certainly Oostende). 'HAMME' SOLVED: it was Louise Bocklandt's BIRTHPLACE — Hamme in Oost-Vlaanderen (Waasland) — not a marriage place and not Hamme-Merchtem. HIS PARENTS — exhaustively searched and NOT online (July 2026): there is NO Eduardus De Keyser/Dekeyser born 1876 in AGATHA OR in the Ancestry/Geneanet West-Vlaanderen & Brabant civil-registration indexes, under EITHER spelling ('de Keyser' / 'Dekeyser'), in ANY commune — his 1876 birth act is simply not in the online indexes. His 1901 Oostende marriage act is likewise not indexed (checked with a marriage filter). He is top-of-branch in every published tree. So his parents are reachable only OFFLINE, via the Stadsarchief Oostende: (1) the 8 Sep 1951 death act — now PUBLIC (death acts open after 50 yrs) and it names his parents; (2) the 4 May 1901 marriage act (names parents + his birthplace); or (3) a family bidprentje. The 1951 death act is the cleanest ask.",
+  source: "PRIMARY: Oostende marriage act nr. 81, 9 May 1946 (FamilySearch, Belgium West Flanders Civil Registration 1582-1950 — image read directly). Also Geneanet/AGATHA (children's Oostende acts).",
+  note: "WALL BROKEN (July 2026, FamilySearch). Édouard's own 1946 Oostende remarriage act states in full: 'Eduardus De Keyser, werkman, geboren te Hamme den twaalfden November 1876 ... echtgescheiden van Louisa Maria Bocklandt (divorce decree, Rechtbank van eersten aanleg Brugge, ~1923) ... zoon van Desiderius en van Maria Theresia Van den Broeck, beiden overleden.' Every detail matches (werkman; born 12 Nov 1876; first wife Louisa Maria Bocklandt) — so this is unambiguously our Édouard, and: (1) his PARENTS are Desiderius De Keyser × Maria Theresia Van den Broeck; (2) his BIRTHPLACE is Hamme (Oost-Vlaanderen) — the SAME town Louise Bocklandt came from (they were fellow Hamme natives who both moved to Oostende); (3) Édouard and Louise did not stay married — they DIVORCED ~1923 (decree at Brugge), and Édouard REMARRIED Leontine Schreel (b. Aartrijke 11 Jan 1890, herself divorced from Benoni Joseph Rossel) in Oostende on 9 May 1946. Children with Louise (Oostende civil acts): Jérôme (1897), Gustavus (1899), Bertha Alida Theresia (1901), Maria (1902), + infants Angela Luciana (†1903) and Cesar Mauritius (b.~1904, †1905). This also finally explains 'Hamme' in the old trees: it was the couple's shared birth-town, Hamme (Oost-Vlaanderen) — never Hamme-Merchtem, never a marriage place. NEW FRONTIER: Desiderius De Keyser's and Maria Theresia Van den Broeck's own dates & parents, in the Hamme (O.-Vl.) registers.",
 });

@@ -8,7 +8,7 @@ FamilyTree.person({
   branch: "DeKeyser",
   father: "edouard_bocklandt",
   mother: "marie_vanbergen",
-  spouse: { name: "Édouard Dekeyser", detail: "married 4 May 1901 (likely Oostende)" },
-  source: "Rijksarchief AGATHA (parents on her record); Geneanet trees wete1998 (Erik Bekaert), natamarcelle & stefpaelinck",
-  note: "PLACE CORRECTION: born 31 Dec 1877 in Hamme (OOST-VLAANDEREN, the Waasland town near Dendermonde) — NOT Hamme-Merchtem in Brabant, as earlier trees implied. This finally explains the long 'Hamme' confusion: 'Hamme' was Louise's BIRTHPLACE, not a marriage place — which is why the Hamme-Merchtem registers never held a Bocklandt or a Dekeyser. Married Édouard Dekeyser 4 May 1901 (the marriage legitimized their two eldest children; place most plausibly Oostende, where the family lived). Died 1946 Oostende, buried at Stene. Her Bocklandt family is a Hamme (O-Vl) / Waasland family, documented back to the 1760s (see her parents and the Bocklandt / Van Bergen ancestors). Her husband Édouard Dekeyser's OWN parents remain the wall (named only in his Oostende acts, held at Stadsarchief Oostende).",
+  spouse: { name: "Édouard Dekeyser", detail: "m. 4 May 1901 (likely Oostende); divorced ~1923" },
+  source: "Rijksarchief AGATHA (parents on her record); Geneanet tree wete1998 (Erik Bekaert); Édouard's 1946 marriage act (records their divorce)",
+  note: "Born 31 Dec 1877 in Hamme (OOST-VLAANDEREN, Waasland) — the SAME town as her husband Édouard Dekeyser (both Hamme natives who moved to Oostende). This is the true source of the long 'Hamme' confusion: it was the couple's shared birth-town, not Hamme-Merchtem and not a marriage place. Married Édouard 4 May 1901 (the marriage legitimized their two eldest children); they later DIVORCED (~1923, decree Rechtbank van eersten aanleg Brugge — per Édouard's 1946 remarriage act). Died 1946 Oostende, buried at Stene. Her Bocklandt family is a Hamme (O-Vl) / Waasland family documented back to the 1760s (see her parents and the Bocklandt / Van Bergen ancestors).",
 });

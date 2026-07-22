@@ -58,6 +58,8 @@ FamilyTree.roster([
   "jerome_dk",
   "leonie_p",
   "edouard_dk",
+  "desiderius_dk",
+  "mtheresia_vandenbroeck",
   "bertha_dk",
   "louise_bocklandt",
   "marie_vanbergen",
