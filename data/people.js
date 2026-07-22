@@ -253,5 +253,10 @@ FamilyTree.roster([
   "maria_vanrenterghem",
   "amandus_rups",
   "judocus_vanrenterghem",
-  "appolonia_vandewoestijne"
+  "appolonia_vandewoestijne",
+  "guillielmus_vanrenterghem",
+  "barbara_wittenheyns",
+  "petrus_vanrenterghem",
+  "petrus_wittenheyns",
+  "judoca_tjonck"
 ]);
