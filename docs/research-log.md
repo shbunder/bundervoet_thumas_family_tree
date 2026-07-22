@@ -2,7 +2,7 @@
 
 *Compiled during the Cowork research sessions. This is the companion dossier to the interactive tree (`Renee-Leon-family-tree.html`). It records what is documented, what is inferred, where each line ends, and — most usefully — the **exact archive record** that would break each remaining wall.*
 
-**Status:** 266 people. Deepest confirmed root reaches ~1440 (Gillis Sabbe, Harelbeke/Zwevegem area).
+**Status:** 271 people. Deepest confirmed root reaches ~1440 (Gillis Sabbe, Harelbeke/Zwevegem area).
 **Confidence coding in the tree:** green = documented record · blue = family knowledge · purple = strongly supported/inferred · grey dashed = unknown.
 
 ---

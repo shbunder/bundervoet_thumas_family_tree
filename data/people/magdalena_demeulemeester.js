@@ -5,7 +5,8 @@ FamilyTree.person({
   born: "~1530s",
   confidence: "doc",
   branch: "Bundervoet",
+  father: "michiel_demeulemeester",
   spouse: { name: "Willem Sabbe", detail: "~1555" },
-  source: "Geneanet isavdw",
-  note: "FRONTIER above — wife of Willem Sabbe (~1530). Her own parents not recorded.",
+  source: "Geneanet isavdw (Sosa 27041; OSAK contracts 1560-1600)",
+  note: "Wife of Willem Sabbe (~1530). Her father is Michiel Demeulemeester.",
 });

@@ -265,5 +265,10 @@ FamilyTree.roster([
   "magdalena_demeulemeester",
   "petrus_sabbe_1504",
   "judocus_sabbe_1475",
-  "gillis_sabbe"
+  "gillis_sabbe",
+  "michiel_demeulemeester",
+  "petrus_debaecke",
+  "margaretha_wybau",
+  "paulus_lampsins",
+  "clara_lampsins"
 ]);
