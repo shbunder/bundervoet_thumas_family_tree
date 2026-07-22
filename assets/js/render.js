@@ -170,7 +170,9 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
           `<div class="col"><h3>${esc(line.key)}</h3>` +
           `<div class="cap">${esc(line.caption)}</div>` +
           `<div class="chain">${chain}</div>` +
-          `<div class="depthlab">${known} generation${known > 1 ? 's' : ''} known</div></div>`
+          `<div class="depthlab">${known} generation${known > 1 ? 's' : ''} known</div>` +
+          (line.origin ? `<div class="origin"><span class="ol">Name origin.</span> ${esc(line.origin)}</div>` : '') +
+          '</div>'
         );
       })
       .join('');

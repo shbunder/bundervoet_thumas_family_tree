@@ -73,6 +73,8 @@ h1{font-size:1.9rem;margin:.1em 0 .1em;font-weight:600}
 .cnode.doc{border-left:3px solid var(--doc)} .cnode.fam{border-left:3px solid var(--fam)} .cnode.sup{border-left:3px solid var(--sup)} .cnode.unk{border-style:dashed;color:#8a8172;cursor:default}
 .cconn{width:2px;height:12px;background:var(--line)}
 .depthlab{text-align:center;font-size:.7rem;color:var(--muted);margin-top:4px}
+.origin{margin-top:9px;padding-top:9px;border-top:1px solid var(--line);font-size:.7rem;color:var(--muted);line-height:1.45;text-align:left}
+.origin .ol{color:var(--accent);font-weight:600}
 
 /* everyone list */
 .branchgrid{columns:2;column-gap:24px;margin-top:12px}
