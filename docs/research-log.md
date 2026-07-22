@@ -314,3 +314,47 @@ Tree updated: `rene_j` note rewritten to record the exhaustive sweep and the unl
 Validator green — 292 people.
 
 *End of log.
+
+## 29. Update — Janssens/Van Craenenbroeck: the wife's family LOCATED; framing of §28 corrected
+
+Two things here: a correction and a breakthrough.
+
+**Correction to §28.** §28 leaned on "the 100-year privacy rule" as the reason the line was
+blocked. That framing was wrong and is retracted. Belgium's civil-record publicity is
+*graduated* (births 100 yrs, marriages 75, deaths 50), and — decisive here — a **direct
+descendant may obtain a relative's acts at any age**. So the records that name René's and
+Anna's parents are *obtainable by the family*; nothing is truly sealed against them. The real
+obstacle was mundane: no anchor + very common surname (Janssens) + not-yet-published people.
+
+**Breakthrough — Anna's family found.** Pushing the *rarer* surname paid off. In Zaventem,
+Van Craenenbroeck is essentially ONE extended family, and it is well documented:
+- **Geneanet tree "cisken"** holds the modern Zaventem trunk: **Antonius Josephus Van
+  Craenenbroeck (1872 Sterrebeek – 1936 Zaventem) × Anna Maria Meeus**, with children born in
+  Zaventem 1902–1918 — Amandus Franciscus Henricus (1902–1977, m. Maria Balcaen 1929),
+  Paul Gustaaf (1904–1988, m. Joanna Smolders 1928), Melania Leonia (1906), Joannes Arthur
+  (1908–1982, m. Roza Van Opstal), Maurice Louis Willem (1913–1991), Bertha Rosalia (1918).
+- The **Zaventem "Kerkhoflaan" cemetery index** (on Geneanet) independently confirms several
+  (Arthur 1908–1982, Paul 1934–2010, Elisa 1887–1967, Desiré 1859–1944) and the family's
+  roots run back to a **1721 Zaventem marriage**.
+
+**Where Anna fits (verified vs. inferred).** Anna Van Craenenbroeck (Chris & Eric's mother,
+b. ~1930s Zaventem, witloof milieu) is almost certainly of this family — rare surname + exact
+village + occupation region — and most plausibly a **granddaughter of Antonius Josephus**, i.e.
+a daughter of one of the ~1928–29-married couples (Paul Gustaaf × Smolders or Amandus × Balcaen
+lead). This is a strong lead, NOT proof: the "cisken" tree stops just above her generation, so
+the specific parent is left OPEN and NOT grafted onto the tree.
+
+**To close the link (any one suffices):** Anna's death notice / memorial card (she died
+recently in the Zaventem/Leuven area — should name parents + siblings); her grave in the
+Zaventem Kerkhoflaan index; or the **owner of the "cisken" Geneanet tree** — a relative who
+very likely holds Anna's generation privately and could confirm it in one message.
+
+Rejected along the way (regional false positives, common surname): jammart doodsprentjes
+collections for Dworp and Wetteren; MyHeritage (login-walled); ingedachten/inmemoriam obituary
+hits — none were our Zaventem couple.
+
+Tree updated: `anna_vc` note rewritten with the located family + candidate parents (no
+unverified parent grafted); `rene_j` note re-framed (privacy-rule excuse removed). Validator
+green — 292 people.
+
+*End of log.
