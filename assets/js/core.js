@@ -37,7 +37,15 @@ window.FamilyTree = (function () {
 
   // Where the data lives, worked out from this script's own URL so the pages keep
   // working if they are ever moved into a subfolder.
-  var base = new URL('../../data/', document.currentScript.src).href;
+  var self = document.currentScript.src;
+  var base = new URL('../../data/', self).href;
+
+  // GitHub Pages serves these with a ten-minute cache, so an edit can take that
+  // long to reach a phone that has already loaded the page. The page stamps every
+  // reference with ?v=N; carry the same stamp onto the person files it injects,
+  // so bumping it in the HTML refreshes the whole site at once.
+  var version = (self.match(/[?&]v=([^&]*)/) || [])[1];
+  var stamp = version ? '?v=' + version : '';
 
   // Loads every person named in the roster. Order does not matter — each file just
   // adds itself to FT.people — so they all go out at once.
@@ -50,7 +58,7 @@ window.FamilyTree = (function () {
 
     ids.forEach(function (id) {
       var s = document.createElement('script');
-      s.src = base + 'people/' + encodeURIComponent(id) + '.js';
+      s.src = base + 'people/' + encodeURIComponent(id) + '.js' + stamp;
       s.onload = s.onerror = function (e) {
         if (e.type === 'error') missing.push(id);
         if (--pending === 0) done(missing);

@@ -83,6 +83,19 @@ escapes everything on the way out.
    unknown branches, people missing from the list, and circular ancestry.
 4. Commit. GitHub Pages picks it up; there is no build to run.
 
+## Making a change show up straight away
+
+GitHub Pages serves these files with `cache-control: max-age=600`, so a phone or
+browser that has already opened the page can keep showing the old version for up
+to ten minutes. That is long enough to look like a change didn't work.
+
+Every stylesheet and script in `Renee-Leon-family-tree.html` is referenced with a
+`?v=N` stamp, and `core.js` carries the same stamp onto the person files it loads.
+**Bump that number** — a find-and-replace of `?v=1` to `?v=2` across the page —
+and every visitor gets the new version on their next load rather than up to ten
+minutes later. It only matters when you want the change visible immediately;
+forgetting it just means the old ten-minute wait.
+
 ## Why the data files are `.js` and not `.json`
 
 So that opening the HTML from disk works. Browsers block `fetch()` and ES modules on
