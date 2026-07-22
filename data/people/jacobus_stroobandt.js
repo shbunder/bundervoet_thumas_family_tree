@@ -7,7 +7,9 @@ FamilyTree.person({
   confidence: "doc",
   role: "schoenmaker (shoemaker)",
   branch: "Bundervoet",
-  spouse: { name: "Joanna Keirsebilck (2nd); Isabella Demuynck (1st)" },
-  source: "Geneanet tree kathrynann / isavdw (Oostkamp civil records)",
-  note: "FRONTIER above — grandfather of Juliana Stroobandt, shoemaker. Married twice: Isabella Demuynck (1782–1809), then Joanna Keirsebilck 24 Jul 1810. His own parents not yet recovered.",
+  father: "adrianus_stroobandt",
+  mother: "anna_m_vanacker",
+  spouse: { name: "Joanna Keirsebilck (2nd); Isabella De Muynck (1st)" },
+  source: "Geneanet tree isavdw (Rijksarchief scans); Oostkamp civil records",
+  note: "Grandfather of Juliana Stroobandt, shoemaker. Married Isabella De Muynck (1782-1809), then Joanna Keirsebilck 24 Jul 1810. Parents Adrianus Stroobandt x Anna Maria Van Acker.",
 });

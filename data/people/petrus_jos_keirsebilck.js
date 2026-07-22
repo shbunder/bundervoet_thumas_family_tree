@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "20 May 1817 · Oostkamp",
   confidence: "doc",
   branch: "Bundervoet",
+  father: "joannes_keirsebilck_1728",
+  mother: "maria_c_declerck",
   spouse: { name: "Anna Francisca De Grande", detail: "Oostkamp, 4 Oct 1785" },
-  source: "Geneanet tree kathrynann / isavdw (Oostkamp civil & parish records)",
-  note: "FRONTIER above — father of Joanna Keirsebilck (1791). His own parents not yet recovered.",
+  source: "Geneanet tree isavdw (Rijksarchief scans)",
+  note: "Father of Joanna Keirsebilck (1791). Parents Joannes Keirsebilck (1728-1781) x Maria Catharina De Clerck (1727-1768).",
 });

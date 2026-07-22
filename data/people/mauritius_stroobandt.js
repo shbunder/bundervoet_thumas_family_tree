@@ -1,0 +1,15 @@
+FamilyTree.person({
+  id: "mauritius_stroobandt",
+  name: "Mauritius Stroobandt",
+  dates: "~1703 Torhout – 1783 Oostkamp",
+  born: "~1703 · Torhout",
+  died: "17 Jan 1783 · Oostkamp",
+  confidence: "doc",
+  role: "herbergier (innkeeper)",
+  branch: "Bundervoet",
+  father: "guillielmus_stroobandt",
+  mother: "clara_vansieleghem",
+  spouse: { name: "Barbara Theresia De Baecke", detail: "Oostkamp, 30 Apr 1732" },
+  source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
+  note: "Kept the 'Sint-Hubrecht' tavern north of Oostkamp church (deeds 1749-1753). Married Barbara De Baecke 1732.",
+});

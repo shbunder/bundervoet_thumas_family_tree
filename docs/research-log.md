@@ -2,7 +2,7 @@
 
 *Compiled during the Cowork research sessions. This is the companion dossier to the interactive tree (`Renee-Leon-family-tree.html`). It records what is documented, what is inferred, where each line ends, and — most usefully — the **exact archive record** that would break each remaining wall.*
 
-**Status:** 170 people. Deepest documented roots reach the early 1600s.
+**Status:** 198 people. Deepest documented roots reach the early 1600s.
 **Confidence coding in the tree:** green = documented record · blue = family knowledge · purple = strongly supported/inferred · grey dashed = unknown.
 
 ---
@@ -192,4 +192,43 @@ Kraainem, the documented Thumas home village, has a **Jef Thumasstraat / Rue Jef
 Trees added to the source list this session: `stefanieschil` (Bostin/Perquy), `kathrynann`
 (Stroobandt/De Vriese, sourced to `isavdw` + VVF).
 
-*End of log.*
+## 11. Update — deep push on the Stroobandt/Keirsebilck/De Grande frontiers (isavdw, Rijksarchief-sourced)
+
+The `isavdw` Geneanet tree (the source behind kathrynann, with direct Rijksarchief zoekrobot
+scan links) carried several walls much further. All are direct ancestors of Renee & Leon on
+Marcel Bundervoet's mother's (Bostyn) side.
+
+**Stroobandt surname line — carried to the ~1590s:**
+Jacobus (1782, shoemaker) -> **Adrianus Stroobandt (1746-1807)** x **Anna Maria Van Acker
+(1749-1820)** -> **Mauritius Stroobandt (~1703 Torhout - 1783 Oostkamp, innkeeper of the
+'Sint-Hubrecht' tavern)** x **Barbara Theresia De Baecke (1709-1761)** -> **Guillielmus
+Stroobandt (1659-1721)** x **Clara Van Sieleghem (1666-1747)** -> **Hercules Stroobandt
+(16 Oct 1625 Ardooie - 17 May 1664 Torhout)** x **Joanna Willaert (1631-1694)** ->
+**Oliverius Stroobandt (d. 1660s) x Judoca Van Hecke (d. 1655)** — top of the name.
+Van Acker grandparents: **Henricus Josephus Van Acker (1706-1749) x Francisca Van Maele
+(1710-1767)**; Van Sieleghem grandparents: **Josephus Van Sieleghem (1638-1692) x Maria
+Lampsins (1637-1709)**.
+
+**Keirsebilck line +2 generations:** Petrus Josephus (1764) -> **Joannes Keirsebilck
+(1728-1781)** x **Maria Catharina De Clerck (1727-1768)** -> **Joannes Keirsebilck (~1697-1759)
+x Adriana De Vriese (1696-1744)** and **Joannes De Clerck (1696-1727) x Judoca Vande Keere
+(1698-1771)**.
+
+**De Grande line +2 generations:** Michael (1726) -> **Petrus De Grande (1697-1765)** x
+**Adriana Theresia Sabbe (1703-1768)** -> **Egidius De Grande (~1670) x Joanna Wallays
+(~1671-1746)** and **Judocus Sabbe (~1667-1737) x Anna Van Nieuwenhuyse (1676-1722)**.
+
+**Caeckaert line +1 generation:** Rosalia (1815, Assebroek/Brugge) -> **Josephus Caeckaert x
+Godeliva Rotsaert**.
+
+Walls that held: Jacob Donaas De Blaere (1695 Wingene) and Michael De Vriese (~1615) are the
+tops of their lines in the available trees; Joannes Perquy has no parents recorded on
+`stefanieschil`.
+
+**New frontiers opened (next scan targets):** parents of Barbara De Baecke (1709), Joanna
+Willaert (1631), Henricus Van Acker (1706), Francisca Van Maele (1710), Josephus Van Sieleghem
+(1638), Maria Lampsins (1637); Joannes Keirsebilck (~1697) & Adriana De Vriese; Joannes De
+Clerck & Judoca Vande Keere; Egidius De Grande (~1670) & Joanna Wallays; Judocus Sabbe & Anna
+Van Nieuwenhuyse; Josephus Caeckaert & Godeliva Rotsaert; Oliverius Stroobandt's parents.
+
+*End of log.
