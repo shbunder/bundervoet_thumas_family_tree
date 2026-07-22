@@ -29,6 +29,9 @@
     $('branchgrid').innerHTML = view.indexCards();
 
     FT.initTooltip($('tt'), id => (people[id] ? view.tooltip(id) : null));
+    if (!FT.canHover()) {
+      $('tip').textContent = 'Tap any name to open it — full details appear below';
+    }
     const showView = FT.initTabs();
 
     // ---- explorer state ----
@@ -40,6 +43,12 @@
       $('detail').innerHTML = view.detail(focus);
       $('backBtn').disabled = history.length === 0;
       $('lineBody').innerHTML = view.descent(focus);
+
+      // On a narrow screen the pedigree is wider than the viewport and scrolls
+      // inside itself. The person in focus sits in the middle, so start there
+      // rather than at the far-left grandparent.
+      const ped = $('ped');
+      ped.scrollLeft = Math.max(0, (ped.scrollWidth - ped.clientWidth) / 2);
     }
 
     function climbTo(id) {

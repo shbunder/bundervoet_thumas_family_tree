@@ -1,9 +1,12 @@
 FamilyTree.person({
   id: "christina_vm",
   name: "Christina Van Maele",
-  dates: "1747–1824",
-  born: "1747",
-  died: "1824",
+  dates: "30 Sep 1747 Destelbergen – 15 Apr 1824 Laarne",
+  born: "30 Sep 1747 · Destelbergen",
+  died: "15 Apr 1824 · Laarne",
   confidence: "doc",
   branch: "Paelinck",
+  spouse: { name: "Apolonius Paelinck", detail: "Destelbergen, 4 Sep 1770" },
+  source: "Geneanet tree stefpaelinck",
+  note: "FRONTIER — her parents are not in the stefpaelinck tree.",
 });

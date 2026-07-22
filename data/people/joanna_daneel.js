@@ -1,9 +1,15 @@
 FamilyTree.person({
   id: "joanna_daneel",
   name: "Joanna Theresia Daneel",
-  dates: "1808–1854",
-  born: "1808",
-  died: "1854",
+  dates: "29 May 1808 Keiem – 15 Oct 1854 Oostende",
+  born: "29 May 1808 · Keiem",
+  died: "15 Oct 1854 · Oostende",
   confidence: "doc",
+  role: "dienstmeid (maidservant)",
   branch: "Devriendt",
+  father: "philippus_daneel",
+  mother: "anna_senesael",
+  spouse: { name: "Pierre Francois Ramon", detail: "Oostende, 28 Jan 1835" },
+  source: "Geneanet tree wernero; West-Vlaanderen acts",
+  note: "Parents Philippus Daneel x Anna Theresia Senesael.",
 });

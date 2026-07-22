@@ -2,7 +2,7 @@
 
 *Compiled during the Cowork research sessions. This is the companion dossier to the interactive tree (`Renee-Leon-family-tree.html`). It records what is documented, what is inferred, where each line ends, and — most usefully — the **exact archive record** that would break each remaining wall.*
 
-**Status:** 220 people. Deepest documented roots reach the early 1600s.
+**Status:** 230 people. Deepest documented roots reach the early 1600s.
 **Confidence coding in the tree:** green = documented record · blue = family knowledge · purple = strongly supported/inferred · grey dashed = unknown.
 
 ---

@@ -1,14 +1,13 @@
 FamilyTree.person({
   id: "ludovicus_p",
   name: "Ludovicus Paelinck",
-  dates: "1660–1720",
-  born: "1660",
-  died: "1720",
+  dates: "15 Jul 1660 Lochristi – 17 Apr 1720 Destelbergen",
+  born: "15 Jul 1660 · Lochristi",
+  died: "17 Apr 1720 · Destelbergen",
   confidence: "doc",
   branch: "Paelinck",
   father: "livinus1_p",
   mother: "elisabeth_t",
-  spouse: {
-    name: "Petronella Verniers",
-  },
+  spouse: { name: "Petronella Verniers", detail: "Lochristi, Feb 1681" },
+  source: "Geneanet tree stefpaelinck (Stef Paelinck)",
 });

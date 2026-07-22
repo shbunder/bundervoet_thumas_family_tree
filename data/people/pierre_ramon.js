@@ -1,12 +1,15 @@
 FamilyTree.person({
   id: "pierre_ramon",
   name: "Pierre Francois Ramon",
-  dates: "1812–1858",
-  born: "1812",
-  died: "1858",
+  dates: "23 Feb 1812 Mariakerke – 1 Oct 1858 Oostende",
+  born: "23 Feb 1812 · Mariakerke",
+  died: "1 Oct 1858 · Oostende (drowned at sea)",
   confidence: "doc",
+  role: "tuinier/zeeman (gardener/seaman)",
   branch: "Devriendt",
-  spouse: {
-    name: "Joanna Theresia Daneel",
-  },
+  father: "henricus_j_ramon",
+  mother: "lucia_steenkiste",
+  spouse: { name: "Joanna Theresia Daneel", detail: "Oostende, 28 Jan 1835" },
+  source: "Geneanet tree wernero; West-Vlaanderen acts",
+  note: "Drowned at sea, October 1858 (death act drawn up at Brugge 1868). Parents Henricus Josephus Ramon x Lucia Theresia Steenkiste.",
 });

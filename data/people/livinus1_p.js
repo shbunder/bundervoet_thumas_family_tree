@@ -5,8 +5,7 @@ FamilyTree.person({
   born: "ca 1618",
   confidence: "doc",
   branch: "Paelinck",
-  spouse: {
-    name: "Elisabeth Temmerman",
-  },
-  note: "Oldest Paelinck ancestor — the Waasland around Sint-Niklaas, ~1618. Depleted above him.",
+  spouse: { name: "Elisabeth Temmerman" },
+  source: "Geneanet tree stefpaelinck",
+  note: "Oldest documented Paelinck — the family's cradle is the Lochristi/Destelbergen area east of Ghent (not the Waasland; the Paelincks only moved to Belsele/Sint-Niklaas in the 1800s). Depleted above him in the available tree.",
 });

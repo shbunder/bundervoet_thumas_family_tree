@@ -21,7 +21,14 @@ FamilyTree.initTheme = function (btn) {
   apply();
 };
 
+// True for a mouse, false for a touchscreen. On touch there is no hover, and a
+// tap fires mouseover without a matching mouseout — which would leave the card
+// stranded on screen — so the hover card is simply not wired up there.
+FamilyTree.canHover = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
 FamilyTree.initTooltip = function (el, contentFor) {
+  if (!FamilyTree.canHover()) return;
+
   document.addEventListener('mouseover', e => {
     const target = e.target.closest('[data-id]');
     if (!target) return;

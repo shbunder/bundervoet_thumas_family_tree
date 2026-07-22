@@ -219,5 +219,15 @@ FamilyTree.roster([
   "simon_sabbe",
   "joanna_rotsaert_sabbe",
   "petrus_sabbe",
-  "judoca_vandenberghe"
+  "judoca_vandenberghe",
+  "henricus_j_ramon",
+  "lucia_steenkiste",
+  "mattheus_ramon",
+  "jacoba_ossaert",
+  "louis_steenkiste",
+  "reine_storms",
+  "stephanus_ramon",
+  "joanna_truant",
+  "philippus_daneel",
+  "anna_senesael"
 ]);

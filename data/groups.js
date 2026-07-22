@@ -224,7 +224,17 @@ FamilyTree.groups([
       "pierre_ramon",
       "joanna_daneel",
       "livinus_verkouille",
-      "maria_malfait"
+      "maria_malfait",
+      "henricus_j_ramon",
+      "lucia_steenkiste",
+      "mattheus_ramon",
+      "jacoba_ossaert",
+      "louis_steenkiste",
+      "reine_storms",
+      "stephanus_ramon",
+      "joanna_truant",
+      "philippus_daneel",
+      "anna_senesael"
     ],
   },
   {
