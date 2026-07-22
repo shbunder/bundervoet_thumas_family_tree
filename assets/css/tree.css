@@ -80,14 +80,28 @@ h1{font-size:1.9rem;margin:.1em 0 .1em;font-weight:600}
 .bcard .p{font-size:.84rem;padding:2px 0;border-bottom:1px dotted #e6ddc9}
 .bcard .p:last-child{border-bottom:none} .bcard .p .d{color:var(--muted)}
 footer{margin-top:36px;text-align:center;color:var(--muted);font-size:.76rem;border-top:1px solid var(--line);padding-top:16px}
+/* Four grandparents stop fitting on one row well before this; stack the two
+   couples vertically rather than making the whole pedigree scroll sideways. */
+@media(max-width:900px){
+  .pgrid.gp{grid-template-columns:1fr;row-gap:0}
+  .pgrid.gp .pcol:empty{display:none}
+  .pgrid.gp .couple{margin-top:2px}
+}
 @media(max-width:860px){.cols{grid-template-columns:repeat(2,1fr)} .branchgrid{columns:1}}
 @media(max-width:520px){
   .cols{grid-template-columns:1fr}
-  .node{width:138px;height:100px;padding:6px 7px}
-  .node .nm{font-size:.78rem} .node .dt{font-size:.64rem} .node .rl{font-size:.55rem}
-  .pgrid{column-gap:10px}
-  .xmark{padding:0 5px}
-  .crow{gap:10px}
+  /* narrower cards, and free height so longer names are not clipped */
+  .node{width:127px;height:auto;min-height:94px;padding:6px 7px}
+  .node .nm{font-size:.74rem}
+  .node .dt{font-size:.62rem;-webkit-line-clamp:3}
+  /* the cards are free-height here, so let the long relationship labels wrap
+     ("4x-GREAT-GRANDFATHER") instead of truncating to an ellipsis */
+  .node .rl{font-size:.53rem;white-space:normal;overflow:visible;text-overflow:clip;letter-spacing:.03em}
+  .pgrid{column-gap:0}
+  .xmark{padding:0 5px;font-size:.95rem}
+  .crow{gap:8px}
+  .detail{padding:13px 15px}
+  .wrap{padding-bottom:96px} /* clear of the floating descent button */
 }
 
 /* dark mode */
@@ -174,8 +188,7 @@ body.dark .lstep:hover{background:#2a3327}
   .searchbox{flex-basis:100%;width:auto;margin-left:0;margin-top:4px}
   /* the pedigree cards have a fixed width; let them scroll in place rather
      than dragging the whole page sideways on a phone */
-  .ped{overflow-x:auto;overflow-y:hidden;padding-bottom:6px}
-  .pgrid,.crow{min-width:max-content}
+  .ped{overflow-x:auto;overflow-y:hidden}
   #q{font-size:16px}
   #linepanel{width:100%}
   #lineBtn{writing-mode:horizontal-tb;top:auto;bottom:16px;right:16px;

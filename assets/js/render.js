@@ -89,12 +89,14 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const motherGP = grandparentCouple(p.mother);
     let html = '';
 
+    // The two rows are tagged so a narrow screen can stack the four grandparents
+    // into two couples while keeping the parents side by side.
     if (fatherGP || motherGP) {
-      html += `<div class="pgrid"><div class="pcol">${fatherGP}</div><div class="pcol"></div><div class="pcol">${motherGP}</div></div>`;
+      html += `<div class="pgrid gp"><div class="pcol">${fatherGP}</div><div class="pcol"></div><div class="pcol">${motherGP}</div></div>`;
     }
     if (p.father || p.mother) {
       html +=
-        `<div class="pgrid"><div class="pcol">${node(p.father)}</div>` +
+        `<div class="pgrid parents"><div class="pcol">${node(p.father)}</div>` +
         '<div class="pcol xcol"><span class="xmark">×</span></div>' +
         `<div class="pcol">${node(p.mother)}</div></div>` +
         '<div class="vline tall"></div>';

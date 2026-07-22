@@ -1,12 +1,13 @@
 FamilyTree.person({
   id: "judoca_vandenberghe",
   name: "Judoca Vandenberghe",
-  dates: "~1594–1664",
+  dates: "~1594 – 2 Sep 1664 · Lissewege",
   born: "~1594",
-  died: "1664",
+  died: "2 Sep 1664 · Brugge (Lissewege)",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Petrus Sabbe" },
+  father: "carolus_vandenberghe",
+  spouse: { name: "Petrus Sabbe", detail: "Oostkamp/Ruddervoorde, 11 Jun 1616" },
   source: "Geneanet tree isavdw (Rijksarchief scans)",
-  note: "FRONTIER above — grandmother of Judocus Sabbe; born ~1594, among the deepest roots.",
+  note: "Mother of Simon Sabbe (1627). From Ruddervoorde. Her father Carolus Vandenberghe; her mother's identity is uncertain in the records.",
 });

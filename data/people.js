@@ -229,5 +229,16 @@ FamilyTree.roster([
   "stephanus_ramon",
   "joanna_truant",
   "philippus_daneel",
-  "anna_senesael"
+  "anna_senesael",
+  "petrus_vandewalle",
+  "francisca_vanhoutte",
+  "simon_vandewalle_1565",
+  "christina_desangere",
+  "simon_vandewalle_1530",
+  "joanna_wittenheyns",
+  "mattheus_wittenheyns",
+  "maria_deruwe",
+  "carolus_vandenberghe",
+  "petrus_vannieuwenhuyse",
+  "jacoba_monballiu"
 ]);

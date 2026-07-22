@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1722",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Judocus Sabbe" },
-  source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
-  note: "FRONTIER above — mother of Adriana Theresia Sabbe (1703).",
+  father: "petrus_vannieuwenhuyse",
+  mother: "jacoba_monballiu",
+  spouse: { name: "Judocus Sabbe", detail: "Oostkamp, 4 Aug 1700" },
+  source: "Geneanet tree isavdw (Rijksarchief scans)",
+  note: "Mother of Adriana Theresia Sabbe (1703). Parents Petrus Van Nieuwenhuyse (1649-1701) x Jacoba Monballiu (1651-1689).",
 });

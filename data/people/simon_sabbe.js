@@ -7,8 +7,8 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   father: "petrus_sabbe",
-  mother: "joanna_rotsaert_sabbe",
+  mother: "judoca_vandenberghe",
   spouse: { name: "Joanna Rotsaert" },
   source: "Geneanet tree isavdw (Rijksarchief scans)",
-  note: "Father of Judocus Sabbe (~1667).",
+  note: "Father of Judocus Sabbe (~1667). Parents Petrus Sabbe (d.~1652) x Judoca Vandenberghe (~1594); his wife was Joanna Rotsaert.",
 });
