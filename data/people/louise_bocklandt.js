@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "louise_bocklandt",
   name: "Louise Marie Bocklandt",
   dates: "1877 Hamme-Merchtem (Vl.Br.) – 1946 Oostende",
+  born: "1877 Hamme-Merchtem (Vl.Br.)",
+  died: "1946 Oostende",
   confidence: "doc",
   branch: "DeKeyser",
   source: "Stef Paelinck (stefpaelinck) tree; Hamme marriage act 1901",

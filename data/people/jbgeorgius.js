@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "jbgeorgius",
   name: "Joannes Baptista Georgius Thumas",
   dates: "1876 Kraainem – 1944",
+  born: "1876 Kraainem",
+  died: "1944",
   confidence: "doc",
   role: "first of the two formerly-hidden generations",
   branch: "Thumas",

@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "pieterjacobus_v",
   name: "Pieter Jacobus Vanstechelman",
   dates: "1770–1827",
+  born: "1770",
+  died: "1827",
   confidence: "doc",
   branch: "Vanstechelman",
   father: "silvester_v",

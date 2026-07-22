@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "hendrik_vdb",
   name: "Henricus Augustinus Vandenbemden",
   dates: "1849 – 12 Aug 1889 · Kraainem",
+  born: "1849",
+  died: "12 Aug 1889 · Kraainem",
   confidence: "doc",
   branch: "Thumas",
   spouse: {

@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "eduardus_p",
   name: "Eduardus Franciscus Paelinck",
   dates: "1858 Belsele – 1912 Sint-Niklaas",
+  born: "1858 Belsele",
+  died: "1912 Sint-Niklaas",
   confidence: "doc",
   role: "leurder (pedlar)",
   branch: "Paelinck",

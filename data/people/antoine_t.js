@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "antoine_t",
   name: "Antoine Thumas",
   dates: "11 Nov 1656 Biez – 25 Jan 1707 Grez-Doiceau",
+  born: "11 Nov 1656 Biez",
+  died: "25 Jan 1707 Grez-Doiceau",
   confidence: "doc",
   branch: "Thumas",
   spouse: {

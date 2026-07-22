@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "marcel_d",
   name: "Marcel Désiré Devriendt",
   dates: "1914 Stene – 2000 Oostende",
+  born: "1914 Stene",
+  died: "2000 Oostende",
   confidence: "doc",
   role: "smid (blacksmith)",
   branch: "Devriendt",

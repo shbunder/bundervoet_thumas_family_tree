@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "edouard_dk",
   name: "Édouard Dekeyser",
   dates: "12 Nov 1876 Hamme-Merchtem (Vl.Br.) – 8 Sep 1951 Oostende",
+  born: "12 Nov 1876 Hamme-Merchtem (Vl.Br.)",
+  died: "8 Sep 1951 Oostende",
   confidence: "doc",
   role: "werkman",
   branch: "DeKeyser",

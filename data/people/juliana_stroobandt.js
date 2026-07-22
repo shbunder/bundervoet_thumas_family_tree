@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "juliana_stroobandt",
   name: "Juliana Stroobandt",
   dates: "12 Sep 1839 Oedelem – 11 Feb 1921 Oostkamp",
+  born: "12 Sep 1839 Oedelem",
+  died: "11 Feb 1921 Oostkamp",
   confidence: "doc",
   branch: "Bundervoet",
   source: "1960dirk (Dirk Teerlinck) tree; Oostkamp acts",

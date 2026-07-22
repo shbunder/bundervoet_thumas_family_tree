@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "bernardus",
   name: "Bernardus Bundervoet",
   dates: "1837–1900 · Evergem",
+  born: "1837",
+  died: "1900 · Evergem",
   confidence: "doc",
   role: "farmer, innkeeper, shopkeeper",
   branch: "Bundervoet",

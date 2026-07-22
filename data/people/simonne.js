@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "simonne",
   name: "Simonne Vandewalle",
   dates: "~1913/14 · Oostende?",
+  born: "~1913/14 · Oostende?",
   confidence: "fam",
   role: "Roland’s mother",
   branch: "DeKeyser",

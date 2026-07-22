@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "joannesf_p",
   name: "Joannes Franciscus Paelinck",
   dates: "b. 1809",
+  born: "1809",
   confidence: "doc",
   branch: "Paelinck",
   father: "janbaptist_p",

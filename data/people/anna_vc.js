@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "anna_vc",
   name: "Anna Van Craenenbroeck",
   dates: "† Zaventem/Leuven, a few years ago",
+  died: "Zaventem/Leuven, a few years ago",
   confidence: "fam",
   role: "Chris & Eric’s mother",
   branch: "Thumas",

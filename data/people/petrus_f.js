@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "petrus_f",
   name: "Petrus Franciscus Bundervoet",
   dates: "1879 Evergem – 1943 Oostende",
+  born: "1879 Evergem",
+  died: "1943 Oostende",
   confidence: "doc",
   role: "werkman / meestergast",
   branch: "Bundervoet",

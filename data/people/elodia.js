@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "elodia",
   name: "Elodia Octavia Bostyn",
   dates: "1908–1997 · Oostende",
+  born: "1908",
+  died: "1997 · Oostende",
   confidence: "doc",
   role: "werkster (labourer)",
   branch: "Bundervoet",

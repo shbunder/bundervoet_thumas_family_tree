@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "maria_dk",
   name: "Maria Dekeyser",
   dates: "1902–2002 · Oostende",
+  born: "1902",
+  died: "2002 · Oostende",
   confidence: "doc",
   role: "Jerome’s sister",
   branch: "DeKeyser",

@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "emma_vincke",
   name: "Emma Celesta Vincke",
   dates: "23 Jan 1880 Diksmuide – 6 Oct 1974 Oostende",
+  born: "23 Jan 1880 Diksmuide",
+  died: "6 Oct 1974 Oostende",
   confidence: "doc",
   branch: "Bundervoet",
   father: "lucien_vincke",

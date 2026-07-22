@@ -39,7 +39,7 @@ const lineages = read('lineages.js') || [];
 const groups = read('groups.js') || [];
 
 const FIELDS = new Set([
-  'id', 'name', 'dates', 'confidence', 'role', 'branch',
+  'id', 'name', 'dates', 'born', 'died', 'confidence', 'role', 'branch',
   'father', 'mother', 'spouse', 'source', 'note',
 ]);
 const CONFIDENCE = new Set(Object.keys(meta.confidenceLabels));

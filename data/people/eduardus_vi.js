@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "eduardus_vi",
   name: "Eduardus Ludovicus Rudolphus Van Iseghem",
   dates: "29 Nov 1880 – 27 Jun 1945 · Oostende",
+  born: "29 Nov 1880",
+  died: "27 Jun 1945 · Oostende",
   confidence: "doc",
   branch: "Bundervoet",
   father: "joannes_vi2",

@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "georges_cj",
   name: "Georges Carolus Josephus Thumas",
   dates: "1836 Grez-Doiceau – 1922 St-Stevens-Woluwe",
+  born: "1836 Grez-Doiceau",
+  died: "1922 St-Stevens-Woluwe",
   confidence: "doc",
   role: "landbouwer & herbergier",
   branch: "Thumas",

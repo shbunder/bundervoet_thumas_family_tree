@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "jerome_dk",
   name: "Jerome Joseph Dekeyser",
   dates: "1897 Oostende – 1972 Oostende",
+  born: "1897 Oostende",
+  died: "1972 Oostende",
   confidence: "doc",
   role: "Roland’s grandfather",
   branch: "DeKeyser",

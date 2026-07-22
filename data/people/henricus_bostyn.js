@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "henricus_bostyn",
   name: "Henricus Bostyn",
   dates: "16 Sep 1869 Varsenare – 11 Nov 1947 Oostende",
+  born: "16 Sep 1869 Varsenare",
+  died: "11 Nov 1947 Oostende",
   confidence: "doc",
   role: "metser (mason)",
   branch: "Bundervoet",

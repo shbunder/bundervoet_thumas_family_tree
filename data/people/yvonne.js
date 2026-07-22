@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "yvonne",
   name: "Yvonne Smessaert",
   dates: "b. 1914 · Oostende",
+  born: "1914 · Oostende",
   confidence: "doc",
   branch: "Devriendt",
   father: "georgius_s",

@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "vandenbemden",
   name: "Joanna Vandenbemden",
   dates: "15 Jun 1882 Sint-Stevens-Woluwe –",
+  born: "15 Jun 1882 Sint-Stevens-Woluwe",
   confidence: "doc",
   role: "naaister",
   branch: "Thumas",

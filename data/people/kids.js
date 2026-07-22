@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "kids",
   name: "Renée & Léon Bundervoet",
   dates: "b. 2017 & 2019 · Leuven",
+  born: "2017 & 2019 · Leuven",
   confidence: "fam",
   father: "shaun",
   mother: "dorien",

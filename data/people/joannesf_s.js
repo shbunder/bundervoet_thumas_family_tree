@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "joannesf_s",
   name: "Joannes Franciscus Smessaert",
   dates: "1857 – bef. 1919 · Oostende",
+  born: "1857",
+  died: "bef. 1919 · Oostende",
   confidence: "doc",
   role: "werkman",
   branch: "Devriendt",

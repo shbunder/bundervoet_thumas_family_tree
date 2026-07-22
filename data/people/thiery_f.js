@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "thiery_f",
   name: "François Thumas",
   dates: "b. ~1930s",
+  born: "~1930s",
   confidence: "fam",
   role: "Thiery’s father",
   branch: "Thumas",

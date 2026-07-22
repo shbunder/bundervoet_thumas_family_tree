@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "judocus",
   name: "Judocus Bundervoet",
   dates: "1794–1860 · Evergem",
+  born: "1794",
+  died: "1860 · Evergem",
   confidence: "doc",
   branch: "Bundervoet",
   father: "philippus",

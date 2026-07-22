@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "marcel_b",
   name: "Marcel Henri Bundervoet",
   dates: "1933–2015 · Oostende",
+  born: "1933",
+  died: "2015 · Oostende",
   confidence: "doc",
   branch: "Bundervoet",
   father: "alphonsus",

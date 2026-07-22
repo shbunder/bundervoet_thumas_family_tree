@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "jeanlambert_t",
   name: "Jean Lambert Thumas",
   dates: "1701–1776",
+  born: "1701",
+  died: "1776",
   confidence: "doc",
   branch: "Thumas",
   father: "antoine_t",

@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "victoria_engelsen",
   name: "Victoria Eugenia Engelsen",
   dates: "1791–1849",
+  born: "1791",
+  died: "1849",
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "Judocus Franciscus Van Iseghem" },

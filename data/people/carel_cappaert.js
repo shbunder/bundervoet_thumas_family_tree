@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "carel_cappaert",
   name: "Carel Louis Cappaert",
   dates: "12 Apr 1835 – 21 Feb 1918 · Oostkamp",
+  born: "12 Apr 1835",
+  died: "21 Feb 1918 · Oostkamp",
   confidence: "doc",
   role: "dagloner (day-labourer)",
   branch: "Bundervoet",

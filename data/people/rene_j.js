@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "rene_j",
   name: "René Janssens",
   dates: "† Oostende, after 2000",
+  died: "Oostende, after 2000",
   confidence: "fam",
   role: "Chris & Eric’s father",
   branch: "Thumas",

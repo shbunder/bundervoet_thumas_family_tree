@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "philippus",
   name: "Philippus Jacobus Bundervoet",
   dates: "1756–1832 · Evergem",
+  born: "1756",
+  died: "1832 · Evergem",
   confidence: "doc",
   branch: "Bundervoet",
   father: "christoffel",

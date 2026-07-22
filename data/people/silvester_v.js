@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "silvester_v",
   name: "Silvester Engelbertus Vanstechelman",
   dates: "1740 Woumen – 1809 Zevekote",
+  born: "1740 Woumen",
+  died: "1809 Zevekote",
   confidence: "doc",
   branch: "Vanstechelman",
   father: "andreasandries_v",

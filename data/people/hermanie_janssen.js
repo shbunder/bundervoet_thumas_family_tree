@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "hermanie_janssen",
   name: "Hermanie Ludovica Janssen",
   dates: "1853–1926",
+  born: "1853",
+  died: "1926",
   confidence: "doc",
   branch: "Bundervoet",
   father: "josephus_janssen",

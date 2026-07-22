@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "roland",
   name: "Roland De Keyser",
   dates: "1943 Tottenham – 2003",
+  born: "1943 Tottenham",
+  died: "2003",
   confidence: "fam",
   role: "born in wartime London",
   branch: "DeKeyser",

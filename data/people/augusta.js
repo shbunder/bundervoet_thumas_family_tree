@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "augusta",
   name: "Augusta Vanstechelman",
   dates: "1882 Mariakerke – 1922",
+  born: "1882 Mariakerke",
+  died: "1922",
   confidence: "doc",
   branch: "Vanstechelman",
   father: "petrusjacobus_v",

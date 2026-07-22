@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "joannes_vs",
   name: "Joannes Vanstechele",
   dates: "b. before 1673",
+  born: "before 1673",
   confidence: "doc",
   branch: "Vanstechelman",
   spouse: {

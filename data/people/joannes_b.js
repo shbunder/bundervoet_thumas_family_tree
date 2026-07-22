@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "joannes_b",
   name: "Joannes Bundervoet",
   dates: "d. 1760 · Evergem",
+  died: "1760 · Evergem",
   confidence: "doc",
   branch: "Bundervoet",
   spouse: {

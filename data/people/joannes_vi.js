@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "joannes_vi",
   name: "Joannes Van Iseghem",
   dates: "11 May 1903 Lens (Fr) – 5 May 1969 Oostende",
+  born: "11 May 1903 Lens (Fr)",
+  died: "5 May 1969 Oostende",
   confidence: "doc",
   branch: "Bundervoet",
   father: "eduardus_vi",

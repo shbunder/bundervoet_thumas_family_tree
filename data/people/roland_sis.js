@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "roland_sis",
   name: "Roland’s sister (name unknown)",
   dates: "~1940s",
+  born: "~1940s",
   confidence: "fam",
   role: "Roland’s sister",
   branch: "DeKeyser",

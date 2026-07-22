@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "mathilde_desmet",
   name: "Mathilde Desmet",
   dates: "b. 1841",
+  born: "1841",
   confidence: "doc",
   branch: "Bundervoet",
   spouse: {

@@ -64,6 +64,10 @@ aunt) is worked out from those links when the page loads.
 `confidence` drives the colour coding: `doc` documented record · `fam` family knowledge ·
 `sup` strongly supported · `unk` unknown, still to research.
 
+`born` and `died` are optional explicit date fields (e.g. `born: "12 Nov 1876 · Hamme-Merchtem"`),
+carried alongside the free-text `dates` string that drives the display. They are filled in for
+everyone with a known date, so birth and death are available as structured data.
+
 `source` is optional — leave it out and the person inherits the default citation for
 their `branch` from `branches.js`.
 

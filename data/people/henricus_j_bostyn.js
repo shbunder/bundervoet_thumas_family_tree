@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "henricus_j_bostyn",
   name: "Henricus Josephus Bostyn",
   dates: "b. 18 Dec 1841 · Varsenare",
+  born: "18 Dec 1841 · Varsenare",
   confidence: "doc",
   role: "herbergier (innkeeper)",
   branch: "Bundervoet",

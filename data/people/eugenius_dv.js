@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "eugenius_dv",
   name: "Eugenius Alphonsius Devriendt",
   dates: "1882–",
+  born: "1882",
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "Octavia Maria Schalandrijn" },

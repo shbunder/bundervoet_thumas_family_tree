@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "adrienne_dv",
   name: "Adrienne Margaretha Devriendt",
   dates: "12 Apr 1908 Stene – 22 Sep 1991 Oostende",
+  born: "12 Apr 1908 Stene",
+  died: "22 Sep 1991 Oostende",
   confidence: "doc",
   branch: "Bundervoet",
   father: "eugenius_dv",

@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "christiane",
   name: "Chris Janssens",
   dates: "b. 10 Mar 1961",
+  born: "10 Mar 1961",
   confidence: "fam",
   role: "Grandmother",
   branch: "Thumas",

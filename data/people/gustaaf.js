@@ -2,6 +2,7 @@ FamilyTree.person({
   id: "gustaaf",
   name: "Gustaaf Dekeyser",
   dates: "b. ~1920s · Oostende",
+  born: "~1920s · Oostende",
   confidence: "sup",
   role: "Roland’s father",
   branch: "DeKeyser",

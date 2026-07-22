@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "alphonsus",
   name: "Alphonsus Bernardus Bundervoet",
   dates: "1905–1980 · Oostende",
+  born: "1905",
+  died: "1980 · Oostende",
   confidence: "sup",
   role: "labourer",
   branch: "Bundervoet",

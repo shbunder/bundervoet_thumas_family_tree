@@ -2,6 +2,8 @@ FamilyTree.person({
   id: "leonie_p",
   name: "Léonie (Philomena Leonia) Paelinck",
   dates: "1901–1992",
+  born: "1901",
+  died: "1992",
   confidence: "doc",
   role: "“Meme Lenie”",
   branch: "Paelinck",
