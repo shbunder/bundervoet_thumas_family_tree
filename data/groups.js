@@ -23,7 +23,8 @@ FamilyTree.groups([
       "adriaenssens",
       "christoffel",
       "bogaert",
-      "joannes_b"
+      "joannes_b",
+      "livina_dewilde"
     ],
   },
   {

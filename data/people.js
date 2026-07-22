@@ -25,6 +25,7 @@ FamilyTree.roster([
   "christoffel",
   "bogaert",
   "joannes_b",
+  "livina_dewilde",
   "petrusjacobus_v",
   "clementia_w",
   "henricus_w",
