@@ -1,11 +1,11 @@
 FamilyTree.person({
   id: "joanna_truant",
   name: "Joanna Truant",
-  dates: "d. 1773",
-  died: "1773",
+  dates: "of Koekelare – 8 Apr 1773 Zande",
+  died: "8 Apr 1773 Zande",
   confidence: "doc",
   branch: "Devriendt",
   spouse: { name: "Stephanus Ramon" },
-  source: "Geneanet tree wernero (Werner Osaer); West-Vlaanderen civil & parish acts",
-  note: "FRONTIER above — also written Terwan. Mother of Mattheus Ramon (1729).",
+  source: "Geneanet tree wernero",
+  note: "From Koekelare; mother of Mattheus Ramon (surname also recorded as 'Terwan').",
 });

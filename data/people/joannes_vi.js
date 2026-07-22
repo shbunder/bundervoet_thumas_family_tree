@@ -9,6 +9,6 @@ FamilyTree.person({
   father: "eduardus_vi",
   mother: "emma_vincke",
   spouse: { name: "Adrienne Margaretha Devriendt" },
-  source: "Bart Vanhooren (bartvanhooren) & Guy Verdievel (gverdievel) trees, Geneanet; Oostende civil records",
-  note: "Rosette’s father. Born in Lens (Pas-de-Calais, France) — his family had migrated to the French coal-mining region — and returned to Oostende, where he died.",
+  source: "Geneanet trees bartvanhooren & gverdievel",
+  note: "Born in the French coal-mining town of Lens, where his Oostende family had emigrated for work; the family later returned to Belgium. Died six days short of his 66th birthday.",
 });

@@ -7,6 +7,6 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "Theresia Joanna Monica Robbe", detail: "Oostende, 5 May 1813" },
-  source: "Guy Verdievel (gverdievel) tree, Geneanet",
-  note: "FRONTIER — born Oostende under the Austrian Netherlands. His parents aren't in the available trees; would need the pre-1796 Oostende parish registers / 1813 marriage act.",
+  source: "Geneanet tree gverdievel",
+  note: "Born under Austrian rule, he lived through the French Empire and the Dutch period into independent Belgium; died at 63.",
 });

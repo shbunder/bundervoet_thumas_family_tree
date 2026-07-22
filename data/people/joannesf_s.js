@@ -1,15 +1,15 @@
 FamilyTree.person({
   id: "joannesf_s",
   name: "Joannes Franciscus Smessaert",
-  dates: "1857 – bef. 1919 · Oostende",
-  born: "1857",
+  dates: "12 Jan 1857 – bef. 1919 · Oostende",
+  born: "12 Jan 1857 Oostende",
   died: "bef. 1919 · Oostende",
   confidence: "doc",
-  role: "werkman",
+  role: "werkman (labourer)",
   branch: "Devriendt",
   father: "francl_s",
   mother: "morree",
-  spouse: {
-    name: "Eugenia Mathildis Ramon (1882)",
-  },
+  spouse: { name: "Eugenia Mathildis Ramon (1882)", detail: "Oostende, 4 Jan 1882" },
+  source: "Geneanet tree wernero",
+  note: "A labourer; son of Franciscus Leopoldus Smessaert & Anna Francisca Morree; 13+ children, many dying in infancy.",
 });

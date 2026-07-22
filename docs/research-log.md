@@ -483,3 +483,30 @@ Vandenbemden's (J.B. Vandenbemden × Agatha Langa).
 Validator green — 301 people.
 
 *End of log.
+
+## 34. Enrichment pass — Paelinck, Ramon/Smessaert/Daneel, Van Iseghem/Devriendt
+
+Three parallel research passes (Geneanet trees stefpaelinck, wernero, gverdievel), each verified
+by dates+places+parent/child links, merged with a canonical serializer. 44 ancestors gained
+exact dates, birthplaces, occupations, marriage details and life colour. Highlights:
+
+**Paelinck (Léonie's side, Oost-Vlaanderen — Lochristi→Destelbergen→Lokeren→Waasland):**
+root Livinus (m. Gent 1645); a run of Destelbergen generations; Jan Baptist (1771–1843) a
+**day labourer**; Eduardus (1858–1912) an **itinerant pedlar (leurder)** who married the widow
+Magdalena Van Bogaert (whose 1st husband died 1887).
+
+**Ramon / Smessaert / Daneel (Marcel Devriendt's wife's side, West-Flanders coast):**
+Mattheus Ramon (Bovekerke 1729) → Henricus (a **gardener**) → **Pierre Ramon (1812–1858), a
+gardener & seaman who DROWNED AT SEA**; Joanna Daneel a maidservant; Eugenia Ramon bore 14
+children with the labourer J.F. Smessaert; Yvonne Smessaert (b.1914) born before her parents wed
+and legitimized in 1919.
+
+**Van Iseghem / Janssen / Gautiert (Oostende):** a deep Oostende burgher cluster spanning the
+Austrian, French-Imperial, Dutch and Belgian periods; Judocus Van Iseghem m. 1810 under French
+rule; the family briefly emigrated to **Lens (northern France)** for coal work (Joannes b. Lens
+1903); Emma Vincke lived to 94.
+
+No unverified links grafted; corrections folded in (e.g. carolina_vh confirmed as a Vanstechelman
+person, not Jan Baptist Paelinck's wife). Validator green — 301 people.
+
+*End of log.

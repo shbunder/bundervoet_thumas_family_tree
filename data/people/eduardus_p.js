@@ -1,15 +1,15 @@
 FamilyTree.person({
   id: "eduardus_p",
   name: "Eduardus Franciscus Paelinck",
-  dates: "1858 Belsele – 1912 Sint-Niklaas",
-  born: "1858 Belsele",
-  died: "1912 Sint-Niklaas",
+  dates: "19 Nov 1858 Belsele – 28 Aug 1912 Sint-Niklaas",
+  born: "19 Nov 1858 Belsele",
+  died: "28 Aug 1912 Sint-Niklaas",
   confidence: "doc",
-  role: "leurder (pedlar)",
+  role: "leurder (itinerant pedlar)",
   branch: "Paelinck",
   father: "joannesf_p",
   mother: "rosalia_w",
-  spouse: {
-    name: "Maria Magdalena Van Bogaert (1888)",
-  },
+  spouse: { name: "Maria Magdalena Van Bogaert (1888)", detail: "Sint-Niklaas, 17 Nov 1888" },
+  source: "Geneanet tree stefpaelinck",
+  note: "An itinerant pedlar (leurder); married the widow Maria Magdalena Van Bogaert in 1888; eight children.",
 });

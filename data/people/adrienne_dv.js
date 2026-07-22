@@ -9,6 +9,6 @@ FamilyTree.person({
   father: "eugenius_dv",
   mother: "octavia_schal",
   spouse: { name: "Joannes Van Iseghem" },
-  source: "Bart Vanhooren (bartvanhooren) & Guy Verdievel (gverdievel) trees, Geneanet",
-  note: "Rosette’s mother, from Stene (Oostende). Her children with Joannes were Diane, Rosette and Edi.",
+  source: "Geneanet tree gverdievel",
+  note: "Born in Stene and lived to 83; her marriage joined the Devriendt and Van Iseghem lines (children Diane, Rosette, Edi).",
 });

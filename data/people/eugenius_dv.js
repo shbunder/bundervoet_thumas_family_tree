@@ -1,11 +1,11 @@
 FamilyTree.person({
   id: "eugenius_dv",
   name: "Eugenius Alphonsius Devriendt",
-  dates: "1882–",
-  born: "1882",
+  dates: "b. 13 Apr 1882 · Stene",
+  born: "13 Apr 1882 Stene",
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "Octavia Maria Schalandrijn" },
-  source: "Guy Verdievel (gverdievel) tree, Geneanet",
-  note: "Adrienne Devriendt’s father. His own parents are the frontier.",
+  source: "Geneanet tree gverdievel",
+  note: "Born in Stene; father of Adrienne Devriendt.",
 });
