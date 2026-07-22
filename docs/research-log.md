@@ -2,7 +2,7 @@
 
 *Compiled during the Cowork research sessions. This is the companion dossier to the interactive tree (`Renee-Leon-family-tree.html`). It records what is documented, what is inferred, where each line ends, and — most usefully — the **exact archive record** that would break each remaining wall.*
 
-**Status:** 241 people. Deepest confirmed root reaches ~1500 (Mattheus Wittenheyns x Maria De Ruwe, Oostkamp).
+**Status:** 254 people. Deepest confirmed root reaches ~1500 (Mattheus Wittenheyns x Maria De Ruwe, Oostkamp).
 **Confidence coding in the tree:** green = documented record · blue = family knowledge · purple = strongly supported/inferred · grey dashed = unknown.
 
 ---

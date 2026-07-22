@@ -144,7 +144,20 @@ FamilyTree.groups([
       "maria_deruwe",
       "carolus_vandenberghe",
       "petrus_vannieuwenhuyse",
-      "jacoba_monballiu"
+      "jacoba_monballiu",
+      "marinus_vannieuwenhuyse",
+      "cornelia_govaert",
+      "rolandus_govaert",
+      "maria_vandenbussche",
+      "andreas_vanmaele",
+      "catharina_willems",
+      "laurentius_willems",
+      "margaretha_vermeersch",
+      "michael_rups",
+      "maria_vanrenterghem",
+      "amandus_rups",
+      "judocus_vanrenterghem",
+      "appolonia_vandewoestijne"
     ],
   },
   {
