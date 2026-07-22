@@ -270,5 +270,15 @@ FamilyTree.roster([
   "petrus_debaecke",
   "margaretha_wybau",
   "paulus_lampsins",
-  "clara_lampsins"
+  "clara_lampsins",
+  "engel_antonius_vincke",
+  "virginia_leynseele",
+  "antonius_vincke",
+  "anne_peperstraete",
+  "carolus_vanald",
+  "eugenia_dutreeuw",
+  "antoine_vanald",
+  "brigitte_wyllie",
+  "ludovicus_dutreeuw",
+  "ludovica_ellebout"
 ]);

@@ -1,11 +1,13 @@
 FamilyTree.person({
   id: "lucien_vincke",
   name: "Lucien Julianus Vincke",
-  dates: "1840–",
-  born: "1840",
+  dates: "b. 26 Mar 1840 · Diksmuide",
+  born: "26 Mar 1840 · Diksmuide",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Ludovica Maria Vanalderweireldt" },
-  source: "Guy Verdievel (gverdievel) tree, Geneanet",
-  note: "Emma Vincke’s father. His own parents are the frontier.",
+  father: "engel_antonius_vincke",
+  mother: "virginia_leynseele",
+  spouse: { name: "Ludovica Maria Vanalderweireldt", detail: "Diksmuide, 24 May 1865" },
+  source: "Geneanet tree bartvanhooren (Diksmuide civil records)",
+  note: "Emma Vincke's father; from Diksmuide. Parents Engel Antonius Vincke (1807) x Virginia Coleta Leynseele (1818).",
 });
