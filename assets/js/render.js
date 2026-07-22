@@ -100,6 +100,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     }
     if (p.father || p.mother) {
       html +=
+        `<div class="gplab">${esc(p.name)}’s parents</div>` +
         `<div class="pgrid parents"><div class="pcol">${node(p.father)}</div>` +
         '<div class="pcol xcol"><span class="xmark">×</span></div>' +
         `<div class="pcol">${node(p.mother)}</div></div>` +
