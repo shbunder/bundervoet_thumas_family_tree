@@ -7,3 +7,9 @@
 *.swp
 *~
 .vscode/
+
+# scratch screenshot-harness artifacts (not part of the project)
+__mt_host.html
+__shot.html
+__mt.html
+__*.html
