@@ -269,3 +269,48 @@ Tree updated: `edouard_dk` (marriage detail corrected off "Hamme"; note rewritte
 `jerome_dk` (birth 14 Jun 1897; legitimized 4 May 1901). Validator green — 292 people.
 
 *End of log.
+
+## 28. Update — Janssens line (Chris's father René): 20th-century privacy wall, exhaustively confirmed
+
+Requested: a "similar deep search" on the Janssens line (Dorien's mother Chris Janssens →
+her father **René Janssens** × **Anna Van Craenenbroeck**). Unlike the West-Flemish lines,
+this is a **living-memory privacy wall, not a pre-1800 records gap**, and it behaves completely
+differently.
+
+**The wall.** René and Anna were both born ~1930s — the generation still sealed by Belgium's
+**100-year civil-registration privacy rule**. Their birth acts and their marriage act (the
+documents that would name René's and Anna's parents) are therefore not publicly consultable,
+and — being farmers, not notables — neither was published in any online tree.
+
+**What was checked (July 2026), all negative:**
+- **Geneanet** full tree/fonds index: "Van Craenenbroeck" appears only in the 1600s–1900s
+  (Alsemberg/Dworp, Pamel, Anderlecht, Etterbeek, Turnhout, Doel). No Anna of the ~1930s
+  generation — exactly as the privacy rule predicts. Common surname Janssens is unusable as a
+  filter.
+- **Obituary aggregators** (inmemoriam.be, ingedachten.be, dela.be, uitvaart-oostende.be):
+  only common-name noise. René's death "after 2000" on the coast predates/eludes online
+  obituary coverage.
+- **Doodsprentje / grave collections** (jammart.be "100.000", grafzerkje.be): the
+  Van Craenenbroeck + Janssens hits are **Pajottenland** (Dworp, Sint-Kwintens-Lennik,
+  Overijse) and **Waasland** (Beveren) families — NOT our Zaventem line. The surname is spread
+  across Brabant and Waasland, so name-only matches are false positives (the precise
+  "don't match on name alone" trap). Verified by region, rejected.
+
+**Why this can't be brute-forced online.** Every remaining document that names René's or
+Anna's parents is under the 100-year seal. No amount of tree/obituary searching gets past it.
+
+**The unlock is family-side (and the family holds the key):**
+1. **Direct-descendant certificate request** — the single decisive move. As direct
+   descendants, the family may obtain René's and Anna's *birth* certificates and their
+   *marriage* certificate from the Belgian civil registry even within the 100-year window.
+   Those name both sets of parents and break the wall in one step. (Filing it needs René's
+   approximate birth year + birth commune — see #3.)
+2. A **bidprentje** (memorial card) for René or Anna — typically gives exact birth date+place
+   and often the parents.
+3. **Family memory** — a relative recalling René's parents' names, his birth village, or his
+   birth year; enough even to file the certificate request in #1.
+
+Tree updated: `rene_j` note rewritten to record the exhaustive sweep and the unlocks.
+Validator green — 292 people.
+
+*End of log.
