@@ -394,3 +394,32 @@ at the Stadsarchief Oostende, not in AGATHA.
 Validator green — 298 people.
 
 *End of log.
+
+## 31. Update — Dekeyser: Édouard's birth exhaustively searched (not online); +1 child; Van Craenenbroeck trunk to 1830s
+
+**Édouard Dekeyser's parents — online routes now fully exhausted.** Beyond AGATHA (checked
+last session), the Ancestry/Geneanet West-Vlaanderen & Brabant civil-registration indexes were
+searched province-wide, under BOTH spellings:
+- "de KEYSER Eduardus" birth search: 191 hits, none born 1876.
+- "DEKEYSER Eduardus" birth search: 144 hits, none born 1876.
+- Marriage filter on "de Keyser Eduardus / Oostende": zero results — his 1901 marriage act is
+  not indexed either.
+So **there is no 1876 Eduardus De Keyser/Dekeyser birth in any online index, in any commune**,
+and no indexed 1901 marriage. He is top-of-branch in every tree (stefpaelinck, natamarcelle,
+wete1998). His parents are reachable only OFFLINE via the **Stadsarchief Oostende**: the
+**8 Sep 1951 death act (now public — deaths open after 50 yrs)** or the 4 May 1901 marriage act,
+both of which name his parents; or a bidprentje. The 1951 death act is the cleanest ask.
+
+**New child found.** The Geneanet/Ancestry index turned up **Bertha Alida Theresia Dekeyser,
+b. 7 Aug 1901 Oostende** — her birth act names Eduardus de Keyser × Louisa Maria Bocklandt, so
+she is a genuine sixth child (born 3 months after the wedding). Added (`bertha_dk`).
+
+**Van Craenenbroeck trunk pushed to the 1830s.** The cisken tree gives Antonius Josephus's own
+parents: **Amandus Franciscus Van Craenenbroeck (1835–1914) × Paulina Mommaerts (1838–1909)**,
+and Antonius's wife **Anna Maria Meeus (1877–1957)**. So Anna's near-certain family is now
+documented Zaventem-back to the 1830s (recorded in `anna_vc`'s note as context; her specific
+parent among the 1902–18 siblings still needs a family-side source).
+
+Validator green — 299 people.
+
+*End of log.
