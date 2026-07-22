@@ -45,10 +45,15 @@
       $('lineBody').innerHTML = view.descent(focus);
 
       // On a narrow screen the pedigree is wider than the viewport and scrolls
-      // inside itself. The person in focus sits in the middle, so start there
-      // rather than at the far-left grandparent.
+      // inside itself. Line the scroll up on the person in focus, so a phone
+      // opens on them rather than on the far-left grandparent.
       const ped = $('ped');
-      ped.scrollLeft = Math.max(0, (ped.scrollWidth - ped.clientWidth) / 2);
+      const card = ped.querySelector('.node.focus');
+      if (card && ped.scrollWidth > ped.clientWidth) {
+        const box = ped.getBoundingClientRect();
+        const it = card.getBoundingClientRect();
+        ped.scrollLeft += it.left + it.width / 2 - (box.left + box.width / 2);
+      }
     }
 
     function climbTo(id) {

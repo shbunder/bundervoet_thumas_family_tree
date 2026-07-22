@@ -142,7 +142,7 @@ body.dark mark{background:#6b5520;color:#f7ecd0}
   writing-mode:vertical-rl;letter-spacing:.06em}
 #lineBtn:hover{color:var(--accent);border-color:var(--accent)}
 #lineBtn.open{display:none}
-#linepanel{position:fixed;top:0;right:0;bottom:0;width:340px;z-index:950;background:var(--panel);
+#linepanel{position:fixed;top:0;right:0;bottom:0;width:340px;z-index:1050;background:var(--panel);
   border-left:1px solid var(--line);box-shadow:-6px 0 24px rgba(0,0,0,.18);
   display:flex;flex-direction:column;transition:transform .22s ease}
 #linepanel.collapsed{transform:translateX(100%)}

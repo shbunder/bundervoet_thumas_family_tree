@@ -270,11 +270,10 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
     const depth = line.path.length - 1;
     const from = line.kind === 'collateral' ? ` from ${esc(people[line.branchesFrom].name)}` : '';
-    return (
-      head +
-      `<div class="lthread">${steps}</div>` +
-      `<p class="ldepth">${depth} generation${depth === 1 ? '' : 's'}${from} down to Renée &amp; Léon</p>`
-    );
+    const footer = depth
+      ? `${depth} generation${depth === 1 ? '' : 's'}${from} down to Renée &amp; Léon`
+      : 'Every line in the tree ends here.';
+    return head + `<div class="lthread">${steps}</div>` + `<p class="ldepth">${footer}</p>`;
   }
 
   const legend = () =>
