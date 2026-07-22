@@ -1,13 +1,13 @@
 FamilyTree.person({
   id: "juliana_stroobandt",
   name: "Juliana Stroobandt",
-  dates: "12 Sep 1839 Oedelem – 11 Feb 1921 Oostkamp",
-  born: "12 Sep 1839 Oedelem",
-  died: "11 Feb 1921 Oostkamp",
+  dates: "1839 Beernem/Oedelem – 11 Feb 1921 Oostkamp",
+  born: "1839 · Beernem (Oedelem in another source)",
+  died: "11 Feb 1921 · Oostkamp",
   confidence: "doc",
   branch: "Bundervoet",
   father: "florentinus_stroobandt",
   mother: "rosalia_caeckaert",
-  source: "1960dirk (Dirk Teerlinck) & kathrynann Geneanet trees; Oostkamp acts",
-  note: "Married Carel Cappaert 1863. Parents Florentinus Stroobandt (1811–1876) × Rosalia Caeckaert (1815); grandparents Jacobus Stroobandt (1782–1821) × Joanna Keirsebilck (1791–1866).",
+  source: "Geneanet trees 1960dirk & kathrynann/isavdw; Oostkamp acts",
+  note: "Married Carel Cappaert 1863 Oostkamp. Birth given as 13 Sep 1839 Beernem (kathrynann) or 12 Sep 1839 Oedelem (1960dirk) — adjacent villages. One of eleven Stroobandt children.",
 });

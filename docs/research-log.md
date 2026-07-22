@@ -2,7 +2,7 @@
 
 *Compiled during the Cowork research sessions. This is the companion dossier to the interactive tree (`Renee-Leon-family-tree.html`). It records what is documented, what is inferred, where each line ends, and — most usefully — the **exact archive record** that would break each remaining wall.*
 
-**Status:** 156 people. Deepest documented roots reach the early 1600s.
+**Status:** 170 people. Deepest documented roots reach the early 1600s.
 **Confidence coding in the tree:** green = documented record · blue = family knowledge · purple = strongly supported/inferred · grey dashed = unknown.
 
 ---
@@ -157,5 +157,39 @@ New frontiers to pull next: parents of **Henricus Josephus Bostin (1801)**; pare
 **Joannes Perquy** and **Agatha Stekelorum**; parents of **Rosalia Caeckaert (1815)**;
 parents of **Jacobus Stroobandt (1782)** and **Joanna Keirsebilck (1791)**; and
 **Mathilde Desmet's** parents. Trees added to the source list: `stefanieschil`, `kathrynann`.
+
+## 10. Update — Bostyn/Perquy corrected & Stroobandt line pushed to the early 1600s
+
+**Bostin / Perquy (Elodia Bostyn's paternal grandparents' line):**
+- **Henricus Josephus Bostin** corrected: born **18 Aug 1801 Koekelare**, died **17 Jul 1867
+  Varsenare**; married Anna Theresia Perquy **9 May 1833 Westkerke** (vrijwilligersrab.be
+  marriage & death indexes; tree `stefanieschil`). His own parents remain the frontier.
+- **Anna Theresia Perquy** born **9 Jul 1806 Westkerke**; parents **Joannes Perquy × Agatha
+  Stekelorum (d. 1855)**; one generation higher: **Pieter Stekelorum × Helena Denijs**.
+  Joannes Perquy's parents are the next frontier.
+
+**Stroobandt line — deep maternal chain (all direct ancestors of Renée & Léon), via tree
+`kathrynann`/`isavdw` (Oostkamp/Tielt/Wingene parish & civil records, VVF marriage indexes):**
+Juliana Stroobandt (1839) → Florentinus (1811–76) × Rosalia Caeckaert (b. 25 Apr 1815 Brugge)
+→ **Jacobus Stroobandt (1782–1821 Oostkamp, shoemaker)** × **Joanna Keirsebilck (1791–1866
+Oostkamp)** → **Petrus Josephus Keirsebilck (1764–1817)** × **Anna Francisca De Grande
+(1765–1821)** → **Michael De Grande (1726 Tielt – 1801)** × **Brigitta De Blaere (1726
+Wingene – 1796)** → **Jacob Donaas De Blaere (1695–1747 Wingene)** × **Anna Cornelia De Vriese
+(1701–1729)** → **Hubert De Vriese (1665 Tielt – 1728)** × **Joanna Van Der Oughstraete
+(1655–1723)** → **Judocus De Vriese (1637–1684)** × **Esther Vanderbeken (1640–1675)** →
+**Michaël De Vriese (~1615–1681) × Judoca Scherrens (1617–1683)** — among the deepest roots
+in the whole tree. (Caution: a namesake Michaël De Vriese b. 1674 exists in the same source.)
+
+New frontiers opened here: parents of Jacobus Stroobandt (1782), Petrus Josephus Keirsebilck
+(1764), Michael De Grande (1726), Jacob Donaas De Blaere (1695), Joanna Van Der Oughstraete,
+Esther Vanderbeken, and Michaël De Vriese (~1615); plus Rosalia Caeckaert's and Joannes
+Perquy's parents.
+
+**Living family:** Dorien Thumas — policy advisor at KBC Bank & Verzekering, VUB alumna,
+Brussels area (from her public LinkedIn profile). Curiosity confirming the Thumas roots:
+Kraainem, the documented Thumas home village, has a **Jef Thumasstraat / Rue Jef Thumas**.
+
+Trees added to the source list this session: `stefanieschil` (Bostin/Perquy), `kathrynann`
+(Stroobandt/De Vriese, sourced to `isavdw` + VVF).
 
 *End of log.*

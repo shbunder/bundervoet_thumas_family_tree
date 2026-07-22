@@ -69,7 +69,21 @@ FamilyTree.groups([
       "florentinus_stroobandt",
       "rosalia_caeckaert",
       "jacobus_stroobandt",
-      "joanna_keirsebilck"
+      "joanna_keirsebilck",
+      "petrus_jos_keirsebilck",
+      "anna_fr_degrande",
+      "michael_degrande",
+      "brigitta_deblaere",
+      "jacob_deblaere",
+      "anna_c_devriese",
+      "hubert_devriese",
+      "joanna_vdoughstraete",
+      "judocus_devriese",
+      "esther_vanderbeken",
+      "michael_devriese_o",
+      "judoca_scherrens",
+      "pieter_stekelorum",
+      "helena_denijs"
     ],
   },
   {

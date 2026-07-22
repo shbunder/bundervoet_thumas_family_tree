@@ -5,7 +5,9 @@ FamilyTree.person({
   died: "1855",
   confidence: "doc",
   branch: "Bundervoet",
+  father: "pieter_stekelorum",
+  mother: "helena_denijs",
   spouse: { name: "Joannes Perquy" },
-  source: "Geneanet tree stefanieschil (parents of Anna Theresia Perquy)",
-  note: "FRONTIER — grandmother of Henricus Josephus Bostyn on the Perquy side. Died 1855; her own parents not yet recovered.",
+  source: "Geneanet tree stefanieschil (Westkerke area)",
+  note: "Grandmother of Henricus Josephus Bostyn on the Perquy side. Her parents Pieter Stekelorum × Helena Denijs.",
 });

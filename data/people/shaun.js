@@ -1,9 +1,10 @@
 FamilyTree.person({
   id: "shaun",
   name: "Shaun Bundervoet",
-  dates: "MSc VUB (ETRO) · KBC",
+  dates: "b. —",
   confidence: "doc",
   role: "Father",
   father: "ronny",
   mother: "cosette",
+  note: "MSc VUB (ETRO); works at KBC. Birth date to be filled in.",
 });
