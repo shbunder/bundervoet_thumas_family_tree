@@ -232,3 +232,40 @@ Clerck & Judoca Vande Keere; Egidius De Grande (~1670) & Joanna Wallays; Judocus
 Van Nieuwenhuyse; Josephus Caeckaert & Godeliva Rotsaert; Oliverius Stroobandt's parents.
 
 *End of log.
+
+## 27. Update — De Keyser: "Hamme 1901" resolved as a marriage/legitimization; AGATHA exhausted for Édouard's parents
+
+Exhaustive AGATHA sweep (logged-in browser) on Édouard Dekeyser × Louise Bocklandt.
+
+**What "4 May 1901" actually is.** The AGATHA "Analyses van akten" name-index returns five
+records for this couple, all in **Oostende**: births of Jérôme Josephus (14 Jun 1897, act
+nr. 585), Gustavus Josephus (1899) and Maria (1902), and the infant deaths of Angela Luciana
+(20 Oct 1903) and Cesar Mauritius (3 Feb 1905). The 1897 and 1899 birth acts each carry the
+marginal note **"Gewettigd 4 5 1901"** — *legitimized 4 May 1901*. So **4 May 1901 is the date
+Édouard and Louise married**, legitimizing the two children born before the wedding. It was
+never a birth date or a plain "event."
+
+**"Hamme (Merchtem)" as the marriage place is disproven.** That commune's own alphabetical
+marriage index (TABEL) for the year 1901 — read directly from the scan (Gemengde akten Hamme
+(Merchtem) 1901-1910, p. 8) — lists **exactly one marriage all year**: Belgrado Adeline × Leo
+Jean Louis (act 1), certified closed by the registrar on 3 Jan 1902. No Dekeyser. Since every
+traceable event of this family (3 births + 2 infant deaths, 1897-1905) was registered in
+Oostende and the legitimization was annotated onto the Oostende birth registers, the marriage
+almost certainly took place in **Oostende**.
+
+**Why Édouard's parents can't be reached in AGATHA.** His parents are named only in the
+4 May 1901 **marriage act**. That act is not digitized or indexed in AGATHA: Oostende's
+post-1900 civil registers are held at the **Stadsarchief Oostende**, not the Rijksarchief. The
+AGATHA-indexed Oostende records name only Eduardus × Louisa themselves (as parents of the
+children / of the deceased infants), never the grandparents, and the birth-act analyses carry
+no linked scan and no father's birthplace. **AGATHA is therefore genuinely exhausted for his
+parentage and birthplace.**
+
+**Remaining real-world unlocks (offline):** (1) the 4 May 1901 marriage act at the Stadsarchief
+Oostende — it will state both spouses' parents *and* Édouard's own birthplace and age; (2) a
+family bidprentje (memorial card) for Édouard (†8 Sep 1951 Oostende).
+
+Tree updated: `edouard_dk` (marriage detail corrected off "Hamme"; note rewritten) and
+`jerome_dk` (birth 14 Jun 1897; legitimized 4 May 1901). Validator green — 292 people.
+
+*End of log.
