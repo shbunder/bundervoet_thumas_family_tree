@@ -225,6 +225,7 @@ FamilyTree.groups([
       "cosette",
       "sancha",
       "roland",
+      "rita_dk",
       "roland_sis",
       "gustaaf",
       "simonne",
