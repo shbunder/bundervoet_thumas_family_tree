@@ -358,3 +358,39 @@ unverified parent grafted); `rene_j` note re-framed (privacy-rule excuse removed
 green — 292 people.
 
 *End of log.
+
+## 30. Update — Dekeyser branch: "Hamme" solved + Bocklandt line pushed to the 1760s
+
+Pushing the Dekeyser branch via the *wife's* side (as with Van Craenenbroeck, the rarer,
+more tractable surname) paid off through Geneanet's record index and the tree **wete1998
+(Erik Bekaert)**, a Hamme (Oost-Vlaanderen) specialist.
+
+**"Hamme" finally explained.** The "Hamme" that has haunted this branch was never a marriage
+place: it is **Louise Bocklandt's BIRTHPLACE — Hamme in OOST-VLAANDEREN (Waasland)**, not
+Hamme-Merchtem in Brabant. Louise Bocklandt was born there 31 Dec 1877. This is why the
+Merchtem registers (checked directly last session) never held a Bocklandt or Dekeyser — wrong
+Hamme entirely. Our `louise_bocklandt` record is corrected accordingly.
+
+**Louise's Bocklandt line extended (verified as ours — wete1998 shows the same parents our
+AGATHA join already had, so it is not a namesake):**
+- Louise Maria Bocklandt (1877 Hamme O-Vl) × Édouard Dekeyser
+- father **Eduardus Bocklandt (1839)** × **Maria Louisa Van Bergen (1842–1888)**
+- paternal grandparents **Antonius Dominicus Bocklandt (1805–1883)** × **Isabella Livia Ichau
+  (1803–1870)**, m. 1838
+- paternal great-grandparents **Daniel Bocklandt (1768–1837)** × **Philippa Van Puyenbroeck
+  (1778–1820)**, m. 1801  ← top of the Bocklandt line in wete1998 (frontier)
+- maternal grandparents (Van Bergen side) **Joannes Franciscus Van Bergen (1815–1898)** ×
+  **Ida Vermandel (1825–1865)**
+
+Six new ancestors added (confidence "sup", sourced to wete1998; confirmable in the Hamme O-Vl
+civil registers on AGATHA). Frontier: Daniel Bocklandt's parents (pre-1768 Hamme O-Vl).
+
+**Édouard Dekeyser himself:** re-checked all three trees (stefpaelinck, natamarcelle,
+wete1998) — he is **top-of-branch in every one**, no parents anywhere. Confirms his parentage
+lives only in his own Oostende acts. Note refined: his **1951 Oostende death act is now public**
+(death acts open after 50 yrs) and, like the 1901 marriage act, names his parents — both held
+at the Stadsarchief Oostende, not in AGATHA.
+
+Validator green — 298 people.
+
+*End of log.

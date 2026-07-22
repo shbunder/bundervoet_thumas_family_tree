@@ -235,7 +235,15 @@ FamilyTree.groups([
       "maria_dk",
       "leonie_p",
       "edouard_dk",
-      "louise_bocklandt"
+      "louise_bocklandt",
+      "edouard_bocklandt",
+      "marie_vanbergen",
+      "antonius_dominicus_bocklandt",
+      "isabella_ichau",
+      "daniel_bocklandt",
+      "philippa_vanpuyenbroeck",
+      "jan_van_bergen",
+      "ida_vermandel"
     ],
   },
   {
