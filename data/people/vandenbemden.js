@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Thumas",
   father: "hendrik_vdb",
   mother: "coekelberghs",
-  spouse: { name: "J.B. Georgius Thumas", detail: "Kraainem, 3 Feb 1902" },
+  spouses: [
+    { id: "jbgeorgius", name: "J.B. Georgius Thumas", detail: "Kraainem, 3 Feb 1902" },
+  ],
   source: "Geneanet (jswaelens); her 1902 Kraainem marriage act",
   note: "A seamstress; married J.B. Georgius Thumas in Kraainem in 1902. Her parents are named in that marriage act. Several of her children died in infancy.",
 });

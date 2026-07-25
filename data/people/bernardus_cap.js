@@ -3,8 +3,8 @@ FamilyTree.person({
   name: "Bernardus Cappaert",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: {
-    name: "Sophia Vanhoucke",
-  },
+  spouses: [
+    { id: "sophia_vh", name: "Sophia Vanhoucke" },
+  ],
   note: "Carel Cappaert’s father (isavdw tree, Rijksarchief). His own parents are the new frontier.",
 });

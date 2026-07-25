@@ -9,8 +9,8 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "camiel_d",
   mother: "declercq",
-  spouse: {
-    name: "Yvonne Smessaert (1937)",
-  },
+  spouses: [
+    { id: "yvonne", name: "Yvonne Smessaert (1937)" },
+  ],
   source: "Werner Osaer (wernero) tree; West-Vlaanderen acts",
 });

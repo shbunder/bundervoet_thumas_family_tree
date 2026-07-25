@@ -5,7 +5,9 @@ FamilyTree.person({
   died: "1669",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Catharina Willems" },
+  spouses: [
+    { id: "catharina_willems", name: "Catharina Willems" },
+  ],
   source: "Geneanet isavdw (Rijksarchief scans, Wingene/Beernem)",
   note: "FRONTIER above — father of Joannes Van Maele (1641 Wingene). Married several times; his own father is unrecorded (NN Van Maele).",
 });

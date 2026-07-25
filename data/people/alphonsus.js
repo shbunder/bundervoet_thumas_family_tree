@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "petrus_f",
   mother: "augusta",
-  spouse: { name: "Elodia Octavia Bostyn" },
+  spouses: [
+    { id: "elodia", name: "Elodia Octavia Bostyn" },
+  ],
   source: "Geneanet / Oostende records",
   note: "The first Bundervoet of the line born in Oostende (1905); eldest child of Petrus Franciscus Bundervoet & Augusta Vanstechelman.",
 });

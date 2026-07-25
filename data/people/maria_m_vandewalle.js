@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "carolus_vandewalle",
   mother: "maria_rups",
-  spouse: { name: "Rogerius De Baecke" },
+  spouses: [
+    { id: "rogerius_debaecke", name: "Rogerius De Baecke" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Mother of Barbara Theresia De Baecke (1709).",
 });

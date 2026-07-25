@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1659",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Catharina Van Massenhove" },
+  spouses: [
+    { id: "catharina_vanmassenhove", name: "Catharina Van Massenhove" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — father of Joanna Willaert (1631 Torhout). Born ~1595.",
 });

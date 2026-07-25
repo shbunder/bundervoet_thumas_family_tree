@@ -8,7 +8,10 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "michael_devriese_o",
   mother: "judoca_scherrens",
-  spouse: { name: "Esther Vanderbeken (1st); Joanna Loontjens (2nd)" },
+  spouses: [
+    { id: "esther_vanderbeken", name: "Esther Vanderbeken", detail: "1st" },
+    { name: "Joanna Loontjens", detail: "2nd" },
+  ],
   source: "Geneanet tree kathrynann / isavdw (Tielt parish records)",
   note: "Father of Hubert De Vriese. Married twice — Esther Vanderbeken (Hubert's mother), then Joanna Loontjens.",
 });

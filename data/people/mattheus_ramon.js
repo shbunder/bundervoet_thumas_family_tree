@@ -8,7 +8,14 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "stephanus_ramon",
   mother: "joanna_truant",
-  spouse: { name: "Jacoba Josepha Ossaert (2nd); Anna Anastasia Norysse (1st)", detail: "Zande, 31 May 1772 (2nd marriage)" },
+  spouses: [
+    { name: "Anna Anastasia Norysse", detail: "1st" },
+    {
+      id: "jacoba_ossaert",
+      name: "Jacoba Josepha Ossaert",
+      detail: "Zande, 31 May 1772 — his 2nd marriage",
+    },
+  ],
   source: "Geneanet tree wernero (Werner Osaer)",
   note: "Son of Stephanus Ramon & Joanna Truant; married twice — our line is via his 2nd wife Jacoba Ossaert (Zande, 1772), with whom he had ten children.",
 });

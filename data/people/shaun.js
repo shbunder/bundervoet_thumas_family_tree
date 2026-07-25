@@ -7,5 +7,8 @@ FamilyTree.person({
   role: "Father",
   father: "ronny",
   mother: "cosette",
+  spouses: [
+    { id: "dorien", name: "Dorien Thumas" },
+  ],
   note: "MSc VUB (ETRO); works at KBC. Born 19 January 1988.",
 });

@@ -6,7 +6,13 @@ FamilyTree.person({
   died: "1855",
   confidence: "doc",
   branch: "Thumas",
-  spouse: { name: "Georges Lambert Thumas", detail: "Grez-Doiceau, 9 Feb 1801" },
+  spouses: [
+    {
+      id: "georgeslambert_t",
+      name: "Georges Lambert Thumas",
+      detail: "Grez-Doiceau, 9 Feb 1801",
+    },
+  ],
   source: "Geneanet / Grez-Doiceau records",
   note: "Wife of the carpenter Georges Lambert Thumas (m. 1801); mother of ten, including Georges (1804).",
 });

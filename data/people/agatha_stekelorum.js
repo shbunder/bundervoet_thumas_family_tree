@@ -7,7 +7,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "pieter_stekelorum",
   mother: "helena_denijs",
-  spouse: { name: "Joannes Perquy" },
+  spouses: [
+    { id: "joannes_perquy", name: "Joannes Perquy" },
+  ],
   source: "Geneanet tree stefanieschil (Westkerke area)",
   note: "Grandmother of Henricus Josephus Bostyn on the Perquy side. Her parents Pieter Stekelorum × Helena Denijs.",
 });

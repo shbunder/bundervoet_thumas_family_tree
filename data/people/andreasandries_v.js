@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Vanstechelman",
   father: "andreas_v",
   mother: "pluvier",
-  spouse: { name: "Maria Anna Theresia Boxoens" },
+  spouses: [
+    { id: "boxoens", name: "Maria Anna Theresia Boxoens" },
+  ],
   source: "Geneanet tree stechec",
   note: "Of Woumen; eight children including Silvester (1740).",
 });

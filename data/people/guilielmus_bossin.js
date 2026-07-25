@@ -6,7 +6,7 @@ FamilyTree.person({
   died: "1888",
   confidence: "doc",
   branch: "Thumas",
-  spouse: {
-    name: "Joanna Catharina Jacoba Peremans",
-  },
+  spouses: [
+    { id: "peremans", name: "Joanna Catharina Jacoba Peremans" },
+  ],
 });

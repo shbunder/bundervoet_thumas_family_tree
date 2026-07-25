@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "petrus_degrande",
   mother: "adriana_sabbe",
-  spouse: { name: "Brigitta De Blaere", detail: "Ruiselede, 4 May 1755" },
+  spouses: [
+    { id: "brigitta_deblaere", name: "Brigitta De Blaere", detail: "Ruiselede, 4 May 1755" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Parents Petrus De Grande (1697-1765) x Adriana Theresia Sabbe (1703-1768). One of twelve children.",
 });

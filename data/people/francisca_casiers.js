@@ -5,7 +5,9 @@ FamilyTree.person({
   born: "before 1673",
   confidence: "doc",
   branch: "Vanstechelman",
-  spouse: { name: "Joannes Vanstechele" },
+  spouses: [
+    { id: "joannes_vs", name: "Joannes Vanstechele" },
+  ],
   source: "Geneanet tree stechec",
   note: "Mother of Andreas Vanstechelman (b. 1667 Woumen).",
 });

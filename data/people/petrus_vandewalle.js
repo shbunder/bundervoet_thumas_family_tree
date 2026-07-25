@@ -7,7 +7,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "simon_vandewalle_1565",
   mother: "christina_desangere",
-  spouse: { name: "Francisca Van Houtte (partner)" },
+  spouses: [
+    { id: "francisca_vanhoutte", name: "Francisca Van Houtte (partner)" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans; Heemkring Oostkamp; Bruges weesregisters)",
   note: "Father of Carolus Vandewalle (1638, born out of wedlock to Francisca Van Houtte). Son of Simon Vandewalle, the sexton of Oostkamp.",
 });

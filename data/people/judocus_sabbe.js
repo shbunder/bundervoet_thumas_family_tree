@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "simon_sabbe",
   mother: "joanna_rotsaert_sabbe",
-  spouse: { name: "Anna Van Nieuwenhuyse (3rd of 4 marriages)", detail: "Oostkamp, 4 Aug 1700" },
+  spouses: [
+    {
+      id: "anna_vannieuwenhuyse",
+      name: "Anna Van Nieuwenhuyse",
+      detail: "Oostkamp, 4 Aug 1700 — 3rd of his 4 marriages",
+    },
+  ],
   source: "Geneanet tree isavdw (Heemkring Oostkamp; Rijksarchief)",
   note: "Father of Adriana Theresia Sabbe (1703). Married four times; farmer at Stuyvenberghe, Oostkamp. Parents Simon Sabbe (1627-1711) x Joanna Rotsaert.",
 });

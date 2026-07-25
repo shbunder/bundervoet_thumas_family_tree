@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "livinus_verkouille",
   mother: "maria_malfait",
-  spouse: { name: "Carolus Ludovicus Ramon", detail: "Oostende, 14 Sep 1859" },
+  spouses: [
+    { id: "carolus_ramon", name: "Carolus Ludovicus Ramon", detail: "Oostende, 14 Sep 1859" },
+  ],
   source: "Geneanet; Oostende civil records",
   note: "Daughter of Livinus Verkouille & Maria Malfait; widowed in 1883 when her fisherman husband was lost at sea, she outlived him by 27 years.",
 });

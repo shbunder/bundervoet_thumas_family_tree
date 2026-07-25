@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "joannes_jos_vi",
   mother: "anna_gautiert",
-  spouse: { name: "Hermanie Ludovica Janssen", detail: "Oostende, 23 Aug 1872" },
+  spouses: [
+    {
+      id: "hermanie_janssen",
+      name: "Hermanie Ludovica Janssen",
+      detail: "Oostende, 23 Aug 1872",
+    },
+  ],
   source: "Geneanet tree gverdievel",
   note: "Lived to 81; born in the city of Oostende but died in neighbouring rural Stene, where the family had settled.",
 });

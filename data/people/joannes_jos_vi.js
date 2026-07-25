@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "judocus_vi",
   mother: "victoria_engelsen",
-  spouse: { name: "Anna Maria Gautiert", detail: "Oostende, 24 Mar 1847" },
+  spouses: [
+    { id: "anna_gautiert", name: "Anna Maria Gautiert", detail: "Oostende, 24 Mar 1847" },
+  ],
   source: "Geneanet tree gverdievel",
   note: "Died young at 42, a year after his wife Anna Maria Gautiert — their son Joannes (1852) was orphaned in childhood.",
 });

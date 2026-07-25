@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1683",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Paulus Lampsins" },
+  spouses: [
+    { id: "paulus_lampsins", name: "Paulus Lampsins" },
+  ],
   source: "Geneanet isavdw (Lichtervelde)",
   note: "FRONTIER above — mother of Maria Lampsins (1637). Her maiden name is also recorded as Lampsins.",
 });

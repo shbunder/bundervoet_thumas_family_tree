@@ -6,7 +6,13 @@ FamilyTree.person({
   died: "21 Jul 1808 Diksmuide",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Brigitte Josephine Joanna Wyllie", detail: "Diksmuide, 8 Jun 1803" },
+  spouses: [
+    {
+      id: "brigitte_wyllie",
+      name: "Brigitte Josephine Joanna Wyllie",
+      detail: "Diksmuide, 8 Jun 1803",
+    },
+  ],
   source: "Geneanet tree bartvanhooren",
   note: "Died very young, at 28, only months after the birth of his son Carolus.",
 });

@@ -5,7 +5,9 @@ FamilyTree.person({
   died: "1676",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Martinus De Grande" },
+  spouses: [
+    { id: "martinus_degrande", name: "Martinus De Grande" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — mother of Egidius De Grande (1670).",
 });

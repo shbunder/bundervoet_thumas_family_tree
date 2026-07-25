@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1746",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Egidius De Grande" },
+  spouses: [
+    { id: "egidius_degrande", name: "Egidius De Grande" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "FRONTIER above — grandmother of Michael De Grande.",
 });

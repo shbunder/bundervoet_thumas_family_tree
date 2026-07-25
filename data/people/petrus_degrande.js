@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "egidius_degrande",
   mother: "joanna_wallays",
-  spouse: { name: "Adriana Theresia Sabbe" },
+  spouses: [
+    { id: "adriana_sabbe", name: "Adriana Theresia Sabbe" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "Father of Michael De Grande (1726).",
 });

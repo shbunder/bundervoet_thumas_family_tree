@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1697",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Simon Sabbe" },
+  spouses: [
+    { id: "simon_sabbe", name: "Simon Sabbe" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — mother of Judocus Sabbe (~1667).",
 });

@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1820",
   confidence: "sup",
   branch: "DeKeyser",
-  spouse: { name: "Daniel Bocklandt", detail: "married 1801" },
+  spouses: [
+    { id: "daniel_bocklandt", name: "Daniel Bocklandt", detail: "married 1801" },
+  ],
   source: "Geneanet tree wete1998 (Erik Bekaert)",
   note: "Paternal great-grandmother of Louise Bocklandt; wife of Daniel Bocklandt. Of Hamme (Oost-Vlaanderen).",
 });

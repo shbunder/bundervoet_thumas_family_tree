@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "mauritius_stroobandt",
   mother: "barbara_debaecke",
-  spouse: { name: "Anna Maria Van Acker", detail: "Oostkamp, 1768" },
+  spouses: [
+    { id: "anna_m_vanacker", name: "Anna Maria Van Acker", detail: "Oostkamp, 1768" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "Father of Jacobus Stroobandt (1782). Married Anna Maria Van Acker 1768 Oostkamp.",
 });

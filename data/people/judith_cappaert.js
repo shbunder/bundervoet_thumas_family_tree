@@ -8,5 +8,8 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "carel_cappaert",
   mother: "juliana_stroobandt",
+  spouses: [
+    { id: "henricus_bostyn", name: "Henricus Bostyn", detail: "Oostkamp, 31 Jul 1900" },
+  ],
   source: "1960dirk (Dirk Teerlinck) tree; Oostkamp civil acts",
 });

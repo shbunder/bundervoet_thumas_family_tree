@@ -6,7 +6,9 @@ FamilyTree.person({
   confidence: "doc",
   role: "huisvrouw (housewife)",
   branch: "Paelinck",
-  spouse: { name: "Joannes Franciscus Paelinck" },
+  spouses: [
+    { id: "joannesf_p", name: "Joannes Franciscus Paelinck" },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "Housewife; mother of six recorded children including Eduardus (1858).",
 });

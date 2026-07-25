@@ -10,6 +10,8 @@ const esc = s =>
     .replace(/"/g, '&quot;');
 
 const spouseText = sp => '❦ ' + (sp.detail ? `${sp.name} — ${sp.detail}` : sp.name);
+// Someone can have married more than once; the list is chronological.
+const spousesText = p => (p.spouses || []).map(spouseText).join('   ');
 
 FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
   const conf = id => kin.confidenceOf(id);
@@ -32,11 +34,15 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     );
   }
 
+  // A spouse who is a record of their own is rendered as a real node, so you can
+  // climb into them and on into their family. One who is only a name stays flat.
   const spouseNode = sp =>
-    '<div class="node fam spouse"><div class="rl">spouse</div>' +
-    `<div class="nm">${esc(sp.name)}</div>` +
-    (sp.detail ? `<div class="dt">${esc(sp.detail)}</div>` : '') +
-    '</div>';
+    sp.id && people[sp.id]
+      ? node(sp.id, { role: 'spouse' })
+      : '<div class="node fam spouse"><div class="rl">spouse</div>' +
+        `<div class="nm">${esc(sp.name)}</div>` +
+        (sp.detail ? `<div class="dt">${esc(sp.detail)}</div>` : '') +
+        '</div>';
 
   // A parent's own parents, shown as a couple with a drop line beneath them.
   // The caption only shows on narrow screens: there the two couples sit one
@@ -76,7 +82,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
       `<span class="conf conf-${c}">${esc(meta.confidenceLabels[c])}</span>` +
       `<h5>${esc(p.name)}</h5>` +
       (sub ? `<div class="r">${esc(sub)}</div>` : '') +
-      (p.spouse ? `<div class="kv"><b>Spouse:</b> ${esc(spouseText(p.spouse))}</div>` : '') +
+      (p.spouses?.length ? `<div class="kv"><b>Spouse:</b> ${esc(spousesText(p))}</div>` : '') +
       parentLine('Father', p.father) +
       parentLine('Mother', p.mother) +
       (kids.length ? `<div class="kv"><b>Children:</b> ${esc(kids.join(', '))}</div>` : '') +
@@ -110,7 +116,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     html +=
       '<div class="couple">' +
       node(focus, { focus: true }) +
-      (p.spouse ? `<span class="xmark">×</span>${spouseNode(p.spouse)}` : '') +
+      (p.spouses || []).map(sp => `<span class="xmark">×</span>${spouseNode(sp)}`).join('') +
       '</div>';
 
     const children = kin.childrenOf(focus);
@@ -127,7 +133,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const p = people[focus];
     return (
       `<h3>${esc(p.name)}</h3><div class="sub">${esc(subtitleFor(focus))}</div>` +
-      (p.spouse ? `<div class="kv"><b>Spouse:</b> ${esc(spouseText(p.spouse))}</div>` : '') +
+      (p.spouses?.length ? `<div class="kv"><b>Spouse:</b> ${esc(spousesText(p))}</div>` : '') +
       parentLine('Father', p.father) +
       parentLine('Mother', p.mother) +
       (p.note ? `<div class="disc">${esc(p.note)}</div>` : '') +

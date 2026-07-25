@@ -3,7 +3,9 @@ FamilyTree.person({
   name: "Appolonia Vande Woestijne",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Judocus Van Renterghem" },
+  spouses: [
+    { id: "judocus_vanrenterghem", name: "Judocus Van Renterghem" },
+  ],
   source: "Geneanet isavdw",
   note: "FRONTIER above — great-grandmother of Maria Rups (~1575 generation).",
 });

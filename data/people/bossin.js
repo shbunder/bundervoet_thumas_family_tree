@@ -8,4 +8,11 @@ FamilyTree.person({
   branch: "Thumas",
   father: "guilielmus_bossin",
   mother: "peremans",
+  spouses: [
+    {
+      id: "georges_cj",
+      name: "Georges Carolus Josephus Thumas",
+      detail: "20 Jun 1872 (Kraainem)",
+    },
+  ],
 });

@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1898",
   confidence: "sup",
   branch: "DeKeyser",
-  spouse: { name: "Ida Vermandel" },
+  spouses: [
+    { id: "ida_vermandel", name: "Ida Vermandel" },
+  ],
   source: "Geneanet tree wete1998 (Erik Bekaert)",
   note: "Maternal grandfather of Louise Bocklandt — father of Maria Louisa Van Bergen (1842). Of Hamme (Oost-Vlaanderen).",
 });

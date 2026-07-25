@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "georgius_maertens",
   mother: "joanna_leenaert",
-  spouse: { name: "Engelbertus Van Maele" },
+  spouses: [
+    { id: "engelbertus_vanmaele", name: "Engelbertus Van Maele" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Mother of Francisca Van Maele (1710).",
 });

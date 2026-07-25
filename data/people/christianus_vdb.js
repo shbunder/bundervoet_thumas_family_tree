@@ -5,7 +5,7 @@ FamilyTree.person({
   died: "1827",
   confidence: "doc",
   branch: "Vanstechelman",
-  spouse: {
-    name: "Delphina Van den Berghe",
-  },
+  spouses: [
+    { id: "delphina_vdb", name: "Delphina Van den Berghe" },
+  ],
 });

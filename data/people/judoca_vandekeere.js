@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1771",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Joannes De Clerck" },
+  spouses: [
+    { id: "joannes_declerck", name: "Joannes De Clerck" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "FRONTIER above — mother of Maria Catharina De Clerck (1727).",
 });

@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "jacobus_stroobandt",
   mother: "joanna_keirsebilck",
-  spouse: { name: "Rosalia Caeckaert" },
+  spouses: [
+    { id: "rosalia_caeckaert", name: "Rosalia Caeckaert" },
+  ],
   source: "Geneanet tree kathrynann (ancestry of Juliana Stroobandt)",
   note: "Father of Juliana Stroobandt (1839 Oedelem/Beernem). His own parents Jacobus Stroobandt × Joanna Keirsebilck are named in the same tree.",
 });

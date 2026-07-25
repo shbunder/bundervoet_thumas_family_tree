@@ -6,7 +6,13 @@ FamilyTree.person({
   died: "19 Apr 1832 Oostende",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Victoria Eugenia Engelsen", detail: "Oostende, 25 Mar 1810" },
+  spouses: [
+    {
+      id: "victoria_engelsen",
+      name: "Victoria Eugenia Engelsen",
+      detail: "Oostende, 25 Mar 1810",
+    },
+  ],
   source: "Geneanet tree gverdievel (Guy Verdievel)",
   note: "Married during the French Imperial period, when Oostende was annexed to France; died at 44.",
 });

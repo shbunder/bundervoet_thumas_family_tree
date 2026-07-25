@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "8 Nov 1824 Diksmuide",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Antoine Vanalderweireldt", detail: "Diksmuide, 8 Jun 1803" },
+  spouses: [
+    { id: "antoine_vanald", name: "Antoine Vanalderweireldt", detail: "Diksmuide, 8 Jun 1803" },
+  ],
   source: "Geneanet tree bartvanhooren",
   note: "Bore the Scottish-origin surname Wyllie in West-Flanders; widowed young in 1808.",
 });

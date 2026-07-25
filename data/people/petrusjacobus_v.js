@@ -9,7 +9,13 @@ FamilyTree.person({
   branch: "Vanstechelman",
   father: "felix_v",
   mother: "sophiavdb",
-  spouse: { name: "Clementia Sophia Wagebaert", detail: "Mariakerke, 21 Jan 1875" },
+  spouses: [
+    {
+      id: "clementia_w",
+      name: "Clementia Sophia Wagebaert",
+      detail: "Mariakerke, 21 Jan 1875",
+    },
+  ],
   source: "Geneanet tree stechec",
   note: "A mason who fathered fifteen children (including Augusta); he and his wife both died in 1927.",
 });

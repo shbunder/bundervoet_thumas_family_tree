@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "11 Oct 1809 Zevekote",
   confidence: "doc",
   branch: "Vanstechelman",
-  spouse: { name: "Pieter Jacobus Vanstechelman" },
+  spouses: [
+    { id: "pieterjacobus_v", name: "Pieter Jacobus Vanstechelman" },
+  ],
   source: "Geneanet tree stechec",
   note: "Wife of Pieter Jacobus Vanstechelman; mother of eight including Felix (1800); died at 36.",
 });

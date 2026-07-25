@@ -9,7 +9,13 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "mattheus_ramon",
   mother: "jacoba_ossaert",
-  spouse: { name: "Lucia Theresia Steenkiste", detail: "Mariakerke, 18 Nov 1806" },
+  spouses: [
+    {
+      id: "lucia_steenkiste",
+      name: "Lucia Theresia Steenkiste",
+      detail: "Mariakerke, 18 Nov 1806",
+    },
+  ],
   source: "Geneanet tree wernero",
   note: "A gardener; son of Mattheus Ramon & Jacoba Ossaert; father of Pierre Francois Ramon.",
 });

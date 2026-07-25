@@ -6,4 +6,7 @@ FamilyTree.person({
   died: "1833",
   confidence: "doc",
   branch: "Bundervoet",
+  spouses: [
+    { id: "philippus", name: "Philippus Jacobus Bundervoet", detail: "1784" },
+  ],
 });

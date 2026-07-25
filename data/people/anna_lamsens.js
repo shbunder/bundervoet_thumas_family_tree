@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1689",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Adrianus De Baecke" },
+  spouses: [
+    { id: "adrianus_debaecke", name: "Adrianus De Baecke" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — grandmother of Barbara De Baecke.",
 });

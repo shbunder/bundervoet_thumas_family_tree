@@ -8,7 +8,9 @@ FamilyTree.person({
   role: "landbouwer (farmer)",
   branch: "Bundervoet",
   father: "judocus_sabbe_1475",
-  spouse: { name: "(wife unrecorded)" },
+  spouses: [
+    { name: "(wife unrecorded)" },
+  ],
   source: "Geneanet isavdw",
   note: "Born 1504 in Zwevegem (reign of Charles V), a farmer. Father of Willem Sabbe (~1530). Son of Judocus 'Joos' Sabbe (~1475), grandson of Gillis Sabbe (~1440).",
 });

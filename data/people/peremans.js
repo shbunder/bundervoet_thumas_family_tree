@@ -6,4 +6,7 @@ FamilyTree.person({
   died: "1907",
   confidence: "doc",
   branch: "Thumas",
+  spouses: [
+    { id: "guilielmus_bossin", name: "Guilielmus Bossin" },
+  ],
 });

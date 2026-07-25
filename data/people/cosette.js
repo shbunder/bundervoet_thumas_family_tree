@@ -8,5 +8,8 @@ FamilyTree.person({
   branch: "DeKeyser",
   father: "roland",
   mother: "huguette",
+  spouses: [
+    { id: "ronny", name: "Ronny Bundervoet" },
+  ],
   note: "Her sister is Sancha De Keyser (❦ Christophe Develder).",
 });

@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "carolus_vanald",
   mother: "eugenia_dutreeuw",
-  spouse: { name: "Lucien Julianus Vincke", detail: "Diksmuide, 24 May 1865" },
+  spouses: [
+    { id: "lucien_vincke", name: "Lucien Julianus Vincke", detail: "Diksmuide, 24 May 1865" },
+  ],
   source: "Geneanet tree bartvanhooren",
   note: "Daughter of Carolus Vanalderweireldt & Eugenia Dutreeuw; mother of Emma Celesta Vincke (1880–1974).",
 });

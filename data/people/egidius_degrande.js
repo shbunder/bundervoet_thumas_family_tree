@@ -7,7 +7,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "martinus_degrande",
   mother: "egidia_damman",
-  spouse: { name: "Joanna Wallays" },
+  spouses: [
+    { id: "joanna_wallays", name: "Joanna Wallays" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Grandfather of Michael De Grande. Parents Martinus De Grande (~1642-1706) x Egidia Damman (d.1676).",
 });

@@ -7,7 +7,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "josephus_caeckaert",
   mother: "godeliva_rotsaert",
-  spouse: { name: "Florentinus Stroobandt", detail: "Beernem, 29 Sep 1836" },
+  spouses: [
+    {
+      id: "florentinus_stroobandt",
+      name: "Florentinus Stroobandt",
+      detail: "Beernem, 29 Sep 1836",
+    },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot)",
   note: "Mother of Juliana Stroobandt, born Assebroek/Brugge. Parents Josephus Caeckaert x Godeliva Rotsaert.",
 });

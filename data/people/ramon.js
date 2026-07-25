@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "carolus_ramon",
   mother: "cornelia_verkouille",
-  spouse: { name: "Joannes Franciscus Smessaert", detail: "Oostende, 4 Jan 1882" },
+  spouses: [
+    { id: "joannesf_s", name: "Joannes Franciscus Smessaert", detail: "Oostende, 4 Jan 1882" },
+  ],
   source: "Geneanet tree wernero",
   note: "Daughter of Carolus Ludovicus Ramon & Cornelia Verkouille; bore fourteen children with J.F. Smessaert.",
 });

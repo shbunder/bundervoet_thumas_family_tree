@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Thumas",
   father: "jeanlambert_t",
   mother: "leclercq_t",
-  spouse: { name: "Marie Catherine Noël", detail: "Grez-Doiceau, 3 Jan 1771" },
+  spouses: [
+    { id: "noel_t", name: "Marie Catherine Noël", detail: "Grez-Doiceau, 3 Jan 1771" },
+  ],
   source: "Geneanet Thumas tree (m2155); Grez-Doiceau registers",
   note: "The first of FOUR consecutive carpenter (menuisier) generations of Thumas in Grez-Doiceau. Recorded as a godfather (1771) and marriage witness (1775).",
 });

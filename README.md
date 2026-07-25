@@ -1,8 +1,11 @@
 # Family Tree of Renée & Léon Bundervoet
 
 The family history of Renée and Léon Bundervoet — Bundervoet–De Keyser of the Flemish
-coast and Thumas–Janssens of the Brussels edge, meeting in Leuven. 128 people; the
-deepest documented roots reach the early 1600s.
+coast and Thumas–Janssens of the Brussels edge, meeting in Leuven. 301 people; the
+deepest documented roots reach the mid-1400s.
+
+What the project is trying to achieve, and the rules research follows, are in
+[CLAUDE.md](CLAUDE.md).
 
 **Published at** <https://shbunder.github.io/bundervoet_thumas_family_tree/>
 
@@ -44,13 +47,16 @@ No build step and no dependencies — the files are served exactly as they are.
 ```js
 FamilyTree.person({
   id: "marcel_b",
-  name: "Marcel Bundervoet",
+  name: "Marcel Henri Bundervoet",
   dates: "1933–2015 · Oostende",
   confidence: "doc",
   branch: "Bundervoet",
   father: "alphonsus",
   mother: "elodia",
-  spouse: { name: "Rosette Van Iseghem, later Francine Bisschop" },
+  spouses: [
+    { id: "rosette", name: "Rosette Van Iseghem" },
+    { name: "Francine Bisschop", detail: "later" },
+  ],
   source: "Memorial card (Uitvaartcentrum Raes, Oostende) + family",
   note: "Confirmed by his memorial card, which named the Bostyn family…",
 });
@@ -60,6 +66,19 @@ Only `id`, `name` and `confidence` are required. `father` and `mother` are the i
 other person files — that's how the tree is linked together; everything else (who
 someone's children are, whether they're a great-great-grandparent, whether they're an
 aunt) is worked out from those links when the page loads.
+
+`spouses` is a list, oldest marriage first, because people remarried. Each entry needs
+a `name`; give it an `id` too when that spouse has a record of their own, and the tree
+becomes walkable sideways — you can climb from someone into their spouse's family
+rather than hitting a dead end. An entry with no `id` is a person who is referenced but
+not yet written up. `detail` is free text for the marriage itself ("Oostkamp, 30 Sep 1863").
+
+Two rules the validator enforces, both there so the tree can be built *downwards* as
+well as up:
+
+- **Marriage is mutual.** If A lists B as a spouse, B must list A.
+- **A shared child proves a couple.** If a record has `father: A` and `mother: B`, then
+  A and B must each list the other as a spouse.
 
 `confidence` drives the colour coding: `doc` documented record · `fam` family knowledge ·
 `sup` strongly supported · `unk` unknown, still to research.

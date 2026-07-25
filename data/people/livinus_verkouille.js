@@ -3,7 +3,7 @@ FamilyTree.person({
   name: "Livinus Hermanus Verkouille",
   confidence: "doc",
   branch: "Devriendt",
-  spouse: {
-    name: "Maria Lodewijka Malfait",
-  },
+  spouses: [
+    { id: "maria_malfait", name: "Maria Lodewijka Malfait" },
+  ],
 });

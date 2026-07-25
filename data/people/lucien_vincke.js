@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "engel_antonius_vincke",
   mother: "virginia_leynseele",
-  spouse: { name: "Ludovica Maria Vanalderweireldt", detail: "Diksmuide, 24 May 1865" },
+  spouses: [
+    {
+      id: "ludovica_vanald",
+      name: "Ludovica Maria Vanalderweireldt",
+      detail: "Diksmuide, 24 May 1865",
+    },
+  ],
   source: "Geneanet tree bartvanhooren",
   note: "A mason's assistant; son of Engel Antonius Vincke & Virginia Leynseele.",
 });

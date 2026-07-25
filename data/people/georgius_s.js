@@ -7,7 +7,9 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "joannesf_s",
   mother: "ramon",
-  spouse: { name: "Joanna Paula Devos", detail: "Oostende, 26 Apr 1919" },
+  spouses: [
+    { id: "devos", name: "Joanna Paula Devos", detail: "Oostende, 26 Apr 1919" },
+  ],
   source: "Geneanet tree wernero",
   note: "Married Joanna Paula Devos in 1919; his daughter Yvonne (b.1914) was legitimized by that marriage.",
 });

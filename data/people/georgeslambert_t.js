@@ -9,7 +9,13 @@ FamilyTree.person({
   branch: "Thumas",
   father: "georges1_t",
   mother: "noel_t",
-  spouse: { name: "Marie Anne Catherine Quinart (Kinart)", detail: "Grez-Doiceau, 9 Feb 1801" },
+  spouses: [
+    {
+      id: "quinart",
+      name: "Marie Anne Catherine Quinart (Kinart)",
+      detail: "Grez-Doiceau, 9 Feb 1801",
+    },
+  ],
   source: "Geneanet / Grez-Doiceau civil records",
   note: "Second of the four carpenter generations; had ten children and lived to age 90.",
 });

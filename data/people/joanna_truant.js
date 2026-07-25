@@ -5,7 +5,9 @@ FamilyTree.person({
   died: "8 Apr 1773 Zande",
   confidence: "doc",
   branch: "Devriendt",
-  spouse: { name: "Stephanus Ramon" },
+  spouses: [
+    { id: "stephanus_ramon", name: "Stephanus Ramon" },
+  ],
   source: "Geneanet tree wernero",
   note: "From Koekelare; mother of Mattheus Ramon (surname also recorded as 'Terwan').",
 });

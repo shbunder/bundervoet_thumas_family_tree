@@ -5,7 +5,13 @@ FamilyTree.person({
   born: "9 Nov 1781 Diksmuide",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Ludovica Prudentia Ellebout", detail: "Diksmuide, 27 May 1807" },
+  spouses: [
+    {
+      id: "ludovica_ellebout",
+      name: "Ludovica Prudentia Ellebout",
+      detail: "Diksmuide, 27 May 1807",
+    },
+  ],
   source: "Geneanet tree bartvanhooren",
   note: "Son of Nicolas Dutreeuw & Therese Desramont; his wife was about sixteen years his senior.",
 });

@@ -7,5 +7,8 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "marcel_d",
   mother: "yvonne",
+  spouses: [
+    { id: "roland", name: "Roland De Keyser" },
+  ],
   note: "Siblings: René and Sonja Devriendt.",
 });

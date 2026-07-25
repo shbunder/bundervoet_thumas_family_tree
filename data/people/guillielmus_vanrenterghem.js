@@ -7,7 +7,9 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   father: "petrus_vanrenterghem",
-  spouse: { name: "Barbara Wittenheyns" },
+  spouses: [
+    { id: "barbara_wittenheyns", name: "Barbara Wittenheyns" },
+  ],
   source: "Geneanet isavdw (Heemkring Oostkamp; Rijksarchief)",
   note: "Father of Judocus Van Renterghem (~1575). Married Barbara Wittenheyns.",
 });

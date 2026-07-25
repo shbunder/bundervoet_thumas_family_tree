@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Vanstechelman",
   father: "henricus_w",
   mother: "angela_vd",
-  spouse: { name: "Petrus Jacobus Vanstechelman", detail: "Mariakerke, 21 Jan 1875" },
+  spouses: [
+    {
+      id: "petrusjacobus_v",
+      name: "Petrus Jacobus Vanstechelman",
+      detail: "Mariakerke, 21 Jan 1875",
+    },
+  ],
   source: "Geneanet tree stechec",
   note: "Wife of the mason Petrus Jacobus Vanstechelman; died in 1927, the same year as her husband.",
 });

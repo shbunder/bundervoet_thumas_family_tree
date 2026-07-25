@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1706",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Egidia Damman" },
+  spouses: [
+    { id: "egidia_damman", name: "Egidia Damman" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — father of Egidius De Grande (1670 Dentergem). Married twice.",
 });

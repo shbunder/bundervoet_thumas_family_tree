@@ -7,7 +7,9 @@ FamilyTree.person({
   branch: "Vanstechelman",
   father: "joannes_vs",
   mother: "francisca_casiers",
-  spouse: { name: "Elisabeth Pluvier" },
+  spouses: [
+    { id: "pluvier", name: "Elisabeth Pluvier" },
+  ],
   source: "Geneanet tree stechec",
   note: "Born in Woumen; son of Joannes Vanstechele & Francisca Casiers.",
 });

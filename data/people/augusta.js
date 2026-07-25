@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Vanstechelman",
   father: "petrusjacobus_v",
   mother: "clementia_w",
-  spouse: { name: "Petrus Bundervoet" },
+  spouses: [
+    { id: "petrus_f", name: "Petrus Bundervoet" },
+  ],
   source: "Geneanet tree stechec; Oostende records",
   note: "One of fifteen siblings; her marriage to Petrus Bundervoet is the Vanstechelman–Bundervoet junction.",
 });

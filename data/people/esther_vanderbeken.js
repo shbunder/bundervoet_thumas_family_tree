@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1675",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Judocus De Vriese" },
+  spouses: [
+    { id: "judocus_devriese", name: "Judocus De Vriese" },
+  ],
   source: "Geneanet tree kathrynann / isavdw",
   note: "FRONTIER — first wife of Judocus De Vriese and mother of Hubert (1665). Her own parents not yet recovered.",
 });

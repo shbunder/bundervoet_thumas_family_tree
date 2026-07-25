@@ -7,7 +7,9 @@ FamilyTree.person({
   confidence: "doc",
   role: "farm woman",
   branch: "Bundervoet",
-  spouse: { name: "Judocus Bundervoet", detail: "1834" },
+  spouses: [
+    { id: "judocus", name: "Judocus Bundervoet", detail: "1834" },
+  ],
   source: "Geneanet / Evergem records",
   note: "Second wife of Judocus Bundervoet (m. 1834); mother of Bernardus.",
 });

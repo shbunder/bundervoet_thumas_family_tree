@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "francl_s",
   mother: "morree",
-  spouse: { name: "Eugenia Mathildis Ramon (1882)", detail: "Oostende, 4 Jan 1882" },
+  spouses: [
+    { id: "ramon", name: "Eugenia Mathildis Ramon (1882)", detail: "Oostende, 4 Jan 1882" },
+  ],
   source: "Geneanet tree wernero",
   note: "A labourer; son of Franciscus Leopoldus Smessaert & Anna Francisca Morree; 13+ children, many dying in infancy.",
 });

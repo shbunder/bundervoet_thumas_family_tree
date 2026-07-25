@@ -3,7 +3,9 @@ FamilyTree.person({
   name: "Joannes Van Sieleghem",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Joanna De Foort" },
+  spouses: [
+    { id: "joanna_defoort", name: "Joanna De Foort" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — father of Josephus Van Sieleghem (1638 Lichtervelde). Dates not recorded.",
 });

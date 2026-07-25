@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1723",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Hubert De Vriese", detail: "Tielt, 23 Nov 1687" },
+  spouses: [
+    { id: "hubert_devriese", name: "Hubert De Vriese", detail: "Tielt, 23 Nov 1687" },
+  ],
   source: "Geneanet tree kathrynann / isavdw",
   note: "FRONTIER — wife of Hubert De Vriese; her own parents not yet recovered.",
 });

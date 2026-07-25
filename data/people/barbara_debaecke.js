@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "rogerius_debaecke",
   mother: "maria_m_vandewalle",
-  spouse: { name: "Mauritius Stroobandt", detail: "Oostkamp, 30 Apr 1732" },
+  spouses: [
+    {
+      id: "mauritius_stroobandt",
+      name: "Mauritius Stroobandt",
+      detail: "Oostkamp, 30 Apr 1732",
+    },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans; Volkstelling Oostkamp 1748)",
   note: "Wife of Mauritius Stroobandt. Married first Joannes Boeckhout (1729). Parents Rogerius De Baecke x Maria Magdalena Vandewalle.",
 });

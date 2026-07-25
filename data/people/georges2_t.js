@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Thumas",
   father: "georgeslambert_t",
   mother: "quinart",
-  spouse: { name: "Marie Catharina Joostens", detail: "Grez-Doiceau, 17 Feb 1835" },
+  spouses: [
+    { id: "joostens", name: "Marie Catharina Joostens", detail: "Grez-Doiceau, 17 Feb 1835" },
+  ],
   source: "Grez-Doiceau civil registration (via Geneanet index)",
   note: "Third of the four carpenter generations. Civil records give his birth as 24 Jan 1804 (earlier trees said 1805).",
 });

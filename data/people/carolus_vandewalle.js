@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "petrus_vandewalle",
   mother: "francisca_vanhoutte",
-  spouse: { name: "Maria Rups", detail: "Oostkamp, 17 May 1662" },
+  spouses: [
+    { id: "maria_rups", name: "Maria Rups", detail: "Oostkamp, 17 May 1662" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Grandfather of Barbara De Baecke (via daughter Maria Magdalena Vandewalle). Born out of wedlock (marked 'illegitime'). Married Maria Rups 1662.",
 });

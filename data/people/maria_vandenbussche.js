@@ -3,7 +3,9 @@ FamilyTree.person({
   name: "Maria Vandenbussche",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Rolandus Govaert" },
+  spouses: [
+    { id: "rolandus_govaert", name: "Rolandus Govaert" },
+  ],
   source: "Geneanet isavdw",
   note: "FRONTIER above — grandmother of Petrus Van Nieuwenhuyse.",
 });

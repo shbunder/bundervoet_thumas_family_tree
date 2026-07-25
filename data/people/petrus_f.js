@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "bernardus",
   mother: "goethals",
-  spouse: { name: "Augusta Vanstechelman" },
+  spouses: [
+    { id: "augusta", name: "Augusta Vanstechelman" },
+  ],
   source: "Geneanet / Oostende civil records",
   note: "The FIRST of the Bundervoet line to leave Evergem for the coast: born in Evergem, he settled in Oostende, where all his children were born from 1905 onward. Married Augusta Vanstechelman (the Bundervoet–Vanstechelman junction).",
 });

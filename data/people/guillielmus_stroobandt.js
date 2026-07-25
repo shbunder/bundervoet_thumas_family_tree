@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "hercules_stroobandt",
   mother: "joanna_willaert",
-  spouse: { name: "Clara Van Sieleghem" },
+  spouses: [
+    { id: "clara_vansieleghem", name: "Clara Van Sieleghem" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "Father of Mauritius. Married first Petronella Parmentier (d.1701), then Clara Van Sieleghem.",
 });

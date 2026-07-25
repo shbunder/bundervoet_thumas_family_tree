@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Paelinck",
   father: "janbaptist_p",
   mother: "joanna_va",
-  spouse: { name: "Rosalia Wittock" },
+  spouses: [
+    { id: "rosalia_w", name: "Rosalia Wittock" },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "A labourer, born in Lokeren; son of Jan Baptist Paelinck & Joanna Coleta Van Acker. Father of Eduardus (1858).",
 });

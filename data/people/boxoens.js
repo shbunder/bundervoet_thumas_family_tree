@@ -5,7 +5,9 @@ FamilyTree.person({
   died: "13 Dec 1767 Woumen",
   confidence: "doc",
   branch: "Vanstechelman",
-  spouse: { name: "Andreas Andries Vanstechelman" },
+  spouses: [
+    { id: "andreasandries_v", name: "Andreas Andries Vanstechelman" },
+  ],
   source: "Geneanet tree stechec",
   note: "Mother of eight, including Silvester (1740).",
 });

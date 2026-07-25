@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "henricus_j_ramon",
   mother: "lucia_steenkiste",
-  spouse: { name: "Joanna Theresia Daneel", detail: "Oostende, 28 Jan 1835" },
+  spouses: [
+    { id: "joanna_daneel", name: "Joanna Theresia Daneel", detail: "Oostende, 28 Jan 1835" },
+  ],
   source: "Geneanet tree wernero",
   note: "A gardener and seaman who DROWNED AT SEA in October 1858. First wife Joanna Daneel (our line); he had remarried Anna Degroo in 1857.",
 });

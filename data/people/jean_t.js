@@ -9,8 +9,8 @@ FamilyTree.person({
   branch: "Thumas",
   father: "jbgeorgius",
   mother: "vandenbemden",
-  spouse: {
-    name: "Marie Louise Crabbé",
-  },
+  spouses: [
+    { id: "crabbe", name: "Marie Louise Crabbé" },
+  ],
   note: "DOCUMENTED (b. 23 Oct 1907, d. 22 Mar 1995, both in Kraainem; Geneanet, marcelcroon). He lived his whole life in Kraainem and is the strongly-supported grandfather of Thiery. The ONE remaining sealed link is Jean → François (Thiery’s father), whose 20th-century birth is behind the 100-year civil-registration privacy wall.",
 });

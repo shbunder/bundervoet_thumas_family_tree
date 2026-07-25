@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "adrianus_debaecke",
   mother: "anna_lamsens",
-  spouse: { name: "Maria Magdalena Vandewalle" },
+  spouses: [
+    { id: "maria_m_vandewalle", name: "Maria Magdalena Vandewalle" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Father of Barbara Theresia De Baecke (1709).",
 });

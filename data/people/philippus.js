@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "christoffel",
   mother: "bogaert",
-  spouse: { name: "Joanna Maria Adriaenssens", detail: "1784" },
+  spouses: [
+    { id: "adriaenssens", name: "Joanna Maria Adriaenssens", detail: "1784" },
+  ],
   source: "Geneanet trees fauconier/paulderidder; Evergem registers",
   note: "Of Evergem; married Joanna Adriaenssens in 1784, with many children including Judocus, Livinus and Peter Frans.",
 });

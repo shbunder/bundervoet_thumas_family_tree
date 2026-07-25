@@ -3,7 +3,9 @@ FamilyTree.person({
   name: "Clara Vande Putte",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Willem Sabbe" },
+  spouses: [
+    { id: "willem_sabbe_y", name: "Willem Sabbe" },
+  ],
   source: "Geneanet isavdw",
   note: "FRONTIER above — mother of Petrus Sabbe (d.1652). Her own parents not recorded.",
 });

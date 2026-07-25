@@ -8,4 +8,7 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "marcel_b",
   mother: "rosette",
+  spouses: [
+    { id: "cosette", name: "Cosette De Keyser" },
+  ],
 });

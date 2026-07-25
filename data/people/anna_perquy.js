@@ -7,7 +7,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "joannes_perquy",
   mother: "agatha_stekelorum",
-  spouse: { name: "Henricus Josephus Bostin", detail: "Westkerke, 9 May 1833" },
+  spouses: [
+    {
+      id: "henr_jos_bostin",
+      name: "Henricus Josephus Bostin",
+      detail: "Westkerke, 9 May 1833",
+    },
+  ],
   source: "vrijwilligersrab.be marriage index; Geneanet tree stefanieschil",
   note: "Mother of Henricus Josephus Bostyn (1841). Youngest of the Perquy children (Petrus 1795, Victoria Francisca 1798, Engelbertus, Pieter).",
 });

@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1759",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Adriana De Vriese" },
+  spouses: [
+    { id: "adriana_devriese", name: "Adriana De Vriese" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "FRONTIER above — grandfather of Petrus Josephus Keirsebilck.",
 });

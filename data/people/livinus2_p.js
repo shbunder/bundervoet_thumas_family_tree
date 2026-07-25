@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Paelinck",
   father: "adrianus_p",
   mother: "livina_pickaut",
-  spouse: { name: "Petronilla Carolina Van Kerckhove", detail: "Kalken, 7 Nov 1739" },
+  spouses: [
+    {
+      id: "petronilla_vk",
+      name: "Petronilla Carolina Van Kerckhove",
+      detail: "Kalken, 7 Nov 1739",
+    },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "Married in Kalken, his wife's home village; lived in Destelbergen.",
 });

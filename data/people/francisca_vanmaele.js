@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "engelbertus_vanmaele",
   mother: "judoca_maertens",
-  spouse: { name: "Henricus Josephus Van Acker", detail: "Beernem, 17 Oct 1730" },
+  spouses: [
+    {
+      id: "henricus_vanacker",
+      name: "Henricus Josephus Van Acker",
+      detail: "Beernem, 17 Oct 1730",
+    },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Mother of Anna Maria Van Acker (1749). Parents Engelbertus Van Maele x Judoca Maertens.",
 });

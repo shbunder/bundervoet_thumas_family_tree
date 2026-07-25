@@ -7,7 +7,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "petrus_wittenheyns",
   mother: "judoca_tjonck",
-  spouse: { name: "Guillielmus Van Renterghem" },
+  spouses: [
+    { id: "guillielmus_vanrenterghem", name: "Guillielmus Van Renterghem" },
+  ],
   source: "Geneanet isavdw (Heemkring Oostkamp; Rijksarchief)",
   note: "Mother of Judocus Van Renterghem. A Wittenheyns of Oostkamp — the same Oostkamp Wittenheyns family that also appears on our Vandewalle line (via Mattheus Wittenheyns ~1500), on a second independent branch.",
 });

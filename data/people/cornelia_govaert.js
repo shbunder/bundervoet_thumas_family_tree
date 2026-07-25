@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "rolandus_govaert",
   mother: "maria_vandenbussche",
-  spouse: { name: "Marinus Van Nieuwenhuyse" },
+  spouses: [
+    { id: "marinus_vannieuwenhuyse", name: "Marinus Van Nieuwenhuyse" },
+  ],
   source: "Geneanet isavdw (Rijksarchief scans, Oostkamp)",
   note: "Mother of Petrus Van Nieuwenhuyse (1649).",
 });

@@ -8,7 +8,9 @@ FamilyTree.person({
   role: "landbouwer (farmer)",
   branch: "Bundervoet",
   father: "petrus_sabbe_1504",
-  spouse: { name: "Magdalena Demeulemeester", detail: "~1555" },
+  spouses: [
+    { id: "magdalena_demeulemeester", name: "Magdalena Demeulemeester", detail: "~1555" },
+  ],
   source: "Geneanet isavdw (Sosa 27040)",
   note: "Grandfather of Petrus Sabbe (d.1652); farmer around Harelbeke/Wielsbeke (the Sabbe family's cradle, before the line moved to Oostkamp). Father Petrus Sabbe (1504-1557).",
 });

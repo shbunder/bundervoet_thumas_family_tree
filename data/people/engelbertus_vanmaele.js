@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "joannes_vanmaele",
   mother: "jacoba_vanalledewerelt",
-  spouse: { name: "Judoca Maertens" },
+  spouses: [
+    { id: "judoca_maertens", name: "Judoca Maertens" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Father of Francisca Van Maele (1710 Beernem).",
 });

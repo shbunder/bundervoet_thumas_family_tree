@@ -9,7 +9,10 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "judocus",
   mother: "roegiers",
-  spouse: { name: "Marie Eulalie Goethals", detail: "1875 (remarried Rosalia Dhooge 1881)" },
+  spouses: [
+    { id: "goethals", name: "Marie Eulalie Goethals", detail: "m. 1875" },
+    { name: "Rosalia Dhooge", detail: "m. 1881 — his 2nd marriage" },
+  ],
   source: "Geneanet / Evergem civil registration",
   note: "Widowed in 1879 when his first wife Marie Goethals died — the same year their son Petrus Franciscus was born; he remarried Rosalia Dhooge in 1881.",
 });

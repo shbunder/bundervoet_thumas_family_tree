@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1693",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Joanna Leenaert" },
+  spouses: [
+    { id: "joanna_leenaert", name: "Joanna Leenaert" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — grandfather of Francisca Van Maele (Maertens side).",
 });

@@ -40,8 +40,9 @@ const groups = read('groups.js') || [];
 
 const FIELDS = new Set([
   'id', 'name', 'dates', 'born', 'died', 'confidence', 'role', 'branch',
-  'father', 'mother', 'spouse', 'source', 'note',
+  'father', 'mother', 'spouses', 'source', 'note',
 ]);
+const SPOUSE_FIELDS = new Set(['id', 'name', 'detail']);
 const CONFIDENCE = new Set(Object.keys(meta.confidenceLabels));
 
 // Every id in the manifest has a file, and no file is missing from the manifest.
@@ -60,7 +61,16 @@ for (const id of ids.filter(i => onDisk.includes(i))) {
   if (!p.name) fail(`${id}.js: missing "name"`);
   if (!CONFIDENCE.has(p.confidence)) fail(`${id}.js: confidence "${p.confidence}" is not one of ${[...CONFIDENCE].join(', ')}`);
   if (p.branch && !(p.branch in branches)) fail(`${id}.js: branch "${p.branch}" is not in branches.js`);
-  if (p.spouse && !p.spouse.name) fail(`${id}.js: spouse has no "name"`);
+  if ('spouses' in p) {
+    if (!Array.isArray(p.spouses)) fail(`${id}.js: "spouses" must be an array`);
+    else for (const [i, s] of p.spouses.entries()) {
+      if (!s || typeof s !== 'object') fail(`${id}.js: spouses[${i}] is not an object`);
+      else {
+        if (!s.name) fail(`${id}.js: spouses[${i}] has no "name"`);
+        for (const k of Object.keys(s)) if (!SPOUSE_FIELDS.has(k)) warnings.push(`${id}.js: spouses[${i}] unknown field "${k}"`);
+      }
+    }
+  }
   for (const k of Object.keys(p)) if (!FIELDS.has(k)) warnings.push(`${id}.js: unknown field "${k}"`);
 }
 
@@ -68,6 +78,31 @@ for (const id of ids.filter(i => onDisk.includes(i))) {
 for (const [id, p] of Object.entries(people)) {
   for (const rel of ['father', 'mother']) {
     if (p[rel] && !people[p[rel]]) fail(`${id}.js: ${rel} "${p[rel]}" does not exist`);
+  }
+}
+
+// Spouse links point at people who exist, and marriage is mutual: if A records B,
+// B records A. Without that, building the tree downwards silently loses branches —
+// a child hangs off the parent who happened to be written up first.
+for (const [id, p] of Object.entries(people)) {
+  for (const s of p.spouses || []) {
+    if (!s.id) continue;
+    if (!people[s.id]) { fail(`${id}.js: spouse id "${s.id}" does not exist`); continue; }
+    if (s.id === id) fail(`${id}.js: is listed as their own spouse`);
+    if (!(people[s.id].spouses || []).some(t => t.id === id)) {
+      fail(`${id}.js: lists spouse "${s.id}", but ${s.id}.js does not list "${id}" back`);
+    }
+  }
+}
+
+// A shared child is proof of a couple, so both parents must record the marriage.
+// This is what keeps the upward tree and the downward tree describing one family.
+for (const [id, p] of Object.entries(people)) {
+  if (!p.father || !p.mother || !people[p.father] || !people[p.mother]) continue;
+  for (const [a, b] of [[p.father, p.mother], [p.mother, p.father]]) {
+    if (!(people[a].spouses || []).some(s => s.id === b)) {
+      fail(`${a}.js: has a child (${id}) with "${b}" but does not list them as a spouse`);
+    }
   }
 }
 for (const start of Object.keys(people)) {

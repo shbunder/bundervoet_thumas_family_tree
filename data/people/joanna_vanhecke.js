@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1678",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Segerius Bundervoet" },
+  spouses: [
+    { id: "segerius_bundervoet", name: "Segerius Bundervoet" },
+  ],
   source: "Geneanet paulderidder/glorieuxp",
   note: "FRONTIER above — wife of Segerius Bundervoet, mother of Joannes (~1637). Her own parents not recorded here.",
 });

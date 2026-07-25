@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Paelinck",
   father: "ludovicus_p",
   mother: "petronella_v",
-  spouse: { name: "Livina Pickaut", detail: "Lochristi, 17 Jan 1711" },
+  spouses: [
+    { id: "livina_pickaut", name: "Livina Pickaut", detail: "Lochristi, 17 Jan 1711" },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "Died at only 36 — in 1726, the same year as his wife Livina Pickaut.",
 });

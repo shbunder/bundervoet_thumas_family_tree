@@ -3,8 +3,8 @@ FamilyTree.person({
   name: "Camiel Theophiel Devriendt",
   confidence: "doc",
   branch: "Devriendt",
-  spouse: {
-    name: "Mathildis Clothildis Declercq",
-  },
+  spouses: [
+    { id: "declercq", name: "Mathildis Clothildis Declercq" },
+  ],
   note: "Marcel Devriendt’s parents — the frontier of the Devriendt line.",
 });

@@ -6,4 +6,11 @@ FamilyTree.person({
   died: "1911",
   confidence: "doc",
   branch: "Paelinck",
+  spouses: [
+    {
+      id: "carolus_vb",
+      name: "Carolus Ludovicus Van Bogaert",
+      detail: "Nieuwkerken-Waas, 1 Feb 1860",
+    },
+  ],
 });

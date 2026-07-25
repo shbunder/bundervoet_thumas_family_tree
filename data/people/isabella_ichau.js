@@ -6,7 +6,13 @@ FamilyTree.person({
   died: "1870",
   confidence: "sup",
   branch: "DeKeyser",
-  spouse: { name: "Antonius Dominicus Bocklandt", detail: "married 1838" },
+  spouses: [
+    {
+      id: "antonius_dominicus_bocklandt",
+      name: "Antonius Dominicus Bocklandt",
+      detail: "married 1838",
+    },
+  ],
   source: "Geneanet tree wete1998 (Erik Bekaert)",
   note: "Paternal grandmother of Louise Bocklandt; wife of Antonius Dominicus Bocklandt. Ichau is a Waasland/Hamme (Oost-Vlaanderen) name.",
 });

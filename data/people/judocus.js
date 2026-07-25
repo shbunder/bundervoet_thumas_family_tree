@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "philippus",
   mother: "adriaenssens",
-  spouse: { name: "Francisca Roegiers", detail: "1834 (his 2nd marriage)" },
+  spouses: [
+    { id: "roegiers", name: "Francisca Roegiers", detail: "m. 1834 — his 2nd marriage" },
+  ],
   source: "Geneanet / Evergem civil registration",
   note: "Married twice — first to Livina Segers (1831), then to Francisca Roegiers (1834), who was Bernardus's mother.",
 });

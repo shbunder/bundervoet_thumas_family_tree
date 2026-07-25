@@ -7,7 +7,9 @@ FamilyTree.person({
   confidence: "doc",
   role: "arbeider (labourer)",
   branch: "Paelinck",
-  spouse: { name: "Maria Ludovica Martinet", detail: "Nieuwkerken-Waas, 1 Feb 1860" },
+  spouses: [
+    { id: "martinet", name: "Maria Ludovica Martinet", detail: "Nieuwkerken-Waas, 1 Feb 1860" },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "A labourer; father of Maria Magdalena Van Bogaert by his wife Maria Ludovica Martinet (1838–1911).",
 });

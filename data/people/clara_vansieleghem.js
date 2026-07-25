@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "josephus_vansieleghem",
   mother: "maria_lampsins",
-  spouse: { name: "Guillielmus Stroobandt" },
+  spouses: [
+    { id: "guillielmus_stroobandt", name: "Guillielmus Stroobandt" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "Mother of Mauritius Stroobandt.",
 });

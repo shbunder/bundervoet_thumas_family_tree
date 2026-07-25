@@ -9,6 +9,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "henricus_bostyn",
   mother: "judith_cappaert",
+  spouses: [
+    { id: "alphonsus", name: "Alphonsus Bernardus Bundervoet" },
+  ],
   source: "Fauconier tree (Geneanet); Oostende marriage act 334, 1930",
   note: "Marcel’s mother. Oostende birth act 1013/1908. Her Bostyn/Cappaert family came from the Bruges area (Varsenare, Oostkamp).",
 });

@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "laurentius_willems",
   mother: "margaretha_vermeersch",
-  spouse: { name: "Andreas Van Maele" },
+  spouses: [
+    { id: "andreas_vanmaele", name: "Andreas Van Maele" },
+  ],
   source: "Geneanet isavdw (Rijksarchief scans)",
   note: "Mother of Joannes Van Maele (1641).",
 });

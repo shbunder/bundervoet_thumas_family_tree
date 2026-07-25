@@ -5,7 +5,9 @@ FamilyTree.person({
   died: "1645",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Laurentius Willems" },
+  spouses: [
+    { id: "laurentius_willems", name: "Laurentius Willems" },
+  ],
   source: "Geneanet isavdw",
   note: "FRONTIER above — grandmother of Joannes Van Maele.",
 });

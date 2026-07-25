@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1865",
   confidence: "sup",
   branch: "DeKeyser",
-  spouse: { name: "Joannes Franciscus Van Bergen" },
+  spouses: [
+    { id: "jan_van_bergen", name: "Joannes Franciscus Van Bergen" },
+  ],
   source: "Geneanet tree wete1998 (Erik Bekaert)",
   note: "Maternal grandmother of Louise Bocklandt; wife of Joannes Franciscus Van Bergen. Of Hamme (Oost-Vlaanderen).",
 });

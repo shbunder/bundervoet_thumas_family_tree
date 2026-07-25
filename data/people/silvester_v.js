@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Vanstechelman",
   father: "andreasandries_v",
   mother: "boxoens",
-  spouse: { name: "Angela Jacoba Casteleyn" },
+  spouses: [
+    { id: "angela_c", name: "Angela Jacoba Casteleyn" },
+  ],
   source: "Geneanet tree stechec",
   note: "Married three times and fathered about fourteen children; the generation that settled the family in Zevekote. Our line runs through his 2nd wife, Angela Casteleyn.",
 });

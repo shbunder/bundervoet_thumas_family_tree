@@ -3,7 +3,7 @@ FamilyTree.person({
   name: "Franciscus Leopoldus Smessaert",
   confidence: "doc",
   branch: "Devriendt",
-  spouse: {
-    name: "Anna Francisca Morree",
-  },
+  spouses: [
+    { id: "morree", name: "Anna Francisca Morree" },
+  ],
 });

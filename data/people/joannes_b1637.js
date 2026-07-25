@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "segerius_bundervoet",
   mother: "joanna_vanhecke",
-  spouse: { name: "Joanna Verbrugghe" },
+  spouses: [
+    { id: "joanna_verbrugghe", name: "Joanna Verbrugghe" },
+  ],
   source: "Geneanet trees paulderidder, glorieuxp, mjovdl (Evergem)",
   note: "Father of Joannes Bundervoet (1682). Parents Segerius Bundervoet x Joanna van Hecke.",
 });

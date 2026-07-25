@@ -64,7 +64,7 @@ FamilyTree.createSearch = function ({ people }) {
 
   const textOf = (p, key) => {
     if (key === 'spouse') {
-      return p.spouse ? [p.spouse.name, p.spouse.detail].filter(Boolean).join(' — ') : '';
+      return (p.spouses || []).map(s => [s.name, s.detail].filter(Boolean).join(' — ')).join('   ');
     }
     return p[key] || '';
   };

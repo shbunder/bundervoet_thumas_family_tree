@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "11 Jul 1792 Zevekote",
   confidence: "doc",
   branch: "Vanstechelman",
-  spouse: { name: "Silvester Vanstechelman" },
+  spouses: [
+    { id: "silvester_v", name: "Silvester Vanstechelman" },
+  ],
   source: "Geneanet tree stechec",
   note: "Born in Esen; mother of ten Vanstechelman children including Pieter Jacobus.",
 });

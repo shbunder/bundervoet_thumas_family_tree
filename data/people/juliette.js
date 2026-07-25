@@ -6,4 +6,7 @@ FamilyTree.person({
   confidence: "fam",
   role: "Thiery’s mother",
   branch: "Thumas",
+  spouses: [
+    { id: "thiery_f", name: "François Thumas" },
+  ],
 });

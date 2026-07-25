@@ -7,7 +7,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "ludovicus_dutreeuw",
   mother: "ludovica_ellebout",
-  spouse: { name: "Carolus Ludovicus Vanalderweireldt", detail: "Diksmuide, 4 Jun 1828" },
+  spouses: [
+    {
+      id: "carolus_vanald",
+      name: "Carolus Ludovicus Vanalderweireldt",
+      detail: "Diksmuide, 4 Jun 1828",
+    },
+  ],
   source: "Geneanet tree bartvanhooren",
   note: "Daughter of Ludovicus Dutreeuw & Ludovica Ellebout; mother of Ludovica Vanalderweireldt (1845).",
 });

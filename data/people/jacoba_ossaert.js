@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "27 Oct 1798 Zande",
   confidence: "doc",
   branch: "Devriendt",
-  spouse: { name: "Mattheus Ramon", detail: "Zande, 31 May 1772" },
+  spouses: [
+    { id: "mattheus_ramon", name: "Mattheus Ramon", detail: "Zande, 31 May 1772" },
+  ],
   source: "Geneanet tree wernero",
   note: "Daughter of Josephus Ossaert & Cornelia Rivier; ten children (surname also spelled Housaer).",
 });

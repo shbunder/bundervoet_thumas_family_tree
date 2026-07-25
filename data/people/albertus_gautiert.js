@@ -6,7 +6,13 @@ FamilyTree.person({
   died: "8 Sep 1847 · Oostende",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Theresia Joanna Monica Robbe", detail: "Oostende, 5 May 1813" },
+  spouses: [
+    {
+      id: "theresia_robbe",
+      name: "Theresia Joanna Monica Robbe",
+      detail: "Oostende, 5 May 1813",
+    },
+  ],
   source: "Geneanet tree gverdievel",
   note: "Born under Austrian rule, he lived through the French Empire and the Dutch period into independent Belgium; died at 63.",
 });

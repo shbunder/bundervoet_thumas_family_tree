@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Thumas",
   father: "georges_cj",
   mother: "bossin",
-  spouse: { name: "Joanna Vandenbemden", detail: "Kraainem, 3 Feb 1902" },
+  spouses: [
+    { id: "vandenbemden", name: "Joanna Vandenbemden", detail: "Kraainem, 3 Feb 1902" },
+  ],
   source: "Geneanet (jswaelens / marcelcroon); Kraainem civil records",
   note: "Son of Georges Carolus Josephus and Antoina Bossin. A factory worker who also served as a schepen (municipal alderman) in Kraainem. Married Joanna Vandenbemden in Kraainem on 3 Feb 1902.",
 });

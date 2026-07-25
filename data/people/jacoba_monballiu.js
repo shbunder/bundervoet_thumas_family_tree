@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1689",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Petrus Van Nieuwenhuyse" },
+  spouses: [
+    { id: "petrus_vannieuwenhuyse", name: "Petrus Van Nieuwenhuyse" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans; Heemkring Oostkamp; Bruges weesregisters)",
   note: "FRONTIER above — mother of Anna Van Nieuwenhuyse (1676).",
 });

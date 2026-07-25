@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Paelinck",
   father: "livinus2_p",
   mother: "petronilla_vk",
-  spouse: { name: "Christina Van Maele", detail: "Destelbergen, 4 Sep 1770" },
+  spouses: [
+    { id: "christina_vm", name: "Christina Van Maele", detail: "Destelbergen, 4 Sep 1770" },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "Lived to 88; the family relocated from Destelbergen to Laarne.",
 });

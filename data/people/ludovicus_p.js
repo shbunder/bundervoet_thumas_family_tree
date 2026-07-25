@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Paelinck",
   father: "livinus1_p",
   mother: "elisabeth_t",
-  spouse: { name: "Petronella Verniers", detail: "Lochristi, Feb 1681" },
+  spouses: [
+    { id: "petronella_v", name: "Petronella Verniers", detail: "Lochristi, Feb 1681" },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "Born in Lochristi (son of Livinus Paelinck & Elisabeth Temmerman); settled in Destelbergen, where he died.",
 });

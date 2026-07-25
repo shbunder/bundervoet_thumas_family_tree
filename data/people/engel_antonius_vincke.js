@@ -7,7 +7,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "antonius_vincke",
   mother: "anne_peperstraete",
-  spouse: { name: "Virginia Coleta Leynseele" },
+  spouses: [
+    { id: "virginia_leynseele", name: "Virginia Coleta Leynseele" },
+  ],
   source: "Geneanet tree bartvanhooren",
   note: "Of Diksmuide; married twice — our line runs through his 2nd wife, Virginia Leynseele (their son Lucien, 1840).",
 });

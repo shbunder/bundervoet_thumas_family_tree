@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Vanstechelman",
   father: "silvester_v",
   mother: "angela_c",
-  spouse: { name: "Carolina Van Hille" },
+  spouses: [
+    { id: "carolina_vh", name: "Carolina Van Hille" },
+  ],
   source: "Geneanet tree stechec",
   note: "Of Zevekote; first wife Carolina Van Hille (our line, eight children incl. Felix); remarried Anna Osaer in 1810.",
 });

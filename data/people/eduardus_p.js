@@ -9,7 +9,13 @@ FamilyTree.person({
   branch: "Paelinck",
   father: "joannesf_p",
   mother: "rosalia_w",
-  spouse: { name: "Maria Magdalena Van Bogaert (1888)", detail: "Sint-Niklaas, 17 Nov 1888" },
+  spouses: [
+    {
+      id: "magdalena_vb",
+      name: "Maria Magdalena Van Bogaert (1888)",
+      detail: "Sint-Niklaas, 17 Nov 1888",
+    },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "An itinerant pedlar (leurder); married the widow Maria Magdalena Van Bogaert in 1888; eight children.",
 });

@@ -8,7 +8,13 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "joannes_keirsebilck_1728",
   mother: "maria_c_declerck",
-  spouse: { name: "Anna Francisca De Grande", detail: "Oostkamp, 4 Oct 1785" },
+  spouses: [
+    {
+      id: "anna_fr_degrande",
+      name: "Anna Francisca De Grande",
+      detail: "Oostkamp, 4 Oct 1785",
+    },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "Father of Joanna Keirsebilck (1791). Parents Joannes Keirsebilck (1728-1781) x Maria Catharina De Clerck (1727-1768).",
 });

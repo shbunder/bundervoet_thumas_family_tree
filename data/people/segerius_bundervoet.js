@@ -7,7 +7,9 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   father: "livinus_bundervoet",
-  spouse: { name: "Joanna (Janneken) van Hecke" },
+  spouses: [
+    { id: "joanna_vanhecke", name: "Joanna (Janneken) van Hecke" },
+  ],
   source: "Geneanet glorieuxp/paulderidder; death act: Registre des décès d'Evergem 1668-1716 (search.arch.be)",
   note: "Father of Joannes Bundervoet (~1637). His death is in the Evergem death register (1669). Father Livinus Bundervoet.",
 });

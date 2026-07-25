@@ -5,7 +5,9 @@ FamilyTree.person({
   born: "~1600",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Petrus De Baecke" },
+  spouses: [
+    { id: "petrus_debaecke", name: "Petrus De Baecke" },
+  ],
   source: "Geneanet isavdw",
   note: "FRONTIER above — mother of Adrianus De Baecke (1630).",
 });

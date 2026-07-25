@@ -8,5 +8,8 @@ FamilyTree.person({
   branch: "Thumas",
   father: "rene_j",
   mother: "anna_vc",
+  spouses: [
+    { id: "thiery", name: "Thiery Thumas" },
+  ],
   note: "Christiane by birth record — goes by Chris.",
 });

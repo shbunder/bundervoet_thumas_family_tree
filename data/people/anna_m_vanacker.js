@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "henricus_vanacker",
   mother: "francisca_vanmaele",
-  spouse: { name: "Adrianus Stroobandt", detail: "Oostkamp, 1768" },
+  spouses: [
+    { id: "adrianus_stroobandt", name: "Adrianus Stroobandt", detail: "Oostkamp, 1768" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)",
   note: "Mother of Jacobus Stroobandt (1782).",
 });

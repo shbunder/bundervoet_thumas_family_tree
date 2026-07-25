@@ -7,7 +7,13 @@ FamilyTree.person({
   branch: "Devriendt",
   father: "louis_steenkiste",
   mother: "reine_storms",
-  spouse: { name: "Henricus Josephus Ramon", detail: "Mariakerke, 18 Nov 1806" },
+  spouses: [
+    {
+      id: "henricus_j_ramon",
+      name: "Henricus Josephus Ramon",
+      detail: "Mariakerke, 18 Nov 1806",
+    },
+  ],
   source: "Geneanet tree wernero",
   note: "Daughter of Louis Steenkiste & Reine Storms; mother of Pierre Ramon.",
 });

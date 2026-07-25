@@ -7,7 +7,9 @@ FamilyTree.person({
   confidence: "doc",
   role: "farm woman",
   branch: "Bundervoet",
-  spouse: { name: "Bernardus Bundervoet", detail: "1875" },
+  spouses: [
+    { id: "bernardus", name: "Bernardus Bundervoet", detail: "1875" },
+  ],
   source: "Geneanet / Evergem records",
   note: "First wife of Bernardus Bundervoet; died in 1879 — the same year her son Petrus Franciscus was born.",
 });

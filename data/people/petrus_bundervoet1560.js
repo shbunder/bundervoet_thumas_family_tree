@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "~1605",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "NN Vyveraert" },
+  spouses: [
+    { name: "NN Vyveraert" },
+  ],
   source: "Geneanet trees paulderidder/glorieuxp (Evergem)",
   note: "The earliest documented ancestor of the Bundervoet line (Evergem, ~1560); married twice and was the father of Livinus.",
 });

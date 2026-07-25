@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1675",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Joannes Van Maele" },
+  spouses: [
+    { id: "joannes_vanmaele", name: "Joannes Van Maele" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — grandmother of Francisca Van Maele.",
 });

@@ -7,7 +7,10 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "judocus_vanrenterghem",
   mother: "appolonia_vandewoestijne",
-  spouse: { name: "Michael Rups; earlier Cornelius Vandewalle" },
+  spouses: [
+    { name: "Cornelius Vandewalle", detail: "earlier marriage" },
+    { id: "michael_rups", name: "Michael Rups" },
+  ],
   source: "Geneanet isavdw (Rijksarchief scans)",
   note: "Mother of Maria Rups (1642). Earlier married Cornelius Vandewalle — a Vandewalle intermarriage.",
 });

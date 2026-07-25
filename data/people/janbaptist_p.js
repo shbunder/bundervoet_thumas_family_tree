@@ -9,7 +9,9 @@ FamilyTree.person({
   branch: "Paelinck",
   father: "apolonius_p",
   mother: "christina_vm",
-  spouse: { name: "Joanna Coleta Van Acker", detail: "1795" },
+  spouses: [
+    { id: "joanna_va", name: "Joanna Coleta Van Acker", detail: "1795" },
+  ],
   source: "Geneanet tree stefpaelinck",
   note: "A day labourer; the family moved from Destelbergen to Lokeren, where he died. His wife was Joanna Coleta Van Acker.",
 });

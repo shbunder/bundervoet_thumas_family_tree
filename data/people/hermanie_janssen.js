@@ -8,7 +8,9 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "josephus_janssen",
   mother: "appolonia_huyghebaert",
-  spouse: { name: "Joannes Van Iseghem", detail: "Oostende, 23 Aug 1872" },
+  spouses: [
+    { id: "joannes_vi2", name: "Joannes Van Iseghem", detail: "Oostende, 23 Aug 1872" },
+  ],
   source: "Geneanet tree gverdievel",
   note: "Married at 19; lived her whole life in Oostende, reaching 73.",
 });

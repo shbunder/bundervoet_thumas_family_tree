@@ -6,7 +6,9 @@ FamilyTree.person({
   died: "1703",
   confidence: "doc",
   branch: "Bundervoet",
-  spouse: { name: "Georgius Maertens" },
+  spouses: [
+    { id: "georgius_maertens", name: "Georgius Maertens" },
+  ],
   source: "Geneanet tree isavdw (Rijksarchief scans)",
   note: "FRONTIER above — grandmother of Francisca Van Maele.",
 });
