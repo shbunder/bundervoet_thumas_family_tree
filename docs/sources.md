@@ -17,7 +17,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 9 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 10 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 2 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
@@ -93,6 +93,14 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Collection:** Burgerlijke stand (DemoGen Visu) — België, Grez-Doiceau, overlijdensakten 1808, akte nr. 58
 - **Yielded:** Four records documented from one act: George Thumas's death on 20 Nov 1808 at Grez-Doiceau and his trade as menuisier, both as held; his father Lambert Thumas, his mother Marie Leclercq and his wife Marie Catherine Noé all named. It also gives his age as 60, implying a birth around 1747-48 against the 1744 this tree records — a conflict left open rather than resolved on hearsay.
 - **Saved artifact:** `data/artifacts/george-thumas-1808-death-grez-doiceau.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+
+#### `S15` — Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA)
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/Visu-542_9999_999_1076594_000_A_5561-00000008>
+- **Collection:** Burgerlijke stand (DemoGen Visu) — België, Grez-Doiceau, overlijdensakten 1857, akte nr. 35
+- **Yielded:** Her exact death date, 10 June 1857, where the tree had only the year; her birthplace Woluwe-Saint-Lambert and occupation ménagère; and her parents Guillaume Joostens and Jeanne Marie Deconninck read at the archive rather than from an index. It also gives her husband Georges Thumas as 63, implying a birth around 1793-94 against the 1804 the tree records — a ten-year conflict in an act whose arithmetic is right for her own age.
+- **Saved artifact:** `data/artifacts/joostens-1857-death-grez-doiceau.md`
 - **Confidence:** doc
 - **Accessed:** 2026-07-26
 

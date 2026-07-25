@@ -13,6 +13,18 @@
       "acts": 600
     },
     {
+      "id": "bossin",
+      "query": {
+        "name": "Bossin",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 450,
+      "mentions": 450,
+      "complete": true,
+      "acts": 450
+    },
+    {
       "id": "bostyn",
       "query": {
         "name": "Bostyn",
@@ -164,6 +176,18 @@
       },
       "date": "2026-07-25",
       "found": 2032,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "perquy",
+      "query": {
+        "name": "Perquy",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 602,
       "mentions": 600,
       "complete": false,
       "acts": 600

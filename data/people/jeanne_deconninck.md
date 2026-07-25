@@ -3,13 +3,14 @@ id: jeanne_deconninck
 name: Jeanne Marie Deconninck
 surname: Deconninck
 sex: f
-confidence: sup
+confidence: doc
 branch: Thumas
 line: thumas
 spouses:
   - id: guillaume_joostens
     name: Guillaume Joostens
 sources:
+  - S15
   - S9
 ---
 
@@ -24,3 +25,7 @@ Woluwe-Saint-Lambert or Grez-Doiceau from Flanders, and the name may be spelled 
 in the registers.
 
 FRONTIER: the Joostens–Deconninck marriage, and her own parents.
+
+ACT READ (July 2026): named as the mother of the deceased in her daughter's 1857
+Grez-Doiceau death act, read at the archive. As with her husband, the act gives her nothing
+beyond the name.

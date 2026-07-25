@@ -2,13 +2,14 @@
 id: guillaume_joostens
 name: Guillaume Joostens
 surname: Joostens
-confidence: sup
+confidence: doc
 branch: Thumas
 line: thumas
 spouses:
   - id: jeanne_deconninck
     name: Jeanne Marie Deconninck
 sources:
+  - S15
   - S9
 ---
 
@@ -23,3 +24,8 @@ is not recorded as a fact about him.
 
 FRONTIER: the Joostens–Deconninck marriage, and his own birth. Woluwe-Saint-Lambert and
 Grez-Doiceau are the two communes to try, roughly 1800–1810 for the marriage.
+
+ACT READ (July 2026): named as the father of the deceased in his daughter's 1857
+Grez-Doiceau death act, read at the archive. He was added to this tree from an index entry a
+pass earlier; this is the act behind it. It still gives him no dates, no place and no
+occupation, so none is recorded.

@@ -1715,6 +1715,21 @@
 2 CONT
 2 CONT ACT READ (July 2026): named as the bridegroom's father in the Kraainem act of 20 June 1872,
 2 CONT with [[joostens]] as the mother — the same couple his wife's 1857 death act shows.
+2 CONT
+2 CONT AGE CONFLICT (July 2026), recorded and left open. His wife's death act of 10 June 1857
+2 CONT names him as her surviving husband — *Georges Thumas, menuisier of Grez-Doiceau*, the trade
+2 CONT this record already carries, so the identification is not in doubt. But it gives his age as
+2 CONT **63**, which puts his birth around 1793–94. This record says **24 January 1804**, which
+2 CONT would have made him 53.
+2 CONT
+2 CONT Ten years is too wide to be the usual slippage, and the same act gets his wife's age right —
+2 CONT 47, agreeing with her recorded 1810. So one of the two is wrong and it is not obvious which:
+2 CONT the 1804 date has never been documented, and the 63 was spoken by whoever reported the death.
+2 CONT
+2 CONT Nothing changed. FRONTIER: the Grez-Doiceau baptisms for 1793–94 and for 1804, and his own
+2 CONT 1864 death act, which would state an age to compare. His father [[georgeslambert_t]] was born
+2 CONT in 1772, so either year makes an ordinary age at fatherhood — the parent link does not decide
+2 CONT it.
 1 SOUR @S36@
 2 QUAY 3
 0 @I105@ INDI
@@ -1913,8 +1928,13 @@
 2 CONT
 2 CONT FRONTIER: the Joostens–Deconninck marriage, and his own birth. Woluwe-Saint-Lambert and
 2 CONT Grez-Doiceau are the two communes to try, roughly 1800–1810 for the marriage.
+2 CONT
+2 CONT ACT READ (July 2026): named as the father of the deceased in his daughter's 1857
+2 CONT Grez-Doiceau death act, read at the archive. He was added to this tree from an index entry a
+2 CONT pass earlier; this is the act behind it. It still gives him no dates, no place and no
+2 CONT occupation, so none is recorded.
 1 SOUR @S38@
-2 QUAY 2
+2 QUAY 3
 0 @I114@ INDI
 1 REFN guillielma_dellaert
 2 TYPE project-id
@@ -2457,8 +2477,12 @@
 2 CONT in the registers.
 2 CONT
 2 CONT FRONTIER: the Joostens–Deconninck marriage, and her own parents.
+2 CONT
+2 CONT ACT READ (July 2026): named as the mother of the deceased in her daughter's 1857
+2 CONT Grez-Doiceau death act, read at the archive. As with her husband, the act gives her nothing
+2 CONT beyond the name.
 1 SOUR @S38@
-2 QUAY 2
+2 QUAY 3
 0 @I144@ INDI
 1 REFN jerome_dk
 2 TYPE project-id
@@ -2962,7 +2986,8 @@
 1 BIRT
 2 DATE 1810
 1 DEAT
-2 DATE 1857
+2 DATE 10 JUN 1857
+2 PLAC Grez-Doiceau
 1 FAMS @F108@
 1 FAMC @F112@
 1 NOTE DOCUMENTED (July 2026) by her own death act — Grez-Doiceau, 10 June 1857, the year this
@@ -2973,8 +2998,17 @@
 2 CONT Her parents are a documented frontier rather than a graft: they are named here plainly, and
 2 CONT adding them is the obvious next step, but neither has a record yet and nothing beyond this
 2 CONT act has been read about them.
+2 CONT
+2 CONT ACT READ (July 2026). Her own death act — Grez-Doiceau, akte nr. 35, registered 11 June
+2 CONT 1857 and giving the death as the **10th** — read at the archive and saved
+2 CONT ([[joostens-1857-death-grez-doiceau]]). It fixes the day where this record had only the year,
+2 CONT confirms her birthplace of Woluwe-Saint-Lambert from the act itself, gives her occupation as
+2 CONT *ménagère*, and names her parents [[guillaume_joostens]] and [[jeanne_deconninck]], who until
+2 CONT a pass ago were not in this tree at all.
+2 CONT
+2 CONT Her stated age of 47 puts her birth in 1809–10, which agrees with the 1810 held here.
 1 SOUR @S38@
-2 QUAY 2
+2 QUAY 3
 0 @I174@ INDI
 1 REFN josephus_caeckaert
 2 TYPE project-id
@@ -6233,11 +6267,11 @@
 0 @S35@ SOUR
 1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
 0 @S36@ SOUR
-1 TITL Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Geneanet
+1 TITL Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Geneanet
 0 @S37@ SOUR
 1 TITL Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; Geneanet
 0 @S38@ SOUR
-1 TITL Death act of Marie Catherine Joostens, Grez-Doiceau, 10 June 1857
+1 TITL Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Death act of Marie Catherine Joostens, Grez-Doiceau, 10 June 1857
 0 @S39@ SOUR
 1 TITL stefpaelinck (Stef Paelinck); The family itself
 0 @S40@ SOUR
