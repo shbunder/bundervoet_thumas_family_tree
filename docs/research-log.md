@@ -533,3 +533,22 @@ Corrections folded in: Antonius Vincke's "1797" is his Westvleteren marriage yea
 Validator green — 301 people.
 
 *End of log.
+
+## 36. Enrichment pass — Bundervoet surname line (Evergem → Oostende)
+
+Verified the full 11-generation Bundervoet chain (Petrus ~1560 → Alphonsus 1905) by dates +
+places + parent/child + spouse links across the paulderidder/glorieuxp/fauconier trees and the
+Geneanet record index — every link held. Enrichment merged for 9 people. Highlights:
+- Petrus (~1560) the documented root; Livinus married twice (Segerius was by Elisabeth Hovelynck).
+- Judocus (1794) and Bernardus (1837) each married twice; Bernardus was widowed in 1879 when his
+  first wife Marie Goethals died — the same year their son Petrus Franciscus was born.
+- Petrus Franciscus (1879) was the first of the line to leave Evergem for Oostende; his son
+  Alphonsus (1905) the first Bundervoet born in Oostende. Petrus Franciscus x Augusta
+  Vanstechelman is the Bundervoet-Vanstechelman junction.
+
+LIMITS: occupations came back null (not in the reachable pages; NOT guessed); day-level dates for
+the middle Evergem generations, and the deep West-Flemish isavdw block (Stroobandt/Sabbe/Van Maele
+spouses), remain to enrich — the org's monthly WebFetch spending cap was reached mid-pass, so
+those wait until the budget resets. Validator green — 301 people.
+
+*End of log.

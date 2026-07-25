@@ -8,6 +8,6 @@ FamilyTree.person({
   branch: "Bundervoet",
   father: "petrus_bundervoet1560",
   spouse: { name: "(wife unrecorded)" },
-  source: "Geneanet paulderidder/glorieuxp (Evergem)",
-  note: "Father of Segerius Bundervoet. Son of Petrus Bundervoet (~1560). (Dates are parish-reconstruction estimates and approximate.)",
+  source: "Geneanet trees paulderidder/glorieuxp (Evergem)",
+  note: "Of Evergem; married twice (Catharina Van Hecke, then Elisabeth Hovelynck) — his son Segerius was by his wife Elisabeth Hovelynck, per the paulderidder tree.",
 });

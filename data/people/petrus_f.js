@@ -1,17 +1,15 @@
 FamilyTree.person({
   id: "petrus_f",
   name: "Petrus Franciscus Bundervoet",
-  dates: "1879 Evergem – 1943 Oostende",
-  born: "1879 Evergem",
-  died: "1943 Oostende",
+  dates: "19 Mar 1879 Evergem – 21 Jul 1943 Oostende",
+  born: "19 Mar 1879 Evergem",
+  died: "21 Jul 1943 Oostende",
   confidence: "doc",
   role: "werkman / meestergast",
   branch: "Bundervoet",
   father: "bernardus",
   mother: "goethals",
-  spouse: {
-    name: "Augusta Vanstechelman (1904)",
-  },
-  source: "Fauconier tree; Evergem birth act 41 (1879); Oostende records",
-  note: "The great migration — born inland in Evergem, he moved ~40 km to the port of Oostende, founding the coastal branch. Evergem birth act 41.",
+  spouse: { name: "Augusta Vanstechelman" },
+  source: "Geneanet / Oostende civil records",
+  note: "The FIRST of the Bundervoet line to leave Evergem for the coast: born in Evergem, he settled in Oostende, where all his children were born from 1905 onward. Married Augusta Vanstechelman (the Bundervoet–Vanstechelman junction).",
 });

@@ -7,6 +7,6 @@ FamilyTree.person({
   confidence: "doc",
   branch: "Bundervoet",
   spouse: { name: "NN Vyveraert" },
-  source: "Geneanet paulderidder/glorieuxp (Evergem)",
-  note: "DEEPEST ANCESTOR ON THE BUNDERVOET SURNAME LINE — born ~1560, Evergem, married an NN Vyveraert. Father of Livinus Bundervoet. His own parents are not established in the trees; the top of the documented Bundervoet name.",
+  source: "Geneanet trees paulderidder/glorieuxp (Evergem)",
+  note: "The earliest documented ancestor of the Bundervoet line (Evergem, ~1560); married twice and was the father of Livinus.",
 });
