@@ -222,6 +222,18 @@
         "api",
         "name-index"
       ]
+    },
+    {
+      "id": "fv-dataindexen",
+      "kind": "index",
+      "title": "Familiekunde Vlaanderen — dataindexen (indices en klappers)",
+      "url": "https://dataindexen.familiekunde-vlaanderen.be/",
+      "access": "open",
+      "covers": "Indices and klappers compiled by Familiekunde Vlaanderen's regional branches: old parish registers, genealogical publications and regional collections, organised by region — Kempen, Mandelleie and, importantly for this tree, Oostende. The parent site indexes Evergem, Ertvelde and Sleidinge deaths 1796-1970, births 1796-1920 and marriages 1796-1945, which is exactly the Oost-Vlaanderen window AGATHA does not cover.",
+      "capabilities": [
+        "name-index"
+      ],
+      "note": "FOUND by discovery (July 2026) after the whole ladder missed on Bernardus Bundervoet: the corpus had nothing above the noise floor, FamilySearch's filters would not isolate him, and AGATHA holds ZERO Bundervoet records for Evergem. This is the volunteer layer beneath several Geneanet trees, reached directly. Searching it needs the interactive site rather than a URL query."
     }
   ],
   "pages": [

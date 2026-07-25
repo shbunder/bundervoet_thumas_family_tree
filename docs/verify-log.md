@@ -36,3 +36,5 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 7 | 2026-07-26 | eduardus_p | — | CORROBORATED | Named as father on the same act. | 19920ff |
 | 7 | 2026-07-26 | magdalena_vb | — | CORROBORATED | Named as mother on the same act. | 19920ff |
 | 7 | 2026-07-26 | — (method) | — | — | FamilySearch's place filter returns 0 for a surname with 3,259 Belgian records. Filter by name, read the results. | 19920ff |
+| 8 | 2026-07-26 | bernardus | NOT REACHED | NOT FOUND | Ladder walked: corpus (396 acts, none above noise) → FamilySearch (4 name hits, all fuzzy non-matches; filters don't constrain) → AGATHA (**zero** Bundervoet records for Evergem). | 8f3cafa |
+| 8 | 2026-07-26 | — | — | NEW SOURCE | `fv-dataindexen` — Familiekunde Vlaanderen indices. Covers Evergem deaths 1796-1970 and **Oostende**. Found by the discovery step. | 8f3cafa |

@@ -109,6 +109,18 @@
       "acts": 600
     },
     {
+      "id": "devos",
+      "query": {
+        "name": "Devos",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 38521,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "devriendt",
       "query": {
         "name": "Devriendt",
@@ -133,6 +145,18 @@
       "acts": 600
     },
     {
+      "id": "dutreeuw",
+      "query": {
+        "name": "Dutreeuw",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 183,
+      "mentions": 183,
+      "complete": true,
+      "acts": 183
+    },
+    {
       "id": "gautiert",
       "query": {
         "name": "Gautiert",
@@ -143,6 +167,18 @@
       "mentions": 1,
       "complete": true,
       "acts": 1
+    },
+    {
+      "id": "govaert",
+      "query": {
+        "name": "Govaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 6447,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "janssens",
@@ -179,6 +215,18 @@
       "mentions": 0,
       "complete": true,
       "acts": 0
+    },
+    {
+      "id": "maertens",
+      "query": {
+        "name": "Maertens",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 15813,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "paelinck",
@@ -325,6 +373,18 @@
       "acts": 127
     },
     {
+      "id": "vanbogaert",
+      "query": {
+        "name": "Van Bogaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 5063,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "vandenberghe",
       "query": {
         "name": "Vandenberghe",
@@ -332,6 +392,18 @@
       },
       "date": "2026-07-26",
       "found": 20564,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "vandenbroucke",
+      "query": {
+        "name": "Van den Broucke",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2047,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -421,6 +493,18 @@
       "acts": 400
     },
     {
+      "id": "verkouille",
+      "query": {
+        "name": "Verkouille",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 95,
+      "mentions": 95,
+      "complete": true,
+      "acts": 95
+    },
+    {
       "id": "vincke",
       "query": {
         "name": "Vincke",
@@ -428,6 +512,30 @@
       },
       "date": "2026-07-25",
       "found": 3017,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "wagebaert",
+      "query": {
+        "name": "Wagebaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 11,
+      "mentions": 11,
+      "complete": true,
+      "acts": 11
+    },
+    {
+      "id": "willems",
+      "query": {
+        "name": "Willems",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 56308,
       "mentions": 600,
       "complete": false,
       "acts": 600
