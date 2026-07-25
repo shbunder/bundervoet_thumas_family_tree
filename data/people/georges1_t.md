@@ -19,6 +19,7 @@ spouses:
     name: Marie Catherine Noël
     detail: Grez-Doiceau, 3 Jan 1771
 sources:
+  - fs-brabant-bs
   - S14
   - S6
   - tree-m2155
@@ -52,3 +53,21 @@ this record says **14 March 1744**, which would make him 64. The birth date is u
 because an age in a death act is hearsay — reported here by a 32-year-old day-labourer — and
 routinely a few years out, while a stated date is at least a claim about a particular record.
 Neither is documented. The Grez-Doiceau baptisms for 1744 and 1747–48 would settle it.
+
+THE AGE CONFLICT IS NOT SETTLED BY FAMILYSEARCH — and the reason matters. Its index of this
+family gives his birth as **1748**, which looks at first like independent support for the
+1808 act's "age 60" against this record's 1744. It is not independent: FamilySearch is
+indexing *that same act*, and 1748 is simply 1808 minus 60. Two sources agreeing are not two
+sources when one is computed from the other.
+
+What does bear on it is the family's own shape. His parents married at Wavre on
+**23 February 1743**, and FamilySearch holds a sister, **Catherine Josephe Thumas**, born
+**1745** to the same Lambert Thumas × Marie Leclercq and buried at Grez-Doiceau on 22 February
+1823. A first son in March 1744, thirteen months after the wedding, then a daughter in 1745,
+is an ordinary sequence. A first son in 1748, five years after the wedding and three years
+after his sister, is less ordinary. That leans towards the 1744 this record already holds,
+without proving it.
+
+Still unresolved, and the record that would resolve it is his baptism: Grez-Doiceau parish
+register, 1744 and 1747–48. Not indexed by name in either archive, so it needs the register
+images read page by page — or FamilySearch's full-text search over them.

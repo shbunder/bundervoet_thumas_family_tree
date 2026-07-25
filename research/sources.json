@@ -780,6 +780,29 @@
       "yielded": "Her exact death date, 10 June 1857, where the tree had only the year; her birthplace Woluwe-Saint-Lambert and occupation ménagère; and her parents Guillaume Joostens and Jeanne Marie Deconninck read at the archive rather than from an index. It also gives her husband Georges Thumas as 63, implying a birth around 1793-94 against the 1804 the tree records — a ten-year conflict in an act whose arithmetic is right for her own age.",
       "confidence": "doc",
       "accessed": "2026-07-26"
+    },
+    {
+      "id": "fs-brabant-bs",
+      "site": "familysearch",
+      "kind": "collection",
+      "title": "België, Brabant, burgerlijke stand, 1582-1950",
+      "url": "https://www.familysearch.org/search/collection/results?f.recordCountry=Belgium",
+      "covers": "Brabant civil registration, indexed by person with parents and spouses attached. Far deeper than AGATHA for this province: 1,409 Thumas records for Grez-Doiceau against AGATHA's 392.",
+      "yielded": "The 1808 Grez-Doiceau death of George Thumas indexed with parents Lambert Thumas x Marie Leclercq and wife Marie Catherine Noel; Etienne Thumas's 1812 death with parents Lambert x Marie Catherine Quinart; and Catherine Josephe Thumas, b. 1745, d. 22 Feb 1823 Grez-Doiceau, daughter of Lambert Thumas x Marie Leclere - a sister of our Georges that the tree does not have.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "CAUTION: its indexed 'birth 1748' for George Thumas is DERIVED from the age of 60 stated in the 1808 death act, not an independent birth record. Two sources agreeing are not two sources when one is computed from the other."
+    },
+    {
+      "id": "fs-brabant-church",
+      "site": "familysearch",
+      "kind": "collection",
+      "title": "Belgium, Brabant, Civil Registration and Church Records, 1704-1916",
+      "url": "https://www.familysearch.org/search/collection/results?f.recordCountry=Belgium",
+      "covers": "Brabant parish and civil records, including entries indexed under a parent or spouse rather than the principal - which is how siblings surface.",
+      "yielded": "Catherine Josephe Thumas (1745-1823), daughter of Lambert Thumas x Marie Leclere; and several Georges/Lambert Thumas x Quinart parent entries pointing at children not yet in the tree.",
+      "confidence": "sup",
+      "accessed": "2026-07-26"
     }
   ]
 }

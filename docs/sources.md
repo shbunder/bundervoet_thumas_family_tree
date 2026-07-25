@@ -17,7 +17,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 10 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 11 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 2 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
@@ -122,6 +122,21 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07-22
 - **Note:** FRONTIER, unconfirmed: a Desiderius de Keyser b. 27 May 1832 with parents Arnoldus de Keyser × Angelina Sophia van Kerkhove exists, but nothing ties him to Van den Broeck. Do not graft until an act does.
+
+#### `fs-brabant-bs` — België, Brabant, burgerlijke stand, 1582-1950
+- **Kind:** collection · <https://www.familysearch.org/search/collection/results?f.recordCountry=Belgium>
+- **Covers:** Brabant civil registration, indexed by person with parents and spouses attached. Far deeper than AGATHA for this province: 1,409 Thumas records for Grez-Doiceau against AGATHA's 392.
+- **Yielded:** The 1808 Grez-Doiceau death of George Thumas indexed with parents Lambert Thumas x Marie Leclercq and wife Marie Catherine Noel; Etienne Thumas's 1812 death with parents Lambert x Marie Catherine Quinart; and Catherine Josephe Thumas, b. 1745, d. 22 Feb 1823 Grez-Doiceau, daughter of Lambert Thumas x Marie Leclere - a sister of our Georges that the tree does not have.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** CAUTION: its indexed 'birth 1748' for George Thumas is DERIVED from the age of 60 stated in the 1808 death act, not an independent birth record. Two sources agreeing are not two sources when one is computed from the other.
+
+#### `fs-brabant-church` — Belgium, Brabant, Civil Registration and Church Records, 1704-1916
+- **Kind:** collection · <https://www.familysearch.org/search/collection/results?f.recordCountry=Belgium>
+- **Covers:** Brabant parish and civil records, including entries indexed under a parent or spouse rather than the principal - which is how siblings surface.
+- **Yielded:** Catherine Josephe Thumas (1745-1823), daughter of Lambert Thumas x Marie Leclere; and several Georges/Lambert Thumas x Quinart parent entries pointing at children not yet in the tree.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
 
 ### Geneanet
 

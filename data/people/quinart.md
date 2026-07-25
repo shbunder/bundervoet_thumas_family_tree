@@ -14,6 +14,7 @@ spouses:
     name: Georges Lambert Thumas
     detail: Grez-Doiceau, 9 Feb 1801
 sources:
+  - fs-brabant-bs
   - S13
   - geneanet
 ---
@@ -27,3 +28,9 @@ CORROBORATED (July 2026), and it turned up a child. The Grez-Doiceau death act o
 FRONTIER: Etienne himself. He is a son of [[georgeslambert_t]] and this record, and so a
 brother of [[georges2_t]], and he is not in the tree. The act has not been opened, so his
 birth date and his age at death are unread; opening it would place him.
+
+ALSO INDEXED BY FAMILYSEARCH (July 2026), which lists the 1812 Grez-Doiceau death of her son
+Etienne with his parents given as *Lambert Thumas* and *Marie Catherine Quinart* — the same
+act already registered as [[S13]], reached independently through a second index. Her surname
+appears there in several spellings — Quinart, Kinart, Quinaut — which is worth knowing before
+searching for her.

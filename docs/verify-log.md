@@ -29,3 +29,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 4 | 2026-07-26 | georges2_t | — | CONFLICT | Act gives him age 63 → birth ~1793-94; tree says 1804-01-24. Wife's age in the same act is right. Left open. | 90009d6 |
 | 5 | 2026-07-26 | georges2_t | CONFLICT | NOT FOUND | No Thumas act of 1864 in AGATHA's Grez-Doiceau index (392 records there, early 1800s). Age conflict stays open. | cbef785 |
 | 5 | 2026-07-26 | — (method) | — | — | AGATHA's Plaats and Periode filters match anything mentioned in an act, not the act's own commune/date. Read the result list, don't trust the filter. | cbef785 |
+| 6 | 2026-07-26 | georges1_t | CONFLICT | LEAD | FamilySearch has 1,409 Thumas/Grez-Doiceau records vs AGATHA's 392. Its 'birth 1748' is derived from the 1808 act's age — not independent. Sister Catherine Josephe (b.1745) leans toward 1744. | 81b5705 |
+| 6 | 2026-07-26 | — | — | NEW SOURCE | Registered two FamilySearch Brabant collections. The ladder's step 2 was never used; it outperforms step 3 by 3.6x on this commune. | 81b5705 |
+| 6 | 2026-07-26 | — (tooling) | — | BLOCKED | Validator crashed: corpus parser assumes EventPlace.Place is a string; archive `sla` returns `{'@TranscriptionRemark':…, '$': 'Lommel'}`. 20 rows quarantined to go green. Needs a fix in familytree/corpus.py. | 81b5705 |
