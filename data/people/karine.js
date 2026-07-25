@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "karine",
   name: "Karine Bundervoet",
+  sex: "f",
   confidence: "fam",
   role: "Great-aunt (Ronny’s sister)",
   father: "marcel_b",

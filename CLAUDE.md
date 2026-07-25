@@ -96,22 +96,27 @@ Invariants:
   child proves a couple** (a record with `father: A`, `mother: B` obliges A and B to
   list each other). The validator enforces both; they are what let the tree be built
   downwards without losing branches.
+- `sex` is `"f"`/`"m"`, optional, and only needed for people who are nobody's parent
+  (being a `father`/`mother` already settles it). Record it from what the source says —
+  a note calling someone "Roland's sister", a role of "wife" — never from a forename.
 - Every id in `data/people/` is listed in `data/people.js`.
 - Ids are stable. Renaming one breaks every reference — don't.
 - Plain text in data files (`é`, `&`), never HTML entities. The renderer escapes.
 - Presentation carries no facts: nothing in `assets/` contains a name or a date.
 
-**Known limits of the current model** — these block the objectives above and are the
-next structural work, in this order:
+Kinship is root-free: `relationBetween(a, b)` in `assets/js/kinship.js` works from the
+pair's lowest common ancestor, so it relates anyone to anyone (objective c). The Index's
+three categories are derived from the links, so a new person appears without being added
+to any list. `meta.roots` takes a list for the forest case (objective 3); with one root
+it is the ordinary tree.
 
-1. **Kinship is root-relative.** `assets/js/kinship.js` walks from the single
-   `meta.root`. Objective (c) needs a root-free relationship calculator (lowest common
-   ancestor → "second cousin twice removed"), and objective 3 needs multiple roots.
-2. **`data/groups.js` is hand-curated.** 301 ids maintained by hand does not reach
-   10,000. The Index tab's three categories — **ancestors / relatives / other** — are
-   computable from the links and should be derived, not listed.
-3. **One `<script>` tag per person.** Fine at 301, fatal at thousands. Needs a bundled
+**Known limits of the current model** — the next structural work:
+
+1. **One `<script>` tag per person.** Fine at 301, fatal at thousands. Needs a bundled
    data file (and therefore a build step) before the tree grows an order of magnitude.
+   The relation finder's two `<select>`s go the same way at that size.
+2. **Sex is unknown for anyone childless** unless their record states it. Relations then
+   read "sibling" rather than "sister". Fill `sex` in only from what a record says.
 
 ---
 

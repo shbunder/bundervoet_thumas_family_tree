@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "gustavus_j",
   name: "Gustavus-Josephus Dekeyser",
+  sex: "m",
   dates: "b. 19 May 1899 · Oostende",
   born: "19 May 1899 · Oostende",
   confidence: "doc",

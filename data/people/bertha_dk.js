@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "bertha_dk",
   name: "Bertha Alida Theresia Dekeyser",
+  sex: "f",
   dates: "b. 7 Aug 1901 Oostende",
   born: "7 Aug 1901 Oostende",
   confidence: "doc",

@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "rene_dv",
   name: "René Devriendt",
+  sex: "m",
   confidence: "fam",
   role: "Huguette’s brother",
   branch: "Devriendt",

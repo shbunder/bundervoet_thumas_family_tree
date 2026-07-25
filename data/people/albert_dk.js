@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "albert_dk",
   name: "Albert Dekeyser",
+  sex: "m",
   dates: "1920–1972",
   born: "1920",
   died: "1972",

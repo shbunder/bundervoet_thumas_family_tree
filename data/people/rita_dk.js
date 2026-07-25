@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "rita_dk",
   name: "Rita De Keyser",
+  sex: "f",
   confidence: "fam",
   role: "Roland's sister",
   branch: "DeKeyser",

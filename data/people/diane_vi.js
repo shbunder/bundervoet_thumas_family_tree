@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "diane_vi",
   name: "Diane Van Iseghem",
+  sex: "f",
   dates: "†",
   confidence: "doc",
   role: "Rosette’s sister",

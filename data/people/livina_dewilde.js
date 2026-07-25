@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "livina_dewilde",
   name: "Livina De Wilde",
+  sex: "f",
   dates: "d. 1750 · Evergem",
   died: "1750 · Evergem",
   confidence: "doc",

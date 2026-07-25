@@ -77,6 +77,19 @@ h1{font-size:1.9rem;margin:.1em 0 .1em;font-weight:600}
 .origin .ol{color:var(--accent);font-weight:600}
 
 /* everyone list */
+.catsec{display:flex;align-items:baseline;gap:10px;margin:26px 0 2px;padding-bottom:6px;border-bottom:1px solid var(--line);color:var(--accent);font-size:1.06rem}
+.catsec .n{color:var(--muted);font-size:.78rem;font-weight:400}
+.catblurb{margin:0 0 4px;color:var(--muted);font-size:.82rem;font-style:italic}
+.relfinder{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin-bottom:6px;box-shadow:var(--shadow)}
+.relfinder h4{margin:0 0 8px;color:var(--accent);font-size:1rem}
+.relpick{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.relpick select{flex:1 1 220px;min-width:0;padding:6px 8px;border:1px solid var(--line);border-radius:8px;
+  background:var(--bg);color:var(--ink);font-family:inherit;font-size:.85rem}
+.relpick .amp{color:var(--muted);font-size:.82rem;font-style:italic}
+.relout{margin-top:10px;font-size:.9rem;line-height:1.5}
+.relout em{color:var(--accent);font-style:normal;font-weight:600}
+.relout .via{margin-top:4px;color:var(--muted);font-size:.8rem}
+.relout .muted{color:var(--muted);font-style:italic}
 .branchgrid{columns:2;column-gap:24px;margin-top:12px}
 .bcard{break-inside:avoid;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin-bottom:14px;box-shadow:var(--shadow)}
 .bcard h4{margin:0 0 6px;color:var(--accent);font-size:1rem}

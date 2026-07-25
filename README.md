@@ -25,7 +25,7 @@ data/
   people.js                    the list of person ids to load
   branches.js                  default source citation per surname branch
   lineages.js                  the four surname chains in the "Lineages" tab
-  groups.js                    how the "Index" tab is grouped and ordered
+  groups.js                    optional headings for the "Index" tab
   meta.js                      root person, confidence labels, footer text
 assets/
   css/tree.css                 styling for the tree page
@@ -83,6 +83,12 @@ well as up:
 `confidence` drives the colour coding: `doc` documented record · `fam` family knowledge ·
 `sup` strongly supported · `unk` unknown, still to research.
 
+`sex` is `"f"` or `"m"`, and is only needed when it can't be worked out from the links:
+being recorded as someone's `father` or `mother` already settles it. It matters because
+relations are named from it — without it the tree says "sibling" rather than "sister".
+Fill it in only from what a record actually says (a note calling someone "Roland's
+sister", a role of "wife"), never from a forename.
+
 `born` and `died` are optional explicit date fields (e.g. `born: "12 Nov 1876 · Hamme-Merchtem"`),
 carried alongside the free-text `dates` string that drives the display. They are filled in for
 everyone with a known date, so birth and death are available as structured data.
@@ -96,11 +102,28 @@ escapes everything on the way out.
 ## Adding or changing someone
 
 1. Add or edit `data/people/<id>.js`.
-2. If the person is new, add the id to `data/people.js`, and to a group in
-   `data/groups.js` so they show up in the Index tab.
+2. If the person is new, add the id to `data/people.js`. That is enough to put them
+   in the Index — it is grouped from the links, not from a list.
 3. Run `node tools/check-data.mjs` — it catches syntax errors, typo'd parent ids,
-   unknown branches, people missing from the list, and circular ancestry.
+   unknown branches, people missing from the list, one-sided marriages, and
+   circular ancestry.
 4. Commit. GitHub Pages picks it up; there is no build to run.
+
+## The Index
+
+Everyone is sorted into **Ancestors** (the direct line above the root), **Blood
+relatives** (related, but off that line) and **Others** (married in, or not yet
+connected). Those three are worked out from the links, so adding someone to the data
+is all it takes for them to appear — there is no second list to keep in step.
+
+`data/groups.js` no longer decides who appears, only what the sub-headings are called:
+"Bostyn & Cappaert (Marcel's mother)" reads better than the bare branch name. Anyone it
+doesn't mention is filed under their `branch`, which is why nobody can go missing.
+
+The same tab answers **how any two people are related** — pick two names and it gives
+the relation and the ancestor they share. It works from the lowest common ancestor of
+the pair rather than from the root, so it can relate anyone to anyone, and it falls
+back to one step through marriage when there is no blood link.
 
 ## Making a change show up straight away
 

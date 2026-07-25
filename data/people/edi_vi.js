@@ -1,6 +1,7 @@
 FamilyTree.person({
   id: "edi_vi",
   name: "Edi Van Iseghem",
+  sex: "m",
   dates: "",
   confidence: "fam",
   role: "Rosette’s brother",

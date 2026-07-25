@@ -39,7 +39,7 @@ const lineages = read('lineages.js') || [];
 const groups = read('groups.js') || [];
 
 const FIELDS = new Set([
-  'id', 'name', 'dates', 'born', 'died', 'confidence', 'role', 'branch',
+  'id', 'name', 'sex', 'dates', 'born', 'died', 'confidence', 'role', 'branch',
   'father', 'mother', 'spouses', 'source', 'note',
 ]);
 const SPOUSE_FIELDS = new Set(['id', 'name', 'detail']);
@@ -61,6 +61,7 @@ for (const id of ids.filter(i => onDisk.includes(i))) {
   if (!p.name) fail(`${id}.js: missing "name"`);
   if (!CONFIDENCE.has(p.confidence)) fail(`${id}.js: confidence "${p.confidence}" is not one of ${[...CONFIDENCE].join(', ')}`);
   if (p.branch && !(p.branch in branches)) fail(`${id}.js: branch "${p.branch}" is not in branches.js`);
+  if ('sex' in p && p.sex !== 'f' && p.sex !== 'm') fail(`${id}.js: sex "${p.sex}" must be "f" or "m"`);
   if ('spouses' in p) {
     if (!Array.isArray(p.spouses)) fail(`${id}.js: "spouses" must be an array`);
     else for (const [i, s] of p.spouses.entries()) {
@@ -136,27 +137,44 @@ for (const g of groups) {
   for (const id of g.people) if (!people[id]) fail(`groups.js (${g.title}): "${id}" does not exist`);
 }
 
-// Not fatal, but usually a mistake: someone unreachable from every view.
-const listed = new Set([...groups.flatMap(g => g.people), ...lineages.flatMap(lineageChain)]);
-const reachable = new Set([meta.root]);
-const queue = [meta.root];
+// Not fatal, but usually a mistake: a record connected to nothing. The index no
+// longer depends on a hand-kept list, so "missing from a view" is not the concern
+// any more — a person who touches no one else is. Marriage counts as a connection,
+// which is how a spouse with no children still belongs.
+//
+// `meta.roots` is the forest case: several unconnected families, each with its own
+// starting point. A tree with one root is just the one-element list.
+const roots = (meta.roots && meta.roots.length ? meta.roots : [meta.root]).filter(id => people[id]);
+if (meta.roots) {
+  for (const r of meta.roots) if (!people[r]) fail(`meta.js: roots entry "${r}" does not exist`);
+}
+
+const neighbours = id => {
+  const p = people[id];
+  const out = [p.father, p.mother];
+  for (const s of p.spouses || []) if (s.id) out.push(s.id);
+  for (const [other, q] of Object.entries(people)) if (q.father === id || q.mother === id) out.push(other);
+  return out.filter(x => x && people[x]);
+};
+
+const reachable = new Set(roots);
+const queue = [...roots];
 for (let i = 0; i < queue.length; i++) {
-  for (const [id, p] of Object.entries(people)) {
-    if ((p.father === queue[i] || p.mother === queue[i] || [p.father, p.mother].includes(queue[i])) && !reachable.has(id)) {
-      reachable.add(id);
-      queue.push(id);
-    }
-  }
-  const p = people[queue[i]];
-  for (const parent of [p.father, p.mother]) {
-    if (parent && people[parent] && !reachable.has(parent)) {
-      reachable.add(parent);
-      queue.push(parent);
+  for (const n of neighbours(queue[i])) {
+    if (!reachable.has(n)) {
+      reachable.add(n);
+      queue.push(n);
     }
   }
 }
 for (const id of ids) {
-  if (!reachable.has(id) && !listed.has(id)) warnings.push(`${id}.js: not linked to anyone and not listed in any view`);
+  if (reachable.has(id)) continue;
+  const isolated = neighbours(id).length === 0;
+  warnings.push(
+    isolated
+      ? `${id}.js: connected to nobody — no parents, children or spouse`
+      : `${id}.js: not connected to any root in meta.js (add a root, or link them in)`
+  );
 }
 
 for (const w of warnings) console.warn('warn  ' + w);

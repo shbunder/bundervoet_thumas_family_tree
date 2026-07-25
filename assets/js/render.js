@@ -310,28 +310,105 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
   // ---------- index ----------
 
+  // The index is grouped by how each person relates to the root family, and
+  // membership is derived rather than listed — someone added to the data shows up
+  // here without anyone having to remember to add them to a second file.
+  //
+  // `groups.js` is still used, but only for its headings: where it has a curated
+  // title for someone ("Bostyn & Cappaert (Marcel's mother)") that reads better
+  // than the bare branch name, so it wins. Anyone it does not mention falls back
+  // to their branch, which is why nobody can go missing.
   function indexCards() {
-    return groups
-      .map(group => {
-        const rows = group.people
-          .map(id => {
-            const p = people[id];
-            const rel = kin.relationship(id);
-            const extra = [rel, p.role && p.role !== rel ? p.role : ''].filter(Boolean).join(' · ');
-            return (
-              `<div class="p" data-id="${esc(id)}" style="cursor:pointer"><b>${esc(p.name)}</b>` +
-              (p.dates ? ` <span class="d">— ${esc(p.dates)}</span>` : '') +
-              (extra ? ` <span class="d">· ${esc(extra)}</span>` : '') +
-              '</div>'
-            );
-          })
-          .join('');
-        return `<div class="bcard"><h4>${esc(group.title)}</h4>${rows}</div>`;
-      })
-      .join('');
+    const rootName = people[kin.ROOT] ? people[kin.ROOT].name : '';
+    const CATEGORIES = [
+      { key: 'ancestor', title: 'Ancestors', blurb: `The direct line above ${rootName} — parents, grandparents, and up.` },
+      { key: 'relative', title: 'Blood relatives', blurb: 'Blood, but off the direct line: siblings, aunts and uncles, cousins, and their descendants.' },
+      { key: 'other', title: 'Others', blurb: 'Married into the family, or not yet connected to it.' },
+    ];
+
+    const curated = {};
+    const orderOfTitle = {};
+    groups.forEach((g, i) => {
+      orderOfTitle[g.title] = i;
+      g.people.forEach(id => {
+        if (!(id in curated)) curated[id] = g.title;
+      });
+    });
+
+    const personRow = id => {
+      const p = people[id];
+      const rel = kin.relationship(id);
+      const extra = [rel, p.role && p.role !== rel ? p.role : ''].filter(Boolean).join(' · ');
+      return (
+        `<div class="p" data-id="${esc(id)}" style="cursor:pointer"><b>${esc(p.name)}</b>` +
+        (p.dates ? ` <span class="d">— ${esc(p.dates)}</span>` : '') +
+        (extra ? ` <span class="d">· ${esc(extra)}</span>` : '') +
+        '</div>'
+      );
+    };
+
+    return CATEGORIES.map(catg => {
+      const members = Object.keys(people).filter(id => kin.categoryOf(id) === catg.key);
+      if (!members.length) return '';
+
+      const buckets = new Map();
+      for (const id of members) {
+        const key = curated[id] || people[id].branch || 'Unplaced';
+        if (!buckets.has(key)) buckets.set(key, []);
+        buckets.get(key).push(id);
+      }
+
+      // Curated headings keep the order they have in groups.js; anything derived
+      // from a branch name follows, alphabetically.
+      const titles = [...buckets.keys()].sort((a, b) => {
+        const ia = a in orderOfTitle ? orderOfTitle[a] : Infinity;
+        const ib = b in orderOfTitle ? orderOfTitle[b] : Infinity;
+        return ia !== ib ? ia - ib : a.localeCompare(b);
+      });
+
+      const cards = titles
+        .map(t => `<div class="bcard"><h4>${esc(t)}</h4>${buckets.get(t).map(personRow).join('')}</div>`)
+        .join('');
+
+      return (
+        `<h3 class="catsec">${esc(catg.title)}<span class="n">${members.length}</span></h3>` +
+        `<p class="catblurb">${esc(catg.blurb)}</p>` +
+        `<div class="branchgrid">${cards}</div>`
+      );
+    }).join('');
   }
 
-  return { tooltip, pedigree, detail, lineageColumns, indexCards, legend, searchResults, descent };
+  // Objective (c): name the relation between any two people in the index.
+  function relationText(a, b) {
+    if (!a || !b || !people[a] || !people[b]) return '<span class="muted">Pick two people.</span>';
+    const r = kin.relationBetween(a, b);
+    if (!r) {
+      return (
+        `<b>${esc(people[a].name)}</b> and <b>${esc(people[b].name)}</b> have no connection recorded in the tree — ` +
+        'no shared ancestor, and no marriage linking them.'
+      );
+    }
+    if (r.kind === 'self') return `<b>${esc(people[a].name)}</b> — that is the same person.`;
+
+    const line = `<b>${esc(people[a].name)}</b> is <b>${esc(people[b].name)}</b>’s <em>${esc(r.label)}</em>.`;
+    if (r.kind !== 'blood' || !r.via) {
+      return line + (r.detail ? `<div class="via">Through ${esc(r.detail)}.</div>` : '');
+    }
+    // When one of them is the common ancestor, saying so again explains nothing —
+    // the relation already is the line between them.
+    if (r.da === 0 || r.db === 0) {
+      const steps = Math.max(r.da, r.db);
+      return line + `<div class="via">${steps} generation${steps === 1 ? '' : 's'} apart, in a direct line.</div>`;
+    }
+    const gen = n => `${n} generation${n === 1 ? '' : 's'} up`;
+    return (
+      line +
+      `<div class="via">Common ancestor: <b>${esc(people[r.via].name)}</b> — ` +
+      `${gen(r.da)} from ${esc(people[a].name)}, ${gen(r.db)} from ${esc(people[b].name)}.</div>`
+    );
+  }
+
+  return { tooltip, pedigree, detail, lineageColumns, indexCards, relationText, legend, searchResults, descent };
 };
 
 })();

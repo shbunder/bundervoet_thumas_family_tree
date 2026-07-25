@@ -32,6 +32,33 @@
     $('cols').innerHTML = view.lineageColumns();
     $('branchgrid').innerHTML = view.indexCards();
 
+    // ---- relation finder ----
+    // Two pickers over everyone, sorted by name. A <select> is the right control
+    // at this size; it is also the first thing that will need replacing when the
+    // tree reaches thousands of people.
+    (() => {
+      const byName = Object.keys(people).sort((a, b) => people[a].name.localeCompare(people[b].name));
+      const options = byName
+        .map(id => {
+          const p = people[id];
+          const label = p.dates ? `${p.name} — ${p.dates}` : p.name;
+          return `<option value="${id.replace(/"/g, '&quot;')}">${label
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')}</option>`;
+        })
+        .join('');
+      const a = $('relA');
+      const b = $('relB');
+      a.innerHTML = options;
+      b.innerHTML = options;
+      a.value = meta.root;
+      b.value = byName.find(id => id !== meta.root) || meta.root;
+      const update = () => ($('relOut').innerHTML = view.relationText(a.value, b.value));
+      a.addEventListener('change', update);
+      b.addEventListener('change', update);
+      update();
+    })();
+
     FT.initTooltip($('tt'), id => (people[id] ? view.tooltip(id) : null));
     if (!FT.canHover()) {
       $('tip').textContent = 'Tap any name to open it — full details appear below';
