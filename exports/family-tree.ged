@@ -1310,6 +1310,10 @@
 2 CONT CORROBORATED (July 2026) as a father: he is named in his daughter Léonie's Sint-Niklaas
 2 CONT birth act of 31 October 1901, alongside her mother [[magdalena_vb]] — putting the couple
 2 CONT and the parentage on a civil act rather than on a member tree.
+2 CONT
+2 CONT CONFIRMED BY A CIVIL RECORD (July 2026): named as the father on his daughter's Sint-Niklaas
+2 CONT birth registration of 31 October 1901 ([[S16]]), alongside [[magdalena_vb]]. Found on
+2 CONT FamilySearch after AGATHA had come back empty for the same act.
 1 SOUR @S29@
 2 QUAY 2
 0 @I84@ INDI
@@ -3413,6 +3417,15 @@
 2 CONT the day the tree had only as a year, and names both parents in the act itself:
 2 CONT [[eduardus_p]] and [[magdalena_vb]]. Those two links stood on the stefpaelinck tree
 2 CONT until now.
+2 CONT
+2 CONT FOUND ON FAMILYSEARCH (July 2026), after AGATHA had been recorded as a NOT FOUND for this
+2 CONT same act. Her birth registration — Sint-Niklaas, **31 October 1901**, invoernummer **997** —
+2 CONT is indexed in *Belgium, East Flanders, Civil Registration, 1541-1950*, with both parents
+2 CONT attached: [[eduardus_p]] and [[magdalena_vb]] ([[S16]]).
+2 CONT
+2 CONT The correction to make here is not to the record but to how it was searched. AGATHA holds
+2 CONT eight Paelinck entries for Sint-Niklaas and no births, and that was written up as though the
+2 CONT act did not exist. It exists; one archive did not have it.
 1 SOUR @S29@
 2 QUAY 2
 0 @I197@ INDI
@@ -3725,6 +3738,9 @@
 2 CONT
 2 CONT CORROBORATED (July 2026) as a mother: named in her daughter Léonie's Sint-Niklaas birth
 2 CONT act of 31 October 1901, alongside [[eduardus_p]].
+2 CONT
+2 CONT CONFIRMED BY A CIVIL RECORD (July 2026): named as the mother on her daughter's Sint-Niklaas
+2 CONT birth registration of 31 October 1901 ([[S16]]), alongside [[eduardus_p]].
 1 SOUR @S29@
 2 QUAY 2
 0 @I215@ INDI
@@ -6277,7 +6293,7 @@
 0 @S28@ SOUR
 1 TITL Rijksarchief AGATHA — Belgian State Archives search robot; FamilySearch; Geneanet
 0 @S29@ SOUR
-1 TITL Birth act of Philomena Leonia Paelinck, Sint-Niklaas, 31 October 1901; stefpaelinck (Stef Paelinck)
+1 TITL Birth registration nr. 997 — Philomena Leonia Paelinck, Sint-Niklaas, 31 October 1901; Birth act of Philomena Leonia Paelinck, Sint-Niklaas, 31 October 1901; stefpaelinck (Stef Paelinck)
 0 @S30@ SOUR
 1 TITL Memorial card — Emma Celesta Vincke, d. Oostende 6 October 1974; gverdievel (Guy Verdievel)
 0 @S31@ SOUR

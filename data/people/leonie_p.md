@@ -18,6 +18,7 @@ spouses:
     name: Jerome Joseph Dekeyser
     detail: 10 Dec 1919, Sint-Niklaas
 sources:
+  - S16
   - S7
   - tree-stefpaelinck
 ---
@@ -30,3 +31,12 @@ DOCUMENTED DATE (July 2026). Her birth act — Sint-Niklaas, **31 October 1901**
 the day the tree had only as a year, and names both parents in the act itself:
 [[eduardus_p]] and [[magdalena_vb]]. Those two links stood on the stefpaelinck tree
 until now.
+
+FOUND ON FAMILYSEARCH (July 2026), after AGATHA had been recorded as a NOT FOUND for this
+same act. Her birth registration — Sint-Niklaas, **31 October 1901**, invoernummer **997** —
+is indexed in *Belgium, East Flanders, Civil Registration, 1541-1950*, with both parents
+attached: [[eduardus_p]] and [[magdalena_vb]] ([[S16]]).
+
+The correction to make here is not to the record but to how it was searched. AGATHA holds
+eight Paelinck entries for Sint-Niklaas and no births, and that was written up as though the
+act did not exist. It exists; one archive did not have it.

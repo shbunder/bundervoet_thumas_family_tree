@@ -32,3 +32,7 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 6 | 2026-07-26 | georges1_t | CONFLICT | LEAD | FamilySearch has 1,409 Thumas/Grez-Doiceau records vs AGATHA's 392. Its 'birth 1748' is derived from the 1808 act's age — not independent. Sister Catherine Josephe (b.1745) leans toward 1744. | 81b5705 |
 | 6 | 2026-07-26 | — | — | NEW SOURCE | Registered two FamilySearch Brabant collections. The ladder's step 2 was never used; it outperforms step 3 by 3.6x on this commune. | 81b5705 |
 | 6 | 2026-07-26 | — (tooling) | — | BLOCKED | Validator crashed: corpus parser assumes EventPlace.Place is a string; archive `sla` returns `{'@TranscriptionRemark':…, '$': 'Lommel'}`. 20 rows quarantined to go green. Needs a fix in familytree/corpus.py. | 81b5705 |
+| 7 | 2026-07-26 | leonie_p | NOT FOUND (p1) | CORROBORATED | **Reverses pass 1.** FamilySearch has the 1901 Sint-Niklaas birth act nr. 997 that AGATHA lacks, with both parents. | 19920ff |
+| 7 | 2026-07-26 | eduardus_p | — | CORROBORATED | Named as father on the same act. | 19920ff |
+| 7 | 2026-07-26 | magdalena_vb | — | CORROBORATED | Named as mother on the same act. | 19920ff |
+| 7 | 2026-07-26 | — (method) | — | — | FamilySearch's place filter returns 0 for a surname with 3,259 Belgian records. Filter by name, read the results. | 19920ff |

@@ -19,6 +19,7 @@ spouses:
     name: Eduardus Paelinck
     detail: Sint-Niklaas, 17 Nov 1888 — her 2nd marriage
 sources:
+  - S16
   - S7
   - tree-stefpaelinck
 ---
@@ -27,3 +28,6 @@ Widowed young — her first husband Ludovicus Brion died in 1887 — then remarr
 
 CORROBORATED (July 2026) as a mother: named in her daughter Léonie's Sint-Niklaas birth
 act of 31 October 1901, alongside [[eduardus_p]].
+
+CONFIRMED BY A CIVIL RECORD (July 2026): named as the mother on her daughter's Sint-Niklaas
+birth registration of 31 October 1901 ([[S16]]), alongside [[eduardus_p]].

@@ -19,7 +19,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 |---|---|---|---|---|---|
 | `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 11 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 2 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 3 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -137,6 +137,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Yielded:** Catherine Josephe Thumas (1745-1823), daughter of Lambert Thumas x Marie Leclere; and several Georges/Lambert Thumas x Quinart parent entries pointing at children not yet in the tree.
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
+
+#### `S16` — Birth registration nr. 997 — Philomena Leonia Paelinck, Sint-Niklaas, 31 October 1901
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:Q2QP-N3Z7>
+- **Collection:** Belgium, East Flanders, Civil Registration, 1541-1950 — Sint-Niklaas 1901, invoernummer 997
+- **Yielded:** The act AGATHA does not hold. Philomena Leonia Paelinck born 31 October 1901 at Sint-Niklaas, act 997, with both parents named: Eduardus Franciscus Paelinck and Maria Magdalena Van Bogaert. Confirms the birth date the tree had only as a year, and puts both parent links on a civil record.
+- **Saved artifact:** `data/artifacts/leonie-paelinck-1901-birth-sint-niklaas.md`
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** FamilySearch's index entry, not the register image; the image is reachable from the record page and reading it would make the three people doc.
 
 ### Geneanet
 
