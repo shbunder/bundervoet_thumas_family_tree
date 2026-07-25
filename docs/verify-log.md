@@ -23,3 +23,5 @@ REJECTED · NOT FOUND · BLOCKED.
 | 4 | 2026-07-26 | guillaume_joostens | — | DOCUMENTED | Named as father in the same act — the act behind last pass's index entry. | 90009d6 |
 | 4 | 2026-07-26 | jeanne_deconninck | — | DOCUMENTED | Named as mother in the same act. | 90009d6 |
 | 4 | 2026-07-26 | georges2_t | — | CONFLICT | Act gives him age 63 → birth ~1793-94; tree says 1804-01-24. Wife's age in the same act is right. Left open. | 90009d6 |
+| 5 | 2026-07-26 | georges2_t | CONFLICT | NOT FOUND | No Thumas act of 1864 in AGATHA's Grez-Doiceau index (392 records there, early 1800s). Age conflict stays open. | cbef785 |
+| 5 | 2026-07-26 | — (method) | — | — | AGATHA's Plaats and Periode filters match anything mentioned in an act, not the act's own commune/date. Read the result list, don't trust the filter. | cbef785 |

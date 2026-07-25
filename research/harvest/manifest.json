@@ -73,6 +73,18 @@
       "acts": 242
     },
     {
+      "id": "deblaere",
+      "query": {
+        "name": "De Blaere",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 680,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "degrande",
       "query": {
         "name": "De Grande",
@@ -311,6 +323,18 @@
       "mentions": 127,
       "complete": true,
       "acts": 127
+    },
+    {
+      "id": "vandenberghe",
+      "query": {
+        "name": "Vandenberghe",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 20564,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "vandewalle",
