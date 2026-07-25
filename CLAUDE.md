@@ -72,15 +72,19 @@ Each research pass:
    (they name *both* spouses' parents — the single richest record); rare surnames over
    common ones; the wife's side when the husband's is blocked. Both breakthroughs in
    this project came from those two moves.
-2. **Check what's been tried** — `node tools/research.mjs tried <person>` and
-   `untried <person>`. Do not re-walk a logged dead end without a new angle.
+2. **Check what's been tried** — `node tools/research.mjs tried <person>` for the
+   history, `untried <person>` for what is left, `yield` for which venues pay off. Do
+   not re-walk a logged `miss` without a new angle; `blocked` means it was never
+   actually read, so it is worth retrying.
 3. **Search** — see [docs/searching.md](docs/searching.md) for the registry, the
    logged-in browser, and what has worked before.
 4. **Verify** — actively try to *refute* the identity match before accepting it.
 5. **Record** —
    - the person files;
-   - `node tools/research.mjs log …` for **every** search, hit or miss;
-   - a new source in `research/sources.json` if one was discovered;
+   - `node tools/research.mjs log …` for **every** search, hit or miss — a hit must
+     say what it `--found`, anything else must say `--why`;
+   - a new site or page in `research/sources.json` if one was discovered, and the
+     `yielded` line on any page that produced something;
    - a numbered section in `docs/research-log.md` for the narrative: what was found,
      what came back negative, what the next frontier is.
 6. **Build & commit** — `node tools/build.mjs`, then one commit per pass.
@@ -152,9 +156,9 @@ docs/research-log.md    numbered passes: found / checked-and-negative / next
 docs/searching.md       the search strategy, the browser, what has worked
 docs/sources.md         readable source list — GENERATED from research/sources.json
 docs/sources/           saved act images and scans
-research/sources.json   the source registry — every venue and every cited document
-research/searches.jsonl the search log, append-only: person · source · goal · result
-tools/research.mjs      log a search, ask what's been tried, validate, write the docs
+research/sources.json   the registry — SITES (venues) and PAGES (trees, documents)
+research/searches.jsonl the search log, append-only, with what each search found or why not
+tools/research.mjs      log a search, ask what's been tried, see what yields, write the docs
 tools/build.mjs         validates, then writes the generated files
 tools/check-data.mjs    the validator
 tools/export-gedcom.mjs writes exports/family-tree.ged
@@ -169,7 +173,9 @@ archive/                superseded drafts, not part of the site
 ```
 node tools/build.mjs           validate, then regenerate bundle.js + the GEDCOM
 node tools/check-data.mjs      validate only (must be green before commit)
-node tools/research.mjs tried <person>    what has already been searched for them
+node tools/research.mjs tried <person>    what was searched, found, and why it failed
+node tools/research.mjs untried <person> sites and pages not yet tried on them
+node tools/research.mjs yield            which sites and pages actually pay off
 node tools/research.mjs log …            record a search — hit or miss
 open index.html                the site, straight off disk
 ```

@@ -4,8 +4,8 @@ Three files carry it:
 
 | | |
 |---|---|
-| `research/sources.json` | everywhere we can look, and every document cited |
-| `research/searches.jsonl` | what was searched, where, and what came back |
+| `research/sources.json` | **sites** we can search, and the **pages** inside them |
+| `research/searches.jsonl` | what was searched, where, and how it went |
 | `docs/sources.md` | the readable view — generated, don't edit it |
 
 ## Why the log exists
@@ -15,29 +15,73 @@ re-walk every dead end, and an unattended loop will do that forever. "AGATHA is
 exhausted for Édouard's parentage" is a real finding — it took a full sweep to
 establish — and it belongs somewhere queryable rather than buried in prose.
 
+## Sites and pages
+
+Everything is recorded at two levels, because they answer different questions.
+
+A **site** is a base venue — `geneanet`, `agatha`, `familysearch`. A **page** is
+something specific inside it: a member tree, a collection, a single act. *"Have we tried
+Geneanet for this person at all?"* and *"which pages have ever yielded anything?"* need
+different answers, and a flat list gives neither.
+
+```
+node tools/research.mjs sources    the registry: sites, then pages grouped under them
+node tools/research.mjs yield      which sites and pages actually pay off
+```
+
+`yield` is the one to read before choosing where to look. It shows hit/miss/ambiguous/
+blocked per site, every page that has ever produced something and what, and — most
+useful — the sites never searched at all and the pages registered but not yet
+productive.
+
+## Logging a search
+
 Before searching for someone, ask what has already been tried:
 
 ```
-node tools/research.mjs tried edouard_dk     what has been tried, and what came back
-node tools/research.mjs untried edouard_dk   registered sources not yet used on them
+node tools/research.mjs tried edouard_dk     what was tried, what it found, why it failed
+node tools/research.mjs untried edouard_dk   sites and pages not yet used on them,
+                                             pages with a track record listed first
 ```
 
 After searching, record it — **hit or miss**:
 
 ```
-node tools/research.mjs log --person edouard_dk --source agatha --goal parents \
+node tools/research.mjs log --person edouard_dk --site agatha --goal parents \
      --result miss --query "Analyses van akten — Eduardus de Keyser" \
-     --note "names only Eduardus and Louisa, never the grandparents"
+     --why "names only Eduardus and Louisa, never the grandparents; his parents are
+            only in the 1901 marriage act, which is not indexed here"
 ```
 
-`--result` is one of **hit** · **miss** · **ambiguous** · **blocked**. `ambiguous` is for
-a strong lead that is not proof — the Van Craenenbroeck trunk is the model: right
-surname, right village, right milieu, but the tree stops above Anna's generation, so
-nothing was grafted. `blocked` is for a login wall, a paywall, a rate limit or a spend
-cap: not searched, so not exhausted, and worth retrying.
+Add `--page` when the search was against a specific tree or document
+(`--site geneanet --page tree-isavdw`). `--artifact` takes a path under `docs/sources/`
+for a saved scan — save the image for anything that breaks a wall, because a URL behind
+a login is not reproducible for anyone else.
 
-`--artifact` takes a path under `docs/sources/` for a saved scan. Save the image for
-anything that breaks a wall; a URL to a logged-in archive is not reproducible.
+## Saying how it went
+
+`--result` is one of four, and the distinction matters more than hit-versus-fail:
+
+| | |
+|---|---|
+| `hit` | found what was wanted |
+| `miss` | searched properly, nothing there |
+| `ambiguous` | found something, not enough to prove it |
+| `blocked` | never reached the material — login, paywall, spend cap |
+
+`ambiguous` is a real find that is not proof. The Van Craenenbroeck trunk is the model:
+right surname, right village, right milieu, but the tree stops above Anna's generation,
+so it is recorded and **not grafted**. `blocked` is the one result that means *try this
+again* — nothing was read, so nothing is exhausted.
+
+Then say what happened, and the tool insists on it:
+
+- a **hit** requires `--found` — what it actually gave you;
+- anything else requires `--why` — whether it is worth another go.
+
+"Miss" on its own tells the next pass nothing. *"191 hits, none born 1876"*, *"wrong
+region — Pajottenland, not Zaventem"* and *"hit the monthly fetch cap"* point at three
+completely different next moves.
 
 ## New sources
 
@@ -46,26 +90,31 @@ is one the next pass cannot know about, and the `untried` list silently under-re
 So `research.mjs log` **refuses an unregistered source**, which forces the registry to
 stay complete.
 
-When a search turns up somewhere new — another member tree, a commune index, a
-parish-register collection, a cemetery database — add it to `research/sources.json`
-before logging against it:
+When a search turns up somewhere new, register it before logging against it. A whole new
+venue goes in `sites`; a tree or document inside one already listed goes in `pages`,
+naming its site:
 
 ```json
 {
   "id": "tree-someone",
+  "site": "geneanet",
   "kind": "tree",
-  "title": "Geneanet tree someone (Real Name)",
+  "title": "someone (Real Name)",
   "url": "https://gw.geneanet.org/someone",
-  "access": "open",
   "covers": "which family and which region",
+  "yielded": "what it actually gave — null until it gives something",
   "note": "what it is sourced to, and where it stops"
 }
 ```
 
-`kind` is `archive` · `index` · `tree` · `obituary` · `cemetery` · `record` · `family`.
-`access` is `open` · `login` · `paywall` · `offline` · `mixed` — how to reach it, which
-is not a judgement about how good it is. A `record` is a specific document that proves
-something, and takes `proves`, `confidence` and ideally an `artifact`.
+Sites take `kind` (`archive` · `index` · `obituary` · `cemetery` · `family` · `web`) and
+`access` (`open` · `login` · `paywall` · `offline` · `mixed` — how to reach it, not a
+judgement of its worth). Pages take `kind` (`tree` · `record` · `collection` ·
+`index-page`) and `yielded`. A `record` is a specific document, and also takes
+`confidence` and ideally an `artifact`.
+
+Keep `yielded` current — it is what `yield` ranks on, and a page nobody records a result
+for looks unproductive whether or not it is.
 
 `node tools/build.mjs` validates the registry and the log together and regenerates
 `docs/sources.md`, so the readable list cannot drift from the data.

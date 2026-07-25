@@ -1,27 +1,35 @@
 {
   "_comment": [
-    "The registry of everywhere this project can look, and every document it has cited.",
-    "Canonical and machine-readable: tools/research.mjs validates the search log against",
-    "it and regenerates docs/sources.md from it. Add a source here the moment it is",
-    "discovered — a venue that is searched but never registered is one the next pass",
-    "cannot know about.",
+    "Two levels, because they answer different questions.",
     "",
-    "kind:   archive | index | tree | obituary | cemetery | record | family",
-    "access: open | login | paywall | offline | mixed",
-    "        'login' means an account is needed; 'offline' means a physical visit or a",
-    "        written request. Both are facts about how to reach it, not about its value.",
-    "confidence (record kinds only): doc | sup | fam, matching the person records."
+    "  sites — the base venues. 'Have we searched Geneanet for this person at all?'",
+    "  pages — the specific trees, collections and documents inside a site that were",
+    "          actually opened. 'Which pages have ever yielded anything, and what?'",
+    "",
+    "A page always names its site. Registering both is what lets the strategist ask",
+    "'which venues are untouched' and 'which pages pay off' as separate questions.",
+    "",
+    "Add a source the moment it is discovered — tools/research.mjs refuses to log a",
+    "search against anything unregistered, because a venue searched but never",
+    "registered is one the next pass cannot know about.",
+    "",
+    "sites.kind:   archive | index | obituary | cemetery | family | web",
+    "sites.access: open | login | paywall | offline | mixed — how to reach it, not how",
+    "              good it is.",
+    "pages.kind:   tree | record | collection | index-page",
+    "pages.yielded: what actually came out of it. null means nothing yet, or untried.",
+    "pages.confidence (records): doc | sup | fam, matching the person records."
   ],
 
-  "sources": [
+  "sites": [
     {
       "id": "agatha",
       "kind": "archive",
       "title": "Rijksarchief AGATHA — Belgian State Archives search robot",
       "url": "https://agatha.arch.be/",
       "access": "login",
-      "covers": "Belgian civil registers and parish registers by commune and year, with scans. The primary route for 19th-century Belgian acts.",
-      "note": "Post-1900 Oostende civil registers are NOT here — they are held at the Stadsarchief Oostende. Marriage acts are the richest single record: they name both spouses' parents."
+      "covers": "Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts.",
+      "note": "Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …')."
     },
     {
       "id": "search-arch",
@@ -29,7 +37,7 @@
       "title": "Rijksarchief search portal",
       "url": "https://search.arch.be/",
       "access": "login",
-      "covers": "Scanned civil registers by commune and year; the sibling portal to AGATHA."
+      "covers": "Scanned civil registers by commune and year; sibling portal to AGATHA."
     },
     {
       "id": "familysearch",
@@ -37,16 +45,16 @@
       "title": "FamilySearch",
       "url": "https://www.familysearch.org/",
       "access": "login",
-      "covers": "\"Belgium, West Flanders, Civil Registration, 1582-1950\" and \"Belgium, East Flanders, Church and Civil Registration, 1541-1920\" — deeper indexes than AGATHA or Ancestry, with act images.",
-      "note": "Broke the Édouard Dekeyser wall that AGATHA and Ancestry could not. Try it before concluding a Belgian act is unindexed."
+      "covers": "Belgian civil and church registration, with act images.",
+      "note": "Deeper than AGATHA or Ancestry for Belgium — it broke the Dekeyser wall the other two could not. Try it before concluding an act is unindexed."
     },
     {
       "id": "geneanet",
       "kind": "index",
-      "title": "Geneanet — member trees and record index",
+      "title": "Geneanet",
       "url": "https://www.geneanet.org/",
       "access": "mixed",
-      "covers": "Member-submitted trees plus an indexed record collection. The member trees are the main lever for 19th-century frontiers."
+      "covers": "Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier."
     },
     {
       "id": "ancestry",
@@ -63,24 +71,30 @@
       "url": "https://www.myheritage.com/",
       "access": "paywall",
       "covers": "Indexed Belgian civil registration.",
-      "note": "Login-walled in past passes; results were not reachable."
+      "note": "Login-walled in past passes; results were never reached."
     },
     {
       "id": "vrijwilligersrab",
       "kind": "index",
-      "title": "Vrijwilligers RAB — marriage and death indexes",
+      "title": "Vrijwilligers RAB",
       "url": "https://www.vrijwilligersrab.be/",
       "access": "open",
-      "covers": "Volunteer transcriptions of West-Flemish marriage and death records.",
-      "note": "Corrected Henricus Josephus Bostin's birth and death (Koekelare 1801 / Varsenare 1867)."
+      "covers": "Volunteer transcriptions of West-Flemish marriage and death records."
+    },
+    {
+      "id": "vvf",
+      "kind": "index",
+      "title": "Familiekunde Vlaanderen (VVF)",
+      "access": "mixed",
+      "covers": "Flemish marriage indexes; the layer beneath several Geneanet trees."
     },
     {
       "id": "stadsarchief-oostende",
       "kind": "archive",
       "title": "Stadsarchief Oostende",
       "access": "offline",
-      "covers": "Oostende civil registers after 1900 — not in AGATHA and not digitised.",
-      "note": "Holds the two documents that would name Édouard Dekeyser's parents from Oostende's own registers: the 4 May 1901 marriage act and the 8 Sep 1951 death act. Death acts open after 50 years, so the 1951 one is public and is the cleanest ask."
+      "covers": "Oostende civil registers after 1900 — not in AGATHA, not digitised.",
+      "note": "Holds both documents that would name Édouard Dekeyser's parents from Oostende's own registers: the 4 May 1901 marriage act and the 8 Sep 1951 death act. Death acts open after 50 years, so the 1951 one is public — the cleanest ask."
     },
     {
       "id": "inmemoriam",
@@ -89,7 +103,7 @@
       "url": "https://www.inmemoriam.be/",
       "access": "open",
       "covers": "Digitised Belgian obituary notices.",
-      "note": "Coverage gap: coastal and Brabant papers are poorly represented, so a post-2000 death on the coast may simply be absent."
+      "note": "Coverage gap: coastal and Brabant papers are thin, so a post-2000 coastal death may simply be absent."
     },
     {
       "id": "ingedachten",
@@ -110,11 +124,11 @@
     {
       "id": "jammart",
       "kind": "obituary",
-      "title": "jammart.be — doodsprentjes collection",
+      "title": "jammart.be — doodsprentjes",
       "url": "https://www.jammart.be/",
       "access": "open",
-      "covers": "Scanned memorial cards (bidprentjes), ~100,000 of them.",
-      "note": "Memorial cards name parents and children and sit outside the civil-registration privacy rule, which makes them the key to 20th-century walls. Beware regional false positives — match on place, not surname."
+      "covers": "~100,000 scanned memorial cards (bidprentjes).",
+      "note": "Memorial cards name parents and children and sit outside the civil-registration publicity rules — the key to 20th-century walls. Match on place, never on surname alone."
     },
     {
       "id": "grafzerkje",
@@ -125,279 +139,307 @@
       "covers": "Belgian gravestone and cemetery records."
     },
     {
-      "id": "zaventem-kerkhoflaan",
-      "kind": "cemetery",
-      "title": "Zaventem \"Kerkhoflaan\" cemetery index (via Geneanet)",
-      "access": "open",
-      "covers": "Zaventem burials; independently confirms several Van Craenenbroeck dates and runs the family back to a 1721 Zaventem marriage."
+      "id": "family",
+      "kind": "family",
+      "title": "The family itself",
+      "access": "offline",
+      "covers": "Testimony, memorial cards, photographs and papers held by relatives.",
+      "note": "The only key to the sealed 20th-century links. A direct descendant may also request a relative's birth, marriage or death certificate at any age — that is the decisive move on the Janssens wall, not more online searching."
     },
     {
-      "id": "vvf",
-      "kind": "index",
-      "title": "Familiekunde Vlaanderen (VVF) marriage indexes",
-      "access": "mixed",
-      "covers": "Flemish marriage indexes; the layer beneath several Geneanet trees."
-    },
+      "id": "web",
+      "kind": "web",
+      "title": "Standalone published genealogies",
+      "access": "open",
+      "covers": "Parenteel documents and family sites published outside the big platforms."
+    }
+  ],
 
+  "pages": [
     {
       "id": "tree-stefpaelinck",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree stefpaelinck (Stef Paelinck)",
+      "title": "stefpaelinck (Stef Paelinck)",
       "url": "https://gw.geneanet.org/stefpaelinck",
-      "access": "open",
-      "covers": "De Keyser and Paelinck lines, Oostende and Sint-Niklaas."
+      "covers": "De Keyser and Paelinck lines, Oostende and Sint-Niklaas.",
+      "yielded": "The Paelinck line back to Livinus (~1618) and the Oostende De Keyser generations. Édouard Dekeyser is top-of-branch here — no parents."
     },
     {
       "id": "tree-natamarcelle",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree natamarcelle (Natacha Quinet)",
+      "title": "natamarcelle (Natacha Quinet)",
       "url": "https://gw.geneanet.org/natamarcelle",
-      "access": "open",
-      "covers": "Édouard Dekeyser (Sosa 56)."
+      "covers": "Édouard Dekeyser (Sosa 56).",
+      "yielded": null,
+      "note": "Édouard is top-of-branch — no parents recorded."
     },
     {
       "id": "tree-wete1998",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree wete1998 (Erik Bekaert)",
-      "url": "https://gw.geneanet.org/wete1998",
-      "access": "open",
-      "covers": "Hamme (Oost-Vlaanderen) specialist; the Bocklandt and Van Bergen lines back to 1768."
-    },
-    {
-      "id": "tree-vxnce13",
-      "kind": "tree",
-      "title": "Geneanet tree vxnce13 (Vynce Lémans)",
-      "url": "https://gw.geneanet.org/vxnce13",
-      "access": "open",
-      "covers": "Bostyn–Cappaert–Desmet ancestry; his own documented line."
+      "title": "wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist",
+      "url": "https://gw.geneanet.org/wete1998?n=bocklandt",
+      "covers": "Hamme (Oost-Vlaanderen) families; Bocklandt and Van Bergen.",
+      "yielded": "Louise Bocklandt (b. 31 Dec 1877 Hamme O-Vl) → Eduardus Bocklandt (1839) × Maria Louisa Van Bergen (1842-1888) → Antonius Dominicus Bocklandt (1805-1883) × Isabella Livia Ichau (1803-1870) → Daniel Bocklandt (1768-1837) × Philippa Van Puyenbroeck (1778-1820); plus Joannes Franciscus Van Bergen (1815-1898) × Ida Vermandel (1825-1865). Six ancestors added.",
+      "confidence": "sup",
+      "accessed": "2026-07-22",
+      "note": "sup for the ancestors; Louise's own parents are doc, independently on her AGATHA record. Frontier: Daniel Bocklandt's parents, pre-1768 Hamme O-Vl."
     },
     {
       "id": "tree-isavdw",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree isavdw",
+      "title": "isavdw — Rijksarchief-sourced, with scan links",
       "url": "https://gw.geneanet.org/isavdw",
-      "access": "open",
-      "covers": "Cappaert, Stroobandt, Keirsebilck, De Grande — sourced to the Rijksarchief search robot with direct scan links.",
-      "note": "The deepest West-Flemish resource used so far, and the layer beneath kathrynann. A tree that cites the zoekrobot and transcribes parents is the winning move on a 19th-century frontier."
-    },
-    {
-      "id": "tree-1960dirk",
-      "kind": "tree",
-      "title": "Geneanet tree 1960dirk (Dirk Teerlinck)",
-      "url": "https://gw.geneanet.org/1960dirk",
-      "access": "open",
-      "covers": "Bostyn and Cappaert, with act numbers."
-    },
-    {
-      "id": "tree-stefanieschil",
-      "kind": "tree",
-      "title": "Geneanet tree stefanieschil",
-      "url": "https://gw.geneanet.org/stefanieschil",
-      "access": "open",
-      "covers": "Bostin and Perquy lines."
+      "covers": "Cappaert, Stroobandt, Keirsebilck, De Grande, Sabbe — West-Flemish.",
+      "yielded": "The Stroobandt line to the ~1590s (Oliverius Stroobandt × Judoca Van Hecke), Keirsebilck +2 generations, De Grande +2, Caeckaert +1.",
+      "accessed": "2026-07",
+      "note": "The most productive page found so far, and the layer beneath kathrynann. A tree that cites the zoekrobot AND transcribes the parents is the winning shape — look for an 'Ouders' section."
     },
     {
       "id": "tree-kathrynann",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree kathrynann",
+      "title": "kathrynann",
       "url": "https://gw.geneanet.org/kathrynann",
-      "access": "open",
-      "covers": "Stroobandt and De Vriese lines, Oostkamp/Tielt/Wingene; sourced to isavdw and VVF."
+      "covers": "Stroobandt and De Vriese, Oostkamp/Tielt/Wingene; sourced to isavdw and VVF.",
+      "yielded": "Juliana Stroobandt's parents and grandparents; the deep De Vriese chain to Michaël De Vriese (~1615) × Judoca Scherrens."
     },
     {
-      "id": "tree-wernero",
+      "id": "tree-stefanieschil",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree wernero (Werner Osaer)",
-      "url": "https://gw.geneanet.org/wernero",
-      "access": "open",
-      "covers": "Devriendt, Smessaert and Ramon lines, West-Flemish coast."
+      "title": "stefanieschil",
+      "url": "https://gw.geneanet.org/stefanieschil",
+      "covers": "Bostin and Perquy.",
+      "yielded": "Henricus Josephus Bostyn's parents via his 1867 Sint-Andries marriage act — Henricus Josephus Bostin (1801-1867) × Anna Theresia Perquy (1806); and Joannes Perquy × Agatha Stekelorum above them.",
+      "note": "Joannes Perquy has no parents here — that wall held."
     },
     {
-      "id": "tree-stechec",
+      "id": "tree-vxnce13",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree stechec (Christian Vanstechelman)",
-      "url": "https://gw.geneanet.org/stechec",
-      "access": "open",
-      "covers": "Vanstechelman line, Woumen → Zevekote → Mariakerke."
+      "title": "vxnce13 (Vynce Lémans)",
+      "url": "https://gw.geneanet.org/vxnce13",
+      "covers": "Bostyn–Cappaert–Desmet; his own documented ancestry.",
+      "yielded": "Henricus Bostyn's parents (Henricus Josephus Bostyn 1841 × Mathilde Desmet 1841, m. 1867 Sint-Andries)."
     },
     {
-      "id": "tree-bartvanhooren",
+      "id": "tree-1960dirk",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree bartvanhooren (Bart Vanhooren)",
-      "url": "https://gw.geneanet.org/bartvanhooren",
-      "access": "open",
-      "covers": "Van Iseghem and Vincke ancestry, Oostende."
-    },
-    {
-      "id": "tree-gverdievel",
-      "kind": "tree",
-      "title": "Geneanet tree gverdievel (Guy Verdievel)",
-      "url": "https://gw.geneanet.org/gverdievel",
-      "access": "open",
-      "covers": "Deep Van Iseghem line, Rijksarchief-sourced."
+      "title": "1960dirk (Dirk Teerlinck)",
+      "url": "https://gw.geneanet.org/1960dirk",
+      "covers": "Bostyn and Cappaert, with act numbers.",
+      "yielded": "Juliana Stroobandt's dates (12 Sep 1839 Oedelem – 11 Feb 1921 Oostkamp)."
     },
     {
       "id": "tree-cisken",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree cisken",
-      "url": "https://gw.geneanet.org/cisken",
-      "access": "open",
-      "covers": "The modern Zaventem Van Craenenbroeck trunk, back to the 1830s.",
-      "note": "Stops just above Anna Van Craenenbroeck's generation. Its owner is a relative who very likely holds her generation privately — one message could close that link."
+      "title": "cisken — the Zaventem Van Craenenbroeck trunk",
+      "url": "https://gw.geneanet.org/cisken?n=van+craenenbroeck",
+      "covers": "Van Craenenbroeck, Zaventem and Sterrebeek.",
+      "yielded": "The trunk to the 1830s: Amandus Franciscus Van Craenenbroeck (1835-1914) × Paulina Mommaerts (1838-1909) → Antonius Josephus (1872-1936) × Anna Maria Meeus (1877-1957) → children b. 1902-1918.",
+      "confidence": "sup",
+      "accessed": "2026-07-22",
+      "note": "Stops just above Anna's generation, so her specific parent is NOT established and is deliberately not grafted. Its owner is a relative who very likely holds that generation privately — one message could close the link."
+    },
+    {
+      "id": "tree-wernero",
+      "site": "geneanet",
+      "kind": "tree",
+      "title": "wernero (Werner Osaer)",
+      "url": "https://gw.geneanet.org/wernero",
+      "covers": "Devriendt, Smessaert and Ramon, West-Flemish coast.",
+      "yielded": "The Ramon line to Mattheus (Bovekerke 1729), including the two generations lost at sea."
+    },
+    {
+      "id": "tree-stechec",
+      "site": "geneanet",
+      "kind": "tree",
+      "title": "stechec (Christian Vanstechelman)",
+      "url": "https://gw.geneanet.org/stechec",
+      "covers": "Vanstechelman, Woumen → Zevekote → Mariakerke.",
+      "yielded": "The Vanstechelman line to Joannes Vanstechele (b. before 1673, Woumen)."
+    },
+    {
+      "id": "tree-bartvanhooren",
+      "site": "geneanet",
+      "kind": "tree",
+      "title": "bartvanhooren (Bart Vanhooren)",
+      "url": "https://gw.geneanet.org/bartvanhooren",
+      "covers": "Van Iseghem and Vincke, Oostende.",
+      "yielded": "Rosette Van Iseghem's ancestry, and the Vincke / Vanalderweireldt line at Diksmuide."
+    },
+    {
+      "id": "tree-gverdievel",
+      "site": "geneanet",
+      "kind": "tree",
+      "title": "gverdievel (Guy Verdievel)",
+      "url": "https://gw.geneanet.org/gverdievel",
+      "covers": "Van Iseghem, Oostende — deep and Rijksarchief-sourced.",
+      "yielded": "The Van Iseghem line to Judocus Franciscus (b. 1787) × Victoria Eugenia Engelsen."
     },
     {
       "id": "tree-marcelcroon",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree marcelcroon (Marcel Croon)",
+      "title": "marcelcroon (Marcel Croon)",
       "url": "https://gw.geneanet.org/marcelcroon",
-      "access": "open",
-      "covers": "Thumas, Kraainem and Grez-Doiceau."
+      "covers": "Thumas, Kraainem and Grez-Doiceau.",
+      "yielded": "Jean Thumas's dates (b. 23 Oct 1907, d. 22 Mar 1995, both Kraainem)."
     },
     {
       "id": "tree-jswaelens",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree jswaelens",
+      "title": "jswaelens",
       "url": "https://gw.geneanet.org/jswaelens",
-      "access": "open",
-      "covers": "Thumas line, Grez-Doiceau."
+      "covers": "Thumas, Grez-Doiceau.",
+      "yielded": "The Thumas chain back to Antoine (b. 11 Nov 1656 Biez)."
     },
     {
       "id": "tree-m2155",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree m2155",
+      "title": "m2155",
       "url": "https://gw.geneanet.org/m2155",
-      "access": "open",
-      "covers": "Thumas line detail — occupations and life events."
+      "covers": "Thumas.",
+      "yielded": "Occupations and life detail across the Thumas generations — the four carpenter generations, Antoine as bailiff of Piétrebais."
     },
     {
       "id": "tree-michelv990",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree michelv990 (Michel Vandam)",
+      "title": "michelv990 (Michel Vandam)",
       "url": "https://gw.geneanet.org/michelv990",
-      "access": "open",
-      "covers": "Thumas, Kraainem."
+      "covers": "Thumas, Kraainem.",
+      "yielded": null
     },
     {
       "id": "tree-jerome5530",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree jerome5530 (Jerome Debie)",
+      "title": "jerome5530 (Jerome Debie)",
       "url": "https://gw.geneanet.org/jerome5530",
-      "access": "open",
-      "covers": "Thumas, Kraainem."
+      "covers": "Thumas, Kraainem.",
+      "yielded": null
     },
     {
       "id": "tree-paulderidder",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree paulderidder",
+      "title": "paulderidder",
       "url": "https://gw.geneanet.org/paulderidder",
-      "access": "open",
-      "covers": "Bundervoet trunk at Evergem (Joannes b.1682 is Sosa 644)."
+      "covers": "Bundervoet, Evergem.",
+      "yielded": "The Evergem Bundervoet trunk; Joannes b.1682 is Sosa 644 here."
     },
     {
       "id": "tree-glorieuxp",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree glorieuxp",
+      "title": "glorieuxp",
       "url": "https://gw.geneanet.org/glorieuxp",
-      "access": "open",
-      "covers": "Bundervoet, Evergem."
+      "covers": "Bundervoet, Evergem.",
+      "yielded": "Joannes Bundervoet's two marriages — Livina Stockman, then Livina De Wilde ~1745. That remarriage is what identifies him."
     },
     {
       "id": "tree-dvandurme1",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree dvandurme1",
+      "title": "dvandurme1",
       "url": "https://gw.geneanet.org/dvandurme1",
-      "access": "open",
-      "covers": "Bundervoet, Evergem."
+      "covers": "Bundervoet, Evergem.",
+      "yielded": null
     },
     {
       "id": "tree-mjovdl",
+      "site": "geneanet",
       "kind": "tree",
-      "title": "Geneanet tree mjovdl",
+      "title": "mjovdl",
       "url": "https://gw.geneanet.org/mjovdl",
-      "access": "open",
-      "covers": "Bundervoet, Evergem."
+      "covers": "Bundervoet, Evergem.",
+      "yielded": null
+    },
+    {
+      "id": "zaventem-kerkhoflaan",
+      "site": "geneanet",
+      "kind": "collection",
+      "title": "Zaventem \"Kerkhoflaan\" cemetery index",
+      "covers": "Zaventem burials.",
+      "yielded": "Independent confirmation of several Van Craenenbroeck dates (Arthur 1908-1982, Paul 1934-2010, Elisa 1887-1967, Desiré 1859-1944); the family runs back to a 1721 Zaventem marriage."
     },
     {
       "id": "fauconier-parenteel",
+      "site": "web",
       "kind": "tree",
       "title": "Fauconier / Bauwens \"Bundervoet–Vermeulen\" parenteel",
-      "access": "open",
-      "covers": "Bundervoet descendants, Evergem and Oostende."
+      "covers": "Bundervoet descendants, Evergem and Oostende.",
+      "yielded": "The Bundervoet surname line at Evergem."
     },
 
     {
       "id": "S1",
+      "site": "familysearch",
       "kind": "record",
-      "title": "Édouard Dekeyser's 1946 Oostende remarriage act",
-      "via": "familysearch",
-      "collection": "FamilySearch — Belgium, West Flanders, Civil Registration, 1582-1950 (Arr. Brugge, Burgerlijke Stand 1921-1950: Oostende, Huwelijkscertificaten 1946, akte nr. 81)",
+      "title": "Édouard Dekeyser's 1946 Oostende remarriage act (akte nr. 81)",
       "url": "https://www.familysearch.org/ark:/61903/1:1:X9R6-DJNV",
       "image": "https://www.familysearch.org/ark:/61903/3:1:3QHN-LQKQ-R48T-B",
       "artifact": "docs/sources/edouard-dekeyser-1946-marriage-oostende.jpg",
-      "proves": "Édouard Dekeyser's parents = Desiderius De Keyser × Maria Theresia Van den Broeck; birthplace Hamme (Oost-Vlaanderen), b. 12 Nov 1876; first marriage to Louisa Maria Bocklandt ended in divorce (~1923, Rechtbank van eersten aanleg Brugge); remarried Leontine Schreel in Oostende 9 May 1946.",
+      "collection": "Belgium, West Flanders, Civil Registration, 1582-1950 — Arr. Brugge, Oostende, Huwelijkscertificaten 1946",
+      "yielded": "THE WALL-BREAKER. Édouard's parents = Desiderius De Keyser × Maria Theresia Van den Broeck; birthplace Hamme (Oost-Vlaanderen), b. 12 Nov 1876; his first marriage to Louisa Maria Bocklandt ended in divorce (~1923, Rechtbank van eersten aanleg Brugge); he remarried Leontine Schreel in Oostende, 9 May 1946.",
       "confidence": "doc",
-      "accessed": "2026-07-22",
-      "note": "The wall-breaker. Read directly from the act image."
+      "accessed": "2026-07-22"
     },
     {
       "id": "S2",
+      "site": "agatha",
       "kind": "record",
-      "title": "Jérôme Dekeyser's 1897 Oostende birth act (legitimization note)",
-      "via": "agatha",
-      "collection": "Rijksarchief AGATHA — Burgerlijke stand geboorteakten Oostende 1897, akte nr. 585",
+      "title": "Jérôme Dekeyser's 1897 Oostende birth act (akte nr. 585)",
       "url": "https://agatha.arch.be/nl/data/acts/GEWVL_GEBWVL_01442676",
-      "proves": "Édouard × Louise married 4 May 1901 — the marginal note \"Gewettigd 4 5 1901\" legitimizes Jérôme (b. 14 Jun 1897) and Gustavus (b. 1899).",
+      "yielded": "The marginal note \"Gewettigd 4 5 1901\" — so Édouard × Louise married 4 May 1901, legitimizing Jérôme (b. 14 Jun 1897) and Gustavus (b. 1899). Establishes the marriage date without the marriage act.",
       "confidence": "doc",
       "accessed": "2026-07"
     },
     {
-      "id": "S3",
-      "kind": "record",
-      "title": "Louise Bocklandt's ancestry (Bocklandt / Van Bergen, to 1768)",
-      "via": "tree-wete1998",
-      "url": "https://gw.geneanet.org/wete1998?n=bocklandt",
-      "proves": "Louise Bocklandt (b. 31 Dec 1877 Hamme O-Vl) → Eduardus Bocklandt (1839) × Maria Louisa Van Bergen (1842-1888) → Antonius Dominicus Bocklandt (1805-1883) × Isabella Livia Ichau (1803-1870) → Daniel Bocklandt (1768-1837) × Philippa Van Puyenbroeck (1778-1820); and Van Bergen: Joannes Franciscus Van Bergen (1815-1898) × Ida Vermandel (1825-1865).",
-      "confidence": "sup",
-      "accessed": "2026-07-22",
-      "note": "sup for the ancestors, doc for Louise's own parents, which are independently on her AGATHA record."
-    },
-    {
       "id": "S4",
+      "site": "familysearch",
       "kind": "record",
-      "title": "Desiderius De Keyser × Maria Theresia Van den Broeck in Oost-Vlaanderen",
-      "via": "familysearch",
-      "collection": "FamilySearch — Belgium, East Flanders, Church and Civil Registration, 1541-1920",
+      "title": "Desiderius De Keyser × Maria Theresia Van den Broeck, Oost-Vlaanderen",
       "url": "https://www.familysearch.org/ark:/61903/1:1:6TRG-9K8Z",
-      "proves": "The couple were a Hamme (O-Vl) family; further children incl. Augustinus (†1883 infant), Frederiens Carolus, Leontinus Josephus.",
+      "collection": "Belgium, East Flanders, Church and Civil Registration, 1541-1920",
+      "yielded": "The couple were a Hamme (O-Vl) family; further children incl. Augustinus (†1883 infant), Frederiens Carolus, Leontinus Josephus.",
       "confidence": "doc",
       "accessed": "2026-07-22",
-      "note": "FRONTIER, unconfirmed: a \"Desiderius de Keyser b. 27 May 1832, O-Vl, parents Arnoldus de Keyser × Angelina Sophia van Kerkhove\" exists but is NOT yet linked to our Desiderius. Do not graft until an act ties him to Van den Broeck."
+      "note": "FRONTIER, unconfirmed: a Desiderius de Keyser b. 27 May 1832 with parents Arnoldus de Keyser × Angelina Sophia van Kerkhove exists, but nothing ties him to Van den Broeck. Do not graft until an act does."
     },
     {
-      "id": "S5",
+      "id": "hamme-merchtem-1901-marriages",
+      "site": "agatha",
       "kind": "record",
-      "title": "Zaventem Van Craenenbroeck trunk (to the 1830s)",
-      "via": "tree-cisken",
-      "url": "https://gw.geneanet.org/cisken?n=van+craenenbroeck",
-      "proves": "Amandus Franciscus Van Craenenbroeck (1835-1914) × Paulina Mommaerts (1838-1909) → Antonius Josephus (1872-1936) × Anna Maria Meeus (1877-1957) → children b. 1902-1918 (Amandus, Paul Gustaaf, Melania, Arthur, Maurice, Bertha).",
-      "confidence": "sup",
-      "accessed": "2026-07-22",
-      "note": "Anna Van Craenenbroeck's specific parent among those children is NOT documented. Strong lead, not a link — it is deliberately not grafted."
+      "title": "Hamme (Merchtem) marriage index (TABEL), 1901",
+      "collection": "Gemengde akten Hamme (Merchtem) 1901-1910, p. 8",
+      "yielded": "A negative that settled a question: exactly one marriage in the whole of 1901, Belgrado Adeline × Leo Jean Louis (act 1). No Dekeyser — which disproves 'Hamme (Merchtem)' as the marriage place.",
+      "confidence": "doc",
+      "accessed": "2026-07"
     },
     {
-      "id": "S6",
-      "kind": "family",
+      "id": "cosette-testimony",
+      "site": "family",
+      "kind": "record",
       "title": "Family testimony — Cosette De Keyser",
-      "access": "offline",
-      "proves": "Jerome Dekeyser ❦ Léonie Paelinck are Roland's grandparents, which ruled out the earlier Gustaaf Audomarus reading.",
+      "yielded": "Jerome Dekeyser ❦ Léonie Paelinck are Roland's grandparents, which ruled out the earlier Gustaaf Audomarus reading and corrected the whole branch.",
       "confidence": "fam"
     },
     {
       "id": "marcel-memorial-card",
+      "site": "family",
       "kind": "record",
       "title": "Marcel Bundervoet's memorial card (Uitvaartcentrum Raes, Oostende)",
-      "access": "offline",
-      "proves": "Marcel Henri Bundervoet's full name and his Bostyn parentage.",
+      "yielded": "Marcel Henri Bundervoet's full name, and the Bostyn family naming that pointed to his mother Elodia Bostyn.",
       "confidence": "doc"
     }
   ]
