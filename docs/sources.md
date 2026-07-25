@@ -18,7 +18,7 @@ single member tree, not checked against the act · **fam** = family testimony.
 | `familysearch` <https://www.familysearch.org/> | index | login | 2 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | 12 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
-| `myheritage` <https://www.myheritage.com/> | index | paywall | 0 | Indexed Belgian civil registration. |
+| `myheritage` <https://www.myheritage.com/> | index | paywall | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
 | `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | 0 | Volunteer transcriptions of West-Flemish marriage and death records. |
 | `vvf` | index | mixed | 0 | Flemish marriage indexes; the layer beneath several Geneanet trees. |
 | `stadsarchief-oostende` | archive | offline | 0 | Oostende civil registers after 1900 — not in AGATHA, not digitised. |
@@ -34,7 +34,7 @@ single member tree, not checked against the act · **fam** = family testimony.
 
 **`familysearch`** — Deeper than AGATHA or Ancestry for Belgium — it broke the Dekeyser wall the other two could not. Try it before concluding an act is unindexed.
 
-**`myheritage`** — Login-walled in past passes; results were never reached.
+**`myheritage`** — Reached with an account (July 2026). The free/paid boundary matters for planning: SMART MATCHES against other members' trees are FREE to read — names, relationships and counts all visible — and that is where the value has been. RECORD MATCHES are not: the field values are replaced server-side with decoy strings behind a Data subscription, so only the collection name, the field list and the occasional year are free. Treat record matches as a TARGETING LIST — they say which document exists for whom, and Belgian civil acts can then be pulled free from AGATHA or FamilySearch.
 
 **`stadsarchief-oostende`** — Holds both documents that would name Édouard Dekeyser's parents from Oostende's own registers: the 4 May 1901 marriage act and the 8 Sep 1951 death act. Death acts open after 50 years, so the 1951 one is public — the cleanest ask.
 
@@ -206,6 +206,38 @@ single member tree, not checked against the act · **fam** = family testimony.
 - **Kind:** collection
 - **Covers:** Zaventem burials.
 - **Yielded:** Independent confirmation of several Van Craenenbroeck dates (Arthur 1908-1982, Paul 1934-2010, Elisa 1887-1967, Desiré 1859-1944); the family runs back to a 1721 Zaventem marriage.
+
+### MyHeritage
+
+#### `mh-tree-lucien` — Bundervoet Web Site, managed by Lucien Bundervoet (Belgium)
+- **Kind:** tree
+- **Covers:** A Bundervoet family tree overlapping ours at Petrus Franciscus (1879) and above.
+- **Yielded:** Four Smart Matches on Petrus Franciscus alone. Names Petrus Franciscus's SIBLINGS (Maria Bundervoet + 3 more) and all SIX of his children, where our tree had only Alphonsus. Detail fields are paywalled; the names and counts are not.
+- **Note:** A living Bundervoet with his own tree — the most direct lead yet for objective 3 (connecting the Bundervoet forest). Contactable through MyHeritage. Ask before grafting: his tree is unverified, so this is sup at best.
+
+#### `mh-tree-johny` — bundervoet Web Site, managed by Johny Henricus Bundervoet (Belgium)
+- **Kind:** tree
+- **Covers:** A second Bundervoet tree, overlapping at Petrus Bundervoet.
+- **Yielded:** Independently names Alphons Bernardus Cyprianus and five more children of Petrus Franciscus — a second tree agreeing with Lucien's on the sibling group.
+- **Note:** Second living Bundervoet with a tree. Two independent trees agreeing raises the six-children claim above a single-tree assertion, though neither is a record.
+
+#### `mh-belgium-death-1800-1950` — Belgium, Civil Death Registers, 1800-1950 (MyHeritage collection 21034)
+- **Kind:** collection
+- **Covers:** Belgian civil death acts.
+- **Yielded:** A death record for Bernardus Bundervoet (b. circa 1837, d. 1900) that carries his FATHER and MOTHER. Values are paywalled behind a MyHeritage Data subscription — only the year 1900 and the field list are visible free.
+- **Note:** Record 21034-1003940. Being a Belgian civil act, the same document should be reachable free through AGATHA or FamilySearch — pull it there rather than paying. It would independently confirm or refute Judocus x Roegiers as Bernardus's parents.
+
+#### `mh-belgium-birth-notices` — Belgium Birth Notices (MyHeritage)
+- **Kind:** collection
+- **Covers:** Belgian birth announcements.
+- **Yielded:** *nothing yet*
+- **Note:** Two pending record matches (Alphons 1905 birth place, and one other). Paywalled.
+
+#### `mh-france-vital-records` — France, Vital Records Index (MyHeritage)
+- **Kind:** collection
+- **Covers:** French civil registration.
+- **Yielded:** *nothing yet*
+- **Note:** Two pending record matches. Worth attention: the Van Iseghem family migrated to Lens (Pas-de-Calais) for the coal mines, and Joannes Van Iseghem was born there in 1903 — a French index is exactly where that branch should appear. Paywalled on MyHeritage.
 
 ### The family itself
 

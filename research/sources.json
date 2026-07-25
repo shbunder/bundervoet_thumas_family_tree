@@ -20,7 +20,6 @@
     "pages.yielded: what actually came out of it. null means nothing yet, or untried.",
     "pages.confidence (records): doc | sup | fam, matching the person records."
   ],
-
   "sites": [
     {
       "id": "agatha",
@@ -70,8 +69,8 @@
       "title": "MyHeritage",
       "url": "https://www.myheritage.com/",
       "access": "paywall",
-      "covers": "Indexed Belgian civil registration.",
-      "note": "Login-walled in past passes; results were never reached."
+      "covers": "Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree.",
+      "note": "Reached with an account (July 2026). The free/paid boundary matters for planning: SMART MATCHES against other members' trees are FREE to read — names, relationships and counts all visible — and that is where the value has been. RECORD MATCHES are not: the field values are replaced server-side with decoy strings behind a Data subscription, so only the collection name, the field list and the occasional year are free. Treat record matches as a TARGETING LIST — they say which document exists for whom, and Belgian civil acts can then be pulled free from AGATHA or FamilySearch."
     },
     {
       "id": "vrijwilligersrab",
@@ -154,7 +153,6 @@
       "covers": "Parenteel documents and family sites published outside the big platforms."
     }
   ],
-
   "pages": [
     {
       "id": "tree-stefpaelinck",
@@ -380,7 +378,6 @@
       "covers": "Bundervoet descendants, Evergem and Oostende.",
       "yielded": "The Bundervoet surname line at Evergem."
     },
-
     {
       "id": "S1",
       "site": "familysearch",
@@ -441,6 +438,51 @@
       "title": "Marcel Bundervoet's memorial card (Uitvaartcentrum Raes, Oostende)",
       "yielded": "Marcel Henri Bundervoet's full name, and the Bostyn family naming that pointed to his mother Elodia Bostyn.",
       "confidence": "doc"
+    },
+    {
+      "id": "mh-tree-lucien",
+      "site": "myheritage",
+      "kind": "tree",
+      "title": "Bundervoet Web Site, managed by Lucien Bundervoet (Belgium)",
+      "covers": "A Bundervoet family tree overlapping ours at Petrus Franciscus (1879) and above.",
+      "yielded": "Four Smart Matches on Petrus Franciscus alone. Names Petrus Franciscus's SIBLINGS (Maria Bundervoet + 3 more) and all SIX of his children, where our tree had only Alphonsus. Detail fields are paywalled; the names and counts are not.",
+      "note": "A living Bundervoet with his own tree — the most direct lead yet for objective 3 (connecting the Bundervoet forest). Contactable through MyHeritage. Ask before grafting: his tree is unverified, so this is sup at best."
+    },
+    {
+      "id": "mh-tree-johny",
+      "site": "myheritage",
+      "kind": "tree",
+      "title": "bundervoet Web Site, managed by Johny Henricus Bundervoet (Belgium)",
+      "covers": "A second Bundervoet tree, overlapping at Petrus Bundervoet.",
+      "yielded": "Independently names Alphons Bernardus Cyprianus and five more children of Petrus Franciscus — a second tree agreeing with Lucien's on the sibling group.",
+      "note": "Second living Bundervoet with a tree. Two independent trees agreeing raises the six-children claim above a single-tree assertion, though neither is a record."
+    },
+    {
+      "id": "mh-belgium-death-1800-1950",
+      "site": "myheritage",
+      "kind": "collection",
+      "title": "Belgium, Civil Death Registers, 1800-1950 (MyHeritage collection 21034)",
+      "covers": "Belgian civil death acts.",
+      "yielded": "A death record for Bernardus Bundervoet (b. circa 1837, d. 1900) that carries his FATHER and MOTHER. Values are paywalled behind a MyHeritage Data subscription — only the year 1900 and the field list are visible free.",
+      "note": "Record 21034-1003940. Being a Belgian civil act, the same document should be reachable free through AGATHA or FamilySearch — pull it there rather than paying. It would independently confirm or refute Judocus x Roegiers as Bernardus's parents."
+    },
+    {
+      "id": "mh-belgium-birth-notices",
+      "site": "myheritage",
+      "kind": "collection",
+      "title": "Belgium Birth Notices (MyHeritage)",
+      "covers": "Belgian birth announcements.",
+      "yielded": null,
+      "note": "Two pending record matches (Alphons 1905 birth place, and one other). Paywalled."
+    },
+    {
+      "id": "mh-france-vital-records",
+      "site": "myheritage",
+      "kind": "collection",
+      "title": "France, Vital Records Index (MyHeritage)",
+      "covers": "French civil registration.",
+      "yielded": null,
+      "note": "Two pending record matches. Worth attention: the Van Iseghem family migrated to Lens (Pas-de-Calais) for the coal mines, and Joannes Van Iseghem was born there in 1903 — a French index is exactly where that branch should appear. Paywalled on MyHeritage."
     }
   ]
 }
