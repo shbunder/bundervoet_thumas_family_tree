@@ -1,0 +1,52 @@
+{
+  "_comment": "Presentation only: the words the site shows. No facts about people live here — those are in data/.",
+  "confidenceLabels": {
+    "doc": "Documented record",
+    "fam": "Family knowledge",
+    "sup": "Strongly supported",
+    "unk": "Unknown — to research"
+  },
+  "footer": "A living draft. Documented lines rest on Belgian civil and parish records, reached through the state archives and the member trees credited in the sources list; the rest is family knowledge, marked as such. Living individuals were not researched beyond what the family volunteered.",
+  "groups": [
+    {
+      "key": "immediate",
+      "title": "The children & parents"
+    },
+    {
+      "key": "bundervoet",
+      "title": "Bundervoet line (father)"
+    },
+    {
+      "key": "van-iseghem",
+      "title": "Van Iseghem line — Rosette (Ronny's mother), to the 1780s"
+    },
+    {
+      "key": "bostyn-cappaert",
+      "title": "Bostyn & Cappaert (Marcel’s mother)"
+    },
+    {
+      "key": "vanstechelman",
+      "title": "Vanstechelman line (to ~1640s)"
+    },
+    {
+      "key": "de-keyser",
+      "title": "De Keyser line (Roland)"
+    },
+    {
+      "key": "paelinck",
+      "title": "Paelinck line — Léonie’s side (to ~1618)"
+    },
+    {
+      "key": "devriendt",
+      "title": "Devriendt · Smessaert · Ramon (Huguette)"
+    },
+    {
+      "key": "thumas",
+      "title": "Thumas line — Kraainem, to 1656"
+    },
+    {
+      "key": "janssens",
+      "title": "Janssens & Vandenhoeck (mother)"
+    }
+  ]
+}

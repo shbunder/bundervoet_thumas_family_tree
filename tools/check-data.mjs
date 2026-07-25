@@ -17,11 +17,11 @@ const errors = [];
 const warnings = [];
 const fail = m => errors.push(m);
 
-const { roster: ids, meta, branches, lineages, groups } = loadConfig();
+const { roster: ids, meta, root, branches, lineages, groups } = loadConfig();
 const GROUP_KEYS = new Set(groups.map(g => g.key));
 const { sites, pages } = loadSources();
 const SOURCE_IDS = new Set([...sites, ...pages].map(s => s.id));
-const CONFIDENCE = new Set(Object.keys(meta.confidenceLabels));
+const CONFIDENCE = new Set(meta.confidence);
 
 // The roster IS the directory now, so there is no manifest to disagree with it.
 const files = ids;
@@ -40,8 +40,8 @@ for (const id of ids.filter(i => files.includes(i))) {
   if (p.id !== id) fail(`${id}.md: "id" field says "${p.id}"`);
   if (!p.name) fail(`${id}.md: missing "name"`);
   if (!CONFIDENCE.has(p.confidence)) fail(`${id}.md: confidence "${p.confidence}" is not one of ${[...CONFIDENCE].join(', ')}`);
-  if (p.branch && !(p.branch in branches)) fail(`${id}.md: branch "${p.branch}" is not in branches.js`);
-  if (p.line && !GROUP_KEYS.has(p.line)) fail(`${id}.md: line "${p.line}" is not a key in groups.js`);
+  if (p.branch && !(p.branch in branches)) fail(`${id}.md: branch "${p.branch}" is not in data/branches.json`);
+  if (p.line && !GROUP_KEYS.has(p.line)) fail(`${id}.md: line "${p.line}" is not a group key in site/labels.json`);
   if ('sex' in p && p.sex !== 'f' && p.sex !== 'm') fail(`${id}.md: sex "${p.sex}" must be "f" or "m"`);
 
   // A date is either in the grammar or explicitly marked raw. There is no third
@@ -121,7 +121,7 @@ for (const start of Object.keys(people)) {
 }
 
 // Config files only reference people who exist.
-if (!people[meta.root]) fail(`meta.js: root "${meta.root}" does not exist`);
+if (!people[root]) fail(`meta.json: roots[0] "${root}" does not exist`);
 function lineageChain(l) {
   if (l.chain) return l.chain;
   const out = [];
@@ -131,20 +131,21 @@ function lineageChain(l) {
   return out.reverse();
 }
 for (const l of lineages) {
-  if (l.head && !people[l.head]) fail(`lineages.js (${l.key}): head "${l.head}" does not exist`);
-  for (const id of lineageChain(l)) if (!people[id]) fail(`lineages.js (${l.key}): "${id}" does not exist`);
+  if (l.head && !people[l.head]) fail(`lineages.json (${l.key}): head "${l.head}" does not exist`);
+  for (const id of lineageChain(l)) if (!people[id]) fail(`lineages.json (${l.key}): "${id}" does not exist`);
 }
 for (const g of groups) {
-  if (!g.key || !g.title) fail(`groups.js: every entry needs a key and a title`);
+  if (!g.key || !g.title) fail(`site/labels.json: every group needs a key and a title`);
 }
 
 // Not fatal, but usually a mistake: a record connected to nothing. Marriage counts
 // as a connection, which is how a spouse with no children still belongs.
 // `meta.roots` is the forest case: several unconnected families, each with its own
 // starting point. A tree with one root is just the one-element list.
-const roots = (meta.roots && meta.roots.length ? meta.roots : [meta.root]).filter(id => people[id]);
-if (meta.roots) {
-  for (const r of meta.roots) if (!people[r]) fail(`meta.js: roots entry "${r}" does not exist`);
+const roots = meta.roots.filter(id => people[id]);
+for (const r of meta.roots) if (!people[r]) fail(`meta.json: roots entry "${r}" does not exist`);
+for (const [b, sid] of Object.entries(branches)) {
+  if (!SOURCE_IDS.has(sid)) fail(`branches.json: "${b}" cites source "${sid}", which is not registered`);
 }
 
 const neighbours = id => {
@@ -178,11 +179,11 @@ for (const id of ids) {
 // a site silently showing old data. Catching it here means it cannot be
 // committed: the rule is that this validator is green before every commit.
 if (!SKIP_GENERATED) {
-  const bundlePath = path.join(DATA, 'bundle.js');
+  const bundlePath = path.join(DATA, '..', 'dist', 'bundle.js');
   if (!fs.existsSync(bundlePath)) {
-    fail('data/bundle.js is missing — run: node tools/build.mjs');
+    fail('dist/bundle.js is missing — run: node tools/build.mjs');
   } else if (fs.readFileSync(bundlePath, 'utf8') !== buildBundle()) {
-    fail('data/bundle.js is out of date with data/people/ — run: node tools/build.mjs');
+    fail('dist/bundle.js is out of date with data/people/ — run: node tools/build.mjs');
   }
 }
 

@@ -3,8 +3,7 @@ id: roland_sis
 name: Roland’s sister (name unknown)
 sex: f
 birth:
-  date: ~1940
-  place: s
+  date: 1940..1949
 confidence: fam
 branch: DeKeyser
 line: de-keyser

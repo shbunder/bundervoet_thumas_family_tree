@@ -2,8 +2,7 @@
 id: michiel_demeulemeester
 name: Michiel Demeulemeester
 birth:
-  date: ~1500
-  place: s
+  date: 1500..1509
 confidence: doc
 branch: Bundervoet
 line: bostyn-cappaert

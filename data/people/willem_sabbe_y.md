@@ -2,8 +2,7 @@
 id: willem_sabbe_y
 name: Willem Sabbe
 birth:
-  date: ~1560
-  place: s
+  date: 1560..1569
 confidence: doc
 branch: Bundervoet
 line: bostyn-cappaert

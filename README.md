@@ -14,20 +14,28 @@ server and no internet connection.
 
 ## Layout
 
-Content and presentation are kept apart: everything factual lives in `data/`, and
-nothing in `assets/` contains a name or a date.
+Three things are kept apart, because they change for different reasons and are
+checked by different rules:
+
+- **`data/`** — the facts. JSON and Markdown, nothing executable. A name or a date
+  only ever lives here.
+- **`site/`** — the wording the page shows: headings, labels, the footer. Editing it
+  can never change what the tree claims.
+- **`assets/`** — how it looks and behaves. Contains no names and no dates at all.
+
+`dist/` and `exports/` are generated from those and are never edited by hand.
 
 ```
 index.html                     landing page
 Renee-Leon-family-tree.html    the interactive tree (page shell only)
-data/
+data/                          FACTS — JSON and Markdown, nothing executable
   people/<id>.md               one file per person — the source of truth
-  branches.js                  default source citation per surname branch
-  lineages.js                  the four surname chains in the "Lineages" tab
-  groups.js                    the Index headings (no membership lists)
-  meta.js                      root person(s), confidence labels, footer text
-  bundle.js                    all of the above in one file — generated
-assets/
+  meta.json                    where the tree starts; the confidence codes
+  branches.json                surname branch → its default source id
+  lineages.json                the surname chains
+site/                          PRESENTATION — the words the page shows
+  labels.json                  confidence labels, Index headings, footer
+assets/                        how it looks and behaves — no names, no dates
   css/tree.css                 styling for the tree page
   css/site.css                 styling for the landing page
   js/core.js                   the FamilyTree namespace and the data loader
@@ -35,13 +43,14 @@ assets/
   js/render.js                 records → markup
   js/ui.js                     theme switch, hover card, tabs
   js/main.js                   wires it together
+research/                      the search state
+  sources.json                 sites we can search, and the pages inside them
+  searches.jsonl               what was searched, and how it went
+dist/bundle.js                 GENERATED — what the browser actually loads
+exports/family-tree.ged        GENERATED — the tree in GEDCOM 7
 docs/research-log.md           what's documented, what's inferred, what to pull next
 tools/lib/                     shared loader, frontmatter parser, date grammar
 tools/build.mjs                validates, then writes the generated files
-tools/check-data.mjs           validates the data files
-tools/export-gedcom.mjs        writes the GEDCOM export
-exports/family-tree.ged        the tree in GEDCOM 7 — generated, not edited
-archive/                       superseded drafts, not part of the site
 ```
 
 No dependencies, and nothing is compiled — the files are served exactly as they are.

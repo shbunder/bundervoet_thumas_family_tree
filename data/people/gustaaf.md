@@ -2,8 +2,8 @@
 id: gustaaf
 name: Gustaaf Dekeyser
 birth:
-  date: ~1920
-  place: s · Oostende
+  date: 1920..1929
+  place: Oostende
 confidence: sup
 branch: DeKeyser
 line: de-keyser

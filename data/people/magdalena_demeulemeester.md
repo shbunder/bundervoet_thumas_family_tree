@@ -2,8 +2,7 @@
 id: magdalena_demeulemeester
 name: Magdalena Demeulemeester
 birth:
-  date: ~1530
-  place: s
+  date: 1530..1539
 confidence: doc
 branch: Bundervoet
 line: bostyn-cappaert

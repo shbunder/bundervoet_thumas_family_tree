@@ -2,8 +2,7 @@
 id: thiery_f
 name: François Thumas
 birth:
-  date: ~1930
-  place: s
+  date: 1930..1939
 confidence: fam
 branch: Thumas
 line: thumas

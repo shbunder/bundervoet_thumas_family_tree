@@ -2,7 +2,7 @@
 id: desiderius_dk
 name: Desiderius De Keyser
 death:
-  date: 1946-05-09
+  raw: before 9 May 1946
 confidence: doc
 branch: DeKeyser
 line: de-keyser
@@ -10,6 +10,7 @@ spouses:
   - id: mtheresia_vandenbroeck
     name: Maria Theresia Van den Broeck
 sources:
+  - S1
   - familysearch
 ---
 

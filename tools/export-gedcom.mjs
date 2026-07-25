@@ -222,7 +222,7 @@ const registry = (() => {
 const sourceText = id => {
   const p = people[id];
   if (p.sources && p.sources.length) return p.sources.map(s => registry[s] || s).join('; ');
-  return (p.branch && branches[p.branch]) || meta.defaultSource;
+  return registry[(p.branch && branches[p.branch]) || meta.defaultSource] || meta.defaultSource;
 };
 const sourceXref = new Map();
 for (const id of ids) {

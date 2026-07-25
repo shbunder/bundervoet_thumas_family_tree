@@ -268,7 +268,7 @@
 2 SURN Vandillen
 1 SEX F
 1 FAMS @F24@
-1 SOUR @S9@
+1 SOUR @S8@
 2 QUAY 3
 0 @I18@ INDI
 1 REFN anna_c_devriese
@@ -284,7 +284,7 @@
 1 FAMS @F26@
 1 FAMC @F25@
 1 NOTE Died young (1729). Her parents carry the line back into the early 1600s (De Vriese, Tielt).
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I19@ INDI
 1 REFN anna_fr_degrande
@@ -300,7 +300,7 @@
 1 FAMS @F28@
 1 FAMC @F27@
 1 NOTE Mother of Joanna Keirsebilck. Youngest of Michael De Grande & Brigitta De Blaere's seven children.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I20@ INDI
 1 REFN anna_gautiert
@@ -364,7 +364,7 @@
 1 FAMS @F31@
 1 FAMC @F14@
 1 NOTE Mother of Henricus Josephus Bostyn (1841). Youngest of the Perquy children (Petrus 1795, Victoria Francisca 1798, Engelbertus, Pieter).
-1 SOUR @S11@
+1 SOUR @S10@
 2 QUAY 3
 0 @I24@ INDI
 1 REFN anna_senesael
@@ -375,7 +375,7 @@
 1 SEX F
 1 FAMS @F32@
 1 NOTE FRONTIER above — mother of Joanna Theresia Daneel (1808).
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I25@ INDI
 1 REFN anna_vannieuwenhuyse
@@ -404,7 +404,7 @@
 2 NOTE Recorded as: Zaventem/Leuven, a few years ago
 1 FAMS @F34@
 1 NOTE Van Craenenbroeck is, in Zaventem, essentially ONE extended family, and it is richly documented — back to a 1721 marriage in Zaventem, and through the 1800s in neighbouring Sterrebeek, Wezembeek-Oppem and Kraainem. FAMILY LOCATED (Geneanet, July 2026): the modern Zaventem trunk (Geneanet tree 'cisken' + the Zaventem Kerkhoflaan cemetery index) centres on Antonius Josephus Van Craenenbroeck (1872 Sterrebeek – 1936 Zaventem) × Anna Maria Meeus (1877–1957) — Antonius himself a son of Amandus Franciscus Van Craenenbroeck (1835–1914) × Paulina Mommaerts (1838–1909), so this family is now documented back to the 1830s — with a sibling set born in Zaventem 1902–1918: Amandus Franciscus Henricus (1902–1977, m. Maria Balcaen 1929), Paul Gustaaf (1904–1988, m. Joanna Smolders 1928), Melania Leonia (1906), Joannes Arthur (1908–1982, m. Roza Van Opstal), Maurice Louis Willem (1913–1991) and Bertha Rosalia (1918). Anna — Chris & Eric's mother, born ~1930s in Zaventem, the witloof-farming milieu — fits this family almost certainly (rare surname + exact village + occupation region) and is most plausibly a GRANDDAUGHTER of Antonius, i.e. a daughter of one of those ~1928–29-married couples (Paul Gustaaf × Smolders or Amandus × Balcaen are the leading candidates). BUT the specific parent is NOT yet documented — the 'cisken' tree stops just above Anna's generation — so it is left OPEN, not grafted (no father/mother set here). To confirm which sibling is her parent: (1) Anna's own death notice / memorial card (she died recently in the Zaventem/Leuven area — likely names her parents and siblings); (2) her grave in the Zaventem Kerkhoflaan index; or (3) the owner of the 'cisken' Geneanet tree, a relative who very likely holds Anna's generation privately. Any one of these closes the link.
-1 SOUR @S13@
+1 SOUR @S12@
 2 QUAY 1
 0 @I27@ INDI
 1 REFN anne_peperstraete
@@ -415,7 +415,7 @@
 1 SEX F
 1 FAMS @F35@
 1 NOTE Mother of Engel Antonius Vincke.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I28@ INDI
 1 REFN antoine_t
@@ -435,7 +435,7 @@
 1 NOTE Source detail: Geneanet Thumas tree (m2155); 17th-c. Grez-Doiceau/Biez parish registers
 2 CONT
 2 CONT The documented root of the Thumas paternal line: born in Biez (Brabant wallon) in 1656; held the seigneurial office of bailiff (bailli) of Piétrebais; married Dieudonnée Daix in 1687. FRONTIER (to verify before grafting): the m2155 tree gives his parents as Philippe Thumas × Anne Dujardin — check against the Biez/Grez-Doiceau registers.
-1 SOUR @S15@
+1 SOUR @S14@
 2 QUAY 3
 0 @I29@ INDI
 1 REFN antoine_vanald
@@ -452,7 +452,7 @@
 2 PLAC Diksmuide
 1 FAMS @F37@
 1 NOTE Died very young, at 28, only months after the birth of his son Carolus.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I30@ INDI
 1 REFN antonius_dominicus_bocklandt
@@ -468,7 +468,7 @@
 1 FAMS @F39@
 1 FAMC @F38@
 1 NOTE Paternal grandfather of Louise Bocklandt. Married Isabella Livia Ichau in 1838. Of the Hamme (Oost-Vlaanderen / Waasland) Bocklandt family.
-1 SOUR @S16@
+1 SOUR @S15@
 2 QUAY 2
 0 @I31@ INDI
 1 REFN antonius_vincke
@@ -478,11 +478,10 @@
 2 SURN Vincke
 1 SEX M
 1 BIRT
-2 DATE ABT 1770
-2 PLAC s
+2 DATE BET 1770 AND 1779
 1 FAMS @F35@
 1 NOTE Married at Westvleteren in 1797; father of Engel Antonius Vincke.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I32@ INDI
 1 REFN apolonius_p
@@ -590,7 +589,7 @@
 2 SURN Thumas
 1 SEX M
 1 FAMC @F48@
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 1
 0 @I39@ INDI
 1 REFN bernardus
@@ -636,7 +635,7 @@
 1 NOTE Source detail: Ancestry / Geneanet West-Vlaanderen civil-registration index (Oostende birth act, 1901; original data Rijksarchief)
 2 CONT
 2 CONT A newly-found child of Édouard Dekeyser × Louise Bocklandt — born 7 Aug 1901 Oostende, three months after her parents' 4 May 1901 marriage. Her birth act names both parents (Eduardus de Keyser × Louisa Maria Bocklandt). Sister of Jérôme (1897), Gustavus (1899), Maria (1902) and the two infants Angela Luciana (†1903) and Cesar Mauritius (†1905). Her own later life is not yet traced.
-1 SOUR @S18@
+1 SOUR @S17@
 2 QUAY 3
 0 @I42@ INDI
 1 REFN bogaert
@@ -663,7 +662,7 @@
 2 DATE 1894
 1 FAMS @F55@
 1 FAMC @F54@
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 3
 0 @I44@ INDI
 1 REFN boxoens
@@ -695,7 +694,7 @@
 1 FAMS @F27@
 1 FAMC @F26@
 1 NOTE Grandmother (maternal) of Joanna Keirsebilck. Her parents open the De Blaere / De Vriese lines.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I46@ INDI
 1 REFN brigitte_wyllie
@@ -712,7 +711,7 @@
 2 PLAC Diksmuide
 1 FAMS @F37@
 1 NOTE Bore the Scottish-origin surname Wyllie in West-Flanders; widowed young in 1808.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I47@ INDI
 1 REFN camiel_d
@@ -723,7 +722,7 @@
 1 SEX M
 1 FAMS @F56@
 1 NOTE Marcel Devriendt’s parents — the frontier of the Devriendt line.
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I48@ INDI
 1 REFN carel_cappaert
@@ -743,7 +742,7 @@
 1 NOTE Source detail: 1960dirk (Dirk Teerlinck) tree; Oostkamp birth act 58/1835
 2 CONT
 2 CONT Parents found via the isavdw tree (sourced “rijksarchief zoekrobot”): Bernardus Cappaert & Sophia Vanhoucke.
-1 SOUR @S21@
+1 SOUR @S19@
 2 QUAY 3
 0 @I49@ INDI
 1 REFN carolina_vh
@@ -797,7 +796,7 @@
 1 FAMS @F61@
 1 FAMC @F37@
 1 NOTE Born the same year his father died — his father Antoine died in July 1808, about four months after Carolus's birth.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I52@ INDI
 1 REFN carolus_vandenberghe
@@ -885,7 +884,7 @@
 1 FAMS @F48@
 1 FAMC @F34@
 1 NOTE Christiane by birth record — goes by Chris.
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 1
 0 @I58@ INDI
 1 REFN christianus_vdb
@@ -897,7 +896,7 @@
 1 DEAT
 2 DATE 1827
 1 FAMS @F67@
-1 SOUR @S9@
+1 SOUR @S8@
 2 QUAY 3
 0 @I59@ INDI
 1 REFN christina_desangere
@@ -947,7 +946,7 @@
 1 FAMS @F53@
 1 FAMC @F69@
 1 NOTE Born 1709, Evergem. Son of Joannes Bundervoet's FIRST marriage, to Livina Stockman (not his second wife De Wilde). Children with Petronilla Bogaert: Guillaume (1731), Joanna Maria (1741), Maria Anna (1746), Philippus Jacobus (1756).
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I62@ INDI
 1 REFN clara_lampsins
@@ -1035,7 +1034,7 @@
 1 BIRT
 2 DATE 11 OCT 1989
 1 FAMC @F75@
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 1
 0 @I68@ INDI
 1 REFN cornelia_govaert
@@ -1084,7 +1083,7 @@
 1 FAMS @F75@
 1 FAMC @F79@
 1 NOTE Her sister is Sancha De Keyser (❦ Christophe Develder).
-1 SOUR @S23@
+1 SOUR @S3@
 2 QUAY 1
 0 @I71@ INDI
 1 REFN crabbe
@@ -1095,7 +1094,7 @@
 1 SEX F
 1 FAMS @F80@
 1 NOTE Jean Thumas (1907–1995) married Marie Louise Crabbé (Geneanet, marcelcroon tree). If François is their son — the inferred, privacy-sealed link — she is his mother. Her own dates and parents aren’t recorded in any tree or reachable record: the ~1930s Kraainem marriage sits inside the privacy window, and Crabbé is a common Brabant/Walloon name. A family memorial card for Jean or Marie Louise would name her parents.
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 2
 0 @I72@ INDI
 1 REFN daix
@@ -1112,7 +1111,7 @@
 2 PLAC Leuven
 1 FAMS @F36@
 1 NOTE Wife of Antoine Thumas; died at Leuven aged about 85. Daughter of Henry Daix (1614–1705) × Gertrude Hombroeck (a frontier to verify).
-1 SOUR @S15@
+1 SOUR @S14@
 2 QUAY 3
 0 @I73@ INDI
 1 REFN daniel_bocklandt
@@ -1127,7 +1126,7 @@
 2 DATE 1837
 1 FAMS @F38@
 1 NOTE FRONTIER (top of the Bocklandt line in the wete1998 tree) — paternal great-grandfather of Louise Bocklandt. Married Philippa Van Puyenbroeck in 1801. Of Hamme (Oost-Vlaanderen). His own parents are not recorded in the tree; the Hamme O-Vl parish/civil registers (Rijksarchief AGATHA) are the place to push further.
-1 SOUR @S24@
+1 SOUR @S21@
 2 QUAY 2
 0 @I74@ INDI
 1 REFN declercq
@@ -1137,7 +1136,7 @@
 2 SURN Declercq
 1 SEX F
 1 FAMS @F56@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I75@ INDI
 1 REFN delphina_vdb
@@ -1147,7 +1146,7 @@
 2 SURN Van den Berghe
 1 SEX F
 1 FAMS @F67@
-1 SOUR @S9@
+1 SOUR @S8@
 2 QUAY 3
 0 @I76@ INDI
 1 REFN desiderius_dk
@@ -1157,12 +1156,12 @@
 2 SURN De Keyser
 1 SEX M
 1 DEAT
-2 DATE 9 MAY 1946
+2 NOTE Recorded as: before 9 May 1946
 1 FAMS @F81@
 1 NOTE Source detail: Oostende marriage act nr. 81, 9 May 1946 (FamilySearch, Belgium West Flanders Civil Registration 1582-1950 — image read directly), naming him as father of Eduardus De Keyser
 2 CONT
 2 CONT FATHER of Édouard Dekeyser — the long-sought wall, now broken. Named (with his wife) in Édouard's 1946 remarriage act as 'zoon van Desiderius en van Maria Theresia Van den Broeck, beiden overleden'. A Hamme (Oost-Vlaanderen) family (his son Mauritius Eduardus married in Hamme in 1912; his son Édouard was born in Hamme in 1876). Both parents were already deceased by 9 May 1946. Their known children (FamilySearch, Oost-Vlaanderen civil registration): Édouard (1876, our line), Mauritius Eduardus (1892, m. Marie Henriette Neus, Hamme 1912), Augustinus (†1883 as an infant), Frederiens Carolus, and Leontinus Josephus de Keyser. His own dates/parents are the new frontier — pursue in the Hamme (O.-Vl.) registers (AGATHA / FamilySearch).
-1 SOUR @S25@
+1 SOUR @S22@
 2 QUAY 3
 0 @I77@ INDI
 1 REFN devos
@@ -1175,7 +1174,7 @@
 2 DATE 1896
 1 FAMS @F83@
 1 FAMC @F82@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I78@ INDI
 1 REFN diane_vi
@@ -1200,7 +1199,7 @@
 1 FAMS @F84@
 1 FAMC @F48@
 1 NOTE Policy advisor at KBC Bank & Verzekering; studied at Vrije Universiteit Brussel (VUB); based in the Brussels area. Shaun & Dorien are former partners and close co-parents (both VUB alumni, both at KBC).
-1 SOUR @S26@
+1 SOUR @S16@
 2 QUAY 1
 0 @I80@ INDI
 1 REFN edi_vi
@@ -1224,7 +1223,7 @@
 1 FAMS @F85@
 1 FAMC @F39@
 1 NOTE Father of Louise Marie Bocklandt (1877, Hamme O-Vl). Born 1839; married Maria Louisa Van Bergen (1842-1888). His parents (Antonius Dominicus Bocklandt × Isabella Livia Ichau) come from the wete1998 tree and the Hamme (O-Vl) registers.
-1 SOUR @S16@
+1 SOUR @S15@
 2 QUAY 3
 0 @I82@ INDI
 1 REFN edouard_dk
@@ -1246,7 +1245,7 @@
 1 NOTE Source detail: PRIMARY: Oostende marriage act nr. 81, 9 May 1946 (FamilySearch, Belgium West Flanders Civil Registration 1582-1950 — image read directly). Also Geneanet/AGATHA (children's Oostende acts).
 2 CONT
 2 CONT WALL BROKEN (July 2026, FamilySearch). Édouard's own 1946 Oostende remarriage act states in full: 'Eduardus De Keyser, werkman, geboren te Hamme den twaalfden November 1876 ... echtgescheiden van Louisa Maria Bocklandt (divorce decree, Rechtbank van eersten aanleg Brugge, ~1923) ... zoon van Desiderius en van Maria Theresia Van den Broeck, beiden overleden.' Every detail matches (werkman; born 12 Nov 1876; first wife Louisa Maria Bocklandt) — so this is unambiguously our Édouard, and: (1) his PARENTS are Desiderius De Keyser × Maria Theresia Van den Broeck; (2) his BIRTHPLACE is Hamme (Oost-Vlaanderen) — the SAME town Louise Bocklandt came from (they were fellow Hamme natives who both moved to Oostende); (3) Édouard and Louise did not stay married — they DIVORCED ~1923 (decree at Brugge), and Édouard REMARRIED Leontine Schreel (b. Aartrijke 11 Jan 1890, herself divorced from Benoni Joseph Rossel) in Oostende on 9 May 1946. Children with Louise (Oostende civil acts): Jérôme (1897), Gustavus (1899), Bertha Alida Theresia (1901), Maria (1902), + infants Angela Luciana (†1903) and Cesar Mauritius (b.~1904, †1905). This also finally explains 'Hamme' in the old trees: it was the couple's shared birth-town, Hamme (Oost-Vlaanderen) — never Hamme-Merchtem, never a marriage place. NEW FRONTIER: Desiderius De Keyser's and Maria Theresia Van den Broeck's own dates & parents, in the Hamme (O.-Vl.) registers. NAME SPELLING: the family surname is recorded both as 'Dekeyser' (one word — the Oostende line) and 'De Keyser' (two words — his father Desiderius in the 1946 act, and the living generation Roland/Cosette). Same family; each person here keeps the spelling of the record they were found in (historical accuracy over uniformity).
-1 SOUR @S27@
+1 SOUR @S23@
 2 QUAY 3
 0 @I83@ INDI
 1 REFN eduardus_p
@@ -1322,7 +1321,7 @@
 1 BIRT
 2 DATE ABT 1620
 1 FAMS @F92@
-1 SOUR @S28@
+1 SOUR @S3@
 2 QUAY 3
 0 @I88@ INDI
 1 REFN elodia
@@ -1375,7 +1374,7 @@
 1 FAMS @F95@
 1 FAMC @F35@
 1 NOTE Of Diksmuide; married twice — our line runs through his 2nd wife, Virginia Leynseele (their son Lucien, 1840).
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I91@ INDI
 1 REFN engelbertus_vanmaele
@@ -1403,7 +1402,7 @@
 1 BIRT
 2 NOTE Recorded as: 2 Jul
 1 FAMC @F34@
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 1
 0 @I93@ INDI
 1 REFN esther_vanderbeken
@@ -1418,7 +1417,7 @@
 2 DATE 1675
 1 FAMS @F98@
 1 NOTE FRONTIER — first wife of Judocus De Vriese and mother of Hubert (1665). Her own parents not yet recovered.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I94@ INDI
 1 REFN eugenia_dutreeuw
@@ -1433,7 +1432,7 @@
 1 FAMS @F61@
 1 FAMC @F99@
 1 NOTE Daughter of Ludovicus Dutreeuw & Ludovica Ellebout; mother of Ludovica Vanalderweireldt (1845).
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I95@ INDI
 1 REFN eugenius_dv
@@ -1482,7 +1481,7 @@
 1 FAMS @F102@
 1 FAMC @F101@
 1 NOTE Father of Juliana Stroobandt (1839 Oedelem/Beernem). His own parents Jacobus Stroobandt × Joanna Keirsebilck are named in the same tree.
-1 SOUR @S29@
+1 SOUR @S24@
 2 QUAY 3
 0 @I98@ INDI
 1 REFN francisca_casiers
@@ -1540,7 +1539,7 @@
 2 SURN Smessaert
 1 SEX M
 1 FAMS @F103@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I102@ INDI
 1 REFN georges1_t
@@ -1559,7 +1558,7 @@
 1 FAMS @F105@
 1 FAMC @F104@
 1 NOTE The first of FOUR consecutive carpenter (menuisier) generations of Thumas in Grez-Doiceau. Recorded as a godfather (1771) and marriage witness (1775).
-1 SOUR @S15@
+1 SOUR @S14@
 2 QUAY 3
 0 @I103@ INDI
 1 REFN georges2_t
@@ -1646,7 +1645,7 @@
 1 FAMS @F83@
 1 FAMC @F109@
 1 NOTE Married Joanna Paula Devos in 1919; his daughter Yvonne (b.1914) was legitimized by that marriage.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I108@ INDI
 1 REFN gillis_sabbe
@@ -1705,7 +1704,7 @@
 1 DEAT
 2 DATE 1888
 1 FAMS @F54@
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 3
 0 @I112@ INDI
 1 REFN guillielmus_stroobandt
@@ -1747,14 +1746,14 @@
 2 SURN Dekeyser
 1 SEX M
 1 BIRT
-2 DATE ABT 1920
-2 PLAC s · Oostende
+2 DATE BET 1920 AND 1929
+2 PLAC Oostende
 1 FAMS @F112@
 1 FAMC @F15@
 1 NOTE Source detail: Family memory (Roland’s father). Documentary lead: = Gustavus-Josephus Dekeyser b.1899 (stefpaelinck tree, Oostende), Jerome’s brother — unconfirmed
 2 CONT
 2 CONT CONFIRMED placement: Cosette confirms Jerome is Roland’s GRANDFATHER, so Gustaaf is Jerome & Léonie’s son — a younger brother of Albert (1920–1972), born ~1920–1928 in Oostende. (This rules out the earlier idea that he was Jerome’s brother Gustavus-Josephus b.1899.) He & Simonne were in England during WWII, where Roland was born in 1943 (plus a daughter). UNCERTAIN: Shaun wondered whether Gustaaf may have died during the war (perhaps in Belgium or France) — but he’s not sure, so this is only a possibility to check, NOT established. He simply isn’t in Belgian civil indexes for a Gustave Dekeyser born ~1920s Oostende, which fits either a wartime death abroad OR a life lived mostly outside Belgium. Open leads to chase next (they’d resolve his fate either way): (1) Roland’s 1943 birth certificate — England & Wales GRO, Edmonton registration district, Q3/Q4 1943, surname De Keyser/Dekeyser, mother’s maiden name Vandewalle (via FreeBMD/GRO); (2) a UK marriage of Gustaaf × Simonne, 1940–43; (3) UK death indexes for a Gustave De Keyser; (4) if he served, Free Belgian Forces / Brigade Piron rolls; (5) Belgian war-dead databases (bel-memorial.org; De Plate Oostende heemkring) — only relevant IF he died in the war.
-1 SOUR @S30@
+1 SOUR @S25@
 2 QUAY 2
 0 @I115@ INDI
 1 REFN gustavus_j
@@ -1781,7 +1780,7 @@
 1 SEX F
 1 FAMS @F13@
 1 NOTE FRONTIER above — wife of Pieter Stekelorum; dates not yet recovered.
-1 SOUR @S31@
+1 SOUR @S26@
 2 QUAY 3
 0 @I117@ INDI
 1 REFN hendrik_vdb
@@ -1817,7 +1816,7 @@
 2 PLAC Varsenare
 1 FAMS @F31@
 1 NOTE FRONTIER above — father of Henricus Josephus Bostyn (1841). Surname Bostin here, Bostyn in the next generation; same family. His own parents not yet recovered.
-1 SOUR @S11@
+1 SOUR @S10@
 2 QUAY 3
 0 @I119@ INDI
 1 REFN henricus_bostyn
@@ -1836,7 +1835,7 @@
 1 FAMS @F93@
 1 FAMC @F113@
 1 NOTE From Varsenare near Bruges; moved to Oostende (died Mariakerkelaan 115). Parents found via the Vynce Lémans (vxnce13) tree — his direct ancestry, sourced to the Rijksarchief.
-1 SOUR @S21@
+1 SOUR @S19@
 2 QUAY 3
 0 @I120@ INDI
 1 REFN henricus_j_bostyn
@@ -1873,7 +1872,7 @@
 1 FAMS @F115@
 1 FAMC @F114@
 1 NOTE A gardener; son of Mattheus Ramon & Jacoba Ossaert; father of Pierre Francois Ramon.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I122@ INDI
 1 REFN henricus_vanacker
@@ -1898,7 +1897,7 @@
 2 SURN Wagebaert
 1 SEX M
 1 FAMS @F24@
-1 SOUR @S9@
+1 SOUR @S8@
 2 QUAY 3
 0 @I124@ INDI
 1 REFN hercules_stroobandt
@@ -1952,7 +1951,7 @@
 1 FAMS @F25@
 1 FAMC @F98@
 1 NOTE Father of Anna Cornelia De Vriese. Married Joanna Van Der Oughstraete 1687.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I127@ INDI
 1 REFN huguette
@@ -1967,7 +1966,7 @@
 1 FAMS @F79@
 1 FAMC @F117@
 1 NOTE Siblings: René and Sonja Devriendt.
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 1
 0 @I128@ INDI
 1 REFN ida_vermandel
@@ -1982,7 +1981,7 @@
 2 DATE 1865
 1 FAMS @F118@
 1 NOTE Maternal grandmother of Louise Bocklandt; wife of Joannes Franciscus Van Bergen. Of Hamme (Oost-Vlaanderen).
-1 SOUR @S24@
+1 SOUR @S21@
 2 QUAY 2
 0 @I129@ INDI
 1 REFN isabella_ichau
@@ -1997,7 +1996,7 @@
 2 DATE 1870
 1 FAMS @F39@
 1 NOTE Paternal grandmother of Louise Bocklandt; wife of Antonius Dominicus Bocklandt. Ichau is a Waasland/Hamme (Oost-Vlaanderen) name.
-1 SOUR @S24@
+1 SOUR @S21@
 2 QUAY 2
 0 @I130@ INDI
 1 REFN jacob_deblaere
@@ -2016,7 +2015,7 @@
 1 NOTE Source detail: Index op de huwelijken Wingene 1603–1796 (J. Patteeuw, VVF Brugge); Geneanet kathrynann / isavdw
 2 CONT
 2 CONT FRONTIER above — born Wingene 1695. Top of the De Blaere line in this source.
-1 SOUR @S32@
+1 SOUR @S27@
 2 QUAY 3
 0 @I131@ INDI
 1 REFN jacoba_monballiu
@@ -2048,7 +2047,7 @@
 2 PLAC Zande
 1 FAMS @F114@
 1 NOTE Daughter of Josephus Ossaert & Cornelia Rivier; ten children (surname also spelled Housaer).
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I133@ INDI
 1 REFN jacoba_vanalledewerelt
@@ -2098,7 +2097,7 @@
 2 DATE 1898
 1 FAMS @F118@
 1 NOTE Maternal grandfather of Louise Bocklandt — father of Maria Louisa Van Bergen (1842). Of Hamme (Oost-Vlaanderen).
-1 SOUR @S24@
+1 SOUR @S21@
 2 QUAY 2
 0 @I136@ INDI
 1 REFN janbaptist_p
@@ -2136,7 +2135,7 @@
 1 FAMS @F120@
 1 FAMC @F55@
 1 NOTE Son of Georges Carolus Josephus and Antoina Bossin. A factory worker who also served as a schepen (municipal alderman) in Kraainem. Married Joanna Vandenbemden in Kraainem on 3 Feb 1902.
-1 SOUR @S33@
+1 SOUR @S28@
 2 QUAY 3
 0 @I138@ INDI
 1 REFN jean_t
@@ -2154,7 +2153,7 @@
 1 FAMS @F80@
 1 FAMC @F120@
 1 NOTE DOCUMENTED (b. 23 Oct 1907, d. 22 Mar 1995, both in Kraainem; Geneanet, marcelcroon). He lived his whole life in Kraainem and is the strongly-supported grandfather of Thiery. The ONE remaining sealed link is Jean → François (Thiery’s father), whose 20th-century birth is behind the 100-year civil-registration privacy wall.
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 3
 0 @I139@ INDI
 1 REFN jeanlambert_t
@@ -2173,7 +2172,7 @@
 1 FAMS @F104@
 1 FAMC @F36@
 1 NOTE Church warden and parish clerk of Grez-Doiceau. Our line descends from his SECOND marriage, to Marie Jacqueline Leclercq (Wavre, 1743) — their son Georges (1744) continues the line. His first wife was Marie Catherine Crèvecœur (m. 1727, d. 1742).
-1 SOUR @S15@
+1 SOUR @S14@
 2 QUAY 3
 0 @I140@ INDI
 1 REFN jerome_dk
@@ -2193,7 +2192,7 @@
 1 NOTE Source detail: Stef Paelinck (stefpaelinck) tree; Oostende Burgerzaken; Rijksarchief AGATHA (Oostende birth act nr. 585, 1897)
 2 CONT
 2 CONT CONFIRMED Roland's grandfather (Cosette). Full first names Jérôme Josephus; born Oostende 14 Jun 1897 (birth act nr. 585, Rijksarchief AGATHA). Born before his parents married: he was LEGITIMIZED by their marriage on 4 May 1901 (marginal note 'Gewettigd 4 5 1901' on his birth act). Lived in Oostende (Blauwkasteelstraat 21; later Amsterdamstraat 38). Recorded child: Albert Dekeyser (1920–1972); Gustaaf (Roland's father) is another of their sons. His siblings (children of Édouard × Louise, per AGATHA): Gustavus Josephus (1899, also legitimized 1901), Bertha Alida Theresia (1901), Maria (1902–2002), Angela Luciana (†1903) and Cesar Mauritius (†1905) — the last two died in infancy.
-1 SOUR @S34@
+1 SOUR @S29@
 2 QUAY 3
 0 @I141@ INDI
 1 REFN joanna_daneel
@@ -2212,7 +2211,7 @@
 1 FAMS @F59@
 1 FAMC @F32@
 1 NOTE A maidservant; daughter of Philippus Daneel & Anna Theresia Senesael; first wife of Pierre Ramon.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I142@ INDI
 1 REFN joanna_defoort
@@ -2241,7 +2240,7 @@
 1 FAMS @F101@
 1 FAMC @F28@
 1 NOTE Grandmother of Juliana Stroobandt. Outlived her husband by 45 years. Parents Petrus Josephus Keirsebilck × Anna Francisca De Grande.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I144@ INDI
 1 REFN joanna_leenaert
@@ -2285,7 +2284,7 @@
 2 PLAC Zande
 1 FAMS @F123@
 1 NOTE From Koekelare; mother of Mattheus Ramon (surname also recorded as 'Terwan').
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I147@ INDI
 1 REFN joanna_va
@@ -2315,7 +2314,7 @@
 2 DATE 1678
 1 FAMS @F124@
 1 NOTE FRONTIER above — wife of Segerius Bundervoet, mother of Joannes (~1637). Her own parents not recorded here.
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I149@ INDI
 1 REFN joanna_vdoughstraete
@@ -2330,7 +2329,7 @@
 2 DATE 1723
 1 FAMS @F25@
 1 NOTE FRONTIER — wife of Hubert De Vriese; her own parents not yet recovered.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I150@ INDI
 1 REFN joanna_verbrugghe
@@ -2343,7 +2342,7 @@
 2 DATE 1704
 1 FAMS @F125@
 1 NOTE FRONTIER above — mother of Joannes Bundervoet (1682). Her own parents not recorded here.
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I151@ INDI
 1 REFN joanna_wallays
@@ -2411,7 +2410,7 @@
 1 NOTE Source detail: Geneanet trees paulderidder (Sosa 644), glorieuxp, dvandurme1, mjovdl (8+ Evergem trees agree)
 2 CONT
 2 CONT Married twice — Livina Stockman (mother of Christoffel 1709 & Pieter 1727), then Livina De Wilde ~1745. That remarriage is what identifies him as the documented Joannes b.1682 and bridges our line into the deep Evergem Bundervoet trunk. Parents Joannes Bundervoet (1637-1707) x Joanna Verbrugghe.
-1 SOUR @S35@
+1 SOUR @S30@
 2 QUAY 3
 0 @I155@ INDI
 1 REFN joannes_b1637
@@ -2428,7 +2427,7 @@
 1 FAMS @F125@
 1 FAMC @F124@
 1 NOTE Father of Joannes Bundervoet (1682). Parents Segerius Bundervoet x Joanna van Hecke.
-1 SOUR @S36@
+1 SOUR @S31@
 2 QUAY 3
 0 @I156@ INDI
 1 REFN joannes_declerck
@@ -2550,7 +2549,7 @@
 1 FAMS @F12@
 1 FAMC @F89@
 1 NOTE Born in the French coal-mining town of Lens, where his Oostende family had emigrated for work; the family later returned to Belgium. Died six days short of his 66th birthday.
-1 SOUR @S37@
+1 SOUR @S32@
 2 QUAY 3
 0 @I164@ INDI
 1 REFN joannes_vi2
@@ -2616,7 +2615,7 @@
 1 FAMS @F109@
 1 FAMC @F103@
 1 NOTE A labourer; son of Franciscus Leopoldus Smessaert & Anna Francisca Morree; 13+ children, many dying in infancy.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I168@ INDI
 1 REFN joostens
@@ -2630,7 +2629,7 @@
 1 DEAT
 2 DATE 1857
 1 FAMS @F107@
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 3
 0 @I169@ INDI
 1 REFN josephus_caeckaert
@@ -2690,7 +2689,7 @@
 2 DATE 1944
 1 FAMS @F93@
 1 FAMC @F57@
-1 SOUR @S21@
+1 SOUR @S19@
 2 QUAY 3
 0 @I173@ INDI
 1 REFN judoca_maertens
@@ -2721,7 +2720,7 @@
 2 DATE 1683
 1 FAMS @F132@
 1 NOTE FRONTIER — wife of Michaël De Vriese (b. ~1615). Among the deepest roots in the tree; her parents not yet recovered.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I175@ INDI
 1 REFN judoca_tjonck
@@ -2815,7 +2814,7 @@
 1 FAMC @F132@
 1 NOTE Spouse (no record of their own): Joanna Loontjens — 2nd
 1 NOTE Father of Hubert De Vriese. Married twice — Esther Vanderbeken (Hubert's mother), then Joanna Loontjens.
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I181@ INDI
 1 REFN judocus_sabbe
@@ -2902,7 +2901,7 @@
 1 FAMS @F57@
 1 FAMC @F102@
 1 NOTE Married Carel Cappaert 1863 Oostkamp. Birth given as 13 Sep 1839 Beernem (kathrynann) or 12 Sep 1839 Oedelem (1960dirk) — adjacent villages. One of eleven Stroobandt children.
-1 SOUR @S38@
+1 SOUR @S33@
 2 QUAY 3
 0 @I186@ INDI
 1 REFN juliette
@@ -2914,7 +2913,7 @@
 1 BIRT
 2 DATE 4 JAN 1937
 1 FAMS @F134@
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 1
 0 @I187@ INDI
 1 REFN karine
@@ -2924,7 +2923,7 @@
 2 SURN Bundervoet
 1 SEX F
 1 FAMC @F135@
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 1
 0 @I188@ INDI
 1 REFN laurentius_willems
@@ -2957,7 +2956,7 @@
 2 PLAC Grez-Doiceau
 1 FAMS @F104@
 1 NOTE Second wife of Jean Lambert Thumas (m. Wavre 1743) and mother of the line's Georges (1744); the couple had eight children.
-1 SOUR @S15@
+1 SOUR @S14@
 2 QUAY 3
 0 @I190@ INDI
 1 REFN leon
@@ -2971,7 +2970,7 @@
 2 PLAC Leuven
 1 FAMC @F84@
 1 NOTE Born in Leuven, 9 August 2019 — the younger of the two youngest, and Renée's brother. He and Renée are what this tree was built for. The two of them were previously held in a single entry, "Renée & Léon Bundervoet"; split apart so each has their own dates.
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 1
 0 @I191@ INDI
 1 REFN leonie_p
@@ -3002,7 +3001,7 @@
 2 PLAC Evergem
 1 FAMS @F128@
 1 NOTE Joannes Bundervoet's SECOND wife (married ~1745, died 1750) — NOT the mother of Christoffel (that was his first wife, Livina Stockman). Several trees confused the two wives.
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I193@ INDI
 1 REFN livina_pickaut
@@ -3037,7 +3036,7 @@
 1 NOTE Source detail: Geneanet trees glorieuxp & paulderidder (both give her as c.1688-1744)
 2 CONT
 2 CONT Joannes Bundervoet's FIRST wife and mother of Christoffel (1709) and Pieter (1727). She died in 1744; Joannes then remarried Livina (Joanna) De Wilde ~1745 — the remarriage confirmed independently by the glorieuxp and paulderidder trees, and consistent with the chronology (Christoffel's 1709 birth predates the De Wilde marriage). Several other trees wrongly list Christoffel's mother as De Wilde.
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I195@ INDI
 1 REFN livinus1_p
@@ -3086,7 +3085,7 @@
 1 FAMC @F142@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE Of Evergem; married twice (Catharina Van Hecke, then Elisabeth Hovelynck) — his son Segerius was by his wife Elisabeth Hovelynck, per the paulderidder tree.
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I198@ INDI
 1 REFN livinus_verkouille
@@ -3096,7 +3095,7 @@
 2 SURN Verkouille
 1 SEX M
 1 FAMS @F78@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I199@ INDI
 1 REFN loncke
@@ -3106,7 +3105,7 @@
 2 SURN Loncke
 1 SEX F
 1 FAMS @F82@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I200@ INDI
 1 REFN louis_steenkiste
@@ -3117,7 +3116,7 @@
 1 SEX M
 1 FAMS @F136@
 1 NOTE FRONTIER above — father of Lucia Theresia Steenkiste (1767). Dates not recovered.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I201@ INDI
 1 REFN louise_bocklandt
@@ -3137,7 +3136,7 @@
 1 NOTE Source detail: Rijksarchief AGATHA (parents on her record); Geneanet tree wete1998 (Erik Bekaert); Édouard's 1946 marriage act (records their divorce)
 2 CONT
 2 CONT Born 31 Dec 1877 in Hamme (OOST-VLAANDEREN, Waasland) — the SAME town as her husband Édouard Dekeyser (both Hamme natives who moved to Oostende). This is the true source of the long 'Hamme' confusion: it was the couple's shared birth-town, not Hamme-Merchtem and not a marriage place. Married Édouard 4 May 1901 (the marriage legitimized their two eldest children); they later DIVORCED (~1923, decree Rechtbank van eersten aanleg Brugge — per Édouard's 1946 remarriage act). Died 1946 Oostende, buried at Stene. Her Bocklandt family is a Hamme (O-Vl) / Waasland family documented back to the 1760s (see her parents and the Bocklandt / Van Bergen ancestors).
-1 SOUR @S16@
+1 SOUR @S15@
 2 QUAY 3
 0 @I202@ INDI
 1 REFN lucia_steenkiste
@@ -3152,7 +3151,7 @@
 1 FAMS @F115@
 1 FAMC @F136@
 1 NOTE Daughter of Louis Steenkiste & Reine Storms; mother of Pierre Ramon.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I203@ INDI
 1 REFN lucien_vincke
@@ -3168,7 +3167,7 @@
 1 FAMS @F94@
 1 FAMC @F95@
 1 NOTE A mason's assistant; son of Engel Antonius Vincke & Virginia Leynseele.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I204@ INDI
 1 REFN ludovica_ellebout
@@ -3182,7 +3181,7 @@
 2 PLAC Diksmuide
 1 FAMS @F99@
 1 NOTE Daughter of Ferdinand Ellebout & Catherine Millecam; married at 42 a husband about sixteen years younger.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I205@ INDI
 1 REFN ludovica_vanald
@@ -3199,7 +3198,7 @@
 1 FAMS @F94@
 1 FAMC @F61@
 1 NOTE Daughter of Carolus Vanalderweireldt & Eugenia Dutreeuw; mother of Emma Celesta Vincke (1880–1974).
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I206@ INDI
 1 REFN ludovicus_dutreeuw
@@ -3213,7 +3212,7 @@
 2 PLAC Diksmuide
 1 FAMS @F99@
 1 NOTE Son of Nicolas Dutreeuw & Therese Desramont; his wife was about sixteen years his senior.
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I207@ INDI
 1 REFN ludovicus_p
@@ -3241,8 +3240,7 @@
 2 SURN Demeulemeester
 1 SEX F
 1 BIRT
-2 DATE ABT 1530
-2 PLAC s
+2 DATE BET 1530 AND 1539
 1 FAMS @F137@
 1 FAMC @F143@
 1 NOTE Source detail: Geneanet isavdw (Sosa 27041; OSAK contracts 1560-1600)
@@ -3285,7 +3283,7 @@
 1 FAMC @F18@
 1 NOTE Spouse (no record of their own): Francine Bisschop — later
 1 NOTE Full name Marcel Henri Bundervoet. Confirmed by his memorial card, which named the Bostyn family — pointing to his mother Elodia Bostyn and father Alphonsus.
-1 SOUR @S26@
+1 SOUR @S16@
 2 QUAY 3
 0 @I211@ INDI
 1 REFN marcel_d
@@ -3303,7 +3301,7 @@
 1 OCCU smid (blacksmith)
 1 FAMS @F117@
 1 FAMC @F56@
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I212@ INDI
 1 REFN margaretha_vermeersch
@@ -3421,7 +3419,7 @@
 2 SURN Malfait
 1 SEX F
 1 FAMS @F78@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I220@ INDI
 1 REFN maria_rups
@@ -3480,7 +3478,7 @@
 1 FAMS @F85@
 1 FAMC @F118@
 1 NOTE Mother of Louise Marie Bocklandt (1877, Hamme O-Vl). Full name Maria Louisa Van Bergen, 1842-1888. Her parents were Joannes Franciscus Van Bergen (1815-1898) × Ida Vermandel (1825-1865), of Hamme (Oost-Vlaanderen).
-1 SOUR @S16@
+1 SOUR @S15@
 2 QUAY 3
 0 @I224@ INDI
 1 REFN marinus_vannieuwenhuyse
@@ -3509,7 +3507,7 @@
 1 DEAT
 2 DATE 1911
 1 FAMS @F64@
-1 SOUR @S28@
+1 SOUR @S3@
 2 QUAY 3
 0 @I226@ INDI
 1 REFN martinus_degrande
@@ -3557,7 +3555,7 @@
 1 FAMC @F123@
 1 NOTE Spouse (no record of their own): Anna Anastasia Norysse — 1st
 1 NOTE Son of Stephanus Ramon & Joanna Truant; married twice — our line is via his 2nd wife Jacoba Ossaert (Zande, 1772), with whom he had ten children.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I229@ INDI
 1 REFN mattheus_wittenheyns
@@ -3625,7 +3623,7 @@
 2 DATE 1681
 1 FAMS @F132@
 1 NOTE FRONTIER above — born ~1615, one of the deepest documented ancestors in the tree. Parents not verified (a 1674 namesake Michaël De Vriese exists in the same source — not to be confused).
-1 SOUR @S10@
+1 SOUR @S9@
 2 QUAY 3
 0 @I233@ INDI
 1 REFN michael_rups
@@ -3647,8 +3645,7 @@
 2 SURN Demeulemeester
 1 SEX M
 1 BIRT
-2 DATE ABT 1500
-2 PLAC s
+2 DATE BET 1500 AND 1509
 1 FAMS @F143@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE Source detail: Geneanet isavdw (OSAK Akten & Contracten 1560-1600; Sosa 54082)
@@ -3664,7 +3661,7 @@
 2 SURN Morree
 1 SEX F
 1 FAMS @F103@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I236@ INDI
 1 REFN mtheresia_vandenbroeck
@@ -3674,12 +3671,12 @@
 2 SURN Van den Broeck
 1 SEX F
 1 DEAT
-2 DATE 9 MAY 1946
+2 NOTE Recorded as: before 9 May 1946
 1 FAMS @F81@
 1 NOTE Source detail: Oostende marriage act nr. 81, 9 May 1946 (FamilySearch, Belgium West Flanders Civil Registration 1582-1950 — image read directly), naming her as mother of Eduardus De Keyser
 2 CONT
 2 CONT MOTHER of Édouard Dekeyser. Named in Édouard's 1946 remarriage act as his mother, 'overleden' (deceased) by then. Van den Broeck is a Waasland / Hamme (Oost-Vlaanderen) name, consistent with the family's Hamme origin. Frontier: her dates/parents, in the Hamme (O.-Vl.) registers.
-1 SOUR @S25@
+1 SOUR @S22@
 2 QUAY 3
 0 @I237@ INDI
 1 REFN nadia
@@ -3689,7 +3686,7 @@
 2 SURN Bundervoet
 1 SEX F
 1 FAMC @F135@
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 1
 0 @I238@ INDI
 1 REFN nicolas_willaert
@@ -3778,7 +3775,7 @@
 1 DEAT
 2 DATE 1907
 1 FAMS @F54@
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 3
 0 @I244@ INDI
 1 REFN petronella_v
@@ -3828,7 +3825,7 @@
 1 FAMS @F142@
 1 NOTE Spouse (no record of their own): NN Vyveraert
 1 NOTE The earliest documented ancestor of the Bundervoet line (Evergem, ~1560); married twice and was the father of Livinus.
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I247@ INDI
 1 REFN petrus_debaecke
@@ -3867,7 +3864,7 @@
 2 SURN Devos
 1 SEX M
 1 FAMS @F82@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 3
 0 @I250@ INDI
 1 REFN petrus_f
@@ -3974,7 +3971,7 @@
 1 NOTE Source detail: Geneanet isavdw; birth act agatha.arch.be scan 513_9000_000_00774 (Sosa 3382)
 2 CONT
 2 CONT Father of Anna Van Nieuwenhuyse (1676). Served as a schepen (alderman/magistrate) of Oostkamp. Parents Marinus Van Nieuwenhuyse (~1620-1666) x Cornelia Govaert (~1625-1653).
-1 SOUR @S39@
+1 SOUR @S34@
 2 QUAY 3
 0 @I256@ INDI
 1 REFN petrus_vanrenterghem
@@ -4039,7 +4036,7 @@
 2 DATE 1820
 1 FAMS @F38@
 1 NOTE Paternal great-grandmother of Louise Bocklandt; wife of Daniel Bocklandt. Of Hamme (Oost-Vlaanderen).
-1 SOUR @S24@
+1 SOUR @S21@
 2 QUAY 2
 0 @I260@ INDI
 1 REFN philippus
@@ -4057,7 +4054,7 @@
 1 FAMS @F1@
 1 FAMC @F53@
 1 NOTE Of Evergem; married Joanna Adriaenssens in 1784, with many children including Judocus, Livinus and Peter Frans.
-1 SOUR @S40@
+1 SOUR @S35@
 2 QUAY 3
 0 @I261@ INDI
 1 REFN philippus_daneel
@@ -4068,7 +4065,7 @@
 1 SEX M
 1 FAMS @F32@
 1 NOTE FRONTIER above — father of Joanna Theresia Daneel (1808 Keiem). Dates not recovered.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I262@ INDI
 1 REFN pierre_ramon
@@ -4087,7 +4084,7 @@
 1 FAMS @F59@
 1 FAMC @F115@
 1 NOTE A gardener and seaman who DROWNED AT SEA in October 1858. First wife Joanna Daneel (our line); he had remarried Anna Degroo in 1857.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I263@ INDI
 1 REFN pieter_stekelorum
@@ -4098,7 +4095,7 @@
 1 SEX M
 1 FAMS @F13@
 1 NOTE FRONTIER above — great-great-grandfather of Elodia Bostyn on the Perquy line. Dates not yet recovered (late-1700s Westkerke area).
-1 SOUR @S31@
+1 SOUR @S26@
 2 QUAY 3
 0 @I264@ INDI
 1 REFN pieterjacobus_v
@@ -4126,7 +4123,7 @@
 2 SURN Pluvier
 1 SEX F
 1 FAMS @F20@
-1 SOUR @S9@
+1 SOUR @S8@
 2 QUAY 3
 0 @I266@ INDI
 1 REFN quinart
@@ -4155,7 +4152,7 @@
 1 FAMS @F109@
 1 FAMC @F60@
 1 NOTE Daughter of Carolus Ludovicus Ramon & Cornelia Verkouille; bore fourteen children with J.F. Smessaert.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I268@ INDI
 1 REFN reine_storms
@@ -4166,7 +4163,7 @@
 1 SEX F
 1 FAMS @F136@
 1 NOTE FRONTIER above — mother of Lucia Theresia Steenkiste (1767).
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I269@ INDI
 1 REFN rene_dv
@@ -4176,7 +4173,7 @@
 2 SURN Devriendt
 1 SEX M
 1 FAMC @F117@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 1
 0 @I270@ INDI
 1 REFN rene_j
@@ -4190,7 +4187,7 @@
 2 PLAC Oostende
 1 FAMS @F34@
 1 NOTE A witloof (Belgian-endive / “wit goud”) farmer — the family grew the famous chicory around Zaventem (Vlaams-Brabant). René and Anna later moved to the coast (Middelkerke), and René died in Oostende (after 2000). His Janssens ancestry is not yet cracked — but NOT because of any hard privacy barrier. Belgium's civil-record publicity rule is graduated (births open at 100 yrs, marriages 75, deaths 50) AND, crucially, a direct descendant may obtain a relative's birth/marriage/death act at any age, so the documents that name René's parents ARE obtainable by the family. The reason online searching hasn't found him is mundane: (a) 'Janssens' is one of Belgium's commonest surnames, so with no anchor (his birth village or year, or a parent's name) his records can't be told apart from thousands of others; and (b) no descendant has published him in an online tree, and his post-2000 coast death notice isn't in the digitised obituary aggregators (inmemoriam, ingedachten, DELA all checked, July 2026). CONTRAST with his wife's side: Anna Van Craenenbroeck's Zaventem family WAS located (see anna_vc) because that surname is rare and village-specific. UNLOCKS for René: his birth village + approx year (enough to request the birth act and pull his parents), a bidprentje, or a relative's memory of his parents' names.
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 1
 0 @I271@ INDI
 1 REFN renee
@@ -4204,7 +4201,7 @@
 2 PLAC Leuven
 1 FAMC @F84@
 1 NOTE Born in Leuven, 21 June 2017 — the elder of the two youngest, and Léon's sister. She and Léon are what this tree was built for. The two of them were previously held in a single entry, "Renée & Léon Bundervoet"; split apart so each has their own dates.
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 1
 0 @I272@ INDI
 1 REFN rita_dk
@@ -4215,7 +4212,7 @@
 1 SEX F
 1 FAMC @F112@
 1 NOTE Roland's sister — daughter of Gustaaf Dekeyser & Simonne Vandewalle, likely born in the early-to-mid 1940s (England or Oostende). Surname also seen as Dekeyster. Her birth record is another route to confirm the parents Gustaaf × Simonne.
-1 SOUR @S26@
+1 SOUR @S16@
 2 QUAY 1
 0 @I273@ INDI
 1 REFN roegiers
@@ -4265,7 +4262,7 @@
 1 FAMS @F79@
 1 FAMC @F112@
 1 NOTE Born in Tottenham, London in 1943 while his family were WWII refugees (Tottenham was then in the Edmonton registration district); an English registrar mis-wrote the Flemish name. Buried at Stene, Oostende. His 1943 London birth certificate is the key record to confirm his father Gustaaf and mother Simonne Vandewalle — and, if his father died in the war, Simonne likely returned to Oostende a widow with Roland and his sister.
-1 SOUR @S41@
+1 SOUR @S36@
 2 QUAY 1
 0 @I276@ INDI
 1 REFN roland_sis
@@ -4273,11 +4270,10 @@
 1 NAME Roland’s sister (name unknown)
 1 SEX F
 1 BIRT
-2 DATE ABT 1940
-2 PLAC s
+2 DATE BET 1940 AND 1949
 1 FAMC @F112@
 1 NOTE Family recalls Roland had a sister; her name isn’t known yet. Likely born ~1940–45 (England or Oostende) — her birth record would be another route to confirm the parents Gustaaf & Simonne.
-1 SOUR @S26@
+1 SOUR @S16@
 2 QUAY 1
 0 @I277@ INDI
 1 REFN rolandus_govaert
@@ -4343,7 +4339,7 @@
 1 FAMS @F135@
 1 FAMC @F12@
 1 NOTE Ronny’s mother; predeceased Marcel. Her Van Iseghem line traces back through Oostende to the 1780s — see her father Joannes and beyond.
-1 SOUR @S37@
+1 SOUR @S32@
 2 QUAY 1
 0 @I282@ INDI
 1 REFN sancha
@@ -4356,7 +4352,7 @@
 2 DATE 9 FEB 1967
 1 FAMC @F79@
 1 NOTE Spouse (no record of their own): Christophe Develder
-1 SOUR @S23@
+1 SOUR @S3@
 2 QUAY 1
 0 @I283@ INDI
 1 REFN segerius_bundervoet
@@ -4375,7 +4371,7 @@
 1 NOTE Source detail: Geneanet glorieuxp/paulderidder; death act: Registre des décès d'Evergem 1668-1716 (search.arch.be)
 2 CONT
 2 CONT Father of Joannes Bundervoet (~1637). His death is in the Evergem death register (1669). Father Livinus Bundervoet.
-1 SOUR @S22@
+1 SOUR @S20@
 2 QUAY 3
 0 @I284@ INDI
 1 REFN shaun
@@ -4389,7 +4385,7 @@
 1 FAMS @F84@
 1 FAMC @F75@
 1 NOTE MSc VUB (ETRO); works at KBC. Born 19 January 1988.
-1 SOUR @S17@
+1 SOUR @S16@
 2 QUAY 3
 0 @I285@ INDI
 1 REFN silvester_v
@@ -4472,7 +4468,7 @@
 1 NOTE Source detail: Family (confirmed maiden name). Oostende candidates: Simonne Florida Vandewalle 1913 & Simonne Augusta 1914 — West-Vlaanderen civil birth acts (Geneanet)
 2 CONT
 2 CONT RESEARCH NOTE. Vandewalle is one of the most common West-Flemish surnames, so isolating her needs a linking record. Two strong Oostende candidates of the right age: (a) Simonne Florida Vandewalle, b. 6 Jun 1913 Oostende — parents Petrus Franciscus Antonius Vandewalle (1884) & Magdalena Clementia Willaert (1888); grandparents Franciscus Eduardus Vandewalle × Mathildis Vandierendounck and Emilius Willaert (1856) × Maria Lauwereins (1856–1893); (b) Simonne Augusta Vandewalle, b. 1914 Oostende. Neither is yet tied to Gustaaf. Decisive record: the Gustaaf × Simonne marriage (Oostende ~1938–40, or England 1940–43) — it would name her parents — or Roland’s 1943 UK birth (mother’s maiden name).
-1 SOUR @S41@
+1 SOUR @S36@
 2 QUAY 1
 0 @I290@ INDI
 1 REFN sonja_dv
@@ -4482,7 +4478,7 @@
 2 SURN Devriendt
 1 SEX F
 1 FAMC @F117@
-1 SOUR @S20@
+1 SOUR @S11@
 2 QUAY 1
 0 @I291@ INDI
 1 REFN sophia_vh
@@ -4525,7 +4521,7 @@
 2 PLAC Zande
 1 FAMS @F123@
 1 NOTE Originated in Kortemark; died at Zande. Father of Mattheus Ramon; married Joanna Truant.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @I294@ INDI
 1 REFN theresia_robbe
@@ -4555,7 +4551,7 @@
 2 DATE 29 MAR 1960
 1 FAMS @F48@
 1 FAMC @F134@
-1 SOUR @S19@
+1 SOUR @S18@
 2 QUAY 1
 0 @I296@ INDI
 1 REFN thiery_f
@@ -4565,12 +4561,11 @@
 2 SURN Thumas
 1 SEX M
 1 BIRT
-2 DATE ABT 1930
-2 PLAC s
+2 DATE BET 1930 AND 1939
 1 FAMS @F134@
 1 FAMC @F80@
 1 NOTE Named by the family. His father is almost certainly Jean Thumas (1907–1995), who stayed in Kraainem — and Jean’s wife was Marie Louise Crabbé, so she is François’s mother. This father-link falls inside the 100-year privacy window and is the only remaining inference. Everything above it is documented: Jean → J.B. Georgius (1876) → Georges Carolus Josephus (1836) → the Grez-Doiceau Thumas trunk back to 1656.
-1 SOUR @S26@
+1 SOUR @S16@
 2 QUAY 1
 0 @I297@ INDI
 1 REFN vandenbemden
@@ -4591,7 +4586,7 @@
 1 NOTE Source detail: Geneanet (jswaelens); her 1902 Kraainem marriage act
 2 CONT
 2 CONT A seamstress; married J.B. Georgius Thumas in Kraainem in 1902. Her parents are named in that marriage act. Several of her children died in infancy.
-1 SOUR @S42@
+1 SOUR @S18@
 2 QUAY 3
 0 @I298@ INDI
 1 REFN victoria_engelsen
@@ -4621,7 +4616,7 @@
 2 DATE 1818
 1 FAMS @F95@
 1 NOTE Second wife of Engel Antonius Vincke; mother of Lucien Vincke (1840).
-1 SOUR @S14@
+1 SOUR @S13@
 2 QUAY 3
 0 @I300@ INDI
 1 REFN willem_sabbe_o
@@ -4652,8 +4647,7 @@
 2 SURN Sabbe
 1 SEX M
 1 BIRT
-2 DATE ABT 1560
-2 PLAC s
+2 DATE BET 1560 AND 1569
 1 FAMS @F71@
 1 FAMC @F137@
 1 NOTE Father of Petrus Sabbe (d.1652). Son of Willem Sabbe (~1530-1581); brother of Michiel Sabbe (b.1557), who witnessed Petrus's 1616 marriage.
@@ -4672,7 +4666,7 @@
 1 FAMS @F117@
 1 FAMC @F83@
 1 NOTE Born before her parents wed and legitimized by their 1919 marriage; married Marcel Devriendt in 1937. Born 11 October — the same day-and-month as her father's birthday.
-1 SOUR @S12@
+1 SOUR @S11@
 2 QUAY 3
 0 @F1@ FAM
 1 HUSB @I260@
@@ -5535,7 +5529,7 @@
 1 HUSB @I253@
 1 CHIL @I300@
 0 @S1@ SOUR
-1 TITL Fauconier tree & Bauwens “Bundervoet-Vermeulen” parenteel — Evergem/Oostende parish & civil records
+1 TITL Fauconier / Bauwens "Bundervoet–Vermeulen" parenteel
 0 @S2@ SOUR
 1 TITL isavdw — Rijksarchief-sourced, with scan links
 0 @S3@ SOUR
@@ -5551,71 +5545,59 @@
 0 @S8@ SOUR
 1 TITL stechec (Christian Vanstechelman)
 0 @S9@ SOUR
-1 TITL Christian Vanstechelman (stechec) tree, Geneanet — coastal West-Vlaanderen records
-0 @S10@ SOUR
 1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann
-0 @S11@ SOUR
+0 @S10@ SOUR
 1 TITL stefanieschil; Vrijwilligers RAB
-0 @S12@ SOUR
+0 @S11@ SOUR
 1 TITL wernero (Werner Osaer)
-0 @S13@ SOUR
+0 @S12@ SOUR
 1 TITL cisken — the Zaventem Van Craenenbroeck trunk; The family itself
-0 @S14@ SOUR
+0 @S13@ SOUR
 1 TITL bartvanhooren (Bart Vanhooren)
-0 @S15@ SOUR
+0 @S14@ SOUR
 1 TITL m2155
-0 @S16@ SOUR
+0 @S15@ SOUR
 1 TITL wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Rijksarchief AGATHA — Belgian State Archives search robot
-0 @S17@ SOUR
-1 TITL Family knowledge (provided by the family)
-0 @S18@ SOUR
-1 TITL Geneanet; Ancestry
-0 @S19@ SOUR
-1 TITL jswaelens tree, Geneanet + Grez-Doiceau/Kraainem civil records (deep line); family for the recent generations
-0 @S20@ SOUR
-1 TITL Werner Osaer (wernero) tree, Geneanet; West-Vlaanderen acts; family
-0 @S21@ SOUR
-1 TITL 1960dirk (Dirk Teerlinck)
-0 @S22@ SOUR
-1 TITL paulderidder; glorieuxp
-0 @S23@ SOUR
-1 TITL Stef Paelinck (stefpaelinck) tree, Geneanet; Oostende & Hamme civil records; family
-0 @S24@ SOUR
-1 TITL wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist
-0 @S25@ SOUR
-1 TITL FamilySearch
-0 @S26@ SOUR
+0 @S16@ SOUR
 1 TITL The family itself
-0 @S27@ SOUR
-1 TITL Rijksarchief AGATHA — Belgian State Archives search robot; FamilySearch; Geneanet
-0 @S28@ SOUR
-1 TITL Stef Paelinck (stefpaelinck) tree, Geneanet — Belsele / Sint-Niklaas civil & parish records
-0 @S29@ SOUR
-1 TITL kathrynann; Ancestry
-0 @S30@ SOUR
-1 TITL stefpaelinck (Stef Paelinck); The family itself
-0 @S31@ SOUR
-1 TITL stefanieschil; Rijksarchief AGATHA — Belgian State Archives search robot
-0 @S32@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; Familiekunde Vlaanderen (VVF)
-0 @S33@ SOUR
-1 TITL marcelcroon (Marcel Croon); jswaelens
-0 @S34@ SOUR
-1 TITL stefpaelinck (Stef Paelinck); Rijksarchief AGATHA — Belgian State Archives search robot
-0 @S35@ SOUR
-1 TITL paulderidder; glorieuxp; dvandurme1; mjovdl
-0 @S36@ SOUR
-1 TITL paulderidder; glorieuxp; mjovdl
-0 @S37@ SOUR
-1 TITL bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
-0 @S38@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; 1960dirk (Dirk Teerlinck)
-0 @S39@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; Rijksarchief AGATHA — Belgian State Archives search robot
-0 @S40@ SOUR
-1 TITL paulderidder
-0 @S41@ SOUR
-1 TITL Geneanet; The family itself
-0 @S42@ SOUR
+0 @S17@ SOUR
+1 TITL Geneanet; Ancestry
+0 @S18@ SOUR
 1 TITL jswaelens
+0 @S19@ SOUR
+1 TITL 1960dirk (Dirk Teerlinck)
+0 @S20@ SOUR
+1 TITL paulderidder; glorieuxp
+0 @S21@ SOUR
+1 TITL wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist
+0 @S22@ SOUR
+1 TITL Édouard Dekeyser's 1946 Oostende remarriage act (akte nr. 81); FamilySearch
+0 @S23@ SOUR
+1 TITL Rijksarchief AGATHA — Belgian State Archives search robot; FamilySearch; Geneanet
+0 @S24@ SOUR
+1 TITL kathrynann; Ancestry
+0 @S25@ SOUR
+1 TITL stefpaelinck (Stef Paelinck); The family itself
+0 @S26@ SOUR
+1 TITL stefanieschil; Rijksarchief AGATHA — Belgian State Archives search robot
+0 @S27@ SOUR
+1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; Familiekunde Vlaanderen (VVF)
+0 @S28@ SOUR
+1 TITL marcelcroon (Marcel Croon); jswaelens
+0 @S29@ SOUR
+1 TITL stefpaelinck (Stef Paelinck); Rijksarchief AGATHA — Belgian State Archives search robot
+0 @S30@ SOUR
+1 TITL paulderidder; glorieuxp; dvandurme1; mjovdl
+0 @S31@ SOUR
+1 TITL paulderidder; glorieuxp; mjovdl
+0 @S32@ SOUR
+1 TITL bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
+0 @S33@ SOUR
+1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; 1960dirk (Dirk Teerlinck)
+0 @S34@ SOUR
+1 TITL isavdw — Rijksarchief-sourced, with scan links; Rijksarchief AGATHA — Belgian State Archives search robot
+0 @S35@ SOUR
+1 TITL paulderidder
+0 @S36@ SOUR
+1 TITL Geneanet; The family itself
 0 TRLR

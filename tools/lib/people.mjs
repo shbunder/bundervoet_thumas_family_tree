@@ -2,7 +2,6 @@
 // one definition of what a person is rather than four copies drifting apart.
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { parseFrontmatter } from './frontmatter.mjs';
 
@@ -73,26 +72,29 @@ export function displayDates(p) {
 }
 
 // ---------- loading ----------
+export const SITE = path.join(ROOT, 'site');
+
+const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+
+// data/ holds facts; site/ holds the words the page shows. Keeping them apart is
+// what stops a heading or a label being mistaken for something a record asserts.
+//
+// None of this is executable any more. It used to be JavaScript run in a vm
+// sandbox, because the browser loaded the files directly; the browser now loads a
+// generated bundle instead, so the source can be plain JSON that any tool — or any
+// agent with `jq` — can read without a JavaScript engine.
 export function loadConfig() {
-  let captured;
-  const rec = v => (captured = v);
-  const ctx = vm.createContext({
-    FamilyTree: { person: rec, roster: rec, meta: rec, branches: rec, lineages: rec, groups: rec },
-  });
-  const read = file => {
-    captured = undefined;
-    vm.runInContext(fs.readFileSync(path.join(DATA, file), 'utf8'), ctx, { filename: file });
-    return captured;
-  };
+  const meta = readJson(path.join(DATA, 'meta.json'));
+  const site = readJson(path.join(SITE, 'labels.json'));
   return {
-    // The roster is the directory listing. It used to be a hand-kept list in
-    // data/people.js that had to agree with the files on disk — 302 ids saying
-    // what `ls` already said, and one more thing to forget when adding a person.
     roster: onDisk().sort(),
-    meta: read('meta.js'),
-    branches: read('branches.js'),
-    lineages: read('lineages.js'),
-    groups: read('groups.js'),
+    meta,
+    // The explorer opens on the first root; a forest just has more of them.
+    root: meta.roots[0],
+    branches: readJson(path.join(DATA, 'branches.json')).branches,
+    lineages: readJson(path.join(DATA, 'lineages.json')).lineages,
+    site,
+    groups: site.groups,
   };
 }
 

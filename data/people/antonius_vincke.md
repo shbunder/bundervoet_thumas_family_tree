@@ -2,8 +2,7 @@
 id: antonius_vincke
 name: Antonius Vincke
 birth:
-  date: ~1770
-  place: s
+  date: 1770..1779
 confidence: doc
 branch: Bundervoet
 line: van-iseghem
