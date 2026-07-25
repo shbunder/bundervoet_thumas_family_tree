@@ -4,7 +4,7 @@ FamilyTree.person({
   dates: "b. 12 Aug 1860 · Oostende",
   born: "12 Aug 1860 Oostende",
   confidence: "doc",
-  role: "werkmeid & herbergierster (maid/innkeeper)",
+  occupation: "werkmeid & herbergierster (maid/innkeeper)",
   branch: "Devriendt",
   father: "carolus_ramon",
   mother: "cornelia_verkouille",

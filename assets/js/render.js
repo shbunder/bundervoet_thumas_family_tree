@@ -22,7 +22,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     if (!id) return '<div class="node unk"><div class="nm">Unknown</div><div class="dt">to research</div></div>';
     const p = people[id];
     const c = conf(id);
-    const label = focus ? kin.relationship(id) || 'in focus' : role || kin.relationship(id) || p.role || '';
+    const label = focus ? kin.relationship(id) || 'in focus' : role || kin.relationship(id) || p.occupation || '';
     const climb = !focus && c !== 'unk' ? `<span class="climb">climb ${arrow}</span>` : '';
     return (
       `<div class="node ${focus ? 'focus ' : ''}${c}" data-id="${esc(id)}">` +
@@ -68,7 +68,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
   function subtitleFor(id) {
     const p = people[id];
     const rel = kin.relationship(id);
-    return [rel, p.dates, p.role && p.role !== rel ? p.role : ''].filter(Boolean).join(' · ');
+    return [rel, p.dates, p.occupation, p.nickname && `“${p.nickname}”`].filter(Boolean).join(' · ');
   }
 
   // ---------- hover card ----------
@@ -338,7 +338,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const personRow = id => {
       const p = people[id];
       const rel = kin.relationship(id);
-      const extra = [rel, p.role && p.role !== rel ? p.role : ''].filter(Boolean).join(' · ');
+      const extra = [rel, p.occupation, p.nickname && `“${p.nickname}”`].filter(Boolean).join(' · ');
       return (
         `<div class="p" data-id="${esc(id)}" style="cursor:pointer"><b>${esc(p.name)}</b>` +
         (p.dates ? ` <span class="d">— ${esc(p.dates)}</span>` : '') +

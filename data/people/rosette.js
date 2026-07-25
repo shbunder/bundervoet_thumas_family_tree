@@ -1,7 +1,6 @@
 FamilyTree.person({
   id: "rosette",
   name: "Rosette Van Iseghem",
-  dates: "Marcel’s 1st wife · Ronny’s mother",
   confidence: "fam",
   branch: "Bundervoet",
   father: "joannes_vi",

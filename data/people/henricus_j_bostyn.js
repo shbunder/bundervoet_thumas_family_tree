@@ -4,7 +4,7 @@ FamilyTree.person({
   dates: "b. 18 Dec 1841 · Varsenare",
   born: "18 Dec 1841 · Varsenare",
   confidence: "doc",
-  role: "herbergier (innkeeper)",
+  occupation: "herbergier (innkeeper)",
   branch: "Bundervoet",
   father: "henr_jos_bostin",
   mother: "anna_perquy",

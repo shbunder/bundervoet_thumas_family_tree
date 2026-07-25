@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1842 Evergem",
   died: "1879 Evergem",
   confidence: "doc",
-  role: "farm woman",
+  occupation: "farm woman",
   branch: "Bundervoet",
   spouses: [
     { id: "bernardus", name: "Bernardus Bundervoet", detail: "1875" },

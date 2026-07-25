@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1808",
   died: "1887 Sleidinge",
   confidence: "doc",
-  role: "farm woman",
+  occupation: "farm woman",
   branch: "Bundervoet",
   spouses: [
     { id: "judocus", name: "Judocus Bundervoet", detail: "1834" },

@@ -4,7 +4,6 @@ FamilyTree.person({
   dates: "b. 19 Jan 1988",
   born: "19 Jan 1988",
   confidence: "doc",
-  role: "Father",
   father: "ronny",
   mother: "cosette",
   spouses: [

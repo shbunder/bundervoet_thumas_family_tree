@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1837",
   died: "1900 · Evergem",
   confidence: "doc",
-  role: "farmer, innkeeper, shopkeeper",
+  occupation: "farmer, innkeeper, shopkeeper",
   branch: "Bundervoet",
   father: "judocus",
   mother: "roegiers",

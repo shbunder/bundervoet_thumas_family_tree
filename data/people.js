@@ -1,6 +1,7 @@
 // The people to load. Add an id here when you add a person file.
 FamilyTree.roster([
-  "kids",
+  "renee",
+  "leon",
   "shaun",
   "colin",
   "dorien",

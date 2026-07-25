@@ -4,7 +4,6 @@ FamilyTree.person({
   dates: "b. 10 Mar 1961",
   born: "10 Mar 1961",
   confidence: "fam",
-  role: "Grandmother",
   branch: "Thumas",
   father: "rene_j",
   mother: "anna_vc",

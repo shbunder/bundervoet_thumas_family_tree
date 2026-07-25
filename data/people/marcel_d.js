@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1914 Stene",
   died: "2000 Oostende",
   confidence: "doc",
-  role: "smid (blacksmith)",
+  occupation: "smid (blacksmith)",
   branch: "Devriendt",
   father: "camiel_d",
   mother: "declercq",

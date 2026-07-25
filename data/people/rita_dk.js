@@ -3,7 +3,6 @@ FamilyTree.person({
   name: "Rita De Keyser",
   sex: "f",
   confidence: "fam",
-  role: "Roland's sister",
   branch: "DeKeyser",
   father: "gustaaf",
   mother: "simonne",

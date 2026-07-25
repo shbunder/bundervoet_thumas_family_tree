@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "25 Jul 1861 Nieuwkerken-Waas",
   died: "31 Dec 1928 Sint-Niklaas",
   confidence: "doc",
-  role: "huishoudster (housekeeper)",
+  occupation: "huishoudster (housekeeper)",
   branch: "Paelinck",
   father: "carolus_vb",
   mother: "martinet",

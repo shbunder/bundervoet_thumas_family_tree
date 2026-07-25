@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "7 Mar 1649 · Oostkamp",
   died: "1701",
   confidence: "doc",
-  role: "schepen van Oostkamp (alderman)",
+  occupation: "schepen van Oostkamp (alderman)",
   branch: "Bundervoet",
   father: "marinus_vannieuwenhuyse",
   mother: "cornelia_govaert",

@@ -1,6 +1,7 @@
 // Root of the tree, confidence labels, footer text.
 FamilyTree.meta({
-  root: "kids",
+  root: "renee",
+  roots: ["renee", "leon"],
   defaultSource: "Family knowledge (provided by the family)",
   confidenceLabels: {
     doc: "Documented record",

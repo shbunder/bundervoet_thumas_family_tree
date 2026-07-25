@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "26 Sep 1876 Kraainem",
   died: "23 Mar 1944 Brussel",
   confidence: "doc",
-  role: "fabriekwerker & gemeenteschepen (factory worker & alderman)",
+  occupation: "fabriekwerker & gemeenteschepen (factory worker & alderman)",
   branch: "Thumas",
   father: "georges_cj",
   mother: "bossin",

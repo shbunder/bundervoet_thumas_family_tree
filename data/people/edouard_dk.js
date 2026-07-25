@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "12 Nov 1876 · Hamme (Oost-Vlaanderen)",
   died: "8 Sep 1951 Oostende",
   confidence: "doc",
-  role: "werkman",
+  occupation: "werkman",
   branch: "DeKeyser",
   father: "desiderius_dk",
   mother: "mtheresia_vandenbroeck",

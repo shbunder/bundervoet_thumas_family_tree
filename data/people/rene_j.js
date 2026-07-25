@@ -4,7 +4,6 @@ FamilyTree.person({
   dates: "† Oostende, after 2000",
   died: "Oostende, after 2000",
   confidence: "fam",
-  role: "Chris & Eric’s father",
   branch: "Thumas",
   spouses: [
     { id: "anna_vc", name: "Anna Van Craenenbroeck" },

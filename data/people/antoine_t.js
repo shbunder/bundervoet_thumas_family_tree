@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "11 Nov 1656 Biez",
   died: "25 Jan 1707 Grez-Doiceau",
   confidence: "doc",
-  role: "bailli (bailiff) van Piétrebais",
+  occupation: "bailli (bailiff) van Piétrebais",
   branch: "Thumas",
   spouses: [
     { id: "daix", name: "Dieudonnée Daix", detail: "30 Nov 1687" },

@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "6 Jan 1905 Oostende",
   died: "11 Mar 1980 Oostende",
   confidence: "sup",
-  role: "labourer",
+  occupation: "labourer",
   branch: "Bundervoet",
   father: "petrus_f",
   mother: "augusta",

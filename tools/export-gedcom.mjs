@@ -37,7 +37,7 @@ const branches = read('branches.js');
 const people = {};
 for (const id of ids) people[id] = read(`people/${id}.js`);
 
-const report = { unparsedDates: [], skippedRoles: [], occupations: 0, notes: [] };
+const report = { unparsedDates: [], occupations: 0, notes: [] };
 
 // ---------- names ----------
 // Flemish and Walloon surnames carry particles — "Van den Broucke", "De Keyser" —
@@ -150,20 +150,13 @@ function parseMarriage(detail) {
 }
 
 // ---------- occupations ----------
-// `role` is overloaded in the data: some records use it for an occupation
-// ("werkman", "metser (mason)"), others for a relationship label ("Uncle
-// (Shaun's brother)") or a nickname. Only the first kind is an OCCU; calling a
-// relationship an occupation would be stating something the records never said.
-const NOT_AN_OCCUPATION = /\b(father|mother|uncle|aunt|brother|sister|son|daughter|grand(father|mother)|cousin|niece|nephew|wife|husband|great-)\b|['’]s\b|^["“]|^born\b/i;
+// `occupation` means only an occupation, so this is a straight copy. It used to
+// be a guess: the old `role` field mixed occupations with relationship labels and
+// nicknames, and the exporter had to sort them out with a regex.
 const occupationOf = id => {
-  const role = people[id].role;
-  if (!role) return null;
-  if (NOT_AN_OCCUPATION.test(role)) {
-    report.skippedRoles.push(`${id}: "${role}"`);
-    return null;
-  }
-  report.occupations++;
-  return role;
+  const occ = people[id].occupation;
+  if (occ) report.occupations++;
+  return occ || null;
 };
 
 // ---------- sex ----------
@@ -276,8 +269,10 @@ for (const id of ids) {
     putText(1, 'NAME', `${split.given} /${split.surname}/`);
     putText(2, 'GIVN', split.given);
     putText(2, 'SURN', split.surname);
+    if (p.nickname) putText(2, 'NICK', p.nickname);
   } else {
     putText(1, 'NAME', p.name);
+    if (p.nickname) putText(2, 'NICK', p.nickname);
   }
 
   put(1, 'SEX', sex[id] ? sex[id].toUpperCase() : 'U');
@@ -443,9 +438,4 @@ if (report.unparsedDates.length) {
 if (report.notes.length) {
   console.log(`\nParser debris dropped (${report.notes.length}):`);
   for (const n of report.notes) console.log('  ' + n);
-}
-if (report.skippedRoles.length) {
-  console.log(`\n"role" values that are not occupations, so not exported as OCCU (${report.skippedRoles.length}):`);
-  for (const r of report.skippedRoles.slice(0, 12)) console.log('  ' + r);
-  if (report.skippedRoles.length > 12) console.log(`  …and ${report.skippedRoles.length - 12} more`);
 }

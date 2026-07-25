@@ -96,6 +96,9 @@ Invariants:
   child proves a couple** (a record with `father: A`, `mother: B` obliges A and B to
   list each other). The validator enforces both; they are what let the tree be built
   downwards without losing branches.
+- `occupation` and `nickname` hold only those things. A relationship is never a field:
+  it is a fact about a *pair*, so it is derived from the links. Writing "Ronny's sister"
+  into a record puts a second, un-checkable copy of the tree in the prose.
 - `sex` is `"f"`/`"m"`, optional, and only needed for people who are nobody's parent
   (being a `father`/`mother` already settles it). Record it from what the source says —
   a note calling someone "Roland's sister", a role of "wife" — never from a forename.

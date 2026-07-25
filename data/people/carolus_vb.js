@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "2 Feb 1819 Nieuwkerken-Waas",
   died: "2 Jun 1892 Sint-Niklaas",
   confidence: "doc",
-  role: "arbeider (labourer)",
+  occupation: "arbeider (labourer)",
   branch: "Paelinck",
   spouses: [
     { id: "martinet", name: "Maria Ludovica Martinet", detail: "Nieuwkerken-Waas, 1 Feb 1860" },

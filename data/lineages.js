@@ -5,7 +5,7 @@
 FamilyTree.lineages([
   {
     key: "Bundervoet",
-    head: "kids",
+    head: "renee",
     caption: "Father's line → Evergem farmers, then the Oostende docks. Documented to c.1560.",
     origin: "Probably a place-name: 'the ford by the bunder' — a stream-crossing (voorde, spelled -voet in Flemish dialect, as in Dievoet ← Dievoort) beside a field called a bunder, an old land measure of roughly one hectare. A locational byname that hardened into a surname; still concentrated in its Evergem/Ghent cradle, exactly where our Petrus Bundervoet (~1560) lived.",
   },

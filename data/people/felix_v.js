@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "13 Feb 1800 Zevekote",
   died: "9 Nov 1869 Mariakerke",
   confidence: "doc",
-  role: "herbergier (innkeeper)",
+  occupation: "herbergier (innkeeper)",
   branch: "Vanstechelman",
   father: "pieterjacobus_v",
   mother: "carolina_vh",

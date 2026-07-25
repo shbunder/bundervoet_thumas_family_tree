@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "12 Jan 1857 Oostende",
   died: "bef. 1919 · Oostende",
   confidence: "doc",
-  role: "werkman (labourer)",
+  occupation: "werkman (labourer)",
   branch: "Devriendt",
   father: "francl_s",
   mother: "morree",

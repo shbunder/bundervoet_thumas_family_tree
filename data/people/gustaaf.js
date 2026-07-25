@@ -4,7 +4,6 @@ FamilyTree.person({
   dates: "b. ~1920s · Oostende",
   born: "~1920s · Oostende",
   confidence: "sup",
-  role: "Roland’s father",
   branch: "DeKeyser",
   father: "jerome_dk",
   mother: "leonie_p",

@@ -4,7 +4,7 @@ FamilyTree.person({
   dates: "15 Nov 1820 Belsele – ?",
   born: "15 Nov 1820 Belsele",
   confidence: "doc",
-  role: "huisvrouw (housewife)",
+  occupation: "huisvrouw (housewife)",
   branch: "Paelinck",
   spouses: [
     { id: "joannesf_p", name: "Joannes Franciscus Paelinck" },

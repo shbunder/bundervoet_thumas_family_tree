@@ -6,7 +6,6 @@ FamilyTree.person({
   born: "1920",
   died: "1972",
   confidence: "doc",
-  role: "Jerome & Léonie’s recorded son",
   branch: "DeKeyser",
   father: "jerome_dk",
   mother: "leonie_p",

@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "~1575",
   died: "13 Feb 1641 · Oostkamp",
   confidence: "doc",
-  role: "kerkmeester & dischmeester (churchwarden / poor-relief master)",
+  occupation: "kerkmeester & dischmeester (churchwarden / poor-relief master)",
   branch: "Bundervoet",
   father: "guillielmus_vanrenterghem",
   mother: "barbara_wittenheyns",

@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "~1565 · Oostkamp",
   died: "28 Jul 1636 · Oostkamp",
   confidence: "doc",
-  role: "koster / landman (church sexton / farmer)",
+  occupation: "koster / landman (church sexton / farmer)",
   branch: "Bundervoet",
   father: "simon_vandewalle_1530",
   mother: "joanna_wittenheyns",

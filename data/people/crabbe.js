@@ -2,7 +2,6 @@ FamilyTree.person({
   id: "crabbe",
   name: "Marie Louise Crabbé",
   confidence: "sup",
-  role: "Jean’s wife — François’s mother",
   branch: "Thumas",
   spouses: [
     { id: "jean_t", name: "Jean Thumas" },

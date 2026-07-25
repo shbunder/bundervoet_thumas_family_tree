@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "14 Mar 1744 Grez-Doiceau",
   died: "20 Nov 1808 Grez-Doiceau",
   confidence: "doc",
-  role: "menuisier (schrijnwerker / carpenter)",
+  occupation: "menuisier (schrijnwerker / carpenter)",
   branch: "Thumas",
   father: "jeanlambert_t",
   mother: "leclercq_t",

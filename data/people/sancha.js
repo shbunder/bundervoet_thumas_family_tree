@@ -5,7 +5,6 @@ FamilyTree.person({
   dates: "b. 9 Feb 1967",
   born: "9 Feb 1967",
   confidence: "fam",
-  role: "Great-aunt (Cosette’s sister)",
   branch: "DeKeyser",
   father: "roland",
   mother: "huguette",

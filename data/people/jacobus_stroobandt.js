@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1 Sep 1782 · Oostkamp",
   died: "24 Jun 1821 · Oostkamp",
   confidence: "doc",
-  role: "schoenmaker (shoemaker)",
+  occupation: "schoenmaker (shoemaker)",
   branch: "Bundervoet",
   father: "adrianus_stroobandt",
   mother: "anna_m_vanacker",

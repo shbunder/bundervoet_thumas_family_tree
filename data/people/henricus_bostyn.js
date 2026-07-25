@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "16 Sep 1869 Varsenare",
   died: "11 Nov 1947 Oostende",
   confidence: "doc",
-  role: "metser (mason)",
+  occupation: "metser (mason)",
   branch: "Bundervoet",
   father: "henricus_j_bostyn",
   mother: "mathilde_desmet",

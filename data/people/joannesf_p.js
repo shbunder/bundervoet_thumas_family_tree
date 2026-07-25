@@ -4,7 +4,7 @@ FamilyTree.person({
   dates: "b. 22 Nov 1809 · Lokeren",
   born: "22 Nov 1809 Lokeren",
   confidence: "doc",
-  role: "arbeider (labourer)",
+  occupation: "arbeider (labourer)",
   branch: "Paelinck",
   father: "janbaptist_p",
   mother: "joanna_va",

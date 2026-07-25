@@ -4,7 +4,6 @@ FamilyTree.person({
   sex: "m",
   dates: "",
   confidence: "fam",
-  role: "Rosette’s brother",
   branch: "Bundervoet",
   father: "joannes_vi",
   mother: "adrienne_dv",

@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "19 Nov 1858 Belsele",
   died: "28 Aug 1912 Sint-Niklaas",
   confidence: "doc",
-  role: "leurder (itinerant pedlar)",
+  occupation: "leurder (itinerant pedlar)",
   branch: "Paelinck",
   father: "joannesf_p",
   mother: "rosalia_w",

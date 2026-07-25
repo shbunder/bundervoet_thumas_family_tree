@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "11 Oct 1836 Oostende",
   died: "6 Apr 1910 Oostende",
   confidence: "doc",
-  role: "werkster (charwoman)",
+  occupation: "werkster (charwoman)",
   branch: "Devriendt",
   father: "livinus_verkouille",
   mother: "maria_malfait",

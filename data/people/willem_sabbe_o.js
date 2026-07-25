@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "~1530 · Harelbeke (Bavikhove)",
   died: "1581 · Wielsbeke (Ooigem)",
   confidence: "doc",
-  role: "landbouwer (farmer)",
+  occupation: "landbouwer (farmer)",
   branch: "Bundervoet",
   father: "petrus_sabbe_1504",
   spouses: [

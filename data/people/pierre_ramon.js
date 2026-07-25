@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "23 Feb 1812 Mariakerke",
   died: "1 Oct 1858 Oostende",
   confidence: "doc",
-  role: "tuinier & zeeman (gardener/seaman)",
+  occupation: "tuinier & zeeman (gardener/seaman)",
   branch: "Devriendt",
   father: "henricus_j_ramon",
   mother: "lucia_steenkiste",

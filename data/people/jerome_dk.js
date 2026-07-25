@@ -5,7 +5,6 @@ FamilyTree.person({
   born: "14 Jun 1897 Oostende",
   died: "1972 Oostende",
   confidence: "doc",
-  role: "Roland's grandfather",
   branch: "DeKeyser",
   father: "edouard_dk",
   mother: "louise_bocklandt",

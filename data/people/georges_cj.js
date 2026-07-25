@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "15 Sep 1836 Grez-Doiceau",
   died: "26 Oct 1922 Sint-Stevens-Woluwe",
   confidence: "doc",
-  role: "landbouwer & herbergier (farmer & innkeeper)",
+  occupation: "landbouwer & herbergier (farmer & innkeeper)",
   branch: "Thumas",
   father: "georges2_t",
   mother: "joostens",

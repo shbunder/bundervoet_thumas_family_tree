@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "20 May 1771 Destelbergen",
   died: "29 May 1843 Lokeren",
   confidence: "doc",
-  role: "dagloner (day labourer)",
+  occupation: "dagloner (day labourer)",
   branch: "Paelinck",
   father: "apolonius_p",
   mother: "christina_vm",

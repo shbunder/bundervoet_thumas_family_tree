@@ -2,7 +2,7 @@
 FamilyTree.groups([
   {
     title: "The children & parents",
-    people: ["kids", "shaun", "colin", "dorien", "bart"],
+    people: ["renee", "leon", "shaun", "colin", "dorien", "bart"],
   },
   {
     title: "Bundervoet line (father)",

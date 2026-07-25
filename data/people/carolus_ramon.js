@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "29 Oct 1835 Oostende",
   died: "4 Apr 1883 · op zee (lost at sea)",
   confidence: "doc",
-  role: "visser (fisherman)",
+  occupation: "visser (fisherman)",
   branch: "Devriendt",
   father: "pierre_ramon",
   mother: "joanna_daneel",

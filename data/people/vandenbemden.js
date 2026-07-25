@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "15 Jun 1882 Sint-Stevens-Woluwe",
   died: "29 Apr 1948 Kraainem",
   confidence: "doc",
-  role: "naaister (seamstress)",
+  occupation: "naaister (seamstress)",
   branch: "Thumas",
   father: "hendrik_vdb",
   mother: "coekelberghs",

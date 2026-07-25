@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "28 Feb 1854 Mariakerke",
   died: "26 Nov 1927 Mariakerke",
   confidence: "doc",
-  role: "metser (mason)",
+  occupation: "metser (mason)",
   branch: "Vanstechelman",
   father: "felix_v",
   mother: "sophiavdb",

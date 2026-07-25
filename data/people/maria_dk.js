@@ -6,7 +6,6 @@ FamilyTree.person({
   born: "1902",
   died: "2002 · Oostende",
   confidence: "doc",
-  role: "Jerome’s sister",
   branch: "DeKeyser",
   father: "edouard_dk",
   mother: "louise_bocklandt",

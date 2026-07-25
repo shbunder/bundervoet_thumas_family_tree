@@ -5,7 +5,6 @@ FamilyTree.person({
   born: "23 Oct 1907 Kraainem",
   died: "22 Mar 1995 Kraainem",
   confidence: "doc",
-  role: "stayed in Kraainem — the connecting grandfather",
   branch: "Thumas",
   father: "jbgeorgius",
   mother: "vandenbemden",

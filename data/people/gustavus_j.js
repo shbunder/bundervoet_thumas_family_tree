@@ -5,7 +5,6 @@ FamilyTree.person({
   dates: "b. 19 May 1899 · Oostende",
   born: "19 May 1899 · Oostende",
   confidence: "doc",
-  role: "Roland’s great-uncle",
   branch: "DeKeyser",
   father: "edouard_dk",
   mother: "louise_bocklandt",

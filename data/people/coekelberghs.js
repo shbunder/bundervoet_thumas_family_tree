@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1848",
   died: "1919",
   confidence: "doc",
-  role: "herbergierster (innkeeper)",
+  occupation: "herbergierster (innkeeper)",
   branch: "Thumas",
   spouses: [
     { id: "hendrik_vdb", name: "Henricus Augustinus Vandenbemden", detail: "24 Apr 1873" },

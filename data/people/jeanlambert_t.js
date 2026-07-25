@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "26 Sep 1701 Grez-Doiceau",
   died: "3 Mar 1776 Grez-Doiceau",
   confidence: "doc",
-  role: "marguillier & greffier (church warden / parish clerk)",
+  occupation: "marguillier & greffier (church warden / parish clerk)",
   branch: "Thumas",
   father: "antoine_t",
   mother: "daix",

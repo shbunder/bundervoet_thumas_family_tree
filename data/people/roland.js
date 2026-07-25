@@ -5,7 +5,6 @@ FamilyTree.person({
   born: "1943 Tottenham",
   died: "2003",
   confidence: "fam",
-  role: "born in wartime London",
   branch: "DeKeyser",
   father: "gustaaf",
   mother: "simonne",

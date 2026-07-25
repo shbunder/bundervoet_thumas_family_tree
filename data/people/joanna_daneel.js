@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "29 May 1808 Keiem",
   died: "15 Oct 1854 Oostende",
   confidence: "doc",
-  role: "dienstmeid (maidservant)",
+  occupation: "dienstmeid (maidservant)",
   branch: "Devriendt",
   father: "philippus_daneel",
   mother: "anna_senesael",

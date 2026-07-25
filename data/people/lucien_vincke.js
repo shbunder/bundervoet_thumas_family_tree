@@ -4,7 +4,7 @@ FamilyTree.person({
   dates: "b. 26 Mar 1840 · Diksmuide",
   born: "26 Mar 1840 Diksmuide",
   confidence: "doc",
-  role: "metserdiener (mason's assistant)",
+  occupation: "metserdiener (mason's assistant)",
   branch: "Bundervoet",
   father: "engel_antonius_vincke",
   mother: "virginia_leynseele",

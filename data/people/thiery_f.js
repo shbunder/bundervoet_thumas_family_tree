@@ -4,7 +4,6 @@ FamilyTree.person({
   dates: "b. ~1930s",
   born: "~1930s",
   confidence: "fam",
-  role: "Thiery’s father",
   branch: "Thumas",
   father: "jean_t",
   mother: "crabbe",

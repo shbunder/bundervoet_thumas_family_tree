@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1908",
   died: "1997 · Oostende",
   confidence: "doc",
-  role: "werkster (labourer)",
+  occupation: "werkster (labourer)",
   branch: "Bundervoet",
   father: "henricus_bostyn",
   mother: "judith_cappaert",

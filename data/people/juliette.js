@@ -4,7 +4,6 @@ FamilyTree.person({
   dates: "b. 4 Jan 1937",
   born: "4 Jan 1937",
   confidence: "fam",
-  role: "Thiery’s mother",
   branch: "Thumas",
   spouses: [
     { id: "thiery_f", name: "François Thumas" },

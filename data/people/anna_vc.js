@@ -4,7 +4,6 @@ FamilyTree.person({
   dates: "† Zaventem/Leuven, a few years ago",
   died: "Zaventem/Leuven, a few years ago",
   confidence: "fam",
-  role: "Chris & Eric’s mother",
   branch: "Thumas",
   spouses: [
     { id: "rene_j", name: "René Janssens" },

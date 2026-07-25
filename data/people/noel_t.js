@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "19 Jan 1751 Grez-Doiceau",
   died: "2 Aug 1812 Grez-Doiceau",
   confidence: "doc",
-  role: "bierverkoopster (beer seller)",
+  occupation: "bierverkoopster (beer seller)",
   branch: "Thumas",
   spouses: [
     { id: "georges1_t", name: "Georges Thumas", detail: "Grez-Doiceau, 3 Jan 1771" },

@@ -5,7 +5,6 @@ FamilyTree.person({
   dates: "~1940s",
   born: "~1940s",
   confidence: "fam",
-  role: "Roland’s sister",
   branch: "DeKeyser",
   father: "gustaaf",
   mother: "simonne",

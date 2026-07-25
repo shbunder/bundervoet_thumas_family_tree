@@ -39,7 +39,7 @@ const lineages = read('lineages.js') || [];
 const groups = read('groups.js') || [];
 
 const FIELDS = new Set([
-  'id', 'name', 'sex', 'dates', 'born', 'died', 'confidence', 'role', 'branch',
+  'id', 'name', 'sex', 'dates', 'born', 'died', 'confidence', 'occupation', 'nickname', 'branch',
   'father', 'mother', 'spouses', 'source', 'note',
 ]);
 const SPOUSE_FIELDS = new Set(['id', 'name', 'detail']);

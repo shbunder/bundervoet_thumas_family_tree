@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1901",
   died: "1992",
   confidence: "doc",
-  role: "“Meme Lenie”",
+  nickname: "Meme Lenie",
   branch: "Paelinck",
   father: "eduardus_p",
   mother: "magdalena_vb",

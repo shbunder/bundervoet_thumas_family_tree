@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "17 Feb 1772 Grez-Doiceau",
   died: "22 Jan 1863 Grez-Doiceau",
   confidence: "doc",
-  role: "menuisier (carpenter)",
+  occupation: "menuisier (carpenter)",
   branch: "Thumas",
   father: "georges1_t",
   mother: "noel_t",

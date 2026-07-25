@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "19 Mar 1879 Evergem",
   died: "21 Jul 1943 Oostende",
   confidence: "doc",
-  role: "werkman / meestergast",
+  occupation: "werkman / meestergast",
   branch: "Bundervoet",
   father: "bernardus",
   mother: "goethals",

@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "~1703 · Torhout",
   died: "17 Jan 1783 · Oostkamp",
   confidence: "doc",
-  role: "herbergier (innkeeper)",
+  occupation: "herbergier (innkeeper)",
   branch: "Bundervoet",
   father: "guillielmus_stroobandt",
   mother: "clara_vansieleghem",

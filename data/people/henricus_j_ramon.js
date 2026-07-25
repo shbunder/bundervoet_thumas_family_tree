@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "29 Jan 1776 Zande",
   died: "27 Oct 1839 Middelkerke",
   confidence: "doc",
-  role: "hovenier (gardener)",
+  occupation: "hovenier (gardener)",
   branch: "Devriendt",
   father: "mattheus_ramon",
   mother: "jacoba_ossaert",

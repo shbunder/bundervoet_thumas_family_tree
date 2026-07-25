@@ -237,12 +237,14 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     return null;
   }
 
-  // The label the tree shows on a node: their relation to the root pair.
+  // The label the tree shows on a node: their relation to the root. The roots are
+  // the reference point, so they get no label of their own — saying a child is
+  // their own sibling's sibling explains nothing.
+  const rootSet = new Set(ROOTS);
   function relationship(id) {
-    if (id === ROOT) return 'The children';
+    if (rootSet.has(id)) return '';
     const r = bloodRelation(id, ROOT);
-    if (r && r.kind === 'blood') return cap(r.label);
-    return people[id]?.role || '';
+    return r && r.kind === 'blood' ? cap(r.label) : '';
   }
 
   // ---------- who belongs where ----------

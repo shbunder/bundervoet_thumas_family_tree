@@ -85,6 +85,12 @@ well as up:
 `confidence` drives the colour coding: `doc` documented record · `fam` family knowledge ·
 `sup` strongly supported · `unk` unknown, still to research.
 
+`occupation` is what someone did ("metser (mason)", "bierverkoopster (beer seller)") —
+kept in the language of the record with a gloss, since that is how it was written down.
+`nickname` is what they were called ("Meme Lenie"). Neither ever holds a relationship:
+"Ronny's sister" is not a fact about a person, it is a fact about two people, and the
+tree works it out from the links.
+
 `sex` is `"f"` or `"m"`, and is only needed when it can't be worked out from the links:
 being recorded as someone's `father` or `mother` already settles it. It matters because
 relations are named from it — without it the tree says "sibling" rather than "sister".

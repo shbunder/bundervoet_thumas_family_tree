@@ -5,7 +5,7 @@ FamilyTree.person({
   born: "1504 · Zwevegem",
   died: "1557",
   confidence: "doc",
-  role: "landbouwer (farmer)",
+  occupation: "landbouwer (farmer)",
   branch: "Bundervoet",
   father: "judocus_sabbe_1475",
   spouses: [
