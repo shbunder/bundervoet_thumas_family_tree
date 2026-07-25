@@ -19,7 +19,12 @@ spouses:
     name: Clementia Sophia Wagebaert
     detail: Mariakerke, 21 Jan 1875
 sources:
+  - fs-wvl-bs
   - tree-stechec
 ---
 
 A mason who fathered fifteen children (including Augusta); he and his wife both died in 1927.
+
+CORROBORATED (July 2026): named as the father — *Petrus Jacobus*, sometimes without the
+surname repeated — on three Oostende civil acts of his children, beside Clementia Sophia
+Wagebaert ([[fs-wvl-bs]]).

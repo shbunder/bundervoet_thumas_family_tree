@@ -25,6 +25,18 @@
       "acts": 600
     },
     {
+      "id": "bogaert",
+      "query": {
+        "name": "Bogaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 26536,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "bossin",
       "query": {
         "name": "Bossin",
@@ -47,6 +59,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 599
+    },
+    {
+      "id": "boxoens",
+      "query": {
+        "name": "Boxoens",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
     },
     {
       "id": "bundervoet",
@@ -248,6 +272,18 @@
       },
       "date": "2026-07-26",
       "found": 6447,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "huyghebaert",
+      "query": {
+        "name": "Huyghebaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2916,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -625,6 +661,18 @@
       "acts": 600
     },
     {
+      "id": "vandewoestijne",
+      "query": {
+        "name": "Vande Woestijne",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 26,
+      "mentions": 26,
+      "complete": true,
+      "acts": 26
+    },
+    {
       "id": "vandillen",
       "query": {
         "name": "Vandillen",
@@ -803,6 +851,18 @@
       "mentions": 0,
       "complete": true,
       "acts": 0
+    },
+    {
+      "id": "wyllie",
+      "query": {
+        "name": "Wyllie",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 95,
+      "mentions": 95,
+      "complete": true,
+      "acts": 95
     }
   ],
   "population": {

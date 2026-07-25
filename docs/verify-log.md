@@ -63,3 +63,7 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 18 | 2026-07-26 | leonie_p | CORROBORATED | **DOCUMENTED** | Register page read: Sint-Niklaas 1901 act nr. 997, image 268/337. | aa3b302 |
 | 18 | 2026-07-26 | eduardus_p | — | **DOCUMENTED** | Named as father *geboortig te Belsele* — birthplace independently confirmed. | aa3b302 |
 | 18 | 2026-07-26 | magdalena_vb | — | **DOCUMENTED** | Named as mother, *huishoudster* — occupation new. | aa3b302 |
+| 19 | 2026-07-26 | augusta | CORROBORATED | CORROBORATED | Parentage now attested by 3 siblings' Oostende acts naming both parents — civil registration, not the stechec tree. | 4fea424 |
+| 19 | 2026-07-26 | clementia_w, petrusjacobus_v | — | CORROBORATED | Named together as parents on all three acts. | 4fea424 |
+| 19 | 2026-07-26 | — (frontier) | — | LEAD | 3 siblings of Augusta not in the tree: Henricus Emilius (1877-1941), Leontius Ivo, Paula Mathilde. Objective 2. | 4fea424 |
+| 19 | 2026-07-26 | — (method) | — | — | **Search the rare maternal surname.** Her given name found nothing; Wagebaert isolated the household immediately. | 4fea424 |

@@ -19,7 +19,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 |---|---|---|---|---|---|
 | `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 13 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 5 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 6 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -152,6 +152,14 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** FamilySearch's index entry, not the register image; the image is reachable from the record page and reading it would make the three people doc.
+
+#### `fs-wvl-bs` — België, West-Vlaanderen, burgerlijke stand, 1582-1950
+- **Kind:** collection · <https://www.familysearch.org/search/record/results?q.surname=Vanstechelman&q.motherSurname=Wagebaert&f.recordCountry=Belgium>
+- **Covers:** West-Flemish civil registration indexed by person with parents and spouses attached. Searching by a rare MOTHER's surname is what makes it useful — it isolates one couple's children out of a common paternal surname.
+- **Yielded:** The Vanstechelman x Wagebaert household at Oostende. Searching the mother's rare surname returned three children of Petrus Jacobus Vanstechelman x Clementia Sophia Wagebaert that the tree does not have: Henricus Emilius (b. 1877, d. Oostende 17 Jan 1941, m. Alicia Mathildis St Martin), Leontius Ivo (m. Oostende 20 Aug 1922, Lucia Amelia Maene) and Paula Mathilde (m. Oostende 11 May 1924, Alberic Luciaan Delrue). Each act names both parents, which corroborates Augusta Vanstechelman's parentage from civil registration rather than from the stechec tree.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** Index entries; none of these acts has been read as an image, so nothing here rises above sup.
 
 ### Geneanet
 

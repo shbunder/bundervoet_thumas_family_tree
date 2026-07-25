@@ -866,6 +866,18 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "TWO THINGS TO KNOW BEFORE SEARCHING IT. First, the column called Familienaam often holds a FULL name — 'Victor Vanloocke', not 'Vanloocke' — so the '=' operator finds nothing and 'bevat' must be used. A negative taken with '=' is worthless. Second, many tables carry 'Bestand raadpleegbaar op computer' and a bibliotheeknummer, meaning the index is searchable here but the DOCUMENT is consulted on site at Oostende. So this venue can prove a document exists and name it, and often cannot deliver it. THIRD THING: the tables are not uniformly populated. Databank Rouwbrieven answers a 'bevat' query with real rows; Huwelijksbijlagen Oostende_Microfilms answers nothing at all for any query, which marks it a catalogue stub whose data lives only on the centre's own computers. Test a table with a broad query before trusting a negative from it."
+    },
+    {
+      "id": "fs-wvl-bs",
+      "site": "familysearch",
+      "kind": "collection",
+      "title": "België, West-Vlaanderen, burgerlijke stand, 1582-1950",
+      "url": "https://www.familysearch.org/search/record/results?q.surname=Vanstechelman&q.motherSurname=Wagebaert&f.recordCountry=Belgium",
+      "covers": "West-Flemish civil registration indexed by person with parents and spouses attached. Searching by a rare MOTHER's surname is what makes it useful — it isolates one couple's children out of a common paternal surname.",
+      "yielded": "The Vanstechelman x Wagebaert household at Oostende. Searching the mother's rare surname returned three children of Petrus Jacobus Vanstechelman x Clementia Sophia Wagebaert that the tree does not have: Henricus Emilius (b. 1877, d. Oostende 17 Jan 1941, m. Alicia Mathildis St Martin), Leontius Ivo (m. Oostende 20 Aug 1922, Lucia Amelia Maene) and Paula Mathilde (m. Oostende 11 May 1924, Alberic Luciaan Delrue). Each act names both parents, which corroborates Augusta Vanstechelman's parentage from civil registration rather than from the stechec tree.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Index entries; none of these acts has been read as an image, so nothing here rises above sup."
     }
   ]
 }
