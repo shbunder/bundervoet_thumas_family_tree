@@ -21,8 +21,8 @@
 //   node tools/research.mjs docs                 regenerate docs/sources.md
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { loadPeople as readPeople } from './lib/people.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCES = path.join(ROOT, 'research', 'sources.json');
@@ -61,22 +61,7 @@ export function loadLog() {
     });
 }
 
-export function loadPeople() {
-  let captured;
-  const rec = v => (captured = v);
-  const ctx = vm.createContext({
-    FamilyTree: { person: rec, roster: rec, meta: rec, branches: rec, lineages: rec, groups: rec },
-  });
-  const read = f => {
-    captured = undefined;
-    vm.runInContext(fs.readFileSync(path.join(ROOT, 'data', f), 'utf8'), ctx, { filename: f });
-    return captured;
-  };
-  const ids = read('people.js');
-  const people = {};
-  for (const id of ids) people[id] = read(`people/${id}.js`);
-  return people;
-}
+export const loadPeople = () => readPeople();
 
 const arg = name => {
   const i = process.argv.indexOf(`--${name}`);

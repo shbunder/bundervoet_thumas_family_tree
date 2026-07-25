@@ -1,0 +1,10 @@
+---
+id: edi_vi
+name: Edi Van Iseghem
+sex: m
+confidence: fam
+branch: Bundervoet
+father: joannes_vi
+mother: adrienne_dv
+source: Guy Verdievel (gverdievel) tree, Geneanet
+---

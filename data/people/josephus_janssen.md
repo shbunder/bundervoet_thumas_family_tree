@@ -1,0 +1,19 @@
+---
+id: josephus_janssen
+name: Josephus Joannes Janssen
+birth:
+  date: 1820-08-11
+  place: Oostende
+death:
+  date: 1866-07-26
+  place: Oostende
+confidence: doc
+branch: Bundervoet
+spouses:
+  - id: appolonia_huyghebaert
+    name: Appolonia Joanna Huyghebaert
+    detail: Oostende, 28 Aug 1851
+source: Geneanet tree gverdievel
+---
+
+Died at only 45; father of Hermanie Janssen, who married into the Van Iseghem line.

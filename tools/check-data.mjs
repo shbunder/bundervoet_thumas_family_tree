@@ -2,11 +2,12 @@
 // Checks the data files hang together. Run with: node tools/check-data.mjs
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
-import { fileURLToPath } from 'node:url';
 import { buildBundle } from './build.mjs';
+import {
+  DATA, PEOPLE_DIR, FIELDS, EVENT_FIELDS, SPOUSE_FIELDS,
+  isValidDate, loadConfig, loadPerson, onDisk,
+} from './lib/people.mjs';
 
-const DATA = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data');
 // The build runs this validator first, so it passes --skip-generated to avoid
 // being told the files it is about to write are out of date.
 const SKIP_GENERATED = process.argv.includes('--skip-generated');
@@ -15,74 +16,60 @@ const errors = [];
 const warnings = [];
 const fail = m => errors.push(m);
 
-// The data files are scripts that call into a FamilyTree namespace. Running each
-// against a stub both checks it parses and hands back the value it registered.
-let captured;
-const record = v => (captured = v);
-const context = vm.createContext({
-  FamilyTree: { person: record, roster: record, meta: record, branches: record, lineages: record, groups: record },
-});
-
-function read(file) {
-  captured = undefined;
-  const full = path.join(DATA, file);
-  try {
-    vm.runInContext(fs.readFileSync(full, 'utf8'), context, { filename: full });
-  } catch (e) {
-    fail(`${file}: ${e.message}`);
-    return null;
-  }
-  if (captured === undefined) fail(`${file}: does not register anything`);
-  return captured;
-}
-
-const ids = read('people.js') || [];
-const meta = read('meta.js') || { confidenceLabels: {} };
-const branches = read('branches.js') || {};
-const lineages = read('lineages.js') || [];
-const groups = read('groups.js') || [];
-
-const FIELDS = new Set([
-  'id', 'name', 'sex', 'dates', 'born', 'died', 'confidence', 'occupation', 'nickname', 'branch',
-  'father', 'mother', 'spouses', 'source', 'note',
-]);
-const SPOUSE_FIELDS = new Set(['id', 'name', 'detail']);
+const { roster: ids, meta, branches, lineages, groups } = loadConfig();
 const CONFIDENCE = new Set(Object.keys(meta.confidenceLabels));
 
 // Every id in the manifest has a file, and no file is missing from the manifest.
-const onDisk = fs
-  .readdirSync(path.join(DATA, 'people'))
-  .filter(f => f.endsWith('.js'))
-  .map(f => f.slice(0, -3));
-for (const id of ids) if (!onDisk.includes(id)) fail(`people.js lists "${id}" but data/people/${id}.js is missing`);
-for (const f of onDisk) if (!ids.includes(f)) fail(`data/people/${f}.js exists but is not listed in people.js`);
+const files = onDisk();
+for (const id of ids) if (!files.includes(id)) fail(`people.js lists "${id}" but data/people/${id}.md is missing`);
+for (const f of files) if (!ids.includes(f)) fail(`data/people/${f}.md exists but is not listed in people.js`);
 
 const people = {};
-for (const id of ids.filter(i => onDisk.includes(i))) {
-  const p = read(`people/${id}.js`);
+for (const id of ids.filter(i => files.includes(i))) {
+  let p;
+  try {
+    p = loadPerson(id);
+  } catch (e) {
+    fail(e.message);
+    continue;
+  }
   people[id] = p;
-  if (p.id !== id) fail(`${id}.js: "id" field says "${p.id}"`);
-  if (!p.name) fail(`${id}.js: missing "name"`);
-  if (!CONFIDENCE.has(p.confidence)) fail(`${id}.js: confidence "${p.confidence}" is not one of ${[...CONFIDENCE].join(', ')}`);
-  if (p.branch && !(p.branch in branches)) fail(`${id}.js: branch "${p.branch}" is not in branches.js`);
-  if ('sex' in p && p.sex !== 'f' && p.sex !== 'm') fail(`${id}.js: sex "${p.sex}" must be "f" or "m"`);
+
+  if (p.id !== id) fail(`${id}.md: "id" field says "${p.id}"`);
+  if (!p.name) fail(`${id}.md: missing "name"`);
+  if (!CONFIDENCE.has(p.confidence)) fail(`${id}.md: confidence "${p.confidence}" is not one of ${[...CONFIDENCE].join(', ')}`);
+  if (p.branch && !(p.branch in branches)) fail(`${id}.md: branch "${p.branch}" is not in branches.js`);
+  if ('sex' in p && p.sex !== 'f' && p.sex !== 'm') fail(`${id}.md: sex "${p.sex}" must be "f" or "m"`);
+
+  // A date is either in the grammar or explicitly marked raw. There is no third
+  // option, because a half-parsed date is one that later gets read as a fact.
+  for (const ev of ['birth', 'death']) {
+    const e = p[ev];
+    if (!e) continue;
+    if (typeof e !== 'object' || Array.isArray(e)) { fail(`${id}.md: "${ev}" must be a block with date/place`); continue; }
+    for (const k of Object.keys(e)) {
+      if (!EVENT_FIELDS.includes(k) && k !== 'raw') warnings.push(`${id}.md: ${ev} has unknown field "${k}"`);
+    }
+    if (e.date && !isValidDate(e.date)) {
+      fail(`${id}.md: ${ev}.date "${e.date}" is not a valid date — use 1876-11-12, 1876-11, 1876, ~1682, <1727, >1900 or 1575..1587`);
+    }
+    if (!e.date && !e.raw) fail(`${id}.md: "${ev}" has neither a date nor a raw value`);
+  }
+
   if ('spouses' in p) {
-    if (!Array.isArray(p.spouses)) fail(`${id}.js: "spouses" must be an array`);
+    if (!Array.isArray(p.spouses)) fail(`${id}.md: "spouses" must be a list`);
     else for (const [i, s] of p.spouses.entries()) {
-      if (!s || typeof s !== 'object') fail(`${id}.js: spouses[${i}] is not an object`);
-      else {
-        if (!s.name) fail(`${id}.js: spouses[${i}] has no "name"`);
-        for (const k of Object.keys(s)) if (!SPOUSE_FIELDS.has(k)) warnings.push(`${id}.js: spouses[${i}] unknown field "${k}"`);
-      }
+      if (!s.name) fail(`${id}.md: spouses[${i}] has no "name"`);
+      for (const k of Object.keys(s)) if (!SPOUSE_FIELDS.includes(k)) warnings.push(`${id}.md: spouses[${i}] unknown field "${k}"`);
     }
   }
-  for (const k of Object.keys(p)) if (!FIELDS.has(k)) warnings.push(`${id}.js: unknown field "${k}"`);
+  for (const k of Object.keys(p)) if (!FIELDS.includes(k) && k !== 'note') warnings.push(`${id}.md: unknown field "${k}"`);
 }
 
 // Parent links point at people who exist, and nobody is their own ancestor.
 for (const [id, p] of Object.entries(people)) {
   for (const rel of ['father', 'mother']) {
-    if (p[rel] && !people[p[rel]]) fail(`${id}.js: ${rel} "${p[rel]}" does not exist`);
+    if (p[rel] && !people[p[rel]]) fail(`${id}.md: ${rel} "${p[rel]}" does not exist`);
   }
 }
 
@@ -92,10 +79,10 @@ for (const [id, p] of Object.entries(people)) {
 for (const [id, p] of Object.entries(people)) {
   for (const s of p.spouses || []) {
     if (!s.id) continue;
-    if (!people[s.id]) { fail(`${id}.js: spouse id "${s.id}" does not exist`); continue; }
-    if (s.id === id) fail(`${id}.js: is listed as their own spouse`);
+    if (!people[s.id]) { fail(`${id}.md: spouse id "${s.id}" does not exist`); continue; }
+    if (s.id === id) fail(`${id}.md: is listed as their own spouse`);
     if (!(people[s.id].spouses || []).some(t => t.id === id)) {
-      fail(`${id}.js: lists spouse "${s.id}", but ${s.id}.js does not list "${id}" back`);
+      fail(`${id}.md: lists spouse "${s.id}", but ${s.id}.md does not list "${id}" back`);
     }
   }
 }
@@ -106,15 +93,16 @@ for (const [id, p] of Object.entries(people)) {
   if (!p.father || !p.mother || !people[p.father] || !people[p.mother]) continue;
   for (const [a, b] of [[p.father, p.mother], [p.mother, p.father]]) {
     if (!(people[a].spouses || []).some(s => s.id === b)) {
-      fail(`${a}.js: has a child (${id}) with "${b}" but does not list them as a spouse`);
+      fail(`${a}.md: has a child (${id}) with "${b}" but does not list them as a spouse`);
     }
   }
 }
+
 for (const start of Object.keys(people)) {
   const seen = new Set();
   const walk = id => {
     if (!id || seen.has(id) || !people[id]) return;
-    if (id === start && seen.size) return fail(`${start}.js: parent chain loops back to itself`);
+    if (id === start && seen.size) return fail(`${start}.md: parent chain loops back to itself`);
     seen.add(id);
     walk(people[id].father);
     walk(people[id].mother);
@@ -141,11 +129,8 @@ for (const g of groups) {
   for (const id of g.people) if (!people[id]) fail(`groups.js (${g.title}): "${id}" does not exist`);
 }
 
-// Not fatal, but usually a mistake: a record connected to nothing. The index no
-// longer depends on a hand-kept list, so "missing from a view" is not the concern
-// any more — a person who touches no one else is. Marriage counts as a connection,
-// which is how a spouse with no children still belongs.
-//
+// Not fatal, but usually a mistake: a record connected to nothing. Marriage counts
+// as a connection, which is how a spouse with no children still belongs.
 // `meta.roots` is the forest case: several unconnected families, each with its own
 // starting point. A tree with one root is just the one-element list.
 const roots = (meta.roots && meta.roots.length ? meta.roots : [meta.root]).filter(id => people[id]);
@@ -172,23 +157,22 @@ for (let i = 0; i < queue.length; i++) {
   }
 }
 for (const id of ids) {
-  if (reachable.has(id)) continue;
-  const isolated = neighbours(id).length === 0;
+  if (reachable.has(id) || !people[id]) continue;
   warnings.push(
-    isolated
-      ? `${id}.js: connected to nobody — no parents, children or spouse`
-      : `${id}.js: not connected to any root in meta.js (add a root, or link them in)`
+    neighbours(id).length === 0
+      ? `${id}.md: connected to nobody — no parents, children or spouse`
+      : `${id}.md: not connected to any root in meta.js (add a root, or link them in)`
   );
 }
 
 // The page loads data/bundle.js, not the individual files, so a stale bundle is
-// a site that silently shows old data. Catching it here means it cannot be
+// a site silently showing old data. Catching it here means it cannot be
 // committed: the rule is that this validator is green before every commit.
 if (!SKIP_GENERATED) {
   const bundlePath = path.join(DATA, 'bundle.js');
   if (!fs.existsSync(bundlePath)) {
     fail('data/bundle.js is missing — run: node tools/build.mjs');
-  } else if (fs.readFileSync(bundlePath, 'utf8') !== buildBundle(path.join(DATA, '..'))) {
+  } else if (fs.readFileSync(bundlePath, 'utf8') !== buildBundle()) {
     fail('data/bundle.js is out of date with data/people/ — run: node tools/build.mjs');
   }
 }

@@ -97,10 +97,16 @@ generated from the registry — edit `research/sources.json`, not the markdown.
 
 ## Data model
 
-`data/people/<id>.js` is the source of truth — one file, one person, registering itself
-via `FamilyTree.person({...})`. Everything derived (children, generations, kinship,
-lineages) is computed at load time from `father`/`mother` links. See
-[README.md](README.md) for the field list and the reason the files are `.js` not `.json`.
+`data/people/<id>.md` is the source of truth — one file, one person: a strict
+frontmatter block for the facts, and free Markdown prose below it for everything a
+field cannot hold. Everything derived (children, generations, kinship, lineages) is
+computed from `father`/`mother` links. See [README.md](README.md) for the field list.
+
+Dates use a small fixed grammar so they are queryable and sortable, never prose:
+`1876-11-12` · `1876-11` · `1876` · `~1682` about · `<1727` before · `>1900` after ·
+`1575..1587` between. There is deliberately no syntax for "probably March" — a format
+for a guess is an invitation to record one. If a source says something the grammar
+cannot express, put it in `raw` and explain it in the prose.
 
 Invariants:
 
@@ -117,6 +123,8 @@ Invariants:
   (being a `father`/`mother` already settles it). Record it from what the source says —
   a note calling someone "Roland's sister", a role of "wife" — never from a forename.
 - Every id in `data/people/` is listed in `data/people.js`.
+- The prose body is for reasoning, evidence and frontiers — the things that do not fit
+  a field. It is never a second copy of a field.
 - Ids are stable. Renaming one breaks every reference — don't.
 - Plain text in data files (`é`, `&`), never HTML entities. The renderer escapes.
 - Presentation carries no facts: nothing in `assets/` contains a name or a date.
@@ -146,7 +154,7 @@ the validator fails if it is stale, so old data cannot reach the site.
 ## Layout
 
 ```
-data/people/<id>.js     source of truth, one per person
+data/people/<id>.md     source of truth: strict frontmatter + prose body
 data/people.js          manifest of ids to load
 data/groups.js          Index tab sub-headings only (membership is derived)
 data/lineages.js        the surname chains
@@ -159,6 +167,7 @@ docs/sources/           saved act images and scans
 research/sources.json   the registry — SITES (venues) and PAGES (trees, documents)
 research/searches.jsonl the search log, append-only, with what each search found or why not
 tools/research.mjs      log a search, ask what's been tried, see what yields, write the docs
+tools/lib/              the shared loader, frontmatter parser and date grammar
 tools/build.mjs         validates, then writes the generated files
 tools/check-data.mjs    the validator
 tools/export-gedcom.mjs writes exports/family-tree.ged

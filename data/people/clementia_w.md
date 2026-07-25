@@ -1,0 +1,19 @@
+---
+id: clementia_w
+name: Clementia Sophia Wagebaert
+birth:
+  date: "1853"
+death:
+  date: "1927"
+confidence: doc
+branch: Vanstechelman
+father: henricus_w
+mother: angela_vd
+spouses:
+  - id: petrusjacobus_v
+    name: Petrus Jacobus Vanstechelman
+    detail: Mariakerke, 21 Jan 1875
+source: Geneanet tree stechec
+---
+
+Wife of the mason Petrus Jacobus Vanstechelman; died in 1927, the same year as her husband.

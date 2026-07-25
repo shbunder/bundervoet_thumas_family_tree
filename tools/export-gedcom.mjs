@@ -12,30 +12,12 @@
 // long research notes survive intact.
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
-import { fileURLToPath } from 'node:url';
+import { ROOT, displayDates, loadConfig, loadPeople } from './lib/people.mjs';
 
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
 const OUT = path.join(ROOT, 'exports', 'family-tree.ged');
 
-// ---------- load ----------
-let captured;
-const record = v => (captured = v);
-const context = vm.createContext({
-  FamilyTree: { person: record, roster: record, meta: record, branches: record, lineages: record, groups: record },
-});
-const read = file => {
-  captured = undefined;
-  vm.runInContext(fs.readFileSync(path.join(DATA, file), 'utf8'), context, { filename: file });
-  return captured;
-};
-
-const ids = read('people.js');
-const meta = read('meta.js');
-const branches = read('branches.js');
-const people = {};
-for (const id of ids) people[id] = read(`people/${id}.js`);
+const { roster: ids, meta, branches } = loadConfig();
+const people = loadPeople(ids);
 
 const report = { unparsedDates: [], occupations: 0, notes: [] };
 
@@ -65,6 +47,23 @@ function splitName(name) {
 // ---------- dates & places ----------
 const MONTHS = { jan: 'JAN', feb: 'FEB', mar: 'MAR', apr: 'APR', may: 'MAY', jun: 'JUN',
   jul: 'JUL', aug: 'AUG', sep: 'SEP', oct: 'OCT', nov: 'NOV', dec: 'DEC' };
+const MONTH_NUM = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+// Person dates are stored in the project's own strict grammar, so this is a
+// straight translation rather than a guess. It used to be a parser working over
+// free text, which is where every date bug in this exporter came from.
+function gedcomDate(d) {
+  if (!d) return null;
+  let m;
+  if ((m = d.match(/^(\d{4})-(\d{2})-(\d{2})$/))) return `${Number(m[3])} ${MONTH_NUM[Number(m[2]) - 1]} ${m[1]}`;
+  if ((m = d.match(/^(\d{4})-(\d{2})$/))) return `${MONTH_NUM[Number(m[2]) - 1]} ${m[1]}`;
+  if (/^\d{4}$/.test(d)) return d;
+  if ((m = d.match(/^~(\d{4})$/))) return `ABT ${m[1]}`;
+  if ((m = d.match(/^<(\d{4})$/))) return `BEF ${m[1]}`;
+  if ((m = d.match(/^>(\d{4})$/))) return `AFT ${m[1]}`;
+  if ((m = d.match(/^(\d{4})\.\.(\d{4})$/))) return `BET ${m[1]} AND ${m[2]}`;
+  return null;
+}
 
 // Turns "12 Nov 1876 · Hamme (Oost-Vlaanderen)" or "6 Jan 1905 Oostende" or
 // "~1682 · Evergem" into a GEDCOM date and a place. Anything it cannot read with
@@ -277,18 +276,18 @@ for (const id of ids) {
 
   put(1, 'SEX', sex[id] ? sex[id].toUpperCase() : 'U');
 
-  for (const [field, tag] of [['born', 'BIRT'], ['died', 'DEAT']]) {
-    const raw = p[field];
-    if (!raw) continue;
-    const when = parseWhen(raw);
+  for (const [field, tag] of [['birth', 'BIRT'], ['death', 'DEAT']]) {
+    const event = p[field];
+    if (!event) continue;
     put(1, tag);
-    if (when) {
-      put(2, 'DATE', when.date);
-      if (when.place) putText(2, 'PLAC', when.place);
-    } else {
-      // Better an honest note than a date the parser guessed at.
-      putText(2, 'NOTE', `Recorded as: ${raw}`);
-      report.unparsedDates.push(`${id} ${field}: "${raw}"`);
+    const date = gedcomDate(event.date);
+    if (date) put(2, 'DATE', date);
+    if (event.place) putText(2, 'PLAC', event.place);
+    if (event.raw) {
+      // A date the record states in words no date syntax can express. Better an
+      // honest note than a year invented to fill the field.
+      putText(2, 'NOTE', `Recorded as: ${event.raw}`);
+      report.unparsedDates.push(`${id} ${field}: "${event.raw}"`);
     }
   }
 
@@ -308,7 +307,6 @@ for (const id of ids) {
   }
 
   if (p.note) putText(1, 'NOTE', p.note);
-  if (p.dates) putText(1, 'NOTE', `Dates as recorded: ${p.dates}`);
 
   const src = sourceText(id);
   if (src) {

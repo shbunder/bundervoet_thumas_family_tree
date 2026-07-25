@@ -1,0 +1,22 @@
+---
+id: petrusjacobus_v
+name: Petrus Jacobus Vanstechelman
+birth:
+  date: 1854-02-28
+  place: Mariakerke
+death:
+  date: 1927-11-26
+  place: Mariakerke
+confidence: doc
+occupation: metser (mason)
+branch: Vanstechelman
+father: felix_v
+mother: sophiavdb
+spouses:
+  - id: clementia_w
+    name: Clementia Sophia Wagebaert
+    detail: Mariakerke, 21 Jan 1875
+source: Geneanet tree stechec
+---
+
+A mason who fathered fifteen children (including Augusta); he and his wife both died in 1927.
