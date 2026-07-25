@@ -37,6 +37,8 @@ assets/
   js/main.js                   wires it together
 docs/research-log.md           what's documented, what's inferred, what to pull next
 tools/check-data.mjs           validates the data files
+tools/export-gedcom.mjs        writes the GEDCOM export
+exports/family-tree.ged        the tree in GEDCOM 7 — generated, not edited
 archive/                       superseded drafts, not part of the site
 ```
 
@@ -107,7 +109,8 @@ escapes everything on the way out.
 3. Run `node tools/check-data.mjs` — it catches syntax errors, typo'd parent ids,
    unknown branches, people missing from the list, one-sided marriages, and
    circular ancestry.
-4. Commit. GitHub Pages picks it up; there is no build to run.
+4. Run `node tools/export-gedcom.mjs` to refresh `exports/family-tree.ged`.
+5. Commit. GitHub Pages picks it up; there is no build to run.
 
 ## The Index
 
@@ -124,6 +127,25 @@ The same tab answers **how any two people are related** — pick two names and i
 the relation and the ancestor they share. It works from the lowest common ancestor of
 the pair rather than from the root, so it can relate anyone to anyone, and it falls
 back to one step through marriage when there is no blood link.
+
+## The GEDCOM export
+
+`exports/family-tree.ged` is the whole tree in **GEDCOM 7** — the open interchange
+format genealogy programs read. Import it into Gramps, Geneanet, Ancestry or
+MyHeritage, or hand it to anything that wants the data without parsing `.js`.
+
+GEDCOM 7 rather than the older 5.5.1 because it is UTF-8 throughout (these records are
+full of `é` and `ë`) and has no line-length limit, so the long research notes survive
+whole instead of being chopped into continuations.
+
+It is generated — edit `data/people/` and re-run `node tools/export-gedcom.mjs`.
+
+The exporter will not write a file that does not read back as the same tree: it
+reparses its own output, rebuilds every parent and marriage link from that alone, and
+stops if any of them disagree with the source records. It also prints what GEDCOM
+could not carry rather than guessing — a date like "a few years ago" stays as a note
+instead of becoming a year, and a `role` of "Uncle (Shaun's brother)" is not filed as
+an occupation.
 
 ## Making a change show up straight away
 

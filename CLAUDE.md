@@ -125,14 +125,16 @@ it is the ordinary tree.
 ```
 data/people/<id>.js     source of truth, one per person
 data/people.js          manifest of ids to load
-data/groups.js          Index tab grouping     ← to be derived (see above)
+data/groups.js          Index tab sub-headings only (membership is derived)
 data/lineages.js        the surname chains
 data/branches.js        default citation per branch
-data/meta.js            root, confidence labels, footer
+data/meta.js            root/roots, confidence labels, footer
 docs/research-log.md    numbered passes: found / checked-and-negative / next
 docs/sources.md         source registry, stable S-ids, with local artifacts
 docs/sources/           saved act images and scans
 tools/check-data.mjs    the validator
+tools/export-gedcom.mjs writes exports/family-tree.ged
+exports/family-tree.ged GEDCOM 7 — generated, never edited by hand
 assets/                 presentation only — no names, no dates
 archive/                superseded drafts, not part of the site
 ```
@@ -141,8 +143,20 @@ archive/                superseded drafts, not part of the site
 
 ```
 node tools/check-data.mjs      validate (must be green before commit)
+node tools/export-gedcom.mjs   regenerate the GEDCOM (run after changing data)
 open index.html                the site, straight off disk
 ```
+
+`exports/family-tree.ged` is the tree in **GEDCOM 7**, the open format every genealogy
+program reads — import it into Gramps, Geneanet, Ancestry or MyHeritage, and it is the
+form to hand to anything that wants the data without parsing `.js`. It is generated, so
+edits belong in `data/people/` and the file is regenerated.
+
+The exporter refuses to write if the file does not read back as the same tree: it
+reparses its own output, rebuilds the parent and marriage links from that alone, and
+compares them to the source records. It also reports what GEDCOM could not carry —
+dates too vague to express, `role` values that are relationships rather than
+occupations — rather than flattening them into fields that would then read as fact.
 
 ---
 
@@ -150,9 +164,10 @@ open index.html                the site, straight off disk
 
 Not yet decided — do not implement unilaterally:
 
-- **Storage format.** Moving to strict-fielded frontmatter + free-prose body, aligned
-  to an open vocabulary (schema.org / GEDCOM X) with a GEDCOM export, and a build step
-  emitting the browser bundle. Trade-off: loses "works straight off disk with no build".
+- **Storage format.** Moving to strict-fielded frontmatter + free-prose body, and a
+  build step emitting the browser bundle. Trade-off: loses "works straight off disk with
+  no build". *(The interchange half of this is settled — GEDCOM 7 is exported. What is
+  still open is whether the working files themselves change shape.)*
 - **Research logging format.** Machine-readable per-person search log (which source,
   which query, hit/miss/ambiguous, artifact path) replacing prose-only logging.
 - **Browser-based searching.** A logged-in browser for Geneanet / FamilySearch /
