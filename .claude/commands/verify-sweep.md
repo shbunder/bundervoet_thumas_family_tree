@@ -43,17 +43,77 @@ order, and take the next unrecorded person from the top of the bucket:
 
 ### Reading the act is the point
 
-A corroboration from an index is not a verification. For each one, go to the record itself:
+A corroboration from an index is not a verification. Go to the record itself.
 
-- **AGATHA** (`agatha.arch.be`) — "Analyses van akten", search name + commune + year. This
-  is where the Rijksarchief publishes its own transcriptions, with act numbers.
-- **`search.arch.be` is retired.** Every act link in the harvested corpus points at it. An id
-  like `HUBRA_00221638_0` becomes `HUVLB_HUBRA_00221638_0` on AGATHA, or find the act by
-  name + commune + year.
-- **FamilySearch** for act images where AGATHA has only an index entry.
-- **The open web** — WebSearch/WebFetch reach public indexes, WikiTree, Find A Grave,
-  digitised newspapers, parish transcriptions. Register anything that pays off in
-  `research/sources.json`.
+### EXHAUST THE VENUES BEFORE YOU CONCLUDE ANYTHING
+
+One venue missing is not a negative. It is one venue missing. Before any person is written
+up as NOT FOUND, run **`uv run tools/research.py untried <person>`** and work down what it
+lists. That command exists precisely for this, and it has caught the failure: a person was
+recorded NOT FOUND after a single AGATHA search while `untried` still listed *sixteen*
+unsearched sites.
+
+Go in this order — it is the order the log's own hit rates justify, not a guess.
+`uv run tools/research.py yield` will tell you if it has shifted.
+
+1. **The held corpus** — free and local. `uv run tools/link.py <person>`.
+2. **FamilySearch** — the highest-value venue in the registry and the least used. It is the
+   only registered source with **full-text search over unindexed images**, which is the only
+   thing that reaches parish registers. Use both its indexed collections and full-text.
+3. **AGATHA** — "Analyses van akten", name + commune + year. Note its `Plaats` and `Periode`
+   filters match anything *mentioned* in an act, not the act's own commune or date, so read
+   the result list rather than trusting the filter. It indexes the registration date, so an
+   act can sit a day after the event.
+4. **Geneanet** — its indexed *record collections*, not only the member trees.
+5. **vrijwilligersrab** and **vvf** — volunteer transcriptions of West-Flemish marriages and
+   deaths. Never yet searched, and West-Vlaanderen is where most unverified people are.
+6. **The obituary and cemetery cluster** — jammart, grafzerkje, inmemoriam, ingedachten,
+   uitvaart-oostende. Memorial cards name parents and children and sit outside the
+   civil-registration privacy rules, which makes them the way into the 20th century.
+7. **Ancestry / MyHeritage** — paywalled. Treat as a *targeting list*: they say which
+   document exists for whom, and the act itself can then be pulled free elsewhere.
+8. **The open web** — WebSearch/WebFetch: published genealogies, WikiTree, Find A Grave,
+   digitised newspapers, parish transcriptions, heemkring publications.
+
+`search.arch.be` is retired; its ids translate (`HUBRA_00221638_0` →
+`HUVLB_HUBRA_00221638_0`) or find the act on AGATHA by name + commune + year.
+
+### WHEN THE WHOLE LADDER MISSES, GO LOOKING FOR A VENUE THAT IS NOT IN IT
+
+A pass that reaches the bottom of the list with nothing is not finished. It has only proved
+the registry is too small for this person. **Spend the rest of that pass hunting for a source
+nobody here has heard of**, then register it and use it. This is where the registry grows,
+and a venue found once answers every later frontier in the same commune.
+
+Where to look, roughly in order of how often it works:
+
+- **The commune, in its own language.** Search `<commune> parochieregisters online`,
+  `<commune> burgerlijke stand index`, `gedigitaliseerd`, `klappers`, `registres paroissiaux`.
+  Many communes have an index nobody has aggregated.
+- **The local history society** — *heemkring*, *geschiedkundige kring*, *cercle d'histoire*.
+  They publish transcriptions, cemetery surveys and memorial-card collections that no
+  national aggregator holds. De Plate for Oostende is the example already in the registry.
+- **Provincial and university digitisation** — provincial archives, Erfgoedbibliotheek,
+  KBR's **BelgicaPress** for digitised Belgian newspapers (death and marriage notices,
+  1850–1950).
+- **Population registers** (*bevolkingsregisters*). Underused and unusually rich: they follow
+  a whole household across a decade, so they place children, lodgers and moves that no single
+  act mentions.
+- **Surname-specific work** — one-name studies, Geneanet and Vlaamse Stam forums, parenteel
+  publications. A rare surname often has someone who has already done the work.
+- **Outside Belgium when the person left.** The De Keyser wartime family is the standing
+  example: England & Wales GRO and FreeBMD for Roland's 1943 Tottenham birth and for Rita
+  and Simonne, CWGC and the Free Belgian Forces / Brigade Piron rolls for Gustaaf. The
+  Belgian corpus has already returned clean negatives for all three, which is a signpost,
+  not a dead end.
+
+Register whatever you find in `research/sources.json` before searching it — id, kind, access,
+what it covers, and its `capabilities` — so the next pass can see it and `untried` can offer
+it. Register it even if it then yields nothing: a venue checked and empty is worth recording.
+
+**NOT FOUND means "the ladder was walked and a new venue was looked for and neither had
+them", and the log entry must say which venues.** Anything less is BLOCKED or simply
+unfinished.
 
 Save what you read: a full-page screenshot into `data/artifacts/` with its `.md` record,
 sha256 and `evidences:` list. An act read but not saved has to be read again.
@@ -63,10 +123,16 @@ sha256 and `evidences:` list. An act read but not saved has to be read again.
 - **Act read, two independent identifiers anchored** → cite it, `confidence: doc`, fill in
   what the act states and nothing it does not.
 - **Index agrees, act not read** → cite it, stay `sup`, say in the prose that no image was read.
-- **Nothing found** → leave the record alone and log the miss **with its scope** — which
-  venue, which years, which communes. An unrecorded miss is a dead end walked again.
+- **Nothing found, ladder walked, discovery attempted** → leave the record alone and log the
+  miss **with its scope**: which venues, which years, which communes, and what was looked for
+  and not found in the discovery step. An unrecorded miss is a dead end walked again.
+- **Nothing found, ladder not walked** → not a verdict. Keep going, or leave the person
+  unrecorded for the next pass. Do not spend a NOT FOUND you have not earned.
 - **Contradiction** → correct the record, and say in the prose what was wrong, what the act
   says, and which is now believed. Corrections are first-class.
+- **A venue found that the registry lacked** → register it, and log the discovery even when
+  the venue then yields nothing. Finding where the records are is progress in itself, and it
+  is the only thing that grows the ladder for everyone below.
 
 ## The rules that matter most when nobody is watching
 
@@ -102,7 +168,8 @@ sha256 and `evidences:` list. An act read but not saved has to be read again.
   |------|------|--------|--------|---------|----------|--------|
   ```
 
-  `verdict` is DOCUMENTED / CORROBORATED / LEAD / REJECTED / NOT FOUND / BLOCKED.
+  `verdict` is DOCUMENTED / CORROBORATED / LEAD / REJECTED / NOT FOUND / BLOCKED /
+  NEW SOURCE. A NOT FOUND row must name the venues walked; otherwise it is not one.
 - `uv run tools/build.py`, then one commit per pass. **Do not push.**
 
 ## Stop early if

@@ -8,7 +8,11 @@ place agrees, not only names), KIN-ONLY (names and a relative, nothing anchored)
 NOT REACHED (nothing held under that surname).
 
 `verdict`: DOCUMENTED (act read) · CORROBORATED (index agrees, act unread) · LEAD ·
-REJECTED · NOT FOUND · BLOCKED.
+REJECTED · NOT FOUND · BLOCKED · NEW SOURCE (a venue the registry lacked).
+
+NOT FOUND is earned, not assumed: it means the venue ladder was walked to the bottom
+*and* a search was made for a venue the registry does not have. The row names the
+venues. A single miss at one archive is not a negative — it is one archive missing.
 
 | pass | date | person | bucket | verdict | evidence | commit |
 |------|------|--------|--------|---------|----------|--------|
