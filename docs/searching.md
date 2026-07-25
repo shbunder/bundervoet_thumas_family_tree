@@ -1,12 +1,44 @@
 # The search strategy
 
-Three files carry it:
+Four files carry it:
 
 | | |
 |---|---|
 | `research/sources.json` | **sites** we can search, and the **pages** inside them |
 | `research/searches.jsonl` | what was searched, where, and how it went |
+| `research/harvest/` | acts pulled from Open Archives and kept — the corpus |
 | `docs/sources.md` | the readable view — generated, don't edit it |
+
+## Harvest before you search
+
+Reach for `tools/harvest.py` first, and only open a browser when it comes up empty.
+
+A browser search is person-indexed: one query, one person, behind a login, and it
+discards the other five people the act names. Open Archives publishes the same
+material as open data over an unauthenticated API — around thirty million Belgian
+person-mentions, including the Familiekunde Vlaanderen and Doodsprentjes.be memorial
+cards this project already knows are the key to 20th-century walls, and the
+Rijksarchief civil acts transcribed by the Demogen volunteers. Records carry
+structured roles — *Vader*, *Moeder*, *Kind*, *Bruidegom*, *Bruid*, *Vader van de
+bruid* — so a parent link is a field rather than something to read out of prose, and
+each act links to its scan and to its `search.arch.be` page.
+
+```
+uv run tools/harvest.py frontiers            pull what the queue is asking for
+uv run tools/harvest.py surname Bundervoet   every Belgian record for one surname
+uv run tools/harvest.py status               what is held, which surnames are not
+uv run tools/link.py <person>                what the held acts say about them
+uv run tools/research.py acts                which act answers the most frontiers
+```
+
+Three things to keep in mind. **Coverage is uneven by province** — Vlaams-Brabant has
+indexed civil acts with the full parent roles; Oostende and Evergem are overwhelmingly
+memorial cards from 1910 onwards. **The harvest is not committed** — it is
+re-fetchable open data that grows without limit, so `research/harvest/manifest.json`
+records the queries instead and the corpus rebuilds from those. And **harvesting
+decides nothing**: `link.py` prints candidates with a score and marks anything short
+of two independent identifiers NOT GRAFTABLE. The verifier still has to try to refute
+each one.
 
 ## Why the log exists
 
@@ -25,8 +57,8 @@ Geneanet for this person at all?"* and *"which pages have ever yielded anything?
 different answers, and a flat list gives neither.
 
 ```
-node tools/research.mjs sources    the registry: sites, then pages grouped under them
-node tools/research.mjs yield      which sites and pages actually pay off
+uv run tools/research.py sources    the registry: sites, then pages grouped under them
+uv run tools/research.py yield      which sites and pages actually pay off
 ```
 
 `yield` is the one to read before choosing where to look. It shows hit/miss/ambiguous/
@@ -39,16 +71,19 @@ productive.
 Before searching for someone, ask what has already been tried:
 
 ```
-node tools/research.mjs tried edouard_dk     what was tried, what it found, why it failed
-node tools/research.mjs untried edouard_dk   sites and pages not yet used on them,
+uv run tools/research.py tried edouard_dk     what was tried, what it found, why it failed
+uv run tools/research.py untried edouard_dk   sites and pages not yet used on them,
                                              pages with a track record listed first
 ```
 
 After searching, record it — **hit or miss**:
 
 ```
-node tools/research.mjs log --person edouard_dk --site agatha --goal parents \
-     --result miss --query "Analyses van akten — Eduardus de Keyser" \
+uv run tools/research.py log --person edouard_dk --site agatha --goal parents \
+     --result miss --basis name-index \
+     --query "Analyses van akten — Eduardus de Keyser" \
+     --scope "The Analyses van akten name index, Oostende, for both spouses —
+              five acts, 1897-1905" \
      --why "names only Eduardus and Louisa, never the grandparents; his parents are
             only in the 1901 marriage act, which is not indexed here"
 ```
@@ -57,6 +92,32 @@ Add `--page` when the search was against a specific tree or document
 (`--site geneanet --page tree-isavdw`). `--artifact` takes the id of a saved document
 in `data/artifacts/` — save one for anything that breaks a wall, because a URL behind a
 login is not reproducible for anyone else.
+
+## Basis: how you looked
+
+`--basis` is required on every entry, and it is the field that stops a miss from being
+permanent.
+
+| | |
+|---|---|
+| `name-index` | queried a name index — only finds what somebody indexed |
+| `full-text` | searched the text of the images themselves |
+| `image-read` | actually read the act images, page by page |
+| `tree` | read someone else's compiled tree |
+| `api` | structured query against an open-data API |
+| `testimony` | a person told us |
+
+"AGATHA is exhausted for Édouard's parentage" was true of AGATHA's *name index* — his
+1901 act is not in it — and says nothing about reading the register page by page, or
+about a full-text search of the images that did not exist when the search was run.
+Sites carry a `capabilities` list saying what they can be asked; when one gains a
+capability, `uv run tools/research.py stale` lists every search it has outgrown.
+FamilySearch's Dutch and French handwriting search, announced in January 2026, re-opens
+every `name-index` miss logged against it before then.
+
+`uv run tools/research.py yield` breaks results down by basis as well as by site, which
+is the difference between "Geneanet is unproductive" and "reading other people's trees
+is unproductive, wherever they are hosted".
 
 ## Saying how it went
 
@@ -87,7 +148,7 @@ completely different next moves.
 
 Registering a source is not paperwork — a venue that gets searched but never registered
 is one the next pass cannot know about, and the `untried` list silently under-reports.
-So `research.mjs log` **refuses an unregistered source**, which forces the registry to
+So `research.py log` **refuses an unregistered source**, which forces the registry to
 stay complete.
 
 When a search turns up somewhere new, register it before logging against it. A whole new
@@ -116,7 +177,7 @@ judgement of its worth). Pages take `kind` (`tree` · `record` · `collection` �
 Keep `yielded` current — it is what `yield` ranks on, and a page nobody records a result
 for looks unproductive whether or not it is.
 
-`node tools/build.mjs` validates the registry and the log together and regenerates
+`uv run tools/build.py` validates the registry and the log together and regenerates
 `docs/sources.md`, so the readable list cannot drift from the data.
 
 ## What works, from the passes so far

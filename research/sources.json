@@ -9,7 +9,7 @@
     "A page always names its site. Registering both is what lets the strategist ask",
     "'which venues are untouched' and 'which pages pay off' as separate questions.",
     "",
-    "Add a source the moment it is discovered — tools/research.mjs refuses to log a",
+    "Add a source the moment it is discovered — tools/research.py refuses to log a",
     "search against anything unregistered, because a venue searched but never",
     "registered is one the next pass cannot know about.",
     "",
@@ -28,15 +28,24 @@
       "url": "https://agatha.arch.be/",
       "access": "login",
       "covers": "Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts.",
-      "note": "Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …')."
+      "note": "Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …').",
+      "capabilities": [
+        "name-index",
+        "image-read"
+      ]
     },
     {
       "id": "search-arch",
       "kind": "archive",
       "title": "Rijksarchief search portal",
       "url": "https://search.arch.be/",
-      "access": "login",
-      "covers": "Scanned civil registers by commune and year; sibling portal to AGATHA."
+      "access": "offline",
+      "covers": "Scanned civil registers by commune and year; sibling portal to AGATHA.",
+      "capabilities": [
+        "name-index",
+        "image-read"
+      ],
+      "note": "RETIRED. search.arch.be now redirects to an end-of-life notice and is replaced by agatha.arch.be. Act links in the harvested Open Archives corpus still point here, so they must be translated: a search.arch id like HUBRA_00221638_0 is HUVLB_HUBRA_00221638_0 on AGATHA, or the act can be found by searching name + commune + year."
     },
     {
       "id": "familysearch",
@@ -45,7 +54,13 @@
       "url": "https://www.familysearch.org/",
       "access": "login",
       "covers": "Belgian civil and church registration, with act images.",
-      "note": "Deeper than AGATHA or Ancestry for Belgium — it broke the Dekeyser wall the other two could not. Try it before concluding an act is unindexed."
+      "note": "Deeper than AGATHA or Ancestry for Belgium — it broke the Dekeyser wall the other two could not. Try it before concluding an act is unindexed.",
+      "capabilities": [
+        "name-index",
+        "image-read",
+        "full-text"
+      ],
+      "capabilitiesChanged": "2026-01-13"
     },
     {
       "id": "geneanet",
@@ -53,7 +68,12 @@
       "title": "Geneanet",
       "url": "https://www.geneanet.org/",
       "access": "mixed",
-      "covers": "Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier."
+      "covers": "Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier.",
+      "capabilities": [
+        "name-index",
+        "tree",
+        "image-read"
+      ]
     },
     {
       "id": "ancestry",
@@ -61,7 +81,11 @@
       "title": "Ancestry",
       "url": "https://www.ancestry.com/",
       "access": "paywall",
-      "covers": "West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide."
+      "covers": "West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide.",
+      "capabilities": [
+        "name-index",
+        "image-read"
+      ]
     },
     {
       "id": "myheritage",
@@ -70,7 +94,11 @@
       "url": "https://www.myheritage.com/",
       "access": "paywall",
       "covers": "Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree.",
-      "note": "Reached with an account (July 2026). The free/paid boundary matters for planning: SMART MATCHES against other members' trees are FREE to read — names, relationships and counts all visible — and that is where the value has been. RECORD MATCHES are not: the field values are replaced server-side with decoy strings behind a Data subscription, so only the collection name, the field list and the occasional year are free. Treat record matches as a TARGETING LIST — they say which document exists for whom, and Belgian civil acts can then be pulled free from AGATHA or FamilySearch."
+      "note": "Reached with an account (July 2026). The free/paid boundary matters for planning: SMART MATCHES against other members' trees are FREE to read — names, relationships and counts all visible — and that is where the value has been. RECORD MATCHES are not: the field values are replaced server-side with decoy strings behind a Data subscription, so only the collection name, the field list and the occasional year are free. Treat record matches as a TARGETING LIST — they say which document exists for whom, and Belgian civil acts can then be pulled free from AGATHA or FamilySearch.",
+      "capabilities": [
+        "name-index",
+        "tree"
+      ]
     },
     {
       "id": "vrijwilligersrab",
@@ -78,14 +106,20 @@
       "title": "Vrijwilligers RAB",
       "url": "https://www.vrijwilligersrab.be/",
       "access": "open",
-      "covers": "Volunteer transcriptions of West-Flemish marriage and death records."
+      "covers": "Volunteer transcriptions of West-Flemish marriage and death records.",
+      "capabilities": [
+        "name-index"
+      ]
     },
     {
       "id": "vvf",
       "kind": "index",
       "title": "Familiekunde Vlaanderen (VVF)",
       "access": "mixed",
-      "covers": "Flemish marriage indexes; the layer beneath several Geneanet trees."
+      "covers": "Flemish marriage indexes; the layer beneath several Geneanet trees.",
+      "capabilities": [
+        "name-index"
+      ]
     },
     {
       "id": "stadsarchief-oostende",
@@ -93,7 +127,10 @@
       "title": "Stadsarchief Oostende",
       "access": "offline",
       "covers": "Oostende civil registers after 1900 — not in AGATHA, not digitised.",
-      "note": "Holds both documents that would name Édouard Dekeyser's parents from Oostende's own registers: the 4 May 1901 marriage act and the 8 Sep 1951 death act. Death acts open after 50 years, so the 1951 one is public — the cleanest ask."
+      "note": "Holds both documents that would name Édouard Dekeyser's parents from Oostende's own registers: the 4 May 1901 marriage act and the 8 Sep 1951 death act. Death acts open after 50 years, so the 1951 one is public — the cleanest ask.",
+      "capabilities": [
+        "image-read"
+      ]
     },
     {
       "id": "inmemoriam",
@@ -102,7 +139,10 @@
       "url": "https://www.inmemoriam.be/",
       "access": "open",
       "covers": "Digitised Belgian obituary notices.",
-      "note": "Coverage gap: coastal and Brabant papers are thin, so a post-2000 coastal death may simply be absent."
+      "note": "Coverage gap: coastal and Brabant papers are thin, so a post-2000 coastal death may simply be absent.",
+      "capabilities": [
+        "name-index"
+      ]
     },
     {
       "id": "ingedachten",
@@ -110,7 +150,10 @@
       "title": "ingedachten.be / DELA",
       "url": "https://www.ingedachten.be/",
       "access": "open",
-      "covers": "Funeral-home obituary notices."
+      "covers": "Funeral-home obituary notices.",
+      "capabilities": [
+        "name-index"
+      ]
     },
     {
       "id": "uitvaart-oostende",
@@ -118,7 +161,10 @@
       "title": "Uitvaart Oostende",
       "url": "https://www.uitvaart-oostende.be/",
       "access": "open",
-      "covers": "Oostende funeral notices."
+      "covers": "Oostende funeral notices.",
+      "capabilities": [
+        "name-index"
+      ]
     },
     {
       "id": "jammart",
@@ -127,7 +173,10 @@
       "url": "https://www.jammart.be/",
       "access": "open",
       "covers": "~100,000 scanned memorial cards (bidprentjes).",
-      "note": "Memorial cards name parents and children and sit outside the civil-registration publicity rules — the key to 20th-century walls. Match on place, never on surname alone."
+      "note": "Memorial cards name parents and children and sit outside the civil-registration publicity rules — the key to 20th-century walls. Match on place, never on surname alone.",
+      "capabilities": [
+        "name-index"
+      ]
     },
     {
       "id": "grafzerkje",
@@ -135,7 +184,10 @@
       "title": "Grafzerkje.be",
       "url": "https://www.grafzerkje.be/",
       "access": "open",
-      "covers": "Belgian gravestone and cemetery records."
+      "covers": "Belgian gravestone and cemetery records.",
+      "capabilities": [
+        "name-index"
+      ]
     },
     {
       "id": "family",
@@ -143,14 +195,33 @@
       "title": "The family itself",
       "access": "offline",
       "covers": "Testimony, memorial cards, photographs and papers held by relatives.",
-      "note": "The only key to the sealed 20th-century links. A direct descendant may also request a relative's birth, marriage or death certificate at any age — that is the decisive move on the Janssens wall, not more online searching."
+      "note": "The only key to the sealed 20th-century links. A direct descendant may also request a relative's birth, marriage or death certificate at any age — that is the decisive move on the Janssens wall, not more online searching.",
+      "capabilities": [
+        "testimony"
+      ]
     },
     {
       "id": "web",
       "kind": "web",
       "title": "Standalone published genealogies",
       "access": "open",
-      "covers": "Parenteel documents and family sites published outside the big platforms."
+      "covers": "Parenteel documents and family sites published outside the big platforms.",
+      "capabilities": [
+        "full-text"
+      ]
+    },
+    {
+      "id": "openarch",
+      "kind": "index",
+      "title": "Open Archives (openarch.nl) — open-data aggregator, Netherlands/Belgium/France",
+      "url": "https://www.openarchieven.nl/",
+      "access": "open",
+      "covers": "About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards.",
+      "note": "The only venue in this registry with a free, unauthenticated API, so it is harvested rather than searched: tools/harvest.py pulls acts once and keeps them, and every frontier is then answered against the local corpus. Records carry structured roles — Vader, Moeder, Kind, Bruidegom, Bruid, Vader van de bruid — so a parent link is a field rather than prose, and each act links to its scan and to its search.arch.be page. Throttled to 4 requests a second; the harvester goes slower.",
+      "capabilities": [
+        "api",
+        "name-index"
+      ]
     }
   ],
   "pages": [
@@ -333,7 +404,7 @@
       "title": "paulderidder",
       "url": "https://gw.geneanet.org/paulderidder",
       "covers": "Bundervoet, Evergem.",
-      "yielded": "The Evergem Bundervoet trunk; Joannes b.1682 is Sosa 644 here."
+      "yielded": "The Evergem Bundervoet trunk; Joannes b.1682 is Sosa 644 here. Re-read July 2026: confirmed the two same-named Joannes as father (ca 1637-1707) and son (ca 1682-1760); gave Joanna Verbrugghe's father Nicolas, Joanna van Hecke's father Willem, Livina Stockman's parents Joannes Stockman x Guillielma Dellaert, and Segerius's mother as Elisabeth NN — which refuted the 'Elisabeth Hovelynck' this tree had been credited with. Holds far more than has been taken: Pieter Bundervoet (1727) and his eight children, Segerius's siblings, and act images on several profiles."
     },
     {
       "id": "tree-glorieuxp",
@@ -484,6 +555,85 @@
       "covers": "French civil registration.",
       "yielded": null,
       "note": "Two pending record matches. Worth attention: the Van Iseghem family migrated to Lens (Pas-de-Calais) for the coal mines, and Joannes Van Iseghem was born there in 1903 — a French index is exactly where that branch should appear. Paywalled on MyHeritage."
+    },
+    {
+      "id": "dbe-petrus-f-1943",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943",
+      "url": "https://www.openarchieven.nl/dbe:9e1d9dc7-4107-4c96-febc-2d81854a0cb2",
+      "image": "https://www.doodsprentjes.be/index.php?lang=Nld&p=search&nummer=18_360290",
+      "collection": "Doodsprentjes.be bidprentjesverzameling, record 18_360290",
+      "yielded": "Independent corroboration of Petrus Franciscus Bundervoet: born 19 March 1879 at Evergem, died 21 July 1943 at Oostende, partner Vanstechelman. Every date and place matches the record we held on Geneanet's word alone.",
+      "confidence": "sup",
+      "accessed": "2026-07-25",
+      "note": "A transcription of a memorial card, not a civil act and not an image anyone here has read. The card itself sits behind a session on doodsprentjes.be — the URL above returns the site's search page, not the scan — so this stays sup."
+    },
+    {
+      "id": "fwk-petrus-f-1943",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Familiekunde Vlaanderen Westkust memorial card — Pieter-Franciscus Bundervoet, d. Oostende 21 July 1943",
+      "url": "https://www.openarchieven.nl/fwk:2c8c8992-d4de-acac-3664-e3ff622219e6",
+      "collection": "Familiekunde Vlaanderen regio Westkust, bidprentjes/rouwbrieven, record 37875",
+      "yielded": "The same death independently: b. 19 March 1879 Evergem, d. 21 July 1943 Oostende, partner named in full as Augusta Vanstechelman. A second archive, a separate collection, the same facts.",
+      "confidence": "sup",
+      "accessed": "2026-07-25"
+    },
+    {
+      "id": "fwk-marcel-b-2015",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Familiekunde Vlaanderen Westkust memorial card — Marcel Bundervoet, d. Oostende 20 November 2015",
+      "url": "https://www.openarchieven.nl/fwk:7879ce10-9feb-ee58-03bb-6ede00398ed7",
+      "collection": "Familiekunde Vlaanderen regio Westkust, bidprentjes/rouwbrieven, record 486448",
+      "yielded": "Marcel Bundervoet's exact dates, which the tree had only as years: born 10 May 1933 Oostende, died 20 November 2015 Oostende. It also names BOTH partners — Francine Bisschop and a Van Iseghem — confirming the two marriages the family had reported.",
+      "confidence": "sup",
+      "accessed": "2026-07-25"
+    },
+    {
+      "id": "fwk-augusta-1922",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Familiekunde Vlaanderen Westkust memorial card — Augusta Vanstechelman, d. Mariakerke 4 Oct 1922",
+      "url": "https://www.openarchieven.nl/fwk:931afda2-e801-150f-7511-90565d013e47",
+      "yielded": "Augusta Vanstechelman confirmed outright: born 14 March 1882 Mariakerke, died 4 October 1922 Mariakerke, spouse Petrus Bundervoet. Every field matches the record, which had rested on the stechec tree alone.",
+      "confidence": "sup",
+      "accessed": "2026-07-25"
+    },
+    {
+      "id": "fwk-alphonsus-1980",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Familiekunde Vlaanderen Westkust memorial card — Alfons Bundervoet, d. Oostende 11 Mar 1980",
+      "url": "https://www.openarchieven.nl/fwk:cd4bee2a-edaa-16c4-3b90-ed85b038d395",
+      "yielded": "Alphonsus Bernardus Bundervoet: born 6 January 1905 Oostende, died 11 March 1980 Oostende, spouse Elodia Bostyn — matching the record exactly.",
+      "confidence": "sup",
+      "accessed": "2026-07-25"
+    },
+    {
+      "id": "spa-alphonsus-1980",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Spaenhiers heemkring memorial-card index — Alfons Bundervoet, d. Oostende 11 Mar 1980",
+      "url": "https://www.openarchieven.nl/spa:d97eeeea-26a7-ae07-e4eb-7c144416fad2",
+      "image": "https://spaenhiers.be/wp-content/uploads/2026/04/bidprentjes_2026-01-31.pdf",
+      "yielded": "The same death from a second, unrelated heemkring collection — same birth date, same death date, same spouse. Independent corroboration rather than a second copy of one index.",
+      "confidence": "sup",
+      "accessed": "2026-07-25"
+    },
+    {
+      "id": "S5",
+      "site": "agatha",
+      "kind": "record",
+      "title": "Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden",
+      "url": "https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00221638_0",
+      "artifact": "thumas-vandenbemden-1902-marriage-kraainem",
+      "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1902, akte nr. 2",
+      "yielded": "FOUR parent links in one document: Joannes Baptista Georgius Thumas as son of Georgius Carolus Josephus Thumas × Antonia Bossin, and Joanna Vandenbemden as daughter of Henricus Augustinus Vandenbemden × Maria Theresia Coekelberghs. Plus occupations for five people, a correction to Henricus Augustinus's death place (Kraainem, not Sint-Stevens-Woluwe), the spelling Antonia rather than Antoina, and four witnesses.",
+      "confidence": "doc",
+      "accessed": "2026-07-25",
+      "note": "An AGATHA act analysis — the Rijksarchief's own transcription of the register, with the act number — not the scan. Reached by matching the harvested Open Archives corpus, whose own link pointed at the retired search.arch.be."
     }
   ]
 }

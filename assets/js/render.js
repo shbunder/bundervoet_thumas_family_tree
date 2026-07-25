@@ -18,14 +18,36 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
   // ---------- shared pieces ----------
 
-  function node(id, { role, arrow = '↑', focus = false } = {}) {
+  // Birth order, which is the order a sibship is read in. `order` is the birth date
+  // reduced to a sortable string by the build; anyone without one sorts last rather
+  // than being given a position the records do not support.
+  const byBirth = (a, b) =>
+    (people[a].order || '9999').localeCompare(people[b].order || '9999') ||
+    people[a].name.localeCompare(people[b].name);
+
+  // What someone is *to the person in focus* — "father", "sister", "granddaughter".
+  // Every card on the explorer is labelled this way, so the same layout reads
+  // correctly from anybody's seat and not just from the root's.
+  const relTo = (id, ref) => {
+    if (!id || !ref || id === ref || !people[id] || !people[ref]) return '';
+    const r = kin.bloodRelation(id, ref);
+    return r && r.kind === 'blood' ? r.label : '';
+  };
+
+  const spouseWord = id => ({ f: 'wife', m: 'husband' })[kin.genderOf(id)] || 'spouse';
+
+  function node(id, { role, arrow = '↑', focus = false, cls = '' } = {}) {
     if (!id) return '<div class="node unk"><div class="nm">Unknown</div><div class="dt">to research</div></div>';
     const p = people[id];
     const c = conf(id);
-    const label = focus ? kin.relationship(id) || 'in focus' : role || kin.relationship(id) || p.occupation || '';
-    const climb = !focus && c !== 'unk' ? `<span class="climb">climb ${arrow}</span>` : '';
+    // Every other card on the row says what it is to the person in focus, so the
+    // focus card cannot also say what it is to the root without the two readings
+    // being mistaken for each other. What they are to the root is stated once,
+    // with room to name the root, in the detail card below.
+    const label = focus ? 'in focus' : role || kin.relationship(id) || p.occupation || '';
+    const climb = !focus && c !== 'unk' ? `<span class="climb">${arrow ? `climb ${arrow}` : 'open'}</span>` : '';
     return (
-      `<div class="node ${focus ? 'focus ' : ''}${c}" data-id="${esc(id)}">` +
+      `<div class="node ${focus ? 'focus ' : ''}${cls ? cls + ' ' : ''}${c}" data-id="${esc(id)}">` +
       climb +
       (label ? `<div class="rl">${esc(label)}</div>` : '') +
       `<div class="nm">${esc(p.name)}</div>` +
@@ -35,10 +57,10 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
   }
 
   // A spouse who is a record of their own is rendered as a real node, so you can
-  // climb into them and on into their family. One who is only a name stays flat.
+  // open them and go on into their family. One who is only a name stays flat.
   const spouseNode = sp =>
     sp.id && people[sp.id]
-      ? node(sp.id, { role: 'spouse' })
+      ? node(sp.id, { role: spouseWord(sp.id), arrow: '' })
       : '<div class="node fam spouse"><div class="rl">spouse</div>' +
         `<div class="nm">${esc(sp.name)}</div>` +
         (sp.detail ? `<div class="dt">${esc(sp.detail)}</div>` : '') +
@@ -48,15 +70,23 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
   // The caption only shows on narrow screens: there the two couples sit one
   // above the other, where the drop line would wrongly read as descent, so it
   // is hidden and this says whose parents each couple is instead.
-  function grandparentCouple(parentId) {
+  function grandparentCouple(parentId, focus) {
     const p = parentId && people[parentId];
     if (!p || (!p.father && !p.mother)) return '';
     return (
       `<div class="gplab">${esc(p.name)}’s parents</div>` +
-      `<div class="couple">${node(p.father)}<span class="xmark">×</span>${node(p.mother)}</div>` +
+      `<div class="couple">${node(p.father, { role: relTo(p.father, focus) })}<span class="xmark">×</span>` +
+      `${node(p.mother, { role: relTo(p.mother, focus) })}</div>` +
       '<div class="vline"></div>'
     );
   }
+
+  // A name that opens that person. Everywhere one person is mentioned inside
+  // another's card, it is one of these — the tree is a graph, so reading it should
+  // never be a one-way trip.
+  const refLink = id =>
+    `<a class="ref ${conf(id)}" data-id="${esc(id)}" role="button" tabindex="0">${esc(people[id].name)}</a>` +
+    (people[id].dates ? ` <span class="d">${esc(people[id].dates)}</span>` : '');
 
   const parentLine = (label, id) =>
     id && people[id]
@@ -65,10 +95,22 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
         '</div>'
       : '';
 
+  // "Renée's great-grandmother", not "Great-grandmother" — a relation is a fact about
+  // a pair, so the other half of the pair has to be in it. Everywhere else on the page
+  // labels are read against the person in focus; this one is read against the root,
+  // and the only way to tell them apart is to say so.
+  const rootName = people[kin.ROOT] ? people[kin.ROOT].name : '';
   function subtitleFor(id) {
     const p = people[id];
     const rel = kin.relationship(id);
-    return [rel, p.dates, p.occupation, p.nickname && `“${p.nickname}”`].filter(Boolean).join(' · ');
+    return [
+      rel && `${rootName}’s ${rel.toLowerCase()}`,
+      p.dates,
+      p.occupation,
+      p.nickname && `“${p.nickname}”`,
+    ]
+      .filter(Boolean)
+      .join(' · ');
   }
 
   // ---------- hover card ----------
@@ -93,10 +135,14 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
   // ---------- explorer ----------
 
+  // Four rows around whoever is in focus: grandparents, parents, their own
+  // generation — themselves, whoever they married, and their brothers and sisters —
+  // and their children. Every card is labelled by what it is *to them*, and clicking
+  // one makes it the focus, so the same four rows redraw around anybody in the tree.
   function pedigree(focus) {
     const p = people[focus];
-    const fatherGP = grandparentCouple(p.father);
-    const motherGP = grandparentCouple(p.mother);
+    const fatherGP = grandparentCouple(p.father, focus);
+    const motherGP = grandparentCouple(p.mother, focus);
     let html = '';
 
     // The two rows are tagged so a narrow screen can stack the four grandparents
@@ -107,38 +153,160 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     if (p.father || p.mother) {
       html +=
         `<div class="gplab">${esc(p.name)}’s parents</div>` +
-        `<div class="pgrid parents"><div class="pcol">${node(p.father)}</div>` +
+        `<div class="pgrid parents"><div class="pcol">${node(p.father, { role: relTo(p.father, focus) })}</div>` +
         '<div class="pcol xcol"><span class="xmark">×</span></div>' +
-        `<div class="pcol">${node(p.mother)}</div></div>` +
+        `<div class="pcol">${node(p.mother, { role: relTo(p.mother, focus) })}</div></div>` +
         '<div class="vline tall"></div>';
     }
 
-    html +=
-      '<div class="couple">' +
-      node(focus, { focus: true }) +
-      (p.spouses || []).map(sp => `<span class="xmark">×</span>${spouseNode(sp)}`).join('') +
-      '</div>';
+    // The whole sibship on one line, in birth order, with the person in focus in
+    // their own place in it rather than pulled out of it — the drop line above
+    // belongs to all of them equally. Their spouses travel with them.
+    const siblings = kin.siblingsOf(focus);
+    const sibship = [focus, ...siblings].sort(byBirth);
+    const married = (p.spouses || []).map(sp => `<span class="xmark">×</span>${spouseNode(sp)}`).join('');
+    const row = sibship
+      .map(id =>
+        id === focus
+          ? `<div class="fcell">${node(focus, { focus: true })}${married}</div>`
+          : node(id, { role: relTo(id, focus), arrow: '', cls: 'sib' })
+      )
+      .join('');
 
-    const children = kin.childrenOf(focus);
+    if (siblings.length) {
+      html += '<div class="rowlab">brothers &amp; sisters, in birth order · click to open one</div>';
+    }
+    // The inner wrapper is what lets a row centre when it fits and scroll when it
+    // does not: `margin:auto` gives back negative free space as zero, where
+    // `justify-content:center` would put the first card out of reach off-screen.
+    html += `<div class="srow sibrow"><div class="rowin">${row}</div></div>`;
+
+    const children = kin.childrenOf(focus).slice().sort(byBirth);
     if (children.length) {
       html +=
         '<div class="vline tall"></div>' +
         '<div class="childlab">children · click to climb down ↓</div>' +
-        `<div class="crow">${children.map(k => node(k, { arrow: '↓' })).join('')}</div>`;
+        '<div class="srow crow"><div class="rowin">' +
+        children.map(k => node(k, { role: relTo(k, focus), arrow: '↓' })).join('') +
+        '</div></div>';
     }
     return html;
   }
 
+  // Everything known about the person in focus, under the four rows. Every name in
+  // it is a way into that person's own four rows, so the detail is a second way to
+  // walk the tree and not just a place to read about a stop on it.
   function detail(focus) {
     const p = people[focus];
+    const c = conf(focus);
+    const rows = [];
+    const push = (label, value) => value && rows.push(`<div class="kv"><b>${label}:</b> ${value}</div>`);
+    const list = ids => ids.map(id => refLink(id)).join('<span class="sep">·</span>');
+
+    push('Born', esc(p.born));
+    push('Died', esc(p.died));
+    push('Occupation', esc(p.occupation));
+    if (p.spouses?.length) {
+      push(
+        'Married',
+        p.spouses
+          .map(sp => (sp.id && people[sp.id] ? refLink(sp.id) : esc(sp.name)) + (sp.detail ? ` <span class="d">— ${esc(sp.detail)}</span>` : ''))
+          .join('<span class="sep">·</span>')
+      );
+    }
+    push('Father', p.father && people[p.father] ? refLink(p.father) : '');
+    push('Mother', p.mother && people[p.mother] ? refLink(p.mother) : '');
+
+    const siblings = kin.siblingsOf(focus).slice().sort(byBirth);
+    const children = kin.childrenOf(focus).slice().sort(byBirth);
+    if (siblings.length) push(siblings.length === 1 ? 'Sibling' : 'Siblings', list(siblings));
+    if (children.length) push(children.length === 1 ? 'Child' : 'Children', list(children));
+
     return (
       `<h3>${esc(p.name)}</h3><div class="sub">${esc(subtitleFor(focus))}</div>` +
-      (p.spouses?.length ? `<div class="kv"><b>Spouse:</b> ${esc(spousesText(p))}</div>` : '') +
-      parentLine('Father', p.father) +
-      parentLine('Mother', p.mother) +
+      `<div class="conf conf-${c}">${esc(meta.confidenceLabels[c])}</div>` +
+      rows.join('') +
       (p.note ? `<div class="disc">${esc(p.note)}</div>` : '') +
-      '<div class="kv" style="margin-top:8px;font-size:.82rem;color:var(--muted)">' +
-      `<b style="color:var(--accent)">Source:</b> ${esc(kin.sourceFor(focus))}</div>`
+      `<div class="src"><b>Source:</b> ${esc(kin.sourceFor(focus))}</div>`
+    );
+  }
+
+  // ---------- how two people connect ----------
+  //
+  // Drawn as an arch: up from each of them to the ancestor they share, across the
+  // top, and down again. The shape is the argument — it shows *where* two people
+  // meet instead of asserting that they do, and the height of each side is the
+  // number of generations that side had to climb.
+  //
+  // When one of the two is the shared ancestor there is no fork to draw, so the arch
+  // straightens into the single line that a direct descent actually is. Same code,
+  // because it is the same fact with one leg of length zero.
+
+  const BRIDGE =
+    '<svg class="ubridge" viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true">' +
+    '<path d="M50 0 V12 M25 12 H75 M25 12 V34 M75 12 V34" vector-effect="non-scaling-stroke"/></svg>';
+
+  const MARRIED = '<div class="uconn marr"><span>married</span></div>';
+
+  function ucard(id, label, cls = '') {
+    const p = people[id];
+    return (
+      `<div class="ucard ${conf(id)}${cls}" data-id="${esc(id)}">` +
+      (label ? `<div class="urel">${esc(label)}</div>` : '') +
+      `<div class="uname">${esc(p.name)}</div>` +
+      (p.dates ? `<div class="udt">${esc(p.dates)}</div>` : '') +
+      '</div>'
+    );
+  }
+
+  // One side of the arch, read top-down: the steps below the shared ancestor, each
+  // labelled by what it is to the person at the foot, ending on that person.
+  function arm(path, marriedIn) {
+    const foot = path[path.length - 1];
+    const steps = path
+      .map((id, i) => {
+        const last = i === path.length - 1;
+        return (
+          '<div class="uconn"></div>' +
+          ucard(id, last ? '' : relTo(id, foot), last && !marriedIn ? ' here' : '')
+        );
+      })
+      .join('');
+    return steps + (marriedIn ? MARRIED + ucard(marriedIn, '', ' here') : '');
+  }
+
+  function linkGraph(a, b) {
+    const d = kin.linkDiagram(a, b);
+    if (!d || d.kind === 'self') return '';
+    if (d.kind === 'spouse') {
+      return `<div class="ulink pair">${ucard(a, '', ' here')}${MARRIED}${ucard(b, '', ' here')}</div>`;
+    }
+
+    // Each arm without the ancestor at its top — that card is drawn once, at the
+    // apex, which is the whole point of the shape.
+    const left = d.left.slice(0, -1).reverse();
+    const right = d.right.slice(0, -1).reverse();
+    const marriedOn = side => (d.married && d.married.side === side ? d.married.id : null);
+
+    if (!left.length || !right.length) {
+      const emptyLeft = !left.length;
+      const atApex = marriedOn(emptyLeft ? 'left' : 'right');
+      return (
+        '<div class="ulink straight">' +
+        (atApex ? ucard(atApex, '', ' here') + MARRIED : '') +
+        ucard(d.via, '', atApex ? '' : ' here') +
+        arm(emptyLeft ? right : left, marriedOn(emptyLeft ? 'right' : 'left')) +
+        '</div>'
+      );
+    }
+
+    return (
+      '<div class="ulink">' +
+      `<div class="uapex">${ucard(d.via, 'they meet here')}</div>` +
+      BRIDGE +
+      `<div class="ucols"><div class="uside">${arm(left, marriedOn('left'))}</div>` +
+      `<div class="uside">${arm(right, marriedOn('right'))}</div></div>` +
+      '</div>'
     );
   }
 
@@ -249,58 +417,19 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     );
   }
 
-  // ---------- line of descent ----------
+  // ---------- the side panel: this person's link to the root ----------
 
-  // The single thread from whoever is in focus down to the children.
+  // The same arch, with one end pinned to the root. For a direct ancestor it is the
+  // straight line of descent it always was; for an aunt or a cousin it is the fork
+  // that the old single thread had to apologise for in prose.
   function descent(id) {
-    const line = kin.lineOfDescent(id);
-
-    if (line.kind === 'none') {
+    if (id === kin.ROOT) {
       return (
-        `<p class="lnote">${esc(people[id].name)} is not linked to Renée &amp; Léon by ` +
-        'any recorded parent, so there is no line to walk yet.</p>'
+        `<p class="lnote">${esc(people[id].name)} is where this tree is measured from — ` +
+        'every line in it ends here.</p>'
       );
     }
-
-    let head = '';
-    if (line.kind === 'collateral') {
-      const via = people[line.branchesFrom];
-      head =
-        `<p class="lnote">${esc(people[id].name)} is not a direct ancestor. ` +
-        `The line below is ${esc(via.name)}’s — where ${esc(people[id].name)} branches off.</p>` +
-        `<div class="lstep off"><div class="lname">${esc(people[id].name)}</div>` +
-        `<div class="lrel">off the direct line</div></div>` +
-        '<div class="lconn dashed"><span>child of</span></div>';
-    }
-
-    const steps = line.path
-      .map((pid, i) => {
-        const p = people[pid];
-        const isFocus = pid === id;
-        const generations = line.path.length - 1 - i;
-        const label =
-          pid === kin.ROOT
-            ? 'the children'
-            : generations === 1
-              ? 'parent'
-              : `${generations} generations up`;
-        return (
-          `<div class="lstep ${conf(pid)}${isFocus ? ' here' : ''}" data-id="${esc(pid)}">` +
-          `<div class="lname">${esc(p.name)}</div>` +
-          (p.dates ? `<div class="ldt">${esc(p.dates)}</div>` : '') +
-          `<div class="lrel">${esc(label)}</div>` +
-          '</div>' +
-          (i < line.path.length - 1 ? '<div class="lconn"><span>↓</span></div>' : '')
-        );
-      })
-      .join('');
-
-    const depth = line.path.length - 1;
-    const from = line.kind === 'collateral' ? ` from ${esc(people[line.branchesFrom].name)}` : '';
-    const footer = depth
-      ? `${depth} generation${depth === 1 ? '' : 's'}${from} down to Renée &amp; Léon`
-      : 'Every line in the tree ends here.';
-    return head + `<div class="lthread">${steps}</div>` + `<p class="ldepth">${footer}</p>`;
+    return `<div class="lhead">${relationText(id, kin.ROOT)}</div>` + linkGraph(id, kin.ROOT);
   }
 
   const legend = () =>
@@ -398,10 +527,18 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     }
     if (r.kind === 'self') return `<b>${esc(people[a].name)}</b> — that is the same person.`;
 
-    const line = `<b>${esc(people[a].name)}</b> is <b>${esc(people[b].name)}</b>’s <em>${esc(r.label)}</em>.`;
-    if (r.kind !== 'blood' || !r.via) {
-      return line + (r.detail ? `<div class="via">Through ${esc(r.detail)}.</div>` : '');
+    const A = `<b>${esc(people[a].name)}</b>`;
+    const B = `<b>${esc(people[b].name)}</b>`;
+    const line = `${A} is ${B}’s <em>${esc(r.label)}</em>.`;
+    // An in-law is two facts, not one — a blood relation and a marriage — and saying
+    // it as one produces "X is Y's aunt of Y's husband". Two clauses, one per step.
+    if (r.kind === 'marriage' && r.through) {
+      const T = `<b>${esc(people[r.through].name)}</b>`;
+      return r.married === 'b'
+        ? `${A} is the <em>${esc(r.label)}</em> of ${T}, who married ${B}.`
+        : `${A} married ${T}, who is ${B}’s <em>${esc(r.label)}</em>.`;
     }
+    if (r.kind !== 'blood' || !r.via) return line;
     // When one of them is the common ancestor, saying so again explains nothing —
     // the relation already is the line between them.
     if (r.da === 0 || r.db === 0) {
@@ -416,7 +553,15 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     );
   }
 
-  return { tooltip, pedigree, detail, lineageColumns, indexCards, relationText, legend, searchResults, descent };
+  // What the index's relation finder shows: the sentence, and then the route that
+  // sentence came from. Neither is worth much alone — a label with no visible join
+  // is a claim, and a drawing with no label makes the reader name the shape.
+  const relationPanel = (a, b) => relationText(a, b) + linkGraph(a, b);
+
+  return {
+    tooltip, pedigree, detail, lineageColumns, indexCards, relationPanel,
+    legend, searchResults, descent,
+  };
 };
 
 })();

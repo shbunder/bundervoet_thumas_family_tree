@@ -1,0 +1,290 @@
+"""Loading and interpreting the data.
+
+Every tool goes through here, so there is one definition of what a person is rather
+than four copies drifting apart.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import unicodedata
+from pathlib import Path
+
+from . import frontmatter
+
+ROOT = Path(__file__).resolve().parents[2]
+DATA = ROOT / "data"
+PEOPLE_DIR = DATA / "people"
+ARTIFACTS_DIR = DATA / "artifacts"
+SITE = ROOT / "site"
+
+# The fields a person record may carry, in the order they are written.
+FIELDS = [
+    "id", "name", "surname", "sex", "birth", "death", "confidence", "occupation",
+    "nickname", "branch", "line", "father", "mother", "spouses", "sources",
+]
+EVENT_FIELDS = ["date", "place"]
+SPOUSE_FIELDS = ["id", "name", "detail"]
+# An artifact is a saved primary document — a scan or photograph of an act. It is
+# evidence, so it lives in data/ with the facts, not in docs/ with the writing about
+# them, and it carries its own record in the same frontmatter format.
+ARTIFACT_FIELDS = [
+    "id", "file", "media", "bytes", "sha256", "title", "kind", "event", "date",
+    "place", "repository", "collection", "source", "url", "accessed", "evidences",
+]
+
+# ---------- dates ----------
+# A deliberately small grammar, so a date is queryable and sortable instead of being
+# prose the next tool has to guess at:
+#
+#   1876-11-12   a day            1876-11   a month           1876   a year
+#   ~1682        about            <1727     before            >1900  after
+#   1575..1587   between two years
+#
+# Anything a source did not actually say is simply absent. There is no format for
+# "probably March", because inventing one invites inventing the fact.
+DAY = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+MONTH = re.compile(r"^\d{4}-\d{2}$")
+YEAR = re.compile(r"^\d{4}$")
+APPROX = re.compile(r"^~\d{4}$")
+BEFORE = re.compile(r"^<\d{4}$")
+AFTER = re.compile(r"^>\d{4}$")
+RANGE = re.compile(r"^\d{4}\.\.\d{4}$")
+
+_DATE_FORMS = (DAY, MONTH, YEAR, APPROX, BEFORE, AFTER, RANGE)
+
+MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def is_valid_date(s) -> bool:
+    return isinstance(s, str) and any(p.match(s) for p in _DATE_FORMS)
+
+
+def format_date(s: str | None) -> str:
+    """The human form. The machine form is what is stored; this is only ever display."""
+    if not s:
+        return ""
+    if DAY.match(s):
+        y, m, d = s.split("-")
+        return f"{int(d)} {MONTH_NAMES[int(m) - 1]} {y}"
+    if MONTH.match(s):
+        y, m = s.split("-")
+        return f"{MONTH_NAMES[int(m) - 1]} {y}"
+    if APPROX.match(s):
+        return f"~{s[1:]}"
+    if BEFORE.match(s):
+        return f"before {s[1:]}"
+    if AFTER.match(s):
+        return f"after {s[1:]}"
+    if RANGE.match(s):
+        return s.replace("..", "–")
+    return s
+
+
+def year_of(date: str | None) -> int | None:
+    """The year in any date the grammar allows, or None. Ranges give their start."""
+    if not date:
+        return None
+    m = re.search(r"(\d{4})", str(date))
+    return int(m.group(1)) if m else None
+
+
+def point_year(date: str | None) -> int | None:
+    """The year a date actually ASSERTS, or None if it only bounds one.
+
+    `year_of` reads a number out of any date form, which is right for sorting and wrong
+    for arithmetic. `<1673` means "born at some unknown time before 1673" — subtracting
+    it from a child's birth year produced "mother at age -6" for a record that was
+    never in conflict with anything. A bound is not a measurement, and the difference is
+    invisible until something does sums with it.
+
+    `~1682` is a point estimate, so it is returned; callers doing arithmetic on it are
+    expected to allow the slack an "about" carries.
+    """
+    if not date:
+        return None
+    s = str(date)
+    if DAY.match(s) or MONTH.match(s) or YEAR.match(s) or APPROX.match(s):
+        return year_of(s)
+    return None
+
+
+def is_approximate(date: str | None) -> bool:
+    """Whether a date carries slack — an `~1682` should not be held to the same
+    tolerance as a registered day."""
+    return bool(date) and bool(APPROX.match(str(date)))
+
+
+def sort_key(date: str | None) -> str:
+    """A date reduced to something that sorts as a plain string.
+
+    The browser reads a sibship in birth order, and the only alternative to sending it
+    this is a second copy of the date grammar in JavaScript, drifting from this one.
+    The qualifier is stripped and whatever precision the date has is kept, which sorts
+    correctly because a year is a prefix of its own months: "1876" < "1876-03" <
+    "1876-11-12". A bound (`<1727`) sorts on its year — that is an ordering, not a
+    claim, and nothing but the order of cards on a row depends on it.
+    """
+    m = re.match(r"^[~<>]?(\d{4}(?:-\d{2}(?:-\d{2})?)?)", str(date or ""))
+    return m.group(1) if m else ""
+
+
+def event_text(e: dict | None) -> str:
+    if not e:
+        return ""
+    return " ".join(x for x in (format_date(e.get("date")), e.get("place")) if x)
+
+
+def display_dates(p: dict) -> str:
+    """The line shown under a name. Derived, never stored — one fact, one place."""
+    b, d = event_text(p.get("birth")), event_text(p.get("death"))
+    if b and d:
+        return f"{b} – {d}"
+    if b:
+        return f"b. {b}"
+    if d:
+        return f"d. {d}"
+    return ""
+
+
+# ---------- loading ----------
+
+
+def _read_json(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def on_disk() -> list[str]:
+    return sorted(f.stem for f in PEOPLE_DIR.glob("*.md"))
+
+
+def load_config() -> dict:
+    """data/ holds facts; site/ holds the words the page shows.
+
+    Keeping them apart is what stops a heading or a label being mistaken for
+    something a record asserts.
+    """
+    meta = _read_json(DATA / "meta.json")
+    site = _read_json(SITE / "labels.json")
+    return {
+        "roster": on_disk(),
+        "meta": meta,
+        # The explorer opens on the first root; a forest just has more of them.
+        "root": meta["roots"][0],
+        "branches": _read_json(DATA / "branches.json")["branches"],
+        "lineages": _read_json(DATA / "lineages.json")["lineages"],
+        "site": site,
+        "groups": site["groups"],
+    }
+
+
+def load_person(person_id: str) -> dict:
+    text = (PEOPLE_DIR / f"{person_id}.md").read_text(encoding="utf-8")
+    data, body = frontmatter.parse(text, f"{person_id}.md")
+    if body:
+        data["note"] = body
+    return data
+
+
+def load_people(roster: list[str] | None = None) -> dict[str, dict]:
+    ids = roster if roster is not None else load_config()["roster"]
+    return {pid: load_person(pid) for pid in ids}
+
+
+def load_artifacts() -> dict[str, dict]:
+    if not ARTIFACTS_DIR.is_dir():
+        return {}
+    out = {}
+    for f in sorted(ARTIFACTS_DIR.glob("*.md")):
+        data, body = frontmatter.parse(f.read_text(encoding="utf-8"), f.name)
+        if body:
+            data["note"] = body
+        out[f.stem] = data
+    return out
+
+
+# ---------- names ----------
+# `name` is the name as the record wrote it, particles, spelling and all. Which part
+# of it is the family name cannot be computed: a quarter of these names carry a
+# particle ("Van den Broucke", "Vande Woestijne", "'t Jonck"), so the last word is
+# the wrong answer often enough to matter, and the exporter's particle heuristic
+# silently produced no surname at all for six people. So `surname` is stated, not
+# guessed — and it is the only extra name field, because "Christianus Josephus" is
+# one compound given name, not a first name plus a middle name.
+
+
+def given_names(p: dict) -> str:
+    """The name with the surname removed. Derived, never stored.
+
+    The surname is usually last, but not always: "Marie Anne Catherine Quinart
+    (Kinart)" ends with a variant spelling, so cutting only from the end left the
+    surname sitting in the given names as well.
+    """
+    surname = p.get("surname")
+    if not surname:
+        return p["name"]
+    at = p["name"].rfind(surname)
+    if at < 0:
+        return p["name"]
+    return re.sub(r"\s{2,}", " ", p["name"][:at] + p["name"][at + len(surname):]).strip()
+
+
+def family_key(surname: str | None) -> str:
+    """The grouping key.
+
+    Spelling varies by the record a person was found in — the same Oostende family is
+    written "Dekeyser" and "De Keyser", and both are kept on purpose — so grouping
+    compares surnames with case, spacing and accents removed. This is what lets
+    objective 3 ask "who are all the Bundervoets?" without a hand-maintained list.
+    """
+    s = unicodedata.normalize("NFD", (surname or "").lower())
+    return re.sub(r"[^a-z]", "", s)
+
+
+# ---------- the shape the browser reads ----------
+# The site loads a generated bundle, so the display strings are computed once here
+# rather than in the renderer, and assets/ stays free of any logic about what a date
+# means.
+_source_titles: dict[str, str] = {}
+
+
+def set_source_titles(mapping: dict[str, str]) -> None:
+    """Titles for the registry ids, so records can cite `tree-isavdw` instead of
+    repeating "Geneanet tree isavdw (Rijksarchief scans)" twenty-five times."""
+    global _source_titles
+    _source_titles = mapping
+
+
+def to_browser_record(p: dict) -> dict:
+    out = {
+        "id": p["id"],
+        "name": p["name"],
+        "dates": display_dates(p),
+        "confidence": p.get("confidence"),
+    }
+    # Both derived here rather than in the renderer, so assets/ never has to know
+    # what a particle is.
+    if p.get("surname"):
+        out["surname"] = p["surname"]
+        out["family"] = family_key(p["surname"])
+    if p.get("sex"):
+        out["sex"] = p["sex"]
+    if p.get("birth"):
+        out["born"] = event_text(p["birth"])
+        # What the browser sorts a sibship by. Absent when the birth date is, and the
+        # renderer puts those last rather than guessing a position for them.
+        if sort_key(p["birth"].get("date")):
+            out["order"] = sort_key(p["birth"].get("date"))
+    if p.get("death"):
+        out["died"] = event_text(p["death"])
+    for field in ("occupation", "nickname", "branch", "line", "father", "mother", "spouses"):
+        if p.get(field):
+            out[field] = p[field]
+    # The records cite the registry by id; the browser wants something readable.
+    # Resolving here keeps the citation in one place and the prose out of the data.
+    if p.get("sources"):
+        out["source"] = "; ".join(_source_titles.get(s, s) for s in p["sources"])
+    if p.get("note"):
+        out["note"] = p["note"]
+    return out

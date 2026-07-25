@@ -1,0 +1,212 @@
+{
+  "harvests": [
+    {
+      "id": "bundervoet",
+      "query": {
+        "name": "Bundervoet",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 396,
+      "mentions": 396,
+      "complete": true,
+      "acts": 396
+    },
+    {
+      "id": "de-baecke",
+      "query": {
+        "name": "De Baecke",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 242,
+      "mentions": 242,
+      "complete": true,
+      "acts": 242
+    },
+    {
+      "id": "de-grande",
+      "query": {
+        "name": "De Grande",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 952,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "de-keyser",
+      "query": {
+        "name": "De Keyser",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 11795,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "de-vriese",
+      "query": {
+        "name": "De Vriese",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 2543,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "dekeyser",
+      "query": {
+        "name": "Dekeyser",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 11907,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "devriendt",
+      "query": {
+        "name": "Devriendt",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 6852,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "paelinck",
+      "query": {
+        "name": "Paelinck",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 2032,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "ramon",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 2899,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "sabbe",
+      "query": {
+        "name": "Sabbe",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 6448,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "schalandrijn",
+      "query": {
+        "name": "Schalandrijn",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 14,
+      "mentions": 14,
+      "complete": true,
+      "acts": 14
+    },
+    {
+      "id": "stroobandt",
+      "query": {
+        "name": "Stroobandt",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 676,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "thumas",
+      "query": {
+        "name": "Thumas",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 507,
+      "mentions": 507,
+      "complete": true,
+      "acts": 507
+    },
+    {
+      "id": "van-iseghem",
+      "query": {
+        "name": "Van Iseghem",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 1894,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "van-maele",
+      "query": {
+        "name": "Van Maele",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 11639,
+      "mentions": 600,
+      "complete": false,
+      "acts": 599
+    },
+    {
+      "id": "vandewalle",
+      "query": {
+        "name": "Vandewalle",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 11886,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "vanstechelman",
+      "query": {
+        "name": "Vanstechelman",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 690,
+      "mentions": 400,
+      "complete": false,
+      "acts": 400
+    }
+  ],
+  "population": {
+    "be": 30168306,
+    "counted": "2026-07-25"
+  }
+}

@@ -9,6 +9,7 @@ death:
 confidence: sup
 branch: Bundervoet
 line: bundervoet
+father: willem_vanhecke
 spouses:
   - id: segerius_bundervoet
     name: Segerius Bundervoet
@@ -17,4 +18,8 @@ sources:
   - tree-glorieuxp
 ---
 
-FRONTIER above — wife of Segerius Bundervoet, mother of Joannes (~1637). Her own parents not recorded here.
+Wife of Segerius Bundervoet and mother of Joannes Bundervoet (~1637).
+
+CORRECTED (July 2026): this record said "her own parents not recorded here". The
+paulderidder chart gives her father as Willem van Hecke (~1580), now linked; her mother
+appears there only as "?", so that side stays open.

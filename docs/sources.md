@@ -1,6 +1,6 @@
 # Sources
 
-<!-- GENERATED from research/sources.json by tools/research.mjs docs — do not edit. -->
+<!-- GENERATED from research/sources.json by tools/research.py docs — do not edit. -->
 
 Two levels: **sites** are the base venues, **pages** are the specific trees,
 collections and documents inside them that were actually opened. The search log that
@@ -9,28 +9,35 @@ references both is `research/searches.jsonl` — see [searching.md](searching.md
 Confidence: **doc** = seen in a primary act or an authoritative index · **sup** = a
 single member tree, not checked against the act · **fam** = family testimony.
 
+*Capabilities* say what a venue can be asked, not how good it is — a `name-index`
+miss is only a miss for what somebody indexed, and a venue that later gains
+`full-text` re-opens every one of them. `uv run tools/research.py stale` lists those.
+
 ## Sites
 
-| Site | Kind | Access | Searches run | Covers |
-|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | 3 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
-| `search-arch` <https://search.arch.be/> | archive | login | 0 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | 2 | Belgian civil and church registration, with act images. |
-| `geneanet` <https://www.geneanet.org/> | index | mixed | 12 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
-| `ancestry` <https://www.ancestry.com/> | index | paywall | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
-| `myheritage` <https://www.myheritage.com/> | index | paywall | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
-| `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | 0 | Volunteer transcriptions of West-Flemish marriage and death records. |
-| `vvf` | index | mixed | 0 | Flemish marriage indexes; the layer beneath several Geneanet trees. |
-| `stadsarchief-oostende` | archive | offline | 0 | Oostende civil registers after 1900 — not in AGATHA, not digitised. |
-| `inmemoriam` <https://www.inmemoriam.be/> | obituary | open | 1 | Digitised Belgian obituary notices. |
-| `ingedachten` <https://www.ingedachten.be/> | obituary | open | 1 | Funeral-home obituary notices. |
-| `uitvaart-oostende` <https://www.uitvaart-oostende.be/> | obituary | open | 1 | Oostende funeral notices. |
-| `jammart` <https://www.jammart.be/> | obituary | open | 1 | ~100,000 scanned memorial cards (bidprentjes). |
-| `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | 1 | Belgian gravestone and cemetery records. |
-| `family` | family | offline | 0 | Testimony, memorial cards, photographs and papers held by relatives. |
-| `web` | web | open | 0 | Parenteel documents and family sites published outside the big platforms. |
+| Site | Kind | Access | Capabilities | Searches run | Covers |
+|---|---|---|---|---|---|
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 5 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 2 | Belgian civil and church registration, with act images. |
+| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
+| `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
+| `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
+| `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 0 | Volunteer transcriptions of West-Flemish marriage and death records. |
+| `vvf` | index | mixed | name-index | 0 | Flemish marriage indexes; the layer beneath several Geneanet trees. |
+| `stadsarchief-oostende` | archive | offline | image-read | 0 | Oostende civil registers after 1900 — not in AGATHA, not digitised. |
+| `inmemoriam` <https://www.inmemoriam.be/> | obituary | open | name-index | 1 | Digitised Belgian obituary notices. |
+| `ingedachten` <https://www.ingedachten.be/> | obituary | open | name-index | 1 | Funeral-home obituary notices. |
+| `uitvaart-oostende` <https://www.uitvaart-oostende.be/> | obituary | open | name-index | 1 | Oostende funeral notices. |
+| `jammart` <https://www.jammart.be/> | obituary | open | name-index | 1 | ~100,000 scanned memorial cards (bidprentjes). |
+| `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
+| `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
+| `web` | web | open | full-text | 0 | Parenteel documents and family sites published outside the big platforms. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 6 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 
 **`agatha`** — Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …').
+
+**`search-arch`** — RETIRED. search.arch.be now redirects to an end-of-life notice and is replaced by agatha.arch.be. Act links in the harvested Open Archives corpus still point here, so they must be translated: a search.arch id like HUBRA_00221638_0 is HUVLB_HUBRA_00221638_0 on AGATHA, or the act can be found by searching name + commune + year.
 
 **`familysearch`** — Deeper than AGATHA or Ancestry for Belgium — it broke the Dekeyser wall the other two could not. Try it before concluding an act is unindexed.
 
@@ -43,6 +50,8 @@ single member tree, not checked against the act · **fam** = family testimony.
 **`jammart`** — Memorial cards name parents and children and sit outside the civil-registration publicity rules — the key to 20th-century walls. Match on place, never on surname alone.
 
 **`family`** — The only key to the sealed 20th-century links. A direct descendant may also request a relative's birth, marriage or death certificate at any age — that is the decisive move on the Janssens wall, not more online searching.
+
+**`openarch`** — The only venue in this registry with a free, unauthenticated API, so it is harvested rather than searched: tools/harvest.py pulls acts once and keeps them, and every frontier is then answered against the local corpus. Records carry structured roles — Vader, Moeder, Kind, Bruidegom, Bruid, Vader van de bruid — so a parent link is a field rather than prose, and each act links to its scan and to its search.arch.be page. Throttled to 4 requests a second; the harvester goes slower.
 
 ## Pages
 
@@ -61,6 +70,15 @@ single member tree, not checked against the act · **fam** = family testimony.
 - **Yielded:** A negative that settled a question: exactly one marriage in the whole of 1901, Belgrado Adeline × Leo Jean Louis (act 1). No Dekeyser — which disproves 'Hamme (Merchtem)' as the marriage place.
 - **Confidence:** doc
 - **Accessed:** 2026-07
+
+#### `S5` — Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00221638_0>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1902, akte nr. 2
+- **Yielded:** FOUR parent links in one document: Joannes Baptista Georgius Thumas as son of Georgius Carolus Josephus Thumas × Antonia Bossin, and Joanna Vandenbemden as daughter of Henricus Augustinus Vandenbemden × Maria Theresia Coekelberghs. Plus occupations for five people, a correction to Henricus Augustinus's death place (Kraainem, not Sint-Stevens-Woluwe), the spelling Antonia rather than Antoina, and four witnesses.
+- **Saved artifact:** `data/artifacts/thumas-vandenbemden-1902-marriage-kraainem.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-25
+- **Note:** An AGATHA act analysis — the Rijksarchief's own transcription of the register, with the act number — not the scan. Reached by matching the harvested Open Archives corpus, whose own link pointed at the retired search.arch.be.
 
 ### FamilySearch
 
@@ -186,7 +204,7 @@ single member tree, not checked against the act · **fam** = family testimony.
 #### `tree-paulderidder` — paulderidder
 - **Kind:** tree · <https://gw.geneanet.org/paulderidder>
 - **Covers:** Bundervoet, Evergem.
-- **Yielded:** The Evergem Bundervoet trunk; Joannes b.1682 is Sosa 644 here.
+- **Yielded:** The Evergem Bundervoet trunk; Joannes b.1682 is Sosa 644 here. Re-read July 2026: confirmed the two same-named Joannes as father (ca 1637-1707) and son (ca 1682-1760); gave Joanna Verbrugghe's father Nicolas, Joanna van Hecke's father Willem, Livina Stockman's parents Joannes Stockman x Guillielma Dellaert, and Segerius's mother as Elisabeth NN — which refuted the 'Elisabeth Hovelynck' this tree had been credited with. Holds far more than has been taken: Pieter Bundervoet (1727) and his eight children, Segerius's siblings, and act images on several profiles.
 
 #### `tree-glorieuxp` — glorieuxp
 - **Kind:** tree · <https://gw.geneanet.org/glorieuxp>
@@ -258,3 +276,47 @@ single member tree, not checked against the act · **fam** = family testimony.
 - **Kind:** tree
 - **Covers:** Bundervoet descendants, Evergem and Oostende.
 - **Yielded:** The Bundervoet surname line at Evergem.
+
+### Open Archives (openarch.nl) — open-data aggregator, Netherlands/Belgium/France
+
+#### `dbe-petrus-f-1943` — Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943
+- **Kind:** record · <https://www.openarchieven.nl/dbe:9e1d9dc7-4107-4c96-febc-2d81854a0cb2>
+- **Collection:** Doodsprentjes.be bidprentjesverzameling, record 18_360290
+- **Yielded:** Independent corroboration of Petrus Franciscus Bundervoet: born 19 March 1879 at Evergem, died 21 July 1943 at Oostende, partner Vanstechelman. Every date and place matches the record we held on Geneanet's word alone.
+- **Image:** <https://www.doodsprentjes.be/index.php?lang=Nld&p=search&nummer=18_360290>
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+- **Note:** A transcription of a memorial card, not a civil act and not an image anyone here has read. The card itself sits behind a session on doodsprentjes.be — the URL above returns the site's search page, not the scan — so this stays sup.
+
+#### `fwk-petrus-f-1943` — Familiekunde Vlaanderen Westkust memorial card — Pieter-Franciscus Bundervoet, d. Oostende 21 July 1943
+- **Kind:** record · <https://www.openarchieven.nl/fwk:2c8c8992-d4de-acac-3664-e3ff622219e6>
+- **Collection:** Familiekunde Vlaanderen regio Westkust, bidprentjes/rouwbrieven, record 37875
+- **Yielded:** The same death independently: b. 19 March 1879 Evergem, d. 21 July 1943 Oostende, partner named in full as Augusta Vanstechelman. A second archive, a separate collection, the same facts.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `fwk-marcel-b-2015` — Familiekunde Vlaanderen Westkust memorial card — Marcel Bundervoet, d. Oostende 20 November 2015
+- **Kind:** record · <https://www.openarchieven.nl/fwk:7879ce10-9feb-ee58-03bb-6ede00398ed7>
+- **Collection:** Familiekunde Vlaanderen regio Westkust, bidprentjes/rouwbrieven, record 486448
+- **Yielded:** Marcel Bundervoet's exact dates, which the tree had only as years: born 10 May 1933 Oostende, died 20 November 2015 Oostende. It also names BOTH partners — Francine Bisschop and a Van Iseghem — confirming the two marriages the family had reported.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `fwk-augusta-1922` — Familiekunde Vlaanderen Westkust memorial card — Augusta Vanstechelman, d. Mariakerke 4 Oct 1922
+- **Kind:** record · <https://www.openarchieven.nl/fwk:931afda2-e801-150f-7511-90565d013e47>
+- **Yielded:** Augusta Vanstechelman confirmed outright: born 14 March 1882 Mariakerke, died 4 October 1922 Mariakerke, spouse Petrus Bundervoet. Every field matches the record, which had rested on the stechec tree alone.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `fwk-alphonsus-1980` — Familiekunde Vlaanderen Westkust memorial card — Alfons Bundervoet, d. Oostende 11 Mar 1980
+- **Kind:** record · <https://www.openarchieven.nl/fwk:cd4bee2a-edaa-16c4-3b90-ed85b038d395>
+- **Yielded:** Alphonsus Bernardus Bundervoet: born 6 January 1905 Oostende, died 11 March 1980 Oostende, spouse Elodia Bostyn — matching the record exactly.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `spa-alphonsus-1980` — Spaenhiers heemkring memorial-card index — Alfons Bundervoet, d. Oostende 11 Mar 1980
+- **Kind:** record · <https://www.openarchieven.nl/spa:d97eeeea-26a7-ae07-e4eb-7c144416fad2>
+- **Yielded:** The same death from a second, unrelated heemkring collection — same birth date, same death date, same spouse. Independent corroboration rather than a second copy of one index.
+- **Image:** <https://spaenhiers.be/wp-content/uploads/2026/04/bidprentjes_2026-01-31.pdf>
+- **Confidence:** sup
+- **Accessed:** 2026-07-25

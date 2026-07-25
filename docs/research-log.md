@@ -630,3 +630,213 @@ records a name for her, and her father's was not going to be assumed into place.
 Validator green — 302 people. Zero HIGH findings remain in the audit.
 
 *End of log.
+
+## 38. Correction pass — a duplicated person merged, two Joannes confirmed, an invented surname withdrawn
+
+Triggered by two family questions: who Roland's sister was, and whether the two Joannes
+Bundervoets are really two people.
+
+**MERGED — Rita and "Roland's sister" were one person recorded twice.** The tree held
+both `rita_dk` (Rita De Keyser, no dates) and `roland_sis` ("Roland's sister (name
+unknown)", born 1940s). Both were daughters of Gustaaf × Simonne, both female, both
+described as Roland's sister; `roland_sis` had simply been written before the family
+recalled her name, and nothing ever distinguished them. Gustaaf's record says one
+daughter, and the family knows of one sister. Merged into `rita_dk`, which keeps the
+name; `roland_sis` deleted.
+
+This one hid from the §37 audit because that pass compared *names*, and these two names
+differ. The check that finds it compares the shape around a person — same parents, same
+sex, overlapping dates, with one name a placeholder. Re-run across all 307, it reports
+nothing else: Rita was the only duplicate.
+
+**Rita's surname is deliberately unsettled.** Her brother's 1943 Tottenham registration
+is known in the family to have mangled the Flemish name, and nobody knows what was
+written for Rita. "De Keyser" stands as the family's form, not as a transcription. The
+GRO search that would settle it must run across Dekeyser / Dekeyster / De Kayser /
+Keyser, and lean on the mother's-maiden-name field (Vandewalle), which survives whatever
+the registrar did to the surname.
+
+**CONFIRMED — the two Joannes Bundervoets are father and son.** paulderidder's profile
+for Joannes (Sosa 644) gives birth about 1682 at Evergem and death 7 November 1760 at
+Evergem, both matching our record exactly, with his father Joannes (ca 1637–1707) as a
+separate individual. They cannot be one person: 1637 to 1760 is 123 years. The
+repetition is ordinary — a son given his father's name — and the chain above them
+(Segerius ~1615, Livinus ~1600, Petrus 1560) matches ours at every step.
+
+**RETRACTED — Elisabeth "Hovelynck" never had that surname.** Livinus Bundervoet's
+record named Segerius's mother as Elisabeth Hovelynck and credited the paulderidder
+tree. That tree records her as "Elisabeth NN" — a given name and nothing more. The
+surname is withdrawn, and she now has her own record without one.
+
+**CORRECTED — Livinus's two marriages were in the wrong order.** The record had
+Catharina van Hecke first, Elisabeth second. Elisabeth's son Segerius was born about
+1615; Catharina van Hecke (~1620–~1670) appears in paulderidder as the mother of
+Wilhelmina (~1650). A wife born about 1620 cannot precede a son born in 1615.
+
+**CORRECTED — two "parents not recorded" notes were simply wrong.** Joanna Verbrugghe's
+father (Nicolas Verbrugghe) and Joanna van Hecke's father (Willem van Hecke, ~1580) were
+both in the tree we already cited, sitting one click above people we had.
+
+**Five ancestors added**, all from paulderidder at `sup`: Nicolas Verbrugghe; Willem van
+Hecke (~1580); Elisabeth NN; and Livina Stockman's parents, Joannes Stockman (~1646–1696)
+× Guillielma "Willemijne" Dellaert (1650–1694) — Livina previously had no parents at all.
+Plus Petrus "Pieter" Bundervoet (~1727–1777), Christoffel's brother, who until now existed
+only as the string "Pieter (1727)" inside his father's note.
+
+**A near-miss worth recording.** Searching Geneanet for "Joanna Verbrugghe" by name lands
+first on a different woman entirely — died Hontenisse 1734, married Petrus van Huffel,
+parents Gerard Verbrugge × Anna de Cock. Our Joanna is reached only by following the link
+from Joannes Bundervoet's profile. Noted on her record.
+
+**Artifact recorded, and honestly.** paulderidder attaches a scan captioned "Joannes
+Bundervoet Overlijdensregister Evergem 1760". It is saved — but at 230 × 38 pixels it is
+a single cropped line that cannot be transcribed, and `original` and `large` both 404.
+So Joannes stays `sup`: the image exists, but nobody here has read it. The artifact
+record says exactly that, and points at the Evergem 1760 death register as the frontier.
+
+**Checked and left alone:** the Livinus → Segerius link (~1600 → ~1615) that the §37
+audit flagged as a possibly-15-year-old father. Both dates are approximations from the
+same tree; nothing contradicts the link, and nothing yet confirms the gap. Not a
+correction, just an unresolved softness.
+
+**The queue this opened.** paulderidder holds a good deal more of this family than has
+ever been taken, all of it blood relatives under objective 2:
+- Pieter's household — Marie Anna de Deckere (~1731–1809) and eight children: Joannis
+  (1751), Livinus (1752), Petronella (1754–1794), Christophorus (1755), Joannis Baptista
+  (1757), Livina Maria (1760–1831), Joanna (1761–1825), Coleta (1766–1807).
+- Segerius's siblings: Livinus (~1615–~1670) and Maria (~1623–1676); his half-sister
+  Wilhelmina (~1650) and her mother Catharina van Hecke.
+- Act images sit on several paulderidder profiles, including a burial act for Pieter.
+
+Ancestors were taken first because the charter ranks objective 1 above objective 2; the
+breadth is the next pass, not a decision against it.
+
+Validator green — 307 people, zero HIGH findings in the audit.
+
+*End of log.
+
+## 39. Evidence pass — the tree checked against harvested acts instead of against trees
+
+The brief was to verify every line and every person against records. This pass changed
+the method to one that can actually reach that scale, ran it over two surnames, and
+reports honestly how far it got: two lines of ten, and no new `doc`.
+
+**The method.** Every venue in the registry except one is a person-at-a-time browser
+session behind a login. Open Archives publishes the same Belgian material as open data
+over an unauthenticated API, so `tools/harvest.py` pulls acts once and keeps them, and
+every frontier is then answered against the local corpus by `tools/link.py`, which scores
+each candidate by how much *rare* evidence agrees and refuses to graft anything with
+fewer than two independent identifiers. 2,302 acts are now held.
+
+**Four people independently corroborated**, none of them by the tree that first recorded
+them:
+
+- **Petrus Franciscus Bundervoet** — Doodsprentjes.be *and* Familiekunde Vlaanderen
+  Westkust each hold a memorial-card record: born 19 Mar 1879 Evergem, died 21 Jul 1943
+  Oostende, partner Vanstechelman (Augusta in full in the second). Four identifiers, two
+  unrelated collections. He had rested on one Geneanet tree.
+- **Augusta Vanstechelman** — born 14 Mar 1882 Mariakerke, died 4 Oct 1922 Mariakerke,
+  spouse Petrus Bundervoet. 48 bits, three independent identifiers, exact on every field.
+- **Alphonsus Bernardus Bundervoet** — born 6 Jan 1905 Oostende, died 11 Mar 1980
+  Oostende, spouse Elodia Bostyn, in *two* unrelated heemkring indexes.
+- **Marcel Henri Bundervoet** — the one that added rather than confirmed. The record held
+  only the years 1933 and 2015; the card gives **10 May 1933** and **20 November 2015**,
+  both at Oostende, and names both partners, Francine Bisschop and a Van Iseghem —
+  independently confirming the two marriages family memory had reported.
+
+**No confidence was raised, and that is the finding.** `doc` means an act or image was
+read here. Every one of these is an *index transcription* of a memorial card: the
+Doodsprentjes image sits behind a session and its record URL returns the site's search
+page; the Spaenhiers collection publishes as a PDF of listings rather than card images.
+So the open corpus turns out to be very good at corroboration and, so far, unable to
+supply a readable artifact. The tree still stands at 10 `doc` of 307. Raising that needs
+the civil acts — `search.arch.be` for 19th-century Evergem and Oostende — not this API.
+
+**Checked and rejected — Petrus and Mattheus Wittenheyns are not one person.** The new
+duplicate detector flags them on a rare surname plus a birth year of about 1500. But the
+given names are not variants of each other, the wives differ (Judoca 't Jonck vs Maria De
+Ruwe), the deaths differ (before 1575 vs about 1546 at Oostkamp), and the children differ.
+Two contemporaries of one uncommon Oostkamp surname is what brothers or cousins look like.
+Recorded on the record and in the log, because the warning is derived and will keep firing.
+
+**A negative worth keeping.** Bernardus Bundervoet (d. 1900) returned nothing above the
+noise floor from 393 compared mentions, with 166 vetoed on a stated conflict. That is not
+a gap in the search but in the corpus: Open Archives' Oost-Vlaanderen coverage is
+overwhelmingly 20th-century memorial cards, and he died before they bite. His evidence is
+19th-century Evergem civil registration, which is a different venue.
+
+**Tooling.** `harvest.py` buffered every act in memory and wrote once at the end, so an
+interrupted harvest — a timeout, a dropped connection — discarded everything it had
+already fetched. It now streams each act to disk as it arrives, flushed per record, so a
+long harvest is resumable and `held_act_ids()` skips what is already held.
+
+**How far this got, plainly.** Two surnames of 132 are harvested (Bundervoet complete at
+396 acts; Vanstechelman partial, 400 of 690). The eight remaining lines — including
+bostyn-cappaert, which is 121 of the 307 people — have no corpus yet. The next runs are
+`uv run tools/harvest.py surname …` for Dekeyser, Thumas, Sabbe, Paelinck, Stroobandt,
+Van Iseghem, Devriendt and Ramon, then `uv run tools/link.py --frontiers`. 147 frontiers
+remain open.
+
+Validator green — 307 people.
+
+*End of log.
+
+## 40. Evidence pass, continued — a marriage act read, four parent links proved, one match rejected
+
+Picking up §39: the corpus grew from two surnames to seventeen thousand mentions, and the
+question became which of the 307 the evidence actually reaches.
+
+**A whole-tree sweep.** `tools/verify_all.py` scores every person against every act held
+in one pass, instead of running `link.py` three hundred times and re-indexing the corpus
+each time. Its first run reported 24 people corroborated. **That was wrong, and the bug is
+worth recording**: `link.py` refuses to report anything for a person whose surname has no
+mentions in the corpus, and the sweep had no such guard — so people whose families had
+never been harvested matched strangers on a shared forename and a shared birth year, and
+it read as corroboration. With the guard, 24 became **8**. Every one of the sixteen that
+vanished was the exact coincidence the two-identifier rule exists to reject.
+
+**THE KRAAINEM ACT — four parent links in one document.** Chasing the strongest match led
+to the Rijksarchief's analysis of **Kraainem marriage act nr. 2, 3 February 1902**, read in
+full and saved as an artifact. It names both spouses, all four parents and four witnesses:
+
+- **Joannes Baptista Georgius Thumas**, b. Kraainem 26/09/1876, *fabriekwerker*, son of
+  **Georgius Carolus Josephus Thumas** (*landbouwer en herbergier*) × **Antonia Bossin**;
+- **Joanna Vandenbemden**, b. Sint-Stevens-Woluwe 15/06/1882, *naaister*, daughter of
+  **Henricus Augustinus Vandenbemden** (d. Kraainem 12/08/1889) × **Maria Theresia
+  Coekelberghs** (*herbergierster*).
+
+Four parent links that the tree held on a Geneanet tree's word are now on a civil act. Two
+occupations already recorded — *naaister*, *landbouwer en herbergier* — come back word for
+word, which is itself a check that these are the same people. Six records move to `doc`;
+the tree goes from 10 documented to 15.
+
+**CORRECTED — Henricus Augustinus Vandenbemden died at Kraainem, not Sint-Stevens-Woluwe.**
+The act names him as the bride's late father and gives the commune outright. His death
+date, 12 August 1889, agrees exactly, so it is certainly the same man and only the place
+was wrong. **Also corrected:** the bridegroom's mother is *Antonia* Bossin, not "Antoina".
+
+**REJECTED — a STRONG match that was a different man.** The sweep offered Georges Thumas
+(d. 1808, Grez-Doiceau) a match scoring 27.7 bits on three independent identifiers:
+surname, death year 1808, and place Grez-Doiceau. It is *Martin Joseph* Thumas, who died
+there on 15 February 1808; ours died on 20 November. Same family, same parish, same year —
+different man. Surname plus place plus year is three agreements and still not an
+identification, which is precisely why the rule counts *independent* identifiers and why a
+match is a lead until someone tries to break it.
+
+**search.arch.be is retired.** Every act link Open Archives publishes points at it, and it
+now serves nothing but an end-of-life notice redirecting to AGATHA. So the corpus's
+"act:" URLs are all dead, and the translation is `HUBRA_00221638_0` →
+`HUVLB_HUBRA_00221638_0`, or a search by name, commune and year. The registry now says so,
+and the site is marked offline — otherwise every future pass rediscovers it.
+
+**Where the corpus reaches, and where it does not.** 17,522 mentions held across Bundervoet,
+Vanstechelman, Thumas and Sabbe, with the rest still harvesting. Of 307 people: 8
+corroborated, 24 partial, 275 not reached — and "not reached" is mostly not a failure of
+searching but of coverage. Open Archives is deep in Vlaams-Brabant civil acts, which is
+exactly why the Thumas line paid out and why the Kraainem act exists at all; for
+Oost-Vlaanderen and Oostende it is overwhelmingly 20th-century memorial cards, so anyone
+who died before about 1900 there is invisible to it.
+
+Validator green — 307 people, 15 documented, 4 artifacts held.
+
+*End of log.

@@ -39,6 +39,25 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
   const genderOf = id => gender[id] || null;
   const childrenOf = id => children[id] || [];
 
+  // Everyone born of either of the same parents. Half-siblings are in, because they
+  // are siblings; which kind they are is what `bloodRelation` is for, and the row
+  // that shows them says so on each card.
+  function siblingsOf(id) {
+    const p = people[id];
+    if (!p) return [];
+    const seen = new Set([id]);
+    const out = [];
+    for (const parent of [p.father, p.mother]) {
+      for (const kid of childrenOf(parent)) {
+        if (!seen.has(kid)) {
+          seen.add(kid);
+          out.push(kid);
+        }
+      }
+    }
+    return out;
+  }
+
   // ---------- ancestry ----------
 
   // Every ancestor of someone, mapped to how many generations up they sit. The
@@ -65,10 +84,36 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     return (ancestorCache[id] = out);
   }
 
-  // Distance from the root, kept as a plain object because the explorer and the
-  // line-of-descent panel both read it directly.
+  // The actual steps from someone up to one of their ancestors — [from, …, anc] —
+  // by the same shortest route `ancestorsOf` counted, so the distance the relation
+  // is named from and the chain the page draws can never disagree. Null if `anc` is
+  // not above `from` at all.
+  function ancestorLine(from, anc) {
+    if (!people[from] || !people[anc]) return null;
+    if (from === anc) return [from];
+    const cameFrom = new Map([[from, null]]);
+    const queue = [from];
+    for (let i = 0; i < queue.length; i++) {
+      const at = queue[i];
+      const p = people[at];
+      if (!p) continue;
+      for (const parent of [p.father, p.mother]) {
+        if (!parent || !people[parent] || cameFrom.has(parent)) continue;
+        cameFrom.set(parent, at);
+        if (parent === anc) {
+          const path = [];
+          for (let step = parent; step !== null; step = cameFrom.get(step)) path.push(step);
+          return path.reverse();
+        }
+        queue.push(parent);
+      }
+    }
+    return null;
+  }
+
+  // How many generations up from the root each ancestor sits. The index reads it to
+  // order a heading's people by generation instead of alphabetically.
   const distance = {};
-  const descendant = {};
   (() => {
     const queue = [ROOT];
     distance[ROOT] = 0;
@@ -78,7 +123,6 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
       for (const parent of [p.father, p.mother]) {
         if (parent && people[parent] && !(parent in distance)) {
           distance[parent] = distance[queue[i]] + 1;
-          descendant[parent] = queue[i];
           queue.push(parent);
         }
       }
@@ -86,37 +130,6 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
   })();
 
   const directAncestorCount = () => Object.keys(distance).filter(id => distance[id] > 0).length;
-
-  // The single thread from an ancestor down to the root, oldest first.
-  const descentFrom = id => {
-    if (!(id in distance)) return null;
-    const path = [id];
-    let at = id;
-    while (at !== ROOT) {
-      at = descendant[at];
-      path.push(at);
-    }
-    return path;
-  };
-
-  // How anyone connects to the root — directly, or as the child of someone who does.
-  // Aunts, uncles and siblings have no descent of their own, but the line they
-  // branch off is still the interesting thing to show.
-  function lineOfDescent(id) {
-    const direct = descentFrom(id);
-    if (direct) return { kind: 'direct', path: direct };
-
-    const p = people[id];
-    if (p) {
-      const parents = [p.father, p.mother].filter(x => x && x in distance);
-      if (parents.length) {
-        // Prefer whichever parent sits closest to the root.
-        const via = parents.sort((a, b) => distance[a] - distance[b])[0];
-        return { kind: 'collateral', path: descentFrom(via), branchesFrom: via, person: id };
-      }
-    }
-    return { kind: 'none', path: null };
-  }
 
   // ---------- naming a relationship ----------
 
@@ -210,31 +223,63 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     if (blood) return blood;
 
     if (spouseIdsOf(a).includes(b)) {
-      return { label: byGender(a, 'wife', 'husband'), kind: 'marriage' };
+      return { label: byGender(a, 'wife', 'husband', 'spouse'), kind: 'marriage' };
     }
-    // a is related to someone b married.
+    // Related through exactly one marriage, from one end or the other. The blood
+    // relation is returned as itself and the marriage step as `through`, rather than
+    // folded into one string: only the caller knows whether it is writing a sentence
+    // or drawing the join, and a label that has already committed to a sentence
+    // cannot be drawn.
     for (const sp of spouseIdsOf(b)) {
       const r = bloodRelation(a, sp);
-      if (r) {
-        return {
-          label: `${r.label} of ${people[b].name}’s ${byGender(sp, 'wife', 'husband')}`,
-          detail: people[sp].name,
-          kind: 'marriage',
-        };
-      }
+      if (r) return { label: r.label, kind: 'marriage', through: sp, married: 'b' };
     }
-    // someone a married is related to b.
     for (const sp of spouseIdsOf(a)) {
       const r = bloodRelation(sp, b);
-      if (r) {
-        return {
-          label: `married to ${people[b].name}’s ${r.label}`,
-          detail: people[sp].name,
-          kind: 'marriage',
-        };
-      }
+      if (r) return { label: r.label, kind: 'marriage', through: sp, married: 'a' };
     }
     return null;
+  }
+
+  // The same connection `relationBetween` names, but as the route rather than the
+  // word for it: two arms that climb from each person to the ancestor they share.
+  // Drawn, that is an arch — up one side, across, down the other — and it is the
+  // only form that shows *where* two people meet rather than asserting that they do.
+  //
+  // `left` and `right` both run person-first, ancestor-last, so they are the two
+  // sides of the arch read outwards-in. A marriage step, when one is needed, hangs
+  // off the foot of its arm: the blood link is between `married.to` and the other
+  // person, and `married.id` is attached to it by marriage, never inside it.
+  function linkDiagram(a, b) {
+    if (!people[a] || !people[b]) return null;
+    if (a === b) return { kind: 'self' };
+
+    const blood = commonAncestor(a, b);
+    if (blood) {
+      return { kind: 'blood', via: blood.id, left: ancestorLine(a, blood.id), right: ancestorLine(b, blood.id) };
+    }
+    // Checked before the loops below, which would otherwise pair someone with
+    // themselves through their own spouse.
+    if (spouseIdsOf(a).includes(b)) return { kind: 'spouse', left: [a], right: [b] };
+
+    const step = (x, y, side) => {
+      for (const sp of spouseIdsOf(y)) {
+        const lca = commonAncestor(x, sp);
+        if (!lca) continue;
+        const arms = { left: ancestorLine(x, lca.id), right: ancestorLine(sp, lca.id) };
+        return {
+          kind: 'marriage',
+          via: lca.id,
+          left: side === 'right' ? arms.left : arms.right,
+          right: side === 'right' ? arms.right : arms.left,
+          married: { id: y, to: sp, side },
+        };
+      }
+      return null;
+    };
+    // One marriage step, from either end. Beyond one the drawing would claim a
+    // relationship that the wording already refuses to name.
+    return step(a, b, 'right') || step(b, a, 'left');
   }
 
   // The label the tree shows on a node: their relation to the root. The roots are
@@ -290,7 +335,7 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
 
   return {
     ROOT, ROOTS, relationship, relationBetween, bloodRelation, ancestorsOf, commonAncestor,
-    childrenOf, genderOf, categoryOf, sourceFor, confidenceOf, isResearchable,
-    distance, descentFrom, lineOfDescent, directAncestorCount,
+    childrenOf, siblingsOf, genderOf, categoryOf, sourceFor, confidenceOf, isResearchable,
+    distance, directAncestorCount, ancestorLine, linkDiagram,
   };
 };

@@ -11,6 +11,7 @@ confidence: sup
 branch: Bundervoet
 line: bundervoet
 father: livinus_bundervoet
+mother: elisabeth_nn
 spouses:
   - id: joanna_vanhecke
     name: Joanna (Janneken) van Hecke

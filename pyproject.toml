@@ -1,0 +1,28 @@
+[project]
+name = "family-tree"
+version = "0.1.0"
+description = "Genealogy of Renee & Leon Bundervoet — the tools that validate the records, generate the site, and drive the research loop."
+requires-python = ">=3.11"
+# Deliberately empty, and worth keeping empty. The whole project runs from a clone
+# with nothing fetched: the frontmatter parser, the date grammar, the GEDCOM writer
+# and the Open Archives client are all stdlib. A dependency here would be a thing
+# that has to still resolve in ten years for the tree to be readable.
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8"]
+# Documentation only. Deliberately a group and not a dependency: the tree, the validator
+# and the exporters must keep running from a bare clone with nothing fetched, and the
+# docs are the one part that may reasonably need the network to build.
+docs = ["mkdocs>=1.6", "mkdocs-material>=9.5"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tools/tests"]
+pythonpath = ["tools"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"

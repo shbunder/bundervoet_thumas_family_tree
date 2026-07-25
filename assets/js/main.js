@@ -53,7 +53,7 @@
       b.innerHTML = options;
       a.value = meta.root;
       b.value = byName.find(id => id !== meta.root) || meta.root;
-      const update = () => ($('relOut').innerHTML = view.relationText(a.value, b.value));
+      const update = () => ($('relOut').innerHTML = view.relationPanel(a.value, b.value));
       a.addEventListener('change', update);
       b.addEventListener('change', update);
       update();
@@ -69,22 +69,26 @@
     let focus = meta.root;
     let history = [];
 
+    // A row wider than the screen scrolls inside itself; this puts the card that
+    // matters in the middle of it, so a phone opens on the person in focus rather
+    // than on whichever sibling happens to be eldest.
+    function centreOn(row, card) {
+      if (!row || !card || row.scrollWidth <= row.clientWidth) return;
+      const box = row.getBoundingClientRect();
+      const it = card.getBoundingClientRect();
+      row.scrollLeft += it.left + it.width / 2 - (box.left + box.width / 2);
+    }
+
     function draw() {
       $('ped').innerHTML = view.pedigree(focus);
       $('detail').innerHTML = view.detail(focus);
       $('backBtn').disabled = history.length === 0;
       $('lineBody').innerHTML = view.descent(focus);
 
-      // On a narrow screen the pedigree is wider than the viewport and scrolls
-      // inside itself. Line the scroll up on the person in focus, so a phone
-      // opens on them rather than on the far-left grandparent.
-      const ped = $('ped');
-      const card = ped.querySelector('.node.focus');
-      if (card && ped.scrollWidth > ped.clientWidth) {
-        const box = ped.getBoundingClientRect();
-        const it = card.getBoundingClientRect();
-        ped.scrollLeft += it.left + it.width / 2 - (box.left + box.width / 2);
-      }
+      // Only the row of brothers and sisters needs this. The row of children opens
+      // at its left, which is the eldest, and the rows above hold two cards.
+      const sibrow = $('ped').querySelector('.sibrow');
+      centreOn(sibrow, sibrow && sibrow.querySelector('.fcell'));
     }
 
     function climbTo(id) {
@@ -105,6 +109,22 @@
     $('ped').addEventListener('click', e => {
       const n = e.target.closest('.node[data-id]');
       if (n) climbTo(n.dataset.id);
+    });
+    // Every name in the detail card is a way into that person's own four rows.
+    $('detail').addEventListener('click', e => {
+      const n = e.target.closest('.ref[data-id]');
+      if (n) climbTo(n.dataset.id);
+    });
+    $('detail').addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const n = e.target.closest('.ref[data-id]');
+      if (!n) return;
+      e.preventDefault();
+      climbTo(n.dataset.id);
+    });
+    $('relOut').addEventListener('click', e => {
+      const n = e.target.closest('.ucard[data-id]');
+      if (n) openInExplorer(n.dataset.id);
     });
     $('cols').addEventListener('click', e => {
       const n = e.target.closest('.cnode[data-id]');
@@ -203,8 +223,13 @@
     $('lineClose').onclick = () => setPanel(false);
 
     $('lineBody').addEventListener('click', e => {
-      const n = e.target.closest('.lstep[data-id]');
-      if (n) openInExplorer(n.dataset.id);
+      const n = e.target.closest('.ucard[data-id]');
+      if (!n) return;
+      openInExplorer(n.dataset.id);
+      // On a phone the panel covers the whole screen, so leaving it open would
+      // hide the tree it just redrew. On a wide screen it sits beside the tree
+      // and redraws for the new person, which is worth keeping in view.
+      if (window.matchMedia('(max-width:720px)').matches) setPanel(false);
     });
 
     draw();

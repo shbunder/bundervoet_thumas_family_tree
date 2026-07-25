@@ -8,7 +8,7 @@ birth:
 death:
   date: 1948-04-29
   place: Kraainem
-confidence: sup
+confidence: doc
 occupation: naaister (seamstress)
 branch: Thumas
 line: thumas
@@ -19,9 +19,15 @@ spouses:
     name: J.B. Georgius Thumas
     detail: Kraainem, 3 Feb 1902
 sources:
+  - S5
   - tree-jswaelens
 ---
 
 Source detail: Geneanet (jswaelens); her 1902 Kraainem marriage act
 
 A seamstress; married J.B. Georgius Thumas in Kraainem in 1902. Her parents are named in that marriage act. Several of her children died in infancy.
+
+DOCUMENTED (July 2026) by the Kraainem marriage act of 3 February 1902 (akte nr. 2, [[S5]]), where she is the bride: born at Sint-Stevens-Woluwe
+on 15 June 1882, living at Kraainem, *naaister* — the occupation already held here,
+confirmed word for word — and daughter of Henricus Augustinus Vandenbemden and Maria
+Theresia Coekelberghs.

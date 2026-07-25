@@ -10,6 +10,8 @@ death:
 confidence: sup
 branch: Bundervoet
 line: bundervoet
+father: joannes_stockman
+mother: guillielma_dellaert
 spouses:
   - id: joannes_b
     name: Joannes Bundervoet
