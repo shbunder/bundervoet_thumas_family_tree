@@ -756,6 +756,18 @@
       "yielded": "Names the dead child's parents as Lambert Thumas and Marie Catherine Quinart — corroborating that couple, and revealing a son, Etienne, who died in 1812 and is not in the tree.",
       "confidence": "sup",
       "accessed": "2026-07-25"
+    },
+    {
+      "id": "S14",
+      "site": "agatha",
+      "kind": "record",
+      "title": "Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA)",
+      "url": "https://agatha.arch.be/nl/data/acts/Visu-542_9999_999_616490_000_A_5246-00000035",
+      "artifact": "george-thumas-1808-death-grez-doiceau",
+      "collection": "Burgerlijke stand (DemoGen Visu) — België, Grez-Doiceau, overlijdensakten 1808, akte nr. 58",
+      "yielded": "Four records documented from one act: George Thumas's death on 20 Nov 1808 at Grez-Doiceau and his trade as menuisier, both as held; his father Lambert Thumas, his mother Marie Leclercq and his wife Marie Catherine Noé all named. It also gives his age as 60, implying a birth around 1747-48 against the 1744 this tree records — a conflict left open rather than resolved on hearsay.",
+      "confidence": "doc",
+      "accessed": "2026-07-26"
     }
   ]
 }

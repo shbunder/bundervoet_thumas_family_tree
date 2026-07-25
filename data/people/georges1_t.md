@@ -8,7 +8,7 @@ birth:
 death:
   date: 1808-11-20
   place: Grez-Doiceau
-confidence: sup
+confidence: doc
 occupation: menuisier (schrijnwerker / carpenter)
 branch: Thumas
 line: thumas
@@ -19,6 +19,7 @@ spouses:
     name: Marie Catherine Noël
     detail: Grez-Doiceau, 3 Jan 1771
 sources:
+  - S14
   - S6
   - tree-m2155
 ---
@@ -38,3 +39,16 @@ identifiers. He was rejected because the given names are different men and the d
 not match, and that rejection was right; the true act only appeared once more of the
 surname had been harvested. The lesson is the one the charter states: surname plus place
 plus year is three agreements and still not an identification.
+
+ACT READ (July 2026). His own death act — Grez-Doiceau, akte nr. 58, registered 21 November
+1808 and stating the death as the **20th** — has been read at the archive and saved
+([[george-thumas-1808-death-grez-doiceau]]). It confirms the death date exactly, gives his
+trade as *menuisier*, the word this record already carried, and names his father, mother and
+wife: [[jeanlambert_t]], [[leclercq_t]] and [[noel_t]]. Three links off a member tree and
+onto a civil act.
+
+**A conflict, left open.** The act says he was **60**, which puts his birth around 1747–48;
+this record says **14 March 1744**, which would make him 64. The birth date is unchanged,
+because an age in a death act is hearsay — reported here by a 32-year-old day-labourer — and
+routinely a few years out, while a stated date is at least a claim about a particular record.
+Neither is documented. The Grez-Doiceau baptisms for 1744 and 1747–48 would settle it.

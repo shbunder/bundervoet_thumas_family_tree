@@ -17,7 +17,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 8 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 9 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 2 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
@@ -87,6 +87,14 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Saved artifact:** `data/artifacts/thumas-bossin-1872-marriage-kraainem.md`
 - **Confidence:** doc
 - **Accessed:** 2026-07-25
+
+#### `S14` — Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA)
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/Visu-542_9999_999_616490_000_A_5246-00000035>
+- **Collection:** Burgerlijke stand (DemoGen Visu) — België, Grez-Doiceau, overlijdensakten 1808, akte nr. 58
+- **Yielded:** Four records documented from one act: George Thumas's death on 20 Nov 1808 at Grez-Doiceau and his trade as menuisier, both as held; his father Lambert Thumas, his mother Marie Leclercq and his wife Marie Catherine Noé all named. It also gives his age as 60, implying a birth around 1747-48 against the 1744 this tree records — a conflict left open rather than resolved on hearsay.
+- **Saved artifact:** `data/artifacts/george-thumas-1808-death-grez-doiceau.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
 
 ### FamilySearch
 

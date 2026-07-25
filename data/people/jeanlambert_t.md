@@ -8,7 +8,7 @@ birth:
 death:
   date: 1776-03-03
   place: Grez-Doiceau
-confidence: sup
+confidence: doc
 occupation: marguillier & greffier (church warden / parish clerk)
 branch: Thumas
 line: thumas
@@ -19,6 +19,7 @@ spouses:
     name: Marie Jacqueline Leclercq
     detail: Wavre, 23 Feb 1743 — his 2nd marriage
 sources:
+  - S14
   - S6
   - tree-m2155
 ---
@@ -29,3 +30,7 @@ Leclercq — the pairing this record already asserts, now on a civil act rather 
 m2155 tree alone. The act gives the short form of his name, without the *Jean*.
 
 Church warden and parish clerk of Grez-Doiceau. Our line descends from his SECOND marriage, to Marie Jacqueline Leclercq (Wavre, 1743) — their son Georges (1744) continues the line. His first wife was Marie Catherine Crèvecœur (m. 1727, d. 1742).
+
+ACT READ (July 2026): named as *Lambert Thumas of Grez*, father of the deceased, in his son
+George's 1808 Grez-Doiceau death act — with [[leclercq_t]] as the mother. The couple and the
+parentage are now on a civil act.

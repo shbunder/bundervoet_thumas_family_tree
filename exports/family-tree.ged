@@ -1676,8 +1676,21 @@
 2 CONT not match, and that rejection was right; the true act only appeared once more of the
 2 CONT surname had been harvested. The lesson is the one the charter states: surname plus place
 2 CONT plus year is three agreements and still not an identification.
+2 CONT
+2 CONT ACT READ (July 2026). His own death act — Grez-Doiceau, akte nr. 58, registered 21 November
+2 CONT 1808 and stating the death as the **20th** — has been read at the archive and saved
+2 CONT ([[george-thumas-1808-death-grez-doiceau]]). It confirms the death date exactly, gives his
+2 CONT trade as *menuisier*, the word this record already carried, and names his father, mother and
+2 CONT wife: [[jeanlambert_t]], [[leclercq_t]] and [[noel_t]]. Three links off a member tree and
+2 CONT onto a civil act.
+2 CONT
+2 CONT **A conflict, left open.** The act says he was **60**, which puts his birth around 1747–48;
+2 CONT this record says **14 March 1744**, which would make him 64. The birth date is unchanged,
+2 CONT because an age in a death act is hearsay — reported here by a 32-year-old day-labourer — and
+2 CONT routinely a few years out, while a stated date is at least a claim about a particular record.
+2 CONT Neither is documented. The Grez-Doiceau baptisms for 1744 and 1747–48 would settle it.
 1 SOUR @S35@
-2 QUAY 2
+2 QUAY 3
 0 @I104@ INDI
 1 REFN georges2_t
 2 TYPE project-id
@@ -2419,8 +2432,12 @@
 2 CONT m2155 tree alone. The act gives the short form of his name, without the *Jean*.
 2 CONT
 2 CONT Church warden and parish clerk of Grez-Doiceau. Our line descends from his SECOND marriage, to Marie Jacqueline Leclercq (Wavre, 1743) — their son Georges (1744) continues the line. His first wife was Marie Catherine Crèvecœur (m. 1727, d. 1742).
+2 CONT
+2 CONT ACT READ (July 2026): named as *Lambert Thumas of Grez*, father of the deceased, in his son
+2 CONT George's 1808 Grez-Doiceau death act — with [[leclercq_t]] as the mother. The couple and the
+2 CONT parentage are now on a civil act.
 1 SOUR @S35@
-2 QUAY 2
+2 QUAY 3
 0 @I143@ INDI
 1 REFN jeanne_deconninck
 2 TYPE project-id
@@ -3302,8 +3319,11 @@
 2 CONT which puts this couple, and her motherhood of the line's Georges, on a civil act.
 2 CONT
 2 CONT Second wife of Jean Lambert Thumas (m. Wavre 1743) and mother of the line's Georges (1744); the couple had eight children.
+2 CONT
+2 CONT ACT READ (July 2026): named as *Marie Leclercq of Grez*, mother of the deceased, in her son
+2 CONT George's 1808 Grez-Doiceau death act, beside the father Lambert Thumas.
 1 SOUR @S35@
-2 QUAY 2
+2 QUAY 3
 0 @I195@ INDI
 1 REFN leon
 2 TYPE project-id
@@ -4154,8 +4174,13 @@
 2 CONT rather than on a tree. She outlived him by nearly four years.
 2 CONT
 2 CONT Married the carpenter Georges Thumas at Grez-Doiceau in 1771; worked as a beer seller. Daughter of Jean Baptiste Noël × Marie Josephe Derossart.
+2 CONT
+2 CONT ACT READ (July 2026): named as the partner of the deceased in her husband's 1808
+2 CONT Grez-Doiceau death act — written **Marie Catherine Noé** there, not Noël. The act puts the
+2 CONT marriage beyond the trees; the spelling is recorded as a variant rather than adopted, since
+2 CONT her own record and this tree's other sources use Noël.
 1 SOUR @S49@
-2 QUAY 2
+2 QUAY 3
 0 @I246@ INDI
 1 REFN octavia_schal
 2 TYPE project-id
@@ -6206,7 +6231,7 @@
 0 @S34@ SOUR
 1 TITL Marriage act — Franciscus Léopoldus Smessaert × Anna Francisca Morbeé, Brugge, 16 August 1851
 0 @S35@ SOUR
-1 TITL Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
+1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
 0 @S36@ SOUR
 1 TITL Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Geneanet
 0 @S37@ SOUR
@@ -6234,7 +6259,7 @@
 0 @S48@ SOUR
 1 TITL Familiekunde Vlaanderen Westkust memorial card — Marcel Bundervoet, d. Oostende 20 November 2015; The family itself
 0 @S49@ SOUR
-1 TITL Death act of George Thumas, Grez-Doiceau, 20 November 1808; Geneanet
+1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; Geneanet
 0 @S50@ SOUR
 1 TITL Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943; Familiekunde Vlaanderen Westkust memorial card — Pieter-Franciscus Bundervoet, d. Oostende 21 July 1943; Geneanet
 0 @S51@ SOUR

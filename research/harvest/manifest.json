@@ -13,6 +13,18 @@
       "acts": 600
     },
     {
+      "id": "bostyn",
+      "query": {
+        "name": "Bostyn",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2234,
+      "mentions": 600,
+      "complete": false,
+      "acts": 599
+    },
+    {
       "id": "bundervoet",
       "query": {
         "name": "Bundervoet",
@@ -23,6 +35,18 @@
       "mentions": 396,
       "complete": true,
       "acts": 396
+    },
+    {
+      "id": "cappaert",
+      "query": {
+        "name": "Cappaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 1803,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "debaecke",
@@ -85,6 +109,30 @@
       "acts": 600
     },
     {
+      "id": "gautiert",
+      "query": {
+        "name": "Gautiert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 1,
+      "mentions": 1,
+      "complete": true,
+      "acts": 1
+    },
+    {
+      "id": "janssens",
+      "query": {
+        "name": "Janssens",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 121923,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "keirsebilck",
       "query": {
         "name": "Keirsebilck",
@@ -95,6 +143,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "lampsins",
+      "query": {
+        "name": "Lampsins",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
     },
     {
       "id": "paelinck",
@@ -167,6 +227,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "stekelorum",
+      "query": {
+        "name": "Stekelorum",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 407,
+      "mentions": 407,
+      "complete": true,
+      "acts": 407
     },
     {
       "id": "stroobandt",
@@ -275,6 +347,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vansieleghem",
+      "query": {
+        "name": "Van Sieleghem",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 94,
+      "mentions": 94,
+      "complete": true,
+      "acts": 94
     },
     {
       "id": "vanstechelman",
