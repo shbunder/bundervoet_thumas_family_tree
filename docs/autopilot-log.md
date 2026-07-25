@@ -1,0 +1,20 @@
+# Autopilot log
+
+**This is the file to read after an unattended run.** One row per research pass, appended
+by `/autopilot`. It is an index into [the research log](research-log.md) and the git
+history — not a second copy of either — so every row stays on one line and the reasoning
+stays where reasoning belongs.
+
+- `dir` — **up** = whose parents are unknown (`research.py frontiers`),
+  **down** = children of couples already held (`research.py children`).
+- `verdict` — **GRAFTED** a link was made · **NOT PROVEN** plausible, insufficient, now a
+  named frontier · **REJECTED** refuted · **BLOCKED** the material was never reached.
+- `added` — the person ids created, or `—`.
+
+Most passes end NOT PROVEN. That is the system working: the verifier defaults to rejecting
+when unsure, because a missed link is found again next pass and a false link is invisible
+forever. A run of ten passes producing two grafts and thirty logged misses is a good run —
+the misses and the labels are the accumulating asset.
+
+| pass | date | dir | frontier | verdict | added | commit |
+|------|------|-----|----------|---------|-------|--------|
