@@ -1,6 +1,18 @@
 {
   "harvests": [
     {
+      "id": "bocklandt",
+      "query": {
+        "name": "Bocklandt",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 624,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "bundervoet",
       "query": {
         "name": "Bundervoet",
