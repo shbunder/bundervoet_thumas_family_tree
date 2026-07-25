@@ -67,3 +67,8 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 19 | 2026-07-26 | clementia_w, petrusjacobus_v | — | CORROBORATED | Named together as parents on all three acts. | 4fea424 |
 | 19 | 2026-07-26 | — (frontier) | — | LEAD | 3 siblings of Augusta not in the tree: Henricus Emilius (1877-1941), Leontius Ivo, Paula Mathilde. Objective 2. | 4fea424 |
 | 19 | 2026-07-26 | — (method) | — | — | **Search the rare maternal surname.** Her given name found nothing; Wagebaert isolated the household immediately. | 4fea424 |
+| 20 | 2026-07-26 | +18 people | — | ADDED | **Policy change: be generous.** Transcribing a documented child ≠ identifying a person. 309 → 327. | 4eeeeee |
+| 20 | 2026-07-26 | henricus_e_v, leontius_v, paula_v | — | ADDED | Augusta's siblings, from Oostende civil acts naming both parents. | 4eeeeee |
+| 20 | 2026-07-26 | marie_anna_dedeckere +8 | — | ADDED | Pieter Bundervoet's wife and all eight children (paulderidder). | 4eeeeee |
+| 20 | 2026-07-26 | livinus_b1615, maria_b1623, catharina_vanhecke, wilhelmina_b1650 | — | ADDED | Segerius's siblings, his father's 2nd wife and her daughter. | 4eeeeee |
+| 20 | 2026-07-26 | etienne_thumas, henrica_thumas | — | ADDED | From the 1812 Grez-Doiceau death act and the 1899 Kraainem marriage index. | 4eeeeee |

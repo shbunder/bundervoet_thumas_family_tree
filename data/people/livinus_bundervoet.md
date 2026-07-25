@@ -14,8 +14,9 @@ spouses:
   - id: elisabeth_nn
     name: Elisabeth NN
     detail: 1st — mother of Segerius
-  - name: Catharina van Hecke
-    detail: 2nd — mother of Wilhelmina; no record of her own yet
+  - id: catharina_vanhecke
+    name: Catharina van Hecke
+    detail: 2nd — mother of Wilhelmina
 sources:
   - tree-paulderidder
   - tree-glorieuxp
@@ -39,6 +40,6 @@ paulderidder under "half-siblings" as the mother of Wilhelmina Bundervoet (~1650
 A wife born about 1620 cannot be the earlier marriage of a man whose son arrived in
 1615. Elisabeth is therefore first, Catharina second.
 
-Catharina van Hecke has no record of her own yet, nor does her daughter Wilhelmina —
-both are blood relatives and belong in the tree. See also the note on [[willem_vanhecke]]
+Both now have records: [[catharina_vanhecke]] and her daughter [[wilhelmina_b1650]], along
+with Segerius's full siblings [[livinus_b1615]] and [[maria_b1623]]. See also the note on [[willem_vanhecke]]
 about two van Hecke women marrying into consecutive generations of this family.

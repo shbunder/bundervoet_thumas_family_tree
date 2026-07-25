@@ -14,8 +14,9 @@ line: bundervoet
 father: joannes_b
 mother: livina_stockman
 spouses:
-  - name: Marie Anna de Deckere
-    detail: m. ~1750 — she has no record of her own yet
+  - id: marie_anna_dedeckere
+    name: Marie Anna de Deckere
+    detail: m. ~1750
 sources:
   - tree-paulderidder
 ---
@@ -31,7 +32,7 @@ safe, the day is the burial's, and the two are kept apart rather than collapsed 
 death date the source never gave. Assenede, a little north of Evergem, is also the first
 sign of this branch moving off the home parish.
 
-FRONTIER — his family, eight children strong, none of them yet recorded here. From
+HIS FAMILY IS NOW IN THE TREE — his wife [[marie_anna_dedeckere]] and all eight children. From
 paulderidder: married about 1750 to Marie Anna de Deckere (~1731–1809), with Joannis
 (1751), Livinus (1752), Petronella (1754–1794), Christophorus (1755), Joannis Baptista
 (1757), Livina Maria (1760–1831), Joanna (1761–1825) and Coleta (1766–1807). They are
