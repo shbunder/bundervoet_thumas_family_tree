@@ -1,9 +1,10 @@
 ---
 id: barbara_wittenheyns
 name: Barbara Wittenheyns
+surname: Wittenheyns
 birth:
   date: ~1535
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_wittenheyns

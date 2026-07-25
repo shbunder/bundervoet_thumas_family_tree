@@ -1,9 +1,10 @@
 ---
 id: virginia_leynseele
 name: Virginia Coleta Leynseele
+surname: Leynseele
 birth:
   date: "1818"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

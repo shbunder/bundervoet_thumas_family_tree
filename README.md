@@ -48,6 +48,7 @@ research/                      the search state
   searches.jsonl               what was searched, and how it went
 dist/bundle.js                 GENERATED — what the browser actually loads
 exports/family-tree.ged        GENERATED — the tree in GEDCOM 7
+data/artifacts/                saved primary documents + a record for each
 docs/research-log.md           what's documented, what's inferred, what to pull next
 tools/lib/                     shared loader, frontmatter parser, date grammar
 tools/build.mjs                validates, then writes the generated files

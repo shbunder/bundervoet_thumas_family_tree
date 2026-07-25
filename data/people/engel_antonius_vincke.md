@@ -1,10 +1,11 @@
 ---
 id: engel_antonius_vincke
 name: Engel Antonius Vincke
+surname: Vincke
 birth:
   date: 1807-02-17
   place: Diksmuide
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: antonius_vincke

@@ -1,7 +1,8 @@
 ---
 id: loncke
 name: Charlotte Maria Loncke
-confidence: doc
+surname: Loncke
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

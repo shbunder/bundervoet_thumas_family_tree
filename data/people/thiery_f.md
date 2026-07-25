@@ -1,6 +1,7 @@
 ---
 id: thiery_f
 name: François Thumas
+surname: Thumas
 birth:
   date: 1930..1939
 confidence: fam

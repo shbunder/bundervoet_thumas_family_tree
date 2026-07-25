@@ -1,9 +1,10 @@
 ---
 id: simon_vandewalle_1530
 name: Simon Vandewalle
+surname: Vandewalle
 birth:
   date: ~1530
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

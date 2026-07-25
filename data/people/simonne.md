@@ -1,6 +1,7 @@
 ---
 id: simonne
 name: Simonne Vandewalle
+surname: Vandewalle
 birth:
   date: 1913..1914
   place: Oostende?

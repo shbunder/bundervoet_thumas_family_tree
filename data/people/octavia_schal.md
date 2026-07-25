@@ -1,10 +1,11 @@
 ---
 id: octavia_schal
 name: Octavia Maria Schalandrijn
+surname: Schalandrijn
 birth:
   date: 1886-05-02
   place: Bredene
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

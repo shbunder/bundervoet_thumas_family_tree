@@ -552,3 +552,81 @@ spouses), remain to enrich — the org's monthly WebFetch spending cap was reach
 those wait until the budget resets. Validator green — 301 people.
 
 *End of log.
+
+## 37. Verification pass — all 302 records audited; two invented facts retracted, confidence corrected
+
+No new people. This pass checked what was already recorded, by machine, against the
+rules in the charter rather than against the archives: field integrity, chronology,
+evidence discipline, and whether two records might be one person.
+
+**Chronology is clean.** Every parent link was tested for the things that betray a
+wrong graft — a mother under 14 or over 50, a father dead more than nine months before
+the birth, a death before a birth, full siblings born weeks apart. Across 302 people
+and every link between them, **nothing impossible was found**. The two-identifier rule
+appears to have held.
+
+**RETRACTED — Desiderius De Keyser and Maria Theresia Van den Broeck did not die on
+9 May 1946.** Both records carried `death: 1946-05-09` at confidence `doc`. That date
+is the date of *Édouard's remarriage act*, which says only that his parents were
+`beiden overleden` — both already dead — by then. The move to Markdown had turned the
+old string "before 9 May 1946" into a precise date by dropping the word "before". A
+bound became a fact, and the fact was wrong: they died at some unknown time before
+that day. Both now read `death.raw: before 9 May 1946`, which is what the act supports,
+and both cite `S1` directly instead of the site in general.
+
+**FIXED — seven records had a place called "s".** The same migration split `~1920s`
+into the date `~1920` and the place `s`: the decade marker was read as a place name.
+Gustaaf Dekeyser's birthplace had become "s · Oostende". The decade is expressible in
+the grammar as a range, so these are now `1920..1929`, `1770..1779` and so on, with
+the junk place removed. Affected: gustaaf, roland_sis, thiery_f, antonius_vincke,
+willem_sabbe_y, michiel_demeulemeester, magdalena_demeulemeester.
+
+To find both, the pre-migration records were replayed from commit `da73211` and
+compared field by field with the files now. Every other field crossed intact.
+
+**CORRECTED — 257 records claimed more evidence than they had.** `doc` is defined here
+as "a primary act or image was actually read". 267 records carried it; only **10** cite
+a source where anyone read an act. The other 257 rest on Geneanet member trees, either
+cited directly or inherited from the branch default — and every branch default is
+itself a member tree. That is the definition of `sup`, so they are now `sup`. This is
+not a judgement on those trees' quality; it records who did the reading. The ten that
+keep `doc`: edouard_dk, desiderius_dk, mtheresia_vandenbroeck, jerome_dk,
+louise_bocklandt, edouard_bocklandt, helena_denijs, marie_vanbergen,
+petrus_vannieuwenhuyse, pieter_stekelorum. Upgrading any of the 257 now needs a
+document, which is the intended direction of travel.
+
+**Artifact recorded.** S2 — Jérôme Dekeyser's 1897 Oostende birth act, the source of
+the marginal note that dates Édouard × Louise's marriage to 4 May 1901 — was cited but
+never saved. The AGATHA record page is now kept as an artifact. It is the archive's
+*transcription*, not a scan: act 585's image was not reachable from that page, and the
+artifact record says so. Retrieving the image is a standing frontier.
+
+**Names.** `surname` is now a stated field on 301 records rather than something the
+GEDCOM exporter guessed. The guess was wrong in both directions: it produced no
+surname at all for the six people whose names carry a parenthetical vernacular form
+(Joanna (Janneken) van Hecke, Judocus (Joos) Sabbe, Léonie (Philomena Leonia) Paelinck
+and others), and it could not know that "Vandenberghe" and "Van den Berghe",
+"Dekeyser" and "De Keyser", "Vanstechelman" and "Van Stechelman" name one family each.
+Grouping now runs off a normalized key derived from the stated surname, so those pairs
+group without anyone editing a list. Given names are derived, not stored — "Christianus
+Josephus" is one compound given name, and a first/middle split would have invented a
+distinction the baptismal records do not make. roland_sis has no surname: nothing
+records a name for her, and her father's was not going to be assumed into place.
+
+**Still open, in priority order:**
+1. **18 named spouses have no record of their own** — objective (b) says everyone
+   referenced gets a file. Real people among them: Leontine Schreel, Rosalia Dhooge,
+   Isabella De Muynck, Joanna Loontjens, Cornelius Vandewalle, Anna Anastasia Norysse,
+   Clementius Robaert, Francine Bisschop, Christophe Develder.
+2. **Two records' names encode a relationship** — `roland_sis` is named "Roland's
+   sister (name unknown)". The charter says a relationship is never a field; both her
+   parents are linked, so the relation is already derivable. Renaming needs a decision,
+   since no better name is known.
+3. **Coverage**: 180 of 302 have no birthplace, 64 no birth date, 258 no occupation.
+4. **35 records still open their prose with "Source detail:"** — a pre-registry
+   leftover now duplicated by `sources`. Some of those lines name a specific page the
+   registry does not yet hold, so they were left rather than deleted wholesale.
+
+Validator green — 302 people. Zero HIGH findings remain in the audit.
+
+*End of log.

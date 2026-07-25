@@ -1,11 +1,12 @@
 ---
 id: judocus_devriese
 name: Judocus De Vriese
+surname: De Vriese
 birth:
   date: "1637"
 death:
   date: "1684"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: michael_devriese_o

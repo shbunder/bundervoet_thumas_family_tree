@@ -1,12 +1,13 @@
 ---
 id: livina_stockman
 name: Livina Stockman
+surname: Stockman
 birth:
   date: ~1688
 death:
   date: "1744"
   place: Evergem
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 spouses:

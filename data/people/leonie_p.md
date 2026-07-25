@@ -1,11 +1,12 @@
 ---
 id: leonie_p
 name: Léonie (Philomena Leonia) Paelinck
+surname: Paelinck
 birth:
   date: "1901"
 death:
   date: "1992"
-confidence: doc
+confidence: sup
 nickname: Meme Lenie
 branch: Paelinck
 line: de-keyser

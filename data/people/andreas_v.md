@@ -1,10 +1,11 @@
 ---
 id: andreas_v
 name: Andreas Van Stechelman
+surname: Van Stechelman
 birth:
   date: 1667-12-20
   place: Woumen
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 father: joannes_vs

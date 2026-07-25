@@ -1,10 +1,11 @@
 ---
 id: rosalia_caeckaert
 name: Rosalia Caeckaert
+surname: Caeckaert
 birth:
   date: 1815-04-25
   place: Brugge (Assebroek)
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: josephus_caeckaert

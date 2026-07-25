@@ -1,13 +1,14 @@
 ---
 id: joanna_daneel
 name: Joanna Theresia Daneel
+surname: Daneel
 birth:
   date: 1808-05-29
   place: Keiem
 death:
   date: 1854-10-15
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: dienstmeid (maidservant)
 branch: Devriendt
 line: devriendt

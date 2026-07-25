@@ -1,9 +1,10 @@
 ---
 id: judoca_vanhecke
 name: Judoca Van Hecke
+surname: Van Hecke
 death:
   date: "1655"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

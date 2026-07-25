@@ -1,10 +1,11 @@
 ---
 id: mathilde_desmet
 name: Mathilde Desmet
+surname: Desmet
 birth:
   date: 1841-02-21
   place: Sint-Andries
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

@@ -1,12 +1,13 @@
 ---
 id: roegiers
 name: Francisca Roegiers
+surname: Roegiers
 birth:
   date: "1808"
 death:
   date: "1887"
   place: Sleidinge
-confidence: doc
+confidence: sup
 occupation: farm woman
 branch: Bundervoet
 line: bundervoet

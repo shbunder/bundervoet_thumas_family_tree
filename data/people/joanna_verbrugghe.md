@@ -1,11 +1,12 @@
 ---
 id: joanna_verbrugghe
 name: Joanna (Janneken) Verbrugghe
+surname: Verbrugghe
 birth:
   date: ~1655
 death:
   date: "1704"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 spouses:

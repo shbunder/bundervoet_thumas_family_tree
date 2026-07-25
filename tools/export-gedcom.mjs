@@ -12,7 +12,7 @@
 // long research notes survive intact.
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, displayDates, loadConfig, loadPeople } from './lib/people.mjs';
+import { ROOT, displayDates, givenNames, loadConfig, loadPeople } from './lib/people.mjs';
 import { loadSources } from './research.mjs';
 
 const OUT = path.join(ROOT, 'exports', 'family-tree.ged');
@@ -23,27 +23,12 @@ const people = loadPeople(ids);
 const report = { unparsedDates: [], occupations: 0, notes: [] };
 
 // ---------- names ----------
-// Flemish and Walloon surnames carry particles — "Van den Broucke", "De Keyser" —
-// so the surname is not simply the last word. The split starts at the first
-// particle that has a given name before it.
-const PARTICLES = new Set([
-  'van', 'de', 'den', 'der', 'ter', 'ten', 'vande', 'vanden', 'vander',
-  'del', 'di', 'le', 'la', 'du', 'des', 'op', 'uit', "d'", 'dela',
-]);
-
-function splitName(name) {
-  // Placeholders like "Roland's sister (name unknown)" are not names; leave them
-  // whole rather than inventing a surname out of "unknown)".
-  if (/unknown|\bNN\b|\(/.test(name)) return null;
-  const parts = name.split(/\s+/);
-  if (parts.length < 2) return null;
-  for (let i = 1; i < parts.length; i++) {
-    if (PARTICLES.has(parts[i].toLowerCase())) {
-      return { given: parts.slice(0, i).join(' '), surname: parts.slice(i).join(' ') };
-    }
-  }
-  return { given: parts.slice(0, -1).join(' '), surname: parts[parts.length - 1] };
-}
+// GEDCOM wants the surname delimited (`Jan /Van den Broucke/`), which used to mean
+// guessing where it started from a list of Flemish and Walloon particles. The guess
+// was wrong in both directions: it produced no surname at all for the six people
+// whose name carries a parenthetical vernacular form, and it could not know that
+// "Vandenberghe" and "Van den Berghe" are one family. Records now state `surname`,
+// so this is a read rather than a parse; anyone without one is exported whole.
 
 // ---------- dates & places ----------
 const MONTHS = { jan: 'JAN', feb: 'FEB', mar: 'MAR', apr: 'APR', may: 'MAY', jun: 'JUN',
@@ -271,7 +256,7 @@ for (const id of ids) {
   put(1, 'REFN', id);
   put(2, 'TYPE', 'project-id');
 
-  const split = splitName(p.name);
+  const split = p.surname ? { given: givenNames(p), surname: p.surname } : null;
   if (split) {
     putText(1, 'NAME', `${split.given} /${split.surname}/`);
     putText(2, 'GIVN', split.given);

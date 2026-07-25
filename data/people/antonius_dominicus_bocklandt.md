@@ -1,6 +1,7 @@
 ---
 id: antonius_dominicus_bocklandt
 name: Antonius Dominicus Bocklandt
+surname: Bocklandt
 birth:
   date: "1805"
 death:

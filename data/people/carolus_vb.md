@@ -1,13 +1,14 @@
 ---
 id: carolus_vb
 name: Carolus Ludovicus Van Bogaert
+surname: Van Bogaert
 birth:
   date: 1819-02-02
   place: Nieuwkerken-Waas
 death:
   date: 1892-06-02
   place: Sint-Niklaas
-confidence: doc
+confidence: sup
 occupation: arbeider (labourer)
 branch: Paelinck
 line: paelinck

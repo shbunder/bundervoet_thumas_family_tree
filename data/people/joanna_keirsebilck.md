@@ -1,13 +1,14 @@
 ---
 id: joanna_keirsebilck
 name: Joanna Keirsebilck
+surname: Keirsebilck
 birth:
   date: 1791-05-24
   place: Oostkamp
 death:
   date: 1866-07-10
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_jos_keirsebilck

@@ -1,13 +1,14 @@
 ---
 id: christoffel
 name: Christoffel Bundervoet
+surname: Bundervoet
 birth:
   date: "1709"
   place: Evergem
 death:
   date: 1786-11-19
   place: Evergem
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 father: joannes_b

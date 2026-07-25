@@ -1,9 +1,10 @@
 ---
 id: michiel_demeulemeester
 name: Michiel Demeulemeester
+surname: Demeulemeester
 birth:
   date: 1500..1509
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

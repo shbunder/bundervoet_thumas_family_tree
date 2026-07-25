@@ -1,7 +1,8 @@
 ---
 id: josephus_caeckaert
 name: Josephus Caeckaert
-confidence: doc
+surname: Caeckaert
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

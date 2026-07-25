@@ -1,7 +1,8 @@
 ---
 id: maria_malfait
 name: Maria Lodewijka Malfait
-confidence: doc
+surname: Malfait
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

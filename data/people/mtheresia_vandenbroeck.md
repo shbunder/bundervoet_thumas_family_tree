@@ -1,6 +1,7 @@
 ---
 id: mtheresia_vandenbroeck
 name: Maria Theresia Van den Broeck
+surname: Van den Broeck
 death:
   raw: before 9 May 1946
 confidence: doc

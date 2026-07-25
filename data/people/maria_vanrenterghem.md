@@ -1,9 +1,10 @@
 ---
 id: maria_vanrenterghem
 name: Maria Van Renterghem
+surname: Van Renterghem
 birth:
   date: ~1610
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: judocus_vanrenterghem

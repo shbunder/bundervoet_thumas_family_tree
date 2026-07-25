@@ -1,12 +1,13 @@
 ---
 id: carolus_vandewalle
 name: Carolus Vandewalle
+surname: Vandewalle
 birth:
   date: 1638-02-03
   place: Oostkamp
 death:
   date: 1702-01-19
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_vandewalle

@@ -1,6 +1,7 @@
 ---
 id: renee
 name: Renée Bundervoet
+surname: Bundervoet
 sex: f
 birth:
   date: 2017-06-21

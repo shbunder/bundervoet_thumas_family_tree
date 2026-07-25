@@ -1,7 +1,8 @@
 ---
 id: godeliva_rotsaert
 name: Godeliva Rotsaert
-confidence: doc
+surname: Rotsaert
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

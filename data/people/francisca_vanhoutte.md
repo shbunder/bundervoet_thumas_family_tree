@@ -1,12 +1,13 @@
 ---
 id: francisca_vanhoutte
 name: Francisca Van Houtte
+surname: Van Houtte
 birth:
   date: ~1594
 death:
   date: 1668-04-17
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

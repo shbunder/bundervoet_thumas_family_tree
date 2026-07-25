@@ -1,12 +1,13 @@
 ---
 id: joannes_keirsebilck_1728
 name: Joannes Keirsebilck
+surname: Keirsebilck
 birth:
   date: "1728"
 death:
   date: "1781"
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_keirsebilck_1697

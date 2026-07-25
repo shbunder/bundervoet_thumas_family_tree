@@ -1,6 +1,7 @@
 ---
 id: leon
 name: Léon Bundervoet
+surname: Bundervoet
 sex: m
 birth:
   date: 2019-08-09

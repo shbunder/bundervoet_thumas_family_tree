@@ -1,13 +1,14 @@
 ---
 id: christina_vm
 name: Christina Van Maele
+surname: Van Maele
 birth:
   date: 1747-09-30
   place: Destelbergen
 death:
   date: 1824-04-15
   place: Laarne
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

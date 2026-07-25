@@ -1,7 +1,8 @@
 ---
 id: delphina_vdb
 name: Delphina Van den Berghe
-confidence: doc
+surname: Van den Berghe
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

@@ -1,11 +1,12 @@
 ---
 id: clara_vansieleghem
 name: Clara Van Sieleghem
+surname: Van Sieleghem
 birth:
   date: "1666"
 death:
   date: "1747"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: josephus_vansieleghem

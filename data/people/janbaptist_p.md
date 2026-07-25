@@ -1,13 +1,14 @@
 ---
 id: janbaptist_p
 name: Jan Baptist Paelinck
+surname: Paelinck
 birth:
   date: 1771-05-20
   place: Destelbergen
 death:
   date: 1843-05-29
   place: Lokeren
-confidence: doc
+confidence: sup
 occupation: dagloner (day labourer)
 branch: Paelinck
 line: paelinck

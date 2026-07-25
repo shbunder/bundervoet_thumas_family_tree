@@ -1,12 +1,13 @@
 ---
 id: bernardus
 name: Bernardus Bundervoet
+surname: Bundervoet
 birth:
   date: "1837"
 death:
   date: "1900"
   place: Evergem
-confidence: doc
+confidence: sup
 occupation: farmer, innkeeper, shopkeeper
 branch: Bundervoet
 line: bundervoet

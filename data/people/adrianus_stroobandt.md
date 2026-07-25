@@ -1,12 +1,13 @@
 ---
 id: adrianus_stroobandt
 name: Adrianus Stroobandt
+surname: Stroobandt
 birth:
   date: "1746"
 death:
   date: "1807"
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: mauritius_stroobandt

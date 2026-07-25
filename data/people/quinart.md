@@ -1,11 +1,12 @@
 ---
 id: quinart
 name: Marie Anne Catherine Quinart (Kinart)
+surname: Quinart
 birth:
   date: ~1780
 death:
   date: "1855"
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:

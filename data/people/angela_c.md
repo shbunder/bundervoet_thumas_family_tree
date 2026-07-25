@@ -1,13 +1,14 @@
 ---
 id: angela_c
 name: Angela Jacoba Casteleyn
+surname: Casteleyn
 birth:
   date: "1741"
   place: Esen
 death:
   date: 1792-07-11
   place: Zevekote
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

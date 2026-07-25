@@ -1,11 +1,12 @@
 ---
 id: guillielmus_vanrenterghem
 name: Guillielmus Van Renterghem
+surname: Van Renterghem
 birth:
   date: ~1530
 death:
   date: 1575..1587
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_vanrenterghem

@@ -1,7 +1,8 @@
 ---
 id: livinus_verkouille
 name: Livinus Hermanus Verkouille
-confidence: doc
+surname: Verkouille
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

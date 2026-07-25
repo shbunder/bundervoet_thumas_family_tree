@@ -1,7 +1,8 @@
 ---
 id: bernardus_cap
 name: Bernardus Cappaert
-confidence: doc
+surname: Cappaert
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

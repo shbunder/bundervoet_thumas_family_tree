@@ -1,11 +1,12 @@
 ---
 id: livinus_bundervoet
 name: Livinus Bundervoet
+surname: Bundervoet
 birth:
   date: ~1600
 death:
   date: ~1651
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 father: petrus_bundervoet1560

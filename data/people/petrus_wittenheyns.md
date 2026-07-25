@@ -1,11 +1,12 @@
 ---
 id: petrus_wittenheyns
 name: Petrus Wittenheyns
+surname: Wittenheyns
 birth:
   date: ~1500
 death:
   date: <1575
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

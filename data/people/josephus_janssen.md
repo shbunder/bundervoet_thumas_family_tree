@@ -1,13 +1,14 @@
 ---
 id: josephus_janssen
 name: Josephus Joannes Janssen
+surname: Janssen
 birth:
   date: 1820-08-11
   place: Oostende
 death:
   date: 1866-07-26
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

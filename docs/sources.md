@@ -13,7 +13,7 @@ single member tree, not checked against the act · **fam** = family testimony.
 
 | Site | Kind | Access | Searches run | Covers |
 |---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | 2 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | 3 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | login | 0 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | 2 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | 12 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
@@ -51,6 +51,7 @@ single member tree, not checked against the act · **fam** = family testimony.
 #### `S2` — Jérôme Dekeyser's 1897 Oostende birth act (akte nr. 585)
 - **Kind:** record · <https://agatha.arch.be/nl/data/acts/GEWVL_GEBWVL_01442676>
 - **Yielded:** The marginal note "Gewettigd 4 5 1901" — so Édouard × Louise married 4 May 1901, legitimizing Jérôme (b. 14 Jun 1897) and Gustavus (b. 1899). Establishes the marriage date without the marriage act.
+- **Saved artifact:** `data/artifacts/jerome-dekeyser-1897-birth-agatha.md`
 - **Confidence:** doc
 - **Accessed:** 2026-07
 
@@ -67,7 +68,7 @@ single member tree, not checked against the act · **fam** = family testimony.
 - **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:X9R6-DJNV>
 - **Collection:** Belgium, West Flanders, Civil Registration, 1582-1950 — Arr. Brugge, Oostende, Huwelijkscertificaten 1946
 - **Yielded:** THE WALL-BREAKER. Édouard's parents = Desiderius De Keyser × Maria Theresia Van den Broeck; birthplace Hamme (Oost-Vlaanderen), b. 12 Nov 1876; his first marriage to Louisa Maria Bocklandt ended in divorce (~1923, Rechtbank van eersten aanleg Brugge); he remarried Leontine Schreel in Oostende, 9 May 1946.
-- **Local copy:** `docs/sources/edouard-dekeyser-1946-marriage-oostende.jpg`
+- **Saved artifact:** `data/artifacts/edouard-dekeyser-1946-marriage.md`
 - **Image:** <https://www.familysearch.org/ark:/61903/3:1:3QHN-LQKQ-R48T-B>
 - **Confidence:** doc
 - **Accessed:** 2026-07-22

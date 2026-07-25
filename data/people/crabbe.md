@@ -1,6 +1,7 @@
 ---
 id: crabbe
 name: Marie Louise Crabbé
+surname: Crabbé
 confidence: sup
 branch: Thumas
 line: thumas

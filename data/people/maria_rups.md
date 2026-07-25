@@ -1,10 +1,11 @@
 ---
 id: maria_rups
 name: Maria Rups
+surname: Rups
 birth:
   date: 1642-01-29
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: michael_rups

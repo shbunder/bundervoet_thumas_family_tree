@@ -1,13 +1,14 @@
 ---
 id: magdalena_vb
 name: Maria Magdalena Van Bogaert
+surname: Van Bogaert
 birth:
   date: 1861-07-25
   place: Nieuwkerken-Waas
 death:
   date: 1928-12-31
   place: Sint-Niklaas
-confidence: doc
+confidence: sup
 occupation: huishoudster (housekeeper)
 branch: Paelinck
 line: paelinck

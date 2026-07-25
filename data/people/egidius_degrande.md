@@ -1,10 +1,11 @@
 ---
 id: egidius_degrande
 name: Egidius De Grande
+surname: De Grande
 birth:
   date: 1670-02-21
   place: Dentergem (Wakken)
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: martinus_degrande

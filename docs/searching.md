@@ -54,9 +54,9 @@ node tools/research.mjs log --person edouard_dk --site agatha --goal parents \
 ```
 
 Add `--page` when the search was against a specific tree or document
-(`--site geneanet --page tree-isavdw`). `--artifact` takes a path under `docs/sources/`
-for a saved scan — save the image for anything that breaks a wall, because a URL behind
-a login is not reproducible for anyone else.
+(`--site geneanet --page tree-isavdw`). `--artifact` takes the id of a saved document
+in `data/artifacts/` — save one for anything that breaks a wall, because a URL behind a
+login is not reproducible for anyone else.
 
 ## Saying how it went
 
@@ -158,4 +158,4 @@ so the login is a one-off.
 Two things to keep in mind while it runs. Archives rate-limit and will suspend an
 account that hammers them — pace requests, because losing the session costs far more
 than the delay. And a page behind a login is not reproducible for anyone else, so save
-the scan to `docs/sources/` and cite the local file alongside the URL.
+the scan as an artifact and cite its id alongside the URL.

@@ -1,11 +1,12 @@
 ---
 id: gustavus_j
 name: Gustavus-Josephus Dekeyser
+surname: Dekeyser
 sex: m
 birth:
   date: 1899-05-19
   place: Oostende
-confidence: doc
+confidence: sup
 branch: DeKeyser
 line: de-keyser
 father: edouard_dk

@@ -1,9 +1,10 @@
 ---
 id: magdalena_demeulemeester
 name: Magdalena Demeulemeester
+surname: Demeulemeester
 birth:
   date: 1530..1539
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: michiel_demeulemeester

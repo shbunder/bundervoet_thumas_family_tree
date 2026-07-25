@@ -1,13 +1,14 @@
 ---
 id: silvester_v
 name: Silvester Engelbertus Vanstechelman
+surname: Vanstechelman
 birth:
   date: 1740-01-21
   place: Woumen
 death:
   date: 1809-10-22
   place: Zevekote
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 father: andreasandries_v

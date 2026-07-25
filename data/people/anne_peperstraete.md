@@ -1,7 +1,8 @@
 ---
 id: anne_peperstraete
 name: Anne Therese Peperstraete
-confidence: doc
+surname: Peperstraete
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

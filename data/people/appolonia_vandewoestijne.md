@@ -1,7 +1,8 @@
 ---
 id: appolonia_vandewoestijne
 name: Appolonia Vande Woestijne
-confidence: doc
+surname: Vande Woestijne
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

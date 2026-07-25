@@ -1,10 +1,11 @@
 ---
 id: georgius_s
 name: Georgius Antonius Julianus Smessaert
+surname: Smessaert
 birth:
   date: 1894-10-11
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Devriendt
 line: devriendt
 father: joannesf_s

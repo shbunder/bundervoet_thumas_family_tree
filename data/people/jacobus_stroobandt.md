@@ -1,13 +1,14 @@
 ---
 id: jacobus_stroobandt
 name: Jacobus Stroobandt
+surname: Stroobandt
 birth:
   date: 1782-09-01
   place: Oostkamp
 death:
   date: 1821-06-24
   place: Oostkamp
-confidence: doc
+confidence: sup
 occupation: schoenmaker (shoemaker)
 branch: Bundervoet
 line: bostyn-cappaert

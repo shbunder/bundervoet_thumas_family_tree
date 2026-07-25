@@ -1,6 +1,7 @@
 ---
 id: helena_denijs
 name: Helena Denijs
+surname: Denijs
 confidence: doc
 branch: Bundervoet
 line: bostyn-cappaert

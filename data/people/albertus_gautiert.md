@@ -1,13 +1,14 @@
 ---
 id: albertus_gautiert
 name: Albertus Jacobus Gautiert
+surname: Gautiert
 birth:
   date: 1784-03-06
   place: Oostende
 death:
   date: 1847-09-08
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

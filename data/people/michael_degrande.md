@@ -1,13 +1,14 @@
 ---
 id: michael_degrande
 name: Michael De Grande
+surname: De Grande
 birth:
   date: 1726-09-06
   place: Tielt
 death:
   date: 1801-04-19
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_degrande

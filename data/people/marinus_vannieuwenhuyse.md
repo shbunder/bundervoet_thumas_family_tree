@@ -1,11 +1,12 @@
 ---
 id: marinus_vannieuwenhuyse
 name: Marinus Van Nieuwenhuyse
+surname: Van Nieuwenhuyse
 birth:
   date: ~1620
 death:
   date: "1666"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

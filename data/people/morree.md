@@ -1,7 +1,8 @@
 ---
 id: morree
 name: Anna Francisca Morree
-confidence: doc
+surname: Morree
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

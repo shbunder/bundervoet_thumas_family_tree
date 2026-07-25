@@ -1,7 +1,8 @@
 ---
 id: philippus_daneel
 name: Philippus Daneel
-confidence: doc
+surname: Daneel
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

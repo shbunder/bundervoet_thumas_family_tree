@@ -1,7 +1,8 @@
 ---
 id: sophia_vh
 name: Sophia Vanhoucke
-confidence: doc
+surname: Vanhoucke
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

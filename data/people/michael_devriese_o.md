@@ -1,11 +1,12 @@
 ---
 id: michael_devriese_o
 name: Michaël De Vriese
+surname: De Vriese
 birth:
   date: "1615"
 death:
   date: "1681"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

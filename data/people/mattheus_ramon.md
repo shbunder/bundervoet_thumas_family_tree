@@ -1,13 +1,14 @@
 ---
 id: mattheus_ramon
 name: Mattheus Ramon
+surname: Ramon
 birth:
   date: 1729-08-04
   place: Bovekerke
 death:
   date: 1790-10-31
   place: Handzame
-confidence: doc
+confidence: sup
 branch: Devriendt
 line: devriendt
 father: stephanus_ramon

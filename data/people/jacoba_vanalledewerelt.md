@@ -1,11 +1,12 @@
 ---
 id: jacoba_vanalledewerelt
 name: Jacoba Van Alledewerelt
+surname: Van Alledewerelt
 birth:
   date: ~1630
 death:
   date: "1675"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

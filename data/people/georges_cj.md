@@ -1,13 +1,14 @@
 ---
 id: georges_cj
 name: Georges Carolus Josephus Thumas
+surname: Thumas
 birth:
   date: 1836-09-15
   place: Grez-Doiceau
 death:
   date: 1922-10-26
   place: Sint-Stevens-Woluwe
-confidence: doc
+confidence: sup
 occupation: landbouwer & herbergier (farmer & innkeeper)
 branch: Thumas
 line: thumas

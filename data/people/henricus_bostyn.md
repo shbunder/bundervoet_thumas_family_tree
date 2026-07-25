@@ -1,13 +1,14 @@
 ---
 id: henricus_bostyn
 name: Henricus Bostyn
+surname: Bostyn
 birth:
   date: 1869-09-16
   place: Varsenare
 death:
   date: 1947-11-11
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: metser (mason)
 branch: Bundervoet
 line: bostyn-cappaert

@@ -1,9 +1,10 @@
 ---
 id: devos
 name: Joanna Paula Devos
+surname: Devos
 birth:
   date: "1896"
-confidence: doc
+confidence: sup
 branch: Devriendt
 line: devriendt
 father: petrus_devos

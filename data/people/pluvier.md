@@ -1,7 +1,8 @@
 ---
 id: pluvier
 name: Elisabeth Pluvier
-confidence: doc
+surname: Pluvier
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

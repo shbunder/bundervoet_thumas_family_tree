@@ -23,7 +23,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadConfig, loadPeople as readPeople } from './lib/people.mjs';
+import { loadArtifacts, loadConfig, loadPeople as readPeople } from './lib/people.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCES = path.join(ROOT, 'research', 'sources.json');
@@ -321,6 +321,7 @@ function cmdReport() {
 
 export function check() {
   const problems = [];
+  const artifacts = loadArtifacts();
   const { sites, pages } = loadSources();
   const siteIds = new Set();
   for (const s of sites) {
@@ -337,8 +338,8 @@ export function check() {
     if (!p.title) problems.push(`page "${p.id}" has no title`);
     if (!p.site) problems.push(`page "${p.id}" names no site`);
     else if (!siteIds.has(p.site)) problems.push(`page "${p.id}" belongs to site "${p.site}", which is not registered`);
-    if (p.artifact && !fs.existsSync(path.join(ROOT, p.artifact))) {
-      problems.push(`page "${p.id}" points at a missing artifact: ${p.artifact}`);
+    if (p.artifact && !artifacts[p.artifact]) {
+      problems.push(`page "${p.id}" cites artifact "${p.artifact}", which has no record in data/artifacts/`);
     }
   }
 
@@ -356,7 +357,7 @@ export function check() {
       else if (page.site !== e.site) problems.push(`${at}: page "${e.page}" belongs to site "${page.site}", not "${e.site}"`);
     }
     if (e.person && !people[e.person]) problems.push(`${at}: unknown person "${e.person}"`);
-    if (e.artifact && !fs.existsSync(path.join(ROOT, e.artifact))) problems.push(`${at}: missing artifact ${e.artifact}`);
+    if (e.artifact && !artifacts[e.artifact]) problems.push(`${at}: cites artifact "${e.artifact}", which has no record in data/artifacts/`);
     // The outcome has to be legible, or the entry tells the next pass nothing.
     if (e.result && SUCCEEDED(e.result) && !e.found) problems.push(`${at}: a hit with no "found" — say what it gave`);
     if (e.result && !SUCCEEDED(e.result) && !e.why) problems.push(`${at}: a ${e.result} with no "why" — say whether it is worth retrying`);
@@ -407,7 +408,7 @@ function cmdDocs() {
       if (p.collection) out.push(`- **Collection:** ${p.collection}`);
       if (p.covers) out.push(`- **Covers:** ${p.covers}`);
       out.push(`- **Yielded:** ${p.yielded || '*nothing yet*'}`);
-      if (p.artifact) out.push(`- **Local copy:** \`${p.artifact}\``);
+      if (p.artifact) out.push(`- **Saved artifact:** \`data/artifacts/${p.artifact}.md\``);
       if (p.image) out.push(`- **Image:** <${p.image}>`);
       if (p.confidence) out.push(`- **Confidence:** ${p.confidence}`);
       if (p.accessed) out.push(`- **Accessed:** ${p.accessed}`);

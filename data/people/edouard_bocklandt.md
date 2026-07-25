@@ -1,6 +1,7 @@
 ---
 id: edouard_bocklandt
 name: Édouard Bocklandt
+surname: Bocklandt
 birth:
   date: "1839"
 confidence: doc

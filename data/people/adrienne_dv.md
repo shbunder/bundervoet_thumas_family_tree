@@ -1,13 +1,14 @@
 ---
 id: adrienne_dv
 name: Adrienne Margaretha Devriendt
+surname: Devriendt
 birth:
   date: 1908-04-12
   place: Stene
 death:
   date: 1991-09-22
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: eugenius_dv

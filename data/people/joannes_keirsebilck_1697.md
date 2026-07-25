@@ -1,11 +1,12 @@
 ---
 id: joannes_keirsebilck_1697
 name: Joannes Keirsebilck
+surname: Keirsebilck
 birth:
   date: ~1697
 death:
   date: "1759"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

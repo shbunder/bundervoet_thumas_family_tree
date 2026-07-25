@@ -1,10 +1,11 @@
 ---
 id: livinus1_p
 name: Livinus Paelinck
+surname: Paelinck
 birth:
   date: ~1618
   place: Lochristi
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

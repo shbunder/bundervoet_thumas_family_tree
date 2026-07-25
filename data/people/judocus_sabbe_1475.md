@@ -1,11 +1,12 @@
 ---
 id: judocus_sabbe_1475
 name: Judocus (Joos) Sabbe
+surname: Sabbe
 birth:
   date: ~1475
 death:
   date: "1534"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: gillis_sabbe

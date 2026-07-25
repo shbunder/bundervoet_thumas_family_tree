@@ -1,6 +1,7 @@
 ---
 id: dorien
 name: Dorien Thumas
+surname: Thumas
 birth:
   date: 1988-09-06
 confidence: fam

@@ -1,13 +1,14 @@
 ---
 id: daix
 name: Dieudonnée Daix
+surname: Daix
 birth:
   date: "1665"
   place: Grez-Doiceau
 death:
   date: 1750-05-10
   place: Leuven
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:

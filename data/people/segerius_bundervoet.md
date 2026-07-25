@@ -1,12 +1,13 @@
 ---
 id: segerius_bundervoet
 name: Segerius Bundervoet
+surname: Bundervoet
 birth:
   date: ~1615
 death:
   date: 1669-06-16
   place: Evergem
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 father: livinus_bundervoet

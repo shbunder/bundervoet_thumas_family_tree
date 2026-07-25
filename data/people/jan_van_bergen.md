@@ -1,6 +1,7 @@
 ---
 id: jan_van_bergen
 name: Joannes Franciscus Van Bergen
+surname: Van Bergen
 birth:
   date: "1815"
 death:

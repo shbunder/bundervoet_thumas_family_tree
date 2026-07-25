@@ -1,11 +1,12 @@
 ---
 id: anna_lamsens
 name: Anna Lamsens
+surname: Lamsens
 birth:
   date: ~1639
 death:
   date: "1689"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

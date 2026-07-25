@@ -1,13 +1,14 @@
 ---
 id: theresia_robbe
 name: Theresia Joanna Monica Robbe
+surname: Robbe
 birth:
   date: 1787-05-04
   place: Oostende
 death:
   date: 1873-04-27
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

@@ -1,11 +1,12 @@
 ---
 id: martinus_degrande
 name: Martinus De Grande
+surname: De Grande
 birth:
   date: ~1642
 death:
   date: "1706"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

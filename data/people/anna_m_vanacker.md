@@ -1,11 +1,12 @@
 ---
 id: anna_m_vanacker
 name: Anna Maria Van Acker
+surname: Van Acker
 birth:
   date: "1749"
 death:
   date: "1820"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: henricus_vanacker

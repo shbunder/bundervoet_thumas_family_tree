@@ -1,12 +1,13 @@
 ---
 id: elodia
 name: Elodia Octavia Bostyn
+surname: Bostyn
 birth:
   date: "1908"
 death:
   date: "1997"
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: werkster (labourer)
 branch: Bundervoet
 line: bundervoet

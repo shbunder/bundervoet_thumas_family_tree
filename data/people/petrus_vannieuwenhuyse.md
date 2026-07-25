@@ -1,6 +1,7 @@
 ---
 id: petrus_vannieuwenhuyse
 name: Petrus Van Nieuwenhuyse
+surname: Van Nieuwenhuyse
 birth:
   date: 1649-03-07
   place: Oostkamp

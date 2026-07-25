@@ -1,6 +1,7 @@
 ---
 id: alphonsus
 name: Alphonsus Bernardus Bundervoet
+surname: Bundervoet
 birth:
   date: 1905-01-06
   place: Oostende

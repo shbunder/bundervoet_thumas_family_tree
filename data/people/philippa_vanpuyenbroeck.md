@@ -1,6 +1,7 @@
 ---
 id: philippa_vanpuyenbroeck
 name: Philippa Van Puyenbroeck
+surname: Van Puyenbroeck
 birth:
   date: "1778"
 death:

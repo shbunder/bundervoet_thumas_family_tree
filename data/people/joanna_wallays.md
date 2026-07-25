@@ -1,11 +1,12 @@
 ---
 id: joanna_wallays
 name: Joanna Wallays
+surname: Wallays
 birth:
   date: ~1671
 death:
   date: "1746"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

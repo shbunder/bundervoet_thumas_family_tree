@@ -1,11 +1,12 @@
 ---
 id: maria_deruwe
 name: Maria De Ruwe
+surname: De Ruwe
 birth:
   date: ~1500
 death:
   date: ~1547
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

@@ -1,11 +1,12 @@
 ---
 id: florentinus_stroobandt
 name: Florentinus Stroobandt
+surname: Stroobandt
 birth:
   date: "1811"
 death:
   date: "1876"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: jacobus_stroobandt

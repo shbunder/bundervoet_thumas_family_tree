@@ -1,13 +1,14 @@
 ---
 id: marcel_d
 name: Marcel Désiré Devriendt
+surname: Devriendt
 birth:
   date: "1914"
   place: Stene
 death:
   date: "2000"
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: smid (blacksmith)
 branch: Devriendt
 line: devriendt

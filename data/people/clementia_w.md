@@ -1,11 +1,12 @@
 ---
 id: clementia_w
 name: Clementia Sophia Wagebaert
+surname: Wagebaert
 birth:
   date: "1853"
 death:
   date: "1927"
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 father: henricus_w

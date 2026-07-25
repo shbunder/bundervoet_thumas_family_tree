@@ -1,12 +1,13 @@
 ---
 id: maria_lampsins
 name: Maria Lampsins
+surname: Lampsins
 birth:
   date: 1637-03-14
   place: Lichtervelde
 death:
   date: 1709-09-02
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: paulus_lampsins

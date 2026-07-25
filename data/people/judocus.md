@@ -1,12 +1,13 @@
 ---
 id: judocus
 name: Judocus Bundervoet
+surname: Bundervoet
 birth:
   date: "1794"
 death:
   date: "1860"
   place: Evergem
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 father: philippus

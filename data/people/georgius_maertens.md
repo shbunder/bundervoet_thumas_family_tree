@@ -1,11 +1,12 @@
 ---
 id: georgius_maertens
 name: Georgius Maertens
+surname: Maertens
 birth:
   date: "1648"
 death:
   date: "1693"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

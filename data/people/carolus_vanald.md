@@ -1,13 +1,14 @@
 ---
 id: carolus_vanald
 name: Carolus Ludovicus Vanalderweireldt
+surname: Vanalderweireldt
 birth:
   date: 1808-03-11
   place: Diksmuide
 death:
   date: 1853-08-14
   place: Diksmuide
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: antoine_vanald

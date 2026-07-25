@@ -1,13 +1,14 @@
 ---
 id: jbgeorgius
 name: Joannes Baptista Georgius Thumas
+surname: Thumas
 birth:
   date: 1876-09-26
   place: Kraainem
 death:
   date: 1944-03-23
   place: Brussel
-confidence: doc
+confidence: sup
 occupation: fabriekwerker & gemeenteschepen (factory worker & alderman)
 branch: Thumas
 line: thumas

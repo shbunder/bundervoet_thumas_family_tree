@@ -1,10 +1,11 @@
 ---
 id: ramon
 name: Eugenia Mathildis Ramon
+surname: Ramon
 birth:
   date: 1860-08-12
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: werkmeid & herbergierster (maid/innkeeper)
 branch: Devriendt
 line: devriendt

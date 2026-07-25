@@ -1,12 +1,13 @@
 ---
 id: simon_sabbe
 name: Simon Sabbe
+surname: Sabbe
 birth:
   date: "1627"
 death:
   date: "1711"
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_sabbe

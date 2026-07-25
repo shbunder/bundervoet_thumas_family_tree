@@ -1,11 +1,12 @@
 ---
 id: adriana_sabbe
 name: Adriana Theresia Judoca Sabbe
+surname: Sabbe
 birth:
   date: "1703"
 death:
   date: "1768"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: judocus_sabbe

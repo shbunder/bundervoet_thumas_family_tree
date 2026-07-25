@@ -1,13 +1,14 @@
 ---
 id: felix_v
 name: Felix Guillielmus Vanstechelman
+surname: Vanstechelman
 birth:
   date: 1800-02-13
   place: Zevekote
 death:
   date: 1869-11-09
   place: Mariakerke
-confidence: doc
+confidence: sup
 occupation: herbergier (innkeeper)
 branch: Vanstechelman
 line: vanstechelman

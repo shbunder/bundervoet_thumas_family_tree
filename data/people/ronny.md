@@ -1,6 +1,7 @@
 ---
 id: ronny
 name: Ronny Bundervoet
+surname: Bundervoet
 birth:
   date: 1964-01-20
 confidence: fam

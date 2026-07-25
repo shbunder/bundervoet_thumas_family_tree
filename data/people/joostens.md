@@ -1,11 +1,12 @@
 ---
 id: joostens
 name: Marie Catharina Joostens
+surname: Joostens
 birth:
   date: "1810"
 death:
   date: "1857"
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:

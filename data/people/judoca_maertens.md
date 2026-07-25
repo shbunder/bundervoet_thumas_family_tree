@@ -1,11 +1,12 @@
 ---
 id: judoca_maertens
 name: Judoca Maertens
+surname: Maertens
 birth:
   date: "1671"
 death:
   date: "1743"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: georgius_maertens

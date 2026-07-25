@@ -1,12 +1,13 @@
 ---
 id: judocus_sabbe
 name: Judocus Sabbe
+surname: Sabbe
 birth:
   date: ~1667
 death:
   date: 1737-02-05
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: simon_sabbe

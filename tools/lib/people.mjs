@@ -8,11 +8,19 @@ import { parseFrontmatter } from './frontmatter.mjs';
 export const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const DATA = path.join(ROOT, 'data');
 export const PEOPLE_DIR = path.join(DATA, 'people');
+export const ARTIFACTS_DIR = path.join(DATA, 'artifacts');
 
 // The fields a person record may carry, in the order they are written.
-export const FIELDS = ['id', 'name', 'sex', 'birth', 'death', 'confidence', 'occupation', 'nickname', 'branch', 'line', 'father', 'mother', 'spouses', 'sources'];
+export const FIELDS = ['id', 'name', 'surname', 'sex', 'birth', 'death', 'confidence', 'occupation', 'nickname', 'branch', 'line', 'father', 'mother', 'spouses', 'sources'];
 export const EVENT_FIELDS = ['date', 'place'];
 export const SPOUSE_FIELDS = ['id', 'name', 'detail'];
+// An artifact is a saved primary document — a scan or photograph of an act. It is
+// evidence, so it lives in data/ with the facts, not in docs/ with the writing
+// about them, and it carries its own record in the same frontmatter format.
+export const ARTIFACT_FIELDS = [
+  'id', 'file', 'media', 'bytes', 'sha256', 'title', 'kind', 'event', 'date',
+  'place', 'repository', 'collection', 'source', 'url', 'accessed', 'evidences',
+];
 
 // ---------- dates ----------
 // A deliberately small grammar, so a date is queryable and sortable instead of
@@ -112,8 +120,47 @@ export function loadPeople(roster) {
   return people;
 }
 
+export function loadArtifacts() {
+  if (!fs.existsSync(ARTIFACTS_DIR)) return {};
+  const out = {};
+  for (const f of fs.readdirSync(ARTIFACTS_DIR).filter(f => f.endsWith('.md'))) {
+    const { data, body } = parseFrontmatter(fs.readFileSync(path.join(ARTIFACTS_DIR, f), 'utf8'), f);
+    if (body) data.note = body;
+    out[f.slice(0, -3)] = data;
+  }
+  return out;
+}
+
 export const onDisk = () =>
   fs.readdirSync(PEOPLE_DIR).filter(f => f.endsWith('.md')).map(f => f.slice(0, -3));
+
+// ---------- names ----------
+// `name` is the name as the record wrote it, particles, spelling and all. Which
+// part of it is the family name cannot be computed: a quarter of these names carry
+// a particle ("Van den Broucke", "Vande Woestijne", "'t Jonck"), so the last word
+// is the wrong answer often enough to matter, and the exporter's particle
+// heuristic silently produced no surname at all for six people. So `surname` is
+// stated, not guessed — and it is the only extra name field, because "Christianus
+// Josephus" is one compound given name, not a first name plus a middle name.
+//
+// Given names are therefore derived, not stored: the name with the surname removed.
+// The surname is usually last, but not always: "Marie Anne Catherine Quinart
+// (Kinart)" ends with a variant spelling, so cutting only from the end left the
+// surname sitting in the given names as well.
+export const givenNames = p => {
+  if (!p.surname) return p.name;
+  const at = p.name.lastIndexOf(p.surname);
+  if (at < 0) return p.name;
+  return (p.name.slice(0, at) + p.name.slice(at + p.surname.length)).replace(/\s{2,}/g, ' ').trim();
+};
+
+// The grouping key. Spelling varies by the record a person was found in — the
+// same Oostende family is written "Dekeyser" and "De Keyser", and both are kept
+// on purpose — so grouping compares surnames with case, spacing and accents
+// removed. This is what lets objective 3 ask "who are all the Bundervoets?"
+// without a hand-maintained list.
+export const familyKey = surname =>
+  (surname || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
 
 // ---------- the shape the browser reads ----------
 // The site loads a generated bundle, so the display strings are computed once
@@ -133,6 +180,12 @@ export function toBrowserRecord(p) {
     dates: displayDates(p),
     confidence: p.confidence,
   };
+  // Both derived here rather than in the renderer, so assets/ never has to know
+  // what a particle is.
+  if (p.surname) {
+    out.surname = p.surname;
+    out.family = familyKey(p.surname);
+  }
   if (p.sex) out.sex = p.sex;
   if (p.birth) out.born = eventText(p.birth);
   if (p.death) out.died = eventText(p.death);

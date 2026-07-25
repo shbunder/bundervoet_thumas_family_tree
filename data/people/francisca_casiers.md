@@ -1,9 +1,10 @@
 ---
 id: francisca_casiers
 name: Francisca Casiers
+surname: Casiers
 birth:
   date: <1673
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

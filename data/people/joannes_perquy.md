@@ -1,7 +1,8 @@
 ---
 id: joannes_perquy
 name: Joannes Perquy
-confidence: doc
+surname: Perquy
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

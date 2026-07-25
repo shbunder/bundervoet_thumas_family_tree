@@ -1,10 +1,11 @@
 ---
 id: joannesf_p
 name: Joannes Franciscus Paelinck
+surname: Paelinck
 birth:
   date: 1809-11-22
   place: Lokeren
-confidence: doc
+confidence: sup
 occupation: arbeider (labourer)
 branch: Paelinck
 line: paelinck

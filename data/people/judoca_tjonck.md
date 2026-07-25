@@ -1,11 +1,12 @@
 ---
 id: judoca_tjonck
 name: Judoca 't Jonck
+surname: 't Jonck
 birth:
   date: ~1510
 death:
   date: ~1546
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

@@ -1,6 +1,7 @@
 ---
 id: rita_dk
 name: Rita De Keyser
+surname: De Keyser
 sex: f
 confidence: fam
 branch: DeKeyser

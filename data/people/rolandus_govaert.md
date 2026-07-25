@@ -1,7 +1,8 @@
 ---
 id: rolandus_govaert
 name: Rolandus Govaert
-confidence: doc
+surname: Govaert
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

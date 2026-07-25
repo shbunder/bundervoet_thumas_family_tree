@@ -1,9 +1,10 @@
 ---
 id: amandus_rups
 name: Amandus Rups
+surname: Rups
 death:
   date: "1657"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

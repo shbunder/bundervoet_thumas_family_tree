@@ -1,6 +1,7 @@
 ---
 id: gustaaf
 name: Gustaaf Dekeyser
+surname: Dekeyser
 birth:
   date: 1920..1929
   place: Oostende

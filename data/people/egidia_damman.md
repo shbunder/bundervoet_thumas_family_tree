@@ -1,9 +1,10 @@
 ---
 id: egidia_damman
 name: Egidia Damman
+surname: Damman
 death:
   date: "1676"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

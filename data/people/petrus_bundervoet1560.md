@@ -1,11 +1,12 @@
 ---
 id: petrus_bundervoet1560
 name: Petrus Bundervoet
+surname: Bundervoet
 birth:
   date: "1560"
 death:
   date: ~1605
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 spouses:

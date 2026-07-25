@@ -1,6 +1,7 @@
 ---
 id: marie_vanbergen
 name: Marie-Louise Van Bergen
+surname: Van Bergen
 birth:
   date: "1842"
 death:

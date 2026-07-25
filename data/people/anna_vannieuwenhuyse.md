@@ -1,11 +1,12 @@
 ---
 id: anna_vannieuwenhuyse
 name: Anna Van Nieuwenhuyse
+surname: Van Nieuwenhuyse
 birth:
   date: "1676"
 death:
   date: "1722"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_vannieuwenhuyse

@@ -1,12 +1,13 @@
 ---
 id: judoca_vandenberghe
 name: Judoca Vandenberghe
+surname: Vandenberghe
 birth:
   date: ~1594
 death:
   date: 1664-09-02
   place: Brugge (Lissewege)
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: carolus_vandenberghe

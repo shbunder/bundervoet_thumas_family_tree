@@ -1,13 +1,14 @@
 ---
 id: georges1_t
 name: Georges Thumas
+surname: Thumas
 birth:
   date: 1744-03-14
   place: Grez-Doiceau
 death:
   date: 1808-11-20
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 occupation: menuisier (schrijnwerker / carpenter)
 branch: Thumas
 line: thumas

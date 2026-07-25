@@ -1,6 +1,7 @@
 ---
 id: daniel_bocklandt
 name: Daniel Bocklandt
+surname: Bocklandt
 birth:
   date: "1768"
 death:

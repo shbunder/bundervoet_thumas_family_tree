@@ -1,13 +1,14 @@
 ---
 id: victoria_engelsen
 name: Victoria Eugenia Engelsen
+surname: Engelsen
 birth:
   date: 1791-03-17
   place: Oostende
 death:
   date: 1849-09-08
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

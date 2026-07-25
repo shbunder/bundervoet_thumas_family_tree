@@ -1,9 +1,10 @@
 ---
 id: elisabeth_t
 name: Elisabeth Temmerman
+surname: Temmerman
 birth:
   date: ~1620
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

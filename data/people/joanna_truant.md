@@ -1,10 +1,11 @@
 ---
 id: joanna_truant
 name: Joanna Truant
+surname: Truant
 death:
   date: 1773-04-08
   place: Zande
-confidence: doc
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

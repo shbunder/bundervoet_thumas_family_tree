@@ -1,7 +1,8 @@
 ---
 id: joanna_defoort
 name: Joanna De Foort
-confidence: doc
+surname: De Foort
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

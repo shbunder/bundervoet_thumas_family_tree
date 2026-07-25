@@ -1,11 +1,12 @@
 ---
 id: anna_c_devriese
 name: Anna Cornelia De Vriese
+surname: De Vriese
 birth:
   date: "1701"
 death:
   date: "1729"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: hubert_devriese

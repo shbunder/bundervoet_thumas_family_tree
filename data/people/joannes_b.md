@@ -1,13 +1,14 @@
 ---
 id: joannes_b
 name: Joannes Bundervoet
+surname: Bundervoet
 birth:
   date: ~1682
   place: Evergem
 death:
   date: 1760-11-07
   place: Evergem
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 father: joannes_b1637

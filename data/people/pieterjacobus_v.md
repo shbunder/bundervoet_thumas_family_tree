@@ -1,13 +1,14 @@
 ---
 id: pieterjacobus_v
 name: Pieter Jacobus Vanstechelman
+surname: Vanstechelman
 birth:
   date: 1770-05-12
   place: Zevekote
 death:
   date: 1827-09-28
   place: Zevekote
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 father: silvester_v

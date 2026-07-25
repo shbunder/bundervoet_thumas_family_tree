@@ -1,12 +1,13 @@
 ---
 id: marcel_b
 name: Marcel Henri Bundervoet
+surname: Bundervoet
 birth:
   date: "1933"
 death:
   date: "2015"
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 father: alphonsus

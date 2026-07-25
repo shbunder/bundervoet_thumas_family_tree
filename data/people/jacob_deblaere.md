@@ -1,13 +1,14 @@
 ---
 id: jacob_deblaere
 name: Jacob Donaas De Blaere
+surname: De Blaere
 birth:
   date: 1695-10-04
   place: Wingene
 death:
   date: 1747-12-29
   place: Wingene
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

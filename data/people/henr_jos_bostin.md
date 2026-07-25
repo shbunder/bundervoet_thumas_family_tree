@@ -1,13 +1,14 @@
 ---
 id: henr_jos_bostin
 name: Henricus Josephus Bostin
+surname: Bostin
 birth:
   date: 1801-08-18
   place: Koekelare
 death:
   date: 1867-07-17
   place: Varsenare
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

@@ -1,9 +1,10 @@
 ---
 id: margaretha_wybau
 name: Margaretha Wybau
+surname: Wybau
 birth:
   date: ~1600
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

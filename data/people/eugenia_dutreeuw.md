@@ -1,10 +1,11 @@
 ---
 id: eugenia_dutreeuw
 name: Eugenia Henrica Dutreeuw
+surname: Dutreeuw
 birth:
   date: 1808-02-28
   place: Diksmuide
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: ludovicus_dutreeuw

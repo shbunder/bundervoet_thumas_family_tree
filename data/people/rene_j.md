@@ -1,6 +1,7 @@
 ---
 id: rene_j
 name: René Janssens
+surname: Janssens
 death:
   date: ">2000"
   place: Oostende

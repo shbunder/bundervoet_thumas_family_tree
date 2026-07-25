@@ -1,11 +1,12 @@
 ---
 id: joanna_vdoughstraete
 name: Joanna Van Der Oughstraete
+surname: Van Der Oughstraete
 birth:
   date: "1655"
 death:
   date: "1723"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

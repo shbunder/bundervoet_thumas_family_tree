@@ -1,13 +1,14 @@
 ---
 id: petrus_f
 name: Petrus Franciscus Bundervoet
+surname: Bundervoet
 birth:
   date: 1879-03-19
   place: Evergem
 death:
   date: 1943-07-21
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: werkman / meestergast
 branch: Bundervoet
 line: bundervoet

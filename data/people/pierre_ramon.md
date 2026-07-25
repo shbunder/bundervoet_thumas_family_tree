@@ -1,13 +1,14 @@
 ---
 id: pierre_ramon
 name: Pierre Francois Ramon
+surname: Ramon
 birth:
   date: 1812-02-23
   place: Mariakerke
 death:
   date: 1858-10-01
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: tuinier & zeeman (gardener/seaman)
 branch: Devriendt
 line: devriendt

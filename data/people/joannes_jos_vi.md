@@ -1,13 +1,14 @@
 ---
 id: joannes_jos_vi
 name: Joannes Josephus Van Iseghem
+surname: Van Iseghem
 birth:
   date: 1819-03-19
   place: Oostende
 death:
   date: 1861-11-06
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: judocus_vi

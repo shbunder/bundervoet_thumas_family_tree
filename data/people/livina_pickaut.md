@@ -1,13 +1,14 @@
 ---
 id: livina_pickaut
 name: Livina Pickaut
+surname: Pickaut
 birth:
   date: 1687-02-17
   place: Lochristi
 death:
   date: 1726-11-22
   place: Lochristi
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

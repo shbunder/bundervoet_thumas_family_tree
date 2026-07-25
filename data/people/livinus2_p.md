@@ -1,13 +1,14 @@
 ---
 id: livinus2_p
 name: Livinus Paelinck
+surname: Paelinck
 birth:
   date: 1718-10-11
   place: Destelbergen
 death:
   date: 1784-12-01
   place: Destelbergen
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 father: adrianus_p

@@ -1,13 +1,14 @@
 ---
 id: petronella_v
 name: Petronella Verniers
+surname: Verniers
 birth:
   date: 1661-09-26
   place: Destelbergen
 death:
   date: 1709-02-16
   place: Destelbergen
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

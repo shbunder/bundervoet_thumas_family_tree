@@ -1,10 +1,11 @@
 ---
 id: lucia_steenkiste
 name: Lucia Theresia Steenkiste
+surname: Steenkiste
 birth:
   date: 1767-10-28
   place: Oudenburg
-confidence: doc
+confidence: sup
 branch: Devriendt
 line: devriendt
 father: louis_steenkiste

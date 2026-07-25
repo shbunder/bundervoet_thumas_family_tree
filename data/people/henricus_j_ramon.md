@@ -1,13 +1,14 @@
 ---
 id: henricus_j_ramon
 name: Henricus Josephus Ramon
+surname: Ramon
 birth:
   date: 1776-01-29
   place: Zande
 death:
   date: 1839-10-27
   place: Middelkerke
-confidence: doc
+confidence: sup
 occupation: hovenier (gardener)
 branch: Devriendt
 line: devriendt

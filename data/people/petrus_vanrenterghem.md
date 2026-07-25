@@ -1,11 +1,12 @@
 ---
 id: petrus_vanrenterghem
 name: Petrus Van Renterghem
+surname: Van Renterghem
 birth:
   date: ~1500
 death:
   date: <1530
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

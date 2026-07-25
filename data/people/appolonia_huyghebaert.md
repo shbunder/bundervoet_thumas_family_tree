@@ -1,13 +1,14 @@
 ---
 id: appolonia_huyghebaert
 name: Appolonia Joanna Huyghebaert
+surname: Huyghebaert
 birth:
   date: 1830-09-26
   place: Oudenburg
 death:
   date: 1895-01-27
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

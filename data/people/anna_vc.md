@@ -1,6 +1,7 @@
 ---
 id: anna_vc
 name: Anna Van Craenenbroeck
+surname: Van Craenenbroeck
 death:
   raw: Zaventem/Leuven, a few years ago
 confidence: fam

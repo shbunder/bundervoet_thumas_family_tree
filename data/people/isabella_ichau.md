@@ -1,6 +1,7 @@
 ---
 id: isabella_ichau
 name: Isabella Livia Ichau
+surname: Ichau
 birth:
   date: "1803"
 death:

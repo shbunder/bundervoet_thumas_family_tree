@@ -1,11 +1,12 @@
 ---
 id: esther_vanderbeken
 name: Esther Vanderbeken
+surname: Vanderbeken
 birth:
   date: "1640"
 death:
   date: "1675"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

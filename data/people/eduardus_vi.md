@@ -1,12 +1,13 @@
 ---
 id: eduardus_vi
 name: Eduardus Ludovicus Rudolphus Van Iseghem
+surname: Van Iseghem
 birth:
   date: 1880-11-29
 death:
   date: 1945-06-27
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: joannes_vi2

@@ -1,6 +1,7 @@
 ---
 id: louise_bocklandt
 name: Louise Marie Bocklandt
+surname: Bocklandt
 birth:
   date: 1877-12-31
   place: Hamme (Oost-Vlaanderen)

@@ -1,13 +1,14 @@
 ---
 id: juliana_stroobandt
 name: Juliana Stroobandt
+surname: Stroobandt
 birth:
   date: "1839"
   place: Beernem (Oedelem in another source)
 death:
   date: 1921-02-11
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: florentinus_stroobandt

@@ -1,7 +1,8 @@
 ---
 id: reine_storms
 name: Reine Storms
-confidence: doc
+surname: Storms
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

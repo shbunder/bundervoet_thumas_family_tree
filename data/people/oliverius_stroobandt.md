@@ -1,9 +1,10 @@
 ---
 id: oliverius_stroobandt
 name: Oliverius Stroobandt
+surname: Stroobandt
 death:
   date: 1660..1670
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

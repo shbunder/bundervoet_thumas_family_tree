@@ -1,13 +1,14 @@
 ---
 id: goethals
 name: Marie Eulalie Goethals
+surname: Goethals
 birth:
   date: "1842"
   place: Evergem
 death:
   date: "1879"
   place: Evergem
-confidence: doc
+confidence: sup
 occupation: farm woman
 branch: Bundervoet
 line: bundervoet

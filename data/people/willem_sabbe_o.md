@@ -1,13 +1,14 @@
 ---
 id: willem_sabbe_o
 name: Willem Sabbe
+surname: Sabbe
 birth:
   date: ~1530
   place: Harelbeke (Bavikhove)
 death:
   date: "1581"
   place: Wielsbeke (Ooigem)
-confidence: doc
+confidence: sup
 occupation: landbouwer (farmer)
 branch: Bundervoet
 line: bostyn-cappaert

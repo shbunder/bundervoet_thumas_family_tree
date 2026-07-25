@@ -1,10 +1,11 @@
 ---
 id: eugenius_dv
 name: Eugenius Alphonsius Devriendt
+surname: Devriendt
 birth:
   date: 1882-04-13
   place: Stene
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

@@ -131,6 +131,14 @@ Invariants:
 - Plain text in data files (`é`, `&`), never HTML entities. The renderer escapes.
 - Presentation carries no facts: nothing in `assets/` contains a name or a date.
 
+**Artifacts are data, not documentation.** A scan or photograph of an act is the
+evidence itself, so it lives in `data/artifacts/`: the file, plus a record of the same
+name in the same frontmatter format, with the transcription in its prose body. The
+record carries `sha256` and `bytes`, and the validator recomputes them — a citation
+whose evidence has silently changed underneath it is worse than one with no evidence,
+because it still reads as sourced. Say in the record whether the act *image* was read
+or only an index page; they are different evidence and only one is `doc`.
+
 Kinship is root-free: `relationBetween(a, b)` in `assets/js/kinship.js` works from the
 pair's lowest common ancestor, so it relates anyone to anyone (objective c). The Index's
 three categories are derived from the links, so a new person appears without being added
@@ -162,6 +170,7 @@ rules apply to each. `data/` is the only place a name or a date may appear;
 
 ```
 data/people/<id>.md     source of truth: strict frontmatter + prose body
+data/artifacts/<id>.*   a saved primary document + a record describing it
 data/meta.json          roots, confidence codes
 data/branches.json      surname branch -> its default source id
 data/lineages.json      the surname chains
@@ -171,7 +180,6 @@ research/searches.jsonl the search log, append-only, with what each search found
 docs/research-log.md    numbered passes: found / checked-and-negative / next
 docs/searching.md       the search strategy, the browser, what has worked
 docs/sources.md         readable source list — GENERATED from research/sources.json
-docs/sources/           saved act images and scans
 tools/lib/              the shared loader, frontmatter parser and date grammar
 tools/build.mjs         validates, then writes everything generated
 tools/check-data.mjs    the validator

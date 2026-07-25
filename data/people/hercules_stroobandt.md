@@ -1,13 +1,14 @@
 ---
 id: hercules_stroobandt
 name: Hercules Stroobandt
+surname: Stroobandt
 birth:
   date: 1625-10-16
   place: Ardooie
 death:
   date: 1664-05-17
   place: Torhout
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: oliverius_stroobandt

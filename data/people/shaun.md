@@ -1,9 +1,10 @@
 ---
 id: shaun
 name: Shaun Bundervoet
+surname: Bundervoet
 birth:
   date: 1988-01-19
-confidence: doc
+confidence: sup
 line: immediate
 father: ronny
 mother: cosette

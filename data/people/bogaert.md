@@ -1,9 +1,10 @@
 ---
 id: bogaert
 name: Petronilla Bogaert
+surname: Bogaert
 death:
   date: "1792"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 spouses:

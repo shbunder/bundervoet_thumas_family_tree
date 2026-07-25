@@ -1,11 +1,12 @@
 ---
 id: paulus_lampsins
 name: Paulus Lampsins
+surname: Lampsins
 birth:
   date: ~1600
 death:
   date: "1659"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

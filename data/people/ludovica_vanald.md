@@ -1,12 +1,13 @@
 ---
 id: ludovica_vanald
 name: Ludovica Maria Vanalderweireldt
+surname: Vanalderweireldt
 birth:
   date: 1845-11-23
   place: Diksmuide
 death:
   date: "1914"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: carolus_vanald

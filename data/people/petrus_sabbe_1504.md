@@ -1,12 +1,13 @@
 ---
 id: petrus_sabbe_1504
 name: Petrus Sabbe
+surname: Sabbe
 birth:
   date: "1504"
   place: Zwevegem
 death:
   date: "1557"
-confidence: doc
+confidence: sup
 occupation: landbouwer (farmer)
 branch: Bundervoet
 line: bostyn-cappaert

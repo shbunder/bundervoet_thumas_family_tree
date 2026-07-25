@@ -1,13 +1,14 @@
 ---
 id: ludovicus_p
 name: Ludovicus Paelinck
+surname: Paelinck
 birth:
   date: 1660-07-15
   place: Lochristi
 death:
   date: 1720-04-17
   place: Destelbergen
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 father: livinus1_p

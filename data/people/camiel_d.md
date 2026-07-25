@@ -1,7 +1,8 @@
 ---
 id: camiel_d
 name: Camiel Theophiel Devriendt
-confidence: doc
+surname: Devriendt
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

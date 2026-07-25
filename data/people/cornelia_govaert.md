@@ -1,11 +1,12 @@
 ---
 id: cornelia_govaert
 name: Cornelia Govaert
+surname: Govaert
 birth:
   date: ~1625
 death:
   date: ~1653
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: rolandus_govaert

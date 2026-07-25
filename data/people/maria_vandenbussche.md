@@ -1,7 +1,8 @@
 ---
 id: maria_vandenbussche
 name: Maria Vandenbussche
-confidence: doc
+surname: Vandenbussche
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

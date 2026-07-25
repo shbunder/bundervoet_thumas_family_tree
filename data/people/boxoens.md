@@ -1,10 +1,11 @@
 ---
 id: boxoens
 name: Maria Anna Theresia Boxoens
+surname: Boxoens
 death:
   date: 1767-12-13
   place: Woumen
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

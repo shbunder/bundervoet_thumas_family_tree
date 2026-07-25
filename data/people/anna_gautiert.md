@@ -1,13 +1,14 @@
 ---
 id: anna_gautiert
 name: Anna Maria Gautiert
+surname: Gautiert
 birth:
   date: 1819-10-12
   place: Oostende
 death:
   date: 1860-05-26
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: albertus_gautiert

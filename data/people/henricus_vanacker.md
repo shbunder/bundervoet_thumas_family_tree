@@ -1,11 +1,12 @@
 ---
 id: henricus_vanacker
 name: Henricus Josephus Van Acker
+surname: Van Acker
 birth:
   date: "1706"
 death:
   date: "1749"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

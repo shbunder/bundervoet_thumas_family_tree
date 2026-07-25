@@ -1,9 +1,10 @@
 ---
 id: joannes_vs
 name: Joannes Vanstechele
+surname: Vanstechele
 birth:
   date: <1673
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

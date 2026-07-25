@@ -1,11 +1,12 @@
 ---
 id: coekelberghs
 name: Maria Theresia Coekelberghs
+surname: Coekelberghs
 birth:
   date: "1848"
 death:
   date: "1919"
-confidence: doc
+confidence: sup
 occupation: herbergierster (innkeeper)
 branch: Thumas
 line: thumas

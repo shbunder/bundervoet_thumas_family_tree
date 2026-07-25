@@ -1,11 +1,12 @@
 ---
 id: guillielmus_stroobandt
 name: Guillielmus Stroobandt
+surname: Stroobandt
 birth:
   date: "1659"
 death:
   date: "1721"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: hercules_stroobandt

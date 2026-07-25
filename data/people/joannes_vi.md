@@ -1,13 +1,14 @@
 ---
 id: joannes_vi
 name: Joannes Van Iseghem
+surname: Van Iseghem
 birth:
   date: 1903-05-11
   place: Lens (Fr)
 death:
   date: 1969-05-05
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: eduardus_vi

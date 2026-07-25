@@ -1,6 +1,7 @@
 ---
 id: edi_vi
 name: Edi Van Iseghem
+surname: Van Iseghem
 sex: m
 confidence: fam
 branch: Bundervoet

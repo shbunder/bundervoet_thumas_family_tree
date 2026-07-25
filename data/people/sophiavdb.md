@@ -1,13 +1,14 @@
 ---
 id: sophiavdb
 name: Sophia Van den Broucke
+surname: Van den Broucke
 birth:
   date: "1815"
   place: Nieuwmunster
 death:
   date: "1896"
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 father: christianus_vdb

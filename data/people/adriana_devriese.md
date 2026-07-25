@@ -1,11 +1,12 @@
 ---
 id: adriana_devriese
 name: Adriana De Vriese
+surname: De Vriese
 birth:
   date: "1696"
 death:
   date: "1744"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

@@ -1,13 +1,14 @@
 ---
 id: jean_t
 name: Jean Thumas
+surname: Thumas
 birth:
   date: 1907-10-23
   place: Kraainem
 death:
   date: 1995-03-22
   place: Kraainem
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 father: jbgeorgius

@@ -1,12 +1,13 @@
 ---
 id: mattheus_wittenheyns
 name: Mattheus Wittenheyns
+surname: Wittenheyns
 birth:
   date: ~1500
 death:
   date: ~1546
   place: Oostkamp
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

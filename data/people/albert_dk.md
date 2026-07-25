@@ -1,12 +1,13 @@
 ---
 id: albert_dk
 name: Albert Dekeyser
+surname: Dekeyser
 sex: m
 birth:
   date: "1920"
 death:
   date: "1972"
-confidence: doc
+confidence: sup
 branch: DeKeyser
 line: de-keyser
 father: jerome_dk

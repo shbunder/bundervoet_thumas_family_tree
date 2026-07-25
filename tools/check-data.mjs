@@ -4,9 +4,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { buildBundle } from './build.mjs';
 import { loadSources } from './research.mjs';
+import { createHash } from 'node:crypto';
 import {
-  DATA, PEOPLE_DIR, FIELDS, EVENT_FIELDS, SPOUSE_FIELDS,
-  isValidDate, loadConfig, loadPerson, onDisk,
+  DATA, ARTIFACTS_DIR, ARTIFACT_FIELDS, FIELDS, EVENT_FIELDS, SPOUSE_FIELDS,
+  isValidDate, loadArtifacts, loadConfig, loadPerson, onDisk,
 } from './lib/people.mjs';
 
 // The build runs this validator first, so it passes --skip-generated to avoid
@@ -39,6 +40,12 @@ for (const id of ids.filter(i => files.includes(i))) {
 
   if (p.id !== id) fail(`${id}.md: "id" field says "${p.id}"`);
   if (!p.name) fail(`${id}.md: missing "name"`);
+  // The surname is stated because it cannot be computed, so the one thing worth
+  // checking is that it is really part of the name — a typo here would split a
+  // family in two without anything else noticing.
+  if (p.surname && !p.name.includes(p.surname)) {
+    fail(`${id}.md: surname "${p.surname}" does not appear in name "${p.name}"`);
+  }
   if (!CONFIDENCE.has(p.confidence)) fail(`${id}.md: confidence "${p.confidence}" is not one of ${[...CONFIDENCE].join(', ')}`);
   if (p.branch && !(p.branch in branches)) fail(`${id}.md: branch "${p.branch}" is not in data/branches.json`);
   if (p.line && !GROUP_KEYS.has(p.line)) fail(`${id}.md: line "${p.line}" is not a group key in site/labels.json`);
@@ -175,7 +182,34 @@ for (const id of ids) {
   );
 }
 
-// The page loads data/bundle.js, not the individual files, so a stale bundle is
+// Artifacts are the evidence itself. A record pointing at a file that is missing is
+// a citation to nothing; a file whose bytes no longer match the recorded digest is
+// worse, because the claim still looks sourced while the proof has changed under it.
+const artifacts = loadArtifacts();
+for (const [aid, a] of Object.entries(artifacts)) {
+  if (a.id !== aid) fail(`artifacts/${aid}.md: "id" says "${a.id}"`);
+  if (!a.title) fail(`artifacts/${aid}.md: missing "title"`);
+  for (const k of Object.keys(a)) if (!ARTIFACT_FIELDS.includes(k) && k !== 'note') warnings.push(`artifacts/${aid}.md: unknown field "${k}"`);
+  if (a.date && !isValidDate(a.date)) fail(`artifacts/${aid}.md: date "${a.date}" is not a valid date`);
+  if (a.source && !SOURCE_IDS.has(a.source)) fail(`artifacts/${aid}.md: source "${a.source}" is not registered`);
+  for (const pid of a.evidences || []) if (!people[pid]) fail(`artifacts/${aid}.md: evidences "${pid}", who does not exist`);
+
+  if (!a.file) { fail(`artifacts/${aid}.md: missing "file"`); continue; }
+  const file = path.join(ARTIFACTS_DIR, a.file);
+  if (!fs.existsSync(file)) { fail(`artifacts/${aid}.md: file "${a.file}" is missing`); continue; }
+  const bytes = fs.readFileSync(file);
+  if (a.bytes && Number(a.bytes) !== bytes.length) fail(`artifacts/${aid}.md: file is ${bytes.length} bytes, the record says ${a.bytes}`);
+  if (a.sha256 && createHash('sha256').update(bytes).digest('hex') !== a.sha256) {
+    fail(`artifacts/${aid}.md: sha256 does not match the file — the evidence has changed`);
+  }
+}
+for (const f of fs.existsSync(ARTIFACTS_DIR) ? fs.readdirSync(ARTIFACTS_DIR) : []) {
+  if (!f.endsWith('.md') && !Object.values(artifacts).some(a => a.file === f)) {
+    warnings.push(`artifacts/${f}: no record describes this file`);
+  }
+}
+
+// The page loads dist/bundle.js, not the individual files, so a stale bundle is
 // a site silently showing old data. Catching it here means it cannot be
 // committed: the rule is that this validator is green before every commit.
 if (!SKIP_GENERATED) {

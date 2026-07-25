@@ -1,13 +1,14 @@
 ---
 id: joannesf_s
 name: Joannes Franciscus Smessaert
+surname: Smessaert
 birth:
   date: 1857-01-12
   place: Oostende
 death:
   date: <1919
   place: Oostende
-confidence: doc
+confidence: sup
 occupation: werkman (labourer)
 branch: Devriendt
 line: devriendt

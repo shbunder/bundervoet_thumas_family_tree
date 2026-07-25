@@ -1,13 +1,14 @@
 ---
 id: georgeslambert_t
 name: Georges Lambert Thumas
+surname: Thumas
 birth:
   date: 1772-02-17
   place: Grez-Doiceau
 death:
   date: 1863-01-22
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 occupation: menuisier (carpenter)
 branch: Thumas
 line: thumas

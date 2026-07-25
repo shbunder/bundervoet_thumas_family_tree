@@ -1,12 +1,13 @@
 ---
 id: carel_cappaert
 name: Carel Louis Cappaert
+surname: Cappaert
 birth:
   date: 1835-04-12
 death:
   date: 1918-02-21
   place: Oostkamp
-confidence: doc
+confidence: sup
 occupation: dagloner (day-labourer)
 branch: Bundervoet
 line: bostyn-cappaert

@@ -1,11 +1,12 @@
 ---
 id: bertha_dk
 name: Bertha Alida Theresia Dekeyser
+surname: Dekeyser
 sex: f
 birth:
   date: 1901-08-07
   place: Oostende
-confidence: doc
+confidence: sup
 branch: DeKeyser
 line: de-keyser
 father: edouard_dk

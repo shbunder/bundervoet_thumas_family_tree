@@ -385,7 +385,7 @@
       "title": "Édouard Dekeyser's 1946 Oostende remarriage act (akte nr. 81)",
       "url": "https://www.familysearch.org/ark:/61903/1:1:X9R6-DJNV",
       "image": "https://www.familysearch.org/ark:/61903/3:1:3QHN-LQKQ-R48T-B",
-      "artifact": "docs/sources/edouard-dekeyser-1946-marriage-oostende.jpg",
+      "artifact": "edouard-dekeyser-1946-marriage",
       "collection": "Belgium, West Flanders, Civil Registration, 1582-1950 — Arr. Brugge, Oostende, Huwelijkscertificaten 1946",
       "yielded": "THE WALL-BREAKER. Édouard's parents = Desiderius De Keyser × Maria Theresia Van den Broeck; birthplace Hamme (Oost-Vlaanderen), b. 12 Nov 1876; his first marriage to Louisa Maria Bocklandt ended in divorce (~1923, Rechtbank van eersten aanleg Brugge); he remarried Leontine Schreel in Oostende, 9 May 1946.",
       "confidence": "doc",
@@ -397,6 +397,7 @@
       "kind": "record",
       "title": "Jérôme Dekeyser's 1897 Oostende birth act (akte nr. 585)",
       "url": "https://agatha.arch.be/nl/data/acts/GEWVL_GEBWVL_01442676",
+      "artifact": "jerome-dekeyser-1897-birth-agatha",
       "yielded": "The marginal note \"Gewettigd 4 5 1901\" — so Édouard × Louise married 4 May 1901, legitimizing Jérôme (b. 14 Jun 1897) and Gustavus (b. 1899). Establishes the marriage date without the marriage act.",
       "confidence": "doc",
       "accessed": "2026-07"

@@ -1,10 +1,11 @@
 ---
 id: ludovica_ellebout
 name: Ludovica Prudentia Ellebout
+surname: Ellebout
 birth:
   date: 1765-04-29
   place: Diksmuide
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

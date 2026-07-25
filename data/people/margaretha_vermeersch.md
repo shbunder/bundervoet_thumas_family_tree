@@ -1,9 +1,10 @@
 ---
 id: margaretha_vermeersch
 name: Margaretha Vermeersch
+surname: Vermeersch
 death:
   date: "1645"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

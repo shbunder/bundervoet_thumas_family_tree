@@ -1,9 +1,10 @@
 ---
 id: agatha_stekelorum
 name: Agatha Stekelorum
+surname: Stekelorum
 death:
   date: "1855"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: pieter_stekelorum

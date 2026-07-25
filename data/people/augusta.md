@@ -1,13 +1,14 @@
 ---
 id: augusta
 name: Augusta Vanstechelman
+surname: Vanstechelman
 birth:
   date: 1882-03-14
   place: Mariakerke
 death:
   date: 1922-10-04
   place: Mariakerke
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 father: petrusjacobus_v

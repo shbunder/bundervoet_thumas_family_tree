@@ -1,13 +1,14 @@
 ---
 id: petronilla_vk
 name: Petronilla Carolina Van Kerckhove
+surname: Van Kerckhove
 birth:
   date: 1712-03-14
   place: Kalken
 death:
   date: 1791-03-17
   place: Destelbergen
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

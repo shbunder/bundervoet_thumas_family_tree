@@ -1,13 +1,14 @@
 ---
 id: antoine_vanald
 name: Antoine Joseph Albert Vanalderweireldt
+surname: Vanalderweireldt
 birth:
   date: 1780-05-09
   place: Diksmuide
 death:
   date: 1808-07-21
   place: Diksmuide
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

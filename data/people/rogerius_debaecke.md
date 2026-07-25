@@ -1,11 +1,12 @@
 ---
 id: rogerius_debaecke
 name: Rogerius De Baecke
+surname: De Baecke
 birth:
   date: "1673"
 death:
   date: "1727"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: adrianus_debaecke

@@ -1,10 +1,11 @@
 ---
 id: joannes_vanmaele
 name: Joannes Van Maele
+surname: Van Maele
 birth:
   date: 1641-07-02
   place: Wingene
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: andreas_vanmaele

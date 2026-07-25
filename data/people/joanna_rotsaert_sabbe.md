@@ -1,11 +1,12 @@
 ---
 id: joanna_rotsaert_sabbe
 name: Joanna Rotsaert
+surname: Rotsaert
 birth:
   date: ~1630
 death:
   date: "1697"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

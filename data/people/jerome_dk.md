@@ -1,6 +1,7 @@
 ---
 id: jerome_dk
 name: Jerome Joseph Dekeyser
+surname: Dekeyser
 birth:
   date: 1897-06-14
   place: Oostende

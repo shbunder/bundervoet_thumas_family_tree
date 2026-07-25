@@ -1,11 +1,12 @@
 ---
 id: judoca_scherrens
 name: Judoca Scherrens
+surname: Scherrens
 birth:
   date: "1617"
 death:
   date: "1683"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

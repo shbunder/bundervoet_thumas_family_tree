@@ -1,10 +1,11 @@
 ---
 id: ludovicus_dutreeuw
 name: Ludovicus Emanuel Dutreeuw
+surname: Dutreeuw
 birth:
   date: 1781-11-09
   place: Diksmuide
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

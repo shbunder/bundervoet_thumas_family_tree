@@ -1,6 +1,7 @@
 ---
 id: sonja_dv
 name: Sonja Devriendt
+surname: Devriendt
 sex: f
 confidence: fam
 branch: Devriendt

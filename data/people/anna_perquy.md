@@ -1,10 +1,11 @@
 ---
 id: anna_perquy
 name: Anna Theresia Perquy
+surname: Perquy
 birth:
   date: 1806-07-09
   place: Westkerke
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_perquy

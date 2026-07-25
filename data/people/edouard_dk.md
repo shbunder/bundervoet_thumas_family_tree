@@ -1,6 +1,7 @@
 ---
 id: edouard_dk
 name: Édouard Dekeyser
+surname: Dekeyser
 birth:
   date: 1876-11-12
   place: Hamme (Oost-Vlaanderen)

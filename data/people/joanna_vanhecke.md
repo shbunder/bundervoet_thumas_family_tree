@@ -1,11 +1,12 @@
 ---
 id: joanna_vanhecke
 name: Joanna (Janneken) van Hecke
+surname: van Hecke
 birth:
   date: ~1610
 death:
   date: "1678"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 spouses:

@@ -1,11 +1,12 @@
 ---
 id: judoca_vandekeere
 name: Judoca Vande Keere
+surname: Vande Keere
 birth:
   date: "1698"
 death:
   date: "1771"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

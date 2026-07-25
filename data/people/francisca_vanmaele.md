@@ -1,13 +1,14 @@
 ---
 id: francisca_vanmaele
 name: Francisca Van Maele
+surname: Van Maele
 birth:
   date: 1710-11-30
   place: Beernem
 death:
   date: 1767-12-02
   place: Zedelgem (Loppem)
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: engelbertus_vanmaele

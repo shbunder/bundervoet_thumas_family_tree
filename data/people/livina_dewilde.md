@@ -1,11 +1,12 @@
 ---
 id: livina_dewilde
 name: Livina De Wilde
+surname: De Wilde
 sex: f
 death:
   date: "1750"
   place: Evergem
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 spouses:

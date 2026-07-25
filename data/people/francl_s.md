@@ -1,7 +1,8 @@
 ---
 id: francl_s
 name: Franciscus Leopoldus Smessaert
-confidence: doc
+surname: Smessaert
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

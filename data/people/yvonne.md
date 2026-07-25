@@ -1,10 +1,11 @@
 ---
 id: yvonne
 name: Yvonne Smessaert
+surname: Smessaert
 birth:
   date: 1914-10-11
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Devriendt
 line: devriendt
 father: georgius_s

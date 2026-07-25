@@ -1,13 +1,14 @@
 ---
 id: carolina_vh
 name: Carolina Van Hille
+surname: Van Hille
 birth:
   date: 1773-04-28
   place: Zevekote
 death:
   date: 1809-10-11
   place: Zevekote
-confidence: doc
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

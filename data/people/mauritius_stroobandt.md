@@ -1,13 +1,14 @@
 ---
 id: mauritius_stroobandt
 name: Mauritius Stroobandt
+surname: Stroobandt
 birth:
   date: ~1703
   place: Torhout
 death:
   date: 1783-01-17
   place: Oostkamp
-confidence: doc
+confidence: sup
 occupation: herbergier (innkeeper)
 branch: Bundervoet
 line: bostyn-cappaert

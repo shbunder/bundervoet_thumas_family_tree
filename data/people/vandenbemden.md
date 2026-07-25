@@ -1,13 +1,14 @@
 ---
 id: vandenbemden
 name: Joanna Vandenbemden
+surname: Vandenbemden
 birth:
   date: 1882-06-15
   place: Sint-Stevens-Woluwe
 death:
   date: 1948-04-29
   place: Kraainem
-confidence: doc
+confidence: sup
 occupation: naaister (seamstress)
 branch: Thumas
 line: thumas

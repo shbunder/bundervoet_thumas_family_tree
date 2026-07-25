@@ -1,13 +1,14 @@
 ---
 id: eduardus_p
 name: Eduardus Franciscus Paelinck
+surname: Paelinck
 birth:
   date: 1858-11-19
   place: Belsele
 death:
   date: 1912-08-28
   place: Sint-Niklaas
-confidence: doc
+confidence: sup
 occupation: leurder (itinerant pedlar)
 branch: Paelinck
 line: paelinck

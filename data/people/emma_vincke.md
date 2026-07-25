@@ -1,13 +1,14 @@
 ---
 id: emma_vincke
 name: Emma Celesta Vincke
+surname: Vincke
 birth:
   date: 1880-01-23
   place: Diksmuide
 death:
   date: 1974-10-06
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: lucien_vincke

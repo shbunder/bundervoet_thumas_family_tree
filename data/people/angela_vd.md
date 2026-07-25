@@ -1,7 +1,8 @@
 ---
 id: angela_vd
 name: Angela Vandillen
-confidence: doc
+surname: Vandillen
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

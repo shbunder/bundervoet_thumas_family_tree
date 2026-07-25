@@ -1,7 +1,8 @@
 ---
 id: declercq
 name: Mathildis Clothildis Declercq
-confidence: doc
+surname: Declercq
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

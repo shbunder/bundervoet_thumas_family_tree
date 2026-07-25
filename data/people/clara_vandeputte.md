@@ -1,7 +1,8 @@
 ---
 id: clara_vandeputte
 name: Clara Vande Putte
-confidence: doc
+surname: Vande Putte
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

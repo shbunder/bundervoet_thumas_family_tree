@@ -1,6 +1,7 @@
 ---
 id: ida_vermandel
 name: Ida Vermandel
+surname: Vermandel
 birth:
   date: "1825"
 death:

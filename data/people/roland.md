@@ -1,6 +1,7 @@
 ---
 id: roland
 name: Roland De Keyser
+surname: De Keyser
 birth:
   date: "1943"
   place: Tottenham

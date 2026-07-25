@@ -1,13 +1,14 @@
 ---
 id: antoine_t
 name: Antoine Thumas
+surname: Thumas
 birth:
   date: 1656-11-11
   place: Biez
 death:
   date: 1707-01-25
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 occupation: bailli (bailiff) van Piétrebais
 branch: Thumas
 line: thumas

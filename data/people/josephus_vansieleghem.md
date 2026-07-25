@@ -1,12 +1,13 @@
 ---
 id: josephus_vansieleghem
 name: Josephus Van Sieleghem
+surname: Van Sieleghem
 birth:
   date: 1638-01-26
   place: Lichtervelde
 death:
   date: 1692-05-14
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_vansieleghem

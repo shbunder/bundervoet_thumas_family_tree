@@ -1,6 +1,7 @@
 ---
 id: christiane
 name: Chris Janssens
+surname: Janssens
 birth:
   date: 1961-03-10
 confidence: fam

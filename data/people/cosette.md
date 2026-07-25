@@ -1,6 +1,7 @@
 ---
 id: cosette
 name: Cosette De Keyser
+surname: De Keyser
 birth:
   date: 1963-11-30
 confidence: fam

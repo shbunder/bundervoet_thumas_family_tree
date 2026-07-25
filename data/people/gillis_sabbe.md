@@ -1,11 +1,12 @@
 ---
 id: gillis_sabbe
 name: Gillis Sabbe
+surname: Sabbe
 birth:
   date: ~1440
 death:
   date: <1520
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

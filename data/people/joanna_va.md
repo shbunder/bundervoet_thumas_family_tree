@@ -1,13 +1,14 @@
 ---
 id: joanna_va
 name: Joanna Coleta Van Acker
+surname: Van Acker
 birth:
   date: 1775-01-16
   place: Lokeren
 death:
   date: 1821-07-12
   place: Lokeren
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

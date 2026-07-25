@@ -50,8 +50,15 @@ If you discover a source that is not registered, add it to `research/sources.jso
 first — a new site under `sites`, a tree or document under `pages` naming its site.
 The log tool refuses unregistered sources on purpose.
 
-Save the image for anything that looks like it breaks a wall: `docs/sources/`, and
-cite the local file. A URL behind a login is not reproducible for anyone else.
+Save the image for anything that looks like it breaks a wall. It goes in
+`data/artifacts/` as a file plus a record of the same name describing it — see any
+existing one for the shape, and note that `bytes` and `sha256` must match the file.
+The record's prose body is where the transcription goes.
+
+A URL behind a login is not reproducible for anyone else, which is the whole reason
+the artifact is kept: the citation has to survive without the session that found it.
+Say plainly in the record whether you read the act image or only an index page — the
+two are not the same evidence.
 
 ## What to return
 

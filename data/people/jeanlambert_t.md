@@ -1,13 +1,14 @@
 ---
 id: jeanlambert_t
 name: Jean Lambert Thumas
+surname: Thumas
 birth:
   date: 1701-09-26
   place: Grez-Doiceau
 death:
   date: 1776-03-03
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 occupation: marguillier & greffier (church warden / parish clerk)
 branch: Thumas
 line: thumas

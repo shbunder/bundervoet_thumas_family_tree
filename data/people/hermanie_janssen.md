@@ -1,13 +1,14 @@
 ---
 id: hermanie_janssen
 name: Hermanie Ludovica Janssen
+surname: Janssen
 birth:
   date: 1853-07-05
   place: Oostende
 death:
   date: 1926-11-13
   place: Oostende
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 father: josephus_janssen

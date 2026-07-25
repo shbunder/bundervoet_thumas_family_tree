@@ -1,12 +1,13 @@
 ---
 id: judocus_vanrenterghem
 name: Judocus Van Renterghem
+surname: Van Renterghem
 birth:
   date: ~1575
 death:
   date: 1641-02-13
   place: Oostkamp
-confidence: doc
+confidence: sup
 occupation: kerkmeester & dischmeester (churchwarden / poor-relief master)
 branch: Bundervoet
 line: bostyn-cappaert

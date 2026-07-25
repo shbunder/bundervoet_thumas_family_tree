@@ -1,11 +1,12 @@
 ---
 id: joannes_declerck
 name: Joannes De Clerck
+surname: De Clerck
 birth:
   date: "1696"
 death:
   date: "1727"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

@@ -1,13 +1,14 @@
 ---
 id: joanna_willaert
 name: Joanna Willaert
+surname: Willaert
 birth:
   date: 1631-09-14
   place: Torhout
 death:
   date: 1694-05-03
   place: Torhout
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: nicolas_willaert

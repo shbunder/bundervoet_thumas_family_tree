@@ -1,11 +1,12 @@
 ---
 id: petrus_degrande
 name: Petrus De Grande
+surname: De Grande
 birth:
   date: "1697"
 death:
   date: "1765"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: egidius_degrande

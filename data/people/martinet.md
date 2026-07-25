@@ -1,11 +1,12 @@
 ---
 id: martinet
 name: Maria Ludovica Martinet
+surname: Martinet
 birth:
   date: "1838"
 death:
   date: "1911"
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 spouses:

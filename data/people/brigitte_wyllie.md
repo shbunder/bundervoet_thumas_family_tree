@@ -1,13 +1,14 @@
 ---
 id: brigitte_wyllie
 name: Brigitte Josephine Joanna Wyllie
+surname: Wyllie
 birth:
   date: 1779-02-22
   place: Diksmuide
 death:
   date: 1824-11-08
   place: Diksmuide
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: van-iseghem
 spouses:

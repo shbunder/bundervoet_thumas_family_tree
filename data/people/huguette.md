@@ -1,6 +1,7 @@
 ---
 id: huguette
 name: Huguette Devriendt
+surname: Devriendt
 birth:
   date: 1943-02-17
   place: living

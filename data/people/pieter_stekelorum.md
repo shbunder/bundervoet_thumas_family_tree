@@ -1,6 +1,7 @@
 ---
 id: pieter_stekelorum
 name: Pieter Stekelorum
+surname: Stekelorum
 confidence: doc
 branch: Bundervoet
 line: bostyn-cappaert

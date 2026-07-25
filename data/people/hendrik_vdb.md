@@ -1,13 +1,14 @@
 ---
 id: hendrik_vdb
 name: Henricus Augustinus Vandenbemden
+surname: Vandenbemden
 birth:
   date: 1849-08-19
   place: Everberg
 death:
   date: 1889-08-12
   place: Sint-Stevens-Woluwe
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:

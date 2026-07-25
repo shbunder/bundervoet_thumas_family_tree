@@ -1,11 +1,12 @@
 ---
 id: maria_m_vandewalle
 name: Maria Magdalena Vandewalle
+surname: Vandewalle
 birth:
   date: "1674"
 death:
   date: <1727
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: carolus_vandewalle

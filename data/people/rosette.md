@@ -1,6 +1,7 @@
 ---
 id: rosette
 name: Rosette Van Iseghem
+surname: Van Iseghem
 confidence: fam
 branch: Bundervoet
 line: bundervoet

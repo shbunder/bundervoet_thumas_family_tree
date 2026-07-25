@@ -1,11 +1,12 @@
 ---
 id: anna_fr_degrande
 name: Anna Francisca De Grande
+surname: De Grande
 birth:
   date: "1765"
 death:
   date: "1821"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: michael_degrande

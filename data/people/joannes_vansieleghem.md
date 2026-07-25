@@ -1,7 +1,8 @@
 ---
 id: joannes_vansieleghem
 name: Joannes Van Sieleghem
-confidence: doc
+surname: Van Sieleghem
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

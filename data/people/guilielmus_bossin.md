@@ -1,11 +1,12 @@
 ---
 id: guilielmus_bossin
 name: Guilielmus Bossin
+surname: Bossin
 birth:
   date: "1824"
 death:
   date: "1888"
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:

@@ -1,13 +1,14 @@
 ---
 id: adrianus_p
 name: Adrianus Paelinck
+surname: Paelinck
 birth:
   date: 1690-01-09
   place: Destelbergen
 death:
   date: 1726-12-02
   place: Lochristi
-confidence: doc
+confidence: sup
 branch: Paelinck
 line: paelinck
 father: ludovicus_p

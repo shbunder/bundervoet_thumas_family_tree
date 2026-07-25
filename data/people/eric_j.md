@@ -1,6 +1,7 @@
 ---
 id: eric_j
 name: Eric Janssens
+surname: Janssens
 sex: m
 birth:
   raw: 2 Jul

@@ -1,7 +1,8 @@
 ---
 id: henricus_w
 name: Henricus Wagebaert
-confidence: doc
+surname: Wagebaert
+confidence: sup
 branch: Vanstechelman
 line: vanstechelman
 spouses:

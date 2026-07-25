@@ -1,9 +1,10 @@
 ---
 id: willem_sabbe_y
 name: Willem Sabbe
+surname: Sabbe
 birth:
   date: 1560..1569
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: willem_sabbe_o

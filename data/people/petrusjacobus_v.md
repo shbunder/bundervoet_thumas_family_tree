@@ -1,13 +1,14 @@
 ---
 id: petrusjacobus_v
 name: Petrus Jacobus Vanstechelman
+surname: Vanstechelman
 birth:
   date: 1854-02-28
   place: Mariakerke
 death:
   date: 1927-11-26
   place: Mariakerke
-confidence: doc
+confidence: sup
 occupation: metser (mason)
 branch: Vanstechelman
 line: vanstechelman

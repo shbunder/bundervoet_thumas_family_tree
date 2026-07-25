@@ -1,11 +1,12 @@
 ---
 id: clara_lampsins
 name: Clara Lampsins
+surname: Lampsins
 birth:
   date: "1605"
 death:
   date: "1683"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

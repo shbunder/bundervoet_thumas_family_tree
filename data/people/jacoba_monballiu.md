@@ -1,11 +1,12 @@
 ---
 id: jacoba_monballiu
 name: Jacoba Monballiu
+surname: Monballiu
 birth:
   date: "1651"
 death:
   date: "1689"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

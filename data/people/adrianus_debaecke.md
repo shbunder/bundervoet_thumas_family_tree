@@ -1,9 +1,10 @@
 ---
 id: adrianus_debaecke
 name: Adrianus De Baecke
+surname: De Baecke
 birth:
   date: "1630"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_debaecke

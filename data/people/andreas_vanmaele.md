@@ -1,9 +1,10 @@
 ---
 id: andreas_vanmaele
 name: Andreas Van Maele
+surname: Van Maele
 death:
   date: "1669"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

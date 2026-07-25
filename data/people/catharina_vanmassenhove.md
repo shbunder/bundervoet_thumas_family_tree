@@ -1,7 +1,8 @@
 ---
 id: catharina_vanmassenhove
 name: Catharina Van Massenhove
-confidence: doc
+surname: Van Massenhove
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

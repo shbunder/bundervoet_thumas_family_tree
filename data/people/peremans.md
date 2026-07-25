@@ -1,11 +1,12 @@
 ---
 id: peremans
 name: Joanna Catharina Jacoba Peremans
+surname: Peremans
 birth:
   date: "1824"
 death:
   date: "1907"
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:

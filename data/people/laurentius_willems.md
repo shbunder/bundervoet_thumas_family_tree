@@ -1,10 +1,11 @@
 ---
 id: laurentius_willems
 name: Laurentius Willems
+surname: Willems
 death:
   date: 1639-06-06
   place: Wingene
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

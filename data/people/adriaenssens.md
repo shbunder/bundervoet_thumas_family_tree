@@ -1,11 +1,12 @@
 ---
 id: adriaenssens
 name: Joanna Adriaenssens
+surname: Adriaenssens
 birth:
   date: "1761"
 death:
   date: "1833"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bundervoet
 spouses:

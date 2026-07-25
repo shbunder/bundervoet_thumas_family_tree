@@ -1,7 +1,8 @@
 ---
 id: petrus_devos
 name: Petrus Jacobus Franciscus Devos
-confidence: doc
+surname: Devos
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

@@ -1,11 +1,12 @@
 ---
 id: nicolas_willaert
 name: Nicolas Willaert
+surname: Willaert
 birth:
   date: ~1595
 death:
   date: "1659"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

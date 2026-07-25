@@ -1,13 +1,14 @@
 ---
 id: hubert_devriese
 name: Hubert De Vriese
+surname: De Vriese
 birth:
   date: 1665-05-09
   place: Tielt
 death:
   date: 1728-01-14
   place: Wingene
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: judocus_devriese

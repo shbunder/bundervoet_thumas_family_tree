@@ -1,11 +1,12 @@
 ---
 id: joanna_leenaert
 name: Joanna Leenaert
+surname: Leenaert
 birth:
   date: ~1631
 death:
   date: "1703"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 spouses:

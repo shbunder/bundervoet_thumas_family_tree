@@ -1,11 +1,12 @@
 ---
 id: catharina_willems
 name: Catharina Willems
+surname: Willems
 birth:
   date: "1619"
 death:
   date: "1666"
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: laurentius_willems

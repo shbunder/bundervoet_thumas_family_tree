@@ -1,10 +1,11 @@
 ---
 id: petrus_sabbe
 name: Petrus Sabbe
+surname: Sabbe
 death:
   date: 1652-12-31
   place: Oostkamp (Ruddervoorde)
-confidence: doc
+confidence: sup
 branch: Bundervoet
 line: bostyn-cappaert
 father: willem_sabbe_y

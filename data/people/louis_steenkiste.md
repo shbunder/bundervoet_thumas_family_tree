@@ -1,7 +1,8 @@
 ---
 id: louis_steenkiste
 name: Louis Steenkiste
-confidence: doc
+surname: Steenkiste
+confidence: sup
 branch: Devriendt
 line: devriendt
 spouses:

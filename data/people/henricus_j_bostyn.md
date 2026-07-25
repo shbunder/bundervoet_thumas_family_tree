@@ -1,10 +1,11 @@
 ---
 id: henricus_j_bostyn
 name: Henricus Josephus Bostyn
+surname: Bostyn
 birth:
   date: 1841-12-18
   place: Varsenare
-confidence: doc
+confidence: sup
 occupation: herbergier (innkeeper)
 branch: Bundervoet
 line: bostyn-cappaert
