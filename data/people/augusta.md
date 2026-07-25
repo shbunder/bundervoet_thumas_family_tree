@@ -44,8 +44,12 @@ both parents — which is what corroborates the parentage:
 - **Leontius Ivo Vanstechelman**, married at Oostende 20 August 1922 to Lucia Amelia Maene;
 - **Paula Mathilde Vanstechelman**, married at Oostende 11 May 1924 to Alberic Luciaan Delrue.
 
-None is in this tree. They are blood relatives of Renée and Léon under objective 2, and they
-are named here rather than grafted: these are index entries and no act has been read.
+All three now have records — [[henricus_e_v]], [[leontius_v]] and [[paula_v]] — at `sup`,
+citing the acts that name them. They were briefly left as a frontier on the grounds that no
+image had been read, which was the wrong test: adding a person a document names as somebody's
+child is transcription, not identification, and the rule about two independent identifiers
+guards the second thing. A civil act naming both parents is stronger evidence than the member
+trees several people here were added from.
 
 How they were found is worth recording: searching the mother's surname. Vanstechelman is
 common at Oostende, Wagebaert is not, so querying the rare maternal name isolates this one

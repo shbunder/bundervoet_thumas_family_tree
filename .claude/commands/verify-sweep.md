@@ -144,8 +144,14 @@ sha256 and `evidences:` list. An act read but not saved has to be read again.
 2. **Never upgrade to `doc` without having actually read the act or its image.** An index
    transcription is `sup`, however authoritative the archive.
 3. **Never invent a field.** If the act does not give an occupation or a day, it is absent.
-4. **A strong lead is not a link.** Record it in the prose as a named frontier with the
-   record that would settle it. Do not graft it.
+4. **A strong lead is not a link — but a named child is not a lead.** Keep the two apart.
+   *Identifying* someone — deciding a person in a record IS a person in the tree — needs two
+   independent identifiers and stays a frontier until it has them. *Transcribing* someone —
+   adding a person a document names as another's child, spouse or parent — is not that, and
+   should be done freely. **Be generous in adding people.** A record naming both parents is
+   better evidence than the member trees much of this tree was built on, and every person
+   added brings their own dates, spouses and frontiers with them. Add them at the confidence
+   the source earns, cite it, and say in the prose what has not been read.
 5. **A pass that verifies nothing and logs five honest misses is a successful pass.** Do not
    lower the bar to have something to report.
 6. **Assert your edits landed.** A bulk edit that inserts a citation after a `sources:` line

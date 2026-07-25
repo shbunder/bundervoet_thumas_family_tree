@@ -67,14 +67,12 @@
       "Read(//Users/shaunbundervoet/Documents/family_tree/.env.*)",
       "Write(//Users/shaunbundervoet/Documents/family_tree/.env)",
       "Write(//Users/shaunbundervoet/Documents/family_tree/.env.*)",
-      "Bash(git push:*)",
       "Bash(git reset --hard:*)",
       "Bash(git checkout -- :*)",
       "Bash(git restore:*)",
       "Bash(git clean:*)",
       "Bash(git filter-branch:*)",
-      "Bash(rm -rf:*)",
-      "Bash(sudo:*)"
+      "Bash(rm -rf:*)"
     ]
   }
 }
