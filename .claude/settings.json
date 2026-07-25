@@ -1,29 +1,49 @@
 {
   "permissions": {
+    "defaultMode": "acceptEdits",
     "allow": [
-      "Bash(uv run tools/build.py)",
-      "Bash(uv run tools/check_data.py)",
-      "Bash(uv run tools/check_data.py --skip-generated)",
-      "Bash(uv run tools/export_gedcom.py)",
-      "Bash(uv run tools/research.py:*)",
-      "Bash(uv run tools/harvest.py:*)",
-      "Bash(uv run tools/link.py:*)",
-      "Bash(uv run tools/identify.py:*)",
-      "Bash(uv run tools/evaluate.py:*)",
-      "Bash(uv run tools/verify_all.py:*)",
-      "Bash(uv run --group dev pytest:*)",
-      "Bash(uv run --group docs mkdocs build:*)",
+      "Bash(uv:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(python3:*)",
+
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
       "Bash(git show:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git remote:*)",
+
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(ls:*)",
       "Bash(wc:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(find:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(cut:*)",
+      "Bash(jq:*)",
+      "Bash(du:*)",
+      "Bash(diff:*)",
+      "Bash(file:*)",
+      "Bash(date:*)",
+      "Bash(echo:*)",
+      "Bash(printf:*)",
+      "Bash(mkdir:*)",
+      "Bash(sleep:*)",
+
       "Bash(curl -s http://127.0.0.1:9222/json/version)",
+
+      "WebSearch",
+      "WebFetch",
+
       "Read(//Users/shaunbundervoet/Documents/family_tree/**)",
       "Edit(//Users/shaunbundervoet/Documents/family_tree/data/**)",
       "Write(//Users/shaunbundervoet/Documents/family_tree/data/**)",
@@ -31,23 +51,30 @@
       "Write(//Users/shaunbundervoet/Documents/family_tree/docs/**)",
       "Edit(//Users/shaunbundervoet/Documents/family_tree/research/**)",
       "Write(//Users/shaunbundervoet/Documents/family_tree/research/**)",
-      "mcp__chrome__list_pages",
-      "mcp__chrome__select_page",
-      "mcp__chrome__new_page",
-      "mcp__chrome__navigate_page",
-      "mcp__chrome__take_snapshot",
-      "mcp__chrome__take_screenshot",
-      "mcp__chrome__evaluate_script",
-      "mcp__chrome__click",
-      "mcp__chrome__fill",
-      "mcp__chrome__fill_form",
-      "mcp__chrome__wait_for",
-      "mcp__chrome__press_key"
+
+      "mcp__chrome"
+    ],
+    "ask": [
+      "Edit(//Users/shaunbundervoet/Documents/family_tree/tools/**)",
+      "Write(//Users/shaunbundervoet/Documents/family_tree/tools/**)",
+      "Edit(//Users/shaunbundervoet/Documents/family_tree/.claude/**)",
+      "Write(//Users/shaunbundervoet/Documents/family_tree/.claude/**)",
+      "Edit(//Users/shaunbundervoet/Documents/family_tree/CLAUDE.md)",
+      "Write(//Users/shaunbundervoet/Documents/family_tree/CLAUDE.md)"
     ],
     "deny": [
       "Read(//Users/shaunbundervoet/Documents/family_tree/.env)",
       "Read(//Users/shaunbundervoet/Documents/family_tree/.env.*)",
-      "Bash(git push:*)"
+      "Write(//Users/shaunbundervoet/Documents/family_tree/.env)",
+      "Write(//Users/shaunbundervoet/Documents/family_tree/.env.*)",
+      "Bash(git push:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git checkout -- :*)",
+      "Bash(git restore:*)",
+      "Bash(git clean:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)"
     ]
   }
 }
