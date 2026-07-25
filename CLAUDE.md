@@ -1,12 +1,26 @@
 # Family Tree — project charter
 
 Genealogy of **Renée & Léon Bundervoet** (the two children at the root). Static site,
-no dependencies, one generation step (`node tools/build.mjs`). 302 people today; the
-target is thousands.
+no runtime dependencies, one generation step (`uv run tools/build.py`). ~300 people
+today; the target is thousands.
 
-This file is the standing brief. Read the objectives, then find work: open frontiers in
-[docs/research-log.md](docs/research-log.md), and `node tools/research.mjs report` for
-where the effort has already gone.
+The tools are Python, managed by [uv](https://docs.astral.sh/uv/) — `uv run` fetches
+the interpreter and the (empty) dependency set on first use, so a clone runs with
+nothing installed. `pyproject.toml` deliberately declares no dependencies: the
+frontmatter parser, the date grammar, the GEDCOM writer and the Open Archives client
+are all stdlib, because a dependency is a thing that has to still resolve in ten years
+for this tree to be readable.
+
+This file is the standing brief. Read the objectives, then find work:
+`uv run tools/research.py frontiers` for the ranked queue, and
+[docs/research-log.md](docs/research-log.md) for the narrative of how it got there.
+
+The **method** — why the rules below are what they are, what prior work they come from,
+and where the model is known to be weak — is written up as a documentation site in
+`docs/` (`uv run --group docs mkdocs serve`). Start at [docs/index.md](docs/index.md);
+[docs/prior-work.md](docs/prior-work.md) is the literature this borrows from, and
+[docs/method/scaling.md](docs/method/scaling.md) is the ordered plan for getting past a
+few thousand people. This file stays the operative brief; the docs explain it.
 
 ---
 
@@ -59,8 +73,12 @@ wrong province, the Gustaaf/Gustavus confusion.
 6. **Corrections are first-class.** When a past conclusion is wrong, retract it
    explicitly in the log with the reasoning (see §29), fix every record it touched.
 7. **Log every search, especially the ones that found nothing.** An unrecorded miss is
-   a dead end the next pass will walk again.
-8. `node tools/build.mjs` must be green before any commit.
+   a dead end the next pass will walk again. Every entry states its `basis` — *how* the
+   material was consulted — and every miss states its `scope`, what was actually
+   covered. "AGATHA is exhausted" was only ever true of AGATHA's name index; a miss
+   with no extent reads as "everywhere" and becomes a permanent wall that no later
+   improvement to the venue can re-open. `research.py stale` finds the ones that can.
+8. `uv run tools/build.py` must be green before any commit.
 
 ---
 
@@ -68,30 +86,98 @@ wrong province, the Gustaaf/Gustavus confusion.
 
 Each research pass:
 
-1. **Pick a frontier** — the highest-value unresolved question. Prefer: marriage acts
-   (they name *both* spouses' parents — the single richest record); rare surnames over
-   common ones; the wife's side when the husband's is blocked. Both breakthroughs in
-   this project came from those two moves.
-2. **Check what's been tried** — `node tools/research.mjs tried <person>` for the
-   history, `untried <person>` for what is left, `yield` for which venues pay off. Do
-   not re-walk a logged `miss` without a new angle; `blocked` means it was never
-   actually read, so it is worth retrying.
-3. **Search** — see [docs/searching.md](docs/searching.md) for the registry, the
-   logged-in browser, and what has worked before.
+1. **Pick a frontier** — `uv run tools/research.py frontiers` ranks them by
+   `value × P(resolvable) ÷ cost`, so it already prefers what this project learned the
+   hard way: rare surnames over common ones, and a person with a date and a commune
+   over one with only a name. Direct ancestors are a tier above collateral relatives,
+   because objective 1 outranks objective 2. `research.py acts` asks the better
+   question when the corpus is stocked — not *which frontier*, but *which single act
+   answers the most of them at once*, because a marriage act names six people.
+2. **Check what's been tried** — `uv run tools/research.py tried <person>` for the
+   history, `untried <person>` for what is left, `yield` for which venues and which
+   *methods* pay off, `stale` for misses a venue has since outgrown. Do not re-walk a
+   logged `miss` without a new angle; `blocked` means it was never actually read, so it
+   is worth retrying.
+3. **Harvest, then search.** Reach for `uv run tools/harvest.py` first: Open Archives
+   is free, unauthenticated and holds ~30M Belgian person-mentions, and a harvest is
+   kept, so it answers every future frontier too. `uv run tools/link.py <person>` then
+   joins the held acts to the tree and prints candidates. Only when that is exhausted
+   is it worth a logged-in browser session — see [docs/searching.md](docs/searching.md).
 4. **Verify** — actively try to *refute* the identity match before accepting it.
+   `link.py` scores in bits of rare-evidence agreement and marks anything short of two
+   independent identifiers NOT GRAFTABLE, but a score is a shortlist, never a verdict.
 5. **Record** —
    - the person files;
-   - `node tools/research.mjs log …` for **every** search, hit or miss — a hit must
+   - `uv run tools/evaluate.py label …` for **every** ruling, accepted or refuted. A
+     ruling is a labelled pair, and it is the only labelled data this project will ever
+     produce. Kept, they turn the thresholds in `match.py` from reasoned guesses into
+     measurements — `evaluate.py report` re-scores every past ruling with the current
+     code, so a change to scoring can be checked against judgements already made;
+   - `uv run tools/research.py log …` for **every** search, hit or miss — a hit must
      say what it `--found`, anything else must say `--why`;
    - a new site or page in `research/sources.json` if one was discovered, and the
      `yielded` line on any page that produced something;
    - a numbered section in `docs/research-log.md` for the narrative: what was found,
      what came back negative, what the next frontier is.
-6. **Build & commit** — `node tools/build.mjs`, then one commit per pass.
+6. **Build & commit** — `uv run tools/build.py`, then one commit per pass.
 
 **Log the misses.** They are the difference between a loop that converges and one that
 searches AGATHA for Édouard's parents every night forever. `docs/sources.md` is
 generated from the registry — edit `research/sources.json`, not the markdown.
+
+---
+
+## Searching at scale
+
+The search strategy that got this tree to three hundred people does not reach ten
+thousand, and the reason is structural rather than a matter of effort.
+
+**The unit of work was wrong.** A search is person-indexed — one query, one person —
+but a record is event-indexed. A marriage act is one document about six people, four
+of them parents. Searching per person pays the cost of finding that act once per
+person and throws away the other five. So acts are now **harvested and kept**
+(`tools/harvest.py`), read as events (`familytree/corpus.py`), and joined against
+every open frontier at once. This is family reconstitution, which historical
+demography has done since Louis Henry; the modern form is the IISG's LINKS project.
+
+**The work was O(people × venues), and both grow.** 147 open frontiers against 17
+registered venues is 2,500 cells, and every person added opens up to two more. A queue
+that ranks only by generation cannot converge — it has no way to prefer the frontier
+that will actually move. `research.py frontiers` now scores `value × P ÷ cost`, and
+`research.py acts` asks the better question: which single act answers the most open
+frontiers, which is maximum coverage and is solved greedily.
+
+**The queue only asks one of the two questions.** A frontier is someone whose parents are
+unknown, so every pass driven by it grows the tree *upwards* and no pass ever finds a
+sibling — 127 couples here have exactly one recorded child, and not one of them is a
+frontier. Objective 2 needs the downward question: `research.py children`, which children
+the held acts name for couples already recorded. It changes what to harvest, too. A
+surname harvest finds ancestors, because marriage and death acts are indexed under the
+person; a *birth* act is indexed under the child, so a sibling is reachable only through
+the commune or the parents. `harvest.py place <commune>` is the harvest objective 2
+needs, and the one that points at a whole parish.
+
+**Agreement was unweighted.** "Never match on name alone" is right, but it treats
+Janssens and Schalandrijn as the same evidence. `familytree/match.py` scores each
+agreement in **bits of surprise** — `log2(1/frequency)`, counted from the harvested
+corpus itself, which is where the u-probabilities of probabilistic record linkage come
+from. The two-independent-identifiers rule stays as a hard floor that no score can buy
+past, and a stated conflict still vetoes outright. Scoring ranks candidates; it never
+promotes one.
+
+**Nothing stopped the same person being entered twice.** Bostyn/Bostin,
+De Keyser/Dekeyser and Vanstechele/Vanstechelman are all already in this tree. A
+duplicate does not look broken — it looks like two people, and it splits a branch.
+`tools/identify.py` asks before a record is written, and the validator runs the same
+blocking index over the whole tree on every build.
+
+Open Archives is the venue this rests on: free, unauthenticated, ~30M Belgian
+person-mentions, with structured roles so a parent link is a field rather than prose.
+Coverage is uneven and that matters — Vlaams-Brabant has indexed civil acts, while
+Oostende and Evergem are overwhelmingly 20th-century memorial cards, which is exactly
+the layer AGATHA's publicity rules block. It does not replace the logged-in archives;
+it goes first, because it is cheap, reproducible for anyone else, and keeps what it
+finds.
 
 ---
 
@@ -157,7 +243,7 @@ the validator fails if it is stale, so old data cannot reach the site.
    CI so the artefact leaves git. The relation finder's two `<select>`s go the same way.
 2. **Sex is unknown for anyone childless** unless their record states it. Relations then
    read "sibling" rather than "sister". Fill `sex` in only from what a record says.
-   *(Currently all 302 are known — keep it that way as people are added.)*
+   *(Currently all 307 are known — keep it that way as people are added.)*
 
 ---
 
@@ -176,15 +262,33 @@ data/branches.json      surname branch -> its default source id
 data/lineages.json      the surname chains
 site/labels.json        presentation only: labels, Index headings, footer
 research/sources.json   the registry — SITES (venues) and PAGES (trees, documents)
-research/searches.jsonl the search log, append-only, with what each search found or why not
+research/searches.jsonl the search log, append-only: what each search found, or why not
+research/labels.jsonl   the gold standard: every verifier ruling, as a labelled pair
+research/harvest/       the corpus — acts pulled from Open Archives. GITIGNORED
+research/harvest/manifest.json  which queries were run — committed, so the corpus is reproducible
 docs/research-log.md    numbered passes: found / checked-and-negative / next
-docs/searching.md       the search strategy, the browser, what has worked
+docs/searching.md       the search strategy: harvest first, browser second
 docs/sources.md         readable source list — GENERATED from research/sources.json
-tools/lib/              the shared loader, frontmatter parser and date grammar
-tools/build.mjs         validates, then writes everything generated
-tools/check-data.mjs    the validator
-tools/research.mjs      log a search, ask what's been tried, see what yields
-tools/export-gedcom.mjs writes exports/family-tree.ged
+pyproject.toml          the uv project. No dependencies, on purpose
+tools/familytree/       the library every tool shares
+  people.py             the loader, the date grammar, the browser record
+  frontmatter.py        the parser for the records' strict YAML subset
+  sources.py            the registry and the search log, and what makes an entry valid
+  bundle.py             data/ + site/ -> dist/bundle.js
+  gedcom.py             the GEDCOM 7 writer and its round-trip self-check
+  corpus.py             harvested acts, read as EVENTS: roles, parent edges, frequencies
+  match.py              blocking keys, Flemish phonetics, rarity-weighted scoring
+  frontier.py           the ranked queue: value x P(resolvable) / cost
+  coverage.py           which act answers most frontiers; components; pedigree collapse
+tools/build.py          validates, then writes everything generated
+tools/check_data.py     the validator
+tools/research.py       the log, the registry, and every derived report
+tools/harvest.py        pull acts from Open Archives and keep them
+tools/link.py           join the held acts to a frontier — candidates, never conclusions
+tools/identify.py       is this person already in the tree? ask before writing a record
+tools/evaluate.py       the gold standard: label a ruling, then measure the scorer on it
+docs/                   the method, written up — mkdocs.yml renders it to dist/docs/
+tools/export_gedcom.py  writes exports/family-tree.ged
 dist/bundle.js          GENERATED — what the page loads
 exports/family-tree.ged GENERATED — GEDCOM 7
 assets/                 presentation only — no names, no dates
@@ -198,18 +302,38 @@ grep over the person records.
 ## Commands
 
 ```
-node tools/build.mjs           validate, then regenerate bundle.js + the GEDCOM
-node tools/check-data.mjs      validate only (must be green before commit)
-node tools/research.mjs frontiers        what to work on next, ranked
-node tools/research.mjs tried <person>    what was searched, found, and why it failed
-node tools/research.mjs untried <person> sites and pages not yet tried on them
-node tools/research.mjs yield            which sites and pages actually pay off
-node tools/research.mjs log …            record a search — hit or miss
-open index.html                the site, straight off disk
+uv run tools/build.py                      validate, then regenerate bundle.js + the GEDCOM
+uv run tools/check_data.py                 validate only (must be green before commit)
+
+uv run tools/research.py frontiers         what to work on next, ranked by value/cost
+uv run tools/research.py acts              which held act answers the most frontiers
+uv run tools/research.py tried <person>    what was searched, found, and why it failed
+uv run tools/research.py untried <person>  sites and pages not yet tried on them
+uv run tools/research.py yield             which sites, pages and methods pay off
+uv run tools/research.py stale             misses a venue has since outgrown
+uv run tools/research.py children          unrecorded children of couples we hold — objective 2
+uv run tools/research.py components        disconnected families — objective 3
+uv run tools/research.py collapse          where the tree folds back on itself
+uv run tools/research.py log …             record a search — hit or miss
+
+uv run tools/harvest.py frontiers          pull the acts the queue is asking for
+uv run tools/harvest.py surname Bundervoet every Belgian record for one surname
+uv run tools/harvest.py status             what is held, and which surnames are missing
+uv run tools/link.py <person>              what the held acts say about them
+uv run tools/identify.py "<name>" --birth … is this person already in the tree?
+
+uv run tools/evaluate.py label <person> <ref> --match|--nonmatch --why "…"
+uv run tools/evaluate.py report            precision, recall, and every disagreement
+uv run tools/evaluate.py sweep             what moving the graft thresholds would cost
+
+uv run --group dev pytest                  the tests
+uv run --group docs mkdocs serve           the method documentation, live
+
+open index.html                            the site, straight off disk
 ```
 
-**After changing anything in `data/`, run `node tools/build.mjs`.** It validates first
-and refuses to generate from a broken tree. `check-data.mjs` fails if the generated
+**After changing anything in `data/`, run `uv run tools/build.py`.** It validates first
+and refuses to generate from a broken tree. `check_data.py` fails if the generated
 files are stale, so the "green before commit" rule already covers this.
 
 `exports/family-tree.ged` is the tree in **GEDCOM 7**, the open format every genealogy

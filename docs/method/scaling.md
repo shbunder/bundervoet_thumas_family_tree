@@ -1,0 +1,145 @@
+# Scaling to Flanders
+
+The stated ambition is the whole region: everyone who lived in Flanders, as far back as
+the registers reach. This page is the honest engineering assessment of the distance
+between here and there, in the order the constraints actually bind.
+
+Current state: **~307 people, ~3,000 acts.** Target: order **10⁷ person-records**.
+
+---
+
+## 1. Ingestion — the binding constraint
+
+Harvesting currently fetches one act per API call at ~3 requests/second. Belgium is on
+the order of 8 million acts: **roughly a month of continuous fetching**, against a free
+service run by other people. Possible, but the wrong tool and a poor guest.
+
+**The fix already exists at the venue.** Open Archives publishes:
+
+- **bulk data dumps** in the A2A model — N-Triples (linked data), XML, and CSV;
+- an **OAI-PMH provider** for incremental harvesting.
+
+So `harvest.py` should become three phases: *bulk download → local normalise → OAI-PMH
+delta*, with `records/show` retained only for gap-filling. This is the single
+highest-leverage change available, and it fixes something else for free — the rarity
+counts stop depending on which surnames happened to be harvested, because the whole
+population is present.
+
+## 2. Storage — two tiers, not one
+
+One Markdown file per person is right for people who have been *reasoned about*, and
+impossible for millions. The split is not a compromise; it is the correct model, and it
+makes an existing rule physical:
+
+| Tier | Holds | Scale | Where |
+|---|---|---|---|
+| **Conclusions** | Verified identities, citations, prose reasoning | 10³–10⁵ | `data/people/*.md`, in git |
+| **Corpus** | Acts, mentions, scored candidate links, clusters | 10⁷+ | Columnar store (DuckDB/Parquet), rebuildable, gitignored |
+
+The invariant that keeps this honest:
+
+> A link in the corpus is a **hypothesis with a score**.
+> A link in a person file is a **decision with a citation**.
+
+`corpus.py` already says "the corpus makes no claims"; this makes it structural. Both
+BALSAC and LINKS converged on exactly this separation — with linkage as a computed,
+re-runnable artefact rather than hand-asserted edges — and both arrived there at around
+500,000 records, not 5 million.
+
+## 3. Linkage — calibrate, then delegate
+
+Order matters here. Adding scale to an uncalibrated scorer produces more wrong links
+faster.
+
+1. **Accumulate labels** ([verification](verification.md)) until the thresholds can be
+   measured rather than argued.
+2. **Estimate *m*-probabilities** by EM, closing the
+   [known gap](linkage.md#known-gap-the-m-side).
+3. **Delegate the scoring engine** to [Splink](https://github.com/moj-analytical-services/splink)
+   if and when a single-process Python loop stops being enough — it does full
+   Fellegi–Sunter on a DuckDB backend at 100M+ records.
+
+What must survive that migration is the part Splink does not have: the
+**two-independent-classes floor** and the **vetoes**. A probability threshold alone will
+graft on a name.
+
+## 4. Clustering and cluster-level validation
+
+At scale, links form connected components, and that is where the errors surface: a
+cluster with two different birth dates, two mothers, or a lifespan of 130 years is
+self-evidently wrong even when every individual pairwise link looked plausible.
+
+Connected components plus cluster invariants is the scale version of `check_data.py`, and
+it is how LINKS catches its own mistakes. `research.py components` is the seed of this.
+
+## 5. A historical gazetteer
+
+Place is the class that does most of the rejecting, which means a normalisation failure
+silently kills **good** links. String comparison on place names cannot handle:
+
+- the **1977 fusion of Belgian communes** — a parish and its post-fusion commune are
+  different names for overlapping ground;
+- **French/Dutch parallel names** — Ostende/Oostende, Gand/Gent;
+- **parish ≠ commune**, which is the normal case before 1796.
+
+Needed: a commune table with NIS/INS codes, validity intervals, and merge parentage.
+Wikidata plus the NIS code lists covers most of it.
+
+## 6. Additional evidence, in value order
+
+**Population registers (bevolkingsregisters)** are the strongest linkage evidence that
+exists: a whole household, co-resident, with stated relationships *and* birth dates *and*
+migration in and out. The [Antwerp COR\* database](../prior-work.md#the-antwerp-cor-database-flanders)
+is built on them for exactly this reason. Currently out of scope in the harvest, and the
+first thing to add.
+
+**Witness networks.** Already extracted (4,161 edges); not yet used as a linkage signal.
+Godparents and marriage witnesses in a Flemish commune are overwhelmingly kin, and *who
+recurs* across a family's acts is evidence no name comparison can reach. The natural
+weighting is the one already in use: a witness appearing in two of a family's acts is
+informative, one appearing in two hundred is the registrar.
+
+**The necronym rule.** Flemish families reused a dead infant's forename for the next
+child. Without an explicit rule for it, a linker either merges the two siblings or
+rejects both. It needs to be a named case, not an accident of thresholds.
+
+## 7. Sampling — how to have Flanders before having all of it
+
+COR\*'s design is the most useful idea in the literature for this: take **every surname
+beginning `COR`, plus everyone who shared a household with them.** That preserves kin and
+household structure *inside* the sample, which a geographic or chronological slice
+destroys.
+
+This project's third objective — *connect all Bundervoets* — is the same manoeuvre,
+arrived at independently. Generalising it into a declared, documented sampling frame is
+what would turn "a large family tree" into "a research dataset with known coverage".
+
+## 8. Privacy becomes a hard constraint
+
+At 307 people you know everyone. At regional scale the corpus will contain living people,
+and this stops being a convention:
+
+- Belgian civil registration is public on a schedule — **deaths after 50 years, marriages
+  after 75, births after 100**.
+- GDPR applies to the living, including in a published static site and in a Git history,
+  which does not forget.
+
+This belongs in the validator as a rule that fails the build, not in a document that asks
+people to be careful.
+
+---
+
+## Summary of the order
+
+1. Bulk ingestion (unblocks everything)
+2. Two-tier storage
+3. Labels → calibration → *m* estimation
+4. Clustering + cluster validation
+5. Gazetteer
+6. Population registers, then witness networks
+7. Declared sampling frame
+8. Privacy enforcement
+
+Transcription of unindexed images ([LLM HTR](../prior-work.md#4-machine-reading-of-archival-documents))
+is deliberately **last**. The indexed material is nowhere near exhausted, and machine
+transcription is only worth automating once the linkage that consumes it can be trusted.

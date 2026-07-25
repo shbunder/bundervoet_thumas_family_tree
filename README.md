@@ -1,11 +1,30 @@
 # Family Tree of Renée & Léon Bundervoet
 
 The family history of Renée and Léon Bundervoet — Bundervoet–De Keyser of the Flemish
-coast and Thumas–Janssens of the Brussels edge, meeting in Leuven. 302 people; the
+coast and Thumas–Janssens of the Brussels edge, meeting in Leuven. 307 people; the
 deepest documented roots reach the mid-1400s.
 
 What the project is trying to achieve, and the rules research follows, are in
-[CLAUDE.md](CLAUDE.md).
+[CLAUDE.md](CLAUDE.md). **The method — why those rules exist, the prior work it builds
+on, and the plan for scaling past a few thousand people — is documented in
+[`docs/`](docs/index.md)**, rendered with `uv run --group docs mkdocs serve`:
+
+| | |
+|---|---|
+| [Overview](docs/index.md) | The problem, and the three commitments the design rests on |
+| [Prior work](docs/prior-work.md) | BALSAC, LINKS, the Antwerp COR\* database, Fellegi–Sunter, Splink, LLM transcription — what is borrowed and from whom |
+| [The research loop](docs/method/overview.md) | One pass, and the four agents that run it |
+| [Rules of evidence](docs/method/evidence.md) | Two independent identifiers, confidence codes, what the validator enforces |
+| [The corpus](docs/method/corpus.md) | Acts read as events rather than as people |
+| [Record linkage](docs/method/linkage.md) | Blocking, Flemish phonetics, rarity in bits, the vetoes |
+| [Verification](docs/method/verification.md) | Adversarial refutation, and the gold standard it produces |
+| [Scaling to Flanders](docs/method/scaling.md) | The ordered plan, and what gives way first |
+| [Reproducing this](docs/reproducing.md) | Running it, and adapting it to another family or region |
+
+This repository is intended to be usable as a research artefact:
+[CONTRIBUTING.md](CONTRIBUTING.md) states the bar for adding a person, and
+[CITATION.cff](CITATION.cff) has the citation. Code is MIT; data and documentation are
+CC BY 4.0 ([LICENSE-DATA](LICENSE-DATA)).
 
 **Published at** <https://shbunder.github.io/bundervoet_thumas_family_tree/>
 
@@ -45,21 +64,34 @@ assets/                        how it looks and behaves — no names, no dates
   js/main.js                   wires it together
 research/                      the search state
   sources.json                 sites we can search, and the pages inside them
-  searches.jsonl               what was searched, and how it went
+  searches.jsonl               what was searched, how, and how it went
+  harvest/                     acts pulled from Open Archives — gitignored, rebuildable
 dist/bundle.js                 GENERATED — what the browser actually loads
 exports/family-tree.ged        GENERATED — the tree in GEDCOM 7
 data/artifacts/                saved primary documents + a record for each
 docs/research-log.md           what's documented, what's inferred, what to pull next
-tools/lib/                     shared loader, frontmatter parser, date grammar
-tools/build.mjs                validates, then writes the generated files
+pyproject.toml                 the uv project — no dependencies, on purpose
+tools/familytree/              the library: records, dates, sources, corpus, matching
+tools/build.py                 validates, then writes the generated files
+tools/harvest.py               pulls acts from Open Archives and keeps them
+tools/link.py                  joins held acts to a person — candidates, never facts
+tools/identify.py              is this person already in the tree?
 ```
 
-No dependencies, and nothing is compiled — the files are served exactly as they are.
-There is one generation step, `node tools/build.mjs`, which concatenates `data/` into
-`dist/bundle.js` and refreshes the GEDCOM export. The page reads the bundle so it makes
-one request instead of one per person, which is what lets the tree grow past a few
-hundred people. Both generated files are committed, so a clone still opens off disk and
-GitHub Pages needs nothing but the repo.
+Nothing is compiled and the site has no dependencies — the files are served exactly as
+they are. There is one generation step, `uv run tools/build.py`, which turns `data/`
+into `dist/bundle.js` and refreshes the GEDCOM export. The page reads the bundle so it
+makes one request instead of one per person, which is what lets the tree grow past a
+few hundred people. Both generated files are committed, so a clone still opens off disk
+and GitHub Pages needs nothing but the repo.
+
+The tools are Python, run through [uv](https://docs.astral.sh/uv/), which fetches the
+interpreter on first use — so `uv run tools/build.py` works in a fresh clone with
+nothing installed. `pyproject.toml` declares no dependencies and that is deliberate:
+the frontmatter parser, the date grammar, the GEDCOM writer and the Open Archives
+client are all standard library, because a dependency is something that has to still
+resolve in ten years for this tree to stay readable. `uv run --group dev pytest` runs
+the tests.
 
 ## A person file
 
@@ -179,7 +211,7 @@ GEDCOM 7 rather than the older 5.5.1 because it is UTF-8 throughout (these recor
 full of `é` and `ë`) and has no line-length limit, so the long research notes survive
 whole instead of being chopped into continuations.
 
-It is generated — edit `data/people/` and re-run `node tools/export-gedcom.mjs`.
+It is generated — edit `data/people/` and re-run `uv run tools/export_gedcom.py`.
 
 The exporter will not write a file that does not read back as the same tree: it
 reparses its own output, rebuilds every parent and marriage link from that alone, and
@@ -193,7 +225,7 @@ GitHub Pages serves these files with `cache-control: max-age=600`, so a browser 
 has already opened the page can show the old version for up to ten minutes — long
 enough to look like a change didn't work.
 
-Every stylesheet and script is referenced with a `?v=` stamp, and `node tools/build.mjs`
+Every stylesheet and script is referenced with a `?v=` stamp, and `uv run tools/build.py`
 sets it to a hash of the bytes it just generated. It changes when the served files
 change and not otherwise, so there is nothing to remember and nothing to bump by hand.
 
