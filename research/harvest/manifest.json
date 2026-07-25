@@ -49,6 +49,18 @@
       "acts": 396
     },
     {
+      "id": "caeckaert",
+      "query": {
+        "name": "Caeckaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 162,
+      "mentions": 162,
+      "complete": true,
+      "acts": 162
+    },
+    {
       "id": "cappaert",
       "query": {
         "name": "Cappaert",
@@ -383,6 +395,18 @@
       "mentions": 407,
       "complete": true,
       "acts": 407
+    },
+    {
+      "id": "stockman",
+      "query": {
+        "name": "Stockman",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 1850,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "stroobandt",

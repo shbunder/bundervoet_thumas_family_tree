@@ -53,3 +53,5 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 14 | 2026-07-26 | petrus_sabbe | — | **NEW SOURCE** | Full-text reaches the Oostkamp block via **staten van goed** (Belgium Court Records 1639-1795) — estate inventories naming spouse + every child with ages. | 043ef34 |
 | 14 | 2026-07-26 | petrus_wittenheyns | — | LEAD | Only full-text hit: a 1657 Bruges notarial deed naming 'Lieuen wittenheyns haer broeder'. Right region, wrong century. Not grafted. | 043ef34 |
 | 14 | 2026-07-26 | — (method) | — | — | A thin surname result ≠ thin coverage. Wittenheyns is rare; 'Sabbe Oostkamp' returns thousands. Search surname + commune. | 043ef34 |
+| 15 | 2026-07-26 | petrus_sabbe | — | NOT FOUND | Could not pinpoint his 1652 staat van goed: full-text ORs multi-word queries (101k hits) and its year/collection filters resist scripting. A tool limit, not a statement about the document. | d52ec9d |
+| 15 | 2026-07-26 | — (method) | — | — | Full-text is a **discovery tool, not a lookup**. It proves a family is present in a body of records; it won't hand you one person's act. Budget for hand-filtering. | d52ec9d |
