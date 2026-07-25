@@ -2,8 +2,8 @@
 id: bundervoet-fulltext-flanders-fiefs
 file: bundervoet-fulltext-flanders-fiefs.png
 media: image/png
-bytes: 614392
-sha256: 673de2b47022f80880bf478d22c266702dcfbdea2e6115c81d5feb9505916dde
+bytes: 611675
+sha256: 814cb865fa4a4092456e26b200aea476cb903f8c39b361bf164669897d46e78c
 title: FamilySearch full-text — "Bundervoet" across unindexed Flemish manuscripts, 1463 onwards
 kind: index-page
 event: other
@@ -53,3 +53,9 @@ registration was the missing thing, not the willingness to look.
 transcriptions someone else made. This searches the manuscript. It is the only route to a
 person who never appears in a parish register — and feudal and notarial records are where
 property, and therefore descent, was actually written down.
+
+RECAPTURED (July 2026). The first capture of this page was taken with a FamilySearch
+promotional modal open across the middle of it, which hid the collection titles and cut
+the fief lines in half — an artifact that recorded the search rather than the evidence.
+Retaken with the modal dismissed: all three collections, all four fief entries and the
+year spans are now legible. The checksum above is the second capture.
