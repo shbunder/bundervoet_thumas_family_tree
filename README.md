@@ -55,7 +55,7 @@ tools/build.mjs                validates, then writes the generated files
 
 No dependencies, and nothing is compiled — the files are served exactly as they are.
 There is one generation step, `node tools/build.mjs`, which concatenates `data/` into
-`data/bundle.js` and refreshes the GEDCOM export. The page reads the bundle so it makes
+`dist/bundle.js` and refreshes the GEDCOM export. The page reads the bundle so it makes
 one request instead of one per person, which is what lets the tree grow past a few
 hundred people. Both generated files are committed, so a clone still opens off disk and
 GitHub Pages needs nothing but the repo.
@@ -159,7 +159,7 @@ relatives** (related, but off that line) and **Others** (married in, or not yet
 connected). Those three are worked out from the links, so adding someone to the data
 is all it takes for them to appear — there is no second list to keep in step.
 
-`data/groups.js` no longer decides who appears, only what the sub-headings are called:
+`site/labels.json` no longer decides who appears, only what the sub-headings are called:
 "Bostyn & Cappaert (Marcel's mother)" reads better than the bare branch name. Anyone it
 doesn't mention is filed under their `branch`, which is why nobody can go missing.
 
@@ -199,7 +199,7 @@ change and not otherwise, so there is nothing to remember and nothing to bump by
 ## Why the generated bundle is `.js` and not `.json`
 
 So that opening the HTML from disk works. Browsers block `fetch()` and ES modules on
-`file://` URLs, but they still load ordinary `<script>` tags — so `data/bundle.js` is a
+`file://` URLs, but they still load ordinary `<script>` tags — so `dist/bundle.js` is a
 script that registers itself with `FamilyTree.person({…})` rather than JSON that has to
 be fetched. That one constraint is why the whole site works by double-clicking a file
 with no server and no network.
@@ -209,9 +209,10 @@ what the build step is for: it turns them into the bundle. Keeping the authored 
 and the delivered format separate is what lets the records be pleasant to write and
 review in git while the page still loads in one request.
 
-The remaining config files (`people.js`, `meta.js`, `branches.js`, `lineages.js`,
-`groups.js`) stay `.js` because they are small, rarely edited, and go into the bundle
-verbatim.
+Nothing else is JavaScript. The person records are Markdown and the config is JSON,
+so `data/` can be read by any tool — `jq`, grep, another language — without running
+anything. Only the generated bundle is code, and only because a browser opening a
+`file://` page has no other way to load it.
 
 ## A note on `archive/`
 

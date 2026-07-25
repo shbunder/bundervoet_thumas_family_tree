@@ -31,8 +31,14 @@ date grammar are in [README.md](../../README.md); the invariants are in
 - **Ids are stable.** Never rename one.
 - Plain text — `é` and `&`, not entities or `\u` escapes.
 
-New person? Add the id to `data/people.js` too. That is all — the Index groups
-itself from the links.
+- **Cite by id, not by prose.** `sources` is a list of ids from
+  `research/sources.json` — `tree-isavdw`, `S1`. Never describe a source in the
+  record; the registry describes it once. Register anything new there first.
+- **`line`** names which Index heading they sit under, keyed to `site/labels.json`.
+
+New person? Creating the file is the whole job — the roster is the directory
+listing and the Index groups itself from the links, so there is nothing to register
+anywhere.
 
 ## Recording the evidence
 

@@ -137,8 +137,8 @@ three categories are derived from the links, so a new person appears without bei
 to any list. `meta.roots` takes a list for the forest case (objective 3); with one root
 it is the ordinary tree.
 
-The page loads `data/bundle.js` — one request for the whole tree, whatever it grows to.
-The files in `data/` stay the source of truth; the bundle is generated from them, and
+The page loads `dist/bundle.js` — one request for the whole tree, whatever it grows to.
+The files in `data/` and `site/` stay the source of truth; the bundle is generated, and
 the validator fails if it is stale, so old data cannot reach the site.
 
 **Known limits of the current model** — the next structural work:
@@ -155,46 +155,37 @@ the validator fails if it is stale, so old data cannot reach the site.
 
 ## Layout
 
+Three things, kept apart because they change for different reasons and different
+rules apply to each. `data/` is the only place a name or a date may appear;
+`site/` is wording the page shows and cannot change what the tree claims;
+`assets/` contains neither.
+
 ```
 data/people/<id>.md     source of truth: strict frontmatter + prose body
-data/groups.js          Index tab headings — keyed, no membership lists
-data/lineages.js        the surname chains
-data/branches.js        default citation per branch
-data/meta.js            root/roots, confidence labels, footer
+data/meta.json          roots, confidence codes
+data/branches.json      surname branch -> its default source id
+data/lineages.json      the surname chains
+site/labels.json        presentation only: labels, Index headings, footer
+research/sources.json   the registry — SITES (venues) and PAGES (trees, documents)
+research/searches.jsonl the search log, append-only, with what each search found or why not
 docs/research-log.md    numbered passes: found / checked-and-negative / next
 docs/searching.md       the search strategy, the browser, what has worked
 docs/sources.md         readable source list — GENERATED from research/sources.json
 docs/sources/           saved act images and scans
-research/sources.json   the registry — SITES (venues) and PAGES (trees, documents)
-research/searches.jsonl the search log, append-only, with what each search found or why not
-tools/research.mjs      log a search, ask what's been tried, see what yields, write the docs
 tools/lib/              the shared loader, frontmatter parser and date grammar
-tools/build.mjs         validates, then writes the generated files
+tools/build.mjs         validates, then writes everything generated
 tools/check-data.mjs    the validator
+tools/research.mjs      log a search, ask what's been tried, see what yields
 tools/export-gedcom.mjs writes exports/family-tree.ged
-data/bundle.js          all of data/ in one file — generated, what the page loads
-exports/family-tree.ged GEDCOM 7 — generated, never edited by hand
+dist/bundle.js          GENERATED — what the page loads
+exports/family-tree.ged GENERATED — GEDCOM 7
 assets/                 presentation only — no names, no dates
 archive/                superseded drafts, not part of the site
 ```
 
-## Running a pass
-
-`/research-pass [person]` runs the whole loop through four subagents in `.claude/agents/`:
-
-| | |
-|---|---|
-| **strategist** | picks the frontier and the route — read-only |
-| **searcher** | runs the searches, logs every one — returns candidates, not conclusions |
-| **verifier** | tries to *refute* each candidate; defaults to NOT PROVEN |
-| **recorder** | writes the records, builds, commits — makes no judgements |
-
-They are separate so that no agent both finds a match and decides it is true. That
-separation is the main defence against the failure mode this project is built around.
-
-`node tools/research.mjs frontiers` derives the queue from the records each time it is
-asked, so it cannot go stale and an interrupted run resumes by recomputing rather than
-by remembering.
+Nothing in `data/` is executable. It is JSON and Markdown, readable by any tool
+without a JavaScript engine — `jq '.branches' data/branches.json` works, and so does
+grep over the person records.
 
 ## Commands
 
