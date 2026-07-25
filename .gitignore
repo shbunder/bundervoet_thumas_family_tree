@@ -8,6 +8,14 @@
 *~
 .vscode/
 
+# Anything secret. Nothing in this project needs credentials — archive logins live
+# in the browser profile (see docs/searching.md), not on disk — but if a .env ever
+# appears, it must not be the commit that teaches us why this line matters.
+.env
+.env.*
+*.pem
+*.key
+
 # scratch screenshot-harness artifacts (not part of the project)
 __mt_host.html
 __shot.html
