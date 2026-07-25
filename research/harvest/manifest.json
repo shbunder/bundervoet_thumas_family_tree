@@ -313,6 +313,18 @@
       "acts": 0
     },
     {
+      "id": "lamsens",
+      "query": {
+        "name": "Lamsens",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 440,
+      "mentions": 440,
+      "complete": true,
+      "acts": 440
+    },
+    {
       "id": "maertens",
       "query": {
         "name": "Maertens",
@@ -335,6 +347,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "peperstraete",
+      "query": {
+        "name": "Peperstraete",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 452,
+      "mentions": 452,
+      "complete": true,
+      "acts": 451
     },
     {
       "id": "perquy",
@@ -407,6 +431,18 @@
       "mentions": 14,
       "complete": true,
       "acts": 14
+    },
+    {
+      "id": "senesael",
+      "query": {
+        "name": "Senesael",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 539,
+      "mentions": 539,
+      "complete": true,
+      "acts": 539
     },
     {
       "id": "smessaert",
@@ -527,6 +563,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vancraenenbroeck",
+      "query": {
+        "name": "Van Craenenbroeck",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2149,
+      "mentions": 600,
+      "complete": false,
+      "acts": 599
     },
     {
       "id": "vandenbemden",

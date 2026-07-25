@@ -8,7 +8,7 @@ birth:
 death:
   date: 1928-12-31
   place: Sint-Niklaas
-confidence: sup
+confidence: doc
 occupation: huishoudster (housekeeper)
 branch: Paelinck
 line: paelinck
@@ -31,3 +31,6 @@ act of 31 October 1901, alongside [[eduardus_p]].
 
 CONFIRMED BY A CIVIL RECORD (July 2026): named as the mother on her daughter's Sint-Niklaas
 birth registration of 31 October 1901 ([[S16]]), alongside [[eduardus_p]].
+
+REGISTER PAGE READ (July 2026): named in her daughter's 1901 Sint-Niklaas birth act as
+*Maria Magdalena Van Bogaert*, **huishoudster** — an occupation this record did not carry.

@@ -60,3 +60,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 17 | 2026-07-26 | — (artifact) | — | — | Retook the full-text artifact: the first capture had a promo modal over the results. | 067bf0b |
 | 17 | 2026-07-26 | petrus_bundervoet1560 | — | **CORRECTION** | Read the actual page. Snippets had merged two surnames: 'Meirelbeke 1587' is VAN DEN BUNDERE, not Bundervoet. Real entries: Saint-Pierre-Alost 1687-1701. Two dates also wrong. | 067bf0b |
 | 17 | 2026-07-26 | — (method) | — | — | **Artifacts should be the document, not the index page about it.** A snippet merges adjacent entries; the page does not. | 067bf0b |
+| 18 | 2026-07-26 | leonie_p | CORROBORATED | **DOCUMENTED** | Register page read: Sint-Niklaas 1901 act nr. 997, image 268/337. | aa3b302 |
+| 18 | 2026-07-26 | eduardus_p | — | **DOCUMENTED** | Named as father *geboortig te Belsele* — birthplace independently confirmed. | aa3b302 |
+| 18 | 2026-07-26 | magdalena_vb | — | **DOCUMENTED** | Named as mother, *huishoudster* — occupation new. | aa3b302 |

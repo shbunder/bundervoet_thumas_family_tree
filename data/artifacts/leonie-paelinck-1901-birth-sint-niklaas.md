@@ -46,3 +46,10 @@ parents attached. The venue ladder exists because of this act.
 rather than through an aggregator, but it is a transcription and not the register page. The
 record page offers *Oorspronkelijk document bekijken*, so the image is reachable and reading
 it would make these three `doc`. That is the next thing to do on this line.
+
+SUPERSEDED (July 2026) by [[leonie-paelinck-1901-birth-register]], which is the register page
+rather than FamilySearch's index card for it. Kept because it honestly records how the act was
+found — the index is what surfaced it after AGATHA had nothing — but the act itself is the
+evidence, and it carries three things this card does not: the father's birthplace, the
+mother's occupation, and the officiating schepen.
+

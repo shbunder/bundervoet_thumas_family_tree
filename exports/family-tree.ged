@@ -1314,8 +1314,14 @@
 2 CONT CONFIRMED BY A CIVIL RECORD (July 2026): named as the father on his daughter's Sint-Niklaas
 2 CONT birth registration of 31 October 1901 ([[S16]]), alongside [[magdalena_vb]]. Found on
 2 CONT FamilySearch after AGATHA had come back empty for the same act.
+2 CONT
+2 CONT REGISTER PAGE READ (July 2026), and it corroborates him twice over. In his daughter's act
+2 CONT of 31 October 1901 he appears not only as the father but as *geboortig te Belsele* — born at
+2 CONT Belsele — which is the birthplace this record already held from the stefpaelinck tree, said
+2 CONT back independently by the man himself in front of the registrar. Name and birthplace agreeing
+2 CONT is what makes this an identification rather than a name match.
 1 SOUR @S29@
-2 QUAY 2
+2 QUAY 3
 0 @I84@ INDI
 1 REFN eduardus_vi
 2 TYPE project-id
@@ -3426,8 +3432,13 @@
 2 CONT The correction to make here is not to the record but to how it was searched. AGATHA holds
 2 CONT eight Paelinck entries for Sint-Niklaas and no births, and that was written up as though the
 2 CONT act did not exist. It exists; one archive did not have it.
+2 CONT
+2 CONT REGISTER PAGE READ (July 2026). Not the index card this time but the act itself —
+2 CONT Sint-Niklaas births 1901, image 268, act nr. 997 ([[leonie-paelinck-1901-birth-register]]).
+2 CONT Her names are written out at the close of the act as *Philomena Leonia*, with her father and
+2 CONT mother named in the body. Confidence raised to `doc` on that reading.
 1 SOUR @S29@
-2 QUAY 2
+2 QUAY 3
 0 @I197@ INDI
 1 REFN livina_dewilde
 2 TYPE project-id
@@ -3741,8 +3752,11 @@
 2 CONT
 2 CONT CONFIRMED BY A CIVIL RECORD (July 2026): named as the mother on her daughter's Sint-Niklaas
 2 CONT birth registration of 31 October 1901 ([[S16]]), alongside [[eduardus_p]].
+2 CONT
+2 CONT REGISTER PAGE READ (July 2026): named in her daughter's 1901 Sint-Niklaas birth act as
+2 CONT *Maria Magdalena Van Bogaert*, **huishoudster** — an occupation this record did not carry.
 1 SOUR @S29@
-2 QUAY 2
+2 QUAY 3
 0 @I215@ INDI
 1 REFN marcel_b
 2 TYPE project-id
