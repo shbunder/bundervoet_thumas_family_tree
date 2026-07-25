@@ -145,6 +145,18 @@
       "acts": 600
     },
     {
+      "id": "demeulemeester",
+      "query": {
+        "name": "Demeulemeester",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 4207,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "devos",
       "query": {
         "name": "Devos",
@@ -380,6 +392,18 @@
       },
       "date": "2026-07-25",
       "found": 807,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "steenkiste",
+      "query": {
+        "name": "Steenkiste",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2522,
       "mentions": 600,
       "complete": false,
       "acts": 600

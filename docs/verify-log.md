@@ -55,3 +55,5 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 14 | 2026-07-26 | — (method) | — | — | A thin surname result ≠ thin coverage. Wittenheyns is rare; 'Sabbe Oostkamp' returns thousands. Search surname + commune. | 043ef34 |
 | 15 | 2026-07-26 | petrus_sabbe | — | NOT FOUND | Could not pinpoint his 1652 staat van goed: full-text ORs multi-word queries (101k hits) and its year/collection filters resist scripting. A tool limit, not a statement about the document. | d52ec9d |
 | 15 | 2026-07-26 | — (method) | — | — | Full-text is a **discovery tool, not a lookup**. It proves a family is present in a body of records; it won't hand you one person's act. Budget for hand-filtering. | d52ec9d |
+| 16 | 2026-07-26 | georgeslambert_t | — | NOT FOUND | No Grez-Doiceau death act for 1863 in AGATHA. | 11623eb |
+| 16 | 2026-07-26 | — (correction) | — | — | **Pass 5's inference was wrong.** AGATHA's Grez-Doiceau Thumas coverage does *not* stop at 1859 — it reaches 1911. Specifically the 1860s *death* acts are missing. | 11623eb |
