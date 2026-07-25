@@ -61,6 +61,18 @@
       "acts": 600
     },
     {
+      "id": "daneel",
+      "query": {
+        "name": "Daneel",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 255,
+      "mentions": 255,
+      "complete": true,
+      "acts": 255
+    },
+    {
       "id": "debaecke",
       "query": {
         "name": "De Baecke",
@@ -176,6 +188,18 @@
       },
       "date": "2026-07-26",
       "found": 6447,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "janssen",
+      "query": {
+        "name": "Janssen",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 25750,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -395,6 +419,18 @@
       "mentions": 127,
       "complete": true,
       "acts": 127
+    },
+    {
+      "id": "vanbergen",
+      "query": {
+        "name": "Van Bergen",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2239,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "vanbogaert",

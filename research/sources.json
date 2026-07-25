@@ -841,6 +841,18 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "A FINDING AID, not a record index: it gives surname, parish and which registers, never a person or a date. Nothing here is graftable; it says which register to read."
+    },
+    {
+      "id": "fv-cod",
+      "site": "fv-dataindexen",
+      "kind": "collection",
+      "title": "COD — Centrum Oostende Databank (Provinciaal documentatiecentrum FV-Oostende)",
+      "url": "https://dataindexen.familiekunde-vlaanderen.be/SearchKlappers/listindexen2.php?file=ID239288_indcod&table=bibliotheeknamen&database=cod",
+      "covers": "About seventy-five separate indexes held by FV-Oostende, each queryable on its own. The ones that bear on this tree: Volkstelling 1798 Oostende (a household census); Kiezerslijst Oostende 1902 and 1914-1915 (voter lists, adult men with addresses); Huwelijksbijlagen Oostende_Microfilms (marriage annexes, which carry birth extracts and parents' consents); Databank Rouwbrieven and two beeldbank collections of digitised bidprentjes and rouwbrieven; Register Hospitaal Oostende 1771-1806 and 1813-1823; Ingangsbiljetten Burgerlijk Hospitaal Oostende; Verzameling kwartierstaten, stamreeksen and viergeslachten VVF-Oostende; and several fishermen lists, including Omgekomen Vissers van Heist tot De Panne and Vissers omgekomen op zee 1902-1970.",
+      "yielded": "Not yet a record. Searched Omgekomen Vissers van Heist tot De Panne for Carolus Ramon, the Oostende fisherman this tree records as lost at sea in 1883 — no match. The catalogue itself is the yield: it is the first venue found that indexes Oostende at household and document level.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "TWO THINGS TO KNOW BEFORE SEARCHING IT. First, the column called Familienaam often holds a FULL name — 'Victor Vanloocke', not 'Vanloocke' — so the '=' operator finds nothing and 'bevat' must be used. A negative taken with '=' is worthless. Second, many tables carry 'Bestand raadpleegbaar op computer' and a bibliotheeknummer, meaning the index is searchable here but the DOCUMENT is consulted on site at Oostende. So this venue can prove a document exists and name it, and often cannot deliver it."
     }
   ]
 }

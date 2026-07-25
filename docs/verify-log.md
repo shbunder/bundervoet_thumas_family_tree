@@ -42,3 +42,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 9 | 2026-07-26 | joannes_b | — | LEAD | His 1760 Evergem death falls inside FV's burial index 1682-1796 — the act whose only scan was an illegible 230×38 crop. Not yet retrieved: the search UI needs real clicks. | 0583a1e |
 | 10 | 2026-07-26 | joannes_b | — | NEW SOURCE | FV Totaalindex queried. **Bundervoet in 17 parishes of arr. Gent**, tree has 1 (Evergem). First map of the Bundervoet forest — objective 3. | 1291614 |
 | 10 | 2026-07-26 | — (method) | — | — | The Totaalindex is a *finding aid*: surname × parish × d/h/o flags. Never a person or date — nothing from it is graftable. | 1291614 |
+| 11 | 2026-07-26 | — | — | NEW SOURCE | **COD Oostende catalogue** — ~75 indexes incl. Volkstelling 1798 Oostende, Kiezerslijsten 1902/1914, Huwelijksbijlagen microfilms, rouwbrieven. First venue indexing Oostende at household level. | 70321eb |
+| 11 | 2026-07-26 | carolus_ramon | NOT REACHED | NOT FOUND | Not in the Heist-De Panne drowned-fishermen list (searched with `bevat`, table sanity-checked). Other COD tables untried. | 70321eb |
+| 11 | 2026-07-26 | — (method) | — | — | COD's `Familienaam` column holds FULL names — `=` finds nothing, use `bevat`. A negative taken with `=` is worthless. | 70321eb |

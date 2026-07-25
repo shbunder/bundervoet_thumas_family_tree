@@ -34,7 +34,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 0 | Parenteel documents and family sites published outside the big platforms. |
 | `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 17 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
-| `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 2 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
+| `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 3 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 
 **`agatha`** — Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …').
 
@@ -452,3 +452,11 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** A FINDING AID, not a record index: it gives surname, parish and which registers, never a person or a date. Nothing here is graftable; it says which register to read.
+
+#### `fv-cod` — COD — Centrum Oostende Databank (Provinciaal documentatiecentrum FV-Oostende)
+- **Kind:** collection · <https://dataindexen.familiekunde-vlaanderen.be/SearchKlappers/listindexen2.php?file=ID239288_indcod&table=bibliotheeknamen&database=cod>
+- **Covers:** About seventy-five separate indexes held by FV-Oostende, each queryable on its own. The ones that bear on this tree: Volkstelling 1798 Oostende (a household census); Kiezerslijst Oostende 1902 and 1914-1915 (voter lists, adult men with addresses); Huwelijksbijlagen Oostende_Microfilms (marriage annexes, which carry birth extracts and parents' consents); Databank Rouwbrieven and two beeldbank collections of digitised bidprentjes and rouwbrieven; Register Hospitaal Oostende 1771-1806 and 1813-1823; Ingangsbiljetten Burgerlijk Hospitaal Oostende; Verzameling kwartierstaten, stamreeksen and viergeslachten VVF-Oostende; and several fishermen lists, including Omgekomen Vissers van Heist tot De Panne and Vissers omgekomen op zee 1902-1970.
+- **Yielded:** Not yet a record. Searched Omgekomen Vissers van Heist tot De Panne for Carolus Ramon, the Oostende fisherman this tree records as lost at sea in 1883 — no match. The catalogue itself is the yield: it is the first venue found that indexes Oostende at household and document level.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** TWO THINGS TO KNOW BEFORE SEARCHING IT. First, the column called Familienaam often holds a FULL name — 'Victor Vanloocke', not 'Vanloocke' — so the '=' operator finds nothing and 'bevat' must be used. A negative taken with '=' is worthless. Second, many tables carry 'Bestand raadpleegbaar op computer' and a bibliotheeknummer, meaning the index is searchable here but the DOCUMENT is consulted on site at Oostende. So this venue can prove a document exists and name it, and often cannot deliver it.
