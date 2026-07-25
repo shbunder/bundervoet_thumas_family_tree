@@ -19,7 +19,13 @@ spouses:
     name: Marie Jacqueline Leclercq
     detail: Wavre, 23 Feb 1743 — his 2nd marriage
 sources:
+  - S6
   - tree-m2155
 ---
+
+CORROBORATED (July 2026) as a father. His son Georges's death act (Grez-Doiceau, 20
+November 1808) names the dead man's father as *Lambert Thumas* and his mother as Marie
+Leclercq — the pairing this record already asserts, now on a civil act rather than on the
+m2155 tree alone. The act gives the short form of his name, without the *Jean*.
 
 Church warden and parish clerk of Grez-Doiceau. Our line descends from his SECOND marriage, to Marie Jacqueline Leclercq (Wavre, 1743) — their son Georges (1744) continues the line. His first wife was Marie Catherine Crèvecœur (m. 1727, d. 1742).

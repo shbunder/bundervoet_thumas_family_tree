@@ -19,7 +19,12 @@ spouses:
     name: Maria Magdalena Van Bogaert (1888)
     detail: Sint-Niklaas, 17 Nov 1888
 sources:
+  - S7
   - tree-stefpaelinck
 ---
 
 An itinerant pedlar (leurder); married the widow Maria Magdalena Van Bogaert in 1888; eight children.
+
+CORROBORATED (July 2026) as a father: he is named in his daughter Léonie's Sint-Niklaas
+birth act of 31 October 1901, alongside her mother [[magdalena_vb]] — putting the couple
+and the parentage on a civil act rather than on a member tree.

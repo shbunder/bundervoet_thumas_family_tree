@@ -83,8 +83,19 @@ def main() -> int:
                 best = m
         rows.append((pid, p, best, "compared"))
 
-    strong = [r for r in rows if r[2] and r[2].band == "strong" and r[2].graftable]
-    weak = [r for r in rows if r[2] and not (r[2].band == "strong" and r[2].graftable)]
+    # A match that agrees on nothing but a surname and a relative's forename is not
+    # corroboration, however many bits it scores. Gustaaf Dekeyser's best candidate was a
+    # man in Aalst in 1809; Simonne Vandewalle's was a woman bearing Dekeyser children a
+    # decade before Simonne was born. Both scored "strong" on surname + kin alone, because
+    # for the commonest Flemish surnames that combination is close to no information. So a
+    # date or a place has to agree too before this reports the word "corroborated".
+    def anchored(m):
+        return bool({"date", "place"} & set(m.classes))
+
+    ok = lambda m: m.band == "strong" and m.graftable
+    strong = [r for r in rows if r[2] and ok(r[2]) and anchored(r[2])]
+    unanchored = [r for r in rows if r[2] and ok(r[2]) and not anchored(r[2])]
+    weak = [r for r in rows if r[2] and not ok(r[2])]
     none = [r for r in rows if not r[2]]
 
     def show(label, group):
@@ -102,12 +113,14 @@ def main() -> int:
                     print(f"      {m.b.url}")
 
     print(f"{len(rows)} people compared against {len(mentions)} mentions held.")
-    show("CORROBORATED — two or more independent identifiers, no conflict", strong)
+    show("CORROBORATED — a date or place agrees as well as the names, and nothing conflicts", strong)
+    show("NAME AND KIN ONLY — no date, no place: treat as a lead, not corroboration", unanchored)
     if not args.strong_only:
         show("PARTIAL — something agrees, but not two independent identifiers", weak)
         show("NOT REACHED — surname never harvested, or nothing above the noise floor", none)
 
-    print(f"\n{len(strong)} corroborated · {len(weak)} partial · {len(none)} not reached")
+    print(f"\n{len(strong)} corroborated · {len(unanchored)} name-and-kin only · "
+          f"{len(weak)} partial · {len(none)} not reached")
     print("None of these is a fact: every one still has to survive an attempt to refute it.")
     return 0
 

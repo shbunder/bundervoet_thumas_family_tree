@@ -17,7 +17,12 @@ spouses:
     name: Georges Thumas
     detail: Grez-Doiceau, 3 Jan 1771
 sources:
+  - S6
   - geneanet
 ---
+
+CORROBORATED (July 2026) as a wife. Her husband's death act (Grez-Doiceau, 20 November
+1808) names his wife as *Marie Catherine Noël*, which puts the marriage on a civil act
+rather than on a tree. She outlived him by nearly four years.
 
 Married the carpenter Georges Thumas at Grez-Doiceau in 1771; worked as a beer seller. Daughter of Jean Baptiste Noël × Marie Josephe Derossart.

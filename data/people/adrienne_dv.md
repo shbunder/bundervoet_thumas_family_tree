@@ -17,7 +17,13 @@ spouses:
   - id: joannes_vi
     name: Joannes Van Iseghem
 sources:
+  - dbe-adrienne-dv-1991
   - tree-gverdievel
 ---
 
 Born in Stene and lived to 83; her marriage joined the Devriendt and Van Iseghem lines (children Diane, Rosette, Edi).
+
+CORROBORATED (July 2026) by a Doodsprentjes.be memorial-card record: born Stene
+12 April 1908, died Oostende 22 September 1991, partner Van Iseghem. The birthplace of
+Stene — a detail easy to get wrong, since she died at Oostende which absorbed it — comes
+back exactly as held, which is what makes the identification safe.

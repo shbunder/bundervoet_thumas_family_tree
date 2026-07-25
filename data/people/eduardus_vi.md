@@ -17,7 +17,13 @@ spouses:
     name: Emma Celesta Vincke
     detail: Oostende, 28 Sep 1907
 sources:
+  - fwk-emma-vincke-1974
   - tree-gverdievel
 ---
 
 Around 1903 the family was living in Lens, northern France (son Joannes was born there); father of at least seven children.
+
+CORROBORATED (July 2026) as a husband: named as the partner on [[emma_vincke]]'s
+memorial-card record. She died in 1974, nearly thirty years after him, and the card still
+names him — which is how a widow's card usually reads, and it confirms the marriage from a
+source outside the trees.

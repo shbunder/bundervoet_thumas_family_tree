@@ -19,6 +19,8 @@ spouses:
     name: Antoina Bossin
     detail: 20 Jun 1872 (Kraainem)
 sources:
+  - S11
+  - S8
   - S5
   - geneanet
 ---
@@ -32,3 +34,24 @@ father of [[jbgeorgius]] and the husband of [[bossin]].
 
 His own marriage act — Kraainem, 20 June 1872, naming his parents as Georges Thumas and
 Maria Catharina Joostens — is held in the harvested corpus and not yet read on AGATHA.
+
+ALSO DOCUMENTED (July 2026) by his own marriage act — Kraainem, 20 June 1872 — the one
+this record's `detail` already dated. It names him as the bridegroom, born at Grez-Doiceau,
+son of **Georges Thumas** and **Maria Catharina Joostens**, so it proves the links to
+[[georges2_t]] and [[joostens]] as well as the marriage to [[bossin]].
+
+ACT READ (July 2026). His own 1872 marriage act gives his birth as 15 September 1836 at
+Grez-Doiceau — as held — and his trade then as *fabrieksgast*, a factory hand. Thirty years
+later, in his son's 1902 act, he is a *landbouwer en herbergier*. One man, two stages of a
+life; the occupation field keeps the later one because that is how the family is remembered,
+and this note keeps the earlier.
+
+FRONTIER — a daughter the tree does not have. Searching AGATHA for Thumas at Kraainem
+returned a second act beside the 1872 marriage: a **Kraainem marriage of 15 April 1899**,
+in which the bride is **Henrica Thumas** and her parents are given as *Georgius Carolus
+Josephus Thumas* and *Antonia Bossin* — this couple. So Henrica is a daughter of theirs and
+a sister of [[jbgeorgius]], and she belongs in the tree under objective 2.
+
+She is named here rather than grafted: the act has not been opened, so her birth date, her
+husband and her own line are all unread. Opening it is the obvious next move, and it would
+name her husband's parents too.

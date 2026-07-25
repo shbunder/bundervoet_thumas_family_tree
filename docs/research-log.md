@@ -840,3 +840,164 @@ who died before about 1900 there is invisible to it.
 Validator green — 307 people, 15 documented, 4 artifacts held.
 
 *End of log.
+
+## 41. Evidence pass, third round — four acts read, eleven records corroborated, one 46-bit match rejected
+
+The corpus reached 47,899 mentions across 23 surnames. This pass worked the corroborated
+list rather than the frontier list: not "who is missing" but "who is in the tree on
+somebody's word, and can the record be found".
+
+**A methodological correction first, because it invalidated a number.** The sweep and an
+ad-hoc worklist disagreed wildly — 67 corroborated against 13 — and the reason was not the
+data. `from_person(p)` takes optional `people` and `children` arguments, and without them
+it cannot resolve a record's `father`/`mother`/`spouses` ids into names, so the whole `kin`
+class of evidence silently disappears and every score falls. The sweep passes them; the
+ad-hoc script did not. **Kin evidence is most of the signal here** — an agreement on a
+mother's maiden name is worth more than any amount of surname — so omitting it is not a
+small error. Separately: a sweep run while the harvester is writing reads a half-rewritten
+store, so the harvest is now stopped before a verification pass rather than left running.
+
+**FOUR ACTS, eleven records.**
+
+- **Sint-Niklaas, 31 October 1901 — Léonie Paelinck's birth act.** Her record held the bare
+  year; the act gives the day, and names both parents, [[eduardus_p]] and [[magdalena_vb]].
+- **Kraainem, 20 June 1872 — Thumas × Bossin.** Four parents in one document: the groom as
+  son of Georges Thumas × Maria Catharina Joostens, the bride as daughter of Guilielmus
+  Bossin × Anna Catharina Peremans. With the 1902 act from §40, two consecutive Thumas
+  marriages are now on civil acts.
+- **Grez-Doiceau, 10 June 1857 — Marie Catharina Joostens's death act.** It gives what the
+  tree did not have at all: her parents, **Guillaume Joostens** and **Jeanne Marie
+  Deconninck**, and her birthplace, Woluwe-Saint-Lambert. Two new ancestors, named in a
+  civil act and recorded as a documented frontier rather than grafted unread.
+- **Oostkamp, 4 March 1876 — Florentinus Stroobandt's death act.** The year becomes a day,
+  with his wife [[rosalia_caeckaert]] named beside him.
+
+A name difference recorded rather than smoothed: the 1872 act calls the bride's mother
+*Anna* Catharina Peremans; this tree calls her Joanna Catharina Jacoba. Both forms stand
+until a second act decides.
+
+**REJECTED — a 46-bit match sixty-two years out.** The corpus's best candidate for
+[[georgeslambert_t]] was a Lambert Thumas who died at **Brussels in 1801**; ours died at
+Grez-Doiceau in 1863. The score came from agreement on a mother and a wife — but on their
+*forenames only*: Marie Joseph **Docq** against our Marie Catherine **Noël**, Marie Catherine
+**Becquevort** against our Marie Anne Catherine **Quinart**. The surnames, which would have
+been the evidence, disagree outright. Two women called Marie Catherine in one Walloon
+village is a coincidence, and a high score with a date sixty years wrong is what a
+coincidence looks like when the rare-name weighting has nothing else to chew on.
+
+That is the second rejection in three passes, and both were tempting: §40's was the right
+surname, parish and year but the wrong man and the wrong day. The scorer is doing its job —
+it ranks and vetoes, it does not decide — but the decisions are still where the errors would
+be.
+
+**Where the tree stands.** 307 people: 15 documented, 21 now citing an act or a memorial-card
+record, 67 corroborated by the corpus in all. 23 of 132 surnames harvested; the remaining
+109 are the reason 174 people are still out of reach, and the harvest is resumable — acts
+already held are skipped.
+
+Validator green — 307 people.
+
+*End of log.
+
+## 42. The 1872 Kraainem act read at the archive — and a silent failure in my own edits
+
+Continuing §41. The 1872 Thumas × Bossin marriage had been matched through the Open
+Archives index; this pass went and read it.
+
+**ACT READ — Kraainem, 20 June 1872, akte nr. 2.** Found on AGATHA and saved. It carries
+more than the index copy did:
+
+- **Antonia Bossin was born 10 January 1849 at Sint-Stevens-Woluwe** — the tree held only
+  "1849", and the birthplace not at all. The same commune Joanna Vandenbemden would come
+  from thirty years later.
+- Three occupations the tree lacked: *fabriekwerkster* for the bride, *landbouwer* for her
+  father, *huishoudster* for her mother.
+- The bridegroom is a *fabrieksgast* here in 1872 and a *landbouwer en herbergier* in his
+  son's 1902 act. Thirty years apart, that is one man's life and not two men — both are
+  kept, each attributed to its act.
+
+**Found and read are two different sources.** The act is registered twice on purpose: `S8`
+is the Open Archives record that located it, `S11` the AGATHA page that was actually read.
+Collapsing them would have made the search log claim a reading that did not happen at the
+venue it names — and it broke the validator, which is how the distinction got made properly.
+
+**Two ancestors added.** [[guillaume_joostens]] and [[jeanne_deconninck]], named in their
+daughter's 1857 death act (§41), now have records. Neither has a date: the act gave none,
+and none is invented. Marie Catharina Joostens's parents were blank before this.
+
+**A frontier the search turned up.** Querying AGATHA for Thumas at Kraainem returned a
+second act: a **marriage of 15 April 1899** whose bride is *Henrica Thumas*, daughter of
+Georgius Carolus Josephus Thumas and Antonia Bossin. That makes her a sister of
+[[jbgeorgius]] whom the tree does not have. Named, not grafted — the act is unopened.
+
+**A defect I introduced and caught.** Several records were given citations by a script that
+inserted them after a `sources:` line. Records that had never had a `sources:` block — they
+inherited the branch default — matched nothing, so the insert silently did nothing while the
+same script upgraded their confidence to `doc`. The result was four records reading
+**`confidence: doc` with no source at all**: exactly the defect §37 downgraded 257 records
+for. They are repaired, and the tree now audits clean: 19 documented, every one citing a
+primary source, none citing nothing.
+
+The lesson is narrow and worth keeping: a string replacement that finds no match is not an
+error, it is a no-op, and a no-op in a script that also changes confidence produces a claim
+with nothing behind it. Anything that edits records in bulk should assert it changed what it
+meant to change.
+
+Validator green — 309 people, 19 documented, 6 artifacts held.
+
+*End of log.
+
+## 43. The last of the strong list — three clean negatives, and a number that was overstated
+
+Working the remainder of the corroborated list. Most of what was left turned out to be
+weaker than the label on it, which is the main result of this pass.
+
+**"Corroborated" was over-claiming, and the sweep now says so.** The scorer bands a match
+"strong" on two independent identifiers, and *surname + a relative's forename* satisfies
+that. For the commonest Flemish surnames it should not. Three examples, all from the
+family's own open questions:
+
+- **Gustaaf Dekeyser's** best candidate, at 27 bits, is **Josse De Keyser of Aalst, 1809** —
+  a century out and in the wrong province.
+- **Roland De Keyser's** is the same 1809 Aalst man. He was born at Tottenham in 1943.
+- **Simonne Vandewalle's** is **Alice Marie Van de Walle**, bearing Dekeyser children at
+  Mariakerke in 1904 and 1907, a decade before Simonne was born. The agreement there is
+  "surname Vandewalle" plus *her children were Dekeysers too* — the shape of our couple, and
+  of a great many others, since Vandewalle and Dekeyser are both among the commonest
+  surnames in the province.
+
+None of the three agreed on a single date or place. `tools/verify_all.py` now requires a
+date or a place to agree before it prints the word corroborated, and reports the rest as
+**"name and kin only — treat as a lead"**. On the same corpus that reclassifies 72
+corroborations into **26 corroborated and 46 leads**. The earlier figures in §40–42 were
+inflated by exactly this, and the honest count of people the corpus actually anchors is 26.
+
+**Three clean negatives, which are worth as much as a find here.** The open Belgian corpus,
+as harvested, holds nothing that could be Gustaaf, Roland or Simonne. For Roland that is
+expected — he was born and died in England. For Gustaaf it is a real result: it is consistent
+with the standing suspicion on his record that his adult life, and possibly his death,
+happened outside Belgium. The English records named on his record remain the way in.
+
+**A lead deliberately left as a lead.** A Brugge marriage act of 16 August 1851 ([[S12]])
+marries a **Franciscus Léopoldus Smessaert** to an **Anna Francisca Morbeé**, naming both
+sets of parents — four ancestors, if it is ours. The groom's triple name matches exactly, the
+bride's forenames match exactly, and 1851 fits a son born at Oostende in 1857. But the bride
+is **Morbeé** where this tree says **Morree**, and that is a disagreement rather than a
+silence. Both [[francl_s]] and [[morree]] are bare records with no dates and no source of
+their own, so there is nothing independent to break the tie. Not grafted. The decisive
+record is [[joannesf_s]]'s 1857 Oostende birth act, which would give his mother's surname as
+the registrar wrote it.
+
+**Recorded from acts this pass:** [[quinart]] corroborated by the Grez-Doiceau death act of
+her son **Etienne Thumas** (18 October 1812) — which also reveals Etienne, a brother of
+[[georges2_t]] the tree does not have; [[elodia]] and [[eduardus_vi]] each confirmed as a
+spouse on their partner's memorial card.
+
+**Rejected:** [[judocus_vi]], whose best candidate is an Aalst death act of 1869 naming a
+*Constantinus* Franciscus Van Iseghem as father. Ours died at Oostende in 1832 and cannot be
+a father in an 1869 act; the shared *Franciscus* is the commonest middle name in these
+registers.
+
+Validator green — 309 people, 19 documented, 53 registered sources, 5 artifacts.
+
+*End of log.

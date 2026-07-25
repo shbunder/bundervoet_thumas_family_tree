@@ -15,7 +15,11 @@ spouses:
     name: Florentinus Stroobandt
     detail: Beernem, 29 Sep 1836
 sources:
+  - S10
   - tree-isavdw
 ---
 
 Mother of Juliana Stroobandt, born Assebroek/Brugge. Parents Josephus Caeckaert x Godeliva Rotsaert.
+
+CORROBORATED (July 2026) as a wife: named alongside her husband in his Oostkamp death act
+of 4 March 1876, which puts the marriage on a civil act.

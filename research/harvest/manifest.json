@@ -25,7 +25,7 @@
       "acts": 396
     },
     {
-      "id": "de-baecke",
+      "id": "debaecke",
       "query": {
         "name": "De Baecke",
         "country_code": "be"
@@ -37,7 +37,7 @@
       "acts": 242
     },
     {
-      "id": "de-grande",
+      "id": "degrande",
       "query": {
         "name": "De Grande",
         "country_code": "be"
@@ -49,37 +49,13 @@
       "acts": 600
     },
     {
-      "id": "de-keyser",
+      "id": "dekeyser",
       "query": {
         "name": "De Keyser",
         "country_code": "be"
       },
       "date": "2026-07-25",
       "found": 11795,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
-    },
-    {
-      "id": "de-vriese",
-      "query": {
-        "name": "De Vriese",
-        "country_code": "be"
-      },
-      "date": "2026-07-25",
-      "found": 2543,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
-    },
-    {
-      "id": "dekeyser",
-      "query": {
-        "name": "Dekeyser",
-        "country_code": "be"
-      },
-      "date": "2026-07-25",
-      "found": 11907,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -92,6 +68,30 @@
       },
       "date": "2026-07-25",
       "found": 6852,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "devriese",
+      "query": {
+        "name": "De Vriese",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 2543,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "keirsebilck",
+      "query": {
+        "name": "Keirsebilck",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 960,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -121,6 +121,18 @@
       "acts": 600
     },
     {
+      "id": "rups",
+      "query": {
+        "name": "Rups",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 3,
+      "mentions": 3,
+      "complete": true,
+      "acts": 3
+    },
+    {
       "id": "sabbe",
       "query": {
         "name": "Sabbe",
@@ -143,6 +155,18 @@
       "mentions": 14,
       "complete": true,
       "acts": 14
+    },
+    {
+      "id": "smessaert",
+      "query": {
+        "name": "Smessaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 807,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "stroobandt",
@@ -169,7 +193,43 @@
       "acts": 507
     },
     {
-      "id": "van-iseghem",
+      "id": "vanacker",
+      "query": {
+        "name": "Van Acker",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 9096,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "vanalderweireldt",
+      "query": {
+        "name": "Vanalderweireldt",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 127,
+      "mentions": 127,
+      "complete": true,
+      "acts": 127
+    },
+    {
+      "id": "vandewalle",
+      "query": {
+        "name": "Vandewalle",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 11886,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "vaniseghem",
       "query": {
         "name": "Van Iseghem",
         "country_code": "be"
@@ -181,7 +241,7 @@
       "acts": 600
     },
     {
-      "id": "van-maele",
+      "id": "vanmaele",
       "query": {
         "name": "Van Maele",
         "country_code": "be"
@@ -193,13 +253,25 @@
       "acts": 599
     },
     {
-      "id": "vandewalle",
+      "id": "vannieuwenhuyse",
       "query": {
-        "name": "Vandewalle",
+        "name": "Van Nieuwenhuyse",
         "country_code": "be"
       },
       "date": "2026-07-25",
-      "found": 11886,
+      "found": 1909,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "vanrenterghem",
+      "query": {
+        "name": "Van Renterghem",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 4021,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -215,6 +287,30 @@
       "mentions": 400,
       "complete": false,
       "acts": 400
+    },
+    {
+      "id": "vincke",
+      "query": {
+        "name": "Vincke",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 3017,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "wittenheyns",
+      "query": {
+        "name": "Wittenheyns",
+        "country_code": "be"
+      },
+      "date": "2026-07-25",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
     }
   ],
   "population": {

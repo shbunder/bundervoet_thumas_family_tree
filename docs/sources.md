@@ -17,7 +17,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 5 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 7 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 2 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 0 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 6 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 17 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 
 **`agatha`** — Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …').
 
@@ -79,6 +79,14 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07-25
 - **Note:** An AGATHA act analysis — the Rijksarchief's own transcription of the register, with the act number — not the scan. Reached by matching the harvested Open Archives corpus, whose own link pointed at the retired search.arch.be.
+
+#### `S11` — Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA)
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00185915_0>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1872, akte nr. 2
+- **Yielded:** The same act as S8, read at the archive rather than through an index: Antonia Bossin's exact birth (10 Jan 1849, Sint-Stevens-Woluwe) where the tree had only a year, three occupations (fabriekwerkster, landbouwer, huishoudster), the bridegroom's trade in 1872 as fabrieksgast, and four witnesses with ages and trades.
+- **Saved artifact:** `data/artifacts/thumas-bossin-1872-marriage-kraainem.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-25
 
 ### FamilySearch
 
@@ -279,6 +287,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 ### Open Archives (openarch.nl) — open-data aggregator, Netherlands/Belgium/France
 
+#### `S6` — Death act of George Thumas, Grez-Doiceau, 20 November 1808
+- **Kind:** record · <https://www.openarchieven.nl/abb:e2375960-201a-e775-f648-11aabe4581c3>
+- **Collection:** Burgerlijke stand Grez-Doiceau, overlijdens 1808 (Rijksarchief, via Open Archives)
+- **Yielded:** Three links on the deep Thumas line at once: the act names George Thumas's father as Lambert Thumas, his mother as Marie Leclercq, and his wife as Marie Catherine Noël, with the death date 20 November 1808 matching the record exactly.
+- **Image:** <https://familysearch.org/ark:/61903/1:2:Q21G-G5Q8>
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+- **Note:** An Open Archives transcription of the civil act; the FamilySearch image behind it has not been read here. The corpus holds this act twice, under abb:e2375960… and abb:efe61c66…, one spelling the wife Noël and the other Noé — two index entries, one act.
+
 #### `dbe-petrus-f-1943` — Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943
 - **Kind:** record · <https://www.openarchieven.nl/dbe:9e1d9dc7-4107-4c96-febc-2d81854a0cb2>
 - **Collection:** Doodsprentjes.be bidprentjesverzameling, record 18_360290
@@ -318,5 +335,66 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Kind:** record · <https://www.openarchieven.nl/spa:d97eeeea-26a7-ae07-e4eb-7c144416fad2>
 - **Yielded:** The same death from a second, unrelated heemkring collection — same birth date, same death date, same spouse. Independent corroboration rather than a second copy of one index.
 - **Image:** <https://spaenhiers.be/wp-content/uploads/2026/04/bidprentjes_2026-01-31.pdf>
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `fwk-emma-vincke-1974` — Memorial card — Emma Celesta Vincke, d. Oostende 6 October 1974
+- **Kind:** record · <https://www.openarchieven.nl/fwk:dcea6020-b666-acbe-f6c3-35bdbdb2bcf2>
+- **Yielded:** Emma Celesta Vincke, born Diksmuide 23 January 1880, died Oostende 6 October 1974, partner Eduard Van Iseghem — every field as the tree held it, and the marriage with it.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `dbe-adrienne-dv-1991` — Memorial card — Adrienne Devriendt, d. Oostende 22 September 1991
+- **Kind:** record · <https://www.openarchieven.nl/dbe:d089d2b6-9b0e-328b-0a98-7e6275a165c3>
+- **Yielded:** Adrienne Devriendt, born Stene 12 April 1908, died Oostende 22 September 1991, partner Van Iseghem — confirming the birthplace of Stene and the marriage.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `fwk-joannes-vi-1969` — Memorial card — Joannes Vaniseghem, d. Oostende 5 May 1969
+- **Kind:** record · <https://www.openarchieven.nl/fwk:7ca5a335-186e-1d08-af4c-675bcfc20fce>
+- **Yielded:** Joannes Vaniseghem, born Lens 11 May 1903, died Oostende 5 May 1969, partner Adrienne Devriendt — confirming the unusual birthplace of Lens and the marriage.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `S7` — Birth act of Philomena Leonia Paelinck, Sint-Niklaas, 31 October 1901
+- **Kind:** record · <https://www.openarchieven.nl/abt:27cd23de-b6e4-bc19-3317-fdfb6a463e26>
+- **Collection:** Burgerlijke stand Sint-Niklaas, geboorten 1901 (Rijksarchief, via Open Archives)
+- **Yielded:** Léonie Paelinck's exact birth date — 31 October 1901 at Sint-Niklaas, where the tree had only the year — and both her parents named in the act: Eduardus Franciscus Paelinck and Maria Magdalena Van Bogaert.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `S8` — Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872
+- **Kind:** record · <https://www.openarchieven.nl/abl:716956c6-ff92-8ade-1234-c41e2764fd17>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1872, akte nr. 2
+- **Yielded:** FOUR parent links: the groom Georges Carolus Josephus Thumas as son of Georges Thumas × Maria Catharina Joostens, the bride Antonia Bossin as daughter of Guilielmus Bossin × Anna Catharina Peremans. This is the index copy that located the act; it was then read on AGATHA as S11.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+- **Note:** Its own act link pointed at the retired search.arch.be; the AGATHA equivalent is S11.
+
+#### `S9` — Death act of Marie Catherine Joostens, Grez-Doiceau, 10 June 1857
+- **Kind:** record · <https://www.openarchieven.nl/abb:9bd0f8b8-184f-adc4-6aab-0e5280747182>
+- **Collection:** Burgerlijke stand Grez-Doiceau, overlijdens 1857 (Rijksarchief, via Open Archives)
+- **Yielded:** Her parents, which the tree did not have at all — Guillaume Joostens and Jeanne Marie Deconninck — plus her birthplace, Woluwe-Saint-Lambert, and her husband Georges Thumas.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `S10` — Death act of Florentinus Stroobandt, Oostkamp, 4 March 1876
+- **Kind:** record · <https://www.openarchieven.nl/fvm:38eae412-a54f-0742-4f05-2c7497691178>
+- **Collection:** Burgerlijke stand Oostkamp, overlijdens 1876 (via Open Archives)
+- **Yielded:** His exact death date — 4 March 1876 at Oostkamp, where the tree had only the year — and his wife Rosalia Caeckaert named with him.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `S12` — Marriage act — Franciscus Léopoldus Smessaert × Anna Francisca Morbeé, Brugge, 16 August 1851
+- **Kind:** record · <https://www.openarchieven.nl/abb:415d080b-aa90-b891-ee74-d6ce648baf8c>
+- **Collection:** Burgerlijke stand Brugge, huwelijken 1851 (Rijksarchief, via Open Archives)
+- **Yielded:** A LEAD, not a link. A Franciscus Léopoldus Smessaert marries an Anna Francisca Morbeé, with both sets of parents named — Paulus Smessaert × Isabella Claeys, and Petrus Josephus Morbeé × Joanna De Clerck. The groom's distinctive triple name and the bride's forenames match our couple exactly, and 1851 fits a son born 1857; but the bride's SURNAME is Morbeé where our tree says Morree, which is a disagreement rather than a gap. Not grafted.
+- **Confidence:** sup
+- **Accessed:** 2026-07-25
+
+#### `S13` — Death act of Etienne Thumas, Grez-Doiceau, 18 October 1812
+- **Kind:** record · <https://www.openarchieven.nl/abb:10532236-1d14-b529-7fcc-881ab83666fa>
+- **Collection:** Burgerlijke stand Grez-Doiceau, overlijdens 1812 (Rijksarchief, via Open Archives)
+- **Yielded:** Names the dead child's parents as Lambert Thumas and Marie Catherine Quinart — corroborating that couple, and revealing a son, Etienne, who died in 1812 and is not in the tree.
 - **Confidence:** sup
 - **Accessed:** 2026-07-25
