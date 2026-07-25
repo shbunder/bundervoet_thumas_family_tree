@@ -40,6 +40,18 @@ New person? Creating the file is the whole job — the roster is the directory
 listing and the Index groups itself from the links, so there is nothing to register
 anywhere.
 
+## Before you write a new person file
+
+```
+uv run tools/identify.py "<name as the source writes it>" --surname "<X>" \
+    --birth <year or date> --place <commune> --suggest-id
+```
+
+If it names an existing record, edit that one. Two records for one person do not look
+broken — they look like two people, and the branch quietly splits in half with the
+children on one copy and the parents on the other. Nothing else in the toolchain will
+catch it until the next build warns, and by then more may hang off both.
+
 ## Recording the evidence
 
 - A source that is not yet registered goes in `research/sources.json` first: a venue
@@ -56,7 +68,7 @@ anywhere.
 ## Finishing
 
 ```
-node tools/build.mjs
+uv run tools/build.py
 ```
 
 It validates first and refuses to generate from a broken tree. If it fails, fix the

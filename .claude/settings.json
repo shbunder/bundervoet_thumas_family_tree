@@ -1,11 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node tools/build.mjs)",
-      "Bash(node tools/check-data.mjs)",
-      "Bash(node tools/check-data.mjs --skip-generated)",
-      "Bash(node tools/export-gedcom.mjs)",
-      "Bash(node tools/research.mjs:*)",
+      "Bash(uv run tools/build.py)",
+      "Bash(uv run tools/check_data.py)",
+      "Bash(uv run tools/check_data.py --skip-generated)",
+      "Bash(uv run tools/export_gedcom.py)",
+      "Bash(uv run tools/research.py:*)",
+      "Bash(uv run tools/harvest.py:*)",
+      "Bash(uv run tools/link.py:*)",
+      "Bash(uv run tools/identify.py:*)",
+      "Bash(uv run tools/evaluate.py:*)",
+      "Bash(uv run tools/verify_all.py:*)",
+      "Bash(uv run --group dev pytest:*)",
+      "Bash(uv run --group docs mkdocs build:*)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",

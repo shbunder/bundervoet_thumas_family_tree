@@ -51,3 +51,27 @@ State one of three, with reasons:
 
 When you are unsure, the answer is NOT PROVEN. An empty branch is honest and
 recoverable; a wrong branch is neither.
+
+## Record the ruling
+
+Every verdict you reach on a corpus candidate is **labelled data**, and it is the only
+labelled data this project will ever produce. Write it down before you report:
+
+```
+uv run tools/evaluate.py label <person> <act-id> --match    --basis act   --why "…"
+uv run tools/evaluate.py label <person> <act-id> --nonmatch --basis index --why "…"
+```
+
+`--basis` is how you judged it: `act` (the image was read), `index` (an index entry),
+`tree` (a member tree), `reasoning` (from what was already held). It is kept separate
+because a label from a read act and a label from a plausible-looking index page are not
+the same evidence, and a gold standard that mixes them measures the wrong thing.
+
+**Record the rejections too — especially those.** A REJECT is the more valuable label:
+it is a pair that scored well enough to reach you and was still wrong, which is exactly
+the case the scorer needs to learn. A NOT PROVEN is not a label; leave it out and record
+it as a frontier instead.
+
+`uv run tools/evaluate.py report` then measures the scorer against your past rulings, and
+re-scores them with the current code — so a change to `match.py` can be checked against
+judgements already made rather than argued about.

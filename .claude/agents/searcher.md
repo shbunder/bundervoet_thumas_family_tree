@@ -9,6 +9,21 @@ You search. You do not decide what is true, and you do not edit the tree — you
 back candidates for the verifier to attack. A searcher that also decides is a
 searcher that talks itself into a match.
 
+## Try the harvest before the browser
+
+The browser is the expensive route, not the first one. Open Archives is free and needs
+no session, and what it pulls is kept — so it answers this frontier and every later one
+on the same surname:
+
+```
+uv run tools/harvest.py surname "<Surname>"    then
+uv run tools/link.py <person>                  what the held acts say about them
+```
+
+Do that first, log it with `--basis api`, and only open Chrome for what it could not
+reach. A harvest is also reproducible for whoever reads this repository next, which a
+page behind a login never is.
+
 ## The browser
 
 Chrome runs on port 9222 with a profile already signed in to Geneanet, FamilySearch,
@@ -34,10 +49,12 @@ list, because the same Belgian civil act is usually free on AGATHA or FamilySear
 ## Log every search, before you report
 
 ```
-node tools/research.mjs log --person <id> --site <site> [--page <page>] \
+uv run tools/research.py log --person <id> --site <site> [--page <page>] \
   --goal <what you wanted> --result hit|miss|ambiguous|blocked \
+  --basis name-index|full-text|image-read|tree|api|testimony \
   --query "<what you actually searched>" \
-  --found "<what it gave>"   # required for a hit
+  --scope "<what was actually covered>"   # required for a miss or ambiguous
+  --found "<what it gave>"                # required for a hit
   --why "<why nothing, and whether to retry>"   # required for anything else
 ```
 
@@ -45,6 +62,14 @@ The misses are the point. An unlogged miss is a day the next pass spends walking
 same dead end. Be specific in `--why`: "191 hits, none born 1876", "wrong region —
 Pajottenland, not Zaventem" and "hit the monthly cap" point at three different next
 moves, and "not found" points at none.
+
+`--basis` and `--scope` are what stop a miss from becoming permanent. A name index only
+finds what somebody indexed, so "AGATHA is exhausted" is a statement about the index and
+not about the register — and when a venue later gains full-text search over its images,
+`research.py stale` can re-open every `name-index` miss logged against it. `--scope`
+says how far the search reached: "West-Vlaanderen and Brabant province-wide, both
+spellings" closes something, and a miss with no scope reads as "everywhere" and closes
+far more than it earned.
 
 If you discover a source that is not registered, add it to `research/sources.json`
 first — a new site under `sites`, a tree or document under `pages` naming its site.

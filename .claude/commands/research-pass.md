@@ -20,11 +20,13 @@ wrong person, which is the failure mode this whole project is built around.
 
 3. **Verifier** — launch the `verifier` subagent on each candidate. It tries to
    refute. Do not skip this even when a match looks obvious — especially then. Its
-   verdicts are ACCEPT, REJECT or NOT PROVEN, and NOT PROVEN is the common one.
+   verdicts are ACCEPT, REJECT or NOT PROVEN, and NOT PROVEN is the common one. It
+   records each ruling with `uv run tools/evaluate.py label …`, rejections included —
+   those are the labels the scorer learns most from.
 
 4. **Recorder** — launch the `recorder` subagent with the accepted findings and the
    stated confidence. It writes the person files, registers sources, adds the
-   narrative section to `docs/research-log.md`, runs `node tools/build.mjs` and
+   narrative section to `docs/research-log.md`, runs `uv run tools/build.py` and
    commits.
 
 Then report back to me, briefly:
@@ -40,3 +42,10 @@ unauthenticated fetches — the archives that matter are all behind a session.
 If a pass ends with nothing grafted, that is a normal outcome. A logged set of
 negatives is worth more than a speculative link, and saying "this needs the
 Stadsarchief" is a real result.
+
+Not every pass has to go upwards. The frontier queue only knows how to ask "who were
+this person's parents", so a run of passes against it will deepen the direct lines and
+never widen them. `uv run tools/research.py children` asks the other question — which
+children the held acts name for couples already in the tree — and that is objective 2.
+Alternate deliberately, rather than letting the queue's one shape decide the project's
+shape.
