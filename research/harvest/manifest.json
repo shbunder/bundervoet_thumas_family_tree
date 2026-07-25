@@ -1,6 +1,18 @@
 {
   "harvests": [
     {
+      "id": "adriaenssens",
+      "query": {
+        "name": "Adriaenssens",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 5597,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "bocklandt",
       "query": {
         "name": "Bocklandt",
@@ -68,6 +80,18 @@
       },
       "date": "2026-07-26",
       "found": 1803,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "casteleyn",
+      "query": {
+        "name": "Casteleyn",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 5250,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -551,6 +575,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vandillen",
+      "query": {
+        "name": "Vandillen",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 32,
+      "mentions": 32,
+      "complete": true,
+      "acts": 32
     },
     {
       "id": "vanhecke",

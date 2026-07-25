@@ -57,3 +57,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 15 | 2026-07-26 | — (method) | — | — | Full-text is a **discovery tool, not a lookup**. It proves a family is present in a body of records; it won't hand you one person's act. Budget for hand-filtering. | d52ec9d |
 | 16 | 2026-07-26 | georgeslambert_t | — | NOT FOUND | No Grez-Doiceau death act for 1863 in AGATHA. | 11623eb |
 | 16 | 2026-07-26 | — (correction) | — | — | **Pass 5's inference was wrong.** AGATHA's Grez-Doiceau Thumas coverage does *not* stop at 1859 — it reaches 1911. Specifically the 1860s *death* acts are missing. | 11623eb |
+| 17 | 2026-07-26 | — (artifact) | — | — | Retook the full-text artifact: the first capture had a promo modal over the results. | 067bf0b |
+| 17 | 2026-07-26 | petrus_bundervoet1560 | — | **CORRECTION** | Read the actual page. Snippets had merged two surnames: 'Meirelbeke 1587' is VAN DEN BUNDERE, not Bundervoet. Real entries: Saint-Pierre-Alost 1687-1701. Two dates also wrong. | 067bf0b |
+| 17 | 2026-07-26 | — (method) | — | — | **Artifacts should be the document, not the index page about it.** A snippet merges adjacent entries; the page does not. | 067bf0b |

@@ -59,3 +59,8 @@ promotional modal open across the middle of it, which hid the collection titles 
 the fief lines in half — an artifact that recorded the search rather than the evidence.
 Retaken with the modal dismissed: all three collections, all four fief entries and the
 year spans are now legible. The checksum above is the second capture.
+
+SUPERSEDED for the fief entries by [[bundervoet-fiefs-alost-1687-1701]], which is the page
+rather than the search over it. This artifact is kept for what it does show honestly: that
+a full-text query returns 159 Bundervoet hits across three unindexed collections. It should
+not be cited for what any individual entry says.
