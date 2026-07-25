@@ -1,10 +1,12 @@
 # Family Tree — project charter
 
 Genealogy of **Renée & Léon Bundervoet** (the two children at the root). Static site,
-no build step, no dependencies. 301 people today; the target is thousands.
+no dependencies, one generation step (`node tools/build.mjs`). 302 people today; the
+target is thousands.
 
-This file is the standing brief. Read the objectives, then read
-[docs/research-log.md](docs/research-log.md) §"open frontiers" to find work.
+This file is the standing brief. Read the objectives, then find work: open frontiers in
+[docs/research-log.md](docs/research-log.md), and `node tools/research.mjs report` for
+where the effort has already gone.
 
 ---
 
@@ -46,7 +48,7 @@ wrong province, the Gustaaf/Gustavus confusion.
 1. **Never match on name alone.** A graft needs at least two independent identifiers to
    agree — date + place, or parent names, or an occupation + commune. Say which two.
 2. **Record the evidence, then the fact.** Every new parent link cites a source in
-   [docs/sources.md](docs/sources.md). A claim with no citation does not go in the tree.
+   `research/sources.json`. A claim with no citation does not go in the tree.
 3. **Confidence is honest, not aspirational.** `doc` = a primary act or image was
    actually read. `sup` = one member tree, unverified. `fam` = family testimony.
    `unk` = to research. Downgrading is always allowed; upgrading needs a document.
@@ -56,7 +58,9 @@ wrong province, the Gustaaf/Gustavus confusion.
    it is absent, not guessed. Say "not in the reachable pages" in the log.
 6. **Corrections are first-class.** When a past conclusion is wrong, retract it
    explicitly in the log with the reasoning (see §29), fix every record it touched.
-7. `node tools/check-data.mjs` must be green before any commit.
+7. **Log every search, especially the ones that found nothing.** An unrecorded miss is
+   a dead end the next pass will walk again.
+8. `node tools/build.mjs` must be green before any commit.
 
 ---
 
@@ -68,16 +72,22 @@ Each research pass:
    (they name *both* spouses' parents — the single richest record); rare surnames over
    common ones; the wife's side when the husband's is blocked. Both breakthroughs in
    this project came from those two moves.
-2. **Search** — consult the source registry first; check the log for what has already
-   been tried and failed, so dead ends aren't re-walked.
-3. **Verify** — actively try to *refute* the identity match before accepting it.
-4. **Record** — person files + `docs/sources.md` entry + a numbered section in
-   `docs/research-log.md` saying what was found, what was checked and came back
-   negative, and what the next frontier is.
-5. **Validate & commit** — `node tools/check-data.mjs`, then one commit per pass.
+2. **Check what's been tried** — `node tools/research.mjs tried <person>` and
+   `untried <person>`. Do not re-walk a logged dead end without a new angle.
+3. **Search** — see [docs/searching.md](docs/searching.md) for the registry, the
+   logged-in browser, and what has worked before.
+4. **Verify** — actively try to *refute* the identity match before accepting it.
+5. **Record** —
+   - the person files;
+   - `node tools/research.mjs log …` for **every** search, hit or miss;
+   - a new source in `research/sources.json` if one was discovered;
+   - a numbered section in `docs/research-log.md` for the narrative: what was found,
+     what came back negative, what the next frontier is.
+6. **Build & commit** — `node tools/build.mjs`, then one commit per pass.
 
-Negative results are worth recording. "AGATHA is exhausted for Édouard's parentage" is
-a real finding that saves the next pass a day.
+**Log the misses.** They are the difference between a loop that converges and one that
+searches AGATHA for Édouard's parents every night forever. `docs/sources.md` is
+generated from the registry — edit `research/sources.json`, not the markdown.
 
 ---
 
@@ -139,8 +149,12 @@ data/lineages.js        the surname chains
 data/branches.js        default citation per branch
 data/meta.js            root/roots, confidence labels, footer
 docs/research-log.md    numbered passes: found / checked-and-negative / next
-docs/sources.md         source registry, stable S-ids, with local artifacts
+docs/searching.md       the search strategy, the browser, what has worked
+docs/sources.md         readable source list — GENERATED from research/sources.json
 docs/sources/           saved act images and scans
+research/sources.json   the source registry — every venue and every cited document
+research/searches.jsonl the search log, append-only: person · source · goal · result
+tools/research.mjs      log a search, ask what's been tried, validate, write the docs
 tools/build.mjs         validates, then writes the generated files
 tools/check-data.mjs    the validator
 tools/export-gedcom.mjs writes exports/family-tree.ged
@@ -155,6 +169,8 @@ archive/                superseded drafts, not part of the site
 ```
 node tools/build.mjs           validate, then regenerate bundle.js + the GEDCOM
 node tools/check-data.mjs      validate only (must be green before commit)
+node tools/research.mjs tried <person>    what has already been searched for them
+node tools/research.mjs log …            record a search — hit or miss
 open index.html                the site, straight off disk
 ```
 
@@ -179,12 +195,18 @@ occupations — rather than flattening them into fields that would then read as 
 
 Not yet decided — do not implement unilaterally:
 
-- **Storage format.** Moving to strict-fielded frontmatter + free-prose body, and a
-  build step emitting the browser bundle. Trade-off: loses "works straight off disk with
-  no build". *(The interchange half of this is settled — GEDCOM 7 is exported. What is
-  still open is whether the working files themselves change shape.)*
-- **Research logging format.** Machine-readable per-person search log (which source,
-  which query, hit/miss/ambiguous, artifact path) replacing prose-only logging.
-- **Browser-based searching.** A logged-in browser for Geneanet / FamilySearch /
-  Ancestry, driven by an MCP browser server.
-- **Sub-agent split** for autonomous runs (strategist / searcher / verifier / archiver).
+- **Storage format.** Moving the person files to strict-fielded frontmatter + free-prose
+  body. The build step exists now, so the objection has narrowed to whether the working
+  files themselves change shape. *(Interchange is settled: GEDCOM 7 is exported.)*
+- **Sub-agent split** for autonomous runs — strategist / searcher / **verifier** /
+  archiver. The verifier is the one not to skip: a searcher that also decides is a
+  searcher that rationalises, and a bad graft is unfindable at scale. Keep the frontier
+  queue in a file, not in an agent's context, so a run survives a restart.
+- **Person → source ids.** `source` on a person is still free text; 118 distinct
+  strings. `research/sources.json` now has stable ids to point at, so the records could
+  cite `S1` instead of repeating a paragraph. Not migrated.
+
+**Waiting on you, not on a decision:** the browser server in `.mcp.json` needs Chrome
+started with remote debugging and logged in to the archives once — see
+[docs/searching.md](docs/searching.md). Until then, searches that need a session come
+back `blocked`, not `miss`.

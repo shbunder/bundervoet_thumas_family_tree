@@ -68,4 +68,11 @@ if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToP
 
   const ged = spawnSync(process.execPath, [path.join(HERE, 'export-gedcom.mjs')], { stdio: 'inherit' });
   if (ged.status !== 0) process.exit(ged.status ?? 1);
+
+  // The research log and the readable source list are generated the same way,
+  // so a source added to the registry reaches docs/sources.md without a
+  // separate step, and a log entry naming an unregistered source is caught here.
+  const research = spawnSync(process.execPath, [path.join(HERE, 'research.mjs'), 'check'], { stdio: 'inherit' });
+  if (research.status !== 0) process.exit(research.status ?? 1);
+  spawnSync(process.execPath, [path.join(HERE, 'research.mjs'), 'docs'], { stdio: 'inherit' });
 }
