@@ -97,6 +97,18 @@
       "acts": 600
     },
     {
+      "id": "declerck",
+      "query": {
+        "name": "De Clerck",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 17465,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "degrande",
       "query": {
         "name": "De Grande",

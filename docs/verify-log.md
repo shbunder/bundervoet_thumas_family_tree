@@ -50,3 +50,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 12 | 2026-07-26 | — (method) | — | — | COD tables are not uniformly populated. Test with a broad query before trusting a negative. | 1d5fc20 |
 | 13 | 2026-07-26 | joannes_b | — | NOT FOUND | FamilySearch's indexed Oost-Vlaanderen content is 19th-c civil registration; 99 Joannes Bundervoet hits, none the 1760 Evergem burial. Parish registers aren't name-indexed. | 648d2ca |
 | 13 | 2026-07-26 | petrus_bundervoet1560 | — | **NEW SOURCE** | **FamilySearch full-text.** Machine-reads unindexed manuscripts back to 1463. 159 Bundervoet hits incl. a 3-generation fief chain 1687-1700. The route to the 158 pre-1796 people. | 648d2ca |
+| 14 | 2026-07-26 | petrus_sabbe | — | **NEW SOURCE** | Full-text reaches the Oostkamp block via **staten van goed** (Belgium Court Records 1639-1795) — estate inventories naming spouse + every child with ages. | 043ef34 |
+| 14 | 2026-07-26 | petrus_wittenheyns | — | LEAD | Only full-text hit: a 1657 Bruges notarial deed naming 'Lieuen wittenheyns haer broeder'. Right region, wrong century. Not grafted. | 043ef34 |
+| 14 | 2026-07-26 | — (method) | — | — | A thin surname result ≠ thin coverage. Wittenheyns is rare; 'Sabbe Oostkamp' returns thousands. Search surname + commune. | 043ef34 |

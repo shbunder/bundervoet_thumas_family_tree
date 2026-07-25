@@ -241,12 +241,12 @@
       "title": "FamilySearch full-text search (machine-read unindexed images)",
       "url": "https://www.familysearch.org/search/full-text",
       "access": "login",
-      "covers": "Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing.",
+      "covers": "Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here.",
       "capabilities": [
         "full-text",
         "image-read"
       ],
-      "note": "THE ROUTE TO THE PRE-1796 HALF OF THIS TREE. 158 of its people were born before civil registration and are unreachable by AGATHA, Open Archives or any name index, because the documents that name them were never indexed. This searches the manuscript itself. A first query for 'Bundervoet' returned 159 hits including a three-generation fief chain of 1687-1700 (Francois > Lievin > Pasquier > Lievin) and a Catherine Bundervoet widowed at Meirelbeke in 1587. Search by surname alone and read the snippets; the place filter behaves like FamilySearch's others and should not be trusted to constrain."
+      "note": "THE ROUTE TO THE PRE-1796 HALF OF THIS TREE. 158 of its people were born before civil registration and are unreachable by AGATHA, Open Archives or any name index, because the documents that name them were never indexed. This searches the manuscript itself. A first query for 'Bundervoet' returned 159 hits including a three-generation fief chain of 1687-1700 (Francois > Lievin > Pasquier > Lievin) and a Catherine Bundervoet widowed at Meirelbeke in 1587. Search by surname alone and read the snippets; the place filter behaves like FamilySearch's others and should not be trusted to constrain. COVERAGE IS UNEVEN BY COLLECTION, NOT BY PROVINCE. A surname query alone looked thin for West-Vlaanderen — Wittenheyns returned a single 1657 Bruges notarial mention — while 'Sabbe Oostkamp' returned thousands, all in the court records. So the province is well covered and the rare surname simply is rare; do not read a thin surname result as thin coverage. Search surname + commune, and expect the yield to be staten van goed rather than registers."
     }
   ],
   "pages": [
