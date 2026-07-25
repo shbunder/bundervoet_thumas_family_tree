@@ -74,17 +74,39 @@ def _as_list(v):
     return v if isinstance(v, list) else [v]
 
 
+def _text(v):
+    """The scalar behind a field, whatever shape the archive published it in.
+
+    A2A is XML rendered as JSON, so an element that carries an attribute arrives as an
+    object rather than a string: Lommel publishes a place as
+    `{"@TranscriptionRemark": "Lommel-Centrum", "$": "Lommel"}` where every other archive
+    publishes `"Lommel"`. Reading that straight put a dict where the rest of the code
+    expected text, and the whole validator died on `.lower()` — one commune's annotation
+    habit taking down a run over three hundred people.
+
+    Applied at every point a scalar is read, not only at the one that broke, because the
+    same convention can attach to a name or a date just as easily as to a place."""
+    if isinstance(v, dict):
+        return v.get("$")
+    if isinstance(v, list):
+        return next((t for t in (_text(x) for x in v) if t), None)
+    return v
+
+
 def _api_date(d) -> str | None:
     """Into the project's date grammar — never into anything looser. A record with a
     year and no month becomes "1902", not "1902-00", because the grammar has no syntax
     for a guess and this is exactly where one would get invented."""
-    if not d or not d.get("Year"):
+    if not d:
         return None
-    year = str(d["Year"])
-    if d.get("Month") and d.get("Day"):
-        return f"{year}-{int(d['Month']):02d}-{int(d['Day']):02d}"
-    if d.get("Month"):
-        return f"{year}-{int(d['Month']):02d}"
+    y, mo, da = _text(d.get("Year")), _text(d.get("Month")), _text(d.get("Day"))
+    if not y:
+        return None
+    year = str(y)
+    if mo and da:
+        return f"{year}-{int(mo):02d}-{int(da):02d}"
+    if mo:
+        return f"{year}-{int(mo):02d}"
     return year
 
 
@@ -140,9 +162,10 @@ def _person_name(p: dict) -> tuple[str, str, str]:
     # surname by others; the surname keeps whichever form the record used, because the
     # project's own rule is that `surname` is stated, not computed.
     surname = " ".join(
-        x for x in (n.get("PersonNamePrefix"), n.get("PersonNamePrefixLastName"), n.get("PersonNameLastName")) if x
+        x for x in (_text(n.get("PersonNamePrefix")), _text(n.get("PersonNamePrefixLastName")),
+                    _text(n.get("PersonNameLastName"))) if x
     ).strip()
-    given = " ".join(x for x in (n.get("PersonNameFirstName"), n.get("PersonNameInitials")) if x).strip()
+    given = " ".join(x for x in (_text(n.get("PersonNameFirstName")), _text(n.get("PersonNameInitials"))) if x).strip()
     return given, surname, " ".join(x for x in (given, surname) if x)
 
 
@@ -240,7 +263,7 @@ def normalise_act(row: dict) -> Act:
         source_type=src.get("SourceType"),
         date=date,
         year=year,
-        place=(ev.get("EventPlace") or {}).get("Place") or (src.get("SourcePlace") or {}).get("Place"),
+        place=_text((ev.get("EventPlace") or {}).get("Place")) or _text((src.get("SourcePlace") or {}).get("Place")),
         act_number=ref.get("DocumentNumber"),
         collection=ref.get("Collection"),
         url=f"https://www.openarchieven.nl/{row['id']}",
@@ -343,6 +366,32 @@ def population() -> int:
     return load_manifest().get("population", {}).get("be", 0)
 
 
+def surname_harvest(surname: str) -> dict | None:
+    """The manifest row for a whole-surname harvest of this name, if one was run.
+
+    Matched on the QUERY rather than on the harvest id, because the id is a slug and
+    slugs have collided: "De Keyser" was filed once as `de-keyser` and once as
+    `dekeyser`, and each lookup found only one of them.
+
+    A harvest narrowed by commune is not a whole-surname harvest and is skipped — it
+    counts one commune, so neither its total nor its coverage says anything about the
+    surname as a whole.
+    """
+    key = normalise_key(surname)
+    best = None
+    for h in load_manifest()["harvests"]:
+        query = h.get("query") or {}
+        if query.get("eventplace") or query.get("name") in (None, "*"):
+            continue
+        if normalise_key(query["name"]) != key:
+            continue
+        # Where the slug collision has already left two rows, prefer the one that
+        # actually holds more.
+        if best is None or (h.get("mentions") or 0) > (best.get("mentions") or 0):
+            best = h
+    return best
+
+
 def surname_population_count(surname: str) -> int | None:
     """How common a surname is in the WHOLE venue, not in what was harvested.
 
@@ -356,16 +405,29 @@ def surname_population_count(surname: str) -> int | None:
     None means no whole-surname harvest has been run, and the caller falls back to
     counting the corpus with all the bias that implies.
     """
-    key = normalise_key(surname)
-    for h in load_manifest()["harvests"]:
-        query = h.get("query") or {}
-        # A harvest narrowed by commune counts only that commune, so it is not a
-        # population figure and must not be used as one.
-        if query.get("eventplace") or query.get("name") in (None, "*"):
-            continue
-        if normalise_key(query["name"]) == key:
-            return h.get("found")
-    return None
+    h = surname_harvest(surname)
+    return h.get("found") if h else None
+
+
+def surname_coverage(surname: str) -> float | None:
+    """What fraction of that surname's records are actually held.
+
+    The distinction the search log draws between `miss` and `blocked`, applied to the
+    corpus. A harvest capped at 600 of 11,795 De Keyser mentions has read five per cent
+    of them — so finding no candidate is not evidence of absence, it is evidence of
+    not having looked. Treating a partial harvest as a complete one made the queue sink
+    those frontiers as though they had been searched and found empty.
+
+    None means the surname has never been harvested at all, which is different again:
+    unknown, and cheap to resolve.
+    """
+    h = surname_harvest(surname)
+    if h is None:
+        return None
+    if h.get("complete"):
+        return 1.0
+    found = h.get("found") or 0
+    return min(1.0, (h.get("mentions") or 0) / found) if found else 1.0
 
 
 # ---------- frequency ----------
