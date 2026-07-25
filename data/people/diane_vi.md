@@ -4,9 +4,11 @@ name: Diane Van Iseghem
 sex: f
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 father: joannes_vi
 mother: adrienne_dv
-source: Guy Verdievel (gverdievel) tree, Geneanet
+sources:
+  - tree-gverdievel
 ---
 
 Recorded dates: †

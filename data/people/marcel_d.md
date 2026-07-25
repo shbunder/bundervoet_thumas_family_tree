@@ -10,10 +10,12 @@ death:
 confidence: doc
 occupation: smid (blacksmith)
 branch: Devriendt
+line: devriendt
 father: camiel_d
 mother: declercq
 spouses:
   - id: yvonne
     name: Yvonne Smessaert (1937)
-source: Werner Osaer (wernero) tree; West-Vlaanderen acts
+sources:
+  - tree-wernero
 ---

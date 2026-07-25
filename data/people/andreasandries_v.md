@@ -8,12 +8,14 @@ death:
   date: <1748
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 father: andreas_v
 mother: pluvier
 spouses:
   - id: boxoens
     name: Maria Anna Theresia Boxoens
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Of Woumen; eight children including Silvester (1740).

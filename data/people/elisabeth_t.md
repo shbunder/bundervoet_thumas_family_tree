@@ -5,6 +5,7 @@ birth:
   date: ~1620
 confidence: doc
 branch: Paelinck
+line: paelinck
 spouses:
   - id: livinus1_p
     name: Livinus Paelinck

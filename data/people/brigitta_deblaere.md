@@ -9,13 +9,16 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: jacob_deblaere
 mother: anna_c_devriese
 spouses:
   - id: michael_degrande
     name: Michael De Grande
     detail: Ruiselede, 4 May 1755
-source: Geneanet tree kathrynann / isavdw
+sources:
+  - tree-isavdw
+  - tree-kathrynann
 ---
 
 Grandmother (maternal) of Joanna Keirsebilck. Her parents open the De Blaere / De Vriese lines.

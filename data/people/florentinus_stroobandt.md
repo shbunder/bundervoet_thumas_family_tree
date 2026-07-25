@@ -7,12 +7,15 @@ death:
   date: "1876"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: jacobus_stroobandt
 mother: joanna_keirsebilck
 spouses:
   - id: rosalia_caeckaert
     name: Rosalia Caeckaert
-source: Geneanet tree kathrynann (ancestry of Juliana Stroobandt)
+sources:
+  - tree-kathrynann
+  - ancestry
 ---
 
 Father of Juliana Stroobandt (1839 Oedelem/Beernem). His own parents Jacobus Stroobandt × Joanna Keirsebilck are named in the same tree.

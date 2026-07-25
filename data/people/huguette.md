@@ -6,6 +6,7 @@ birth:
   place: living
 confidence: fam
 branch: Devriendt
+line: devriendt
 father: marcel_d
 mother: yvonne
 spouses:

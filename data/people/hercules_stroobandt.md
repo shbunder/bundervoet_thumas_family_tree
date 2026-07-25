@@ -9,13 +9,15 @@ death:
   place: Torhout
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: oliverius_stroobandt
 mother: judoca_vanhecke
 spouses:
   - id: joanna_willaert
     name: Joanna Willaert
     detail: Torhout, 14 Jun 1659
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 Married three times; by Joanna Willaert had Guillielmus (1659).

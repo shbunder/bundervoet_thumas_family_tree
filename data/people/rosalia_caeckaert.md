@@ -6,13 +6,15 @@ birth:
   place: Brugge (Assebroek)
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: josephus_caeckaert
 mother: godeliva_rotsaert
 spouses:
   - id: florentinus_stroobandt
     name: Florentinus Stroobandt
     detail: Beernem, 29 Sep 1836
-source: Geneanet tree isavdw (Rijksarchief zoekrobot)
+sources:
+  - tree-isavdw
 ---
 
 Mother of Juliana Stroobandt, born Assebroek/Brugge. Parents Josephus Caeckaert x Godeliva Rotsaert.

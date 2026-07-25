@@ -9,11 +9,13 @@ death:
   place: Zande
 confidence: doc
 branch: Devriendt
+line: devriendt
 spouses:
   - id: mattheus_ramon
     name: Mattheus Ramon
     detail: Zande, 31 May 1772
-source: Geneanet tree wernero
+sources:
+  - tree-wernero
 ---
 
 Daughter of Josephus Ossaert & Cornelia Rivier; ten children (surname also spelled Housaer).

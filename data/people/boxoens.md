@@ -6,10 +6,12 @@ death:
   place: Woumen
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 spouses:
   - id: andreasandries_v
     name: Andreas Andries Vanstechelman
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Mother of eight, including Silvester (1740).

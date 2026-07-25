@@ -7,10 +7,12 @@ death:
   date: "1746"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: egidius_degrande
     name: Egidius De Grande
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — grandmother of Michael De Grande.

@@ -9,13 +9,15 @@ death:
   place: Destelbergen
 confidence: doc
 branch: Paelinck
+line: paelinck
 father: adrianus_p
 mother: livina_pickaut
 spouses:
   - id: petronilla_vk
     name: Petronilla Carolina Van Kerckhove
     detail: Kalken, 7 Nov 1739
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Married in Kalken, his wife's home village; lived in Destelbergen.

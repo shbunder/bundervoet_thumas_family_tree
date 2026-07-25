@@ -8,7 +8,11 @@ death:
   date: "1972"
 confidence: doc
 branch: DeKeyser
+line: de-keyser
 father: jerome_dk
 mother: leonie_p
-source: Stef Paelinck (stefpaelinck) tree; child of Jerome & Léonie, 1920–1972
+sources:
+  - tree-stefpaelinck
 ---
+
+Source detail: Stef Paelinck (stefpaelinck) tree; child of Jerome & Léonie, 1920–1972

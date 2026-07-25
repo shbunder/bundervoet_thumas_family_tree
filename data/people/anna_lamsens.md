@@ -7,10 +7,12 @@ death:
   date: "1689"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: adrianus_debaecke
     name: Adrianus De Baecke
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — grandmother of Barbara De Baecke.

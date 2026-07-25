@@ -9,11 +9,13 @@ death:
   place: Diksmuide
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: antoine_vanald
     name: Antoine Vanalderweireldt
     detail: Diksmuide, 8 Jun 1803
-source: Geneanet tree bartvanhooren
+sources:
+  - tree-bartvanhooren
 ---
 
 Bore the Scottish-origin surname Wyllie in West-Flanders; widowed young in 1808.

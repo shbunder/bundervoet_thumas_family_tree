@@ -6,12 +6,14 @@ birth:
   place: Dentergem (Wakken)
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: martinus_degrande
 mother: egidia_damman
 spouses:
   - id: joanna_wallays
     name: Joanna Wallays
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Grandfather of Michael De Grande. Parents Martinus De Grande (~1642-1706) x Egidia Damman (d.1676).

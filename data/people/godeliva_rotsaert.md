@@ -3,10 +3,12 @@ id: godeliva_rotsaert
 name: Godeliva Rotsaert
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: josephus_caeckaert
     name: Josephus Caeckaert
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — mother of Rosalia Caeckaert (1815).

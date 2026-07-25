@@ -7,6 +7,7 @@ death:
   date: "1684"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: michael_devriese_o
 mother: judoca_scherrens
 spouses:
@@ -15,7 +16,9 @@ spouses:
     detail: 1st
   - name: Joanna Loontjens
     detail: 2nd
-source: Geneanet tree kathrynann / isavdw (Tielt parish records)
+sources:
+  - tree-isavdw
+  - tree-kathrynann
 ---
 
 Father of Hubert De Vriese. Married twice — Esther Vanderbeken (Hubert's mother), then Joanna Loontjens.

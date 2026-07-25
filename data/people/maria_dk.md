@@ -9,7 +9,11 @@ death:
   place: Oostende
 confidence: doc
 branch: DeKeyser
+line: de-keyser
 father: edouard_dk
 mother: louise_bocklandt
-source: Stef Paelinck (stefpaelinck) tree; Oostende, 1902–2002
+sources:
+  - tree-stefpaelinck
 ---
+
+Source detail: Stef Paelinck (stefpaelinck) tree; Oostende, 1902–2002

@@ -22,10 +22,9 @@ index.html                     landing page
 Renee-Leon-family-tree.html    the interactive tree (page shell only)
 data/
   people/<id>.md               one file per person — the source of truth
-  people.js                    the list of person ids to load
   branches.js                  default source citation per surname branch
   lineages.js                  the four surname chains in the "Lineages" tab
-  groups.js                    optional headings for the "Index" tab
+  groups.js                    the Index headings (no membership lists)
   meta.js                      root person(s), confidence labels, footer text
   bundle.js                    all of the above in one file — generated
 assets/
@@ -132,8 +131,14 @@ validator enforces, both so the tree can be built *downwards* as well as up:
 - **A shared child proves a couple.** If a record has `father: A` and `mother: B`, then
   A and B must each list the other.
 
-`source` is optional — leave it out and the person inherits the default citation for
-their `branch` from `branches.js`.
+`sources` is a list of ids from `research/sources.json` — `tree-isavdw`, `S1`. The
+records cite the registry rather than describing it, so "Geneanet tree isavdw
+(Rijksarchief scans)" is written once, in one place, instead of on 107 people. The
+validator rejects an id that isn't registered. Leave it out and the person inherits
+the default citation for their `branch`.
+
+`line` names which Index heading the person belongs under, keyed to `groups.js`. The
+person says it once; there is no membership list anywhere.
 
 Write plain text, not HTML: `&` and `é`, not `&amp;` and `&eacute;`. The renderer
 escapes on the way out.
@@ -174,15 +179,13 @@ instead of becoming a year.
 
 ## Making a change show up straight away
 
-GitHub Pages serves these files with `cache-control: max-age=600`, so a phone or
-browser that has already opened the page can keep showing the old version for up
-to ten minutes. That is long enough to look like a change didn't work.
+GitHub Pages serves these files with `cache-control: max-age=600`, so a browser that
+has already opened the page can show the old version for up to ten minutes — long
+enough to look like a change didn't work.
 
-Every stylesheet and script in `Renee-Leon-family-tree.html` is referenced with a
-`?v=N` stamp, `data/bundle.js` included. **Bump that number** — a find-and-replace of
-`?v=7` to `?v=8` across the page — and every visitor gets the new version on their next
-load rather than up to ten minutes later. It only matters when you want the change
-visible immediately; forgetting it just means the old ten-minute wait.
+Every stylesheet and script is referenced with a `?v=` stamp, and `node tools/build.mjs`
+sets it to a hash of the bytes it just generated. It changes when the served files
+change and not otherwise, so there is nothing to remember and nothing to bump by hand.
 
 ## Why the generated bundle is `.js` and not `.json`
 

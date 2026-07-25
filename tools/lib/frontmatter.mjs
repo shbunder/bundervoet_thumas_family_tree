@@ -64,11 +64,18 @@ export function parseFrontmatter(text, filename = '<string>') {
     if (trimmed.startsWith('- ')) {
       if (data[currentKey] === undefined) data[currentKey] = [];
       if (!Array.isArray(data[currentKey])) throw new Error(`${filename}: line ${i + 1} mixes a list into the map "${currentKey}"`);
-      currentItem = {};
-      data[currentKey].push(currentItem);
-      const m = trimmed.slice(2).match(/^([A-Za-z_][\w-]*):(.*)$/);
-      if (!m) throw new Error(`${filename}: line ${i + 1} — list items must be "- key: value"`);
-      currentItem[m[1]] = unquote(m[2]);
+      const item = trimmed.slice(2);
+      const m = item.match(/^([A-Za-z_][\w-]*):(.*)$/);
+      if (m) {
+        // A list of maps, like spouses.
+        currentItem = {};
+        data[currentKey].push(currentItem);
+        currentItem[m[1]] = unquote(m[2]);
+      } else {
+        // A list of plain values, like source ids.
+        currentItem = null;
+        data[currentKey].push(unquote(item));
+      }
       continue;
     }
 
@@ -114,8 +121,12 @@ export function stringifyFrontmatter(data, body, keyOrder = []) {
       if (!value.length) continue;
       out.push(`${key}:`);
       for (const item of value) {
-        const entries = Object.entries(item).filter(([, v]) => v != null && v !== '');
-        entries.forEach(([k, v], i) => out.push(`  ${i === 0 ? '- ' : '  '}${k}: ${scalar(v)}`));
+        if (item !== null && typeof item === 'object') {
+          const entries = Object.entries(item).filter(([, v]) => v != null && v !== '');
+          entries.forEach(([k, v], i) => out.push(`  ${i === 0 ? '- ' : '  '}${k}: ${scalar(v)}`));
+        } else {
+          out.push(`  - ${scalar(item)}`);
+        }
       }
     } else if (typeof value === 'object') {
       const entries = Object.entries(value).filter(([, v]) => v != null && v !== '');

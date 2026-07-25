@@ -8,13 +8,17 @@ death:
 confidence: doc
 nickname: Meme Lenie
 branch: Paelinck
+line: de-keyser
 father: eduardus_p
 mother: magdalena_vb
 spouses:
   - id: jerome_dk
     name: Jerome Joseph Dekeyser
     detail: 10 Dec 1919, Sint-Niklaas
-source: Stef Paelinck (stefpaelinck) tree; Sint-Niklaas marriage 1919
+sources:
+  - tree-stefpaelinck
 ---
+
+Source detail: Stef Paelinck (stefpaelinck) tree; Sint-Niklaas marriage 1919
 
 From Sint-Niklaas — she opens the deep Paelinck line, documented to ~1618.

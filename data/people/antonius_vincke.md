@@ -6,11 +6,13 @@ birth:
   place: s
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: anne_peperstraete
     name: Anne Therese Peperstraete
     detail: Westvleteren, 9 May 1797
-source: Geneanet tree bartvanhooren
+sources:
+  - tree-bartvanhooren
 ---
 
 Married at Westvleteren in 1797; father of Engel Antonius Vincke.

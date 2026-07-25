@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: menuisier (carpenter)
 branch: Thumas
+line: thumas
 father: georgeslambert_t
 mother: quinart
 spouses:
   - id: joostens
     name: Marie Catharina Joostens
     detail: Grez-Doiceau, 17 Feb 1835
-source: Grez-Doiceau civil registration (via Geneanet index)
+sources:
+  - geneanet
 ---
 
 Third of the four carpenter generations. Civil records give his birth as 24 Jan 1804 (earlier trees said 1805).

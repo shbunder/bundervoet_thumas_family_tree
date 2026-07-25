@@ -8,6 +8,7 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: bundervoet
 father: alphonsus
 mother: elodia
 spouses:
@@ -15,7 +16,8 @@ spouses:
     name: Rosette Van Iseghem
   - name: Francine Bisschop
     detail: later
-source: Memorial card (Uitvaartcentrum Raes, Oostende) + family
+sources:
+  - family
 ---
 
 Full name Marcel Henri Bundervoet. Confirmed by his memorial card, which named the Bostyn family — pointing to his mother Elodia Bostyn and father Alphonsus.

@@ -9,11 +9,13 @@ death:
   place: Grez-Doiceau
 confidence: doc
 branch: Thumas
+line: thumas
 spouses:
   - id: jeanlambert_t
     name: Jean Lambert Thumas
     detail: Wavre, 23 Feb 1743
-source: Geneanet Thumas tree (m2155); Grez-Doiceau registers
+sources:
+  - tree-m2155
 ---
 
 Second wife of Jean Lambert Thumas (m. Wavre 1743) and mother of the line's Georges (1744); the couple had eight children.

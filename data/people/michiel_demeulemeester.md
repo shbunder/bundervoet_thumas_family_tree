@@ -6,9 +6,13 @@ birth:
   place: s
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - name: (wife unrecorded)
-source: Geneanet isavdw (OSAK Akten & Contracten 1560-1600; Sosa 54082)
+sources:
+  - tree-isavdw
 ---
+
+Source detail: Geneanet isavdw (OSAK Akten & Contracten 1560-1600; Sosa 54082)
 
 FRONTIER above — father of Magdalena Demeulemeester (~1530s), on the deep Sabbe/Harelbeke line. Dates and parents not recorded.

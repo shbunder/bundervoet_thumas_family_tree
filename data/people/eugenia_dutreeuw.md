@@ -6,13 +6,15 @@ birth:
   place: Diksmuide
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 father: ludovicus_dutreeuw
 mother: ludovica_ellebout
 spouses:
   - id: carolus_vanald
     name: Carolus Ludovicus Vanalderweireldt
     detail: Diksmuide, 4 Jun 1828
-source: Geneanet tree bartvanhooren
+sources:
+  - tree-bartvanhooren
 ---
 
 Daughter of Ludovicus Dutreeuw & Ludovica Ellebout; mother of Ludovica Vanalderweireldt (1845).

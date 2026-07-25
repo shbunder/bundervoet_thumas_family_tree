@@ -9,11 +9,14 @@ death:
   place: Varsenare
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: anna_perquy
     name: Anna Theresia Perquy
     detail: Westkerke, 9 May 1833
-source: vrijwilligersrab.be marriage & death indexes; Geneanet tree stefanieschil
+sources:
+  - tree-stefanieschil
+  - vrijwilligersrab
 ---
 
 FRONTIER above — father of Henricus Josephus Bostyn (1841). Surname Bostin here, Bostyn in the next generation; same family. His own parents not yet recovered.

@@ -3,6 +3,7 @@ id: bernardus_cap
 name: Bernardus Cappaert
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: sophia_vh
     name: Sophia Vanhoucke

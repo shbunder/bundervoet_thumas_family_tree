@@ -7,11 +7,13 @@ death:
   date: "1749"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: francisca_vanmaele
     name: Francisca Van Maele
     detail: Beernem, 17 Oct 1730
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — father of Anna Maria Van Acker (1749). Also recorded as Germinius Josephus Van Acker. His own parents not yet recovered.

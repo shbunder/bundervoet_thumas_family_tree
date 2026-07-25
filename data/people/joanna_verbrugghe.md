@@ -7,10 +7,13 @@ death:
   date: "1704"
 confidence: doc
 branch: Bundervoet
+line: bundervoet
 spouses:
   - id: joannes_b1637
     name: Joannes Bundervoet
-source: Geneanet trees paulderidder, glorieuxp
+sources:
+  - tree-paulderidder
+  - tree-glorieuxp
 ---
 
 FRONTIER above — mother of Joannes Bundervoet (1682). Her own parents not recorded here.

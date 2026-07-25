@@ -7,10 +7,12 @@ death:
   date: "1697"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: simon_sabbe
     name: Simon Sabbe
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — mother of Judocus Sabbe (~1667).

@@ -9,11 +9,13 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: victoria_engelsen
     name: Victoria Eugenia Engelsen
     detail: Oostende, 25 Mar 1810
-source: Geneanet tree gverdievel (Guy Verdievel)
+sources:
+  - tree-gverdievel
 ---
 
 Married during the French Imperial period, when Oostende was annexed to France; died at 44.

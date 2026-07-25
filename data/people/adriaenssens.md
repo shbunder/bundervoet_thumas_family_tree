@@ -7,6 +7,7 @@ death:
   date: "1833"
 confidence: doc
 branch: Bundervoet
+line: bundervoet
 spouses:
   - id: philippus
     name: Philippus Jacobus Bundervoet

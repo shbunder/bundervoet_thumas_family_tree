@@ -6,6 +6,7 @@ death:
   place: Oostende
 confidence: fam
 branch: Thumas
+line: janssens
 spouses:
   - id: anna_vc
     name: Anna Van Craenenbroeck

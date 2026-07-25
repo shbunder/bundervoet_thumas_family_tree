@@ -7,10 +7,12 @@ death:
   date: ~1546
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: petrus_wittenheyns
     name: Petrus Wittenheyns
-source: Geneanet isavdw (Heemkring Oostkamp)
+sources:
+  - tree-isavdw
 ---
 
 DEEPEST-TIER ANCESTOR — born ~1510. Mother of Barbara Wittenheyns. No parents recorded.

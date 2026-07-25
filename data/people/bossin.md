@@ -7,6 +7,7 @@ death:
   date: "1894"
 confidence: doc
 branch: Thumas
+line: thumas
 father: guilielmus_bossin
 mother: peremans
 spouses:

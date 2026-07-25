@@ -6,10 +6,12 @@ death:
   place: Zande
 confidence: doc
 branch: Devriendt
+line: devriendt
 spouses:
   - id: joanna_truant
     name: Joanna Truant
-source: Geneanet tree wernero
+sources:
+  - tree-wernero
 ---
 
 Originated in Kortemark; died at Zande. Father of Mattheus Ramon; married Joanna Truant.

@@ -3,6 +3,7 @@ id: crabbe
 name: Marie Louise Crabbé
 confidence: sup
 branch: Thumas
+line: thumas
 spouses:
   - id: jean_t
     name: Jean Thumas

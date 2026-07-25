@@ -8,12 +8,14 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: petrus_sabbe
 mother: judoca_vandenberghe
 spouses:
   - id: joanna_rotsaert_sabbe
     name: Joanna Rotsaert
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Father of Judocus Sabbe (~1667). Parents Petrus Sabbe (d.~1652) x Judoca Vandenberghe (~1594); his wife was Joanna Rotsaert.

@@ -8,12 +8,14 @@ death:
   place: Brugge (Lissewege)
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: carolus_vandenberghe
 spouses:
   - id: petrus_sabbe
     name: Petrus Sabbe
     detail: Oostkamp/Ruddervoorde, 11 Jun 1616
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Mother of Simon Sabbe (1627). From Ruddervoorde. Her father Carolus Vandenberghe; her mother's identity is uncertain in the records.

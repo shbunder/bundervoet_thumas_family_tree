@@ -6,11 +6,13 @@ birth:
   place: Diksmuide
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: ludovica_ellebout
     name: Ludovica Prudentia Ellebout
     detail: Diksmuide, 27 May 1807
-source: Geneanet tree bartvanhooren
+sources:
+  - tree-bartvanhooren
 ---
 
 Son of Nicolas Dutreeuw & Therese Desramont; his wife was about sixteen years his senior.

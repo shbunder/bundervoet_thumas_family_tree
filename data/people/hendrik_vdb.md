@@ -9,11 +9,15 @@ death:
   place: Sint-Stevens-Woluwe
 confidence: doc
 branch: Thumas
+line: thumas
 spouses:
   - id: coekelberghs
     name: Maria Theresia Coekelberghs
     detail: 24 Apr 1873
-source: Geneanet; daughter Joanna's 1902 Kraainem marriage act
+sources:
+  - geneanet
 ---
+
+Source detail: Geneanet; daughter Joanna's 1902 Kraainem marriage act
 
 Born in Everberg; married Maria Theresia Coekelberghs in 1873; died young (1889) at Sint-Stevens-Woluwe. Named in daughter Joanna's 1902 marriage act. FRONTIER (to verify): his parents per Geneanet were Joannes Baptista Vandenbemden × Agatha Langa.

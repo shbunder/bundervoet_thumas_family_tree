@@ -6,6 +6,7 @@ birth:
   place: Sint-Andries
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: henricus_j_bostyn
     name: Henricus Josephus Bostyn

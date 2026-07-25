@@ -9,10 +9,12 @@ death:
 confidence: doc
 occupation: landbouwer (farmer)
 branch: Bundervoet
+line: bostyn-cappaert
 father: judocus_sabbe_1475
 spouses:
   - name: (wife unrecorded)
-source: Geneanet isavdw
+sources:
+  - tree-isavdw
 ---
 
 Born 1504 in Zwevegem (reign of Charles V), a farmer. Father of Willem Sabbe (~1530). Son of Judocus 'Joos' Sabbe (~1475), grandson of Gillis Sabbe (~1440).

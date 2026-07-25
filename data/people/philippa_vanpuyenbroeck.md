@@ -7,11 +7,13 @@ death:
   date: "1820"
 confidence: sup
 branch: DeKeyser
+line: de-keyser
 spouses:
   - id: daniel_bocklandt
     name: Daniel Bocklandt
     detail: married 1801
-source: Geneanet tree wete1998 (Erik Bekaert)
+sources:
+  - tree-wete1998
 ---
 
 Paternal great-grandmother of Louise Bocklandt; wife of Daniel Bocklandt. Of Hamme (Oost-Vlaanderen).

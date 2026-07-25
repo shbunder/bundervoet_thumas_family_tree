@@ -5,6 +5,7 @@ death:
   date: "1827"
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 spouses:
   - id: delphina_vdb
     name: Delphina Van den Berghe

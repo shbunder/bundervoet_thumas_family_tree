@@ -9,13 +9,15 @@ death:
   place: Laarne
 confidence: doc
 branch: Paelinck
+line: paelinck
 father: livinus2_p
 mother: petronilla_vk
 spouses:
   - id: christina_vm
     name: Christina Van Maele
     detail: Destelbergen, 4 Sep 1770
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Lived to 88; the family relocated from Destelbergen to Laarne.

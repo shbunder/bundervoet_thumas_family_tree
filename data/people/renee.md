@@ -6,6 +6,7 @@ birth:
   date: 2017-06-21
   place: Leuven
 confidence: fam
+line: immediate
 father: shaun
 mother: dorien
 ---

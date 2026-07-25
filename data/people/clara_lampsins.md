@@ -7,10 +7,12 @@ death:
   date: "1683"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: paulus_lampsins
     name: Paulus Lampsins
-source: Geneanet isavdw (Lichtervelde)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — mother of Maria Lampsins (1637). Her maiden name is also recorded as Lampsins.

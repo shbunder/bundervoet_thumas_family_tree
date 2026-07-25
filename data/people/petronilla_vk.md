@@ -9,11 +9,13 @@ death:
   place: Destelbergen
 confidence: doc
 branch: Paelinck
+line: paelinck
 spouses:
   - id: livinus2_p
     name: Livinus Paelinck
     detail: Kalken, 7 Nov 1739
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 From Kalken; married there in 1739 and later died in Destelbergen. Mother of Apolonius (1748).

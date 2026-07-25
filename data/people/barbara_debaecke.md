@@ -9,13 +9,17 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: rogerius_debaecke
 mother: maria_m_vandewalle
 spouses:
   - id: mauritius_stroobandt
     name: Mauritius Stroobandt
     detail: Oostkamp, 30 Apr 1732
-source: Geneanet tree isavdw (Rijksarchief scans; Volkstelling Oostkamp 1748)
+sources:
+  - tree-isavdw
 ---
+
+Source detail: Geneanet tree isavdw (Rijksarchief scans; Volkstelling Oostkamp 1748)
 
 Wife of Mauritius Stroobandt. Married first Joannes Boeckhout (1729). Parents Rogerius De Baecke x Maria Magdalena Vandewalle.

@@ -9,12 +9,14 @@ death:
   place: Mariakerke
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 father: petrusjacobus_v
 mother: clementia_w
 spouses:
   - id: petrus_f
     name: Petrus Bundervoet
-source: Geneanet tree stechec; Oostende records
+sources:
+  - tree-stechec
 ---
 
 One of fifteen siblings; her marriage to Petrus Bundervoet is the Vanstechelman–Bundervoet junction.

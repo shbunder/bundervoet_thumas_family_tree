@@ -8,13 +8,15 @@ death:
   place: Evergem
 confidence: doc
 branch: Bundervoet
+line: bundervoet
 father: philippus
 mother: adriaenssens
 spouses:
   - id: roegiers
     name: Francisca Roegiers
     detail: m. 1834 — his 2nd marriage
-source: Geneanet / Evergem civil registration
+sources:
+  - geneanet
 ---
 
 Married twice — first to Livina Segers (1831), then to Francisca Roegiers (1834), who was Bernardus's mother.

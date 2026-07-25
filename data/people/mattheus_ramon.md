@@ -9,6 +9,7 @@ death:
   place: Handzame
 confidence: doc
 branch: Devriendt
+line: devriendt
 father: stephanus_ramon
 mother: joanna_truant
 spouses:
@@ -17,7 +18,8 @@ spouses:
   - id: jacoba_ossaert
     name: Jacoba Josepha Ossaert
     detail: Zande, 31 May 1772 — his 2nd marriage
-source: Geneanet tree wernero (Werner Osaer)
+sources:
+  - tree-wernero
 ---
 
 Son of Stephanus Ramon & Joanna Truant; married twice — our line is via his 2nd wife Jacoba Ossaert (Zande, 1772), with whom he had ten children.

@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: dagloner (day labourer)
 branch: Paelinck
+line: paelinck
 father: apolonius_p
 mother: christina_vm
 spouses:
   - id: joanna_va
     name: Joanna Coleta Van Acker
     detail: "1795"
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 A day labourer; the family moved from Destelbergen to Lokeren, where he died. His wife was Joanna Coleta Van Acker.

@@ -10,12 +10,14 @@ death:
 confidence: sup
 occupation: labourer
 branch: Bundervoet
+line: bundervoet
 father: petrus_f
 mother: augusta
 spouses:
   - id: elodia
     name: Elodia Octavia Bostyn
-source: Geneanet / Oostende records
+sources:
+  - geneanet
 ---
 
 The first Bundervoet of the line born in Oostende (1905); eldest child of Petrus Franciscus Bundervoet & Augusta Vanstechelman.

@@ -6,11 +6,13 @@ birth:
   place: Diksmuide
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: ludovicus_dutreeuw
     name: Ludovicus Emanuel Dutreeuw
     detail: Diksmuide, 27 May 1807
-source: Geneanet tree bartvanhooren
+sources:
+  - tree-bartvanhooren
 ---
 
 Daughter of Ferdinand Ellebout & Catherine Millecam; married at 42 a husband about sixteen years younger.

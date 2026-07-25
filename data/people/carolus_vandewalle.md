@@ -8,13 +8,15 @@ death:
   date: 1702-01-19
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: petrus_vandewalle
 mother: francisca_vanhoutte
 spouses:
   - id: maria_rups
     name: Maria Rups
     detail: Oostkamp, 17 May 1662
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Grandfather of Barbara De Baecke (via daughter Maria Magdalena Vandewalle). Born out of wedlock (marked 'illegitime'). Married Maria Rups 1662.

@@ -7,12 +7,14 @@ death:
   date: "1727"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: adrianus_debaecke
 mother: anna_lamsens
 spouses:
   - id: maria_m_vandewalle
     name: Maria Magdalena Vandewalle
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Father of Barbara Theresia De Baecke (1709).

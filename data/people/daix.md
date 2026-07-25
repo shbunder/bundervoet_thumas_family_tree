@@ -9,11 +9,13 @@ death:
   place: Leuven
 confidence: doc
 branch: Thumas
+line: thumas
 spouses:
   - id: antoine_t
     name: Antoine Thumas
     detail: 30 Nov 1687
-source: Geneanet (jdalbanne / m2155)
+sources:
+  - tree-m2155
 ---
 
 Wife of Antoine Thumas; died at Leuven aged about 85. Daughter of Henry Daix (1614–1705) × Gertrude Hombroeck (a frontier to verify).

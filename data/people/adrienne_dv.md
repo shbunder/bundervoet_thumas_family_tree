@@ -9,12 +9,14 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 father: eugenius_dv
 mother: octavia_schal
 spouses:
   - id: joannes_vi
     name: Joannes Van Iseghem
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Born in Stene and lived to 83; her marriage joined the Devriendt and Van Iseghem lines (children Diane, Rosette, Edi).

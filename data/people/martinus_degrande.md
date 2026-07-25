@@ -7,10 +7,12 @@ death:
   date: "1706"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: egidia_damman
     name: Egidia Damman
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — father of Egidius De Grande (1670 Dentergem). Married twice.

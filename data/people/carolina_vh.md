@@ -9,10 +9,12 @@ death:
   place: Zevekote
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 spouses:
   - id: pieterjacobus_v
     name: Pieter Jacobus Vanstechelman
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Wife of Pieter Jacobus Vanstechelman; mother of eight including Felix (1800); died at 36.

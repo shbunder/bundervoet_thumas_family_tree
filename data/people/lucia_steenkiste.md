@@ -6,13 +6,15 @@ birth:
   place: Oudenburg
 confidence: doc
 branch: Devriendt
+line: devriendt
 father: louis_steenkiste
 mother: reine_storms
 spouses:
   - id: henricus_j_ramon
     name: Henricus Josephus Ramon
     detail: Mariakerke, 18 Nov 1806
-source: Geneanet tree wernero
+sources:
+  - tree-wernero
 ---
 
 Daughter of Louis Steenkiste & Reine Storms; mother of Pierre Ramon.

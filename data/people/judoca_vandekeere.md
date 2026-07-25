@@ -7,10 +7,12 @@ death:
   date: "1771"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: joannes_declerck
     name: Joannes De Clerck
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — mother of Maria Catharina De Clerck (1727).

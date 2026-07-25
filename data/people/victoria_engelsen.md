@@ -9,11 +9,13 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: judocus_vi
     name: Judocus Franciscus Van Iseghem
     detail: Oostende, 25 Mar 1810
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Widowed in 1832 at 41; she lived another 17 years.

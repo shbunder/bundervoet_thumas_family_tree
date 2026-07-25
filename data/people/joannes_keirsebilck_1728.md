@@ -8,12 +8,14 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: joannes_keirsebilck_1697
 mother: adriana_devriese
 spouses:
   - id: maria_c_declerck
     name: Maria Catharina De Clerck
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 Father of Petrus Josephus Keirsebilck (1764). Married twice (2nd: Maria Francisca Slabbinck).

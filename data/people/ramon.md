@@ -7,13 +7,15 @@ birth:
 confidence: doc
 occupation: werkmeid & herbergierster (maid/innkeeper)
 branch: Devriendt
+line: devriendt
 father: carolus_ramon
 mother: cornelia_verkouille
 spouses:
   - id: joannesf_s
     name: Joannes Franciscus Smessaert
     detail: Oostende, 4 Jan 1882
-source: Geneanet tree wernero
+sources:
+  - tree-wernero
 ---
 
 Daughter of Carolus Ludovicus Ramon & Cornelia Verkouille; bore fourteen children with J.F. Smessaert.

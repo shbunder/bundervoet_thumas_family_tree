@@ -7,12 +7,14 @@ death:
   date: "1752"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: joannes_vanmaele
 mother: jacoba_vanalledewerelt
 spouses:
   - id: judoca_maertens
     name: Judoca Maertens
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Father of Francisca Van Maele (1710 Beernem).

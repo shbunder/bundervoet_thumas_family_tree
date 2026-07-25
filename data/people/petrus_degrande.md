@@ -7,12 +7,14 @@ death:
   date: "1765"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: egidius_degrande
 mother: joanna_wallays
 spouses:
   - id: adriana_sabbe
     name: Adriana Theresia Sabbe
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 Father of Michael De Grande (1726).

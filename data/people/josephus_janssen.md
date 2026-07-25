@@ -9,11 +9,13 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: appolonia_huyghebaert
     name: Appolonia Joanna Huyghebaert
     detail: Oostende, 28 Aug 1851
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Died at only 45; father of Hermanie Janssen, who married into the Van Iseghem line.

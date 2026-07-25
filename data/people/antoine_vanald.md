@@ -9,11 +9,13 @@ death:
   place: Diksmuide
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: brigitte_wyllie
     name: Brigitte Josephine Joanna Wyllie
     detail: Diksmuide, 8 Jun 1803
-source: Geneanet tree bartvanhooren
+sources:
+  - tree-bartvanhooren
 ---
 
 Died very young, at 28, only months after the birth of his son Carolus.

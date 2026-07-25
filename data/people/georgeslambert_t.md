@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: menuisier (carpenter)
 branch: Thumas
+line: thumas
 father: georges1_t
 mother: noel_t
 spouses:
   - id: quinart
     name: Marie Anne Catherine Quinart (Kinart)
     detail: Grez-Doiceau, 9 Feb 1801
-source: Geneanet / Grez-Doiceau civil records
+sources:
+  - geneanet
 ---
 
 Second of the four carpenter generations; had ten children and lived to age 90.

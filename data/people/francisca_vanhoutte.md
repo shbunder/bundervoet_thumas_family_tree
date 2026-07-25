@@ -8,13 +8,15 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: petrus_vandewalle
     name: Petrus Vandewalle
     detail: partner
   - name: Clementius Robaert
     detail: husband
-source: Geneanet tree isavdw (Rijksarchief scans; Heemkring Oostkamp; Bruges weesregisters)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER — mother of Carolus Vandewalle (1638). Widow of Clementius Robaert. Her own parents not recorded.

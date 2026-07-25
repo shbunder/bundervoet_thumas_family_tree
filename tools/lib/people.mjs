@@ -11,7 +11,7 @@ export const DATA = path.join(ROOT, 'data');
 export const PEOPLE_DIR = path.join(DATA, 'people');
 
 // The fields a person record may carry, in the order they are written.
-export const FIELDS = ['id', 'name', 'sex', 'birth', 'death', 'confidence', 'occupation', 'nickname', 'branch', 'father', 'mother', 'spouses', 'source'];
+export const FIELDS = ['id', 'name', 'sex', 'birth', 'death', 'confidence', 'occupation', 'nickname', 'branch', 'line', 'father', 'mother', 'spouses', 'sources'];
 export const EVENT_FIELDS = ['date', 'place'];
 export const SPOUSE_FIELDS = ['id', 'name', 'detail'];
 
@@ -85,7 +85,10 @@ export function loadConfig() {
     return captured;
   };
   return {
-    roster: read('people.js'),
+    // The roster is the directory listing. It used to be a hand-kept list in
+    // data/people.js that had to agree with the files on disk — 302 ids saying
+    // what `ls` already said, and one more thing to forget when adding a person.
+    roster: onDisk().sort(),
     meta: read('meta.js'),
     branches: read('branches.js'),
     lineages: read('lineages.js'),
@@ -114,6 +117,13 @@ export const onDisk = () =>
 // The site loads a generated bundle, so the display strings are computed once
 // here rather than in the renderer, and assets/ stays free of any logic about
 // what a date means.
+// Titles for the registry ids, loaded once so records can cite `tree-isavdw`
+// instead of repeating "Geneanet tree isavdw (Rijksarchief scans)" 25 times.
+let sourceTitles = {};
+export function setSourceTitles(map) {
+  sourceTitles = map;
+}
+
 export function toBrowserRecord(p) {
   const out = {
     id: p.id,
@@ -127,10 +137,13 @@ export function toBrowserRecord(p) {
   if (p.occupation) out.occupation = p.occupation;
   if (p.nickname) out.nickname = p.nickname;
   if (p.branch) out.branch = p.branch;
+  if (p.line) out.line = p.line;
   if (p.father) out.father = p.father;
   if (p.mother) out.mother = p.mother;
   if (p.spouses) out.spouses = p.spouses;
-  if (p.source) out.source = p.source;
+  // The records cite the registry by id; the browser wants something readable.
+  // Resolving here keeps the citation in one place and the prose out of the data.
+  if (p.sources && p.sources.length) out.source = p.sources.map(id => sourceTitles[id] || id).join('; ');
   if (p.note) out.note = p.note;
   return out;
 }

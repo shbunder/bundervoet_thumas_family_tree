@@ -9,11 +9,13 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: albertus_gautiert
     name: Albertus Jacobus Gautiert
     detail: Oostende, 5 May 1813
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Long-lived, reaching 85; her life spanned from the Austrian Netherlands to the Kingdom of Belgium.

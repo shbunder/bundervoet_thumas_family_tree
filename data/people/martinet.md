@@ -7,6 +7,7 @@ death:
   date: "1911"
 confidence: doc
 branch: Paelinck
+line: paelinck
 spouses:
   - id: carolus_vb
     name: Carolus Ludovicus Van Bogaert

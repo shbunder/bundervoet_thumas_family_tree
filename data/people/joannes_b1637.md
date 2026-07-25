@@ -8,12 +8,16 @@ death:
   place: Evergem
 confidence: doc
 branch: Bundervoet
+line: bundervoet
 father: segerius_bundervoet
 mother: joanna_vanhecke
 spouses:
   - id: joanna_verbrugghe
     name: Joanna Verbrugghe
-source: Geneanet trees paulderidder, glorieuxp, mjovdl (Evergem)
+sources:
+  - tree-paulderidder
+  - tree-glorieuxp
+  - tree-mjovdl
 ---
 
 Father of Joannes Bundervoet (1682). Parents Segerius Bundervoet x Joanna van Hecke.

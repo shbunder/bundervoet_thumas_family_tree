@@ -7,10 +7,12 @@ death:
   date: "1675"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: joannes_vanmaele
     name: Joannes Van Maele
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — grandmother of Francisca Van Maele.

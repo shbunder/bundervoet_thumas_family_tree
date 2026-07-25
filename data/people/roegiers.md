@@ -9,11 +9,13 @@ death:
 confidence: doc
 occupation: farm woman
 branch: Bundervoet
+line: bundervoet
 spouses:
   - id: judocus
     name: Judocus Bundervoet
     detail: "1834"
-source: Geneanet / Evergem records
+sources:
+  - geneanet
 ---
 
 Second wife of Judocus Bundervoet (m. 1834); mother of Bernardus.

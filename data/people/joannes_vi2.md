@@ -9,13 +9,15 @@ death:
   place: Stene
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 father: joannes_jos_vi
 mother: anna_gautiert
 spouses:
   - id: hermanie_janssen
     name: Hermanie Ludovica Janssen
     detail: Oostende, 23 Aug 1872
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Lived to 81; born in the city of Oostende but died in neighbouring rural Stene, where the family had settled.

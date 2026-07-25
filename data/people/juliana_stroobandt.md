@@ -9,13 +9,17 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: florentinus_stroobandt
 mother: rosalia_caeckaert
 spouses:
   - id: carel_cappaert
     name: Carel Louis Cappaert
     detail: Oostkamp, 30 Sep 1863
-source: Geneanet trees 1960dirk & kathrynann/isavdw; Oostkamp acts
+sources:
+  - tree-isavdw
+  - tree-kathrynann
+  - tree-1960dirk
 ---
 
 Married Carel Cappaert 1863 Oostkamp. Birth given as 13 Sep 1839 Beernem (kathrynann) or 12 Sep 1839 Oedelem (1960dirk) — adjacent villages. One of eleven Stroobandt children.

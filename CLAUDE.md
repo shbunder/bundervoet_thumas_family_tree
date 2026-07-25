@@ -122,7 +122,9 @@ Invariants:
 - `sex` is `"f"`/`"m"`, optional, and only needed for people who are nobody's parent
   (being a `father`/`mother` already settles it). Record it from what the source says —
   a note calling someone "Roland's sister", a role of "wife" — never from a forename.
-- Every id in `data/people/` is listed in `data/people.js`.
+- **Nothing is listed twice.** The roster is the directory; the Index groups from each
+  person's own `line`; citations are ids into `research/sources.json`. If you find
+  yourself keeping two things in step by hand, that is the bug.
 - The prose body is for reasoning, evidence and frontiers — the things that do not fit
   a field. It is never a second copy of a field.
 - Ids are stable. Renaming one breaks every reference — don't.
@@ -155,8 +157,7 @@ the validator fails if it is stale, so old data cannot reach the site.
 
 ```
 data/people/<id>.md     source of truth: strict frontmatter + prose body
-data/people.js          manifest of ids to load
-data/groups.js          Index tab sub-headings only (membership is derived)
+data/groups.js          Index tab headings — keyed, no membership lists
 data/lineages.js        the surname chains
 data/branches.js        default citation per branch
 data/meta.js            root/roots, confidence labels, footer
@@ -232,9 +233,6 @@ Not yet decided — do not implement unilaterally:
 - **Storage format.** Moving the person files to strict-fielded frontmatter + free-prose
   body. The build step exists now, so the objection has narrowed to whether the working
   files themselves change shape. *(Interchange is settled: GEDCOM 7 is exported.)*
-- **Person → source ids.** `source` on a person is still free text. `research/sources.json`
-  has stable ids to point at, so records could cite `S1` instead of repeating a
-  paragraph. Not migrated.
 - **Marriage detail is still prose.** `spouses[].detail` holds "Oostkamp, 30 Sep 1863"
   as free text, so the GEDCOM exporter still parses it. Person dates are structured;
   marriages are the last place that isn't.

@@ -6,10 +6,12 @@ birth:
   place: Bredene
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: eugenius_dv
     name: Eugenius Alphonsius Devriendt
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Born in the coastal village of Bredene; mother of Adrienne Devriendt.

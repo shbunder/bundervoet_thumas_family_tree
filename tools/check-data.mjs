@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { buildBundle } from './build.mjs';
+import { loadSources } from './research.mjs';
 import {
   DATA, PEOPLE_DIR, FIELDS, EVENT_FIELDS, SPOUSE_FIELDS,
   isValidDate, loadConfig, loadPerson, onDisk,
@@ -17,12 +18,13 @@ const warnings = [];
 const fail = m => errors.push(m);
 
 const { roster: ids, meta, branches, lineages, groups } = loadConfig();
+const GROUP_KEYS = new Set(groups.map(g => g.key));
+const { sites, pages } = loadSources();
+const SOURCE_IDS = new Set([...sites, ...pages].map(s => s.id));
 const CONFIDENCE = new Set(Object.keys(meta.confidenceLabels));
 
-// Every id in the manifest has a file, and no file is missing from the manifest.
-const files = onDisk();
-for (const id of ids) if (!files.includes(id)) fail(`people.js lists "${id}" but data/people/${id}.md is missing`);
-for (const f of files) if (!ids.includes(f)) fail(`data/people/${f}.md exists but is not listed in people.js`);
+// The roster IS the directory now, so there is no manifest to disagree with it.
+const files = ids;
 
 const people = {};
 for (const id of ids.filter(i => files.includes(i))) {
@@ -39,6 +41,7 @@ for (const id of ids.filter(i => files.includes(i))) {
   if (!p.name) fail(`${id}.md: missing "name"`);
   if (!CONFIDENCE.has(p.confidence)) fail(`${id}.md: confidence "${p.confidence}" is not one of ${[...CONFIDENCE].join(', ')}`);
   if (p.branch && !(p.branch in branches)) fail(`${id}.md: branch "${p.branch}" is not in branches.js`);
+  if (p.line && !GROUP_KEYS.has(p.line)) fail(`${id}.md: line "${p.line}" is not a key in groups.js`);
   if ('sex' in p && p.sex !== 'f' && p.sex !== 'm') fail(`${id}.md: sex "${p.sex}" must be "f" or "m"`);
 
   // A date is either in the grammar or explicitly marked raw. There is no third
@@ -56,6 +59,12 @@ for (const id of ids.filter(i => files.includes(i))) {
     if (!e.date && !e.raw) fail(`${id}.md: "${ev}" has neither a date nor a raw value`);
   }
 
+  // A citation is a link into research/sources.json, so a typo is caught here
+  // rather than becoming a claim backed by a source that does not exist.
+  if ('sources' in p) {
+    const list = Array.isArray(p.sources) ? p.sources.map(x => (typeof x === 'string' ? x : x.id)) : [p.sources];
+    for (const sid of list) if (!SOURCE_IDS.has(sid)) fail(`${id}.md: cites source "${sid}", which is not in research/sources.json`);
+  }
   if ('spouses' in p) {
     if (!Array.isArray(p.spouses)) fail(`${id}.md: "spouses" must be a list`);
     else for (const [i, s] of p.spouses.entries()) {
@@ -126,7 +135,7 @@ for (const l of lineages) {
   for (const id of lineageChain(l)) if (!people[id]) fail(`lineages.js (${l.key}): "${id}" does not exist`);
 }
 for (const g of groups) {
-  for (const id of g.people) if (!people[id]) fail(`groups.js (${g.title}): "${id}" does not exist`);
+  if (!g.key || !g.title) fail(`groups.js: every entry needs a key and a title`);
 }
 
 // Not fatal, but usually a mistake: a record connected to nothing. Marriage counts

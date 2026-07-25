@@ -3,6 +3,7 @@ id: petrus_devos
 name: Petrus Jacobus Franciscus Devos
 confidence: doc
 branch: Devriendt
+line: devriendt
 spouses:
   - id: loncke
     name: Charlotte Maria Loncke

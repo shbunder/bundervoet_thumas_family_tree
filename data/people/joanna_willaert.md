@@ -9,13 +9,15 @@ death:
   place: Torhout
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: nicolas_willaert
 mother: catharina_vanmassenhove
 spouses:
   - id: hercules_stroobandt
     name: Hercules Stroobandt
     detail: Torhout, 14 Jun 1659
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Third wife of Hercules Stroobandt, mother of Guillielmus (1659). Later remarried Franciscus De Lycke. Parents Nicolas Willaert x Catharina Van Massenhove.

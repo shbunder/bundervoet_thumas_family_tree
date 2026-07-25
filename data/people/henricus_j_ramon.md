@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: hovenier (gardener)
 branch: Devriendt
+line: devriendt
 father: mattheus_ramon
 mother: jacoba_ossaert
 spouses:
   - id: lucia_steenkiste
     name: Lucia Theresia Steenkiste
     detail: Mariakerke, 18 Nov 1806
-source: Geneanet tree wernero
+sources:
+  - tree-wernero
 ---
 
 A gardener; son of Mattheus Ramon & Jacoba Ossaert; father of Pierre Francois Ramon.

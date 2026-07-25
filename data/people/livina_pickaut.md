@@ -9,11 +9,13 @@ death:
   place: Lochristi
 confidence: doc
 branch: Paelinck
+line: paelinck
 spouses:
   - id: adrianus_p
     name: Adrianus Paelinck
     detail: Lochristi, 17 Jan 1711
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Died in 1726, the same year as her husband Adrianus; mother of Livinus (1718).

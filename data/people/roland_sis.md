@@ -7,9 +7,11 @@ birth:
   place: s
 confidence: fam
 branch: DeKeyser
+line: de-keyser
 father: gustaaf
 mother: simonne
-source: Family (Roland had a sister; name not yet known)
+sources:
+  - family
 ---
 
 Family recalls Roland had a sister; her name isn’t known yet. Likely born ~1940–45 (England or Oostende) — her birth record would be another route to confirm the parents Gustaaf & Simonne.

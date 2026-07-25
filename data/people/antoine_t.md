@@ -10,11 +10,15 @@ death:
 confidence: doc
 occupation: bailli (bailiff) van Piétrebais
 branch: Thumas
+line: thumas
 spouses:
   - id: daix
     name: Dieudonnée Daix
     detail: 30 Nov 1687
-source: Geneanet Thumas tree (m2155); 17th-c. Grez-Doiceau/Biez parish registers
+sources:
+  - tree-m2155
 ---
+
+Source detail: Geneanet Thumas tree (m2155); 17th-c. Grez-Doiceau/Biez parish registers
 
 The documented root of the Thumas paternal line: born in Biez (Brabant wallon) in 1656; held the seigneurial office of bailiff (bailli) of Piétrebais; married Dieudonnée Daix in 1687. FRONTIER (to verify before grafting): the m2155 tree gives his parents as Philippe Thumas × Anne Dujardin — check against the Biez/Grez-Doiceau registers.

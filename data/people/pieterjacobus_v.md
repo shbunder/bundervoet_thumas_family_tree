@@ -9,12 +9,14 @@ death:
   place: Zevekote
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 father: silvester_v
 mother: angela_c
 spouses:
   - id: carolina_vh
     name: Carolina Van Hille
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Of Zevekote; first wife Carolina Van Hille (our line, eight children incl. Felix); remarried Anna Osaer in 1810.

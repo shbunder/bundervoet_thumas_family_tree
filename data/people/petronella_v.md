@@ -9,11 +9,13 @@ death:
   place: Destelbergen
 confidence: doc
 branch: Paelinck
+line: paelinck
 spouses:
   - id: ludovicus_p
     name: Ludovicus Paelinck
     detail: Lochristi, Feb 1681
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Lived her whole documented life in Destelbergen; wife of Ludovicus Paelinck and mother of Adrianus (1690).

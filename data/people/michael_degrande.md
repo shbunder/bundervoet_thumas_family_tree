@@ -9,13 +9,15 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: petrus_degrande
 mother: adriana_sabbe
 spouses:
   - id: brigitta_deblaere
     name: Brigitta De Blaere
     detail: Ruiselede, 4 May 1755
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Parents Petrus De Grande (1697-1765) x Adriana Theresia Sabbe (1703-1768). One of twelve children.

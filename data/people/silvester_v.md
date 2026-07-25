@@ -9,12 +9,14 @@ death:
   place: Zevekote
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 father: andreasandries_v
 mother: boxoens
 spouses:
   - id: angela_c
     name: Angela Jacoba Casteleyn
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Married three times and fathered about fourteen children; the generation that settled the family in Zevekote. Our line runs through his 2nd wife, Angela Casteleyn.

@@ -7,10 +7,12 @@ death:
   date: "1689"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: petrus_vannieuwenhuyse
     name: Petrus Van Nieuwenhuyse
-source: Geneanet tree isavdw (Rijksarchief scans; Heemkring Oostkamp; Bruges weesregisters)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — mother of Anna Van Nieuwenhuyse (1676).

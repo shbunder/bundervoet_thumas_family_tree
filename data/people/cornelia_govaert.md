@@ -7,12 +7,14 @@ death:
   date: ~1653
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: rolandus_govaert
 mother: maria_vandenbussche
 spouses:
   - id: marinus_vannieuwenhuyse
     name: Marinus Van Nieuwenhuyse
-source: Geneanet isavdw (Rijksarchief scans, Oostkamp)
+sources:
+  - tree-isavdw
 ---
 
 Mother of Petrus Van Nieuwenhuyse (1649).

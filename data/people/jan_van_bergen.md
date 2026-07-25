@@ -7,10 +7,12 @@ death:
   date: "1898"
 confidence: sup
 branch: DeKeyser
+line: de-keyser
 spouses:
   - id: ida_vermandel
     name: Ida Vermandel
-source: Geneanet tree wete1998 (Erik Bekaert)
+sources:
+  - tree-wete1998
 ---
 
 Maternal grandfather of Louise Bocklandt — father of Maria Louisa Van Bergen (1842). Of Hamme (Oost-Vlaanderen).

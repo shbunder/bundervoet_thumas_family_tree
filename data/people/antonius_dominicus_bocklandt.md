@@ -7,13 +7,16 @@ death:
   date: "1883"
 confidence: sup
 branch: DeKeyser
+line: de-keyser
 father: daniel_bocklandt
 mother: philippa_vanpuyenbroeck
 spouses:
   - id: isabella_ichau
     name: Isabella Livia Ichau
     detail: married 1838
-source: Geneanet tree wete1998 (Erik Bekaert), a Hamme (Oost-Vlaanderen) specialist tree; confirmable in the Hamme O-Vl civil registers (Rijksarchief AGATHA)
+sources:
+  - tree-wete1998
+  - agatha
 ---
 
 Paternal grandfather of Louise Bocklandt. Married Isabella Livia Ichau in 1838. Of the Hamme (Oost-Vlaanderen / Waasland) Bocklandt family.

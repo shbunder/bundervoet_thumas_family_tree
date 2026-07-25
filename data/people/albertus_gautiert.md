@@ -9,11 +9,13 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: theresia_robbe
     name: Theresia Joanna Monica Robbe
     detail: Oostende, 5 May 1813
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Born under Austrian rule, he lived through the French Empire and the Dutch period into independent Belgium; died at 63.

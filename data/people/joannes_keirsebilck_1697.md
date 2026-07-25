@@ -7,10 +7,12 @@ death:
   date: "1759"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: adriana_devriese
     name: Adriana De Vriese
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — grandfather of Petrus Josephus Keirsebilck.

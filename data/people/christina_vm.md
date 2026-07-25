@@ -9,11 +9,13 @@ death:
   place: Laarne
 confidence: doc
 branch: Paelinck
+line: paelinck
 spouses:
   - id: apolonius_p
     name: Apolonius Paelinck
     detail: Destelbergen, 4 Sep 1770
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Mother of Jan Baptist (1771); moved with the family from Destelbergen to Laarne.

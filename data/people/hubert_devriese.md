@@ -9,13 +9,16 @@ death:
   place: Wingene
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: judocus_devriese
 mother: esther_vanderbeken
 spouses:
   - id: joanna_vdoughstraete
     name: Joanna Van Der Oughstraete
     detail: Tielt, 23 Nov 1687
-source: Geneanet tree kathrynann / isavdw (Tielt/Wingene parish records)
+sources:
+  - tree-isavdw
+  - tree-kathrynann
 ---
 
 Father of Anna Cornelia De Vriese. Married Joanna Van Der Oughstraete 1687.

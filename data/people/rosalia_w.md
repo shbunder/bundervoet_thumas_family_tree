@@ -7,10 +7,12 @@ birth:
 confidence: doc
 occupation: huisvrouw (housewife)
 branch: Paelinck
+line: paelinck
 spouses:
   - id: joannesf_p
     name: Joannes Franciscus Paelinck
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Housewife; mother of six recorded children including Eduardus (1858).

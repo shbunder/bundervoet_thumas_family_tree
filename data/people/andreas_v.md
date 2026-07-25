@@ -6,12 +6,14 @@ birth:
   place: Woumen
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 father: joannes_vs
 mother: francisca_casiers
 spouses:
   - id: pluvier
     name: Elisabeth Pluvier
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Born in Woumen; son of Joannes Vanstechele & Francisca Casiers.

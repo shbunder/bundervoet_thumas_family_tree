@@ -9,6 +9,7 @@ death:
   place: Kraainem
 confidence: doc
 branch: Thumas
+line: thumas
 father: jbgeorgius
 mother: vandenbemden
 spouses:

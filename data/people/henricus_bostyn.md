@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: metser (mason)
 branch: Bundervoet
+line: bostyn-cappaert
 father: henricus_j_bostyn
 mother: mathilde_desmet
 spouses:
   - id: judith_cappaert
     name: Judith Marie Cappaert
     detail: Oostkamp, 31 Jul 1900
-source: 1960dirk (Dirk Teerlinck) tree; Varsenare/Oostkamp civil acts
+sources:
+  - tree-1960dirk
 ---
 
 From Varsenare near Bruges; moved to Oostende (died Mariakerkelaan 115). Parents found via the Vynce Lémans (vxnce13) tree — his direct ancestry, sourced to the Rijksarchief.

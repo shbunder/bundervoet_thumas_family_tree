@@ -13,6 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, displayDates, loadConfig, loadPeople } from './lib/people.mjs';
+import { loadSources } from './research.mjs';
 
 const OUT = path.join(ROOT, 'exports', 'family-tree.ged');
 
@@ -212,9 +213,16 @@ for (const id of ids) {
 // The per-person source text is free-form prose. Deduplicating it gives a real
 // source list that an importing program can show, instead of the same paragraph
 // repeated on 174 people.
+const registry = (() => {
+  const { sites, pages } = loadSources();
+  return Object.fromEntries([...sites, ...pages].map(s => [s.id, s.title]));
+})();
+// A person cites the registry by id. Falling back to the branch default is only
+// for people who cite nothing at all.
 const sourceText = id => {
   const p = people[id];
-  return p.source || (p.branch && branches[p.branch]) || meta.defaultSource;
+  if (p.sources && p.sources.length) return p.sources.map(s => registry[s] || s).join('; ');
+  return (p.branch && branches[p.branch]) || meta.defaultSource;
 };
 const sourceXref = new Map();
 for (const id of ids) {

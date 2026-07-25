@@ -15,17 +15,21 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { DATA, ROOT, loadConfig, loadPeople, toBrowserRecord } from './lib/people.mjs';
+import { DATA, ROOT, loadConfig, loadPeople, setSourceTitles, toBrowserRecord } from './lib/people.mjs';
+import { loadSources } from './research.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 
 // The order the browser needs: configuration first, then the people.
-export const CONFIG_FILES = ['meta.js', 'branches.js', 'lineages.js', 'groups.js', 'people.js'];
+export const CONFIG_FILES = ['meta.js', 'branches.js', 'lineages.js', 'groups.js'];
 
 // Exported so the validator can rebuild this in memory and check the committed
 // file still matches, which is what stops a stale bundle being committed.
 export function buildBundle() {
+  const { sites, pages } = loadSources();
+  setSourceTitles(Object.fromEntries([...sites, ...pages].map(s => [s.id, s.title])));
   const { roster } = loadConfig();
   const people = loadPeople(roster);
   const parts = [
@@ -35,6 +39,7 @@ export function buildBundle() {
     '',
   ];
   for (const file of CONFIG_FILES) parts.push(fs.readFileSync(path.join(DATA, file), 'utf8').trim());
+  parts.push(`FamilyTree.roster(${JSON.stringify(roster)});`);
   for (const id of roster) {
     parts.push(`FamilyTree.person(${JSON.stringify(toBrowserRecord(people[id]))});`);
   }
@@ -59,4 +64,39 @@ if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToP
     const r = spawnSync(process.execPath, [path.join(HERE, script), ...args], { stdio: 'inherit' });
     if (r.status !== 0) process.exit(r.status ?? 1);
   }
+
+  stampPages();
+}
+
+// The last step from data to a working site. GitHub Pages caches for ten minutes,
+// so every asset is referenced with a ?v= stamp; bumping it by hand was a step
+// that got forgotten, and forgetting it means a change that looks like it failed.
+// The stamp is now a hash of what is actually served, so it changes when — and
+// only when — the bytes do.
+function stampPages() {
+  const inputs = [
+    path.join(DATA, 'bundle.js'),
+    ...fs.readdirSync(path.join(ROOT, 'assets', 'js')).map(f => path.join(ROOT, 'assets', 'js', f)),
+    ...fs.readdirSync(path.join(ROOT, 'assets', 'css')).map(f => path.join(ROOT, 'assets', 'css', f)),
+  ].sort();
+  const hash = createHash('sha256');
+  for (const f of inputs) hash.update(fs.readFileSync(f));
+  const stamp = hash.digest('hex').slice(0, 8);
+
+  const changed = [];
+  for (const page of ['index.html', 'Renee-Leon-family-tree.html']) {
+    const file = path.join(ROOT, page);
+    if (!fs.existsSync(file)) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    const after = before.replace(/\?v=[\w.]+/g, `?v=${stamp}`);
+    if (after !== before) {
+      fs.writeFileSync(file, after);
+      changed.push(page);
+    }
+  }
+  console.log(
+    changed.length
+      ? `\nCache stamp → ?v=${stamp} (${changed.join(', ')})`
+      : `\nCache stamp unchanged at ?v=${stamp}`
+  );
 }

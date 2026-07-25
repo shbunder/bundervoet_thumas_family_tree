@@ -10,11 +10,13 @@ death:
 confidence: doc
 occupation: arbeider (labourer)
 branch: Paelinck
+line: paelinck
 spouses:
   - id: martinet
     name: Maria Ludovica Martinet
     detail: Nieuwkerken-Waas, 1 Feb 1860
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 A labourer; father of Maria Magdalena Van Bogaert by his wife Maria Ludovica Martinet (1838–1911).

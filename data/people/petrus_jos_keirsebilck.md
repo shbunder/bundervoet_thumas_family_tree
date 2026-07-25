@@ -9,13 +9,15 @@ death:
   place: Oostkamp
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: joannes_keirsebilck_1728
 mother: maria_c_declerck
 spouses:
   - id: anna_fr_degrande
     name: Anna Francisca De Grande
     detail: Oostkamp, 4 Oct 1785
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Father of Joanna Keirsebilck (1791). Parents Joannes Keirsebilck (1728-1781) x Maria Catharina De Clerck (1727-1768).

@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: huishoudster (housekeeper)
 branch: Paelinck
+line: paelinck
 father: carolus_vb
 mother: martinet
 spouses:
   - id: eduardus_p
     name: Eduardus Paelinck
     detail: Sint-Niklaas, 17 Nov 1888 — her 2nd marriage
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Widowed young — her first husband Ludovicus Brion died in 1887 — then remarried Eduardus Paelinck in 1888. Buried at Begraafplaats Tereken, Sint-Niklaas. Daughter of Carolus Van Bogaert & Maria Martinet.

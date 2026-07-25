@@ -9,13 +9,15 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 father: lucien_vincke
 mother: ludovica_vanald
 spouses:
   - id: eduardus_vi
     name: Eduardus Van Iseghem
     detail: Oostende, 28 Sep 1907
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Lived to 94 — the longest-lived in this cluster — outliving her husband by nearly 30 years. Daughter of Lucien Vincke & Ludovica Vanalderweireldt.

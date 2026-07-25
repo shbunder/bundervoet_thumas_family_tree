@@ -7,6 +7,7 @@ death:
   date: "1857"
 confidence: doc
 branch: Thumas
+line: thumas
 spouses:
   - id: georges2_t
     name: Georges Thumas

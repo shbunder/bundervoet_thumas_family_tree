@@ -9,13 +9,15 @@ death:
   place: Oostende
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 father: christianus_vdb
 mother: delphina_vdb
 spouses:
   - id: felix_v
     name: Felix Vanstechelman
     detail: Mariakerke, 19 Dec 1844
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Second wife of the innkeeper Felix Vanstechelman; mother of the mason Petrus Jacobus (1854).

@@ -7,10 +7,12 @@ death:
   date: "1666"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: cornelia_govaert
     name: Cornelia Govaert
-source: Geneanet isavdw (Rijksarchief scans, Oostkamp)
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — father of Petrus Van Nieuwenhuyse (1649, alderman of Oostkamp). His own father is unrecorded (NN Van Nieuwenhuyse).

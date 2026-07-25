@@ -9,13 +9,15 @@ death:
   place: Zedelgem (Loppem)
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: engelbertus_vanmaele
 mother: judoca_maertens
 spouses:
   - id: henricus_vanacker
     name: Henricus Josephus Van Acker
     detail: Beernem, 17 Oct 1730
-source: Geneanet tree isavdw (Rijksarchief scans)
+sources:
+  - tree-isavdw
 ---
 
 Mother of Anna Maria Van Acker (1749). Parents Engelbertus Van Maele x Judoca Maertens.

@@ -3,10 +3,13 @@ id: helena_denijs
 name: Helena Denijs
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: pieter_stekelorum
     name: Pieter Stekelorum
-source: Geneanet tree stefanieschil (parents of Agatha Stekelorum)
+sources:
+  - tree-stefanieschil
+  - agatha
 ---
 
 FRONTIER above — wife of Pieter Stekelorum; dates not yet recovered.

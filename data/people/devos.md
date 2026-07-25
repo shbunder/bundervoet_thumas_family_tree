@@ -5,6 +5,7 @@ birth:
   date: "1896"
 confidence: doc
 branch: Devriendt
+line: devriendt
 father: petrus_devos
 mother: loncke
 spouses:

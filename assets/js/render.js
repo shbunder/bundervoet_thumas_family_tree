@@ -326,13 +326,14 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
       { key: 'other', title: 'Others', blurb: 'Married into the family, or not yet connected to it.' },
     ];
 
-    const curated = {};
+    // Each person names their own line; groups.js only says what the lines are
+    // called and in what order. Nobody is listed twice, and nobody can be left
+    // out of a list, because there is no list.
+    const titleOfLine = {};
     const orderOfTitle = {};
     groups.forEach((g, i) => {
+      titleOfLine[g.key] = g.title;
       orderOfTitle[g.title] = i;
-      g.people.forEach(id => {
-        if (!(id in curated)) curated[id] = g.title;
-      });
     });
 
     const personRow = id => {
@@ -353,7 +354,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
       const buckets = new Map();
       for (const id of members) {
-        const key = curated[id] || people[id].branch || 'Unplaced';
+        const key = titleOfLine[people[id].line] || people[id].branch || 'Unplaced';
         if (!buckets.has(key)) buckets.set(key, []);
         buckets.get(key).push(id);
       }
@@ -366,8 +367,15 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
         return ia !== ib ? ia - ib : a.localeCompare(b);
       });
 
+      // Within a heading, read down the generations rather than alphabetically —
+      // closest to the root first. Both are derived, but only one tells a story.
+      const byGeneration = (a, b) => {
+        const da = a in kin.distance ? kin.distance[a] : Infinity;
+        const db = b in kin.distance ? kin.distance[b] : Infinity;
+        return da - db || people[a].name.localeCompare(people[b].name);
+      };
       const cards = titles
-        .map(t => `<div class="bcard"><h4>${esc(t)}</h4>${buckets.get(t).map(personRow).join('')}</div>`)
+        .map(t => `<div class="bcard"><h4>${esc(t)}</h4>${buckets.get(t).sort(byGeneration).map(personRow).join('')}</div>`)
         .join('');
 
       return (

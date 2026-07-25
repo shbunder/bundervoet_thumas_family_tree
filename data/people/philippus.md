@@ -9,13 +9,15 @@ death:
   place: Evergem
 confidence: doc
 branch: Bundervoet
+line: bundervoet
 father: christoffel
 mother: bogaert
 spouses:
   - id: adriaenssens
     name: Joanna Maria Adriaenssens
     detail: "1784"
-source: Geneanet trees fauconier/paulderidder; Evergem registers
+sources:
+  - tree-paulderidder
 ---
 
 Of Evergem; married Joanna Adriaenssens in 1784, with many children including Judocus, Livinus and Peter Frans.

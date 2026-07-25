@@ -5,10 +5,12 @@ death:
   date: "1645"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 spouses:
   - id: laurentius_willems
     name: Laurentius Willems
-source: Geneanet isavdw
+sources:
+  - tree-isavdw
 ---
 
 FRONTIER above — grandmother of Joannes Van Maele.

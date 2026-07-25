@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: metser (mason)
 branch: Vanstechelman
+line: vanstechelman
 father: felix_v
 mother: sophiavdb
 spouses:
   - id: clementia_w
     name: Clementia Sophia Wagebaert
     detail: Mariakerke, 21 Jan 1875
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 A mason who fathered fifteen children (including Augusta); he and his wife both died in 1927.

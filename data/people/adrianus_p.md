@@ -9,13 +9,15 @@ death:
   place: Lochristi
 confidence: doc
 branch: Paelinck
+line: paelinck
 father: ludovicus_p
 mother: petronella_v
 spouses:
   - id: livina_pickaut
     name: Livina Pickaut
     detail: Lochristi, 17 Jan 1711
-source: Geneanet tree stefpaelinck
+sources:
+  - tree-stefpaelinck
 ---
 
 Died at only 36 — in 1726, the same year as his wife Livina Pickaut.

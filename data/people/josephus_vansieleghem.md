@@ -8,13 +8,15 @@ death:
   date: 1692-05-14
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: joannes_vansieleghem
 mother: joanna_defoort
 spouses:
   - id: maria_lampsins
     name: Maria Lampsins
     detail: Lichtervelde, 12 Aug 1657
-source: Geneanet tree isavdw (Rijksarchief scans; SVG Lichtervelde)
+sources:
+  - tree-isavdw
 ---
 
 Father of Clara Van Sieleghem (1666). Parents Joannes Van Sieleghem x Joanna De Foort.

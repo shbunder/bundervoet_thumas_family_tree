@@ -6,10 +6,12 @@ death:
   place: Zande
 confidence: doc
 branch: Devriendt
+line: devriendt
 spouses:
   - id: stephanus_ramon
     name: Stephanus Ramon
-source: Geneanet tree wernero
+sources:
+  - tree-wernero
 ---
 
 From Koekelare; mother of Mattheus Ramon (surname also recorded as 'Terwan').

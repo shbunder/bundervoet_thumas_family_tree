@@ -7,6 +7,7 @@ death:
   date: "1907"
 confidence: doc
 branch: Thumas
+line: thumas
 spouses:
   - id: guilielmus_bossin
     name: Guilielmus Bossin

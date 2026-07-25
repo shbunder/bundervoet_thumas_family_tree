@@ -6,10 +6,12 @@ birth:
   place: Stene
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 spouses:
   - id: octavia_schal
     name: Octavia Maria Schalandrijn
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Born in Stene; father of Adrienne Devriendt.

@@ -7,6 +7,7 @@ death:
   date: "1888"
 confidence: doc
 branch: Thumas
+line: thumas
 spouses:
   - id: peremans
     name: Joanna Catharina Jacoba Peremans

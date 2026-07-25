@@ -9,10 +9,12 @@ death:
   place: Zevekote
 confidence: doc
 branch: Vanstechelman
+line: vanstechelman
 spouses:
   - id: silvester_v
     name: Silvester Vanstechelman
-source: Geneanet tree stechec
+sources:
+  - tree-stechec
 ---
 
 Born in Esen; mother of ten Vanstechelman children including Pieter Jacobus.

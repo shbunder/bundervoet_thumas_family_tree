@@ -10,13 +10,15 @@ death:
 confidence: doc
 occupation: dienstmeid (maidservant)
 branch: Devriendt
+line: devriendt
 father: philippus_daneel
 mother: anna_senesael
 spouses:
   - id: pierre_ramon
     name: Pierre Francois Ramon
     detail: Oostende, 28 Jan 1835
-source: Geneanet tree wernero
+sources:
+  - tree-wernero
 ---
 
 A maidservant; daughter of Philippus Daneel & Anna Theresia Senesael; first wife of Pierre Ramon.

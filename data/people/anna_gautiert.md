@@ -9,13 +9,15 @@ death:
   place: Oostende
 confidence: doc
 branch: Bundervoet
+line: van-iseghem
 father: albertus_gautiert
 mother: theresia_robbe
 spouses:
   - id: joannes_jos_vi
     name: Joannes Josephus Van Iseghem
     detail: Oostende, 24 Mar 1847
-source: Geneanet tree gverdievel
+sources:
+  - tree-gverdievel
 ---
 
 Died at 40, a year before her husband; her son Joannes (1852) was orphaned young.

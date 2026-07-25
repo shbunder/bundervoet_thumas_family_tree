@@ -7,12 +7,14 @@ death:
   date: "1747"
 confidence: doc
 branch: Bundervoet
+line: bostyn-cappaert
 father: josephus_vansieleghem
 mother: maria_lampsins
 spouses:
   - id: guillielmus_stroobandt
     name: Guillielmus Stroobandt
-source: Geneanet tree isavdw (Rijksarchief zoekrobot scans, Oostkamp/Tielt area)
+sources:
+  - tree-isavdw
 ---
 
 Mother of Mauritius Stroobandt.
