@@ -45,3 +45,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 11 | 2026-07-26 | — | — | NEW SOURCE | **COD Oostende catalogue** — ~75 indexes incl. Volkstelling 1798 Oostende, Kiezerslijsten 1902/1914, Huwelijksbijlagen microfilms, rouwbrieven. First venue indexing Oostende at household level. | 70321eb |
 | 11 | 2026-07-26 | carolus_ramon | NOT REACHED | NOT FOUND | Not in the Heist-De Panne drowned-fishermen list (searched with `bevat`, table sanity-checked). Other COD tables untried. | 70321eb |
 | 11 | 2026-07-26 | — (method) | — | — | COD's `Familienaam` column holds FULL names — `=` finds nothing, use `bevat`. A negative taken with `=` is worthless. | 70321eb |
+| 12 | 2026-07-26 | elodia | NOT REACHED | NOT FOUND | COD Rouwbrieven has 7 Bostyns, none hers. Table verified populated, so this is a real negative. | 1d5fc20 |
+| 12 | 2026-07-26 | henricus_bostyn | NOT REACHED | BLOCKED | Huwelijksbijlagen Oostende returns nothing for any query — a catalogue stub; microfilms are on-site only (O-1013MM). | 1d5fc20 |
+| 12 | 2026-07-26 | — (method) | — | — | COD tables are not uniformly populated. Test with a broad query before trusting a negative. | 1d5fc20 |

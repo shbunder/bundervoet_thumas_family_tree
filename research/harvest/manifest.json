@@ -493,6 +493,18 @@
       "acts": 600
     },
     {
+      "id": "vanhecke",
+      "query": {
+        "name": "van Hecke",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 10005,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "vaniseghem",
       "query": {
         "name": "Van Iseghem",
@@ -563,6 +575,18 @@
       "mentions": 400,
       "complete": false,
       "acts": 400
+    },
+    {
+      "id": "verbrugghe",
+      "query": {
+        "name": "Verbrugghe",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 5022,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "verkouille",

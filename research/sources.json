@@ -852,7 +852,7 @@
       "yielded": "Not yet a record. Searched Omgekomen Vissers van Heist tot De Panne for Carolus Ramon, the Oostende fisherman this tree records as lost at sea in 1883 — no match. The catalogue itself is the yield: it is the first venue found that indexes Oostende at household and document level.",
       "confidence": "sup",
       "accessed": "2026-07-26",
-      "note": "TWO THINGS TO KNOW BEFORE SEARCHING IT. First, the column called Familienaam often holds a FULL name — 'Victor Vanloocke', not 'Vanloocke' — so the '=' operator finds nothing and 'bevat' must be used. A negative taken with '=' is worthless. Second, many tables carry 'Bestand raadpleegbaar op computer' and a bibliotheeknummer, meaning the index is searchable here but the DOCUMENT is consulted on site at Oostende. So this venue can prove a document exists and name it, and often cannot deliver it."
+      "note": "TWO THINGS TO KNOW BEFORE SEARCHING IT. First, the column called Familienaam often holds a FULL name — 'Victor Vanloocke', not 'Vanloocke' — so the '=' operator finds nothing and 'bevat' must be used. A negative taken with '=' is worthless. Second, many tables carry 'Bestand raadpleegbaar op computer' and a bibliotheeknummer, meaning the index is searchable here but the DOCUMENT is consulted on site at Oostende. So this venue can prove a document exists and name it, and often cannot deliver it. THIRD THING: the tables are not uniformly populated. Databank Rouwbrieven answers a 'bevat' query with real rows; Huwelijksbijlagen Oostende_Microfilms answers nothing at all for any query, which marks it a catalogue stub whose data lives only on the centre's own computers. Test a table with a broad query before trusting a negative from it."
     }
   ]
 }
