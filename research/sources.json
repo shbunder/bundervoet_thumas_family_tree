@@ -828,6 +828,19 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "FamilySearch's index entry, not the register image; the image is reachable from the record page and reading it would make the three people doc."
+    },
+    {
+      "id": "fv-ttind-gent",
+      "site": "fv-dataindexen",
+      "kind": "index-page",
+      "title": "Totaalindex op de oude parochieregisters — Arrondissement Gent (table 008_GENT)",
+      "url": "https://dataindexen.familiekunde-vlaanderen.be/SearchDB/search.php",
+      "artifact": "bundervoet-parishes-gent-totaalindex",
+      "covers": "Surname-by-parish presence across the old parish registers of arrondissement Gent, flagged d/h/o for baptism, marriage and burial. Queryable by Familienaam, Parochie and Akten.",
+      "yielded": "Bundervoet occurs in SEVENTEEN parishes of arrondissement Gent — Balegem, Desteldonk, Drongen, Evergem, Gentbrugge, Hansbeke, Lovendegem, Mariakerke, Merelbeke, Merendree, Oostakker, Semmerzake, Sleidinge, Vinderhoute, Wachtebeke, Wondelgem, Zomergem — where this tree has them in one. The first map of the Bundervoet forest, which is objective 3. Evergem carries all three registers, so its burials cover Joannes Bundervoet (1760) and Christoffel (1786).",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "A FINDING AID, not a record index: it gives surname, parish and which registers, never a person or a date. Nothing here is graftable; it says which register to read."
     }
   ]
 }

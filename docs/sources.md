@@ -34,7 +34,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 0 | Parenteel documents and family sites published outside the big platforms. |
 | `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 17 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
-| `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 1 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
+| `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 2 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 
 **`agatha`** — Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …').
 
@@ -441,3 +441,14 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Yielded:** Names the dead child's parents as Lambert Thumas and Marie Catherine Quinart — corroborating that couple, and revealing a son, Etienne, who died in 1812 and is not in the tree.
 - **Confidence:** sup
 - **Accessed:** 2026-07-25
+
+### Familiekunde Vlaanderen — dataindexen (indices en klappers)
+
+#### `fv-ttind-gent` — Totaalindex op de oude parochieregisters — Arrondissement Gent (table 008_GENT)
+- **Kind:** index-page · <https://dataindexen.familiekunde-vlaanderen.be/SearchDB/search.php>
+- **Covers:** Surname-by-parish presence across the old parish registers of arrondissement Gent, flagged d/h/o for baptism, marriage and burial. Queryable by Familienaam, Parochie and Akten.
+- **Yielded:** Bundervoet occurs in SEVENTEEN parishes of arrondissement Gent — Balegem, Desteldonk, Drongen, Evergem, Gentbrugge, Hansbeke, Lovendegem, Mariakerke, Merelbeke, Merendree, Oostakker, Semmerzake, Sleidinge, Vinderhoute, Wachtebeke, Wondelgem, Zomergem — where this tree has them in one. The first map of the Bundervoet forest, which is objective 3. Evergem carries all three registers, so its burials cover Joannes Bundervoet (1760) and Christoffel (1786).
+- **Saved artifact:** `data/artifacts/bundervoet-parishes-gent-totaalindex.md`
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** A FINDING AID, not a record index: it gives surname, parish and which registers, never a person or a date. Nothing here is graftable; it says which register to read.

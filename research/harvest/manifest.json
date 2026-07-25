@@ -193,6 +193,18 @@
       "acts": 600
     },
     {
+      "id": "joostens",
+      "query": {
+        "name": "Joostens",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 9377,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "keirsebilck",
       "query": {
         "name": "Keirsebilck",
@@ -392,6 +404,18 @@
       },
       "date": "2026-07-26",
       "found": 5063,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "vandenbemden",
+      "query": {
+        "name": "Vandenbemden",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 1262,
       "mentions": 600,
       "complete": false,
       "acts": 600

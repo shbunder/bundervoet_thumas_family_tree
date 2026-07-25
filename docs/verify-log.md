@@ -40,3 +40,5 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 8 | 2026-07-26 | — | — | NEW SOURCE | `fv-dataindexen` — Familiekunde Vlaanderen indices. Covers Evergem deaths 1796-1970 and **Oostende**. Found by the discovery step. | 8f3cafa |
 | 9 | 2026-07-26 | — | — | NEW SOURCE | **The pre-1796 layer.** FV Totaalindex covers every commune in the tree: Oostkamp 1631-1792, Woumen 1595-1796, Evergem burials 1682-1796, Belsele 1585-1796, +. Reaches the 158 people no other venue can. | 0583a1e |
 | 9 | 2026-07-26 | joannes_b | — | LEAD | His 1760 Evergem death falls inside FV's burial index 1682-1796 — the act whose only scan was an illegible 230×38 crop. Not yet retrieved: the search UI needs real clicks. | 0583a1e |
+| 10 | 2026-07-26 | joannes_b | — | NEW SOURCE | FV Totaalindex queried. **Bundervoet in 17 parishes of arr. Gent**, tree has 1 (Evergem). First map of the Bundervoet forest — objective 3. | 1291614 |
+| 10 | 2026-07-26 | — (method) | — | — | The Totaalindex is a *finding aid*: surname × parish × d/h/o flags. Never a person or date — nothing from it is graftable. | 1291614 |
