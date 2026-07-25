@@ -625,6 +625,18 @@
       "acts": 11
     },
     {
+      "id": "willaert",
+      "query": {
+        "name": "Willaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 5861,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "willems",
       "query": {
         "name": "Willems",

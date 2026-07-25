@@ -234,6 +234,19 @@
         "name-index"
       ],
       "note": "FOUND by discovery (July 2026) after the whole ladder missed on Bernardus Bundervoet. It reaches the layer nothing else here does — PRE-1796 PARISH REGISTERS, where 158 of this tree's people sit and where civil registration does not exist. Every commune checked against the tree is covered. Verified ranges: Oostkamp 1631-1792 (doop/huwelijk/overlijden) — the Sabbe, Wittenheyns, Van Renterghem and De Baecke tier; Woumen 1595-1796 — the Vanstechelman line; Evergem doop 1746-1796, huwelijk 1751-1794, OVERLIJDEN 1682-1796 — which covers Joannes Bundervoet's 1760 death and Christoffel's 1786; Belsele 1585-1796 — the Paelinck line; Zwevegem 1597-1803, Varsenare 1609-1791, Oedelem 1616-1791, Ruddervoorde 1623-1796. Its COD collection covers Oostende, where the largest unverified block of this tree lives. Searched through the interactive site, not by URL. INTERFACE: a legacy PHP site. The arrondissement links call gotoDB2(db, table) which sets two hidden fields on form `selectDB` and submits it; driving that from an injected script returns the same page, so it needs real clicks on the arrondissement link and then on the parish. Coverage above was read from the static 'Lijst van bewerkte parochies' page, which is plain HTML and needs no session. NOTHING HAS BEEN RETRIEVED FROM IT YET — the coverage is established, the searching is not."
+    },
+    {
+      "id": "fs-fulltext",
+      "kind": "index",
+      "title": "FamilySearch full-text search (machine-read unindexed images)",
+      "url": "https://www.familysearch.org/search/full-text",
+      "access": "login",
+      "covers": "Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing.",
+      "capabilities": [
+        "full-text",
+        "image-read"
+      ],
+      "note": "THE ROUTE TO THE PRE-1796 HALF OF THIS TREE. 158 of its people were born before civil registration and are unreachable by AGATHA, Open Archives or any name index, because the documents that name them were never indexed. This searches the manuscript itself. A first query for 'Bundervoet' returned 159 hits including a three-generation fief chain of 1687-1700 (Francois > Lievin > Pasquier > Lievin) and a Catherine Bundervoet widowed at Meirelbeke in 1587. Search by surname alone and read the snippets; the place filter behaves like FamilySearch's others and should not be trusted to constrain."
     }
   ],
   "pages": [
