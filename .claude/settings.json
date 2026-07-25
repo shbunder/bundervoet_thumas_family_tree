@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node tools/build.mjs)",
+      "Bash(node tools/check-data.mjs)",
+      "Bash(node tools/check-data.mjs --skip-generated)",
+      "Bash(node tools/export-gedcom.mjs)",
+      "Bash(node tools/research.mjs:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(curl -s http://127.0.0.1:9222/json/version)",
+      "Read(//Users/shaunbundervoet/Documents/family_tree/**)",
+      "Edit(//Users/shaunbundervoet/Documents/family_tree/data/**)",
+      "Write(//Users/shaunbundervoet/Documents/family_tree/data/**)",
+      "Edit(//Users/shaunbundervoet/Documents/family_tree/docs/**)",
+      "Write(//Users/shaunbundervoet/Documents/family_tree/docs/**)",
+      "Edit(//Users/shaunbundervoet/Documents/family_tree/research/**)",
+      "Write(//Users/shaunbundervoet/Documents/family_tree/research/**)",
+      "mcp__chrome__list_pages",
+      "mcp__chrome__select_page",
+      "mcp__chrome__new_page",
+      "mcp__chrome__navigate_page",
+      "mcp__chrome__take_snapshot",
+      "mcp__chrome__take_screenshot",
+      "mcp__chrome__evaluate_script",
+      "mcp__chrome__click",
+      "mcp__chrome__fill",
+      "mcp__chrome__fill_form",
+      "mcp__chrome__wait_for",
+      "mcp__chrome__press_key"
+    ],
+    "deny": [
+      "Read(//Users/shaunbundervoet/Documents/family_tree/.env)",
+      "Read(//Users/shaunbundervoet/Documents/family_tree/.env.*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

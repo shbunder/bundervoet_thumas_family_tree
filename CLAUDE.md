@@ -177,11 +177,30 @@ assets/                 presentation only — no names, no dates
 archive/                superseded drafts, not part of the site
 ```
 
+## Running a pass
+
+`/research-pass [person]` runs the whole loop through four subagents in `.claude/agents/`:
+
+| | |
+|---|---|
+| **strategist** | picks the frontier and the route — read-only |
+| **searcher** | runs the searches, logs every one — returns candidates, not conclusions |
+| **verifier** | tries to *refute* each candidate; defaults to NOT PROVEN |
+| **recorder** | writes the records, builds, commits — makes no judgements |
+
+They are separate so that no agent both finds a match and decides it is true. That
+separation is the main defence against the failure mode this project is built around.
+
+`node tools/research.mjs frontiers` derives the queue from the records each time it is
+asked, so it cannot go stale and an interrupted run resumes by recomputing rather than
+by remembering.
+
 ## Commands
 
 ```
 node tools/build.mjs           validate, then regenerate bundle.js + the GEDCOM
 node tools/check-data.mjs      validate only (must be green before commit)
+node tools/research.mjs frontiers        what to work on next, ranked
 node tools/research.mjs tried <person>    what was searched, found, and why it failed
 node tools/research.mjs untried <person> sites and pages not yet tried on them
 node tools/research.mjs yield            which sites and pages actually pay off
@@ -213,14 +232,12 @@ Not yet decided — do not implement unilaterally:
 - **Storage format.** Moving the person files to strict-fielded frontmatter + free-prose
   body. The build step exists now, so the objection has narrowed to whether the working
   files themselves change shape. *(Interchange is settled: GEDCOM 7 is exported.)*
-- **Sub-agent split** for autonomous runs — strategist / searcher / **verifier** /
-  archiver. The verifier is the one not to skip: a searcher that also decides is a
-  searcher that rationalises, and a bad graft is unfindable at scale. Keep the frontier
-  queue in a file, not in an agent's context, so a run survives a restart.
-- **Person → source ids.** `source` on a person is still free text; 118 distinct
-  strings. `research/sources.json` now has stable ids to point at, so the records could
-  cite `S1` instead of repeating a paragraph. Not migrated.
-
+- **Person → source ids.** `source` on a person is still free text. `research/sources.json`
+  has stable ids to point at, so records could cite `S1` instead of repeating a
+  paragraph. Not migrated.
+- **Marriage detail is still prose.** `spouses[].detail` holds "Oostkamp, 30 Sep 1863"
+  as free text, so the GEDCOM exporter still parses it. Person dates are structured;
+  marriages are the last place that isn't.
 **Waiting on you, not on a decision:** the browser server in `.mcp.json` needs Chrome
 started with remote debugging and logged in to the archives once — see
 [docs/searching.md](docs/searching.md). Until then, searches that need a session come

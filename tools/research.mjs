@@ -15,6 +15,7 @@
 //   node tools/research.mjs untried edouard_dk   sites and pages not yet used on them
 //   node tools/research.mjs sources              the registry, sites then pages
 //   node tools/research.mjs yield                which sites and pages actually pay off
+//   node tools/research.mjs frontiers            what to work on next, ranked
 //   node tools/research.mjs report               where the effort has gone
 //   node tools/research.mjs log …                record a search
 //   node tools/research.mjs check                validate log + registry
@@ -22,7 +23,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadPeople as readPeople } from './lib/people.mjs';
+import { loadConfig, loadPeople as readPeople } from './lib/people.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCES = path.join(ROOT, 'research', 'sources.json');
@@ -215,6 +216,81 @@ function cmdYield() {
   }
 }
 
+// What to work on next, worked out from the data rather than kept in a list by
+// hand. That matters for an unattended run: the queue cannot go stale, and a run
+// that dies halfway resumes by recomputing rather than by remembering.
+//
+// A frontier is a person whose parents are unknown — an actual wall — or a record
+// whose prose flags one. Ranked by how close they sit to the root, because
+// objective 1 says depth on the direct lines beats breadth.
+function cmdFrontiers() {
+  const people = loadPeople();
+  const { meta } = loadConfig();
+  const { sites } = loadSources();
+  const log = loadLog();
+
+  // Generations above the root, by the shortest line.
+  const roots = (meta.roots && meta.roots.length ? meta.roots : [meta.root]).filter(id => people[id]);
+  const depth = {};
+  const queue = [...roots];
+  for (const r of roots) depth[r] = 0;
+  for (let i = 0; i < queue.length; i++) {
+    const p = people[queue[i]];
+    if (!p) continue;
+    for (const parent of [p.father, p.mother]) {
+      if (parent && people[parent] && !(parent in depth)) {
+        depth[parent] = depth[queue[i]] + 1;
+        queue.push(parent);
+      }
+    }
+  }
+
+  const searchesFor = id => log.filter(e => e.person === id);
+  const rows = [];
+  for (const [id, p] of Object.entries(people)) {
+    const isAncestor = id in depth && depth[id] > 0;
+    const missingParents = !p.father && !p.mother;
+    const flagged = /FRONTIER/.test(p.note || '');
+    if (!missingParents && !flagged) continue;
+
+    const tried = searchesFor(id);
+    const untriedSites = sites.filter(s => !tried.some(e => e.site === s.id)).length;
+    const retryable = tried.filter(e => e.result === 'blocked').length;
+    rows.push({
+      id,
+      name: p.name,
+      depth: id in depth ? depth[id] : Infinity,
+      isAncestor,
+      why: missingParents ? 'parents unknown' : 'note flags a frontier',
+      confidence: p.confidence,
+      searched: tried.length,
+      untriedSites,
+      retryable,
+    });
+  }
+
+  // Direct ancestors first, then whoever sits closest to the root, then whoever
+  // has the most unexplored ground left.
+  rows.sort((a, b) =>
+    Number(b.isAncestor) - Number(a.isAncestor) ||
+    a.depth - b.depth ||
+    b.untriedSites - a.untriedSites ||
+    a.searched - b.searched
+  );
+
+  console.log(`${rows.length} open frontiers. Direct ancestors first, closest to the root first.\n`);
+  for (const r of rows.slice(0, 25)) {
+    const gen = r.depth === Infinity ? '—' : `gen ${r.depth}`;
+    console.log(
+      `  ${r.name.padEnd(34)} ${(r.isAncestor ? 'ancestor' : 'relative').padEnd(9)} ${gen.padEnd(7)} ${r.why.padEnd(22)}` +
+        ` ${r.searched} searched · ${r.untriedSites} sites untried` +
+        (r.retryable ? ` · ${r.retryable} blocked, retry` : '')
+    );
+    console.log(`  ${' '.repeat(34)} node tools/research.mjs untried ${r.id}`);
+  }
+  if (rows.length > 25) console.log(`\n  …and ${rows.length - 25} more.`);
+}
+
 function cmdReport() {
   const log = loadLog();
   const people = loadPeople();
@@ -349,6 +425,7 @@ const COMMANDS = {
   untried: cmdUntried,
   sources: cmdSources,
   yield: cmdYield,
+  frontiers: cmdFrontiers,
   report: cmdReport,
   docs: cmdDocs,
   check: () => {
