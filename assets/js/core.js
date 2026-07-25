@@ -47,10 +47,14 @@ window.FamilyTree = (function () {
   var version = (self.match(/[?&]v=([^&]*)/) || [])[1];
   var stamp = version ? '?v=' + version : '';
 
-  // Loads every person named in the roster. Order does not matter — each file just
-  // adds itself to FT.people — so they all go out at once.
+  // Loads any person in the roster who has not registered yet. Normally that is
+  // nobody: the page loads data/bundle.js, which already contains everyone, and
+  // this returns immediately. It still works file-by-file when the bundle is not
+  // there, so the individual data files remain openable on their own.
   FT.loadPeople = function (done) {
-    var ids = FT.roster_;
+    var ids = FT.roster_.filter(function (id) {
+      return !FT.people[id];
+    });
     var pending = ids.length;
     var missing = [];
 

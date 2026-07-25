@@ -26,7 +26,8 @@ data/
   branches.js                  default source citation per surname branch
   lineages.js                  the four surname chains in the "Lineages" tab
   groups.js                    optional headings for the "Index" tab
-  meta.js                      root person, confidence labels, footer text
+  meta.js                      root person(s), confidence labels, footer text
+  bundle.js                    all of the above in one file — generated
 assets/
   css/tree.css                 styling for the tree page
   css/site.css                 styling for the landing page
@@ -36,13 +37,19 @@ assets/
   js/ui.js                     theme switch, hover card, tabs
   js/main.js                   wires it together
 docs/research-log.md           what's documented, what's inferred, what to pull next
+tools/build.mjs                validates, then writes the generated files
 tools/check-data.mjs           validates the data files
 tools/export-gedcom.mjs        writes the GEDCOM export
 exports/family-tree.ged        the tree in GEDCOM 7 — generated, not edited
 archive/                       superseded drafts, not part of the site
 ```
 
-No build step and no dependencies — the files are served exactly as they are.
+No dependencies, and nothing is compiled — the files are served exactly as they are.
+There is one generation step, `node tools/build.mjs`, which concatenates `data/` into
+`data/bundle.js` and refreshes the GEDCOM export. The page reads the bundle so it makes
+one request instead of one per person, which is what lets the tree grow past a few
+hundred people. Both generated files are committed, so a clone still opens off disk and
+GitHub Pages needs nothing but the repo.
 
 ## A person file
 
@@ -112,11 +119,14 @@ escapes everything on the way out.
 1. Add or edit `data/people/<id>.js`.
 2. If the person is new, add the id to `data/people.js`. That is enough to put them
    in the Index — it is grouped from the links, not from a list.
-3. Run `node tools/check-data.mjs` — it catches syntax errors, typo'd parent ids,
-   unknown branches, people missing from the list, one-sided marriages, and
-   circular ancestry.
-4. Run `node tools/export-gedcom.mjs` to refresh `exports/family-tree.ged`.
-5. Commit. GitHub Pages picks it up; there is no build to run.
+3. Run `node tools/build.mjs`. It validates — catching syntax errors, typo'd parent
+   ids, unknown branches, people missing from the list, one-sided marriages and
+   circular ancestry — and then regenerates `data/bundle.js` and the GEDCOM export.
+   It refuses to generate anything from data that does not validate.
+4. Commit. GitHub Pages serves the files as they are.
+
+Forgetting step 3 cannot ship stale data: `check-data.mjs` fails while the generated
+files are out of date with `data/people/`, and it has to be green before a commit.
 
 ## The Index
 
@@ -150,8 +160,7 @@ The exporter will not write a file that does not read back as the same tree: it
 reparses its own output, rebuilds every parent and marriage link from that alone, and
 stops if any of them disagree with the source records. It also prints what GEDCOM
 could not carry rather than guessing — a date like "a few years ago" stays as a note
-instead of becoming a year, and a `role` of "Uncle (Shaun's brother)" is not filed as
-an occupation.
+instead of becoming a year.
 
 ## Making a change show up straight away
 
@@ -160,11 +169,10 @@ browser that has already opened the page can keep showing the old version for up
 to ten minutes. That is long enough to look like a change didn't work.
 
 Every stylesheet and script in `Renee-Leon-family-tree.html` is referenced with a
-`?v=N` stamp, and `core.js` carries the same stamp onto the person files it loads.
-**Bump that number** — a find-and-replace of `?v=1` to `?v=2` across the page —
-and every visitor gets the new version on their next load rather than up to ten
-minutes later. It only matters when you want the change visible immediately;
-forgetting it just means the old ten-minute wait.
+`?v=N` stamp, `data/bundle.js` included. **Bump that number** — a find-and-replace of
+`?v=7` to `?v=8` across the page — and every visitor gets the new version on their next
+load rather than up to ten minutes later. It only matters when you want the change
+visible immediately; forgetting it just means the old ten-minute wait.
 
 ## Why the data files are `.js` and not `.json`
 

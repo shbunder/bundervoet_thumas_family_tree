@@ -113,13 +113,19 @@ three categories are derived from the links, so a new person appears without bei
 to any list. `meta.roots` takes a list for the forest case (objective 3); with one root
 it is the ordinary tree.
 
+The page loads `data/bundle.js` — one request for the whole tree, whatever it grows to.
+The files in `data/` stay the source of truth; the bundle is generated from them, and
+the validator fails if it is stale, so old data cannot reach the site.
+
 **Known limits of the current model** — the next structural work:
 
-1. **One `<script>` tag per person.** Fine at 301, fatal at thousands. Needs a bundled
-   data file (and therefore a build step) before the tree grows an order of magnitude.
-   The relation finder's two `<select>`s go the same way at that size.
+1. **The bundle is loaded eagerly and committed whole.** ~580 bytes per person, so
+   ~6 MB and a full rewrite per commit at 10,000 people. Past a few thousand it wants
+   splitting (by branch or generation) and loading on demand, and the build moving to
+   CI so the artefact leaves git. The relation finder's two `<select>`s go the same way.
 2. **Sex is unknown for anyone childless** unless their record states it. Relations then
    read "sibling" rather than "sister". Fill `sex` in only from what a record says.
+   *(Currently all 302 are known — keep it that way as people are added.)*
 
 ---
 
@@ -135,8 +141,10 @@ data/meta.js            root/roots, confidence labels, footer
 docs/research-log.md    numbered passes: found / checked-and-negative / next
 docs/sources.md         source registry, stable S-ids, with local artifacts
 docs/sources/           saved act images and scans
+tools/build.mjs         validates, then writes the generated files
 tools/check-data.mjs    the validator
 tools/export-gedcom.mjs writes exports/family-tree.ged
+data/bundle.js          all of data/ in one file — generated, what the page loads
 exports/family-tree.ged GEDCOM 7 — generated, never edited by hand
 assets/                 presentation only — no names, no dates
 archive/                superseded drafts, not part of the site
@@ -145,10 +153,14 @@ archive/                superseded drafts, not part of the site
 ## Commands
 
 ```
-node tools/check-data.mjs      validate (must be green before commit)
-node tools/export-gedcom.mjs   regenerate the GEDCOM (run after changing data)
+node tools/build.mjs           validate, then regenerate bundle.js + the GEDCOM
+node tools/check-data.mjs      validate only (must be green before commit)
 open index.html                the site, straight off disk
 ```
+
+**After changing anything in `data/`, run `node tools/build.mjs`.** It validates first
+and refuses to generate from a broken tree. `check-data.mjs` fails if the generated
+files are stale, so the "green before commit" rule already covers this.
 
 `exports/family-tree.ged` is the tree in **GEDCOM 7**, the open format every genealogy
 program reads — import it into Gramps, Geneanet, Ancestry or MyHeritage, and it is the

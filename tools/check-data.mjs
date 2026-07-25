@@ -4,8 +4,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { buildBundle } from './build.mjs';
 
 const DATA = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data');
+// The build runs this validator first, so it passes --skip-generated to avoid
+// being told the files it is about to write are out of date.
+const SKIP_GENERATED = process.argv.includes('--skip-generated');
 
 const errors = [];
 const warnings = [];
@@ -175,6 +179,18 @@ for (const id of ids) {
       ? `${id}.js: connected to nobody — no parents, children or spouse`
       : `${id}.js: not connected to any root in meta.js (add a root, or link them in)`
   );
+}
+
+// The page loads data/bundle.js, not the individual files, so a stale bundle is
+// a site that silently shows old data. Catching it here means it cannot be
+// committed: the rule is that this validator is green before every commit.
+if (!SKIP_GENERATED) {
+  const bundlePath = path.join(DATA, 'bundle.js');
+  if (!fs.existsSync(bundlePath)) {
+    fail('data/bundle.js is missing — run: node tools/build.mjs');
+  } else if (fs.readFileSync(bundlePath, 'utf8') !== buildBundle(path.join(DATA, '..'))) {
+    fail('data/bundle.js is out of date with data/people/ — run: node tools/build.mjs');
+  }
 }
 
 for (const w of warnings) console.warn('warn  ' + w);
