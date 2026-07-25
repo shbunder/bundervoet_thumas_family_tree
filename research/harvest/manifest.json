@@ -265,6 +265,18 @@
       "acts": 600
     },
     {
+      "id": "rotsaert",
+      "query": {
+        "name": "Rotsaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 3864,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "rups",
       "query": {
         "name": "Rups",
