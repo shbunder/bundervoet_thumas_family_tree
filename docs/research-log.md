@@ -1771,3 +1771,50 @@ transcriptions. It is on FamilySearch film **DGS 004471767** (*Geboorten 1796–
 Huwelijken 1796–1832, Overlijdens 1796–1842*, cat 140936), which is unindexed and bound in
 blocks by record type, so it is a browse and not a lookup. After that, the Bertem death
 acts of January and November 1880.
+
+## 52. The sweep corroborates its own sources — 20 of 52, measured
+
+The corpus finished harvesting at 85,000 acts, roughly two and a half times what it held this
+morning, and `verify_all.py` ran over the whole tree for the first time on it. Corroborated
+went from **26 to 52**.
+
+**Twenty of those 52 are echoes, not checks.** They are people created *today*, from acts read
+on AGATHA or FamilySearch — and the corroborating act in the corpus is the same act.
+[[jcseraphina_t]] is the clean demonstration: she was written from AGATHA's
+`HUVLB_HUBRA_00204117_0`, and `link.py` now scores her at 61 bits, four independent
+identifiers, against Open Archives `abl:feb53842…`, whose own act reference is
+`HUBRA_00204117_0`. The same document, reached through two aggregators, counted as agreement
+between a record and the evidence for it.
+
+This is not a bug in the scorer. The scorer is doing exactly what it says — comparing a record
+against held mentions — and it has no way to know which mention the record was written from.
+It is a bug in **how the number gets read**. "52 corroborated" invites the inference that 52
+people have been independently checked, and the true figure this morning is **32**, the ones
+that predate today's writing.
+
+The general shape is worth stating because it will recur every time the loop runs well: *a
+pass that adds people from documents inflates the next sweep's corroboration count by exactly
+the people it added.* The better the pass, the worse the inflation. Left alone, that number
+climbs forever and means less each time.
+
+**The fix is small and belongs in the tool, not in a habit.** Every person record already
+cites its sources, and every registered source page for an act already carries that act's id
+or URL. `verify_all.py` should exclude, for each person, any corpus mention whose act id
+appears in that person's own citations — and say how many it excluded, so the exclusion is
+visible rather than silent. Then "corroborated" would mean what everyone reads it as: agreement
+with a document the record was *not* built from.
+
+That is a change to `tools/`, which this pass is not allowed to make, so it is recorded here as
+a finding. Until it exists, the honest way to read a sweep is: **check the corroborated list
+against what the last few passes added, and subtract.**
+
+Two smaller things from the same run, both recorded rather than acted on:
+
+- `research.py children` printed a header saying **27 to add** and then listed **24**. The
+  three missing are unexplained. The 24 were taken; the header should not be trusted until the
+  gap is understood.
+- The same report proposed **[LINK → cornelius_bossin]** for a *Karel Joseph Bossin* born
+  **1901**, against a Cornelius Bossin born **1847** — a fifty-four-year gap, matched on
+  surname and commune. Refused. The blocking index is right to surface it and a human reading
+  is right to drop it; that division of labour is the design working, but it only works if the
+  suggestions are actually read rather than applied.
