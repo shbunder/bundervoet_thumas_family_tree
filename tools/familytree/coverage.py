@@ -241,55 +241,32 @@ def missing_children(people: dict, children: dict | None = None) -> list[Missing
         pid: (p.get("father"), p.get("mother")) for pid, p in people.items()
     }
 
-    if store.is_current():
-        # Asked from the tree side, for the reason act_coverage explains: blocking is
-        # symmetric, so 434 indexed lookups reach the same pairs as a walk over 1.7 million
-        # acts, which took 375 seconds. And it narrows the acts worth examining at all —
-        # a parent here must identify to somebody in the tree, identification requires a
-        # shared blocking key, so an act naming no candidate for anybody cannot qualify and
-        # is never read.
-        resolved: dict[str, tuple[str, float]] = {}
-        acts: dict[str, Act] = {}
-        for p in people.values():
-            me = from_person(p, people, children)
-            # Compared in the same order the scan below uses — mention first — so the two
-            # routes cannot disagree about a pair's score. Only what is graftable earns the
-            # cost of reading its act.
-            kept = []
-            for c in store.candidates_for(me):
-                m = compare(c, me)
-                if not m.graftable:
-                    continue
-                held = resolved.get(c.ref)
-                if held is None or m.bits > held[1]:
-                    resolved[c.ref] = (p["id"], m.bits)
-                kept.append(c)
-            for c in store.attach(kept):
-                if c.mention is not None:
-                    acts[c.mention.act.id] = c.mention.act
+    # SCANNED, DELIBERATELY, unlike act_coverage — and measured rather than assumed, twice.
+    #
+    # The symmetric-blocking inversion that made `act_coverage` faster made this one twice
+    # as slow: 375 seconds became 786. The difference is what is on the asking side.
+    # `act_coverage` asks about 223 frontiers; this asks about all 434 people in the tree,
+    # and every one of them pulls its whole blocking bucket — which, for a Vandenbemden or a
+    # Vandewalle, is the 150,611 mentions sharing the six-character key `x:fanden`. Reading
+    # a hundred thousand stored candidates per person costs more than reading every act once
+    # and doing a cheap lookup against an index of 434.
+    #
+    # So the direction to ask from is not a matter of taste: it depends on how many
+    # candidates the asking side drags in, and the honest way to know is to time both. If
+    # the prefix key is ever made selective, this is worth timing again.
+    index = build_index([from_person(p, people, children) for p in people.values()])
 
-        def identify(mention) -> str | None:
-            act = mention.act
-            found = resolved.get(f"{act.id}#{mention.pid}" if act else mention.pid)
-            return found[0] if found else None
-
-        source = list(acts.values())
-    else:
-        index = build_index([from_person(p, people, children) for p in people.values()])
-
-        def identify(mention) -> str | None:
-            """Which tree person this mention is, or None. The project's own floor applies."""
-            best = None
-            for other in candidates_for(from_mention(mention), index):
-                m = compare(from_mention(mention), other)
-                if m.graftable and (best is None or m.bits > best[1]):
-                    best = (other.person_id, m.bits)
-            return best[0] if best else None
-
-        source = load_corpus()
+    def identify(mention) -> str | None:
+        """Which tree person this mention is, or None. The project's own floor applies."""
+        best = None
+        for other in candidates_for(from_mention(mention), index):
+            m = compare(from_mention(mention), other)
+            if m.graftable and (best is None or m.bits > best[1]):
+                best = (other.person_id, m.bits)
+        return best[0] if best else None
 
     out: list[MissingChild] = []
-    for act in source:
+    for act in load_corpus():
         by_pid = {p.pid: p for p in act.people}
         # Group the act's parent edges by the child they attach to, so a birth act with a
         # father and a mother yields one candidate couple rather than two halves.
