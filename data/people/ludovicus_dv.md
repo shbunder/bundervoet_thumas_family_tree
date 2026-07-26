@@ -3,6 +3,7 @@ id: ludovicus_dv
 name: Ludovicus Josephus Devriendt
 surname: Devriendt
 death:
+  date: <1906
   raw: before 10 November 1906
 confidence: doc
 branch: Bundervoet

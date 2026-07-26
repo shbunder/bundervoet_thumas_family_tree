@@ -10,13 +10,9 @@ the other job: it takes the people already in the index and gets evidence for ea
 pass here ends with records cited, corrected, or explicitly marked unverifiable-and-why —
 never with a person left silently resting on a member tree.
 
-I am not at the computer. **Do not ask me questions.** Where you would ask, choose what
-[CLAUDE.md](../../CLAUDE.md) already implies, write the choice into the log, and continue.
-Derive every queue fresh from the tools; nothing here should be remembered from earlier in a
-conversation.
-
-Do not edit `tools/`, `.claude/` or `CLAUDE.md`. If a pass seems to need it, that is a
-finding for the final report, not a change to make now.
+**The rules for an unattended run are in [CLAUDE.md](../../CLAUDE.md) § Unattended runs** and
+are not repeated here. This file is only what is particular to *verifying*: the buckets, the
+venue ladder, the duty to go looking for a venue that is not in it, and this run's own log.
 
 ## Before the first pass
 
@@ -141,10 +137,7 @@ sha256 and `evidences:` list. An act read but not saved has to be read again.
    scorer has offered a 1809 Aalst man for a boy born in 1920s Oostende, and a woman bearing
    children a decade before her supposed birth. Both scored "strong". A date or a place must
    agree.
-2. **Never upgrade to `doc` without having actually read the act or its image.** An index
-   transcription is `sup`, however authoritative the archive.
-3. **Never invent a field.** If the act does not give an occupation or a day, it is absent.
-4. **A strong lead is not a link — but a named child is not a lead.** Keep the two apart.
+2. **A strong lead is not a link — but a named child is not a lead.** Keep the two apart.
    *Identifying* someone — deciding a person in a record IS a person in the tree — needs two
    independent identifiers and stays a frontier until it has them. *Transcribing* someone —
    adding a person a document names as another's child, spouse or parent — is not that, and
@@ -152,21 +145,15 @@ sha256 and `evidences:` list. An act read but not saved has to be read again.
    better evidence than the member trees much of this tree was built on, and every person
    added brings their own dates, spouses and frontiers with them. Add them at the confidence
    the source earns, cite it, and say in the prose what has not been read.
-5. **A pass that verifies nothing and logs five honest misses is a successful pass.** Do not
-   lower the bar to have something to report.
-6. **Assert your edits landed.** A bulk edit that inserts a citation after a `sources:` line
+3. **Assert your edits landed.** A bulk edit that inserts a citation after a `sources:` line
    silently does nothing on records that have no `sources:` block — and if the same script
    also sets `confidence: doc`, the result is a documented claim citing nothing. That has
    happened. After any batch edit, re-check the records you meant to change.
 
-## Write, every pass
+## This run's own log
 
-- The person files — citation by id, honest confidence, no invented field.
-- `uv run tools/research.py log …` for every search, hit or miss; a miss states its scope.
-- `uv run tools/evaluate.py label …` for every ruling, **rejections included** — a rejected
-  pair that scored well is the most useful label the scorer can get.
-- New sources and artifacts registered.
-- A numbered section in `docs/research-log.md`.
+Everything else that gets written is in CLAUDE.md § Unattended runs. Specific to this command:
+
 - One row in `docs/verify-log.md`. Create it if absent, with this header:
 
   ```
@@ -176,15 +163,6 @@ sha256 and `evidences:` list. An act read but not saved has to be read again.
 
   `verdict` is DOCUMENTED / CORROBORATED / LEAD / REJECTED / NOT FOUND / BLOCKED /
   NEW SOURCE. A NOT FOUND row must name the venues walked; otherwise it is not one.
-- `uv run tools/build.py`, then one commit per pass. **Do not push.**
-
-## Stop early if
-
-- `build.py` fails for a reason the validator's own message does not explain. Leave the tree
-  as it is; never force it green.
-- Three passes in a row come back entirely `blocked` — the browser session or the network is
-  gone, and further passes will only log noise.
-- Continuing would require breaking a rule above.
 
 ## At the end
 

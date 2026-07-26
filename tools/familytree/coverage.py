@@ -25,6 +25,7 @@ from dataclasses import dataclass, field
 
 from . import store
 from .corpus import Act, corpus_exists, load_corpus, normalise_key
+from .labels import refutations
 from .match import build_index, candidates_for, compare, from_mention, from_person
 from .people import ancestors_of, family_key
 from .frontier import children_index, generations
@@ -219,8 +220,14 @@ class MissingChild:
         return "link" if self.existing else "add"
 
 
-def missing_children(people: dict, children: dict | None = None) -> list[MissingChild]:
+def missing_children(people: dict, children: dict | None = None,
+                     suppressed: list | None = None) -> list[MissingChild]:
     """Children the corpus names for couples the tree already holds.
+
+    `suppressed`, if given, is appended with every (person, mention ref, why) that a
+    recorded refutation kept out of the results. A queue that silently drops things is
+    indistinguishable from one that never found them, and this project's whole discipline
+    is that a cap or an exclusion says so.
 
     The identification is deliberately strict: BOTH parents must match tree people by the
     ordinary scoring rules, and those two must already be recorded as a couple. A single
@@ -246,22 +253,49 @@ def missing_children(people: dict, children: dict | None = None) -> list[Missing
     # The symmetric-blocking inversion that made `act_coverage` faster made this one twice
     # as slow: 375 seconds became 786. The difference is what is on the asking side.
     # `act_coverage` asks about 223 frontiers; this asks about all 434 people in the tree,
-    # and every one of them pulls its whole blocking bucket — which, for a Vandenbemden or a
-    # Vandewalle, is the 150,611 mentions sharing the six-character key `x:fanden`. Reading
-    # a hundred thousand stored candidates per person costs more than reading every act once
-    # and doing a cheap lookup against an index of 434.
+    # and every one of them pulls its whole blocking bucket. Reading a hundred thousand
+    # stored candidates per person cost more than reading every act once and doing a cheap
+    # lookup against an index of 434.
     #
     # So the direction to ask from is not a matter of taste: it depends on how many
-    # candidates the asking side drags in, and the honest way to know is to time both. If
-    # the prefix key is ever made selective, this is worth timing again.
+    # candidates the asking side drags in, and the honest way to know is to time both.
+    #
+    # THAT 786 IS NOW OUT OF DATE, AND THE RETIMING IS OWED. It was measured when the prefix
+    # key took six characters off the front of the surname, so a Vandenbemden pulled the
+    # 150,611 mentions sharing `x:fanden`. The key now strips the particle and blocks on the
+    # family, which cut the mentions pulled across all open frontiers from 2,542,433 to
+    # 941,505 — and the scan side of this report fell from 289.5s to 117.9s on the same
+    # change. Scaling the 786 by that same factor lands near 290s, which would still lose to
+    # the scan, but that is arithmetic on an old measurement and not a measurement. The
+    # condition this comment used to end with — "if the prefix key is ever made selective" —
+    # has been met, so the number above should be re-measured before it is trusted again.
     index = build_index([from_person(p, people, children) for p in people.values()])
 
+    refuted = refutations()
+    suppressed: list[tuple[str, str, str]] = []
+
     def identify(mention) -> str | None:
-        """Which tree person this mention is, or None. The project's own floor applies."""
+        """Which tree person this mention is, or None. The project's own floor applies.
+
+        And the project's own RULINGS. A pair a verifier read the act for and rejected is
+        not offered again — that is what `research.py tried` has always done for searches,
+        applied at last to the more expensive kind of evidence.
+        """
+        # Built ONCE. This used to call from_mention inside the loop as well, so a mention
+        # with forty candidates rebuilt its own Candidate forty-one times — and each rebuild
+        # walks the act's relation edges through stated_kin to assemble the kin tuples. It is
+        # the innermost function of a report that reads every act in the corpus.
+        c = from_mention(mention)
         best = None
-        for other in candidates_for(from_mention(mention), index):
-            m = compare(from_mention(mention), other)
-            if m.graftable and (best is None or m.bits > best[1]):
+        for other in candidates_for(c, index):
+            m = compare(c, other)
+            if not m.graftable:
+                continue
+            ruling = refuted.of(other.person_id, c.ref)
+            if ruling is not None:
+                suppressed.append((other.person_id, c.ref, ruling.why))
+                continue
+            if best is None or m.bits > best[1]:
                 best = (other.person_id, m.bits)
         return best[0] if best else None
 

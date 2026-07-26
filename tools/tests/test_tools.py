@@ -10,6 +10,8 @@ pinning.
 
 from __future__ import annotations
 
+import json
+
 import pytest
 
 from familytree import frontmatter
@@ -123,6 +125,100 @@ def test_formats_for_display_only():
 
 def test_year_of_reads_every_form():
     assert [year_of(v) for v in ("1876-11-12", "~1682", "<1727", "1575..1587", None)] == [1876, 1682, 1727, 1575, None]
+
+
+def test_a_date_says_one_thing_and_permits_another():
+    """`point_year` is what a date ASSERTS, `year_span` what it PERMITS, and every veto in
+    match.py asks the second question. Reading `year_of` instead flattened `1920..1929` to
+    "1920" and made every other year in the range a conflict with it."""
+    from familytree.people import APPROX_SLACK, point_year, year_span
+    assert (point_year("1876-11-12"), year_span("1876-11-12")) == (1876, (1876, 1876))
+    assert (point_year("1876"), year_span("1876")) == (1876, (1876, 1876))
+    # About: asserts a year, permits a window either side.
+    assert point_year("~1682") == 1682
+    assert year_span("~1682") == (1682 - APPROX_SLACK, 1682 + APPROX_SLACK)
+    # Bounds and ranges assert NO year — an open end means unknown, not zero.
+    assert point_year("<1727") is None and year_span("<1727") == (None, 1727)
+    assert point_year(">1900") is None and year_span(">1900") == (1900, None)
+    assert point_year("1575..1587") is None and year_span("1575..1587") == (1575, 1587)
+    assert year_span(None) == (None, None)
+
+
+def test_a_range_does_not_disagree_with_a_year_inside_it():
+    """Gustaaf's birth is recorded `1920..1929` — the grammar saying the decade is as much
+    as is known. Acts stating 1923, 1925 and 1929 were REJECTED as conflicting with that
+    range, so the one thing his record admits it does not know became a reason to refuse
+    every record that would have told us. He is a person this project needs to find in a
+    foreign register, and 81 of 434 records carry a non-point date."""
+    from familytree.match import compare
+    him = _cand(surname="De Keyser", given="Gustaaf", birth_date="1920..1929",
+                birth_year=1920, stated_birth_year=True)
+    for year in (1920, 1923, 1925, 1929):
+        act = _cand(ref=f"act#{year}", surname="De Keyser", given="Gustaaf",
+                    birth_date=f"{year}-06-01", birth_year=year, stated_birth_year=True)
+        m = compare(him, act)
+        assert not m.conflict, f"{year} is inside the range and must not conflict"
+    # Outside the range, by more than the slack, it still vetoes.
+    far = _cand(ref="act#far", surname="De Keyser", given="Gustaaf",
+                birth_date="1880-06-01", birth_year=1880, stated_birth_year=True)
+    assert compare(him, far).conflict
+
+    # ...and a range earns no date bits: agreeing with its lower edge is arithmetic, not
+    # evidence, so it must not be one of the two independent identifiers.
+    edge = _cand(ref="act#edge", surname="De Keyser", given="Gustaaf",
+                 birth_date="1920-06-01", birth_year=1920, stated_birth_year=True)
+    assert "date" not in compare(him, edge).classes
+
+
+def test_a_range_is_never_mistaken_for_a_day_level_date():
+    """`len(date) == 10` was used three separate times to mean "is a day-level date", and
+    `1920..1929` is exactly ten characters. A length is not a format.
+
+    In `compare` it produced a 12-bit "same day" agreement between two people who each knew
+    only their decade, and vetoed one of them against an act stating a real day. In
+    `frontier.discriminability` it scored a decade-only birth as though a day-level date had
+    been read, which raises P(resolvable) and promotes that frontier up the queue — ranked
+    searchable on evidence it does not have.
+    """
+    from familytree.corpus import Frequencies
+    from familytree.frontier import discriminability
+    freq = Frequencies(n=0, surnames={}, givens={}, places={})
+    day = _cand(surname="Bostyn", birth_date="1876-11-12", birth_year=1876)
+    rng = _cand(surname="Bostyn", birth_date="1920..1929", birth_year=1920)
+    assert len("1920..1929") == 10, "the whole trap in one line"
+    assert discriminability(day, freq) > discriminability(rng, freq)
+
+
+def test_an_open_bound_never_vetoes_the_side_it_leaves_open():
+    """`<1673` means born at some unknown time before 1673, and `>1838` means died at some
+    unknown time after 1838. Treating either as a measurement is what produced "mother at
+    age -6" for a record in conflict with nothing."""
+    from familytree.match import compare
+    before = _cand(surname="Vanstechele", given="Joannes", birth_date="<1673",
+                   birth_year=1673, stated_birth_year=True)
+    early = _cand(ref="act#1", surname="Vanstechele", given="Joannes",
+                  birth_date="1650-03-02", birth_year=1650, stated_birth_year=True)
+    assert not compare(before, early).conflict, "1650 IS before 1673"
+    later = _cand(ref="act#2", surname="Vanstechele", given="Joannes",
+                  birth_date="1690-03-02", birth_year=1690, stated_birth_year=True)
+    assert compare(before, later).conflict, "1690 is not before 1673"
+
+    # A death known only as "after 1838" cannot rule out a child born in 1850.
+    alive = _cand(surname="Haesaerts", given="Jan", death_date=">1838", death_year=1838)
+    child = _cand(ref="act#3", surname="Haesaerts", given="Jan",
+                  birth_date="1850-01-01", birth_year=1850, stated_birth_year=True)
+    assert "born after the other died" not in compare(alive, child).conflict
+
+
+def test_born_after_the_other_died_vetoes_whichever_way_round_it_is_asked():
+    """This tested only a's death against b's birth, so compare(x, y) and compare(y, x)
+    could disagree about whether the pair was even possible — and both orders are used:
+    act_coverage compares (target, mention), missing_children compares (mention, target)."""
+    from familytree.match import compare
+    dead = _cand(surname="Bossin", given="Cornelius", death_date="1847", death_year=1847)
+    born = _cand(ref="y", surname="Bossin", given="Cornelius", birth_date="1901-02-27",
+                 birth_year=1901, stated_birth_year=True)
+    assert compare(dead, born).conflict and compare(born, dead).conflict
 
 
 # ---------- names ----------
@@ -323,6 +419,42 @@ def test_the_name_alone_is_never_two_identifiers():
     assert m.classes == ["name"]
     assert m.distinguishing == 0
     assert not m.graftable and m.band == "noise"
+
+
+def test_every_class_compare_emits_is_declared_strong_or_weak():
+    """`CLASSES` and `WEAK_CLASSES` are the whole of "two independent identifiers": a class
+    in the first counts towards the floor, one in the second adds bits and can never carry a
+    graft alone. `WEAK_CLASSES` was declared and then read by nothing, so the distinction
+    lived only in the string literals inside `compare` — and a typo there would have
+    promoted a weak agreement to an independent identifier with nothing to notice.
+
+    Exercised over the pairs elsewhere in this file that are built to trip each class.
+    """
+    from familytree.match import CLASSES, WEAK_CLASSES
+    declared = set(CLASSES) | set(WEAK_CLASSES)
+    assert not set(CLASSES) & set(WEAK_CLASSES), "a class cannot be both"
+
+    kin = [("mother", "stockman", frozenset({"livina"}))]
+    pairs = [
+        _pair(),
+        (_cand(surname="Dekeyser", given="Albert", places=["Oostende"]),
+         _cand(ref="y", surname="Dekeyser", given="Albert", context_places=["Oostende"])),
+        (_cand(surname="Dekeyser", given="Gustaaf", kin=kin),
+         _cand(ref="y", surname="Dekeyser", given="Gustaaf", kin=list(kin))),
+        (_cand(surname="Bostyn", given="Henricus", birth_year=1876),
+         _cand(ref="y", surname="Mombaerts", given="Henricus", birth_year=1876)),
+        (_cand(surname="Pardon", given="Maria", occupation="landbouwer"),
+         _cand(ref="y", surname="Pardon", given="Maria", occupation="landbouwer")),
+    ]
+    seen = set()
+    for a, b in pairs:
+        m = compare(a, b)
+        seen.update(m.classes)
+        undeclared = set(m.classes) - declared
+        assert not undeclared, f"compare emitted an undeclared class: {undeclared}"
+        # The point of the split: a weak class must never reach the two-identifier floor.
+        assert m.independent == sum(1 for c in m.classes if c in CLASSES)
+    assert seen & set(WEAK_CLASSES), "these pairs are supposed to exercise the weak classes"
 
 
 def test_agreement_beyond_the_name_is_what_promotes_a_candidate():
@@ -749,6 +881,56 @@ def test_the_stored_candidate_is_the_whole_comparable_candidate():
     assert back.kin == original.kin, "a frozenset of forenames must survive JSON"
 
 
+def test_the_index_notices_the_CODE_changing_not_only_the_harvest(monkeypatch, tmp_path):
+    """The staleness guard covered the harvest files and nothing else, so an index built by
+    yesterday's `block_keys` reported itself current. Both of the last two changes to what
+    is derived would have shipped a stale index — the particle-stripped prefix key changed
+    which pairs are comparable, and `death_date` changed what a stored candidate carries."""
+    from familytree import store
+    acts = tmp_path / "acts"
+    acts.mkdir()
+    (acts / "t.jsonl").write_text("", encoding="utf-8")
+    monkeypatch.setattr(store, "ACTS_DIR", acts)
+    before = store.signature()
+    monkeypatch.setattr(store, "FORMAT", store.FORMAT + 1)
+    assert store.signature() != before, "a format bump must invalidate the index"
+
+
+def test_a_refuted_pair_is_not_offered_to_the_queue_again(monkeypatch, tmp_path):
+    """The gap `docs/autopilot-log.md` ends on: "the refutations are recorded, with
+    reasoning, and nothing reads them back. Left as it is, the next unattended run
+    re-grafts the wrong Appolonia — and the run after that."
+
+    An act-level refutation covers every mention in that act, which is broader than the
+    label strictly says and is the right way round: too broad costs one label a re-point,
+    too narrow costs the re-graft loop.
+    """
+    from familytree import labels
+    path = tmp_path / "labels.jsonl"
+    path.write_text("\n".join(json.dumps(r) for r in [
+        {"person": "coekelberghs", "ref": "abl:2c0d#Person1", "match": False,
+         "basis": "act", "why": "the act names Vandenhoven, not Coekelberghs"},
+        {"person": "hendrik_vdb", "ref": "abl:9999", "match": False,
+         "basis": "act", "why": "a rival couple in the same commune"},
+        {"person": "anna_vc", "ref": "abl:5555#Person2", "match": True,
+         "basis": "act", "why": "act names both parents"},
+    ]) + "\n", encoding="utf-8")
+    monkeypatch.setattr(labels, "LABELS", path)
+    labels.reset_cache()
+    try:
+        r = labels.refutations()
+        # The precise ruling suppresses exactly its own mention.
+        assert r.of("coekelberghs", "abl:2c0d#Person1") is not None
+        assert r.of("coekelberghs", "abl:2c0d#Person9") is None
+        # An act-level ruling covers every participant of that act, for that person only.
+        assert r.of("hendrik_vdb", "abl:9999#Person4") is not None
+        assert r.of("someone_else", "abl:9999#Person4") is None
+        # An ACCEPT is not a refutation — suppressing it would hide the corroboration.
+        assert r.of("anna_vc", "abl:5555#Person2") is None
+    finally:
+        labels.reset_cache()
+
+
 def test_coverage_counts_what_is_HELD_not_what_was_asked_for(indexed_corpus, monkeypatch):
     """A surname's coverage is a fact about the corpus, not about the query log.
 
@@ -910,6 +1092,35 @@ def test_a_relatives_surname_still_anchors():
     m = compare(a, b)
     assert "kin" in m.classes
     assert m.independent >= 2
+
+
+def test_disagreeing_surnames_are_never_graftable_however_the_relatives_agree():
+    """The veto that had no test, which is how it came to be switched off by a variable
+    name. The kin loop reused `same_surname`, so by the time the surname veto read it, it
+    meant "this relative's surname agrees" — and a pair whose OWN surnames plainly
+    disagreed became graftable whenever any one relative matched.
+
+    Over the tree's first 100 people and 298,816 compared pairs it fired exactly once, on
+    the worst pair available: Maria Anna Vandenhoven scored as Maria Theresia
+    Coekelberghs at 21.6 bits, which is the identification a verifier had already refuted
+    in writing and retracted a person record over.
+
+    Both halves are asserted, because a veto that always fires is as wrong as one that
+    never does.
+    """
+    from familytree.match import compare
+    kin = [("father", "vandenbemden", frozenset({"willem"}))]
+    disagree = dict(given="Maria", birth_year=1841, birth_place="Kraainem",
+                    places=["Kraainem"], stated_birth_year=True, kin=kin)
+    a = _cand(surname="Coekelberghs", **disagree)
+    b = _cand(ref="y", surname="Vandenhoven", **dict(disagree, kin=list(kin)))
+    m = compare(a, b)
+    assert m.independent >= 2 and m.distinguishing >= 6, "otherwise this proves nothing"
+    assert not m.graftable, "disagreeing surnames must veto, whatever the relatives say"
+
+    # And the surname agreeing still grafts, so the veto has not simply been nailed shut.
+    c = _cand(ref="z", surname="Coekelberghs", **dict(disagree, kin=list(kin)))
+    assert compare(a, c).graftable
 
 
 def test_only_the_deceased_gets_a_death_year_from_a_death_act():

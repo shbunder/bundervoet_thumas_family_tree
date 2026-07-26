@@ -3,6 +3,7 @@ id: desiderius_dk
 name: Desiderius De Keyser
 surname: De Keyser
 death:
+  date: <1946
   raw: before 9 May 1946
 confidence: doc
 branch: DeKeyser

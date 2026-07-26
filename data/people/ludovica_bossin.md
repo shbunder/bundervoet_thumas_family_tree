@@ -3,6 +3,7 @@ id: ludovica_bossin
 name: Ludovica Bossin
 surname: Bossin
 birth:
+  date: 1853
   raw: declared at Sint-Stevens-Woluwe on 5 October 1853
   place: Sint-Stevens-Woluwe
 confidence: sup

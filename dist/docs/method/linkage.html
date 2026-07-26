@@ -594,6 +594,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Vetoes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#every-veto-reads-what-a-date-rules-out-never-what-it-says" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Every veto reads what a date rules out, never what it says
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -915,6 +932,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify-log.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verify log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1027,6 +1071,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Vetoes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#every-veto-reads-what-a-date-rules-out-never-what-it-says" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Every veto reads what a date rules out, never what it says
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1173,10 +1234,64 @@ new information every time — which is why it is the classic second identifier.
 <li><strong>Stated birth years differ by more than 2.</strong> Only <em>stated</em> values veto — a year
   implied by an age in an act carries slack and must never kill a true match alone.</li>
 <li><strong>Day-level birth dates differ.</strong></li>
-<li><strong>Born after the other died.</strong></li>
+<li><strong>Born after the other died.</strong> Both ways round, because callers pass the pair in both
+  orders and a possibility test that is not symmetric is not a possibility test.</li>
 <li><strong>Implied lifespan over 110 years.</strong> Kills the grandfather-grafted-onto-grandson case,
   which recurs because the forename returns every second generation.</li>
 </ul>
+<h3 id="every-veto-reads-what-a-date-rules-out-never-what-it-says">Every veto reads what a date <em>rules out</em>, never what it says<a class="headerlink" href="#every-veto-reads-what-a-date-rules-out-never-what-it-says" title="Permanent link">&para;</a></h3>
+<p>The <a href="../data-model.html">date grammar</a> has forms for a year, an <em>about</em>, a <em>before</em>, an
+<em>after</em> and a <em>between</em>, and each answers two different questions:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>asserts (<code>point_year</code>)</th>
+<th>permits (<code>year_span</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1876-11-12</code></td>
+<td>1876</td>
+<td>1876 – 1876</td>
+</tr>
+<tr>
+<td><code>~1682</code></td>
+<td>1682</td>
+<td>1677 – 1687</td>
+</tr>
+<tr>
+<td><code>&lt;1727</code></td>
+<td>—</td>
+<td>? – 1727</td>
+</tr>
+<tr>
+<td><code>&gt;1900</code></td>
+<td>—</td>
+<td>1900 – ?</td>
+</tr>
+<tr>
+<td><code>1575..1587</code></td>
+<td>—</td>
+<td>1575 – 1587</td>
+</tr>
+</tbody>
+</table>
+<p>Evidence reads the left column, so <code>~1682</code> still earns its bits against an act saying 1682.
+Vetoes read the right one and fire only when <strong>no</strong> year satisfies both — an open end means
+unknown, and unknown never vetoes.</p>
+<p>Reading a single number for both is a bug that costs recall in silence, and it was in here
+for months. <code>1920..1929</code> flattened to "1920", so an act stating 1925 was rejected as
+<em>conflicting</em> with a range that contains it — the one thing a record admits it does not know
+becoming a reason to refuse every record that would have told us. 81 of 434 records carry a
+non-point date. The same flattening was applied a second time as a SQL pre-filter over the
+index, which dropped those mentions before the scorer could see them and left no trace at
+all.</p>
+<p>The corollary is a rule about the <em>data</em>, not the code: a date the grammar <strong>can</strong> hold does
+not belong in <code>raw</code>. A record whose only date was prose was, to the matcher, entirely
+undated — which is how a boy born 1901 was offered as a man whose birth was declared in
+1847, with nothing able to veto it.</p>
 <hr />
 <h2 id="what-this-does-not-do">What this does <em>not</em> do<a class="headerlink" href="#what-this-does-not-do" title="Permanent link">&para;</a></h2>
 <p>It does not decide. It ranks, and it vetoes. Everything surviving is a <strong>candidate for

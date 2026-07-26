@@ -860,6 +860,7 @@
 2 SURN Bossin
 1 SEX M
 1 DEAT
+2 DATE AFT 1853
 2 NOTE Recorded as: alive on 1 December 1853; death not known
 1 OCCU arbeider (labourer)
 1 FAMS @F42@
@@ -1857,6 +1858,7 @@
 2 SURN Bossin
 1 SEX U
 1 BIRT
+2 DATE 1847
 2 PLAC Sint-Stevens-Woluwe
 2 NOTE Recorded as: declared at Sint-Stevens-Woluwe on 13 September 1847
 1 FAMC @F69@
@@ -2116,6 +2118,7 @@
 2 SURN De Keyser
 1 SEX M
 1 DEAT
+2 DATE BEF 1946
 2 NOTE Recorded as: before 9 May 1946
 1 FAMS @F108@
 1 NOTE Source detail: Oostende marriage act nr. 81, 9 May 1946 (FamilySearch, Belgium West Flanders Civil Registration 1582-1950 — image read directly), naming him as father of Eduardus De Keyser
@@ -2365,6 +2368,7 @@
 2 SURN Deyn
 1 SEX F
 1 DEAT
+2 DATE AFT 1846
 2 NOTE Recorded as: alive on 24 February 1846; not stated to be present in 1853
 1 FAMS @F42@
 1 NOTE Mother of the groom in her son [[guilielmus_bossin]]'s marriage act — Zaventem, act nr.
@@ -2428,6 +2432,7 @@
 2 SURN Langes
 1 SEX F
 1 DEAT
+2 DATE AFT 1873
 2 NOTE Recorded as: alive on 24 April 1873; death not known
 1 OCCU landbouwster (farmer)
 1 FAMS @F120@
@@ -2495,6 +2500,7 @@
 2 SURN van den Broeck
 1 SEX F
 1 DEAT
+2 DATE AFT 1838
 2 NOTE Recorded as: alive on 30 October 1838; death not known
 1 OCCU landbouwster (farmer)
 1 FAMS @F40@
@@ -3197,6 +3203,7 @@
 2 SURN Thumas
 1 SEX U
 1 BIRT
+2 DATE 1843
 2 PLAC Grez-Doiceau
 2 NOTE Recorded as: declared at Grez-Doiceau on 31 March 1843
 1 FAMS @F107@
@@ -3449,6 +3456,7 @@
 2 SURN Pardon
 1 SEX M
 1 DEAT
+2 DATE AFT 1853
 2 NOTE Recorded as: alive on 1 December 1853; death not known
 1 OCCU daglooner (day labourer)
 1 FAMS @F136@
@@ -3819,6 +3827,7 @@
 2 SURN Coekelberghs
 1 SEX M
 1 DEAT
+2 DATE AFT 1838
 2 NOTE Recorded as: alive on 30 October 1838; death not known
 1 OCCU landbouwer (farmer)
 1 FAMS @F149@
@@ -4481,6 +4490,7 @@
 2 SURN Haesaerts
 1 SEX M
 1 DEAT
+2 DATE AFT 1838
 2 NOTE Recorded as: alive on 30 October 1838; death not known
 1 OCCU landbouwer (farmer)
 1 FAMS @F40@
@@ -4636,6 +4646,7 @@
 2 SURN Thumas
 1 SEX U
 1 BIRT
+2 DATE 1845
 2 PLAC Grez-Doiceau
 2 NOTE Recorded as: declared at Grez-Doiceau on 20 August 1845
 1 FAMC @F84@
@@ -6436,6 +6447,7 @@
 2 SURN Bossin
 1 SEX U
 1 BIRT
+2 DATE 1853
 2 PLAC Sint-Stevens-Woluwe
 2 NOTE Recorded as: declared at Sint-Stevens-Woluwe on 5 October 1853
 1 FAMS @F180@
@@ -6568,6 +6580,7 @@
 2 SURN Devriendt
 1 SEX M
 1 DEAT
+2 DATE BEF 1906
 2 NOTE Recorded as: before 10 November 1906
 1 FAMS @F131@
 1 NOTE Named as father of the groom in his son Eugenius's 1906 Oostende marriage act (nr.
@@ -6758,6 +6771,7 @@
 2 SURN Pergijsels
 1 SEX F
 1 DEAT
+2 DATE AFT 1853
 2 NOTE Recorded as: alive on 1 December 1853; death not known
 1 OCCU dagloonster (day labourer)
 1 FAMS @F136@
@@ -7360,6 +7374,7 @@
 2 SURN Van den Broeck
 1 SEX F
 1 DEAT
+2 DATE BEF 1946
 2 NOTE Recorded as: before 9 May 1946
 1 FAMS @F108@
 1 NOTE Source detail: Oostende marriage act nr. 81, 9 May 1946 (FamilySearch, Belgium West Flanders Civil Registration 1582-1950 — image read directly), naming her as mother of Eduardus De Keyser
@@ -7375,6 +7390,7 @@
 2 SURN Thumas
 1 SEX F
 1 BIRT
+2 DATE 1835
 2 PLAC Grez-Doiceau
 2 NOTE Recorded as: declared at Grez-Doiceau on 11 August 1835
 1 FAMC @F84@
@@ -7778,6 +7794,7 @@
 2 SURN Elseviers
 1 SEX F
 1 DEAT
+2 DATE AFT 1838
 2 NOTE Recorded as: alive on 30 October 1838; death not known
 1 OCCU landbouwster (farmer)
 1 FAMS @F149@

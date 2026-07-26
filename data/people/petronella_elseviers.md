@@ -3,6 +3,7 @@ id: petronella_elseviers
 name: Petronella Elseviers
 surname: Elseviers
 death:
+  date: >1838
   raw: alive on 30 October 1838; death not known
 confidence: sup
 occupation: landbouwster (farmer)

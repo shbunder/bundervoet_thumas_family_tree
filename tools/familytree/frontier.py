@@ -46,7 +46,7 @@ from dataclasses import dataclass
 from . import store
 from .corpus import corpus_exists, corpus_mentions, frequencies, surname_coverage
 from .match import build_index, candidates_for, from_mention, from_person, surname_weight
-from .people import load_config, load_people
+from .people import DAY, load_config, load_people, point_year
 from .sources import ACCESS_COST, load_log, load_sources
 
 
@@ -100,7 +100,17 @@ def discriminability(c, freq) -> float:
     "Janssens, somewhere in Brabant, about 1930" is not, and the queue has to be able to
     say so without a human reading the note."""
     name = surname_weight(c.surname, freq).bits if c.surname else 0.0
-    date = 8.0 if c.birth_date and len(c.birth_date) == 10 else 4.0 if c.birth_year else 0.0
+    # The date is worth what it PINS DOWN, so a bound or a range is not a day. Tested with
+    # `DAY.match` and not `len(...) == 10`, because "1920..1929" is exactly ten characters:
+    # the third place this project made that mistake. Here it scored a person known only to
+    # a decade as though a day-level date had been read, which raises P(resolvable) and
+    # promotes them up the queue — a frontier ranked as searchable on evidence it lacks.
+    if c.birth_date and DAY.match(c.birth_date):
+        date = 8.0
+    elif point_year(c.birth_date) if c.birth_date else c.birth_year:
+        date = 4.0
+    else:
+        date = 0.0
     place = 4.0 if c.places else 0.0
     return min(1.0, (name + date + place) / 18.0)
 

@@ -41,6 +41,9 @@ uv run tools/research.py components         # disconnected families
 uv run tools/research.py collapse           # where the tree folds back on itself
 
 # Harvest and link
+uv run tools/harvest.py bulk <archive>      # a WHOLE archive in one request — try this first
+uv run tools/harvest.py oai <archive>       # a whole archive at 150 acts a request
+uv run tools/harvest.py replay              # re-fetch the corpus the manifest describes
 uv run tools/harvest.py frontiers           # pull the acts the queue is asking for
 uv run tools/harvest.py surname Bundervoet  # every Belgian record for one surname
 uv run tools/harvest.py place Oostende      # every Belgian record for one commune
@@ -62,12 +65,31 @@ uv run --group docs mkdocs serve            # this documentation, live
 ## Reproducing the corpus
 
 `research/harvest/` is **gitignored** — it is re-fetchable open data that grows without
-limit. `research/harvest/manifest.json` **is** committed, and it records the exact query
-behind every harvest, so the corpus can be rebuilt from the repository alone:
+limit, 3.5 GB of acts and a 4.6 GB index against a 52 KB manifest.
+`research/harvest/manifest.json` **is** committed, and it records the exact query behind
+every harvest, so the corpus can be rebuilt from the repository alone:
 
 ```bash
-uv run tools/harvest.py status     # shows what the manifest expects and what is held
+uv run tools/harvest.py replay --dry-run   # what a fresh clone is missing, and the cost
+uv run tools/harvest.py replay             # re-run it, unattended
+uv run tools/harvest.py status             # what the manifest expects against what is held
 ```
+
+`replay` walks the manifest and re-runs what the corpus does not already hold. Three things
+about it are deliberate:
+
+- **It measures against the corpus, not the manifest.** The manifest says a query was run;
+  only the acts on disk say it was kept. Trusting the manifest is the corpus form of
+  recording `blocked` as `miss` — and it is not hypothetical, because the ordinary harvest
+  guard refuses any query the manifest already lists. On a fresh clone the manifest lists
+  all 203 while `acts/` is empty, so before `replay` existed a new reader was told
+  everything was already harvested and fetched nothing.
+- **Bulk archives go first.** An archive that publishes a whole-archive export supersedes
+  every surname query inside it, so replaying in manifest order would fetch acts one at a
+  time that a single request was about to deliver anyway.
+- **It is not needed to read the tree.** The site, the records, the validator and the GEDCOM
+  all work on a bare clone. Only the research *reports* — `acts`, `children`, `link.py`,
+  `verify_all.py` — need the corpus, and the SQLite index rebuilds itself when they ask.
 
 A harvest that hit its cap is recorded as `PARTIAL`, with the command to complete it. A
 capped harvest that looked complete would be the corpus equivalent of an unlogged miss.

@@ -3,6 +3,7 @@ id: mtstephanie_t
 name: Marie Thérèse Stéphanie Thumas
 surname: Thumas
 birth:
+  date: 1835
   raw: declared at Grez-Doiceau on 11 August 1835
   place: Grez-Doiceau
 sex: f

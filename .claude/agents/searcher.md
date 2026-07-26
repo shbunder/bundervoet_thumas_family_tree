@@ -16,9 +16,20 @@ no session, and what it pulls is kept — so it answers this frontier and every 
 on the same surname:
 
 ```
-uv run tools/harvest.py surname "<Surname>"    then
+uv run tools/harvest.py status                 what is held, and what is bulk-able
+uv run tools/harvest.py bulk <archive>         a WHOLE archive in ONE request — first choice
+uv run tools/harvest.py oai <archive>          150 acts a request, where there is no export
+uv run tools/harvest.py surname "<Surname>"    the per-act route — a last resort
 uv run tools/link.py <person>                  what the held acts say about them
 ```
+
+**Take the archive, not the surname, wherever you can.** These are three routes to the same
+records, and they differ by three orders of magnitude: Kortrijk is 140,543 acts in one 19 MB
+download, against the 1,361 the per-act endpoint had managed. A surname query costs one HTTP
+request per act at the four a second the venue permits, which is thirteen hours for what
+`bulk` does in one — and the acts it yields are byte-for-byte the same, which was verified by
+holding all 1,361 both ways. The per-act route is still the only way into the Rijksarchief
+and Familiekunde sets, because they publish neither an export nor OAI-PMH.
 
 Do that first, log it with `--basis api`, and only open Chrome for what it could not
 reach. A harvest is also reproducible for whoever reads this repository next, which a

@@ -566,7 +566,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The gold standard">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rulings-feed-the-queues-not-only-the-scorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rulings feed the queues, not only the scorer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The rulings feed the queues, not only the scorer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -865,6 +876,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify-log.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verify log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -922,7 +960,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The gold standard">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rulings-feed-the-queues-not-only-the-scorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rulings feed the queues, not only the scorer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The rulings feed the queues, not only the scorer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1022,8 +1071,33 @@ known errors at all. The ambiguity was measuring itself.</p>
 their roles, and prints the command to re-record each one. It resolves nothing by itself —
 where an act names a bride <em>and</em> her father of the same surname, only a human can say which
 the ruling was about, and guessing is what caused this.</p>
+<p>Sorting the 45 turned out to be mostly mechanical, and the shape of the split is the useful
+part. <strong>Twenty</strong> named exactly one participant carrying the person's own forename or birth
+year: a <code>--match</code> label <em>asserts</em> the person is in the act, so finding them is a lookup and
+not a judgement. <strong>Ten</strong> named no participant resembling them at all — those are not pairwise
+rulings but judgements about an <em>act</em>, and forcing a pid onto one would invent the thing it
+denies. Re-scored pairs went from 8 to 28 without a single new ruling being made, and
+precision and recall held at 100%.</p>
+<p>The reverse also matters: <strong>an act-level ruling is not merely a weaker label, it is an
+uncounted one</strong>, and reporting all of them as work-for-a-human overstated the backlog four
+times over. Most were waiting on a harvest, not on anybody. Counting them apart is the
+difference between a number someone acts on and a number everyone ignores.</p>
 <p>Labels are append-only, and later labels supersede earlier ones for the same pair:
 corrections are first-class here exactly as they are in the tree.</p>
+<h2 id="the-rulings-feed-the-queues-not-only-the-scorer">The rulings feed the queues, not only the scorer<a class="headerlink" href="#the-rulings-feed-the-queues-not-only-the-scorer" title="Permanent link">&para;</a></h2>
+<p>For a long time <code>research/labels.jsonl</code> was read by <code>evaluate.py</code> and nothing else. The
+search log had <code>research.py tried</code>, <code>untried</code> and <code>stale</code> from the start, precisely so a
+<em>miss</em> is never walked twice — but a <strong>ruling</strong>, which costs someone the reading of an act,
+had no equivalent. So a refutation could be recorded with its full reasoning and the queue
+that proposed the pair would propose it again the next night.</p>
+<p><code>research.py children</code> now holds back any pair a verifier refuted, and prints each one with
+its reason rather than dropping it silently, so a wrong refutation can be spotted and
+re-pointed instead of quietly removing a lead forever. An act-level refutation covers every
+mention in that act — broader than the label strictly says, and the right way round: too
+broad costs one label a re-point, too narrow costs the loop where every night re-grafts what
+last night refuted.</p>
+<p>An <strong>accept</strong> is deliberately not read here. A queue that skipped what was already confirmed
+would hide the corroboration.</p>
 <h3 id="what-it-buys">What it buys<a class="headerlink" href="#what-it-buys" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>tools/evaluate.py<span class="w"> </span>report
 </code></pre></div>

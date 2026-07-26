@@ -881,6 +881,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="verify-log.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verify log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1034,6 +1061,9 @@ uv<span class="w"> </span>run<span class="w"> </span>tools/research.py<span clas
 uv<span class="w"> </span>run<span class="w"> </span>tools/research.py<span class="w"> </span>collapse<span class="w">           </span><span class="c1"># where the tree folds back on itself</span>
 
 <span class="c1"># Harvest and link</span>
+uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>bulk<span class="w"> </span>&lt;archive&gt;<span class="w">      </span><span class="c1"># a WHOLE archive in one request — try this first</span>
+uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>oai<span class="w"> </span>&lt;archive&gt;<span class="w">       </span><span class="c1"># a whole archive at 150 acts a request</span>
+uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>replay<span class="w">              </span><span class="c1"># re-fetch the corpus the manifest describes</span>
 uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>frontiers<span class="w">           </span><span class="c1"># pull the acts the queue is asking for</span>
 uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>surname<span class="w"> </span>Bundervoet<span class="w">  </span><span class="c1"># every Belgian record for one surname</span>
 uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>place<span class="w"> </span>Oostende<span class="w">      </span><span class="c1"># every Belgian record for one commune</span>
@@ -1053,10 +1083,29 @@ uv<span class="w"> </span>run<span class="w"> </span>--group<span class="w"> </s
 </code></pre></div>
 <h2 id="reproducing-the-corpus">Reproducing the corpus<a class="headerlink" href="#reproducing-the-corpus" title="Permanent link">&para;</a></h2>
 <p><code>research/harvest/</code> is <strong>gitignored</strong> — it is re-fetchable open data that grows without
-limit. <code>research/harvest/manifest.json</code> <strong>is</strong> committed, and it records the exact query
-behind every harvest, so the corpus can be rebuilt from the repository alone:</p>
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>status<span class="w">     </span><span class="c1"># shows what the manifest expects and what is held</span>
+limit, 3.5 GB of acts and a 4.6 GB index against a 52 KB manifest.
+<code>research/harvest/manifest.json</code> <strong>is</strong> committed, and it records the exact query behind
+every harvest, so the corpus can be rebuilt from the repository alone:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>replay<span class="w"> </span>--dry-run<span class="w">   </span><span class="c1"># what a fresh clone is missing, and the cost</span>
+uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>replay<span class="w">             </span><span class="c1"># re-run it, unattended</span>
+uv<span class="w"> </span>run<span class="w"> </span>tools/harvest.py<span class="w"> </span>status<span class="w">             </span><span class="c1"># what the manifest expects against what is held</span>
 </code></pre></div>
+<p><code>replay</code> walks the manifest and re-runs what the corpus does not already hold. Three things
+about it are deliberate:</p>
+<ul>
+<li><strong>It measures against the corpus, not the manifest.</strong> The manifest says a query was run;
+  only the acts on disk say it was kept. Trusting the manifest is the corpus form of
+  recording <code>blocked</code> as <code>miss</code> — and it is not hypothetical, because the ordinary harvest
+  guard refuses any query the manifest already lists. On a fresh clone the manifest lists
+  all 203 while <code>acts/</code> is empty, so before <code>replay</code> existed a new reader was told
+  everything was already harvested and fetched nothing.</li>
+<li><strong>Bulk archives go first.</strong> An archive that publishes a whole-archive export supersedes
+  every surname query inside it, so replaying in manifest order would fetch acts one at a
+  time that a single request was about to deliver anyway.</li>
+<li><strong>It is not needed to read the tree.</strong> The site, the records, the validator and the GEDCOM
+  all work on a bare clone. Only the research <em>reports</em> — <code>acts</code>, <code>children</code>, <code>link.py</code>,
+  <code>verify_all.py</code> — need the corpus, and the SQLite index rebuilds itself when they ask.</li>
+</ul>
 <p>A harvest that hit its cap is recorded as <code>PARTIAL</code>, with the command to complete it. A
 capped harvest that looked complete would be the corpus equivalent of an unlogged miss.</p>
 <h2 id="adapting-it-to-another-family-or-region">Adapting it to another family or region<a class="headerlink" href="#adapting-it-to-another-family-or-region" title="Permanent link">&para;</a></h2>

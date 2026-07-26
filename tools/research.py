@@ -251,6 +251,9 @@ def cmd_acts(args):
 
     covered = sum(len(new) for _, new in ordered)
     print(f"{len(ordered)} acts cover {covered} of {len(frontier_ids)} open frontiers, best first.\n")
+    if len(ordered) > args.limit:
+        print(f"  showing the first {args.limit} — the greedy order means these are the ones "
+              f"that add most.\n")
     for cov, new in ordered[: args.limit]:
         act = cov.act
         print(f"  {act.label}  ({act.archive_org})")
@@ -279,7 +282,19 @@ def cmd_children(args):
     if not corpus_exists():
         return print("Nothing harvested yet — this reads the corpus:\n"
                      "  uv run tools/harvest.py surname <X>")
-    leads = missing_children(people)
+    suppressed: list = []
+    leads = missing_children(people, suppressed=suppressed)
+    if suppressed:
+        # Printed first and unconditionally. These are pairs a verifier read the act for and
+        # rejected, which this queue used to re-propose every run — the thing an unattended
+        # loop can least afford. Showing them means a wrong refutation can be spotted and
+        # re-pointed, rather than quietly removing leads forever.
+        print(f"{len(suppressed)} lead(s) held back by a recorded refutation:\n")
+        for pid, ref, why in suppressed:
+            print(f"  {pid} × {ref}")
+            print(f"      {why[:150]}{'…' if len(why) > 150 else ''}")
+        print("\n  If one of these refutations is wrong, correct the label — do not work "
+              "around it:\n  uv run tools/evaluate.py label <person> <act-id>#<pid> --match …\n")
     if not leads:
         births = sum(1 for a in load_corpus() if a.type == "Geboorte")
         print("No unrecorded children in the held acts.\n")
@@ -295,6 +310,13 @@ def cmd_children(args):
     link = [x for x in leads if x.kind == "link"]
     print(f"{len(leads)} unrecorded children — {len(add)} to add, {len(link)} already "
           "held but not linked to these parents.\n")
+    # The header counts every lead; the list below is capped. Said out loud because it was
+    # not: a run read "27 to add", counted 24 ADD rows in a listing cut at 25, and recorded
+    # the difference in docs/verify-log.md as an unexplained discrepancy worth distrusting
+    # the number over. A cap that does not announce itself reads as the whole answer.
+    if len(leads) > args.limit:
+        print(f"  showing the first {args.limit} of {len(leads)} — "
+              f"pass --limit {len(leads)} for all of them.\n")
     for mc in leads[: args.limit]:
         tag = "ADD" if mc.kind == "add" else f"LINK → {mc.existing}"
         print(f"  [{tag}] {mc.name}")
@@ -325,6 +347,8 @@ def cmd_components(args):
     clusters = surname_clusters(people, surname)
     if not clusters:
         return print(f"  nothing harvested for {surname} yet — uv run tools/harvest.py surname \"{surname}\"")
+    if len(clusters) > args.limit:
+        print(f"  showing the first {args.limit} of {len(clusters)} communes.\n")
     for c in clusters[: args.limit]:
         span = f"{c.span[0]}–{c.span[1]}" if c.span[0] else "undated"
         print(f"  {c.place:<28} {c.mentions:>4} mentions  {span:<12} {len(c.acts)} acts")
@@ -363,6 +387,8 @@ def cmd_collapse(args):
         for a, b, shared in consanguine[: args.limit]:
             print(f"  {people[a]['name']} × {people[b]['name']}")
             print(f"      common ancestor(s): {', '.join(people[s]['name'] for s in shared)}")
+        if len(consanguine) > args.limit:
+            print(f"\n  …and {len(consanguine) - args.limit} more.")
     else:
         print("\nNo couple in the tree yet shares a recorded ancestor.")
     if multi:

@@ -22,6 +22,18 @@ __shot.html
 __mt.html
 __*.html
 
+# Scratch belonging to an unattended run, not to the project. `/autopilot` writes the
+# whole-tree worklist here so ten passes do not each recompute it, and a pass that reads
+# acts writes its intermediates alongside. Both are derived, both are large — .tmp-pass5
+# was 26 MB of act JSON — and neither is a record of anything.
+#
+# Ignored because of what the run is told to do next: "one commit per pass", unattended.
+# A `git add -A` in that loop commits whatever is lying around, so leaving these visible
+# means the first interrupted run quietly puts tens of megabytes of scratch into a
+# repository whose whole packed history is 22 MB.
+.autopilot-worklist.json
+.tmp-pass*/
+
 # The harvested corpus: re-fetchable open data that grows without limit, so it is not
 # committed. research/harvest/manifest.json IS committed — it records the exact
 # queries, which is what makes the corpus reproducible from the repository alone.

@@ -117,9 +117,40 @@ Scoring ranks; vetoes reject. Defaulting to rejection is the whole posture.
 - **Stated birth years differ by more than 2.** Only *stated* values veto — a year
   implied by an age in an act carries slack and must never kill a true match alone.
 - **Day-level birth dates differ.**
-- **Born after the other died.**
+- **Born after the other died.** Both ways round, because callers pass the pair in both
+  orders and a possibility test that is not symmetric is not a possibility test.
 - **Implied lifespan over 110 years.** Kills the grandfather-grafted-onto-grandson case,
   which recurs because the forename returns every second generation.
+
+### Every veto reads what a date *rules out*, never what it says
+
+The [date grammar](../data-model.md) has forms for a year, an *about*, a *before*, an
+*after* and a *between*, and each answers two different questions:
+
+| | asserts (`point_year`) | permits (`year_span`) |
+|---|---|---|
+| `1876-11-12` | 1876 | 1876 – 1876 |
+| `~1682` | 1682 | 1677 – 1687 |
+| `<1727` | — | ? – 1727 |
+| `>1900` | — | 1900 – ? |
+| `1575..1587` | — | 1575 – 1587 |
+
+Evidence reads the left column, so `~1682` still earns its bits against an act saying 1682.
+Vetoes read the right one and fire only when **no** year satisfies both — an open end means
+unknown, and unknown never vetoes.
+
+Reading a single number for both is a bug that costs recall in silence, and it was in here
+for months. `1920..1929` flattened to "1920", so an act stating 1925 was rejected as
+*conflicting* with a range that contains it — the one thing a record admits it does not know
+becoming a reason to refuse every record that would have told us. 81 of 434 records carry a
+non-point date. The same flattening was applied a second time as a SQL pre-filter over the
+index, which dropped those mentions before the scorer could see them and left no trace at
+all.
+
+The corollary is a rule about the *data*, not the code: a date the grammar **can** hold does
+not belong in `raw`. A record whose only date was prose was, to the matcher, entirely
+undated — which is how a boy born 1901 was offered as a man whose birth was declared in
+1847, with nothing able to veto it.
 
 ---
 

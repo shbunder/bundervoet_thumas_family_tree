@@ -36,8 +36,12 @@ Then report back to me, briefly:
 - anything the verifier rejected, and why;
 - the next frontier.
 
-If the browser is not running, say so and stop rather than falling back to
-unauthenticated fetches — the archives that matter are all behind a session.
+If the browser is not running, that thins the pass; it does not end it. Say so, log every
+search that needed a session as `blocked` rather than `miss` — it was never read, so it is
+a retry and not a dead end — and work the two routes that need no session at all:
+`harvest.py` (bulk, then oai, then surname) and `WebSearch`/`WebFetch`. Both are free, both
+are reproducible for the next reader, and the harvest is *kept*, so it answers every later
+frontier on that surname too. The browser is the last of three routes, not the only one.
 
 If a pass ends with nothing grafted, that is a normal outcome. A logged set of
 negatives is worth more than a speculative link, and saying "this needs the

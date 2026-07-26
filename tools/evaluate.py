@@ -40,39 +40,10 @@ from familytree.frontier import children_index  # noqa: E402
 from familytree.match import compare, from_mention, from_person  # noqa: E402
 from familytree.people import ROOT, family_key, load_config, load_people  # noqa: E402
 
-LABELS = ROOT / "research" / "labels.jsonl"
-
-# Who decided, and how much that is worth. Kept explicit because a label from a read act
-# and a label from a plausible-looking index page are not the same evidence, and a gold
-# standard that mixes them silently measures the wrong thing.
-BASES = ("act", "index", "tree", "reasoning")
-
-
-@dataclass
-class Label:
-    person: str
-    ref: str
-    match: bool
-    basis: str
-    why: str
-    date: str
-
-
-def read_labels() -> list[Label]:
-    if not LABELS.exists():
-        return []
-    out = []
-    for line in LABELS.read_text(encoding="utf-8").split("\n"):
-        if line.strip():
-            r = json.loads(line)
-            out.append(Label(r["person"], r["ref"], r["match"], r.get("basis", "reasoning"),
-                             r.get("why", ""), r.get("date", "")))
-    # Later labels supersede earlier ones for the same pair — corrections are first-class
-    # here exactly as they are in the tree.
-    latest: dict[tuple[str, str], Label] = {}
-    for lab in out:
-        latest[(lab.person, lab.ref)] = lab
-    return list(latest.values())
+# The reader lives in familytree/labels.py, not here. It was private to this file, which is
+# why nothing else could read the gold standard and the queues went on re-proposing what a
+# verifier had already refuted — see that module's opening note.
+from familytree.labels import BASES, LABELS, Label, read_labels, reset_cache  # noqa: E402,F401
 
 
 def cmd_label(args) -> int:
@@ -92,6 +63,7 @@ def cmd_label(args) -> int:
     LABELS.parent.mkdir(parents=True, exist_ok=True)
     with LABELS.open("a", encoding="utf-8") as f:
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    reset_cache()
     verdict = "MATCH" if args.match else "NOT a match"
     print(f"recorded: {args.person} × {args.ref} — {verdict} ({args.basis}) — {args.why}")
     return 0
@@ -162,6 +134,7 @@ def cmd_report(args) -> int:
     if not corpus_exists():
         raise SystemExit("error nothing harvested yet — the labels cannot be re-scored")
 
+    people = load_people(load_config()["roster"])
     tp = fp = tn = fn = 0
     missing = 0
     disagreements = []
@@ -185,11 +158,25 @@ def cmd_report(args) -> int:
           + (f" · {missing} unresolved" if missing else ""))
     if missing:
         # Said loudly, because an unresolved label is a hole in the gold standard and the
-        # figures below are computed without it. Most are act-level refs naming an act with
-        # no participant of that surname, or more than one.
-        print(f"  {missing} label(s) could not be tied to a single participant. An act names six\n"
-              "  people, so an act-level ref does not say which. Re-record those against the\n"
-              "  mention — `<act-id>#<pid>`, as link.py prints it — or they stay uncounted.")
+        # figures below are computed without it — but broken down, because most of the hole
+        # is not waiting on anybody. Reporting all of them as "re-record these" made the
+        # backlog look like human work when the large majority resolves on the next harvest.
+        held = store.acts_by_id(lab.ref.split("#", 1)[0] for lab in labels)
+        absent = sum(1 for lab in labels
+                     if not lab.names_a_mention and lab.ref.split("#", 1)[0] not in held)
+        gone = sum(1 for lab in labels if lab.person not in people)
+        needs_a_person = missing - absent - gone
+        print(f"  {missing} label(s) are not counted above:")
+        if needs_a_person:
+            print(f"    {needs_a_person:>3} name a held act but not which of its people. An act names six,\n"
+                  "        so the ref alone does not say which. `evaluate.py refs` prints the\n"
+                  "        command for each participant — this is the only part needing a person.")
+        if absent:
+            print(f"    {absent:>3} name an act the corpus does not hold, so there are no participants\n"
+                  "        to choose between yet. These resolve themselves once it is harvested.")
+        if gone:
+            print(f"    {gone:>3} name a person no longer in the tree — a record retracted after the\n"
+                  "        act was re-read, leaving the ruling that justified it pointing at nobody.")
     print(f"\n  confirmed matches the scorer would graft   {tp}")
     print(f"  confirmed matches it would MISS            {fn}")
     print(f"  refuted pairs it would wrongly graft       {fp}")

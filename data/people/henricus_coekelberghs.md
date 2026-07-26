@@ -3,6 +3,7 @@ id: henricus_coekelberghs
 name: Henricus Coekelberghs
 surname: Coekelberghs
 death:
+  date: >1838
   raw: alive on 30 October 1838; death not known
 confidence: sup
 occupation: landbouwer (farmer)

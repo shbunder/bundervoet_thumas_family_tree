@@ -5,17 +5,11 @@ argument-hint: "[number of passes, default 10]"
 
 Run $1 research passes (default 10) one after another, without checking in between.
 
-`dir` in the log is up/down/act — the rotation is described below.
-
-I am not watching. **Do not ask me questions.** Where you would normally ask, choose what
-the rules in [CLAUDE.md](../../CLAUDE.md) already imply, record the choice in the log, and
-keep going. Work from the tools, never from memory or from anything earlier in this
-conversation — every queue here is derived fresh when asked, so it cannot go stale, and a
-half-finished run resumes by recomputing.
-
-Do not edit anything under `tools/`, `.claude/` or `CLAUDE.md`. Those need my approval and
-the run will stall waiting for it. Nothing in a research pass requires them: if a pass
-seems to, that is a finding to report at the end, not a change to make now.
+**The rules for an unattended run are in [CLAUDE.md](../../CLAUDE.md) § Unattended runs** —
+don't ask questions, don't edit `tools/`/`.claude/`/`CLAUDE.md`, what to write every pass,
+when to stop early, and why a pass that concludes nothing is still a good one. They are not
+repeated here. This file is only what is particular to *growing* the tree: the rotation, the
+three routes, and this run's own log.
 
 ## Before the first pass
 
@@ -85,21 +79,11 @@ several spent on the frontiers underneath it, and it is the same reading either 
 A search-result summary is not the record: fetch the page and read it before treating
 anything as found.
 
-### Do not lower the bar to make a pass productive
+## This run's own log
 
-A pass that grafts nothing and logs five honest misses is a successful pass. Most passes
-end NOT PROVEN, and that is the system working rather than stalling. Never graft on one
-identifier to have something to report, and never upgrade a confidence to `doc` without
-having actually read the act or its image.
+Everything else that gets written is in CLAUDE.md § Unattended runs. The one thing specific
+to this command is its row:
 
-## What to write, every pass
-
-- The person files — citation by id, honest confidence, no invented field.
-- `uv run tools/research.py log …` for every search, hit or miss. A miss states its scope.
-- `uv run tools/evaluate.py label …` for every verifier ruling, **rejections included**.
-  A REJECT is the more valuable label: it is a pair that scored well enough to reach a
-  verifier and was still wrong, which is exactly what the scorer needs.
-- A numbered section in `docs/research-log.md` — the narrative.
 - One row appended to `docs/autopilot-log.md`. Create it if absent, with this header:
 
   ```
@@ -110,17 +94,6 @@ having actually read the act or its image.
   `dir` is up/down/act. `verdict` is GRAFTED / NOT PROVEN / REJECTED / BLOCKED. `added` is
   the person ids created, or `—`. This file is an index into the research log and the git
   history, not a second copy of either — keep each row to one line.
-- `uv run tools/build.py`, then one commit per pass. **Do not push.**
-
-## Stop early if
-
-- `build.py` fails and the cause is not obvious from the validator's own message. Leave
-  the tree as it is, never force it green, and say what broke.
-- Three passes in a row come back entirely `blocked`. That means the session or the
-  network is gone, not that the research is exhausted.
-- Continuing would require breaking a rule in CLAUDE.md.
-
-Otherwise keep going to the end of the run.
 
 ## At the end
 

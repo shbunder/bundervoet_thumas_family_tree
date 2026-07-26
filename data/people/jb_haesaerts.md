@@ -3,6 +3,7 @@ id: jb_haesaerts
 name: Joannes Baptista Haesaerts
 surname: Haesaerts
 death:
+  date: >1838
   raw: alive on 30 October 1838; death not known
 confidence: sup
 occupation: landbouwer (farmer)

@@ -66,8 +66,39 @@ their roles, and prints the command to re-record each one. It resolves nothing b
 where an act names a bride *and* her father of the same surname, only a human can say which
 the ruling was about, and guessing is what caused this.
 
+Sorting the 45 turned out to be mostly mechanical, and the shape of the split is the useful
+part. **Twenty** named exactly one participant carrying the person's own forename or birth
+year: a `--match` label *asserts* the person is in the act, so finding them is a lookup and
+not a judgement. **Ten** named no participant resembling them at all — those are not pairwise
+rulings but judgements about an *act*, and forcing a pid onto one would invent the thing it
+denies. Re-scored pairs went from 8 to 28 without a single new ruling being made, and
+precision and recall held at 100%.
+
+The reverse also matters: **an act-level ruling is not merely a weaker label, it is an
+uncounted one**, and reporting all of them as work-for-a-human overstated the backlog four
+times over. Most were waiting on a harvest, not on anybody. Counting them apart is the
+difference between a number someone acts on and a number everyone ignores.
+
 Labels are append-only, and later labels supersede earlier ones for the same pair:
 corrections are first-class here exactly as they are in the tree.
+
+## The rulings feed the queues, not only the scorer
+
+For a long time `research/labels.jsonl` was read by `evaluate.py` and nothing else. The
+search log had `research.py tried`, `untried` and `stale` from the start, precisely so a
+*miss* is never walked twice — but a **ruling**, which costs someone the reading of an act,
+had no equivalent. So a refutation could be recorded with its full reasoning and the queue
+that proposed the pair would propose it again the next night.
+
+`research.py children` now holds back any pair a verifier refuted, and prints each one with
+its reason rather than dropping it silently, so a wrong refutation can be spotted and
+re-pointed instead of quietly removing a lead forever. An act-level refutation covers every
+mention in that act — broader than the label strictly says, and the right way round: too
+broad costs one label a re-point, too narrow costs the loop where every night re-grafts what
+last night refuted.
+
+An **accept** is deliberately not read here. A queue that skipped what was already confirmed
+would hide the corroboration.
 
 ### What it buys
 

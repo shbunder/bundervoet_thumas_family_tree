@@ -3,6 +3,7 @@ id: elisabeth_langes
 name: Elisabeth Agatha Langes
 surname: Langes
 death:
+  date: >1873
   raw: alive on 24 April 1873; death not known
 confidence: sup
 occupation: landbouwster (farmer)

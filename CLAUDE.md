@@ -98,6 +98,13 @@ Each research pass:
    *methods* pay off, `stale` for misses a venue has since outgrown. Do not re-walk a
    logged `miss` without a new angle; `blocked` means it was never actually read, so it
    is worth retrying.
+
+   The same now holds for **rulings**, not just searches. `research.py children` reads
+   `research/labels.jsonl` and holds back any pair a verifier already refuted, printing
+   each one with its reason. Before, the refutations were written down and nothing read
+   them, so the downward queue re-proposed the same retracted graft every run — the one
+   thing an unattended loop cannot afford. If a suppressed lead looks wrong, **correct the
+   label**; never work around it.
 3. **Harvest, then search.** Reach for `uv run tools/harvest.py` first: Open Archives
    is free, unauthenticated and holds ~30M Belgian person-mentions, and a harvest is
    kept, so it answers every future frontier too. `uv run tools/link.py <person>` then
@@ -130,6 +137,43 @@ Each research pass:
 **Log the misses.** They are the difference between a loop that converges and one that
 searches AGATHA for Édouard's parents every night forever. `docs/sources.md` is
 generated from the registry — edit `research/sources.json`, not the markdown.
+
+---
+
+## Unattended runs
+
+`/autopilot` and `/verify-sweep` both run passes back to back with nobody watching. What
+follows holds for both, so each command file describes only what is *particular* to it —
+which direction it works in, which queue it reads, which log it writes.
+
+This section exists because those two files each carried their own paraphrase of all of it.
+Only three lines were ever byte-identical, and that is the problem rather than the excuse: a
+dozen instructions saying the same thing in different words cannot be diffed, so divergence
+is undetectable. Two had already diverged in meaning by the time anyone looked — one file
+said to stop when the browser is down while the other said to log `blocked` and continue, and
+`.claude/agents/verifier.md` went on teaching the act-level label form for months after §60
+corrected it here. Same rule as the data model: nothing is listed twice.
+
+1. **Do not ask questions.** Where you would ask, choose what the rules above already imply,
+   write the choice into the log with its reasoning, and continue.
+2. **Work from the tools, never from memory.** Every queue is derived from the records when
+   asked, so it cannot go stale and a half-finished run resumes by recomputing. Trust it over
+   anything earlier in the conversation.
+3. **Do not edit `tools/`, `.claude/` or `CLAUDE.md`.** Those need review and the run will
+   stall waiting for it. If a pass seems to need one, that is a finding for the final report,
+   not a change to make now.
+4. **A pass that concludes nothing is a successful pass.** Most end NOT PROVEN. Never graft on
+   one identifier to have something to report, and never upgrade a confidence to `doc`
+   without having read the act or its image.
+5. **Write, every pass:** the person files; `research.py log` for every search, hit or miss,
+   a miss stating its scope; `evaluate.py label` for every ruling, **rejections included** and
+   always against `<act-id>#<pid>`; any new source registered; a numbered section in
+   `docs/research-log.md`; one row in the run's own log. Then `build.py`, then one commit.
+   **Do not push.**
+6. **Stop early** if `build.py` fails for a reason its own message does not explain — leave the
+   tree as it is and never force it green; if three passes in a row come back entirely
+   `blocked`, which means the session or the network is gone rather than the research; or if
+   continuing would require breaking a rule above.
 
 ---
 
@@ -222,6 +266,20 @@ Dates use a small fixed grammar so they are queryable and sortable, never prose:
 `1575..1587` between. There is deliberately no syntax for "probably March" — a format
 for a guess is an invitation to record one. If a source says something the grammar
 cannot express, put it in `raw` and explain it in the prose.
+
+**Every date answers two different questions, and code must be explicit about which.**
+`point_year` is what a date *asserts*; `year_span` is what it *permits*. Evidence reads the
+first — `~1682` still earns its bits against an act saying 1682. Vetoes read the second, and
+only fire when no year satisfies both: a bound or a range asserts nothing, so `1920..1929`
+cannot disagree with 1925. Reading `year_of` for both flattened every form to one number and
+turned "the decade is all we know" into a conflict with every year in it. Bounds are read
+inclusively at year granularity, because `<1946` is the only way the grammar can carry "died
+before 9 May 1946" and it must not assert more than the source did.
+
+But `raw` is not a place to park a date the grammar *can* hold. A record whose only date was
+prose was, to the matcher, entirely undated — which is how a boy born 1901 was offered as a
+man whose birth was declared in 1847, with no veto able to fire. If the source gives a
+declaration date, the year is a fact: record `1847` and keep the day in `raw`.
 
 Invariants:
 
@@ -346,6 +404,8 @@ tools/familytree/       the library every tool shares
   people.py             the loader, the date grammar, the browser record, the census
   frontmatter.py        the parser for the records' strict YAML subset
   sources.py            the registry and the search log, and what makes an entry valid
+  labels.py             the gold standard, readable by the QUEUES and not only the scorer
+  landing.py            what index.html says about the size of the tree, so it cannot rot
   bundle.py             data/ + site/ -> dist/bundle.js
   gedcom.py             the GEDCOM 7 writer and its round-trip self-check
   corpus.py             harvested acts, read as EVENTS: roles, parent edges, frequencies
@@ -355,6 +415,7 @@ tools/familytree/       the library every tool shares
   frontier.py           the ranked queue: value x P(resolvable) / cost
   coverage.py           which act answers most frontiers; components; pedigree collapse
 tools/build.py          validates, then writes everything generated
+tools/verify_all.py     the whole tree scored against the whole corpus, in one pass
 tools/check_data.py     the validator
 tools/research.py       the log, the registry, and every derived report
 tools/harvest.py        pull acts from Open Archives and keep them
@@ -395,6 +456,7 @@ uv run tools/harvest.py oai <archive>      a whole archive at 150 acts a request
 uv run tools/harvest.py frontiers          pull the acts the queue is asking for
 uv run tools/harvest.py surname Bundervoet every Belgian record for one surname
 uv run tools/harvest.py status             what is held, what is missing, what is bulk-able
+uv run tools/harvest.py replay             rebuild the whole corpus from the manifest
 uv run tools/link.py <person>              what the held acts say about them
 uv run tools/identify.py "<name>" --birth … is this person already in the tree?
 uv run tools/verify_all.py --json          the whole tree scored at once — the run's worklist

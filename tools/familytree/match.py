@@ -31,7 +31,7 @@ from .corpus import (
     Frequencies, Mention, frequencies, normalise_key, population, stated_kin,
     surname_population_count,
 )
-from .people import family_key, given_names, year_of
+from .people import DAY, family_key, given_names, point_year, year_of, year_span
 
 # ---------- phonetics ----------
 # Flemish orthography drifted for centuries and the same family is spelled several ways
@@ -83,6 +83,10 @@ class Candidate:
     birth_date: str | None = None
     birth_place: str | None = None
     death_year: int | None = None
+    # The death date as the grammar wrote it, next to `birth_date` — which was here from
+    # the start while this was not, so a death recorded `<1748` reached the scorer only as
+    # the number 1748 and every veto treated a bound as a measurement.
+    death_date: str | None = None
     places: list[str] = field(default_factory=list)
     # Where the RECORD happened, as opposed to where this person was. Weak evidence.
     context_places: list[str] = field(default_factory=list)
@@ -189,6 +193,7 @@ def from_person(p: dict, people: dict | None = None, children: dict | None = Non
         birth_date=birth.get("date"),
         birth_place=birth.get("place"),
         death_year=year_of(death.get("date")),
+        death_date=death.get("date"),
         places=[x for x in (birth.get("place"), death.get("place")) if x],
         occupation=p.get("occupation"),
         stated_birth_year=bool(birth.get("date")),
@@ -411,8 +416,55 @@ class Match:
                 f"{self.independent} independent ({'+'.join(self.classes)}) — {agreed}")
 
 
+def _asserts(date: str | None, year: int | None) -> int | None:
+    """The year to SCORE on: what the date claims, or None if it only bounds one.
+
+    `~1682` claims 1682 and still earns its bits against an act saying 1682. `<1673` and
+    `1920..1929` claim no year at all, so an act stating 1920 agrees with the lower edge of
+    a range by arithmetic rather than by evidence, and must not be paid for it.
+
+    Falls through to the plain year where there is no grammar string — a mention's year
+    comes from an act, and where it was implied by an age `stated_birth_year` is already
+    False, so it can score and cannot veto.
+    """
+    return point_year(date) if date else year
+
+
+def _permits(date: str | None, year: int | None) -> tuple[int | None, int | None]:
+    """The years to VETO on: everything the date leaves open, inclusive both ends."""
+    lo, hi = year_span(date)
+    if lo is None and hi is None and year:
+        return (year, year)
+    return (lo, hi)
+
+
+def _cannot_meet(x: tuple[int | None, int | None], y: tuple[int | None, int | None],
+                 slack: int = 0) -> bool:
+    """True only if no year satisfies both spans, even allowing `slack` between them.
+
+    The whole discipline of this file's vetoes in one function: certain, or nothing. An
+    open end means unknown, and unknown never vetoes.
+    """
+    return bool((x[1] is not None and y[0] is not None and y[0] - x[1] > slack)
+                or (y[1] is not None and x[0] is not None and x[0] - y[1] > slack))
+
+
+def _show(span: tuple[int | None, int | None]) -> str:
+    lo, hi = span
+    if lo == hi:
+        return str(lo)
+    return f"{lo if lo is not None else '?'}–{hi if hi is not None else '?'}"
+
+
 def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Match:
     freq = freq if freq is not None else frequencies()
+    # Every date is read twice below, and the two readings answer different questions: what
+    # it asserts (evidence) and what it permits (vetoes). Conflating them is what let a
+    # record saying "some year in the 1920s" be REJECTED for disagreeing with 1925.
+    a_born, b_born = _asserts(a.birth_date, a.birth_year), _asserts(b.birth_date, b.birth_year)
+    a_died, b_died = _asserts(a.death_date, a.death_year), _asserts(b.death_date, b.death_year)
+    a_birth, b_birth = _permits(a.birth_date, a.birth_year), _permits(b.birth_date, b.birth_year)
+    a_death, b_death = _permits(a.death_date, a.death_year), _permits(b.death_date, b.death_year)
     agree: list[tuple[str, str, float]] = []
     conflict: list[str] = []
     classes: list[str] = []
@@ -452,16 +504,21 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     # --- date ---
     # A day-level agreement between two independently written records is close to
     # conclusive on its own; a shared year in a commune of a few thousand is not.
-    if a.birth_date and b.birth_date and len(a.birth_date) == 10 and a.birth_date == b.birth_date:
+    # `DAY.match`, not `len(...) == 10`. "1920..1929" is exactly ten characters, so a range
+    # was being read as a day-level date and compared as a string: two people who each know
+    # only that they were born in the 1920s scored 12 bits for "the same day", and one of
+    # them against an act stating a real day was vetoed for "birth dates 1920..1929 vs
+    # 1920-06-01". A length is not a format.
+    if a.birth_date and b.birth_date and DAY.match(a.birth_date) and a.birth_date == b.birth_date:
         add("date", f"birth {a.birth_date}", 12.0)
-    elif a.birth_year and b.birth_year:
-        gap = abs(a.birth_year - b.birth_year)
+    elif a_born and b_born:
+        gap = abs(a_born - b_born)
         if gap == 0:
-            add("date", f"birth year {a.birth_year}", 6.0)
+            add("date", f"birth year {a_born}", 6.0)
         elif gap <= 2:
             add("date", f"birth year ±{gap}", 2.0)
-    if a.death_year and b.death_year and a.death_year == b.death_year:
-        add("date", f"death year {a.death_year}", 5.0)
+    if a_died and b_died and a_died == b_died:
+        add("date", f"death year {a_died}", 5.0)
 
     # --- place ---
     # The class that did all the rejecting in the log so far: the Van Craenenbroeck and
@@ -501,20 +558,24 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     # Only relatives in the same bucket are compared, and the weight follows the same
     # rule as everything else — what the agreement would cost to get by chance.
     kin_bits, kin_labels, kin_anchored = 0.0, [], False
+    # Named apart from the `same_surname`/`shared` above on purpose. These are facts about
+    # a RELATIVE; those are facts about the two people being compared. Reusing the names
+    # here rebound them, and the surname veto below — which reads `same_surname` — was
+    # then answering a question about somebody's father instead. See the note there.
     for bucket, surname_key, givens in a.kin:
         for o_bucket, o_surname, o_givens in b.kin:
             if bucket != o_bucket:
                 continue
-            shared = givens & o_givens
-            same_surname = bool(surname_key) and surname_key == o_surname
-            if not shared and not same_surname:
+            shared_givens = givens & o_givens
+            kin_surname_agrees = bool(surname_key) and surname_key == o_surname
+            if not shared_givens and not kin_surname_agrees:
                 continue
             bits = sum(_bits(freq.givens.get(g, 0), freq.n, 8.0) if freq.n else _NO_CORPUS["given"]
-                       for g in shared)
+                       for g in shared_givens)
             # A father shares his son's surname, so counting it again would be counting
             # the principal's own name twice. A mother's maiden name is new information
             # every time, which is why it is the classic second identifier.
-            if same_surname and surname_key != family_key(a.surname):
+            if kin_surname_agrees and surname_key != family_key(a.surname):
                 bits += surname_weight(surname_key, freq).bits
             if bits:
                 kin_bits += bits
@@ -526,7 +587,7 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
                 # father's surname, so "the child's surname agrees" is the principal's
                 # own name counted a second time. A mother's maiden name is the case
                 # this is really for.
-                if same_surname and surname_key != family_key(a.surname):
+                if kin_surname_agrees and surname_key != family_key(a.surname):
                     kin_anchored = True
                 break
     if kin_bits:
@@ -540,35 +601,55 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     # allowed to kill a true match on its own.
     if a.sex and b.sex and a.sex != b.sex:
         conflict.append("sex disagrees")
-    if (a.stated_birth_year and b.stated_birth_year and a.birth_year and b.birth_year
-            and abs(a.birth_year - b.birth_year) > 2):
-        conflict.append(f"stated birth years {a.birth_year} vs {b.birth_year}")
-    if (a.birth_date and b.birth_date and len(a.birth_date) == 10 and len(b.birth_date) == 10
+    # On the SPANS, not the years. `1920..1929` against a stated 1925 is not a conflict — it
+    # is the range saying it does not know, which is the opposite of disagreeing.
+    if a.stated_birth_year and b.stated_birth_year and _cannot_meet(a_birth, b_birth, slack=2):
+        conflict.append(f"stated birth years {_show(a_birth)} vs {_show(b_birth)}")
+    if (a.birth_date and b.birth_date and DAY.match(a.birth_date) and DAY.match(b.birth_date)
             and a.birth_date != b.birth_date):
         conflict.append(f"birth dates {a.birth_date} vs {b.birth_date}")
-    if a.death_year and b.birth_year and b.birth_year > a.death_year:
-        conflict.append("born after the other died")
+    # Both directions. This tested only a's death against b's birth, so `compare(x, y)` and
+    # `compare(y, x)` could disagree about whether the pair was even possible — and callers
+    # do pass them both ways round: act_coverage compares (target, mention) while
+    # missing_children compares (mention, target).
+    for died, born in ((a_death, b_birth), (b_death, a_birth)):
+        if died[1] is not None and born[0] is not None and born[0] > died[1]:
+            conflict.append("born after the other died")
+            break
     # If the pair were one person, that person lived this long. Kept generous on
     # purpose — the point is to kill the grandfather-grafted-onto-grandson case, which
     # recurs in this material because the forename is reused every second generation,
     # and not to adjudicate anyone's actual longevity.
-    for birth, death in ((a.birth_year, b.death_year), (b.birth_year, a.death_year)):
-        if birth and death and death - birth > MAX_LIFESPAN:
-            conflict.append(f"implied lifespan {death - birth} years")
+    # The SHORTEST lifespan the two spans allow, so the veto only fires when even that is
+    # impossible: latest possible birth against earliest possible death.
+    for birth, death in ((a_birth, b_death), (b_birth, a_death)):
+        if birth[1] is not None and death[0] is not None and death[0] - birth[1] > MAX_LIFESPAN:
+            conflict.append(f"implied lifespan {death[0] - birth[1]} years")
             break
     # The record's own year against the person's life. This catches what nothing else
     # can: an act that gives a participant no dates whatsoever still cannot name someone
     # who died two centuries before it was drawn up, or who was not yet born.
-    for cand, other in ((a, b), (b, a)):
+    # Again on the bound that makes it certain: the LATEST they could have died, and the
+    # EARLIEST they could have been born.
+    for (cand, other), death, birth in (((a, b), a_death, a_birth), ((b, a), b_death, b_birth)):
         if not other.event_year:
             continue
-        if cand.death_year and other.event_year - cand.death_year > MAX_POSTHUMOUS_MENTION:
-            conflict.append(f"record of {other.event_year} is {other.event_year - cand.death_year} years after they died")
+        if death[1] is not None and other.event_year - death[1] > MAX_POSTHUMOUS_MENTION:
+            conflict.append(f"record of {other.event_year} is "
+                            f"{other.event_year - death[1]} years after they died")
             break
-        if cand.birth_year and other.event_year < cand.birth_year:
-            conflict.append(f"record of {other.event_year} predates their birth in {cand.birth_year}")
+        if birth[0] is not None and other.event_year < birth[0]:
+            conflict.append(f"record of {other.event_year} predates their birth in {_show(birth)}")
             break
 
+    # Reads the two names computed at the top, before any kin comparison. It has to: for
+    # eight months the kin loop rebound `same_surname` to "this relative's surname agrees",
+    # so a pair whose own surnames plainly disagreed cleared this veto whenever any one
+    # relative matched. Measured over 100 people and 298,816 pairs it fired once, and on
+    # the worst possible pair — Maria Anna Vandenhoven scored as Maria Theresia
+    # Coekelberghs, at 21.6 bits and graftable, which is the exact identification a
+    # verifier had already refuted in writing and retracted a record over
+    # (research/labels.jsonl, act abl:2c0d71d9…). Latent, not harmless.
     surnames_disagree = bool(
         family_key(a.surname) and family_key(b.surname) and not same_surname and not same_phonetic
     )

@@ -3,6 +3,7 @@ id: georgesjoseph_t
 name: Georges Joseph Thumas
 surname: Thumas
 birth:
+  date: 1843
   raw: declared at Grez-Doiceau on 31 March 1843
   place: Grez-Doiceau
 confidence: sup

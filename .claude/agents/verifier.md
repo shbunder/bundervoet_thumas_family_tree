@@ -60,9 +60,19 @@ Every verdict you reach on a corpus candidate is **labelled data**, and it is th
 labelled data this project will ever produce. Write it down before you report:
 
 ```
-uv run tools/evaluate.py label <person> <act-id> --match    --basis act   --why "…"
-uv run tools/evaluate.py label <person> <act-id> --nonmatch --basis index --why "…"
+uv run tools/evaluate.py label <person> <act-id>#<pid> --match    --basis act   --why "…"
+uv run tools/evaluate.py label <person> <act-id>#<pid> --nonmatch --basis index --why "…"
 ```
+
+**Label the MENTION, not the act.** `<act-id>#<pid>` — the form `link.py` prints — and never
+the act id on its own. An act names six people, so an act-level ref does not say which of
+them you ruled on, and the scorer is handed whichever participant comes first, usually the
+groom. That is not a hypothetical: 45 of the first 48 labels were written act-level, Maria
+Thérèsia Pardon was scored against Joseph Reniers — her own husband — every such pair came
+back REJECTED on a sex conflict, and each was counted as a true match the scorer had MISSED.
+It is why this project once reported 33% recall for a scorer with no known errors. An
+act-level label is not a weaker label; it is an uncounted one. `evaluate.py refs` lists the
+ones still owed a pid and prints the exact command for each participant.
 
 `--basis` is how you judged it: `act` (the image was read), `index` (an index entry),
 `tree` (a member tree), `reasoning` (from what was already held). It is kept separate

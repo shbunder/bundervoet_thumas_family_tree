@@ -3,6 +3,7 @@ id: elisabeth_deyn
 name: Elisabeth Deyn
 surname: Deyn
 death:
+  date: >1846
   raw: alive on 24 February 1846; not stated to be present in 1853
 confidence: sup
 branch: Thumas

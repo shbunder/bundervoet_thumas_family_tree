@@ -2258,3 +2258,172 @@ consistent, recall is measuring the labels as much as the code — and that, too
 finding worth having, since these are the only labelled data this project will ever
 produce.
 
+
+## 60. An audit of the tools — a veto that had been switched off by a variable name, and dates the matcher could not see
+
+No new people, no new acts. A full read of `tools/` against `CLAUDE.md` and `.claude/`,
+which turned up four scoring defects, one of them arming exactly the regression §59 warned
+about. Everything below is verified against the gold standard, which is itself three and a
+half times larger by the end of this section — for the same 48 rulings.
+
+### The surname veto had been switched off by a variable name
+
+`match.compare` computes `surnames_disagree` and refuses to call any pair graftable when
+both sides state a surname and the two do not agree, even phonetically. Its comment names
+the pairs it exists for: *"Judocus Bundervoet was matched to Judocus ROTIER and Edouard
+Dekeyser to Edouard BARBE"*.
+
+It read `same_surname`, which is computed at the top of the function — and rebound sixty
+lines further down by the kin loop, to mean *"this relative's surname agrees"*. So a pair
+whose own surnames plainly disagreed cleared the veto whenever any single relative matched.
+
+Measured over the first 100 people in the tree and **298,816 compared pairs**, it fires
+once. On the worst pair available:
+
+| | |
+|---|---|
+| tree | `coekelberghs` — Maria Theresia Coekelberghs |
+| act | `abl:2c0d71d9…` — **Maria Anna Vandenhoven**, 21.6 bits, graftable |
+
+That is the identification §54 retracted a person record over, and the refutation naming
+that act is still in `research/labels.jsonl`: *"the parents it names are Willem Edouard
+Vandenbemden and Maria Anna Vandenhoven — **NOT** Hendrik August Vandenbemden x Maria
+Theresia Coekelberghs."* §59 predicted the next unattended run would re-graft the wrong
+Appolonia because no queue read the labels. The deeper cause is that the scorer itself
+called the pair graftable. The veto had **no test**; it has one now, and the graftable
+count over those pairs went 382 → 381 with nothing else moving.
+
+### A date was read for what it says, when every veto needs what it rules out
+
+`from_person` took its years from `year_of`, which reads a number out of any form in the
+grammar. So `1920..1929` became "1920", `stated_birth_year` was set from the mere presence
+of a date, and the ±2 conflict test then fired on **every other year in the range the
+record itself declares**. [[gustaaf]]'s birth is recorded `1920..1929`; acts stating 1923,
+1925 and 1929 were each REJECTED as conflicting with it. He is one of the people this
+project most needs to find in a foreign register, and the one thing his record admits it
+does not know had become a reason to refuse every record that would have told us.
+
+**81 of 434 records carry a non-point date** — 62 `~about`, 10 ranges, 9 bounds — so this
+was not an edge case. Worse in the index than in the scorer: `store._veto_sql` applied the
+same ±2 around the same flattened number, so those mentions were dropped in SQL before the
+scorer could see them, and that half left no trace at all.
+
+`people.year_span` now says what a date *permits* beside `point_year`, which already said
+what it *asserts*. Evidence reads the second — `~1682` still earns its bits against 1682 —
+and every veto reads the first, firing only when no year satisfies both. Two smaller things
+fell out of it: the `born after the other died` test checked one direction only, so
+`compare(x, y)` and `compare(y, x)` could disagree about whether a pair was even possible,
+and both orders are used in anger. And `len(date) == 10` was standing in for "is a day-level
+date" — `1920..1929` is exactly ten characters, so a range was compared as a string, scoring
+12 bits for "the same day" between two people who each knew only their decade.
+
+Bounds are read inclusively at year granularity. The grammar has no `<1946-05-09`, so
+"died before 9 May 1946" can only be written `<1946`, and that has to mean "in 1946 or
+earlier" or the encoding asserts more than the source did.
+
+### Seventeen dates the matcher could not see at all
+
+[[cornelius_bossin]] carried `birth.raw: "declared at Sint-Stevens-Woluwe on 13 September
+1847"` and no `date:` — so to the scorer he was **undated**, and no veto could fire. That is
+why `research.py children` proposed a boy born 1901 as him, a 54-year gap that a human
+caught and wrote up in the verify log as a refused merge. The proposal was still live.
+
+Nineteen records held a date only in prose; seventeen state a year the grammar can carry.
+All seventeen are now recorded, with the `raw` kept because it holds the day:
+
+- five births as a year — a declaration date fixes the year, and Belgian civil registration
+  required the declaration within days;
+- nine deaths as `>YYYY` — *"alive on 1 December 1853; death not known"* is precisely the
+  grammar's **after**;
+- three deaths as `<YYYY`.
+
+The two left alone are the two the grammar genuinely cannot hold: a birth of `"2 Jul"` with
+no year, and one death with no year in the prose either.
+
+### The queues now read the rulings
+
+`research/labels.jsonl` was read by `evaluate.py` and by nothing else. `research.py tried`,
+`untried` and `stale` have always stopped a *search* being walked twice; a **ruling** — the
+more expensive artefact, costing someone the reading of an act — had no equivalent.
+`familytree/labels.py` is now where the gold standard lives, and `research.py children`
+holds back any pair a verifier refuted, printing each with its reason so a wrong refutation
+can be spotted and re-pointed rather than silently deleting leads forever. An act-level
+refutation covers every mention in that act: broader than the label strictly says, and the
+right way round, because too broad costs one re-point and too narrow costs the re-graft loop.
+
+### The gold standard, tripled without a single new ruling
+
+45 of the 48 labels named an act rather than a person in it. Sorting them turned out to be
+mostly mechanical rather than a matter of judgement:
+
+- **20** name exactly one participant carrying our person's own forename or birth year. A
+  `--match` label *asserts* our person is in the act, so finding them is a lookup.
+- **3** were resolved on the role the label's own text states — and these are the
+  interesting ones. The tree records him as **Henricus Augustinus** Vandenbemden while
+  every act calls him **Hendrik August**, so no forename comparison could see it.
+- **10** name no participant resembling our person at all. Those are not pairwise rulings;
+  they are judgements about an *act*, and forcing a pid onto one would invent the thing it
+  denies. Left as they are.
+
+One re-pointing was **wrong and is retracted**: `joannes_jos_vi` against
+`abb:2537bedb…` was moved to the father, Jacobus Van Iseghem, because the label's text
+contains the word "father" — but that text is *describing the act* (*"father Jacobus x
+Rosalie Wolfs"*), not naming the pair ruled on. The rule is only sound for `--match`
+labels. Reverted to act-level.
+
+Re-scored pairs went **8 → 28**, and precision and recall stayed at 100% — 24 confirmed
+matches the scorer would graft, 4 refuted pairs it correctly rejects, no false positives
+and no false negatives — through all four scoring changes above. The reported backlog fell
+with it: what `evaluate.py` used to call "39 unresolved" is **4** labels actually waiting on
+a person, 14 waiting only on a harvest, and 1 naming the person §54 retracted.
+
+### Found and not fixed: forenames do not fold, and only surnames ever did
+
+`phonetic` and `family_key` fold surname spelling; forenames go through exact set
+intersection. So **Henricus/Hendrik, Augustinus/August, Joannes/Jan, Ludovicus/Lodewijk,
+Guilielmus/Willem** — the Latin/vernacular pairs that pervade these registers, and the
+Gustaaf/Gustavus confusion this project already lists among its near-misses — score **zero**
+forename agreement. The Vandenbemden graft above survives on surname, date and place; what
+is unknown is how many pairs do not.
+
+This is left alone deliberately. It *adds* evidence, so it can create false grafts, and it
+wants validating against the gold standard rather than argued about — which is now a
+28-pair instrument instead of an 8-pair one. It also wants to be a **vocabulary in data**,
+the way `site/labels.json` holds the relation words, not a table buried in `match.py`.
+
+### Smaller things, and one hole in a guarantee
+
+- `store.signature()` covered the harvest files and not the code that derives from them, so
+  an index built by yesterday's `block_keys` reported itself **current**. Both recent
+  changes to what is derived would have shipped a stale index. There is a `FORMAT` version
+  in the signature now.
+- **`len(date) == 10` had been used three separate times to mean "is a day-level date"**,
+  and `1920..1929` is exactly ten characters. Two were in the scorer; the third was in
+  `frontier.discriminability`, where it scored a decade-only birth as though a day-level date
+  had been read — raising P(resolvable) and promoting that frontier up the queue, ranked
+  searchable on evidence it does not have. A length is not a format, and there is now a test
+  that says so.
+- **The two unattended-run command files each carried their own paraphrase of the shared
+  rules.** Only three lines were byte-identical, which is the problem and not the excuse: a
+  dozen instructions saying the same thing in different words cannot be diffed, so divergence
+  is undetectable — and two had already diverged in meaning, one file saying to stop when the
+  browser is down while the other said to log `blocked` and continue. The contract now lives
+  once in `CLAUDE.md` § Unattended runs and each command describes only what is particular to
+  it. `verify-sweep.md` 202 → 180 lines, `autopilot.md` 136 → 109, with nothing lost.
+- `research.py children` printed a header counting every lead and a list cut to `--limit`,
+  which is the "27 to add / 24 listed" discrepancy the verify log recorded as unexplained
+  and worth distrusting the number over. It was the cap, unannounced. Four reports now say
+  when they truncate.
+- `coverage.identify` rebuilt each mention's `Candidate` once per candidate rather than once,
+  in the innermost loop of a report that reads every act in the corpus.
+- `research/labels.jsonl` was never validated, while the search log always has been. The
+  validator now warns on a label naming a person who is not in the tree, and on act-level
+  refs — as warnings, because each is repaired by a judgement only a person can make, and
+  "green before commit" must never become a reason to delete evidence.
+- `familytree/cdp.py`, 223 lines of vendored WebSocket client, was imported by nothing,
+  added in a commit about something else that never mentions it, and absent from the layout
+  in `CLAUDE.md`. Removed; recoverable at `5c999ee` if the unattended browser path is ever
+  built.
+- `.tmp-pass5/` — 26 MB of autopilot scratch — was untracked and **not** gitignored, while
+  the same run is instructed to commit once per pass. Ignored now, with
+  `.autopilot-worklist.json`.

@@ -3,6 +3,7 @@ id: guilielmus_pardon
 name: Guilielmus Pardon
 surname: Pardon
 death:
+  date: >1853
   raw: alive on 1 December 1853; death not known
 confidence: sup
 occupation: daglooner (day labourer)

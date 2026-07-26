@@ -39,6 +39,7 @@ from collections import Counter
 
 from .corpus import ACTS_DIR, HARVEST, Frequencies, normalise_act, normalise_key
 from .match import Candidate, block_keys, from_mention
+from .people import year_span
 
 DB = HARVEST / "corpus.db"
 
@@ -82,7 +83,7 @@ CREATE INDEX freq_lookup ON freq (kind, value);
 # rebuilding, and callers who need the evidence hydrate it for the survivors.
 _CAND_FIELDS = (
     "ref", "name", "surname", "given", "sex", "birth_year", "birth_date", "birth_place",
-    "death_year", "places", "context_places", "event_year", "occupation",
+    "death_year", "death_date", "places", "context_places", "event_year", "occupation",
     "stated_birth_year",
 )
 
@@ -101,16 +102,32 @@ def _load(blob: str) -> Candidate:
     return Candidate(**d, kin=kin)
 
 
+# Bump whenever what is DERIVED changes shape or meaning: the blocking keys, the fields of
+# the stored Candidate, how the frequencies are counted.
+#
+# Because the rest of `signature()` covers the harvest FILES, which catches every new act and
+# not one change to the code that reads them. An index built by yesterday's `block_keys`
+# reported itself current, and the docstring above promises the opposite — "an index that
+# silently lags the harvest would answer 'no candidates' for an act that was fetched an hour
+# ago", which is exactly as true of an act re-keyed an hour ago. Both of the last two changes
+# here would have shipped a stale index: the particle-stripped prefix key changed which pairs
+# are comparable, and adding `death_date` changed what a stored candidate carries.
+#
+#   1  the original: blocking keys + candidate fields as of the first index
+#   2  particle-stripped adaptive prefix key; `death_date` on the stored Candidate
+FORMAT = 2
+
+
 def signature() -> str:
-    """What the index was built from. Any change to any harvest file changes this.
+    """What the index was built from — the harvest files AND the code that derived it.
 
     Size and mtime rather than a content hash: hashing 284 MB on every command to decide
     whether to read it would cost more than the read. A harvest only ever appends, so a
     file whose size and mtime both match has not changed in any way this cares about.
     """
     if not ACTS_DIR.is_dir():
-        return "empty"
-    parts = []
+        return f"v{FORMAT}|empty"
+    parts = [f"v{FORMAT}"]
     for f in sorted(ACTS_DIR.glob("*.jsonl")):
         st = f.stat()
         parts.append(f"{f.name}:{st.st_size}:{st.st_mtime_ns}")
@@ -348,9 +365,24 @@ def _veto_sql(c: Candidate) -> tuple[str, list]:
     if c.sex:
         where += " AND (m.sex IS NULL OR m.sex = ?)"
         params.append(c.sex)
-    if c.stated_birth_year and c.birth_year:
-        where += " AND (m.stated = 0 OR m.birth_year IS NULL OR abs(m.birth_year - ?) <= 2)"
-        params.append(c.birth_year)
+    if c.stated_birth_year:
+        # The WINDOW the person's own date permits, widened by the same ±2 `compare` allows —
+        # not a ±2 around a single number. This read `abs(m.birth_year - c.birth_year) <= 2`,
+        # and `c.birth_year` is `year_of`, which turns `1920..1929` into 1920: every mention
+        # of Gustaaf born 1923 or later was dropped in SQL before the scorer could see it,
+        # so the false veto was enforced twice over and the second one left no trace at all.
+        lo, hi = year_span(c.birth_date)
+        if lo is None and hi is None and c.birth_year:
+            lo = hi = c.birth_year
+        if lo is not None or hi is not None:
+            where += " AND (m.stated = 0 OR m.birth_year IS NULL OR (1"
+            if lo is not None:
+                where += " AND m.birth_year >= ?"
+                params.append(lo - 2)
+            if hi is not None:
+                where += " AND m.birth_year <= ?"
+                params.append(hi + 2)
+            where += "))"
     return where, params
 
 

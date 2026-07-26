@@ -109,7 +109,7 @@ def point_year(date: str | None) -> int | None:
     invisible until something does sums with it.
 
     `~1682` is a point estimate, so it is returned; callers doing arithmetic on it are
-    expected to allow the slack an "about" carries.
+    expected to allow the slack an "about" carries — `year_span` is how much.
     """
     if not date:
         return None
@@ -117,6 +117,65 @@ def point_year(date: str | None) -> int | None:
     if DAY.match(s) or MONTH.match(s) or YEAR.match(s) or APPROX.match(s):
         return year_of(s)
     return None
+
+
+# How far an "about" year may be out, either way.
+#
+# REASONED, NOT MEASURED, and it should say so. The obvious instrument — compare a stated
+# birth year against the one an act's age implies, over the whole corpus — cannot be built,
+# because `corpus.py` only computes `implied_birth_year` when no birth year was stated, so
+# the two are mutually exclusive by construction and there are zero pairs to compare. (Ages
+# themselves are common enough for it to have been worth checking: 15.4% of 387,987 sampled
+# mentions carry one, 54.6% in Leuven's civil acts.)
+#
+# So it is sized against the error this project has actually suffered instead. Every
+# near-miss in the log is off by a GENERATION — the Gustaaf who was a Gustavus one
+# generation out, the grandfather grafted onto the grandson, which recurs here because the
+# forename is reused every second generation. That is 25 to 30 years. Five keeps the veto
+# lethal against all of those while not firing on the few years an age in a 19th-century
+# civil act is routinely out by. Same spirit as MAX_LIFESPAN: generous on purpose, because
+# a veto is for killing impossibilities and not for adjudicating estimates.
+APPROX_SLACK = 5
+
+
+def year_span(date: str | None) -> tuple[int | None, int | None]:
+    """The years a date does not rule out, as (earliest, latest), both inclusive.
+
+    `point_year` says what a date asserts. This says what it PERMITS, which is the
+    question every veto actually asks — and asking the other one is a bug that costs
+    recall in silence.
+
+    `year_of` flattens each form below to a single number, so `1920..1929` became "1920",
+    `stated_birth_year` was set from the mere presence of a date, and an act stating any
+    year in the range a record itself declares was then REJECTED as a conflict with that
+    range. Gustaaf's birth is recorded `1920..1929`; acts stating 1923, 1925 and 1929
+    were all vetoed against him, and he is one of the people this project most needs to
+    find in a foreign register. 81 of 434 records carry a non-point date, so this was not
+    an edge case.
+
+    Bounds are read INCLUSIVELY at year granularity, which is both the truthful reading
+    and the conservative one. The grammar has no `<1946-05-09`, only `<1946`, so a source
+    saying "died before 9 May 1946" can only be written `<1946` — and that has to mean
+    "died in 1946 or earlier", or the encoding would assert something the source did not.
+    Being the wider reading, it also vetoes less, which is the safe direction for a bound.
+
+    (None, None) means the date rules nothing out — including the case of no date at all.
+    """
+    if not date:
+        return (None, None)
+    s = str(date)
+    if BEFORE.match(s):
+        return (None, year_of(s))
+    if AFTER.match(s):
+        return (year_of(s), None)
+    if RANGE.match(s):
+        lo, hi = s.split("..")
+        return (int(lo), int(hi))
+    if APPROX.match(s):
+        y = year_of(s)
+        return (y - APPROX_SLACK, y + APPROX_SLACK)
+    y = year_of(s)
+    return (y, y) if y else (None, None)
 
 
 def is_approximate(date: str | None) -> bool:

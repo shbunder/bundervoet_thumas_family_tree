@@ -80,3 +80,7 @@ nav:
       - Searching: searching.md
   - Research log: research-log.md
   - Autopilot log: autopilot-log.md
+  # The other unattended loop's log. It was built but unlisted, so MkDocs reported it as
+  # "not included in the nav" on every build and the page existed at a URL nothing linked
+  # to — 35 KB of verification work reachable only by guessing the filename.
+  - Verify log: verify-log.md

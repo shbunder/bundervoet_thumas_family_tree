@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from hashlib import sha256
@@ -291,6 +292,7 @@ def main() -> int:
     _check_duplicates(people, children_of)
     _check_plausibility(people, children_of)
     _check_search_log(people, sites, pages)
+    _check_labels(people)
     _check_artifacts(people, source_ids)
 
     # The page loads dist/bundle.js, not the individual files, so a stale bundle is a
@@ -476,6 +478,75 @@ def _check_search_log(people, sites, pages):
         return
     for problem in reg.registry_problems(sites, pages, log, people, load_artifacts()):
         fail(problem)
+
+
+def _check_labels(people):
+    """The gold standard, checked for the two ways it goes quietly useless.
+
+    `research/searches.jsonl` has been validated here since it existed;
+    `research/labels.jsonl` never has, and it is the more valuable file — every verifier
+    ruling this project will ever produce, and the only thing that turns the thresholds in
+    match.py from reasoned guesses into measurements.
+
+    WARNINGS, NOT ERRORS, both of them. Each one is repaired by a judgement nobody but a
+    person can make — which participant of a six-person act the ruling was about, or whether
+    a ruling about a retracted record should be re-pointed or dropped — and failing the build
+    over it would make the choice urgent instead of considered. The rule is that the
+    validator is green before a commit; that must not become a reason to delete evidence.
+    """
+    path = ROOT / "research" / "labels.jsonl"
+    if not path.exists():
+        return
+    act_level: list[str] = []
+    for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            label = json.loads(line)
+        except json.JSONDecodeError as e:
+            fail(f"research/labels.jsonl:{n}: not valid JSON — {e}")
+            continue
+        for required in ("person", "ref"):
+            if not label.get(required):
+                fail(f'research/labels.jsonl:{n}: no "{required}"')
+        person, ref = label.get("person"), label.get("ref") or ""
+        # A ruling about a person who is no longer in the tree cannot be re-scored, so it
+        # silently stops counting. The known case is a record retracted after the act was
+        # re-read: correct to retract, and the ruling that justified it was left pointing at
+        # nothing. It is still evidence — re-point it at whoever remains the frontier.
+        if person and person not in people:
+            warnings.append(
+                f'research/labels.jsonl:{n}: labels "{person}", who has no record — '
+                "the ruling cannot be re-scored until it names someone in the tree")
+        if ref and "#" not in ref:
+            act_level.append(ref)
+    if not act_level:
+        return
+    # The bug that made this project report 33% recall for a scorer with no known errors. An
+    # act names six people; the ref alone does not say which, so the scorer is handed
+    # whichever comes first — usually the groom.
+    #
+    # Split by whether anyone can actually act on it. A label naming an act the corpus does
+    # not hold has no participants to choose between yet and resolves itself on the next
+    # harvest; reporting those together with the rest turned a backlog of four into one of
+    # twenty-two, and a number nobody can reduce is a number that gets ignored.
+    held = store.acts_by_id(act_level) if store.ensure() else {}
+    actionable = [r for r in act_level if r in held] if held else act_level
+    if actionable:
+        # Deliberately not claimed as "uncounted": `evaluate.py` resolves an act-level ref
+        # where exactly one participant shares the surname, so some of these do score. How
+        # many is its question to answer, and duplicating that disambiguation here would put
+        # a second copy of it in a file whose job is to have no opinions about scoring.
+        warnings.append(
+            f"research/labels.jsonl: {len(actionable)} label(s) name a held act rather than one "
+            "of its people. `uv run tools/evaluate.py refs` prints the command for each "
+            "participant; `report` says how many are going uncounted because of it")
+    waiting = len(act_level) - len(actionable)
+    if waiting:
+        warnings.append(
+            f"research/labels.jsonl: {waiting} label(s) name an act not yet harvested — "
+            "nothing to do, they resolve when it is held")
 
 
 def _check_artifacts(people, source_ids):
