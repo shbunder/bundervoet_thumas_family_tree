@@ -18,3 +18,4 @@ the misses and the labels are the accumulating asset.
 
 | pass | date | dir | frontier | verdict | added | commit |
 |------|------|-----|----------|---------|-------|--------|
+| 1 | 2026-07-26 | up | octavia_schal | GRAFTED | ludovicus_schal, mathilde_standaert, ludovicus_dv, silvia_brissinck | — |

@@ -1191,3 +1191,110 @@ NEXT: the acts behind the leads, all of which need a logged-in AGATHA session �
 Diksmuide 1873 birth that would give [[emma_vincke]] an elder sister, the Stene 1876 and
 Oudenburg 1871 marriages that would date the two new couples, and the Oudenburg 1842
 birth that would carry [[ludovicus_schal]] back another generation.
+
+## 47. The Devriendt × Schalandryn marriage act: four ancestors, and a birth date corrected
+
+The act behind §46's collision, read as an image rather than the vrijwilligersrab index
+alone: Oostende marriage act nr. 258, 10 November 1906, Eugenius Alphonsius Devriendt ×
+Octavia Maria Schalandrijn (S20), together with the Bredene birth act nr. 116,
+certificate dated 2 May 1886 (S21). The marriage act names both sets of parents in full,
+which is what makes four new ancestors graftable in one pass: [[ludovicus_schal]]
+(Ludovicus Franciscus Schalandryn — the act's own spelling of him; his daughter's record
+already held Schalandrijn, so the name is now recorded both ways across one generation)
+and [[mathilde_standaert]], both already dead by 1906; and [[ludovicus_dv]] (Ludovicus
+Josephus Devriendt), also already dead, and [[silvia_brissinck]] (Silvia Rosalia
+Brissinck), alive, present and consenting, werkvrouw of Steene. [[octavia_schal]] and
+[[eugenius_dv]] both move to `doc`: the act confirms Eugenius's birth (Steene, 13 April
+1882) field for field, and independently corroborates Octavia's corrected birth date and
+Bredene birthplace.
+
+RETRACTED: Octavia's birth date, held as `1886-05-02` on `sup` confidence from the
+gverdievel tree. The Bredene birth act (S21) states she was born "eergisteren de
+dertigsten April" — the day before yesterday, the thirtieth of April — against a
+certificate date of 2 May; the marriage act (S20), read separately, independently gives
+the same 30 April date. `05-02` was the registration date, misread as the birth date.
+Corrected to `1886-04-30`, confidence `doc`. The vrijwilligersrab Geboorten index shows
+the same pattern — a blank Birth Date column, a filled Certificate Date column — on at
+least four of Octavia's own siblings, so a birth date drawn from that index alone,
+anywhere in this tree, is worth rechecking against the act before it is trusted.
+
+NOT GRAFTED — index-only, vrijwilligersrab, no act image read, so recorded as named
+frontiers on the four new records rather than as fields or links: both sets of
+grandparents (Ferdinandus Faustinus Schalandryn × Isabella Wallecan, and their own
+parents Jacobus Schalandryn × Anna Devisschere / Henricus Wallecan × Joanna
+Vantornhoudt; Petrus Standaert × Anna Deckers; Ludovicus Devriendt × Joanna Theresia
+Trogh; Joannes Franciskus Brissinck × Theresia Francisca Levecke); the two marriages
+that would date the new couples (Schalandryn × Standaert, Oudenburg 1871 act 17;
+Devriendt × Brissinck, Stene 1876 act 12); Ludovicus Schalandryn's own death (Oostende
+1916); and Mathilde Standaert's birth, where even the derivation matters — her stated
+age of 42 in 1886 implies ~1844, but an age is not a birth date and is recorded only as
+the derivation it is. Also not entered as records: at least seven siblings of Octavia
+and nine of Eugenius (both in the Huwelijken/Geboorten indexes), and the three younger
+children of Eugenius × Octavia beyond [[adrienne_dv]] — Ludovicus Josephus (1907),
+August Bernard (1909), Germaine Marceline (1920). [[adrienne_dv]]'s own record now
+carries its birth-index act reference (nr. 29) as corroboration; her confidence stays
+`sup`, since that act image was not read either.
+
+Also folded into this pass: [[emma_vincke]] and [[lucien_vincke]], written earlier in
+the same session from a Familiekunde Vlaanderen memorial card and an AGATHA index
+analysis (`data/artifacts/emma-vincke-1880-birth-diksmuide`) that puts Emma's birth,
+birthplace and both parents on civil registration independently of the memorial card —
+`sup`, since the analysis is the index page, not the register scan. The same pass
+surfaced a probable elder sister, Romanie Elodie Vincke (Diksmuide 1873), left as a
+named frontier on [[lucien_vincke]] rather than grafted, since the act is unread and the
+father's name on the index (*Lucien Julien*) is not quite *Lucien Julianus*.
+
+See §46 for the source-id collision this pass ran into against a concurrent session
+working the Zaventem line, and how it was repaired.
+
+NEXT: pull the act images behind every frontier above — each already carries a
+vrijwilligersrab or FamilySearch reference, so no further name-index searching is
+needed, only a logged-in session (AGATHA for the Vincke leads, FamilySearch or a
+Rijksarchief visit for the Schalandryn/Devriendt ones). Capturing the S20/S21 act images
+as artifacts is the other standing follow-up — both were read on screen but never saved.
+
+Tree: 345 → 349 people. Build green, 64 tests pass.
+
+## 47. Zaventem, 24 February 1846 — two orphans, four parents, and a documented dead end
+
+Antonia Bossin's own 1849 birth act was the target, and it is not reachable: AGATHA
+indexes marriages for Sint-Stevens-Woluwe and no births at all. Searching her parents by
+surname pair instead — *Bossin Peremans*, the move the charter recommends and which has
+now produced both of this project's breakthroughs — returned their own marriage act, which
+is the richer record by far.
+
+**Zaventem, act nr. 1, 24 February 1846.** [[guilielmus_bossin]], born at
+Sint-Stevens-Woluwe, twenty-one, an *arbeider*. [[peremans]], born at Zaventem,
+twenty-one, an *arbeidster*. Two ages that confirm from a civil act the 1824 both records
+had been carrying from a member tree, and two birthplaces the tree did not have.
+
+It settles a name dispute, and it settles it in the tree's favour. The 1872 Kraainem act
+called the bride's mother *Anna Catharina Peremans* where this tree said *Joanna Catharina
+Jacoba*, and §42 recorded both rather than choosing. The act that married her writes the
+long form in full. A civil act quoting a parent from memory is now the outlier, and the
+tree's reading is the documented one.
+
+Four people enter the index from it. On the groom's side [[arnoldus_bossin]], an
+*arbeider* of Sint-Stevens-Woluwe, and [[elisabeth_deyn]] — both at the wedding, both
+consenting, and both signing with a mark, because the act says neither could write. On the
+bride's side [[egidius_peremans]], dead at Zaventem on 6 March 1837, and
+[[joanna_verelst]], dead at Zaventem on 19 December 1843. She married at twenty-one having
+lost both parents, the second of them barely two years earlier.
+
+**And the act closes a line rather than opening one.** The bride declared, with her
+witnesses, that she had never known her grandparents nor where they died. Registers
+almost never say this. It means the Peremans and Ver Elst generation before 1837 was
+already beyond the family's own memory in 1846 — so it is a dead end to be recorded, not a
+gap to keep searching by name. Only the Zaventem registers themselves will reach it.
+
+What is *not* recorded is as deliberate. The four new records carry no birth dates: the
+act gives the parents no ages, and deriving one from a twenty-one-year-old child would be
+a guess wearing a date's clothes. Elisabeth Deyn gets no occupation and neither Peremans
+parent does, because the act names one only for Arnoldus. And the two living Bossins get
+no death date — `>1846` would be a false claim, since either could have died that March,
+so the bound sits in `raw` where the grammar cannot express it.
+
+NEXT on this line: the two Zaventem death acts, 1837 and 1843, which would give the
+Peremans couple their ages and probably their parents despite what their daughter did not
+know; and the Bossin–Deyn marriage, which the Sint-Stevens-Woluwe or Zaventem registers
+should hold for roughly 1815–1824.

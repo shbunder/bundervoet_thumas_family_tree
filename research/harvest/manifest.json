@@ -1425,6 +1425,19 @@
       "acts": 127
     },
     {
+      "id": "vanalderweireldt-diksmuide",
+      "query": {
+        "name": "Vanalderweireldt",
+        "country_code": "be",
+        "eventplace": "Diksmuide"
+      },
+      "date": "2026-07-26",
+      "found": 34,
+      "mentions": 34,
+      "complete": true,
+      "acts": 34
+    },
+    {
       "id": "vanbergen",
       "query": {
         "name": "Van Bergen",
@@ -1462,16 +1475,29 @@
       "acts": 0
     },
     {
+      "id": "vanbogaert-sint-niklaas",
+      "query": {
+        "name": "Van Bogaert",
+        "country_code": "be",
+        "eventplace": "Sint-Niklaas"
+      },
+      "date": "2026-07-26",
+      "found": 321,
+      "mentions": 321,
+      "complete": true,
+      "acts": 321
+    },
+    {
       "id": "vancraenenbroeck",
       "query": {
-        "name": "Van Craenenbroeck",
+        "name": "vancraenenbroeck",
         "country_code": "be"
       },
       "date": "2026-07-26",
-      "found": 2149,
-      "mentions": 600,
-      "complete": false,
-      "acts": 599
+      "found": 803,
+      "mentions": 803,
+      "complete": true,
+      "acts": 803
     },
     {
       "id": "vandenbemden",
@@ -1484,6 +1510,45 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vandenbemden-everberg",
+      "query": {
+        "name": "Vandenbemden",
+        "country_code": "be",
+        "eventplace": "Everberg"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "vandenbemden-kraainem",
+      "query": {
+        "name": "Vandenbemden",
+        "country_code": "be",
+        "eventplace": "Kraainem"
+      },
+      "date": "2026-07-26",
+      "found": 49,
+      "mentions": 49,
+      "complete": true,
+      "acts": 49
+    },
+    {
+      "id": "vandenbemden-sint-stevens-woluwe",
+      "query": {
+        "name": "Vandenbemden",
+        "country_code": "be",
+        "eventplace": "Sint-Stevens-Woluwe"
+      },
+      "date": "2026-07-26",
+      "found": 98,
+      "mentions": 98,
+      "complete": true,
+      "acts": 98
     },
     {
       "id": "vandenberghe",
@@ -1508,6 +1573,32 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vandenbroucke-nieuwmunster",
+      "query": {
+        "name": "Van den Broucke",
+        "country_code": "be",
+        "eventplace": "Nieuwmunster"
+      },
+      "date": "2026-07-26",
+      "found": 2,
+      "mentions": 2,
+      "complete": true,
+      "acts": 2
+    },
+    {
+      "id": "vandenbroucke-oostende",
+      "query": {
+        "name": "Van den Broucke",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 23,
+      "mentions": 23,
+      "complete": true,
+      "acts": 23
     },
     {
       "id": "vandeputte",
@@ -1594,6 +1685,19 @@
       "acts": 237
     },
     {
+      "id": "vanhille-zevekote",
+      "query": {
+        "name": "Van Hille",
+        "country_code": "be",
+        "eventplace": "Zevekote"
+      },
+      "date": "2026-07-26",
+      "found": 4,
+      "mentions": 4,
+      "complete": true,
+      "acts": 4
+    },
+    {
       "id": "vanhoutte",
       "query": {
         "name": "Van Houtte",
@@ -1604,6 +1708,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 599
+    },
+    {
+      "id": "vanhoutte-oostkamp",
+      "query": {
+        "name": "Van Houtte",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 2,
+      "mentions": 2,
+      "complete": true,
+      "acts": 2
     },
     {
       "id": "vaniseghem",
@@ -1618,6 +1735,71 @@
       "acts": 600
     },
     {
+      "id": "vaniseghem-lens",
+      "query": {
+        "name": "Van Iseghem",
+        "country_code": "be",
+        "eventplace": "Lens"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "vaniseghem-oostende",
+      "query": {
+        "name": "Van Iseghem",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 36,
+      "mentions": 36,
+      "complete": true,
+      "acts": 36
+    },
+    {
+      "id": "vaniseghem-stene",
+      "query": {
+        "name": "Van Iseghem",
+        "country_code": "be",
+        "eventplace": "Stene"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "vankerckhove-destelbergen",
+      "query": {
+        "name": "Van Kerckhove",
+        "country_code": "be",
+        "eventplace": "Destelbergen"
+      },
+      "date": "2026-07-26",
+      "found": 2,
+      "mentions": 2,
+      "complete": true,
+      "acts": 2
+    },
+    {
+      "id": "vankerckhove-kalken",
+      "query": {
+        "name": "Van Kerckhove",
+        "country_code": "be",
+        "eventplace": "Kalken"
+      },
+      "date": "2026-07-26",
+      "found": 6,
+      "mentions": 6,
+      "complete": true,
+      "acts": 6
+    },
+    {
       "id": "vanmaele",
       "query": {
         "name": "Van Maele",
@@ -1628,6 +1810,71 @@
       "mentions": 600,
       "complete": false,
       "acts": 599
+    },
+    {
+      "id": "vanmaele-beernem",
+      "query": {
+        "name": "Van Maele",
+        "country_code": "be",
+        "eventplace": "Beernem"
+      },
+      "date": "2026-07-26",
+      "found": 4,
+      "mentions": 4,
+      "complete": true,
+      "acts": 4
+    },
+    {
+      "id": "vanmaele-destelbergen",
+      "query": {
+        "name": "Van Maele",
+        "country_code": "be",
+        "eventplace": "Destelbergen"
+      },
+      "date": "2026-07-26",
+      "found": 1,
+      "mentions": 1,
+      "complete": true,
+      "acts": 1
+    },
+    {
+      "id": "vanmaele-laarne",
+      "query": {
+        "name": "Van Maele",
+        "country_code": "be",
+        "eventplace": "Laarne"
+      },
+      "date": "2026-07-26",
+      "found": 1,
+      "mentions": 1,
+      "complete": true,
+      "acts": 1
+    },
+    {
+      "id": "vanmaele-wingene",
+      "query": {
+        "name": "Van Maele",
+        "country_code": "be",
+        "eventplace": "Wingene"
+      },
+      "date": "2026-07-26",
+      "found": 9,
+      "mentions": 9,
+      "complete": true,
+      "acts": 9
+    },
+    {
+      "id": "vanmaele-zedelgem",
+      "query": {
+        "name": "Van Maele",
+        "country_code": "be",
+        "eventplace": "Zedelgem"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
     },
     {
       "id": "vanmassenhove",
@@ -1654,6 +1901,19 @@
       "acts": 600
     },
     {
+      "id": "vannieuwenhuyse-oostkamp",
+      "query": {
+        "name": "Van Nieuwenhuyse",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 1,
+      "mentions": 1,
+      "complete": true,
+      "acts": 1
+    },
+    {
       "id": "vanrenterghem",
       "query": {
         "name": "Van Renterghem",
@@ -1664,6 +1924,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vanrenterghem-oostkamp",
+      "query": {
+        "name": "Van Renterghem",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 1,
+      "mentions": 1,
+      "complete": true,
+      "acts": 1
     },
     {
       "id": "vansieleghem",
@@ -1678,6 +1951,19 @@
       "acts": 94
     },
     {
+      "id": "vansieleghem-lichtervelde",
+      "query": {
+        "name": "Van Sieleghem",
+        "country_code": "be",
+        "eventplace": "Lichtervelde"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
       "id": "vanstechelman",
       "query": {
         "name": "Vanstechelman",
@@ -1688,6 +1974,19 @@
       "mentions": 400,
       "complete": false,
       "acts": 400
+    },
+    {
+      "id": "vanstechelman-woumen",
+      "query": {
+        "name": "Van Stechelman",
+        "country_code": "be",
+        "eventplace": "Woumen"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
     },
     {
       "id": "verbrugghe",
