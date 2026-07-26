@@ -1135,6 +1135,20 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "Unlike S30 this entry LABELS the roles — Vader, Moeder, spouse, and the spouse's parents as 'overige personen' — so the family shape is stated rather than inferred."
+    },
+    {
+      "id": "fs-bertem-1838-marriage-register-nr8",
+      "site": "familysearch",
+      "kind": "record",
+      "title": "Bertem marriage register 1838, act nr. 8, 30 October 1838 — Coekelberghs × Haesaerts (REGISTER IMAGE)",
+      "url": "https://www.familysearch.org/ark:/61903/3:1:9392-HG83-X",
+      "image": "https://sg30p0.familysearch.org/service/records/storage/deepzoomcloud/dz/v1/3:1:9392-HG83-X/image.xml",
+      "artifact": "coekelberghs-haesaerts-1838-marriage-bertem",
+      "collection": "Belgium, Brabant, Civil Registration, 1582-1950 — Bertem, Geboorten 1891-1910, huwelijken 1833-1910, overlijdens 1881-1910; image 219 of 702 (image-index 218), right-hand page, lower act",
+      "yielded": "The ACT IMAGE behind bertem-1838-marriage-coeckelberghs-haesaerts, read line by line. Settles the bride's forename as plain ANNA (written twice in the display hand and once in the operative declaration, with no second forename), the groom's trade as SLAGTER, and both birth dates — him Berthem 29 July 1809, her Berthem 24 October 1810. All four parents are recorded present and consenting: Henricus Coekelberghs × Petronella Elseviers, and Joannes Baptista Haesaerts × Elisabeth van den Broeck, all four landbouwers at Berthem. Adds what AGATHA omits: banns 14 and 21 October 1838; officiant Philippus Neerdaels, schepen aengesteld; four witnesses — Philippus Neerdaels 34 onderwyzer, Franciscus Massaut 55 blokmaeker, Jan Frans Vandersijpen 34 veldwagter, Dominicus Neerdaels 66 landbouwer, none stated as kin; and the fact that the bridegroom, the bride AND both sets of parents all declared they could not sign.",
+      "confidence": "doc",
+      "accessed": "2026-07-26",
+      "note": "The scan link on the Open Archives mirror points at ...?i=217, which the FamilySearch viewer resolves to the opening holding acts nr. 1-4 of 1838; act nr. 8 is one opening further on, at image-index 218 / 'Afbeelding 219', whose own ark is 3:1:9392-HG83-X. The image was read by stitching the deep-zoom tiles: the descriptor is at .../deepzoomcloud/dz/v1/3:1:9392-HG83-X/image.xml (5529x4021, tile 256, overlap 1, max level 13) and the tiles at .../image_files/13/<col>_<row>.jpg. Those endpoints refuse cross-origin fetch from www.familysearch.org, so the stitching has to run on the sg30p0.familysearch.org origin itself. This is the 'gelijkvormige kopij' — the duplicate register deposited with the court — not the commune's original; the printed footer of every act says so. A FamilySearch session is needed, which is why the artifact is kept."
     }
   ]
 }

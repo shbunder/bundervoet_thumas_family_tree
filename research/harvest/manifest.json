@@ -15,14 +15,14 @@
     {
       "id": "bocklandt",
       "query": {
-        "name": "Bocklandt",
+        "name": "bocklandt",
         "country_code": "be"
       },
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "found": 624,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 624,
+      "complete": true,
+      "acts": 624
     },
     {
       "id": "bogaert",
@@ -135,14 +135,14 @@
     {
       "id": "coekelberghs",
       "query": {
-        "name": "Coekelberghs",
+        "name": "coekelberghs",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 648,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 648,
+      "complete": true,
+      "acts": 648
     },
     {
       "id": "crabbe",
@@ -159,14 +159,14 @@
     {
       "id": "daix",
       "query": {
-        "name": "Daix",
+        "name": "daix",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 1221,
-      "mentions": 600,
-      "complete": false,
-      "acts": 598
+      "mentions": 1221,
+      "complete": true,
+      "acts": 1219
     },
     {
       "id": "damman",
@@ -207,14 +207,14 @@
     {
       "id": "deblaere",
       "query": {
-        "name": "De Blaere",
+        "name": "deblaere",
         "country_code": "be"
       },
       "date": "2026-07-26",
-      "found": 680,
-      "mentions": 600,
+      "found": 2337,
+      "mentions": 700,
       "complete": false,
-      "acts": 600
+      "acts": 700
     },
     {
       "id": "declerck",
@@ -243,14 +243,14 @@
     {
       "id": "degrande",
       "query": {
-        "name": "De Grande",
+        "name": "degrande",
         "country_code": "be"
       },
-      "date": "2026-07-25",
-      "found": 952,
-      "mentions": 600,
+      "date": "2026-07-26",
+      "found": 2782,
+      "mentions": 1000,
       "complete": false,
-      "acts": 600
+      "acts": 1000
     },
     {
       "id": "dekeyser",
@@ -267,14 +267,14 @@
     {
       "id": "dellaert",
       "query": {
-        "name": "Dellaert",
+        "name": "dellaert",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 860,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 860,
+      "complete": true,
+      "acts": 860
     },
     {
       "id": "demeulemeester",
@@ -287,6 +287,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "denijs",
+      "query": {
+        "name": "denijs",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 1293,
+      "mentions": 1293,
+      "complete": true,
+      "acts": 1293
     },
     {
       "id": "desangere",
@@ -591,14 +603,14 @@
     {
       "id": "keirsebilck",
       "query": {
-        "name": "Keirsebilck",
+        "name": "keirsebilck",
         "country_code": "be"
       },
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "found": 960,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 960,
+      "complete": true,
+      "acts": 960
     },
     {
       "id": "keirsebilck-oostkamp",
@@ -1137,14 +1149,14 @@
     {
       "id": "smessaert",
       "query": {
-        "name": "Smessaert",
+        "name": "smessaert",
         "country_code": "be"
       },
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "found": 807,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 807,
+      "complete": true,
+      "acts": 807
     },
     {
       "id": "smessaert-oostende",
@@ -1224,14 +1236,14 @@
     {
       "id": "stroobandt",
       "query": {
-        "name": "Stroobandt",
+        "name": "stroobandt",
         "country_code": "be"
       },
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "found": 676,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 676,
+      "complete": true,
+      "acts": 676
     },
     {
       "id": "stroobandt-ardooie",
@@ -1502,14 +1514,14 @@
     {
       "id": "vandenbemden",
       "query": {
-        "name": "Vandenbemden",
+        "name": "vandenbemden",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 1262,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 1262,
+      "complete": true,
+      "acts": 1262
     },
     {
       "id": "vandenbemden-everberg",
@@ -1616,14 +1628,14 @@
     {
       "id": "vandeputte",
       "query": {
-        "name": "Vande Putte",
+        "name": "vandeputte",
         "country_code": "be"
       },
       "date": "2026-07-26",
-      "found": 860,
-      "mentions": 600,
+      "found": 10720,
+      "mentions": 900,
       "complete": false,
-      "acts": 600
+      "acts": 900
     },
     {
       "id": "vanderbeken",
@@ -2005,14 +2017,14 @@
     {
       "id": "vanstechelman",
       "query": {
-        "name": "Vanstechelman",
+        "name": "vanstechelman",
         "country_code": "be"
       },
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "found": 690,
-      "mentions": 400,
-      "complete": false,
-      "acts": 400
+      "mentions": 690,
+      "complete": true,
+      "acts": 690
     },
     {
       "id": "vanstechelman-mariakerke",
@@ -2102,6 +2114,18 @@
       "mentions": 39,
       "complete": true,
       "acts": 39
+    },
+    {
+      "id": "vermandel",
+      "query": {
+        "name": "vermandel",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 736,
+      "mentions": 736,
+      "complete": true,
+      "acts": 736
     },
     {
       "id": "verniers-destelbergen",

@@ -1672,3 +1672,102 @@ NEXT: the register images. `S5`, `S11` and `S19` are all Vlaams-Brabant civil ac
 FamilySearch microfilms are digitised and browsable, and each one read moves a cluster of
 records back to `doc` legitimately. That is now the highest-value non-graft work in the
 project.
+
+## 53. Bertem, 30 October 1838 — a register image read, and the objection it answered
+
+§52 ended by naming the highest-value non-graft work in the project: read the register
+images behind the acts this tree only holds as transcriptions. This pass did one, and it
+turned out to also be the top open frontier, because §51 had created
+[[jb_coekelberghs]] and then refused to graft his parents.
+
+The refusal is worth restating, because the pass is really about how it was overturned.
+§51 had the 1838 act as an AGATHA transcription and would not use it: he is a *slagter* in
+1838, 1853 and 1867 but a *landbouwer* in 1858, 1861 and 1873, his wife's forename is
+written three ways over the same span, and *Joannes Baptista Coekelberghs* is carried by
+several distinct men in Brabant between 1793 and 1921.
+
+**The image.** `familysearch.org/ark:/61903/3:1:9392-HG83-X`, image 219 of 702 — the
+*gelijkvormige kopij*, the duplicate register. Registered as
+`fs-bertem-1838-marriage-register-nr8` and saved as
+`data/artifacts/coekelberghs-haesaerts-1838-marriage-bertem.jpg`.
+
+Note that **the ark already in the registry did not land on the act.** The
+`bertem-1838-marriage-coeckelberghs-haesaerts` entry embeds `3:1:9392-HGZ1-T?i=217`, which
+is image 217 and holds acts nr. 1–4 of 1838. Act nr. 8 is one opening further on. A page
+reference that is two images out is worse than none, because it reads as checked.
+
+Nor did the viewer work. The act was read by pulling the deep-zoom descriptor
+(5529×4021, tile 256, max level 13) and stitching tiles from
+`sg30p0.familysearch.org/.../image_files/13/<col>_<row>.jpg`. Those endpoints **refuse
+cross-origin fetch from `www.familysearch.org`**, so the stitching has to run on the
+`sg30p0` origin itself. That is a technique worth keeping: it is now the second act in this
+run read that way.
+
+**What the image says.** Both spouses *meerderjaerig*, with full birth dates rather than
+ages — him Berthem **29 July 1809**, her *in this commune* **24 October 1810**. All four
+parents named, all four *landbouwers* at Berthem, all four **present en Consenteerende**
+in person, not one called *wijlen*: [[henricus_coekelberghs]] × [[petronella_elseviers]],
+and [[jb_haesaerts]] × [[elisabeth_vdbroeck]]. Banns 14 and 21 October. Four witnesses,
+**none stated as kin to either party**. And the bridegroom, the bride and all four parents
+declared they could not sign — six people at one wedding, none of whom could write their
+name.
+
+Three corrections to AGATHA's transcription, from the ink: **Coekelberghs** with no *c*
+before the *k*; **Joannes Baptista** Haesaerts, not *Baptist*; **van den Broeck** as three
+words. The last one matters more than it looks — spacing is exactly what a name index
+will and will not match on.
+
+### The objection, answered rather than waved away
+
+The trade change is not a conflict in the sense CLAUDE.md means. Two Bertem birth acts
+settle it: on 27 June 1853 he declares his daughter's birth **in person**, aged 44, born
+at Bertem, *slagter*; on 15 January 1858 he declares his son's, aged 48, born at Bertem,
+*landbouwer*. The same man, self-declaring, either side of the change, five years apart,
+in independently drawn records — and both ages agree with a birth in July 1809. One life,
+not two men. An occupation was never in the veto list, and now there is direct evidence
+why it should not be.
+
+The rival was refuted too. The only other Coekelberghs marriage indexed at Bertem in these
+years is *Joanna Catharina Coeckelberghs*, 1 February 1837 — a woman born in 1797,
+daughter of an unrelated *Petrus* Coekelberghs who died in 1798. Surname coincidence, not
+a sibling.
+
+The forename settles less. She is written plain **Anna** three times, so *Anna* is what she
+was called at her wedding — not what she was baptised, because the act **reports** her
+birth rather than proving it. *Anna Maria* and *Anna Catharina* stay unmerged. What
+changed is that her birth is now a dated single target, Bertem 24 October 1810, instead of
+a range.
+
+### And the records are still `sup`
+
+This is the point of the pass, and it is the discipline §52 bought. The image is
+`doc`-grade evidence for **what the 1838 act says**. It is not evidence that the man it
+marries is the man the 1873 and 1903 acts name as [[coekelberghs]]'s father — that bridge
+runs entirely through two AGATHA transcriptions with no scan. A chain is as strong as its
+weakest link. Four new people enter the index at `sup`, and the two records above stay
+`sup`, on the day this project read its best image yet.
+
+### The other target: a frontier that cannot be worked
+
+[[juliette]] has sat at the top of the ranked queue with **zero searches ever logged**, and
+would have kept sitting there. The wall is statutory, not coverage. Belgian birth acts open
+after **100 years**, marriages after 75, deaths after 50 — so a birth of 4 January 1937 is
+closed **until 2037**. Two venues confirm it independently: AGATHA states its own ceiling
+on its front page without a login, *van 1796 tot 1920*; and the held corpus shows the
+calendar biting exactly where the law says, with indexed births running 1603–1925 and then
+stopping dead — 73 in 1920, 11 in 1924, 9 in 1925, and **zero for every year 1926–1944**.
+
+Logged as a `miss`, not `blocked`, with the years and the re-open date in its scope —
+`blocked` would claim the material exists and a session was in the way. Three routes open
+earlier and are recorded: a parent's death act (50 years, so already open for anyone who
+died before 1976 — the only route available now), her own marriage act to François Thumas
+(75 years, and it would name both parents, but the tree holds no date for it), and family
+testimony. Her record also has **no birthplace**, only a date, so even an open index could
+not be queried on two identifiers.
+
+NEXT: **Maria Theresia's own Bertem birth act, 22 November 1848** — the one document that
+would tie the 1838 couple directly to the 1848 daughter and move this whole cluster off the
+transcriptions. It is on FamilySearch film **DGS 004471767** (*Geboorten 1796–1870,
+Huwelijken 1796–1832, Overlijdens 1796–1842*, cat 140936), which is unindexed and bound in
+blocks by record type, so it is a browse and not a lookup. After that, the Bertem death
+acts of January and November 1880.

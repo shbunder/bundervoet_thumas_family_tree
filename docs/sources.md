@@ -17,9 +17,9 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 29 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 30 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 18 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 20 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 1 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 31 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 32 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 5 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
@@ -306,6 +306,16 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** Unlike S30 this entry LABELS the roles — Vader, Moeder, spouse, and the spouse's parents as 'overige personen' — so the family shape is stated rather than inferred.
+
+#### `fs-bertem-1838-marriage-register-nr8` — Bertem marriage register 1838, act nr. 8, 30 October 1838 — Coekelberghs × Haesaerts (REGISTER IMAGE)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:9392-HG83-X>
+- **Collection:** Belgium, Brabant, Civil Registration, 1582-1950 — Bertem, Geboorten 1891-1910, huwelijken 1833-1910, overlijdens 1881-1910; image 219 of 702 (image-index 218), right-hand page, lower act
+- **Yielded:** The ACT IMAGE behind bertem-1838-marriage-coeckelberghs-haesaerts, read line by line. Settles the bride's forename as plain ANNA (written twice in the display hand and once in the operative declaration, with no second forename), the groom's trade as SLAGTER, and both birth dates — him Berthem 29 July 1809, her Berthem 24 October 1810. All four parents are recorded present and consenting: Henricus Coekelberghs × Petronella Elseviers, and Joannes Baptista Haesaerts × Elisabeth van den Broeck, all four landbouwers at Berthem. Adds what AGATHA omits: banns 14 and 21 October 1838; officiant Philippus Neerdaels, schepen aengesteld; four witnesses — Philippus Neerdaels 34 onderwyzer, Franciscus Massaut 55 blokmaeker, Jan Frans Vandersijpen 34 veldwagter, Dominicus Neerdaels 66 landbouwer, none stated as kin; and the fact that the bridegroom, the bride AND both sets of parents all declared they could not sign.
+- **Saved artifact:** `data/artifacts/coekelberghs-haesaerts-1838-marriage-bertem.md`
+- **Image:** <https://sg30p0.familysearch.org/service/records/storage/deepzoomcloud/dz/v1/3:1:9392-HG83-X/image.xml>
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** The scan link on the Open Archives mirror points at ...?i=217, which the FamilySearch viewer resolves to the opening holding acts nr. 1-4 of 1838; act nr. 8 is one opening further on, at image-index 218 / 'Afbeelding 219', whose own ark is 3:1:9392-HG83-X. The image was read by stitching the deep-zoom tiles: the descriptor is at .../deepzoomcloud/dz/v1/3:1:9392-HG83-X/image.xml (5529x4021, tile 256, overlap 1, max level 13) and the tiles at .../image_files/13/<col>_<row>.jpg. Those endpoints refuse cross-origin fetch from www.familysearch.org, so the stitching has to run on the sg30p0.familysearch.org origin itself. This is the 'gelijkvormige kopij' — the duplicate register deposited with the court — not the commune's original; the printed footer of every act says so. A FamilySearch session is needed, which is why the artifact is kept.
 
 ### Geneanet
 
