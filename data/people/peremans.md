@@ -48,3 +48,19 @@ The act names her parents [[egidius_peremans]] and [[joanna_verelst]], both alre
 twenty-one an orphan on both sides. And it records something registers rarely bother with:
 she declared, with her witnesses, that **she had never known her grandparents nor where
 they died**. That is a documented dead end, not a gap to keep searching by name.
+
+FRONTIER — three probable siblings, named and not grafted (2026-07-26). FamilySearch's index
+of the Brabant civil registration returns, for *Egidius Peremans*, several rows giving his
+spouse as **Joanna Theresia ver Elst** and a child other than her: **Maria Josephina
+Peremans**, **Joannes Athanasius Peremans**, and a **Cornelius Peremans** whose mother is given
+in the shorter form *Theresia Verelst*.
+
+The parent pair matches [[egidius_peremans]] and [[joanna_verelst]] exactly, and *Athanasius*
+is rare enough to be worth something on its own. They are still not grafted, for a specific
+reason: **none of those rows carries an event date or a place.** Rule 1 wants two independent
+identifiers with one of them anchored, and a parent pair with no commune and no year is not
+anchored. The same search, narrowed by parent, then drifted to a quite different family of
+Peremans in Antwerp — FamilySearch's parent filters are advisory, which this log has recorded
+before — so the rows need opening one by one before any of them becomes a person here.
+
+Opening them is cheap and it is the obvious next move on this line.
