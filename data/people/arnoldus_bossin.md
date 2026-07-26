@@ -4,7 +4,7 @@ name: Arnoldus Bossin
 surname: Bossin
 death:
   raw: alive on 1 December 1853; death not known
-confidence: doc
+confidence: sup
 occupation: arbeider (labourer)
 branch: Thumas
 line: thumas
@@ -37,3 +37,9 @@ same thing; the record keeps each act's own.
 
 He is therefore alive on 1 December 1853, and the death bound moves from 1846 to that date.
 His known children go from one to two.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

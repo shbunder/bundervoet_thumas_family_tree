@@ -508,8 +508,9 @@
       "url": "https://agatha.arch.be/nl/data/acts/GEWVL_GEBWVL_01442676",
       "artifact": "jerome-dekeyser-1897-birth-agatha",
       "yielded": "The marginal note \"Gewettigd 4 5 1901\" — so Édouard × Louise married 4 May 1901, legitimizing Jérôme (b. 14 Jun 1897) and Gustavus (b. 1899). Establishes the marriage date without the marriage act.",
-      "confidence": "doc",
-      "accessed": "2026-07"
+      "confidence": "sup",
+      "accessed": "2026-07",
+      "note": "Confidence corrected doc -> sup in the §52 sweep: this is the archive's index page and AGATHA holds no scan for the act."
     },
     {
       "id": "S4",
@@ -519,9 +520,9 @@
       "url": "https://www.familysearch.org/ark:/61903/1:1:6TRG-9K8Z",
       "collection": "Belgium, East Flanders, Church and Civil Registration, 1541-1920",
       "yielded": "The couple were a Hamme (O-Vl) family; further children incl. Augustinus (†1883 infant), Frederiens Carolus, Leontinus Josephus.",
-      "confidence": "doc",
+      "confidence": "sup",
       "accessed": "2026-07-22",
-      "note": "FRONTIER, unconfirmed: a Desiderius de Keyser b. 27 May 1832 with parents Arnoldus de Keyser × Angelina Sophia van Kerkhove exists, but nothing ties him to Van den Broeck. Do not graft until an act does."
+      "note": "FRONTIER, unconfirmed: a Desiderius de Keyser b. 27 May 1832 with parents Arnoldus de Keyser × Angelina Sophia van Kerkhove exists, but nothing ties him to Van den Broeck. Do not graft until an act does. Confidence corrected doc -> sup in the §52 sweep: consulted as a name-index, result ambiguous, and nothing was grafted from it."
     },
     {
       "id": "hamme-merchtem-1901-marriages",
@@ -547,7 +548,8 @@
       "kind": "record",
       "title": "Marcel Bundervoet's memorial card (Uitvaartcentrum Raes, Oostende)",
       "yielded": "Marcel Henri Bundervoet's full name, and the Bostyn family naming that pointed to his mother Elodia Bostyn.",
-      "confidence": "doc"
+      "confidence": "fam",
+      "note": "Confidence corrected doc -> fam in the §52 sweep: the card is a physical family document and nobody in this project has read it. It backs no record — marcel_b cites the generic family site and is already sup."
     },
     {
       "id": "mh-tree-lucien",
@@ -669,9 +671,9 @@
       "artifact": "thumas-vandenbemden-1902-marriage-kraainem",
       "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1902, akte nr. 2",
       "yielded": "FOUR parent links in one document: Joannes Baptista Georgius Thumas as son of Georgius Carolus Josephus Thumas × Antonia Bossin, and Joanna Vandenbemden as daughter of Henricus Augustinus Vandenbemden × Maria Theresia Coekelberghs. Plus occupations for five people, a correction to Henricus Augustinus's death place (Kraainem, not Sint-Stevens-Woluwe), the spelling Antonia rather than Antoina, and four witnesses.",
-      "confidence": "doc",
+      "confidence": "sup",
       "accessed": "2026-07-25",
-      "note": "An AGATHA act analysis — the Rijksarchief's own transcription of the register, with the act number — not the scan. Reached by matching the harvested Open Archives corpus, whose own link pointed at the retired search.arch.be."
+      "note": "An AGATHA act analysis — the Rijksarchief's own transcription of the register, with the act number — not the scan. Reached by matching the harvested Open Archives corpus, whose own link pointed at the retired search.arch.be. Confidence corrected doc -> sup in the §52 sweep: an AGATHA act analysis, not the scan, as this note already said."
     },
     {
       "id": "fwk-emma-vincke-1974",
@@ -757,8 +759,9 @@
       "artifact": "thumas-bossin-1872-marriage-kraainem",
       "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1872, akte nr. 2",
       "yielded": "The same act as S8, read at the archive rather than through an index: Antonia Bossin's exact birth (10 Jan 1849, Sint-Stevens-Woluwe) where the tree had only a year, three occupations (fabriekwerkster, landbouwer, huishoudster), the bridegroom's trade in 1872 as fabrieksgast, and four witnesses with ages and trades.",
-      "confidence": "doc",
-      "accessed": "2026-07-25"
+      "confidence": "sup",
+      "accessed": "2026-07-25",
+      "note": "Confidence corrected doc -> sup in the §52 sweep: AGATHA's transcription, not a photograph of the register page."
     },
     {
       "id": "S12",
@@ -791,8 +794,9 @@
       "artifact": "george-thumas-1808-death-grez-doiceau",
       "collection": "Burgerlijke stand (DemoGen Visu) — België, Grez-Doiceau, overlijdensakten 1808, akte nr. 58",
       "yielded": "Four records documented from one act: George Thumas's death on 20 Nov 1808 at Grez-Doiceau and his trade as menuisier, both as held; his father Lambert Thumas, his mother Marie Leclercq and his wife Marie Catherine Noé all named. It also gives his age as 60, implying a birth around 1747-48 against the 1744 this tree records — a conflict left open rather than resolved on hearsay.",
-      "confidence": "doc",
-      "accessed": "2026-07-26"
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Confidence corrected doc -> sup in the §52 sweep: an AGATHA act analysis. The DemoGen project name 'Visu' does not mean an image is attached — the page carries none."
     },
     {
       "id": "S15",
@@ -803,8 +807,9 @@
       "artifact": "joostens-1857-death-grez-doiceau",
       "collection": "Burgerlijke stand (DemoGen Visu) — België, Grez-Doiceau, overlijdensakten 1857, akte nr. 35",
       "yielded": "Her exact death date, 10 June 1857, where the tree had only the year; her birthplace Woluwe-Saint-Lambert and occupation ménagère; and her parents Guillaume Joostens and Jeanne Marie Deconninck read at the archive rather than from an index. It also gives her husband Georges Thumas as 63, implying a birth around 1793-94 against the 1804 the tree records — a ten-year conflict in an act whose arithmetic is right for her own age.",
-      "confidence": "doc",
-      "accessed": "2026-07-26"
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Confidence corrected doc -> sup in the §52 sweep: same DemoGen project and same finding as S14."
     },
     {
       "id": "fs-brabant-bs",
@@ -838,9 +843,9 @@
       "artifact": "leonie-paelinck-1901-birth-sint-niklaas",
       "collection": "Belgium, East Flanders, Civil Registration, 1541-1950 — Sint-Niklaas 1901, invoernummer 997",
       "yielded": "The act AGATHA does not hold. Philomena Leonia Paelinck born 31 October 1901 at Sint-Niklaas, act 997, with both parents named: Eduardus Franciscus Paelinck and Maria Magdalena Van Bogaert. Confirms the birth date the tree had only as a year, and puts both parent links on a civil record.",
-      "confidence": "sup",
+      "confidence": "doc",
       "accessed": "2026-07-26",
-      "note": "FamilySearch's index entry, not the register image; the image is reachable from the record page and reading it would make the three people doc."
+      "note": "FamilySearch's index entry, not the register image; the image is reachable from the record page and reading it would make the three people doc. Confidence corrected sup -> doc in the §52 sweep, an UPGRADE and the only one: the first artifact under this id was the index, but it was superseded by leonie-paelinck-1901-birth-register, where the register image itself was read. The three citing records already carried doc; the registry entry was the stale one."
     },
     {
       "id": "fv-ttind-gent",
@@ -910,8 +915,9 @@
       "artifact": "bossin-peremans-1846-marriage-zaventem",
       "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Zaventem 1846, akte nr. 1",
       "yielded": "FOUR new ancestors. The groom's parents Arnoldus Bossin x Elisabeth Deyn, both labourers of Sint-Stevens-Woluwe who attended and signed with a mark; and the bride's parents Egidius Peremans (d. Zaventem 6 Mar 1837) x Joanna Theresia Ver Elst (d. Zaventem 19 Dec 1843), both already dead. It also confirms both spouses' births as 1824-25 from their stated ages of 21, gives both their trades, and settles the bride's mother's name — Joanna Catharina Jacoba, as this tree had it, not the shortened Anna Catharina of the 1872 act.",
-      "confidence": "doc",
-      "accessed": "2026-07-26"
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Confidence corrected doc -> sup in the §52 sweep: its own artifact record ends 'The act was read as AGATHA's transcription, not as the register image.'"
     },
     {
       "id": "rab-bs-huwelijken",

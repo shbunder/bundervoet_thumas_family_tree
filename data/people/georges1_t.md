@@ -8,7 +8,7 @@ birth:
 death:
   date: 1808-11-20
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 occupation: menuisier (schrijnwerker / carpenter)
 branch: Thumas
 line: thumas
@@ -72,3 +72,9 @@ without proving it.
 Still unresolved, and the record that would resolve it is his baptism: Grez-Doiceau parish
 register, 1744 and 1747–48. Not indexed by name in either archive, so it needs the register
 images read page by page — or FamilySearch's full-text search over them.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

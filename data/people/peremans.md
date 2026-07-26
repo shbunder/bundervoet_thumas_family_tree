@@ -7,7 +7,7 @@ birth:
   place: Zaventem
 death:
   date: "1907"
-confidence: doc
+confidence: sup
 occupation: huishoudster (housekeeper)
 branch: Thumas
 line: thumas
@@ -97,3 +97,9 @@ in November 1840, so marrying his daughter required an extract of his death act,
 that volume as a *huwelijksbijlage* — the exact mechanism that produced [[S23]]. Vlaams-Brabant
 indexes no death acts at all, which makes the annexes to this 1840 marriage the best route to
 his 6 March 1837 act, and they are one volume away.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

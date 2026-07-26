@@ -1739,14 +1739,14 @@
     {
       "id": "vanhoutte",
       "query": {
-        "name": "Van Houtte",
+        "name": "vanhoutte",
         "country_code": "be"
       },
       "date": "2026-07-26",
-      "found": 1777,
-      "mentions": 600,
+      "found": 9732,
+      "mentions": 1800,
       "complete": false,
-      "acts": 599
+      "acts": 1800
     },
     {
       "id": "vanhoutte-oostkamp",

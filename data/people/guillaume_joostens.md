@@ -2,7 +2,7 @@
 id: guillaume_joostens
 name: Guillaume Joostens
 surname: Joostens
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:
@@ -29,3 +29,9 @@ ACT READ (July 2026): named as the father of the deceased in his daughter's 1857
 Grez-Doiceau death act, read at the archive. He was added to this tree from an index entry a
 pass earlier; this is the act behind it. It still gives him no dates, no place and no
 occupation, so none is recorded.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

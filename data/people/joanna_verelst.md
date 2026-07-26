@@ -5,7 +5,7 @@ surname: Ver Elst
 death:
   date: 1843-12-19
   place: Zaventem
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:
@@ -29,3 +29,9 @@ FRONTIER — her 1843 Zaventem death act, which should give her age and her pare
 that her daughter declared to the 1846 act, with her witnesses, that she had never known
 her grandparents nor where they died: this generation was not reachable through the
 family's own memory in 1846, and it will have to come from the registers.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

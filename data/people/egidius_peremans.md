@@ -5,7 +5,7 @@ surname: Peremans
 death:
   date: 1837-03-06
   place: Zaventem
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:
@@ -28,3 +28,9 @@ very probably his parents, and his marriage to Joanna Theresia Ver Elst, which t
 Zaventem registers should hold for roughly 1815–1824. His daughter told the 1846 act that
 she had never known her grandparents nor where they died, so his parents are not reachable
 through her.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

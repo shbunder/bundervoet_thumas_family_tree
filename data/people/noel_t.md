@@ -8,7 +8,7 @@ birth:
 death:
   date: 1812-08-02
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 occupation: bierverkoopster (beer seller)
 branch: Thumas
 line: thumas
@@ -33,3 +33,9 @@ ACT READ (July 2026): named as the partner of the deceased in her husband's 1808
 Grez-Doiceau death act — written **Marie Catherine Noé** there, not Noël. The act puts the
 marriage beyond the trees; the spelling is recorded as a variant rather than adopted, since
 her own record and this tree's other sources use Noël.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

@@ -8,7 +8,7 @@ birth:
 death:
   date: 1944-03-23
   place: Brussel
-confidence: doc
+confidence: sup
 occupation: fabriekwerker & gemeenteschepen (factory worker & alderman)
 branch: Thumas
 line: thumas
@@ -32,3 +32,9 @@ Kraainem on 26 September 1876 and his trade as *fabriekwerker*, both as held her
 names his parents outright — Georgius Carolus Josephus Thumas and Antonia Bossin. He was
 living at Sint-Stevens-Woluwe when he married. The alderman's office in his occupation
 field came from elsewhere and is not in this act.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

@@ -8,7 +8,7 @@ birth:
 death:
   date: 1786-04-14
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:
@@ -30,3 +30,9 @@ Second wife of Jean Lambert Thumas (m. Wavre 1743) and mother of the line's Geor
 
 ACT READ (July 2026): named as *Marie Leclercq of Grez*, mother of the deceased, in her son
 George's 1808 Grez-Doiceau death act, beside the father Lambert Thumas.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

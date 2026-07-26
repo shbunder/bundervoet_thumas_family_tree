@@ -21,3 +21,4 @@ the misses and the labels are the accumulating asset.
 | 1 | 2026-07-26 | up | octavia_schal | GRAFTED | ludovicus_schal, mathilde_standaert, ludovicus_dv, silvia_brissinck | — |
 | 2 | 2026-07-26 | down | anna_maria_bossin | GRAFTED | anna_maria_bossin, franciscus_pardon, guilielmus_pardon, maria_anna_pergijsels | — |
 | 3 | 2026-07-26 | up | coekelberghs | GRAFTED | jb_coekelberghs, anna_haesaerts, jb_vandenbemden, elisabeth_langes, henricus_vanesch | — |
+| 4 | 2026-07-26 | — | confidence sweep (all AGATHA sources) | CORRECTED | — | — |

@@ -1584,3 +1584,91 @@ NEXT: the confidence sweep above; the FamilySearch register image for the 1873 a
 images 317–768, and the specific image for act nr. 6 has not been located within it); and
 the two double-attested children of this couple the tree does not yet hold — Felix
 (b. 1876-09-10, m. Kraainem 1897-02-08) and Joannes (b. 1880-08-09, m. Kraainem 1900-09-17).
+
+## 52. The confidence sweep: twenty-four records that said `doc` and meant `sup`
+
+§51 found it while verifying something else, which is how this kind of thing is always
+found. `S5` was registered `confidence: doc` while its own `note` field said, in the same
+object, "an AGATHA act analysis … not the scan". This pass audited every source in the
+registry against every record that cites it.
+
+**The registry's `confidence` field is documentary, not enforced.** `check_data.py`
+validates that a person's `sources:` ids exist and nothing more; neither it nor
+`sources.py` ever compares a page's confidence to the citing person's. That is exactly how
+it drifted: `"confidence": "doc"` was typed onto six AGATHA pages that are transcriptions,
+and nothing could catch the mismatch. This is worth stating plainly because it means the
+sweep cannot be a one-time fix — nothing stops it recurring.
+
+**Six AGATHA act pages were opened in the browser to check, not inferred from their
+notes.** `S2`, `S5`, `S11`, `S14`, `S15`, `S19` each render only a tabular *Gegevens van de
+akte*: no scan, no image, no button. The DemoGen project behind `S14` and `S15` is called
+*Visu*, which does not mean an image is attached. AGATHA's act pages are the Rijksarchief's
+own transcriptions — authoritative, complete, field-by-field, and not the act.
+
+### What moved
+
+**Twenty-four records go from `doc` to `sup`**, in two groups.
+
+*Eighteen* rest on an AGATHA act analysis and nothing stronger: [[arnoldus_bossin]],
+[[bossin]], [[elisabeth_deyn]], [[egidius_peremans]], [[georges_cj]], [[georges1_t]],
+[[guilielmus_bossin]], [[guillaume_joostens]], [[jeanlambert_t]], [[jerome_dk]],
+[[jbgeorgius]], [[jeanne_deconninck]], [[joanna_verelst]], [[joostens]], [[leclercq_t]],
+[[noel_t]], [[peremans]], [[vandenbemden]].
+
+*Six* are worse than that, and they are the ones worth dwelling on:
+[[edouard_bocklandt]], [[helena_denijs]], [[louise_bocklandt]], [[marie_vanbergen]],
+[[pieter_stekelorum]] and [[petrus_vannieuwenhuyse]] carry a bare `agatha` citation with
+**no page id, no artifact, and no entry in `research/searches.jsonl`**. Nothing in this
+project records which act was consulted, let alone whether its image was opened. §37 swept
+257 records for exactly this and kept these ten under a looser standard than it applied in
+the same pass — the same section that documented `S2` as "the archive's transcription, not
+a scan" left [[jerome_dk]], which rests on `S2`, at `doc`. A correction pass can be
+inconsistent with its own finding, and this one was.
+
+[[petrus_vannieuwenhuyse]] is the least certain of the twenty-four and his record says so.
+His source line cites *agatha.arch.be scan 513_9000_000_00774*, phrased as though a scan
+really was seen — unlike the other five. It could not be resolved to a live act page and
+has no artifact behind it, so the downgrade rests on the absence of recorded evidence
+rather than a confirmed negative. Downgrading is always allowed and needs no document;
+restoring him needs only the page id.
+
+**One source goes the other way.** `S16` was registered `sup` while the register image
+behind it *had* been read — its first artifact was the Sint-Niklaas index, superseded by
+`leonie-paelinck-1901-birth-register`, where the page itself was read. The three citing
+records already carried `doc` correctly; the registry entry was the stale one. And
+`marcel-memorial-card` moves to `fam`: the card is a physical family document nobody in
+this project has read.
+
+**Fifteen records keep `doc`, and they are the ones that earn it** — [[benoni_rossel]],
+[[desiderius_dk]], [[edouard_dk]], [[eduardus_p]], [[eugenius_dv]], [[georges2_t]],
+[[leontine_schreel]], [[leonie_p]], [[ludovicus_dv]], [[ludovicus_schal]],
+[[magdalena_vb]], [[mathilde_standaert]], [[mtheresia_vandenbroeck]], [[octavia_schal]],
+[[silvia_brissinck]] — each resting on `S1`, `S16`, `S20`, `S21` or `S23`, every one a
+register image somebody actually opened.
+
+### What it cost, and why that is the point
+
+The site's own summary line changed with the sweep. It used to say the tree reached back
+to **the 1640s** on records read in the archive. It now says **the 1800s**. Nine hundred
+years of claimed documentary depth were an artefact of the confidence code, not of the
+evidence — the 17th-century material is all transcription and member tree, and always was.
+Nothing about the tree got worse; the sentence describing it got true.
+
+The rule is that downgrading is always allowed and upgrading needs a document, and the
+reason is visible here. Every one of these twenty-four facts may well be right. Not one of
+them is *documented*, and a confidence code that is not honest makes every other one
+unreadable — including the fifteen that are.
+
+### A question this pass deliberately did not answer
+
+[[peremans]], [[bossin]] and [[georges_cj]] are each supported by two or more
+*independent* AGATHA transcriptions of different acts. That is genuinely stronger than one
+member tree, and `sup` does not distinguish them. Whether the scale wants a tier between
+`sup` and `doc` for "independently transcribed more than once" is a scoring-policy
+question, not something a confidence sweep should settle by inventing a code. It is left
+open on purpose.
+
+NEXT: the register images. `S5`, `S11` and `S19` are all Vlaams-Brabant civil acts whose
+FamilySearch microfilms are digitised and browsable, and each one read moves a cluster of
+records back to `doc` legitimately. That is now the highest-value non-graft work in the
+project.

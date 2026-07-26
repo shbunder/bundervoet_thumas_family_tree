@@ -8,7 +8,7 @@ birth:
 death:
   date: 1894-11-07
   place: Kraainem
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 father: guilielmus_bossin
@@ -63,3 +63,9 @@ parent. She was forty-five.
 
 Those same acts, with [[jcseraphina_t]]'s of 1892, give her three daughters this tree did not
 have. In 1892 she is alive and keeping house; by 1899 she is a date in her daughters' acts.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

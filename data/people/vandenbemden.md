@@ -8,7 +8,7 @@ birth:
 death:
   date: 1948-04-29
   place: Kraainem
-confidence: doc
+confidence: sup
 occupation: naaister (seamstress)
 branch: Thumas
 line: thumas
@@ -32,3 +32,9 @@ DOCUMENTED (July 2026) by the Kraainem marriage act of 3 February 1902 (akte nr.
 on 15 June 1882, living at Kraainem, *naaister* — the occupation already held here,
 confirmed word for word — and daughter of Henricus Augustinus Vandenbemden and Maria
 Theresia Coekelberghs.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

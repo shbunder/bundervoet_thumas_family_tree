@@ -4,7 +4,7 @@ name: Elisabeth Deyn
 surname: Deyn
 death:
   raw: alive on 24 February 1846; not stated to be present in 1853
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:
@@ -35,3 +35,9 @@ while giving her husband all three. That is a difference worth recording and not
 interpreting: an absent field in a transcription may mean she was absent, or dead, or
 simply that the field was not filled. Her death bound therefore still rests on 1846, and
 nothing is inferred from the silence. The register image would settle it.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

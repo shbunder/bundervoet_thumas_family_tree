@@ -8,7 +8,7 @@ birth:
 death:
   date: 1922-10-26
   place: Sint-Stevens-Woluwe
-confidence: doc
+confidence: sup
 occupation: landbouwer & herbergier (farmer & innkeeper)
 branch: Thumas
 line: thumas
@@ -85,3 +85,9 @@ is worth more than any name-matching at the edges of it.
 Charles Joseph*, born 1836, married at Kraainem in 1872. [[georgesjoseph_t]] is *Georges
 Joseph*, born 1843, married at Grez-Doiceau in 1868. Same parents, same surname, both
 "Georges Thumas" to a careless index. They are not to be merged.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

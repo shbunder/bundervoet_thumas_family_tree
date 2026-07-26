@@ -705,8 +705,14 @@
 2 CONT
 2 CONT He is therefore alive on 1 December 1853, and the death bound moves from 1846 to that date.
 2 CONT His known children go from one to two.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S21@
-2 QUAY 3
+2 QUAY 2
 0 @I42@ INDI
 1 REFN augusta
 2 TYPE project-id
@@ -933,8 +939,14 @@
 2 CONT
 2 CONT Those same acts, with [[jcseraphina_t]]'s of 1892, give her three daughters this tree did not
 2 CONT have. In 1892 she is alive and keeping house; by 1899 she is a date in her daughters' acts.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S27@
-2 QUAY 3
+2 QUAY 2
 0 @I52@ INDI
 1 REFN boxoens
 2 TYPE project-id
@@ -1879,8 +1891,15 @@
 1 FAMS @F108@
 1 FAMC @F47@
 1 NOTE Father of Louise Marie Bocklandt (1877, Hamme O-Vl). Born 1839; married Maria Louisa Van Bergen (1842-1888). His parents (Antonius Dominicus Bocklandt × Isabella Livia Ichau) come from the wete1998 tree and the Hamme (O-Vl) registers.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted. This record's citation is a bare `agatha` with no page id, no
+2 CONT artifact and no entry in research/searches.jsonl behind it, so there is nothing in this
+2 CONT project that says which act was consulted or whether its image was ever opened. `doc` is a
+2 CONT claim about how the evidence was read, and that claim cannot be checked here. Restoring it
+2 CONT needs the act identified and cited by page id, not an argument.
 1 SOUR @S20@
-2 QUAY 3
+2 QUAY 2
 0 @I106@ INDI
 1 REFN edouard_dk
 2 TYPE project-id
@@ -2010,8 +2029,14 @@
 2 CONT Zaventem registers should hold for roughly 1815–1824. His daughter told the 1846 act that
 2 CONT she had never known her grandparents nor where they died, so his parents are not reachable
 2 CONT through her.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S46@
-2 QUAY 3
+2 QUAY 2
 0 @I112@ INDI
 1 REFN elisabeth_deyn
 2 TYPE project-id
@@ -2042,8 +2067,14 @@
 2 CONT interpreting: an absent field in a transcription may mean she was absent, or dead, or
 2 CONT simply that the field was not filled. Her death bound therefore still rests on 1846, and
 2 CONT nothing is inferred from the silence. The register image would settle it.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S21@
-2 QUAY 3
+2 QUAY 2
 0 @I113@ INDI
 1 REFN elisabeth_langes
 2 TYPE project-id
@@ -2520,8 +2551,14 @@
 2 CONT Still unresolved, and the record that would resolve it is his baptism: Grez-Doiceau parish
 2 CONT register, 1744 and 1747–48. Not indexed by name in either archive, so it needs the register
 2 CONT images read page by page — or FamilySearch's full-text search over them.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S54@
-2 QUAY 3
+2 QUAY 2
 0 @I134@ INDI
 1 REFN georges2_t
 2 TYPE project-id
@@ -2685,8 +2722,14 @@
 2 CONT Charles Joseph*, born 1836, married at Kraainem in 1872. [[georgesjoseph_t]] is *Georges
 2 CONT Joseph*, born 1843, married at Grez-Doiceau in 1868. Same parents, same surname, both
 2 CONT "Georges Thumas" to a careless index. They are not to be merged.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S56@
-2 QUAY 3
+2 QUAY 2
 0 @I136@ INDI
 1 REFN georgesjoseph_t
 2 TYPE project-id
@@ -2931,8 +2974,14 @@
 2 CONT His trade moves with him: *arbeider* at twenty-one, *steenslager* at twenty-nine,
 2 CONT *landbouwer* of Kraainem by 1872. He was living at Sint-Stevens-Woluwe, where he was born,
 2 CONT in 1853.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S59@
-2 QUAY 3
+2 QUAY 2
 0 @I146@ INDI
 1 REFN guilielmus_pardon
 2 TYPE project-id
@@ -2981,8 +3030,14 @@
 2 CONT Grez-Doiceau death act, read at the archive. He was added to this tree from an index entry a
 2 CONT pass earlier; this is the act behind it. It still gives him no dates, no place and no
 2 CONT occupation, so none is recorded.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S60@
-2 QUAY 3
+2 QUAY 2
 0 @I148@ INDI
 1 REFN guillielma_dellaert
 2 TYPE project-id
@@ -3092,8 +3147,15 @@
 1 SEX F
 1 FAMS @F13@
 1 NOTE FRONTIER above — wife of Pieter Stekelorum; dates not yet recovered.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted. This record's citation is a bare `agatha` with no page id, no
+2 CONT artifact and no entry in research/searches.jsonl behind it, so there is nothing in this
+2 CONT project that says which act was consulted or whether its image was ever opened. `doc` is a
+2 CONT claim about how the evidence was read, and that claim cannot be checked here. Restoring it
+2 CONT needs the act identified and cited by page id, not an argument.
 1 SOUR @S62@
-2 QUAY 3
+2 QUAY 2
 0 @I154@ INDI
 1 REFN hendrik_coppens
 2 TYPE project-id
@@ -3763,8 +3825,14 @@
 2 CONT names his parents outright — Georgius Carolus Josephus Thumas and Antonia Bossin. He was
 2 CONT living at Sint-Stevens-Woluwe when he married. The alderman's office in his occupation
 2 CONT field came from elsewhere and is not in this act.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S67@
-2 QUAY 3
+2 QUAY 2
 0 @I185@ INDI
 1 REFN jbzenon_t
 2 TYPE project-id
@@ -3858,8 +3926,14 @@
 2 CONT ACT READ (July 2026): named as *Lambert Thumas of Grez*, father of the deceased, in his son
 2 CONT George's 1808 Grez-Doiceau death act — with [[leclercq_t]] as the mother. The couple and the
 2 CONT parentage are now on a civil act.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S68@
-2 QUAY 3
+2 QUAY 2
 0 @I189@ INDI
 1 REFN jeanne_deconninck
 2 TYPE project-id
@@ -3883,8 +3957,14 @@
 2 CONT ACT READ (July 2026): named as the mother of the deceased in her daughter's 1857
 2 CONT Grez-Doiceau death act, read at the archive. As with her husband, the act gives her nothing
 2 CONT beyond the name.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S60@
-2 QUAY 3
+2 QUAY 2
 0 @I190@ INDI
 1 REFN jerome_dk
 2 TYPE project-id
@@ -3903,8 +3983,14 @@
 1 NOTE Source detail: Stef Paelinck (stefpaelinck) tree; Oostende Burgerzaken; Rijksarchief AGATHA (Oostende birth act nr. 585, 1897)
 2 CONT
 2 CONT CONFIRMED Roland's grandfather (Cosette). Full first names Jérôme Josephus; born Oostende 14 Jun 1897 (birth act nr. 585, Rijksarchief AGATHA). Born before his parents married: he was LEGITIMIZED by their marriage on 4 May 1901 (marginal note 'Gewettigd 4 5 1901' on his birth act). Lived in Oostende (Blauwkasteelstraat 21; later Amsterdamstraat 38). Recorded child: Albert Dekeyser (1920–1972); Gustaaf (Roland's father) is another of their sons. His siblings (children of Édouard × Louise, per AGATHA): Gustavus Josephus (1899, also legitimized 1901), Bertha Alida Theresia (1901), Maria (1902–2002), Angela Luciana (†1903) and Cesar Mauritius (†1905) — the last two died in infancy.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S69@
-2 QUAY 3
+2 QUAY 2
 0 @I191@ INDI
 1 REFN joanna_b1761
 2 TYPE project-id
@@ -4135,8 +4221,14 @@
 2 CONT that her daughter declared to the 1846 act, with her witnesses, that she had never known
 2 CONT her grandparents nor where they died: this generation was not reachable through the
 2 CONT family's own memory in 1846, and it will have to come from the registers.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S46@
-2 QUAY 3
+2 QUAY 2
 0 @I204@ INDI
 1 REFN joanna_wallays
 2 TYPE project-id
@@ -4511,8 +4603,14 @@
 2 CONT a pass ago were not in this tree at all.
 2 CONT
 2 CONT Her stated age of 47 puts her birth in 1809–10, which agrees with the 1810 held here.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S60@
-2 QUAY 3
+2 QUAY 2
 0 @I225@ INDI
 1 REFN josephus_caeckaert
 2 TYPE project-id
@@ -4865,8 +4963,14 @@
 2 CONT
 2 CONT ACT READ (July 2026): named as *Marie Leclercq of Grez*, mother of the deceased, in her son
 2 CONT George's 1808 Grez-Doiceau death act, beside the father Lambert Thumas.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S68@
-2 QUAY 3
+2 QUAY 2
 0 @I246@ INDI
 1 REFN leon
 2 TYPE project-id
@@ -5218,8 +5322,15 @@
 2 CONT Petrus Blomme has no record here: the card names him and nothing more. FRONTIER — the
 2 CONT Bocklandt–Blomme marriage act, which would date the remarriage and give his parents. It is
 2 CONT post-1923 Oostende, so it sits at the Stadsarchief rather than in AGATHA.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted. This record's citation is a bare `agatha` with no page id, no
+2 CONT artifact and no entry in research/searches.jsonl behind it, so there is nothing in this
+2 CONT project that says which act was consulted or whether its image was ever opened. `doc` is a
+2 CONT claim about how the evidence was read, and that claim cannot be checked here. Restoring it
+2 CONT needs the act identified and cited by page id, not an argument.
 1 SOUR @S74@
-2 QUAY 3
+2 QUAY 2
 0 @I263@ INDI
 1 REFN lucia_maene
 2 TYPE project-id
@@ -5804,8 +5915,15 @@
 1 FAMS @F108@
 1 FAMC @F149@
 1 NOTE Mother of Louise Marie Bocklandt (1877, Hamme O-Vl). Full name Maria Louisa Van Bergen, 1842-1888. Her parents were Joannes Franciscus Van Bergen (1815-1898) × Ida Vermandel (1825-1865), of Hamme (Oost-Vlaanderen).
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted. This record's citation is a bare `agatha` with no page id, no
+2 CONT artifact and no entry in research/searches.jsonl behind it, so there is nothing in this
+2 CONT project that says which act was consulted or whether its image was ever opened. `doc` is a
+2 CONT claim about how the evidence was read, and that claim cannot be checked here. Restoring it
+2 CONT needs the act identified and cited by page id, not an argument.
 1 SOUR @S20@
-2 QUAY 3
+2 QUAY 2
 0 @I294@ INDI
 1 REFN marinus_vannieuwenhuyse
 2 TYPE project-id
@@ -6228,8 +6346,14 @@
 2 CONT Grez-Doiceau death act — written **Marie Catherine Noé** there, not Noël. The act puts the
 2 CONT marriage beyond the trees; the spelling is recorded as a variant rather than adopted, since
 2 CONT her own record and this tree's other sources use Noël.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S79@
-2 QUAY 3
+2 QUAY 2
 0 @I317@ INDI
 1 REFN octavia_schal
 2 TYPE project-id
@@ -6388,8 +6512,14 @@
 2 CONT that volume as a *huwelijksbijlage* — the exact mechanism that produced [[S23]]. Vlaams-Brabant
 2 CONT indexes no death acts at all, which makes the annexes to this 1840 marriage the best route to
 2 CONT his 6 March 1837 act, and they are one volume away.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S81@
-2 QUAY 3
+2 QUAY 2
 0 @I322@ INDI
 1 REFN petronella_b1754
 2 TYPE project-id
@@ -6684,8 +6814,18 @@
 1 NOTE Source detail: Geneanet isavdw; birth act agatha.arch.be scan 513_9000_000_00774 (Sosa 3382)
 2 CONT
 2 CONT Father of Anna Van Nieuwenhuyse (1676). Served as a schepen (alderman/magistrate) of Oostkamp. Parents Marinus Van Nieuwenhuyse (~1620-1666) x Cornelia Govaert (~1625-1653).
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52 —
+2 CONT and this one is the least certain of the twenty-four, so the doubt is recorded rather than
+2 CONT hidden. The "Source detail" line above cites *agatha.arch.be scan 513_9000_000_00774*,
+2 CONT phrased as though a scan really was seen, which is not true of the other bare-`agatha`
+2 CONT records swept with it. That reference could not be resolved to a live AGATHA act page, and
+2 CONT there is no artifact and no search-log entry for it anywhere in the project. So the
+2 CONT downgrade rests on the absence of any recorded evidence, not on a confirmed negative.
+2 CONT Downgrading is always allowed; if the scan reference is real, resolving it to a page id
+2 CONT restores `doc` immediately and legitimately.
 1 SOUR @S84@
-2 QUAY 3
+2 QUAY 2
 0 @I337@ INDI
 1 REFN petrus_vanrenterghem
 2 TYPE project-id
@@ -6828,8 +6968,15 @@
 1 SEX M
 1 FAMS @F13@
 1 NOTE FRONTIER above — great-great-grandfather of Elodia Bostyn on the Perquy line. Dates not yet recovered (late-1700s Westkerke area).
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted. This record's citation is a bare `agatha` with no page id, no
+2 CONT artifact and no entry in research/searches.jsonl behind it, so there is nothing in this
+2 CONT project that says which act was consulted or whether its image was ever opened. `doc` is a
+2 CONT claim about how the evidence was read, and that claim cannot be checked here. Restoring it
+2 CONT needs the act identified and cited by page id, not an argument.
 1 SOUR @S62@
-2 QUAY 3
+2 QUAY 2
 0 @I345@ INDI
 1 REFN pieterjacobus_v
 2 TYPE project-id
@@ -7459,8 +7606,14 @@
 2 CONT on 15 June 1882, living at Kraainem, *naaister* — the occupation already held here,
 2 CONT confirmed word for word — and daughter of Henricus Augustinus Vandenbemden and Maria
 2 CONT Theresia Coekelberghs.
+2 CONT
+2 CONT DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+2 CONT Nothing here was refuted and no fact changed. What changed is the honest name for the
+2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S89@
-2 QUAY 3
+2 QUAY 2
 0 @I382@ INDI
 1 REFN vandervarent_j
 2 TYPE project-id

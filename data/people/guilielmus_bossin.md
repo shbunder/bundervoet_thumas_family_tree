@@ -7,7 +7,7 @@ birth:
   place: Sint-Stevens-Woluwe
 death:
   date: "1888"
-confidence: doc
+confidence: sup
 occupation: landbouwer (farmer)
 branch: Thumas
 line: thumas
@@ -57,3 +57,9 @@ on a year this record had been carrying from a member tree alone.
 His trade moves with him: *arbeider* at twenty-one, *steenslager* at twenty-nine,
 *landbouwer* of Kraainem by 1872. He was living at Sint-Stevens-Woluwe, where he was born,
 in 1853.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

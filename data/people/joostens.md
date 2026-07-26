@@ -7,7 +7,7 @@ birth:
 death:
   date: 1857-06-10
   place: Grez-Doiceau
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 father: guillaume_joostens
@@ -39,3 +39,9 @@ confirms her birthplace of Woluwe-Saint-Lambert from the act itself, gives her o
 a pass ago were not in this tree at all.
 
 Her stated age of 47 puts her birth in 1809–10, which agrees with the 1810 held here.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.

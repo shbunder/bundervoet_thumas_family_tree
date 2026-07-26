@@ -3,7 +3,7 @@ id: jeanne_deconninck
 name: Jeanne Marie Deconninck
 surname: Deconninck
 sex: f
-confidence: doc
+confidence: sup
 branch: Thumas
 line: thumas
 spouses:
@@ -29,3 +29,9 @@ FRONTIER: the Joostens–Deconninck marriage, and her own parents.
 ACT READ (July 2026): named as the mother of the deceased in her daughter's 1857
 Grez-Doiceau death act, read at the archive. As with her husband, the act gives her nothing
 beyond the name.
+
+DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
+Nothing here was refuted and no fact changed. What changed is the honest name for the
+evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
+Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
+its image was actually read. None was. The register images are the named next step.
