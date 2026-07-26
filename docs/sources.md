@@ -19,7 +19,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 |---|---|---|---|---|---|
 | `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 29 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 16 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 17 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -283,6 +283,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** METHOD: when an indexed record gives no place, open the image and read the VOLUME TITLE — it names the commune and turns a name-only match into an anchored one. Also: Egidius was dead by 1840, so the annexes to this marriage should hold his death-act extract.
+
+#### `S30` — Marriage banns of Cornelius Peremans, Zaventem, 21 April 1844
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:X98K-NBZZ?lang=nl>
+- **Collection:** Belgium, Brabant, Civil Registration and Church Records, 1704-1916 — volume 'Zaventem. Kerkelijke huwelijksafkondigingen 1844'
+- **Covers:** Indexed church marriage banns. As with S29 the record carries no place; the volume title supplies Zaventem.
+- **Yielded:** A second sibling for Joanna Catharina Jacoba Peremans — Cornelius, son of Egidius Peremans x Theresia Verelst, banns published at Zaventem on 21 April 1844, four months after his mother's death. The index also lists Lambertus van der Pelen, Maria Catharina van der Vaeren and Maria Anna van der Vaeren in the same document WITHOUT stating their roles, so the bride is not recorded.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** Banns, not the marriage act. The act itself would name the bride and both sets of parents.
 
 ### Geneanet
 

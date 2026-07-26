@@ -19,6 +19,7 @@ spouses:
     married: 1846-02-24
     place: Zaventem
 sources:
+  - S30
   - S29
   - S19
   - S11
@@ -71,8 +72,13 @@ this record's father died, where her mother died, and where she herself was born
 Place plus an exact parent pair is two identifiers with one anchored, so [[mjosephina_peremans]]
 is now in the tree as her sister, with a husband and his parents.
 
-*Joannes Athanasius* and *Cornelius* are still unopened and still unanchored. The same move
-should settle them.
+TWO OPENED (2026-07-26), both anchored the same way. **[[cornelius_peremans]]** had his
+marriage banns published at **Zaventem on 21 April 1844** (S30) — four months after his mother
+died and seven years after his father — with the parent pair given in the short form *Egidius
+Peremans × Theresia Verelst*. His bride is deliberately not recorded: the index lists three
+more people in that document and states the role of none of them.
+
+*Joannes Athanasius* is the one row still unopened. The same move should settle him.
 
 **And the 1840 act points at what §47 could not reach.** [[egidius_peremans]] was already dead
 in November 1840, so marrying his daughter required an extract of his death act, bound into

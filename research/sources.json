@@ -1103,6 +1103,19 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "METHOD: when an indexed record gives no place, open the image and read the VOLUME TITLE — it names the commune and turns a name-only match into an anchored one. Also: Egidius was dead by 1840, so the annexes to this marriage should hold his death-act extract."
+    },
+    {
+      "id": "S30",
+      "site": "familysearch",
+      "kind": "record",
+      "title": "Marriage banns of Cornelius Peremans, Zaventem, 21 April 1844",
+      "url": "https://www.familysearch.org/ark:/61903/1:1:X98K-NBZZ?lang=nl",
+      "collection": "Belgium, Brabant, Civil Registration and Church Records, 1704-1916 — volume 'Zaventem. Kerkelijke huwelijksafkondigingen 1844'",
+      "covers": "Indexed church marriage banns. As with S29 the record carries no place; the volume title supplies Zaventem.",
+      "yielded": "A second sibling for Joanna Catharina Jacoba Peremans — Cornelius, son of Egidius Peremans x Theresia Verelst, banns published at Zaventem on 21 April 1844, four months after his mother's death. The index also lists Lambertus van der Pelen, Maria Catharina van der Vaeren and Maria Anna van der Vaeren in the same document WITHOUT stating their roles, so the bride is not recorded.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Banns, not the marriage act. The act itself would name the bride and both sets of parents."
     }
   ]
 }
