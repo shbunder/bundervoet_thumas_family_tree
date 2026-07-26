@@ -1628,14 +1628,14 @@
     {
       "id": "vanderbeken",
       "query": {
-        "name": "Vanderbeken",
+        "name": "vanderbeken",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 2086,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 2086,
+      "complete": true,
+      "acts": 2086
     },
     {
       "id": "vandewalle",

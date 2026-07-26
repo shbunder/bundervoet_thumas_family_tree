@@ -3,7 +3,7 @@ id: arnoldus_bossin
 name: Arnoldus Bossin
 surname: Bossin
 death:
-  raw: alive on 24 February 1846; death not known
+  raw: alive on 1 December 1853; death not known
 confidence: doc
 occupation: arbeider (labourer)
 branch: Thumas
@@ -13,6 +13,7 @@ spouses:
     name: Elisabeth Deyn
 sources:
   - S19
+  - S22
 ---
 
 Father of the groom in his son [[guilielmus_bossin]]'s marriage act — Zaventem, act nr.
@@ -27,3 +28,12 @@ in the 1780s or 1790s and no closer than that.
 FRONTIER — his own marriage to [[elisabeth_deyn]], which would name his parents, and
 which the Sint-Stevens-Woluwe or Zaventem registers should hold for roughly 1815–1824.
 Neither has been searched for him.
+
+ACT READ (2026-07-26): named again seven years later, as father of the bride in his
+daughter [[anna_maria_bossin]]'s marriage act — Sint-Stevens-Woluwe nr. 9, 1 December 1853
+(S22). Still at Sint-Stevens-Woluwe, present and consenting, still unable to write, and
+his trade written *daglooner* where the 1846 act had said *arbeider*. The two words say the
+same thing; the record keeps each act's own.
+
+He is therefore alive on 1 December 1853, and the death bound moves from 1846 to that date.
+His known children go from one to two.

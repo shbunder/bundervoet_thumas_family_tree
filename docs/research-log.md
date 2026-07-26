@@ -1298,3 +1298,57 @@ Rijksarchief visit for the Schalandryn/Devriendt ones). Capturing the S20/S21 ac
 as artifacts is the other standing follow-up — both were read on screen but never saved.
 
 Tree: 345 → 349 people. Build green, 64 tests pass.
+
+## 48. A sister, a second dating, and a province with no death acts
+
+Two questions came out of §47. Both were answered, one of them by a wall.
+
+**The wall first.** The Peremans couple died at Zaventem in 1837 and 1843, and their death
+acts would give ages and probably parents. They are not reachable. Searching AGATHA for
+`Plaats = Zaventem`, act type `Overlijdensakten`, **with no name at all**, returns 58 acts
+— and not one of them is a Zaventem act. Every hit is from Antwerpen, Mechelen, Leuven,
+Wezembeek or Geel, matched because Zaventem is *mentioned* somewhere in it. The project
+list says why: AGATHA has a marriage project for Vlaams-Brabant (HUVLB) and a death project
+for West-Vlaanderen (OVWVL), and **no Vlaams-Brabant death project at all**.
+
+That is worth stating precisely, because it is not a name failure and no amount of
+re-searching will turn it into a hit. It also retro-explains earlier Brabant death misses.
+The register scans themselves remain, and FamilySearch's Brabant civil-registration images
+are the route.
+
+**The find.** Searching `Bossin Deyn` — the surname pair, the move that keeps working —
+returns eleven acts in the entire database. Their own marriage is not among them. But two
+name them as parents, and the second was unknown here: **Sint-Stevens-Woluwe, act nr. 9,
+1 December 1853**.
+
+[[anna_maria_bossin]], of age, born at Sint-Stevens-Woluwe on **3 November 1829**, a
+*dagloonster*, married Françiscus Pardon, a servant of Zaventem born at Winksele. Her
+parents are [[arnoldus_bossin]] and [[elisabeth_deyn]] — the same two names, in the same
+commune, that the 1846 act gives as the parents of [[guilielmus_bossin]]. And the fourth
+person in the act settles it: **Guilielmus Bossin, 29, steenslager of Sint-Stevens-Woluwe,
+standing as a witness at his sister's wedding.**
+
+**He is now dated by two independent acts.** Twenty-nine on 1 December 1853 puts his birth
+between December 1823 and December 1824. Twenty-one on 24 February 1846 puts it between
+February 1824 and February 1825. The windows overlap only in **1824, between late February
+and early December** — which is the year the tree held on a member tree's word alone, now
+carried by two civil acts seven years apart. His trade tracks his life: *arbeider* at
+twenty-one, *steenslager* at twenty-nine, *landbouwer* of Kraainem by 1872.
+
+Three more people come with the bride: [[franciscus_pardon]] and his parents
+[[guilielmus_pardon]] and [[maria_anna_pergijsels]], *daglooners* of Winksele, both present
+and consenting.
+
+**A household that signed with marks.** The bride, the groom, both his parents, her father
+and one witness are each recorded declaring themselves unlettered. Only the *veldwagter*
+and the bride's brother are not.
+
+**And one thing deliberately not concluded.** Elisabeth Deyn appears in the 1853 act as a
+bare name — no residence, no trade, none of the "present and consenting" her husband gets.
+In 1846 she was there in person. It is tempting to read the silence as her death in the
+intervening seven years, and that is exactly the inference this project keeps having to
+retract. An empty field in a transcription may mean absent, dead, or unfilled. Her death
+bound stays at 1846.
+
+NEXT: the Winksele births of February 1830, which would carry the Pardons back a
+generation on a surname rare enough to search alone — *Pergijsels* more so than Pardon.

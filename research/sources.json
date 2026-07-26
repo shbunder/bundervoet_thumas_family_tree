@@ -960,6 +960,18 @@
       "confidence": "doc",
       "accessed": "2026-07-26",
       "note": "FOLLOW-UP: read on screen at the ark above; no image file has been saved to data/artifacts/ — the same named gap as S20."
+    },
+    {
+      "id": "S22",
+      "site": "agatha",
+      "kind": "record",
+      "title": "Marriage act nr. 9 — Françiscus Pardon × Anna Maria Bossin, Sint-Stevens-Woluwe, 1 December 1853",
+      "url": "https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00051488_0",
+      "covers": "AGATHA act analysis, project Burgerlijke stand - Huwelijksakten - Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest. Full transcription: both spouses' birth dates and places, both sets of parents, four witnesses with ages and trades, and the clerk's remarks.",
+      "yielded": "A sister for Guilielmus Bossin — the bride's parents are his, and he witnesses at 29, steenslager of Sint-Stevens-Woluwe. Her birth given to the day: Sint-Stevens-Woluwe 3 Nov 1829. Adds the Pardon couple of Winksele. Independently dates Guilielmus to 1824, agreeing with his own 1846 act.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "An analysis, not the register image — the scan is not linked from the page. Complete enough to read like an act, but it is a transcription."
     }
   ]
 }

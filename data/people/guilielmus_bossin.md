@@ -20,6 +20,7 @@ spouses:
     place: Zaventem
 sources:
   - S19
+  - S22
   - S11
   - S8
 ---
@@ -41,3 +42,18 @@ twenty-one.
 It also names his parents, [[arnoldus_bossin]] and [[elisabeth_deyn]] of
 Sint-Stevens-Woluwe, both present at the wedding, both consenting, and neither able to
 write. They are recorded here from this act.
+
+ACT READ (2026-07-26): he appears again as a **witness at his sister's wedding** —
+[[anna_maria_bossin]], Sint-Stevens-Woluwe nr. 9, 1 December 1853 (S22). The bride's
+parents are named identically to his own, and he is there in person, so this tree gains
+his sister and he gains a sibling.
+
+**It also dates him twice over.** He is **29** on 1 December 1853, which places his birth
+between December 1823 and December 1824; his own act made him **21** on 24 February 1846,
+which places it between February 1824 and February 1825. The two windows overlap only in
+**1824, between late February and early December** — two acts, seven years apart, agreeing
+on a year this record had been carrying from a member tree alone.
+
+His trade moves with him: *arbeider* at twenty-one, *steenslager* at twenty-nine,
+*landbouwer* of Kraainem by 1872. He was living at Sint-Stevens-Woluwe, where he was born,
+in 1853.
