@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import subprocess
 import sys
+from datetime import date
 from hashlib import sha256
 from pathlib import Path
 
@@ -20,13 +21,53 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 from familytree.bundle import build_bundle  # noqa: E402
-from familytree.people import ROOT, load_config  # noqa: E402
+from familytree.landing import census_sentence, fill, missing_markers  # noqa: E402
+from familytree.people import ROOT, format_date, load_config, load_people  # noqa: E402
 
 
 def run(script: str, *args: str) -> None:
     r = subprocess.run([sys.executable, str(HERE / script), *args])
     if r.returncode != 0:
         raise SystemExit(r.returncode)
+
+
+def _last_data_change() -> str:
+    """When the tree last changed — the last commit that touched data/, not the last
+    time the build ran, because a rebuild is not an update to the family tree."""
+    try:
+        r = subprocess.run(
+            ["git", "log", "-1", "--format=%cs", "--", "data"],
+            cwd=ROOT, capture_output=True, text=True, timeout=5,
+        )
+        if r.returncode == 0 and r.stdout.strip():
+            return format_date(r.stdout.strip())
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return format_date(date.today().isoformat())
+
+
+def fill_landing_page() -> None:
+    """Write the tree's own numbers into index.html.
+
+    That page loads no JavaScript, so anything it says about the size of the tree has
+    to be put there. It comes from the same census the tree page reads out of the
+    bundle, so the two pages can use different words but never different numbers, and
+    the validator refuses to pass once what is written here has gone stale.
+    """
+    config = load_config()
+    sentence = census_sentence(load_people(config["roster"]), config)
+
+    page = ROOT / "index.html"
+    before = page.read_text(encoding="utf-8")
+    if gone := missing_markers(before):
+        raise SystemExit(
+            f"index.html is missing the {', '.join(gone)} marker(s) the build writes between — "
+            "restore them, or its numbers stop being maintained."
+        )
+    after = fill(fill(before, "census", sentence), "updated", _last_data_change())
+    if after != before:
+        page.write_text(after, encoding="utf-8")
+    print(f"index.html — {sentence}{' (unchanged)' if after == before else ''}")
 
 
 def stamp_pages() -> None:
@@ -79,6 +120,7 @@ def main() -> int:
     run("export_gedcom.py")
     run("research.py", "check")
     run("research.py", "docs")
+    fill_landing_page()
     stamp_pages()
     return 0
 

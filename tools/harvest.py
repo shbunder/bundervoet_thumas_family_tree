@@ -277,12 +277,24 @@ def harvest(harvest_id: str, label: str, params: dict, cap: int, refresh: bool) 
 # ---------- commands ----------
 
 
+def surname_harvest_id(surname: str, place: str | None = None) -> str:
+    """One id per surname, minted in one place.
+
+    It was minted in two: `surname` slugged the name and `frontiers` used the project's
+    family key, so "De Keyser" was filed once as `de-keyser` and once as `dekeyser` —
+    two rows, two full harvests of the same eleven thousand records, and every lookup
+    finding whichever one it happened to ask for. The family key wins because it is
+    already the project's answer to "are these the same family name".
+    """
+    return family_key(surname) + (f"-{slug(place)}" if place else "")
+
+
 def cmd_surname(args):
     params = {"name": args.surname, "country_code": "be"}
     if args.place:
         params["eventplace"] = args.place
     harvest(
-        slug(args.surname) + (f"-{slug(args.place)}" if args.place else ""),
+        surname_harvest_id(args.surname, args.place),
         f'Surname "{args.surname}"' + (f" at {args.place}" if args.place else "") + ", Belgium",
         params, args.max, args.refresh,
     )
@@ -309,7 +321,7 @@ def cmd_frontiers(args):
         if not r.surname:
             print(f"{r.name}\n  no surname recorded — nothing to query on.\n")
             continue
-        harvest(family_key(r.surname), f'{r.name} → surname "{r.surname}", Belgium',
+        harvest(surname_harvest_id(r.surname), f'{r.name} → surname "{r.surname}", Belgium',
                 {"name": r.surname, "country_code": "be"}, args.max, args.refresh)
 
 

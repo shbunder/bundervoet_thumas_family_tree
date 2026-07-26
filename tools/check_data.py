@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from familytree import sources as reg  # noqa: E402
 from familytree.bundle import build_bundle  # noqa: E402
 from familytree.frontmatter import FrontmatterError  # noqa: E402
+from familytree.landing import stale_reason  # noqa: E402
 from familytree.match import build_index, candidates_for, compare, from_person  # noqa: E402
 from familytree.people import (  # noqa: E402
     ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, ROOT, SPOUSE_FIELDS,
@@ -230,6 +231,16 @@ def main() -> int:
             fail("dist/bundle.js is missing — run: uv run tools/build.py")
         elif bundle_path.read_text(encoding="utf-8") != build_bundle():
             fail("dist/bundle.js is out of date with data/people/ — run: uv run tools/build.py")
+
+        # index.html states the size of the tree in prose, because it loads no
+        # JavaScript and cannot count. That is the one number on the site that can go
+        # wrong in silence — the tree grows and the paragraph does not — so it is
+        # checked here too.
+        landing = ROOT / "index.html"
+        if landing.exists():
+            stale = stale_reason(landing.read_text(encoding="utf-8"), people, config)
+            if stale:
+                fail(stale)
 
     for w in warnings:
         print("warn  " + w, file=sys.stderr)

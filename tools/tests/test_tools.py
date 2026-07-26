@@ -15,7 +15,7 @@ import pytest
 from familytree import frontmatter
 from familytree.match import Candidate, block_keys, compare, given_keys, phonetic
 from familytree.people import (
-    family_key, format_date, given_names, is_valid_date, point_year, year_of,
+    census, family_key, format_date, given_names, is_valid_date, point_year, year_of,
 )
 
 
@@ -242,3 +242,157 @@ def test_point_year_refuses_to_do_arithmetic_on_a_bound(date):
     mother aged -6 for a record that was never in conflict with anything."""
     assert point_year(date) is None
     assert year_of(date) is not None      # still sortable, just not subtractable
+
+
+# ---------- the census ----------
+# Two pages state how big the tree is: the landing page has the numbers written into it
+# by the build, the tree reads them from the bundle. Both come from `census`, so what is
+# worth pinning is that it partitions the roster — a person counted twice, or in no
+# group at all, makes a page state a number that is quietly wrong.
+
+
+def _tree(**people):
+    return {pid: {"id": pid, **rest} for pid, rest in people.items()}
+
+
+def test_census_puts_everyone_in_exactly_one_group():
+    people = _tree(
+        kid={"father": "dad"},
+        dad={"father": "grandad"},
+        grandad={},
+        aunt={"father": "grandad"},       # blood, off the direct line
+        cousin={"father": "aunt"},        # blood, further off it
+        inlaw={},                         # nobody's child and nobody's parent
+    )
+    c = census(people, {"meta": {"roots": ["kid"]}, "root": "kid"})
+    assert c["ancestors"] == 2                                   # dad, grandad
+    assert c["relatives"] == 3                                   # kid, aunt, cousin
+    assert c["others"] == 1                                      # inlaw
+    assert c["ancestors"] + c["relatives"] + c["others"] == c["total"] == len(people)
+
+
+def test_census_counts_a_forest_from_every_root():
+    """`roots` is a list — objective 3 expects disconnected families — so an ancestor of
+    the second root is as much an ancestor as one of the first."""
+    people = _tree(a={"father": "a_dad"}, a_dad={}, b={"mother": "b_mum"}, b_mum={})
+    c = census(people, {"meta": {"roots": ["a", "b"]}, "root": "a"})
+    assert (c["ancestors"], c["relatives"], c["others"]) == (2, 2, 0)
+
+
+def test_census_dates_separate_the_oldest_from_the_oldest_documented():
+    """"Documented" is a claim about evidence. The landing page said the tree was
+    documented to the 1400s while the oldest act anyone had read was from 1649."""
+    people = _tree(
+        old={"birth": {"date": "~1440"}, "confidence": "sup"},
+        read={"birth": {"date": "1649-03-07"}, "confidence": "doc"},
+        recent={"birth": {"date": "1990"}, "confidence": "fam"},
+    )
+    c = census(people, {"meta": {"roots": ["recent"]}, "root": "recent"})
+    assert c["earliest"] == 1440
+    assert c["documented"] == 1649
+
+
+# ---------- harvest coverage ----------
+# Both of these are regressions. A partial harvest read as a complete one, and one
+# surname filed under two ids, are the same class of mistake: the tools reported
+# confidence they had not earned.
+
+
+def _manifest(monkeypatch, harvests):
+    from familytree import corpus
+    monkeypatch.setattr(corpus, "load_manifest", lambda: {"harvests": harvests, "population": {"be": 1000}})
+
+
+def test_a_partial_harvest_is_not_evidence_of_absence(monkeypatch):
+    """5% of a surname fetched and nothing found is the corpus form of `blocked`, not
+    of `miss` — the queue must not sink the frontier as though it had been searched."""
+    from familytree.corpus import surname_coverage
+    _manifest(monkeypatch, [
+        {"id": "dekeyser", "query": {"name": "De Keyser"}, "found": 11795, "mentions": 600, "complete": False},
+    ])
+    assert surname_coverage("Dekeyser") == pytest.approx(600 / 11795, abs=1e-6)
+
+
+def test_a_complete_harvest_reports_full_coverage(monkeypatch):
+    from familytree.corpus import surname_coverage
+    _manifest(monkeypatch, [
+        {"id": "bundervoet", "query": {"name": "Bundervoet"}, "found": 396, "mentions": 396, "complete": True},
+    ])
+    assert surname_coverage("Bundervoet") == 1.0
+
+
+def test_an_unharvested_surname_is_unknown_not_empty(monkeypatch):
+    from familytree.corpus import surname_coverage
+    _manifest(monkeypatch, [])
+    assert surname_coverage("Schalandrijn") is None
+
+
+def test_a_commune_harvest_never_counts_as_surname_coverage(monkeypatch):
+    """It covers one commune, so it says nothing about the surname as a whole — and its
+    `found` is not a population figure either."""
+    from familytree.corpus import surname_coverage, surname_population_count
+    _manifest(monkeypatch, [
+        {"id": "dekeyser-oostende", "query": {"name": "De Keyser", "eventplace": "Oostende"},
+         "found": 40, "mentions": 40, "complete": True},
+    ])
+    assert surname_coverage("De Keyser") is None
+    assert surname_population_count("De Keyser") is None
+
+
+def test_the_slug_collision_no_longer_hides_a_harvest(monkeypatch):
+    """"De Keyser" was filed once as `de-keyser` and once as `dekeyser`, so a lookup by
+    either id found only one of them. Matching on the query, not the id, sees both and
+    prefers whichever actually holds more."""
+    from familytree.corpus import surname_coverage
+    _manifest(monkeypatch, [
+        {"id": "de-keyser", "query": {"name": "De Keyser"}, "found": 11795, "mentions": 600, "complete": False},
+        {"id": "dekeyser", "query": {"name": "Dekeyser"}, "found": 11907, "mentions": 4000, "complete": False},
+    ])
+    assert surname_coverage("De Keyser") == pytest.approx(4000 / 11907, abs=1e-6)
+
+
+def test_one_surname_mints_one_harvest_id():
+    import harvest
+    assert harvest.surname_harvest_id("De Keyser") == harvest.surname_harvest_id("Dekeyser")
+    assert harvest.surname_harvest_id("De Keyser", "Oostende") != harvest.surname_harvest_id("De Keyser")
+
+
+def test_an_annotated_value_is_unwrapped_wherever_it_appears():
+    """A2A renders XML as JSON, so any element carrying an attribute arrives as
+    `{"@Remark": ..., "$": value}` instead of a scalar. Lommel does it to places; nothing
+    stops an archive doing it to a name, a date or an age.
+
+    This was twice patched at the field that happened to break, and twice the crash simply
+    moved to the next field. The record is now unwrapped whole before anything reads it, so
+    this test annotates one of every kind at once — if the fix ever regresses to guarding
+    individual read sites, the field it forgets will fail here."""
+    from familytree.corpus import normalise_act
+    act = normalise_act({
+        "id": "sla:test", "archive": "sla", "archive_org": "Test",
+        "record": {
+            "Event": {
+                "EventType": "Overlijden",
+                "EventDate": {"Year": {"@Cert": "low", "$": "1712"},
+                              "Month": {"$": "8"}, "Day": {"$": "8"}},
+                "EventPlace": {"Place": {"@TranscriptionRemark": "Lommel-Centrum", "$": "Lommel"}},
+            },
+            "Person": [{
+                "@pid": "P1",
+                "PersonName": {"PersonNameFirstName": {"$": "Joanna"},
+                               "PersonNameLastName": {"@Alt": "Willems", "$": "Willems"}},
+                "BirthPlace": {"Place": {"$": "Overpelt"}},
+                "Residence": {"Place": {"$": "Lommel"}},
+                "Profession": {"$": "landbouwster"},
+                "Age": {"PersonAgeYears": {"$": "42"}},
+            }],
+            "RelationEP": [{"PersonKeyRef": "P1", "EventKeyRef": "E1", "RelationType": "Overledene"}],
+        },
+    })
+    assert act.place == "Lommel"
+    assert act.date == "1712-08-08"
+    person = act.people[0]
+    assert person.name == "Joanna Willems"
+    assert person.birth_place == "Overpelt"
+    assert person.residence == "Lommel"
+    assert person.occupation == "landbouwster"
+    assert person.age == 42

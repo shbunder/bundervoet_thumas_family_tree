@@ -242,6 +242,78 @@ def family_key(surname: str | None) -> str:
     return re.sub(r"[^a-z]", "", s)
 
 
+# ---------- what the tree contains ----------
+
+
+def ancestors_of(people: dict, pid: str) -> set[str]:
+    """Everyone above someone in the tree. The person themselves is not in it."""
+    seen: set[str] = set()
+    stack = [pid]
+    while stack:
+        cur = stack.pop()
+        for parent in (people[cur].get("father"), people[cur].get("mother")):
+            if parent in people and parent not in seen:
+                seen.add(parent)
+                stack.append(parent)
+    return seen
+
+
+def census(people: dict, config: dict) -> dict:
+    """How many people the tree holds, split by how they relate to the roots.
+
+    These are the objectives, counted: direct ancestors is objective 1, blood
+    relatives off that line is objective 2, and the rest married in. It is derived
+    here, once, and every place that shows a number reads it — the landing page
+    through the build, the tree's subtitle through the bundle. A count written into a
+    page by hand is a fact with no source that goes quietly wrong the next time
+    somebody is added, which is the same failure as a hand-kept list.
+
+    The three groups are the ones `assets/js/kinship.js` sorts the index into, and the
+    index's own headings still count their buckets — so if these two ever disagreed,
+    the subtitle and the heading below it would say different things on one screen.
+
+    `earliest` is the oldest birth year in the tree; `documented` the oldest resting on
+    a record someone actually read. They are far apart, and only one of them may be
+    called documented.
+    """
+    meta = config["meta"]
+    roots = [r for r in (meta.get("roots") or [config.get("root")]) if r in people]
+
+    ancestors: set[str] = set()
+    for root in roots:
+        ancestors |= ancestors_of(people, root)
+    ancestors -= set(roots)
+
+    children: dict[str, list[str]] = {}
+    for p in people.values():
+        for parent in (p.get("father"), p.get("mother")):
+            if parent:
+                children.setdefault(parent, []).append(p["id"])
+
+    # Blood is the roots, everyone above them, and everyone descended from any of
+    # those — an ancestor's sibling's grandchild is a blood relative (objective 2).
+    blood = set(roots) | ancestors
+    queue = list(blood)
+    while queue:
+        for kid in children.get(queue.pop(), []):
+            if kid not in blood:
+                blood.add(kid)
+                queue.append(kid)
+
+    def earliest_birth(pool: list[dict]) -> int | None:
+        years = [year_of(p["birth"]["date"]) for p in pool if (p.get("birth") or {}).get("date")]
+        return min((y for y in years if y), default=None)
+
+    return {
+        "total": len(people),
+        "ancestors": len(ancestors),
+        "relatives": len(blood - ancestors),
+        "others": len(people) - len(blood),
+        "earliest": earliest_birth(people.values()),
+        "documented": earliest_birth([p for p in people.values() if p.get("confidence") == "doc"]),
+    }
+
+
 # ---------- the shape the browser reads ----------
 # The site loads a generated bundle, so the display strings are computed once here
 # rather than in the renderer, and assets/ stays free of any logic about what a date

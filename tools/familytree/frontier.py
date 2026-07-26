@@ -43,9 +43,9 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 
-from .corpus import corpus_exists, corpus_mentions, frequencies, load_manifest
+from .corpus import corpus_exists, corpus_mentions, frequencies, surname_coverage
 from .match import build_index, candidates_for, from_mention, from_person, surname_weight
-from .people import family_key, load_config, load_people
+from .people import load_config, load_people
 from .sources import ACCESS_COST, load_log, load_sources
 
 
@@ -135,7 +135,6 @@ def frontier_rows(people: dict | None = None) -> list[Frontier]:
     depth = generations(people, meta)
     reach_of = descendant_counts(people)
     freq = frequencies()
-    harvested = {h["id"] for h in load_manifest()["harvests"]}
     children = children_index(people)
 
     # The corpus, indexed once for all frontiers rather than scanned per person.
@@ -157,10 +156,17 @@ def frontier_rows(people: dict | None = None) -> list[Frontier]:
         reach = reach_of.get(pid, 0)
 
         candidates = len(candidates_for(c, index)) if index is not None else None
-        # No corpus for this surname yet is not the same as a corpus that came back
-        # empty. The first is unknown and cheap to resolve; the second is evidence.
-        surname_harvested = bool(p.get("surname")) and family_key(p["surname"]) in harvested
-        presence = 0.5 if candidates is None or not surname_harvested else max(0.05, 1 - math.exp(-candidates / 6))
+        # Three states, not two, and the middle one is the whole point. Never harvested
+        # is UNKNOWN and cheap to resolve. Harvested completely and empty is EVIDENCE of
+        # absence. Harvested part-way and empty is neither — it is the corpus form of
+        # `blocked`, and treating it as evidence sank frontiers whose acts are simply in
+        # the part nobody fetched. Coverage weights between the prior and the finding.
+        coverage = surname_coverage(p["surname"]) if p.get("surname") else None
+        if candidates is None or coverage is None:
+            presence = 0.5
+        else:
+            observed = max(0.05, 1 - math.exp(-candidates / 6))
+            presence = coverage * observed + (1 - coverage) * 0.5
         probability = max(0.02, presence * discriminability(c, freq) * (0.8 ** misses))
 
         # A direct ancestor is worth their share of the blocked ancestry; a collateral
@@ -171,8 +177,13 @@ def frontier_rows(people: dict | None = None) -> list[Frontier]:
         # The cheapest thing left to try, and what it costs.
         if candidates:
             route, cost = f"link — {candidates} candidates already held", 0.5
-        elif p.get("surname") and not surname_harvested:
+        elif p.get("surname") and coverage is None:
             route, cost = f'harvest surname "{p["surname"]}"', 1.0
+        elif coverage is not None and coverage < 0.95:
+            # Cheaper than any browser session, and it is the reason there are no
+            # candidates — say so rather than sending someone to a login wall.
+            route = f'finish the harvest of "{p["surname"]}" — only {coverage:.0%} held'
+            cost = 1.0
         elif blocked:
             route, cost = f"retry {blocked[0]['site']} — blocked, never read", 2.0
         elif untried_sites:

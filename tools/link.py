@@ -27,7 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from familytree.corpus import (  # noqa: E402
-    Mention, corpus_exists, corpus_mentions, frequencies, normalise_key,
+    Mention, corpus_exists, corpus_mentions, frequencies, normalise_key, surname_coverage,
 )
 from familytree.frontier import children_index, frontier_rows  # noqa: E402
 from familytree.match import (  # noqa: E402
@@ -78,12 +78,21 @@ def report(person, index, freq, show_all: bool, people=None, children=None) -> i
     held = sum(1 for m in corpus_mentions() if normalise_key(m.surname) == normalise_key(c.surname))
     rarity = f"{weight.bits:.1f} bits"
     rarity += f" ({weight.count} in Belgium)" if weight.count is not None else " (estimated)"
+    coverage = surname_coverage(c.surname) if c.surname else None
     print(f"\n{person['name']}  ({person['id']})")
     print(f"  surname evidence: {rarity} · {held} mentions held")
     if held == 0:
         print("  nothing harvested under this surname yet — "
               f"uv run tools/harvest.py surname \"{c.surname}\"")
         return 0
+    # Said before the results, not after, because a short list read as "there is
+    # nothing there" when the truth was "we fetched five per cent of it". That is the
+    # corpus form of reporting `blocked` as `miss`, and it is the mistake this whole
+    # project is built to avoid.
+    if coverage is not None and coverage < 0.95:
+        print(f"  PARTIAL HARVEST — only {coverage:.0%} of this surname is held. Anything absent")
+        print("  below is unsearched, not missing. Finish it with:")
+        print(f"    uv run tools/harvest.py surname \"{c.surname}\" --max {weight.count or 20000} --refresh")
 
     matches = sorted(
         (compare(c, other, freq) for other in candidates_for(c, index)),

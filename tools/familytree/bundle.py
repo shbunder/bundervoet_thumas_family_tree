@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import json
 
-from .people import load_config, load_people, set_source_titles, to_browser_record
+from .people import census, load_config, load_people, set_source_titles, to_browser_record
 from .sources import load_sources
 
 
@@ -47,6 +47,10 @@ def build_bundle() -> str:
             "defaultSource": resolve(meta["defaultSource"]),
             "confidenceLabels": site["confidenceLabels"],
             "footer": site["footer"],
+            # Counted here rather than in the browser so that the landing page, which
+            # loads no JavaScript at all, and this page cannot disagree about how big
+            # the tree is. Both read this one derivation.
+            "census": census(people, config),
         }),
         # Branches cite the registry by id; the page wants something readable.
         _call("branches", {b: resolve(sid) for b, sid in config["branches"].items()}),

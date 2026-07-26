@@ -25,7 +25,7 @@ from dataclasses import dataclass, field
 
 from .corpus import Act, corpus_exists, load_corpus, normalise_key
 from .match import build_index, candidates_for, compare, from_mention, from_person
-from .people import family_key
+from .people import ancestors_of, family_key
 from .frontier import children_index, generations
 
 # ---------- which act to fetch ----------
@@ -319,18 +319,6 @@ class Collapse:
     generation: int
     distinct: int
     theoretical: int
-
-
-def ancestors_of(people: dict, pid: str) -> set[str]:
-    seen: set[str] = set()
-    stack = [pid]
-    while stack:
-        cur = stack.pop()
-        for parent in (people[cur].get("father"), people[cur].get("mother")):
-            if parent in people and parent not in seen:
-                seen.add(parent)
-                stack.append(parent)
-    return seen
 
 
 def pedigree_collapse(people: dict, meta: dict):

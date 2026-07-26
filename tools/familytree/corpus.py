@@ -74,22 +74,30 @@ def _as_list(v):
     return v if isinstance(v, list) else [v]
 
 
-def _text(v):
-    """The scalar behind a field, whatever shape the archive published it in.
+def unwrap_annotated(v):
+    """Strip the XML-attribute wrapper from every value in a record, once, at the door.
 
-    A2A is XML rendered as JSON, so an element that carries an attribute arrives as an
-    object rather than a string: Lommel publishes a place as
+    A2A is XML rendered as JSON, so any element carrying an attribute arrives as an object
+    instead of a scalar: Lommel publishes a place as
     `{"@TranscriptionRemark": "Lommel-Centrum", "$": "Lommel"}` where every other archive
-    publishes `"Lommel"`. Reading that straight put a dict where the rest of the code
-    expected text, and the whole validator died on `.lower()` — one commune's annotation
-    habit taking down a run over three hundred people.
+    publishes `"Lommel"`. Downstream code then finds a dict where it expected text and dies
+    on `.lower()`.
 
-    Applied at every point a scalar is read, not only at the one that broke, because the
-    same convention can attach to a name or a date just as easily as to a place."""
+    This was first patched at the field that broke (EventPlace), and the patch was described
+    as covering every point a scalar is read. It did not: a person's BirthPlace, Residence,
+    Profession and Age can each carry the same wrapper, and the crash simply moved. Guarding
+    read sites is the wrong shape of fix — there is no way to know the list is complete, and
+    every new field is another chance to miss one.
+
+    So the record is normalised whole before anything reads it. Any dict with a "$" key
+    collapses to that value; everything else is walked. After this, no downstream code needs
+    to know the convention exists."""
     if isinstance(v, dict):
-        return v.get("$")
+        if "$" in v:
+            return unwrap_annotated(v["$"])
+        return {k: unwrap_annotated(x) for k, x in v.items()}
     if isinstance(v, list):
-        return next((t for t in (_text(x) for x in v) if t), None)
+        return [unwrap_annotated(x) for x in v]
     return v
 
 
@@ -99,7 +107,7 @@ def _api_date(d) -> str | None:
     for a guess and this is exactly where one would get invented."""
     if not d:
         return None
-    y, mo, da = _text(d.get("Year")), _text(d.get("Month")), _text(d.get("Day"))
+    y, mo, da = d.get("Year"), d.get("Month"), d.get("Day")
     if not y:
         return None
     year = str(y)
@@ -162,16 +170,15 @@ def _person_name(p: dict) -> tuple[str, str, str]:
     # surname by others; the surname keeps whichever form the record used, because the
     # project's own rule is that `surname` is stated, not computed.
     surname = " ".join(
-        x for x in (_text(n.get("PersonNamePrefix")), _text(n.get("PersonNamePrefixLastName")),
-                    _text(n.get("PersonNameLastName"))) if x
+        x for x in (n.get("PersonNamePrefix"), n.get("PersonNamePrefixLastName"), n.get("PersonNameLastName")) if x
     ).strip()
-    given = " ".join(x for x in (_text(n.get("PersonNameFirstName")), _text(n.get("PersonNameInitials"))) if x).strip()
+    given = " ".join(x for x in (n.get("PersonNameFirstName"), n.get("PersonNameInitials")) if x).strip()
     return given, surname, " ".join(x for x in (given, surname) if x)
 
 
 def _normalise_person(p: dict, event_year: int | None) -> Mention:
     given, surname, name = _person_name(p)
-    age_raw = _text((p.get("Age") or {}).get("PersonAgeYears"))
+    age_raw = (p.get("Age") or {}).get("PersonAgeYears")
     try:
         age = int(age_raw) if age_raw is not None else None
     except (TypeError, ValueError):
@@ -185,9 +192,9 @@ def _normalise_person(p: dict, event_year: int | None) -> Mention:
         sex={"Man": "m", "Vrouw": "f"}.get(p.get("Gender")),
         birth=birth,
         birth_year=year_of(birth),
-        birth_place=_text((p.get("BirthPlace") or {}).get("Place")),
-        residence=_text((p.get("Residence") or {}).get("Place")),
-        occupation=_text(p.get("Profession")),
+        birth_place=(p.get("BirthPlace") or {}).get("Place"),
+        residence=(p.get("Residence") or {}).get("Place"),
+        occupation=p.get("Profession"),
         age=age,
     )
     # An age in an act is a birth year with error bars, and it is very often the only
@@ -208,6 +215,9 @@ def _attaches_to(role: str, principals: list[Mention]) -> Mention | None:
 
 
 def normalise_act(row: dict) -> Act:
+    # Every record enters here, so this is the one place the annotated-value convention
+    # has to be dealt with. See unwrap_annotated.
+    row = unwrap_annotated(row)
     r = row.get("record") or {}
     ev = r.get("Event") or {}
     src = r.get("Source") or {}
@@ -263,7 +273,7 @@ def normalise_act(row: dict) -> Act:
         source_type=src.get("SourceType"),
         date=date,
         year=year,
-        place=_text((ev.get("EventPlace") or {}).get("Place")) or _text((src.get("SourcePlace") or {}).get("Place")),
+        place=(ev.get("EventPlace") or {}).get("Place") or (src.get("SourcePlace") or {}).get("Place"),
         act_number=ref.get("DocumentNumber"),
         collection=ref.get("Collection"),
         url=f"https://www.openarchieven.nl/{row['id']}",
