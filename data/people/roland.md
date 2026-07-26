@@ -14,7 +14,7 @@ father: gustaaf
 mother: simonne
 spouses:
   - id: huguette
-    name: Huguette Devriendt
+    name: Hugette Devriendt
 sources:
   - geneanet
   - family

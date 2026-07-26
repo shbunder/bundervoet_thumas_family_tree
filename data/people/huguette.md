@@ -1,6 +1,6 @@
 ---
 id: huguette
-name: Huguette Devriendt
+name: Hugette Devriendt
 surname: Devriendt
 birth:
   date: 1943-02-17

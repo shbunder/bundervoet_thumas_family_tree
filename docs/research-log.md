@@ -15,7 +15,7 @@
 | **Bostyn – Cappaert** | Marcel's mother | Henricus Josephus Bostyn (1841); Bernardus Cappaert × Sophia Vanhoucke | Varsenare/Oostkamp birth acts |
 | **De Keyser** | Cosette's father | Édouard Dekeyser (1876 Hamme-Merchtem) | Hamme-Merchtem registers (Rijksarchief) |
 | **Paelinck** | via Léonie | Livinus Paelinck, ~1618 (Sint-Niklaas/Waasland) | Genuine 17th-c. root |
-| **Devriendt · Smessaert · Ramon** | Huguette | multiple ~1800s West-Vlaanderen | Un-transcribed civil acts |
+| **Devriendt · Smessaert · Ramon** | Hugette | multiple ~1800s West-Vlaanderen | Un-transcribed civil acts |
 | **Vanstechele** | via Marcel | Joannes Vanstechele, b. before 1673 (Woumen) | Genuine 17th-c. root |
 | **Thumas** | Dorien's father | Antoine Thumas, b. 1656 Biez → Grez-Doiceau | Genuine 17th-c. root |
 | **Janssens / Van Craenenbroeck** | Dorien's mother | René & Anna (20th c.) | Privacy wall + coverage gap |
@@ -132,7 +132,7 @@ couple **Albertus Jacobus Gautiert (1784) x Theresia Joanna Monica Robbe (1787)*
 Rijksarchief-sourced): parents of **Judocus Van Iseghem (1787)** (pre-1796 Oostende parish),
 **Eugenius Devriendt (1882)**, **Lucien Vincke (1840)**, **Josephus Janssen (1820)**,
 **Albertus Gautiert (1784)**, **Victoria Engelsen (1791)**. Adrienne is a Devriendt of Stene -
-worth checking against Huguette's Devriendt line, though probably unrelated.
+worth checking against Hugette's Devriendt line, though probably unrelated.
 
 **Also this session:** Marcel's full name recorded as **Marcel Henri Bundervoet**. Trees added
 to the source list: `bartvanhooren` and `gverdievel` (deep Van Iseghem-Vincke ancestry, Oostende).
