@@ -11,6 +11,11 @@ occupation: koordedraaier (ropemaker)
 line: de-keyser
 father: edouard_bocklandt
 mother: marie_vanbergen
+spouses:
+  - id: florence_vincke
+    name: Florence Amelie Vincke
+    married: 1893-02-11
+    place: Diksmuide
 sources:
   - agatha-diksmuide-1893-marriage-bocklandt-vincke
 ---
@@ -21,14 +26,14 @@ His marriage act — Diksmuide nr. 40, 11 February 1893
 1867, *koordedraaier* (ropemaker — his father's own trade under a different word), resident
 at Oostende, son of Eduard Bocklandt (53, *koordedraaier*) and the already-deceased Maria
 Louisa Vanbergen. He married **Florence Amelie Vincke** (b. Diksmuide 22 Apr 1869,
-*kantwerkster*), daughter of Lucien Julianus Vincke and Ludovica Maria Vanalderweireldt of
-Diksmuide. AGATHA serves this act only as an "analyse van akte" (index transcription), not
-the register image, hence `sup`.
+*kantwerkster*), daughter of [[lucien_vincke]] and [[ludovica_vanald]] of Diksmuide — now
+her own record, [[florence_vincke]]. AGATHA serves this act only as an "analyse van akte"
+(index transcription), not the register image, hence `sup`.
 
-FRONTIER, not pursued here. [[lucien_vincke]] and Ludovica Maria Vanalderweireldt
-(`ludovica_vanald`) already have a record in this tree, on the Van Iseghem line, as parents
-of [[emma_vincke]]. If Florence Amelie is their daughter too, this marriage is a link
-between two branches this project has so far treated as separate (objective 3). It is NOT
-grafted here: the act only names the bride's parents by name, which is one identifier, not
-the two independent ones a graft needs, and Florence Amelie has no record of her own to
-graft onto.
+RESOLVED (research-log §64). This act was previously flagged as a frontier: the bride's
+parents shared full names with this tree's existing [[lucien_vincke]] x [[ludovica_vanald]]
+(parents of [[emma_vincke]], Van Iseghem line), but the act alone named them by name only —
+one identifier, not the two a graft needs — and Florence Amelie had no record of her own to
+graft onto. With her own record now written, a province-wide sweep of the Diksmuide birth
+index found no rival couple of that name, so the link stands: this marriage joins the Van
+Iseghem and De Keyser/Bocklandt branches of this tree (objective 3).

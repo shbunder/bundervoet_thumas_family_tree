@@ -2674,3 +2674,103 @@ Left as it is, deliberately. Redefining the metric so the number improves is the
 excluding the hard rejections was in §61, and that is how this project got a 100% it had not
 earned. **Precision 96.0%, recall 100%, over 35 pairs** — and the one disagreement is a
 documented rival, not a wrong graft waiting to happen.
+
+## 64. Eight children of Lucien Vincke, an act the tree already held without reading it that
+way, and a `doc` upgrade that came back negative
+
+**The target question, answered negative.** This tree has carried [[emma_vincke]]'s birth
+act as a named frontier for several passes now: indexed, not read, id unrecorded. This pass
+went to settle it — pull the register image, move her parent link from `sup` to `doc` — and
+came back negative, for a reason worth keeping because it is structural, not a session
+problem that will pass. AGATHA's West-Vlaanderen civil-birth project (GEWVL_GEBWVL) publishes
+the volunteer's index analysis only: the act page's one reference to an image is the bare
+text "SCAN 392 GSU", with no IIIF manifest, no Mirador viewer, no scan link anywhere in the
+page's DOM — 30 links, all navigation. That rules out reaching this particular scan through
+AGATHA at all, regardless of login state. The vrijwilligersrab Geboorten index turned out to
+hold the bridge: its row for this same act carries a direct FamilySearch ark to the image
+(film, image 392). That ark was tried, and it, too, came back blocked — the FamilySearch
+session had expired, confirmed two ways: a control navigation to a plain catalog page (which
+a live session renders freely) also redirected to login, and `platform/users/current`
+returned a 401. So the act id is now recorded (`GEWVL_GEBWVL_01583386`, Diksmuide nr. 14,
+24/01/1880) and its full index transcription is held as
+`data/artifacts/emma-vincke-1880-birth-diksmuide.md`, correcting the two things this record
+used to say that were no longer true — but the confidence stays `sup`. The exact ark is now
+on file, so a single re-authenticated FamilySearch visit is what closes this, not a new
+search.
+
+**Eight children, not one.** The same vrijwilligersrab sweep — filtering the Diksmuide
+Geboorten index once by father's forename and once, independently, by the mother's rare
+surname — returned the identical seven rows both times: [[charles_vincke]] (1871),
+[[romanie_vincke]] (1873), [[irma_vincke]] (1874), [[camilla_vincke]] (1876),
+[[eugene_vincke]] (1877), [[emma_vincke]] (1880, already held) and [[jerome_vincke]] (1886).
+Each act names both parents in full, Vincke Lucien Julianus × Vanalderweireldt Ludovica
+Maria, and no rival couple of that name survives either filter. One row is worth flagging
+rather than folding in silently: the 1873 act for Romanie Elodie spells the father "Lucien
+Julien", not "Lucien Julianus" as every other act in the cluster and his own record give
+him. Accepted as a French/Latin forename variant — the mother's rarer full name, the
+commune and the chronology all agree, and there is no evidence of a second husband — but
+recorded here and on her own record rather than quietly folded, because the whole point of
+flagging a variant is that folding it should be checkable, not assumed.
+
+An eighth child, [[florence_vincke]] (b. Diksmuide 1869), does not come from this sweep at
+all — Diksmuide's 1866-1870 birth rows carry only a bare father surname, no forename and no
+mother, so the index cannot name her parents in that window. Hers is the more striking find
+of the two: **the tree already held the act that joins the Vincke and Bocklandt clusters,
+and had not read it that way.** [[caesar_bocklandt]]'s record has carried
+`agatha-diksmuide-1893-marriage-bocklandt-vincke` since an earlier pass, with a frontier note
+reading almost exactly like this one — the bride's parents share full names with
+[[lucien_vincke]] × [[ludovica_vanald]], but the act alone named them by name only, one
+identifier, and Florence Amelie had no record of her own to graft the link onto. Writing her
+record is the whole fix: the second identifier was never missing evidence, only a missing
+file. With it, this pass joins the Van Iseghem line to the De Keyser/Bocklandt line
+(objective 3), through a marriage act that was sitting in `research/sources.json` the entire
+time.
+
+**Four more Van Iseghem children, and a spouse-stub choice stated plainly.** The same
+Huwelijken index, searched for the couple's own 1907 marriage act (itself independent
+corroboration of the parent link — different commune, register and volunteer batch from the
+birth-index transcription, so not the same evidence counted twice), surfaced five marriage
+acts of [[eduardus_vi]] × [[emma_vincke]]'s own children marrying in turn: [[flavie_vi]]
+(Stene 1920), [[eduardus_vi2]] (Oostende 1927), [[joannes_vi]] himself (Stene 1928 — already
+held, previously undated), [[valentina_vi]] (Stene 1931) and [[maria_vi]] (Stene 1935). Four
+of the five are new records here. None of the four acts gives a birth date, so none is
+recorded — the acts are marriage acts, not birth acts, and inventing one would be exactly the
+guess rule 5 forbids.
+
+Each of the four names an in-law. Only one, Angela Coralia Gunst ([[eduardus_vi2]]'s wife),
+has both a forename and a surname on the act she was actually found on — the other three are
+recorded in this search only as "Gunst" (Flavie's husband), "Joye" (Valentina's) and
+"Zwaenepoel" (Maria's). **The choice made here: a person record is written only where a
+forename and surname are both known.** Where only a surname is on hand, the marriage is
+named as a frontier in the child's own prose rather than as a spouses-field stub with no id
+— a stub whose identity nothing could check is worse than a sentence saying what is not yet
+known, because the stub looks resolved and the sentence does not. This is the same shape of
+decision as `eugenius_dv`'s three named-but-unentered children in an earlier pass: known
+facts, deliberately deferred rather than half-entered.
+
+**The 1928 act also corroborates, without collapsing anything new.** It names the bride's
+parents as Devriendt Eugenius Alphonsius × Schalandryn Octavia Maria — an exact match to
+[[eugenius_dv]] × [[octavia_schal]], already `doc` from an unrelated 1906 act (S20). Both
+sides of this marriage were already fully linked in the tree before this pass; the 1928 act
+supplies a date and place that were missing, not a new join. Checked and confirmed, not a
+tree collapse.
+
+**An open question, left open.** [[joannes_vi]]'s held birth — Lens, 11 May 1903 — precedes
+his parents' held marriage — Oostende, 28 September 1907 — by more than four years. Neither
+date moves here. Either an earlier, unregistered union or a later legitimation would explain
+it, and this tree already documents the second pattern elsewhere: [[edouard_dk]]'s 1901
+marriage to Louise Bocklandt legitimized two children already born (README's own worked
+example). Recorded as a frontier on his record rather than resolved.
+
+**The scoped negative worth keeping.** For Diksmuide, the sibling enumeration is complete
+**from 1871 onward** — two independent filters on the same index return the identical seven
+rows, so nothing is hiding behind a spelling variant in that span. It is **not** complete for
+**1866-1870**: that window's rows carry only the bare father surname VINCKE, no given name
+and no mother at all, so parentage cannot be tested from this index there. Eleven Diksmuide
+Vincke births sit in that blind window, one of them Florence Amelie's own — and as her record
+shows, the only way through it is the same route that resolved her: not a fresh sweep of the
+birth index, but each child's own later act.
+
+Twelve new records this pass: `charles_vincke`, `romanie_vincke`, `irma_vincke`,
+`camilla_vincke`, `eugene_vincke`, `jerome_vincke`, `florence_vincke`, `flavie_vi`,
+`eduardus_vi2`, `valentina_vi`, `maria_vi`, `angela_gunst`.

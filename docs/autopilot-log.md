@@ -28,6 +28,7 @@ the misses and the labels are the accumulating asset.
 | 8 | 2026-07-26 | down | commune harvest (5 communes) | NOT PROVEN | — | — |
 | 9 | 2026-07-26 | up | ida_vermandel | GRAFTED | paulina_vdberghe, petrus_vermorgen | — |
 | 10 | 2026-07-26 | down | commune-harvest yield | NOT PROVEN | — | — |
+| 1 | 2026-07-27 | up | emma_vincke | GRAFTED | charles_vincke, romanie_vincke, irma_vincke, camilla_vincke, eugene_vincke, jerome_vincke, florence_vincke, flavie_vi, eduardus_vi2, valentina_vi, maria_vi, angela_gunst | — |
 
 ---
 

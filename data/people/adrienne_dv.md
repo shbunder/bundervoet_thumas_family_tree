@@ -15,9 +15,12 @@ mother: octavia_schal
 spouses:
   - id: joannes_vi
     name: Joannes Van Iseghem
+    married: 1928-03-24
+    place: Stene
 sources:
   - dbe-adrienne-dv-1991
   - tree-gverdievel
+  - rab-bs-huwelijken
 ---
 
 Born in Stene and lived to 83; her marriage joined the Devriendt and Van Iseghem lines (children Diane, Rosette, Edi).
@@ -31,3 +34,12 @@ CORROBORATED (2026-07-26): the vrijwilligersrab Geboorten index carries her birt
 Stene, 12 April 1908, act nr. 29 — matching this record to the day. The index row has
 not been read as an act image, so confidence stays sup; the act reference is recorded
 here as corroboration only, for the next pass to pull.
+
+MARRIAGE DATED (2026-07-27): her own marriage act — Stene nr. 6, 24 March 1928
+(vrijwilligersrab Huwelijken index, `rab-bs-huwelijken`) — names her parents in full as
+Devriendt Eugenius Alphonsius × Schalandryn Octavia Maria, matching this tree's already
+`doc`-confirmed [[eugenius_dv]] × [[octavia_schal]] exactly (from an unrelated 1906
+marriage act, S20), and the groom's parents as Eduardus Van Iseghem × Emma Celesta
+Vincke, matching [[joannes_vi]]'s own held parents. Both sides were already linked in
+this tree; this act supplies the marriage date and place, not a new link. See
+[[joannes_vi]]'s record for a chronology question this same act raises.

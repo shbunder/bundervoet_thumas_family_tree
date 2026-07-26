@@ -17,18 +17,28 @@ spouses:
     place: Diksmuide
 sources:
   - tree-bartvanhooren
+  - rab-bs-geboorten
+  - agatha-diksmuide-1893-marriage-bocklandt-vincke
 ---
 
 A mason's assistant; son of Engel Antonius Vincke & Virginia Leynseele.
 
-FRONTIER — a probable second daughter, not grafted. AGATHA's index of the Diksmuide
-civil birth registers carries an act of **8 October 1873** for a child *Romanie Elodie
-Vincke*, whose father is given as *Vincke Lucien Julien* and mother as *Vanalderweireldt
-Ludovica Maria*. Both parents match this couple by full name, in the commune where they
-married on 24 May 1865, and the date falls between that marriage and [[emma_vincke]]'s
-birth in 1880 — so she would be Emma's elder sister, and this couple's known children
-would go from one to two.
+SEVEN MORE CHILDREN GRAFTED (research-log §64), from a province-wide sweep of the
+vrijwilligersrab Geboorten index (`rab-bs-geboorten`) for Diksmuide, each act naming both
+parents in full as Vincke Lucien Julianus x Vanalderweireldt Ludovica Maria: [[charles_vincke]]
+(b. 30 Dec 1871), [[romanie_vincke]] (b. 7 Oct 1873 — one capture spells the father "Lucien
+Julien", a forename variant, not a rival father), [[irma_vincke]] (b. 1 Nov 1874),
+[[camilla_vincke]] (b. 20 Apr 1876), [[eugene_vincke]] (b. 23 Jul 1877), [[emma_vincke]]
+(b. 23 Jan 1880, already held) and [[jerome_vincke]] (b. 22 Sep 1886). Filtering the same
+index separately by father's forename and by mother's rare surname returns the identical
+set — no rival couple. This closes the enumeration for Diksmuide **1871 onward**.
 
-It stays a frontier rather than a link because the act has not been read: this is an
-index row, and *Lucien Julien* is not quite the *Lucien Julianus* recorded here. The act
-itself would settle both, and reaching it needs a logged-in AGATHA session.
+An EIGHTH CHILD, [[florence_vincke]] (b. Diksmuide 1869), is grafted separately from her
+own 1893 marriage act ([[agatha-diksmuide-1893-marriage-bocklandt-vincke]]), not from a
+birth act: Diksmuide's 1866-1870 birth rows carry only a bare father surname, no forename
+and no mother, so parentage cannot be read from the index in that window. Her marriage
+also joins this couple's line to the De Keyser/Bocklandt branch (objective 3).
+
+FRONTIER — the 1866-1870 blind window. Diksmuide births in those years name no parents in
+the index at all, so any further children born there are reachable only through their own
+later acts, the way Florence Amelie's was — not through a fresh sweep of this index.

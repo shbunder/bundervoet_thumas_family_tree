@@ -1,0 +1,23 @@
+---
+id: charles_vincke
+name: Charles Louis Vincke
+surname: Vincke
+birth:
+  date: 1871-12-30
+  place: Diksmuide
+confidence: sup
+line: van-iseghem
+father: lucien_vincke
+mother: ludovica_vanald
+sources:
+  - rab-bs-geboorten
+---
+
+Son of [[lucien_vincke]] and [[ludovica_vanald]], and [[emma_vincke]]'s brother. His birth
+— Diksmuide act nr. 277, 30 December 1871 — is one of seven Diksmuide rows in the
+vrijwilligersrab Geboorten index (`rab-bs-geboorten`) naming both parents in full as
+Vincke Lucien Julianus x Vanalderweireldt Ludovica Maria, matching this couple exactly:
+the couple married 24 May 1865, so this is 6.6 years on. A province-wide sweep of the
+same index, filtered separately by the father's forename pair and by the mother's rare
+surname, returns the identical seven rows — no rival couple. Index only, not the register
+image, hence `sup`.
