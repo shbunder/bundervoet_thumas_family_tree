@@ -1,0 +1,1330 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An evidence-first, machine-assisted reconstruction of Flemish families from parish and civil registers — the method, the rules, and the prior work it builds on.">
+      
+      
+      
+        <link rel="canonical" href="https://example.invalid/family-tree/method/scaling/">
+      
+      
+        <link rel="prev" href="../verification/">
+      
+      
+        <link rel="next" href="../../data-model/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Scaling to Flanders - Reconstructing Flanders</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scaling-to-flanders" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Reconstructing Flanders" class="md-header__button md-logo" aria-label="Reconstructing Flanders" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Reconstructing Flanders
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Scaling to Flanders
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/example/family-tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Reconstructing Flanders" class="md-nav__button md-logo" aria-label="Reconstructing Flanders" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Reconstructing Flanders
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/example/family-tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prior-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prior work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Method
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Method
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The research loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules of evidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corpus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The corpus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linkage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Record linkage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verification and measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scaling to Flanders
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scaling to Flanders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ingestion-done-and-it-was-the-binding-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ingestion — done, and it was the binding constraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-storage-two-tiers-not-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Storage — two tiers, not one
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-linkage-calibrate-then-delegate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Linkage — calibrate, then delegate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3a-what-a-large-harvest-sets-off-the-ordered-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3a. What a large harvest sets off — the ordered list
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clustering-and-cluster-level-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clustering and cluster-level validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-a-historical-gazetteer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. A historical gazetteer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-additional-evidence-in-value-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Additional evidence, in value order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-sampling-how-to-have-flanders-before-having-all-of-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Sampling — how to have Flanders before having all of it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-privacy-becomes-a-hard-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Privacy becomes a hard constraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the order
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reproducing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproducing this
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../searching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Searching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../autopilot-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autopilot log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ingestion-done-and-it-was-the-binding-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ingestion — done, and it was the binding constraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-storage-two-tiers-not-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Storage — two tiers, not one
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-linkage-calibrate-then-delegate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Linkage — calibrate, then delegate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3a-what-a-large-harvest-sets-off-the-ordered-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3a. What a large harvest sets off — the ordered list
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clustering-and-cluster-level-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clustering and cluster-level validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-a-historical-gazetteer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. A historical gazetteer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-additional-evidence-in-value-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Additional evidence, in value order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-sampling-how-to-have-flanders-before-having-all-of-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Sampling — how to have Flanders before having all of it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-privacy-becomes-a-hard-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Privacy becomes a hard constraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the order
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="scaling-to-flanders">Scaling to Flanders<a class="headerlink" href="#scaling-to-flanders" title="Permanent link">&para;</a></h1>
+<p>The stated ambition is the whole region: everyone who lived in Flanders, as far back as
+the registers reach. This page is the honest engineering assessment of the distance
+between here and there, in the order the constraints actually bind.</p>
+<p>Current state: <strong>~307 people, ~3,000 acts.</strong> Target: order <strong>10⁷ person-records</strong>.</p>
+<hr />
+<h2 id="1-ingestion-done-and-it-was-the-binding-constraint">1. Ingestion — done, and it was the binding constraint<a class="headerlink" href="#1-ingestion-done-and-it-was-the-binding-constraint" title="Permanent link">&para;</a></h2>
+<p>Harvesting used to fetch one act per API call at ~3 requests/second. Belgium is on the
+order of 8 million acts: <strong>roughly a month of continuous fetching</strong>, against a free
+service run by other people. Possible, but the wrong tool and a poor guest.</p>
+<p><strong>The fix already existed at the venue.</strong> Open Archives publishes:</p>
+<ul>
+<li><strong>bulk data dumps</strong> in the A2A model — N-Triples (linked data), XML, and CSV;</li>
+<li>an <strong>OAI-PMH provider</strong> for incremental harvesting.</li>
+</ul>
+<p>Both are now used. <code>harvest.py bulk &lt;archive&gt;</code> downloads and streams a whole archive's
+gzipped A2A export; <code>harvest.py oai &lt;archive&gt;</code> pages the OAI-PMH feed at 150 full records
+a request; <code>records/show</code> is retained for gap-filling and for the archives that publish
+neither. <code>familytree/a2a.py</code> reads that XML into the exact shape the JSON API returns, so
+the routes are interchangeable rather than merely similar — checked against real data:
+all 1,361 Kortrijk acts held from the API normalise to records identical to the same acts
+read out of the bulk export.</p>
+<p>The measured difference is the whole argument. Kortrijk is <strong>140,543 acts in a 19 MB
+download, parsed in 12 seconds</strong>, where months of per-act harvesting had reached 1,361 of
+them. Where an archive publishes an export, nothing else should be used.</p>
+<p><strong>What is still missing.</strong> The two collections this tree mostly rests on — the Rijksarchief
+civil acts (<code>ab*</code>) and the Familiekunde Vlaanderen sets (<code>fv*</code>, <code>fwk</code>) — publish neither an
+export nor an OAI set, so for those the per-act endpoint remains the only route. That is now
+the binding constraint on ingestion, and it is a question to put to the venue rather than an
+engineering problem. 18 of the 52 archives already represented in the corpus do have exports;
+<code>harvest.py status</code> lists them.</p>
+<p>The side benefit promised here has arrived with the same caveat: rarity counts stop depending
+on which surnames happened to be harvested <em>for the archives pulled whole</em>, and still depend
+on it everywhere else.</p>
+<h2 id="2-storage-two-tiers-not-one">2. Storage — two tiers, not one<a class="headerlink" href="#2-storage-two-tiers-not-one" title="Permanent link">&para;</a></h2>
+<p>One Markdown file per person is right for people who have been <em>reasoned about</em>, and
+impossible for millions. The split is not a compromise; it is the correct model, and it
+makes an existing rule physical:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Holds</th>
+<th>Scale</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conclusions</strong></td>
+<td>Verified identities, citations, prose reasoning</td>
+<td>10³–10⁵</td>
+<td><code>data/people/*.md</code>, in git</td>
+</tr>
+<tr>
+<td><strong>Corpus</strong></td>
+<td>Acts, mentions, scored candidate links, clusters</td>
+<td>10⁷+</td>
+<td>Columnar store (DuckDB/Parquet), re-buildable, gitignored</td>
+</tr>
+</tbody>
+</table>
+<p>The first half of that row exists: <code>familytree/store.py</code> is a SQLite index over the harvest —
+blocking keys, per-mention fields, the frequency tables, and byte offsets into the JSONL
+rather than a second copy of the acts. It made a candidate lookup a query instead of a parse
+of the whole corpus (<code>link.py</code>: 12 s → 0.3 s), and it carries the signature of every harvest
+file so it rebuilds instead of silently lagging behind the acts.</p>
+<p>SQLite rather than DuckDB/Parquet for one reason: it is stdlib, and <code>pyproject.toml</code>
+deliberately declares no dependencies. The columnar store is the right answer at 10⁷ and the
+wrong answer at 10⁵, and the schema here is ordinary enough to port when the time comes. What
+should <em>not</em> change is the invariant below, which is why the index holds no evidence of its
+own — deleting it loses nothing.</p>
+<p>The invariant that keeps this honest:</p>
+<blockquote>
+<p>A link in the corpus is a <strong>hypothesis with a score</strong>.
+A link in a person file is a <strong>decision with a citation</strong>.</p>
+</blockquote>
+<p><code>corpus.py</code> already says "the corpus makes no claims"; this makes it structural. Both
+BALSAC and LINKS converged on exactly this separation — with linkage as a computed,
+re-runnable artefact rather than hand-asserted edges — and both arrived there at around
+500,000 records, not 5 million.</p>
+<h2 id="3-linkage-calibrate-then-delegate">3. Linkage — calibrate, then delegate<a class="headerlink" href="#3-linkage-calibrate-then-delegate" title="Permanent link">&para;</a></h2>
+<p>Order matters here. Adding scale to an uncalibrated scorer produces more wrong links
+faster.</p>
+<ol>
+<li><strong>Accumulate labels</strong> (<a href="../verification/">verification</a>) until the thresholds can be
+   measured rather than argued.</li>
+<li><strong>Estimate <em>m</em>-probabilities</strong> by EM, closing the
+   <a href="../linkage/#known-gap-the-m-side">known gap</a>.</li>
+<li><strong>Delegate the scoring engine</strong> to <a href="https://github.com/moj-analytical-services/splink">Splink</a>
+   if and when a single-process Python loop stops being enough — it does full
+   Fellegi–Sunter on a DuckDB backend at 100M+ records.</li>
+</ol>
+<p>What must survive that migration is the part Splink does not have: the
+<strong>two-independent-classes floor</strong> and the <strong>vetoes</strong>. A probability threshold alone will
+graft on a name.</p>
+<h2 id="3a-what-a-large-harvest-sets-off-the-ordered-list">3a. What a large harvest sets off — the ordered list<a class="headerlink" href="#3a-what-a-large-harvest-sets-off-the-ordered-list" title="Permanent link">&para;</a></h2>
+<p>Ingestion being solved changes the other constraints rather than removing them, and it does
+so in a predictable order. Recorded here because each of these is invisible until the
+corpus is large and then obvious, and because the temptation on meeting one is to tune it
+rather than recognise which item on this list it is.</p>
+<p><strong>The rarity weights recalibrate, so every score moves.</strong> <code>frequencies()</code> is counted from
+the corpus, so a corpus ten times larger is a different measuring instrument. This is a
+gain — the counts get closer to the population — but it means comparisons made before and
+after a big harvest are not the same comparison. The instrument for checking it already
+exists: <code>evaluate.py report</code> re-scores every past ruling with the current code, so run it
+after any large ingest and read what moved. A drop in precision after a harvest is not the
+harvest being wrong; it is the old thresholds having been fitted to a smaller sample.</p>
+<p><strong><code>surname_weight</code>'s two paths diverge.</strong> It prefers the venue's own figure for a surname
+(<code>surname_population_count</code>, recorded by a whole-surname harvest, filtered to Belgium) and
+falls back to counting the corpus. A whole-ARCHIVE harvest fills the corpus without
+recording any per-surname population, so it widens the set of surnames on the fallback
+path — where the count is now measured against a corpus that is one archive's worth of one
+commune, not against Belgium. The fallback is the weaker estimator and it is now used more.</p>
+<p><strong>A harvest scoped by archive is not scoped by country.</strong> The API queries were all
+<code>country_code=be</code>; an export is the whole archive. <code>harvest.py</code> refuses an archive the
+venue registers outside Belgium (see <code>out_of_scope</code>) because pulling one would fill the
+corpus with out-of-scope records and skew the fallback above. The general answer is a
+country filter at parse time, and it needs the gazetteer in §5.</p>
+<p><strong>The scanning reports become the bottleneck.</strong> <code>research.py acts</code>, <code>research.py children</code>
+and <code>verify_all.py</code> genuinely touch every act, so they scale linearly with the corpus while
+the targeted lookups stay flat. At a few million acts these are minutes, and that is the
+signal that §2's two-tier split has stopped being optional. The index does not help them —
+measured, not assumed: <code>verify_all.py</code> is slower through it.</p>
+<p><strong>The index rebuild scales with the corpus, and it is rebuilt whole.</strong> About 20 seconds per
+100,000 acts. That is deliberate — an incremental index is the kind of cleverness that
+quietly misses the acts fetched during the run that crashed — but past a few million acts
+the rebuild wants to become incremental with a periodic full verify, not simply faster.
+<code>harvest.py bulk</code> takes several archives at once for this reason: one rebuild, not nine.</p>
+<p><strong>Nothing above changes what the tree claims.</strong> Worth stating because every item here is a
+change to how confident the scorer <em>sounds</em>. The two-independent-identifiers floor and the
+vetoes are not statistical and do not move with the corpus, and no amount of recalibration
+may be allowed to promote a graft that the floor rejects.</p>
+<h2 id="4-clustering-and-cluster-level-validation">4. Clustering and cluster-level validation<a class="headerlink" href="#4-clustering-and-cluster-level-validation" title="Permanent link">&para;</a></h2>
+<p>At scale, links form connected components, and that is where the errors surface: a
+cluster with two different birth dates, two mothers, or a lifespan of 130 years is
+self-evidently wrong even when every individual pairwise link looked plausible.</p>
+<p>Connected components plus cluster invariants is the scale version of <code>check_data.py</code>, and
+it is how LINKS catches its own mistakes. <code>research.py components</code> is the seed of this.</p>
+<h2 id="5-a-historical-gazetteer">5. A historical gazetteer<a class="headerlink" href="#5-a-historical-gazetteer" title="Permanent link">&para;</a></h2>
+<p>Place is the class that does most of the rejecting, which means a normalisation failure
+silently kills <strong>good</strong> links. String comparison on place names cannot handle:</p>
+<ul>
+<li>the <strong>1977 fusion of Belgian communes</strong> — a parish and its post-fusion commune are
+  different names for overlapping ground;</li>
+<li><strong>French/Dutch parallel names</strong> — Ostende/Oostende, Gand/Gent;</li>
+<li><strong>parish ≠ commune</strong>, which is the normal case before 1796.</li>
+</ul>
+<p>Needed: a commune table with NIS/INS codes, validity intervals, and merge parentage.
+Wikidata plus the NIS code lists covers most of it.</p>
+<h2 id="6-additional-evidence-in-value-order">6. Additional evidence, in value order<a class="headerlink" href="#6-additional-evidence-in-value-order" title="Permanent link">&para;</a></h2>
+<p><strong>Population registers (bevolkingsregisters)</strong> are the strongest linkage evidence that
+exists: a whole household, co-resident, with stated relationships <em>and</em> birth dates <em>and</em>
+migration in and out. The <a href="../../prior-work/#the-antwerp-cor-database-flanders">Antwerp COR* database</a>
+is built on them for exactly this reason. Currently out of scope in the harvest, and the
+first thing to add.</p>
+<p><strong>Witness networks.</strong> Already extracted (4,161 edges); not yet used as a linkage signal.
+Godparents and marriage witnesses in a Flemish commune are overwhelmingly kin, and <em>who
+recurs</em> across a family's acts is evidence no name comparison can reach. The natural
+weighting is the one already in use: a witness appearing in two of a family's acts is
+informative, one appearing in two hundred is the registrar.</p>
+<p><strong>The necronym rule.</strong> Flemish families reused a dead infant's forename for the next
+child. Without an explicit rule for it, a linker either merges the two siblings or
+rejects both. It needs to be a named case, not an accident of thresholds.</p>
+<h2 id="7-sampling-how-to-have-flanders-before-having-all-of-it">7. Sampling — how to have Flanders before having all of it<a class="headerlink" href="#7-sampling-how-to-have-flanders-before-having-all-of-it" title="Permanent link">&para;</a></h2>
+<p>COR*'s design is the most useful idea in the literature for this: take <strong>every surname
+beginning <code>COR</code>, plus everyone who shared a household with them.</strong> That preserves kin and
+household structure <em>inside</em> the sample, which a geographic or chronological slice
+destroys.</p>
+<p>This project's third objective — <em>connect all Bundervoets</em> — is the same manoeuvre,
+arrived at independently. Generalising it into a declared, documented sampling frame is
+what would turn "a large family tree" into "a research dataset with known coverage".</p>
+<h2 id="8-privacy-becomes-a-hard-constraint">8. Privacy becomes a hard constraint<a class="headerlink" href="#8-privacy-becomes-a-hard-constraint" title="Permanent link">&para;</a></h2>
+<p>At 307 people you know everyone. At regional scale the corpus will contain living people,
+and this stops being a convention:</p>
+<ul>
+<li>Belgian civil registration is public on a schedule — <strong>deaths after 50 years, marriages
+  after 75, births after 100</strong>.</li>
+<li>GDPR applies to the living, including in a published static site and in a Git history,
+  which does not forget.</li>
+</ul>
+<p>This belongs in the validator as a rule that fails the build, not in a document that asks
+people to be careful.</p>
+<hr />
+<h2 id="summary-of-the-order">Summary of the order<a class="headerlink" href="#summary-of-the-order" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Bulk ingestion (unblocks everything)</li>
+<li>Two-tier storage</li>
+<li>Labels → calibration → <em>m</em> estimation</li>
+<li>Clustering + cluster validation</li>
+<li>Gazetteer</li>
+<li>Population registers, then witness networks</li>
+<li>Declared sampling frame</li>
+<li>Privacy enforcement</li>
+</ol>
+<p>Transcription of unindexed images (<a href="../../prior-work/#4-machine-reading-of-archival-documents">LLM HTR</a>)
+is deliberately <strong>last</strong>. The indexed material is nowhere near exhausted, and machine
+transcription is only worth automating once the linkage that consumes it can be trusted.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

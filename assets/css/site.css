@@ -27,3 +27,11 @@ a.card p{margin:0;font-size:.88rem;color:var(--muted)}
 footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;
   text-align:center;color:var(--muted);font-size:.78rem}
 footer a{color:var(--accent)}
+/* The two links off the site. Quieter than the cards — muted until pointed at —
+   because they lead away from the tree rather than into it. */
+.offsite{margin-top:10px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.offsite a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);
+  text-decoration:none;border-bottom:1px dotted transparent}
+.offsite a:hover,.offsite a:focus-visible{color:var(--accent);
+  border-bottom-color:var(--accent);outline:none}
+.ghmark{width:14px;height:14px;flex:none}

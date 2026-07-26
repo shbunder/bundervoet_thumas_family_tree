@@ -227,7 +227,11 @@
     "resultCount": {
       "en": "{n} person of {total} · click to open in the tree|{n} people of {total} · click to open in the tree",
       "nl": "{n} persoon van {total} · klik om te openen in de stamboom|{n} personen van {total} · klik om te openen in de stamboom"
-    }
+    },
+
+    "_comment_offsite": "The two links under the footer. They leave this page — the method site and the repository — so they are the quietest thing on it: the tabs are the tree, and these are about how the tree was made.",
+    "docsLink": { "en": "How this tree is built", "nl": "Hoe deze stamboom is opgebouwd" },
+    "repoLink": { "en": "Source & data on GitHub", "nl": "Broncode & gegevens op GitHub" }
   },
 
   "kinship": {
