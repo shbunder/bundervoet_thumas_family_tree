@@ -317,10 +317,16 @@ def record_population() -> None:
     save_manifest(population={"be": body["response"]["number_found"], "counted": dt.date.today().isoformat()})
 
 
-def harvest(harvest_id: str, label: str, params: dict, cap: int, refresh: bool) -> dict:
+def harvest(harvest_id: str, label: str, params: dict, cap: int, refresh: bool,
+            replay: bool = False) -> dict:
     manifest = load_manifest()
     previous = next((h for h in manifest["harvests"] if h["id"] == harvest_id), None)
-    if previous and not refresh:
+    # `replay` is the fresh-clone case, and it has to bypass this. The manifest is committed
+    # and the corpus is not, so on a clone every harvest here is recorded as done while none
+    # of the acts exist — the guard would refuse to fetch anything and the reproducibility
+    # claim would be silently false. `cmd_replay` has already checked what is actually HELD;
+    # this guard only knows what was once asked for.
+    if previous and not refresh and not replay:
         print(f"{label}\n  already harvested {previous['date']} — {previous['mentions']} mentions, "
               f"{previous['acts']} acts. Use --refresh to redo.\n")
         return previous
@@ -674,6 +680,84 @@ def cmd_frontiers(args):
                 {"name": r.surname, "country_code": "be"}, args.max, args.refresh)
 
 
+def cmd_replay(args):
+    """Rebuild the corpus from the manifest — the command that makes the claim true.
+
+    Two files in this repository have said for a while that the corpus is "reproducible from
+    the repository alone" because the manifest records the exact queries. It records them;
+    nothing replayed them. Worse, the replay could not have worked: `harvest` refuses a query
+    the manifest already lists, and on a fresh clone the manifest lists all of them while the
+    acts directory is empty — so a clone would have been told everything was already
+    harvested and fetched nothing at all.
+
+    This is the answer to "what does a clone have to rebuild?". 3.5 GB of acts and a 4.6 GB
+    index, from a 52 KB manifest. It is not fast — the archives with exports come back in
+    minutes, and the surname harvests are still one request per act — but it is unattended,
+    and it is the difference between a corpus and a pile of files that only exist here.
+
+    What is already held is skipped, measured against the corpus rather than the manifest,
+    for the same reason `surname_coverage` is: the manifest knows what was asked for, and
+    only the acts on disk know what arrived.
+    """
+    manifest = load_manifest()
+    rows = manifest["harvests"]
+    if not rows:
+        return print("Nothing in the manifest to replay.")
+
+    todo, held_already = [], 0
+    for h in rows:
+        q = h.get("query") or {}
+        want = h.get("acts") or 0
+        if q.get("archive"):
+            # A whole archive: one file, and its line count is what arrived.
+            if _held_in(q["archive"]) >= want * 0.99 and want:
+                held_already += 1
+            else:
+                todo.append((h, q.get("via") or "bulk"))
+        elif q.get("name") and q["name"] != "*":
+            if mentions_held(q["name"]) >= (h.get("mentions") or 0) * 0.99:
+                held_already += 1
+            else:
+                todo.append((h, "surname"))
+        else:
+            # A commune harvest. There is no cheap way to ask the corpus how much of one
+            # commune it holds, so it is offered rather than assumed done.
+            todo.append((h, "place"))
+
+    print(f"{len(rows)} harvests in the manifest · {held_already} already held · {len(todo)} to run\n")
+    if not todo:
+        return print("The corpus already matches the manifest. Nothing to do.")
+    if args.dry_run:
+        for h, how in todo:
+            q = h["query"]
+            # A commune harvest queries name="*", so the place is the identifying part.
+            name = q.get("name") if q.get("name") not in (None, "*") else None
+            target = q.get("archive") or name or q.get("eventplace") or h["id"]
+            print(f"  {how:<8} {target:<28} {h.get('acts') or 0:>7} acts recorded")
+        print("\nRun without --dry-run to fetch. The bulk archives come first — they are")
+        print("whole archives for one request each, and they may already contain the acts")
+        print("a later surname harvest would otherwise pay per-act for.")
+        return
+
+    # Bulk first, deliberately: an export may already hold what a surname query would
+    # otherwise fetch one act at a time, and `write_acts` deduplicates by act id.
+    order = {"bulk": 0, "oai": 1, "surname": 2, "place": 3}
+    for h, how in sorted(todo, key=lambda r: order.get(r[1], 9)):
+        q = h["query"]
+        if how in ("bulk", "oai"):
+            fn = _bulk_one if how == "bulk" else cmd_oai
+            ns = argparse.Namespace(archive=q["archive"], refresh=False, anyway=args.anyway)
+            fn(q["archive"], ns) if how == "bulk" else fn(ns)
+        elif how == "surname":
+            harvest(h["id"], f'Surname "{q["name"]}", replayed',
+                    {k: v for k, v in q.items() if k != "via"},
+                    h.get("found") or args.max, False, replay=True)
+        else:
+            harvest(h["id"], f'Commune "{q.get("eventplace")}", replayed',
+                    {k: v for k, v in q.items() if k != "via"},
+                    h.get("found") or args.max, False, replay=True)
+
+
 def cmd_status(args):
     manifest = load_manifest()
     if not manifest["harvests"]:
@@ -793,6 +877,12 @@ def main() -> int:
     p = common(sub.add_parser("frontiers", help="harvest the surnames the queue is asking for"))
     p.add_argument("--limit", type=int, default=5)
     p.set_defaults(fn=cmd_frontiers)
+
+    p = sub.add_parser("replay", help="rebuild the whole corpus from the committed manifest")
+    p.add_argument("--dry-run", action="store_true", help="say what would be fetched")
+    p.add_argument("--max", type=int, default=20000, help="cap for a surname harvest with no recorded total")
+    p.add_argument("--anyway", action="store_true", help="include archives registered outside Belgium")
+    p.set_defaults(fn=cmd_replay)
 
     p = sub.add_parser("status", help="what is held, and what is missing")
     p.add_argument("--offline", action="store_true", help="skip the check for whole-archive exports")
