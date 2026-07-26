@@ -16,7 +16,8 @@ mother: victoria_engelsen
 spouses:
   - id: anna_gautiert
     name: Anna Maria Gautiert
-    detail: Oostende, 24 Mar 1847
+    married: 1847-03-24
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

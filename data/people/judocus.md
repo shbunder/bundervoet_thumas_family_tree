@@ -15,7 +15,7 @@ mother: adriaenssens
 spouses:
   - id: roegiers
     name: Francisca Roegiers
-    detail: m. 1834 — his 2nd marriage
+    married: "1834"
 sources:
   - geneanet
 ---

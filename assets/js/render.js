@@ -34,7 +34,17 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     return r && r.kind === 'blood' ? r.label : '';
   };
 
-  const spouseWord = id => ({ f: 'wife', m: 'husband' })[kin.genderOf(id)] || 'spouse';
+  const spouseWord = (sp, of) =>
+    (of && kin.spouseKind(of, sp.id)) ||
+    (sp.kind === 'partnership' ? 'partner' : null) ||
+    ({ f: 'wife', m: 'husband' })[kin.genderOf(sp.id)] ||
+    'spouse';
+
+  // Whose children a group is. Named, because with more than one group an unlabelled
+  // row of children is the half-sibling ambiguity itself: it shows four children and
+  // says nothing about the two mothers they had.
+  const withWhom = other =>
+    other && people[other] ? `with ${esc(people[other].name)}` : 'other parent not recorded';
 
   function node(id, { role, arrow = '↑', focus = false, cls = '' } = {}) {
     if (!id) return '<div class="node unk"><div class="nm">Unknown</div><div class="dt">to research</div></div>';
@@ -58,10 +68,10 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
   // A spouse who is a record of their own is rendered as a real node, so you can
   // open them and go on into their family. One who is only a name stays flat.
-  const spouseNode = sp =>
+  const spouseNode = (sp, of) =>
     sp.id && people[sp.id]
-      ? node(sp.id, { role: spouseWord(sp.id), arrow: '' })
-      : '<div class="node fam spouse"><div class="rl">spouse</div>' +
+      ? node(sp.id, { role: spouseWord(sp, of), arrow: '' })
+      : `<div class="node fam spouse"><div class="rl">${esc(spouseWord(sp))}</div>` +
         `<div class="nm">${esc(sp.name)}</div>` +
         (sp.detail ? `<div class="dt">${esc(sp.detail)}</div>` : '') +
         '</div>';
@@ -119,7 +129,14 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const p = people[id];
     const c = conf(id);
     const sub = subtitleFor(id);
-    const kids = kin.childrenOf(id).map(k => people[k].name);
+    const groups = kin.childGroupsOf(id);
+    const kidLines = groups
+      .map(g => {
+        const label = groups.length > 1 ? `Children ${withWhom(g.other)}` : 'Children';
+        return `<div class="kv"><b>${label}:</b> ` +
+          `${esc(g.children.map(k => people[k].name).join(', '))}</div>`;
+      })
+      .join('');
     return (
       `<span class="conf conf-${c}">${esc(meta.confidenceLabels[c])}</span>` +
       `<h5>${esc(p.name)}</h5>` +
@@ -127,7 +144,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
       (p.spouses?.length ? `<div class="kv"><b>Spouse:</b> ${esc(spousesText(p))}</div>` : '') +
       parentLine('Father', p.father) +
       parentLine('Mother', p.mother) +
-      (kids.length ? `<div class="kv"><b>Children:</b> ${esc(kids.join(', '))}</div>` : '') +
+      kidLines +
       (p.note ? `<div class="nt">${esc(p.note)}</div>` : '') +
       `<div class="sr"><b>Source:</b> ${esc(kin.sourceFor(id))}</div>`
     );
@@ -164,7 +181,9 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     // belongs to all of them equally. Their spouses travel with them.
     const siblings = kin.siblingsOf(focus);
     const sibship = [focus, ...siblings].sort(byBirth);
-    const married = (p.spouses || []).map(sp => `<span class="xmark">×</span>${spouseNode(sp)}`).join('');
+    const married = (p.spouses || [])
+      .map(sp => `<span class="xmark">×</span>${spouseNode(sp, focus)}`)
+      .join('');
     const row = sibship
       .map(id =>
         id === focus
@@ -181,14 +200,24 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     // `justify-content:center` would put the first card out of reach off-screen.
     html += `<div class="srow sibrow"><div class="rowin">${row}</div></div>`;
 
-    const children = kin.childrenOf(focus).slice().sort(byBirth);
-    if (children.length) {
-      html +=
-        '<div class="vline tall"></div>' +
-        '<div class="childlab">children · click to climb down ↓</div>' +
-        '<div class="srow crow"><div class="rowin">' +
-        children.map(k => node(k, { role: relTo(k, focus), arrow: '↓' })).join('') +
-        '</div></div>';
+    // One row per marriage, not one row for the lot. Where someone married twice the
+    // rows are the two sibships, captioned by the other parent — which is the whole
+    // of what "half-brother" means, shown rather than left to be worked out by
+    // clicking into a child and reading the label there.
+    const groups = kin.childGroupsOf(focus);
+    if (groups.length) {
+      html += '<div class="vline tall"></div><div class="childlab">children · click to climb down ↓</div>';
+      html += groups
+        .map(g => {
+          const row = g.children
+            .slice()
+            .sort(byBirth)
+            .map(k => node(k, { role: relTo(k, focus), arrow: '↓' }))
+            .join('');
+          const cap = groups.length > 1 ? `<div class="bywhom">${withWhom(g.other)}</div>` : '';
+          return cap + `<div class="srow crow"><div class="rowin">${row}</div></div>`;
+        })
+        .join('');
     }
     return html;
   }
@@ -218,9 +247,15 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     push('Mother', p.mother && people[p.mother] ? refLink(p.mother) : '');
 
     const siblings = kin.siblingsOf(focus).slice().sort(byBirth);
-    const children = kin.childrenOf(focus).slice().sort(byBirth);
     if (siblings.length) push(siblings.length === 1 ? 'Sibling' : 'Siblings', list(siblings));
-    if (children.length) push(children.length === 1 ? 'Child' : 'Children', list(children));
+    // Same reason as the rows above: with two marriages, one "Children:" line reads as
+    // one family. The label carries the other parent so it cannot.
+    const groups = kin.childGroupsOf(focus);
+    for (const g of groups) {
+      const kids = g.children.slice().sort(byBirth);
+      const word = kids.length === 1 ? 'Child' : 'Children';
+      push(groups.length > 1 ? `${word} ${withWhom(g.other)}` : word, list(kids));
+    }
 
     return (
       `<h3>${esc(p.name)}</h3><div class="sub">${esc(subtitleFor(focus))}</div>` +

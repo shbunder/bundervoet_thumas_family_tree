@@ -109,6 +109,18 @@
       "acts": 600
     },
     {
+      "id": "casiers",
+      "query": {
+        "name": "Casiers",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 42,
+      "mentions": 42,
+      "complete": true,
+      "acts": 42
+    },
+    {
       "id": "casteleyn",
       "query": {
         "name": "Casteleyn",
@@ -131,6 +143,42 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "crabbe",
+      "query": {
+        "name": "Crabbé",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 12259,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "daix",
+      "query": {
+        "name": "Daix",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 1221,
+      "mentions": 600,
+      "complete": false,
+      "acts": 598
+    },
+    {
+      "id": "damman",
+      "query": {
+        "name": "Damman",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2370,
+      "mentions": 600,
+      "complete": false,
+      "acts": 599
     },
     {
       "id": "daneel",
@@ -176,6 +224,18 @@
       },
       "date": "2026-07-26",
       "found": 17465,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
+      "id": "declercq",
+      "query": {
+        "name": "Declercq",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 23188,
       "mentions": 600,
       "complete": false,
       "acts": 600
@@ -287,6 +347,18 @@
       "mentions": 1,
       "complete": true,
       "acts": 1
+    },
+    {
+      "id": "goethals",
+      "query": {
+        "name": "Goethals",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 13854,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
     },
     {
       "id": "govaert",
@@ -565,6 +637,18 @@
       "acts": 600
     },
     {
+      "id": "temmerman",
+      "query": {
+        "name": "Temmerman",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 22697,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "thumas",
       "query": {
         "name": "Thumas",
@@ -685,6 +769,18 @@
       "acts": 600
     },
     {
+      "id": "vanderbeken",
+      "query": {
+        "name": "Vanderbeken",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2086,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "vandewalle",
       "query": {
         "name": "Vandewalle",
@@ -743,6 +839,18 @@
       "mentions": 237,
       "complete": true,
       "acts": 237
+    },
+    {
+      "id": "vanhoutte",
+      "query": {
+        "name": "Van Houtte",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 1777,
+      "mentions": 600,
+      "complete": false,
+      "acts": 599
     },
     {
       "id": "vaniseghem",

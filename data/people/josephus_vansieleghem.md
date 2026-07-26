@@ -15,7 +15,8 @@ mother: joanna_defoort
 spouses:
   - id: maria_lampsins
     name: Maria Lampsins
-    detail: Lichtervelde, 12 Aug 1657
+    married: 1657-08-12
+    place: Lichtervelde
 sources:
   - tree-isavdw
 ---

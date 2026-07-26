@@ -14,9 +14,8 @@ mother: judoca_scherrens
 spouses:
   - id: esther_vanderbeken
     name: Esther Vanderbeken
-    detail: 1st
   - name: Joanna Loontjens
-    detail: 2nd
+    id: joanna_loontjens
 sources:
   - tree-isavdw
   - tree-kathrynann

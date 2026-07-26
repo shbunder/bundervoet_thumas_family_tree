@@ -14,7 +14,7 @@ mother: philippa_vanpuyenbroeck
 spouses:
   - id: isabella_ichau
     name: Isabella Livia Ichau
-    detail: married 1838
+    married: "1838"
 sources:
   - tree-wete1998
   - agatha

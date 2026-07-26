@@ -17,7 +17,7 @@ spouses:
   - id: rosette
     name: Rosette Van Iseghem
   - name: Francine Bisschop
-    detail: later
+    id: francine_bisschop
 sources:
   - fwk-marcel-b-2015
   - family

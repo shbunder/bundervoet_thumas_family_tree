@@ -14,7 +14,8 @@ mother: angela_vd
 spouses:
   - id: petrusjacobus_v
     name: Petrus Jacobus Vanstechelman
-    detail: Mariakerke, 21 Jan 1875
+    married: 1875-01-21
+    place: Mariakerke
 sources:
   - fs-wvl-bs
   - tree-stechec

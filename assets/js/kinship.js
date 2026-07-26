@@ -129,7 +129,6 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     }
   })();
 
-  const directAncestorCount = () => Object.keys(distance).filter(id => distance[id] > 0).length;
 
   // ---------- naming a relationship ----------
 
@@ -214,6 +213,47 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
 
   const spouseIdsOf = id => (people[id]?.spouses || []).map(s => s.id).filter(id2 => id2 && people[id2]);
 
+  // Someone's children, split by who the other parent was.
+  //
+  // The links already say this — every child names its own father and mother — but
+  // read as one flat row, two marriages become one sibship, and the reader loses the
+  // one fact they came to a remarriage for. Livinus Bundervoet's four children are
+  // three by Elisabeth and one by Catharina; undivided, they look like four full
+  // siblings. Derived here rather than written into the marriage, because a note
+  // saying "mother of Segerius" is a second copy of a link nothing checks.
+  //
+  // Groups come out in spouse-list order, which is marriage order, so the groups read
+  // down the person's life. A co-parent who is nobody's spouse follows, and children
+  // whose other parent has no record at all come last — they are the least said, not
+  // the earliest.
+  function childGroupsOf(id) {
+    if (!people[id]) return [];
+    const groups = new Map();
+    for (const kid of childrenOf(id)) {
+      const k = people[kid];
+      const other = k.father === id ? k.mother : k.father;
+      const key = other && people[other] ? other : '';
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(kid);
+    }
+    const order = spouseIdsOf(id);
+    const rank = key => {
+      const at = order.indexOf(key);
+      return at >= 0 ? at : key ? order.length : order.length + 1;
+    };
+    return [...groups.keys()]
+      .sort((a, b) => rank(a) - rank(b))
+      .map(other => ({ other: other || null, children: groups.get(other) }));
+  }
+
+  // What to call the person someone is married to. A partnership that produced
+  // children without a marriage is a different fact, and printing "wife" over it
+  // would be the record asserting something no source said.
+  function spouseKind(a, b) {
+    const entry = (people[a]?.spouses || []).find(s => s.id === b);
+    return entry?.kind === 'partnership' ? 'partner' : null;
+  }
+
   // Blood first; failing that, look one marriage step away. Beyond one step the
   // phrasing stops meaning anything useful, so it stops there rather than
   // inventing chains of in-laws.
@@ -223,7 +263,7 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     if (blood) return blood;
 
     if (spouseIdsOf(a).includes(b)) {
-      return { label: byGender(a, 'wife', 'husband', 'spouse'), kind: 'marriage' };
+      return { label: spouseKind(a, b) || byGender(a, 'wife', 'husband', 'spouse'), kind: 'marriage' };
     }
     // Related through exactly one marriage, from one end or the other. The blood
     // relation is returned as itself and the marriage step as `through`, rather than
@@ -335,7 +375,7 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
 
   return {
     ROOT, ROOTS, relationship, relationBetween, bloodRelation, ancestorsOf, commonAncestor,
-    childrenOf, siblingsOf, genderOf, categoryOf, sourceFor, confidenceOf, isResearchable,
-    distance, directAncestorCount, ancestorLine, linkDiagram,
+    childrenOf, childGroupsOf, siblingsOf, genderOf, spouseKind, categoryOf, sourceFor,
+    confidenceOf, isResearchable, distance, ancestorLine, linkDiagram,
   };
 };

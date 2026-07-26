@@ -10,7 +10,9 @@ father: petrusjacobus_v
 mother: clementia_w
 spouses:
   - name: Alberic Luciaan Delrue
-    detail: Oostende, 11 May 1924
+    married: 1924-05-11
+    place: Oostende
+    id: alberic_delrue
 sources:
   - fs-wvl-bs
 ---

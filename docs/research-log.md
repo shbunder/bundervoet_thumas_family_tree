@@ -1047,3 +1047,107 @@ Bogaert and Maria Ludovica Martinet attested as a couple by their son's 1909 mar
 which also produced a son the tree lacked.
 
 *End of log.
+
+## 45. Remarriage, made visible — and the second copies of the tree it was hiding
+
+Not a research pass. A model pass, from one question: how does this tree handle a
+remarriage, and a half-brother?
+
+The answer was that the *graph* handled them and the *page* did not. `bloodRelation`
+already counts shared parents — two is a sibling, one is a half — and `siblingsOf`
+already unions the children of each parent separately. Nothing needed teaching about
+half-siblings; they fall out of having no couple entity, which remains the right shape.
+
+But the children row was flat. Livinus Bundervoet's four children — three by Elisabeth
+NN, one by Catharina van Hecke — were drawn as one row, in birth order, every card
+labelled "son" or "daughter". The two wives sat above them, side by side, joined to
+nothing. The half-sibling fact existed, and the only way to reach it was to click into
+one of the four children and read the label on the sibling row there. **The one thing a
+reader comes to a remarriage for was the one thing the page would not say.**
+
+Now there is one row per marriage, captioned with the other parent, and the same
+grouping in the detail panel and the hover card. Where there is only one group there is
+no caption — it would only ever state the obvious.
+
+### What the grouping exposed
+
+Deriving it is easy. What made it worth doing is what it made redundant:
+
+```
+spouses:
+  - id: elisabeth_nn
+    name: Elisabeth NN
+    detail: 1st — mother of Segerius
+```
+
+`1st` is the list order. `mother of Segerius` is a parent link — and
+`segerius_bundervoet.md` already records `mother: elisabeth_nn`. Nothing checked the two
+against each other. This is exactly the failure the charter names for `occupation` and
+`nickname`, a second copy of the tree in a field, and it was in the marriages the whole
+time: `joannes_b` carried "mother of Christoffel & Pieter" the same way. The validator
+now rejects a marriage detail that names its own child, and rejects one carrying a date
+or an ordinal.
+
+### The open decision, closed
+
+`spouses[].detail` was free prose holding dates, places, divorces, partnerships and
+sequence positions all at once — the last unstructured event in the data, and listed as
+an open decision. Marriage is now stored the way birth and death are: `married` and
+`divorced` in the date grammar, `place`, and `kind: partnership` for a couple who had
+children without a recorded marriage.
+
+Three things fell out of structuring it, none of them anticipated:
+
+1. **Two records were giving different places for the same wedding.** `petrus_sabbe` said
+   the 1616 marriage was at Oostkamp; `judoca_vandenberghe` said Oostkamp/Ruddervoorde.
+   Both are still in the tree, as one string on both records, because neither can be
+   checked from here. The link was already required to be mutual; the *facts* were not,
+   so whichever record was read first won. They are compared now, field for field.
+2. **The GEDCOM exporter was parsing prose to find a marriage date.** Sixty-six lines of
+   regex over free text, and it silently dropped what it could not read. Deleted — the
+   fields are the source. Divorce now exports as `DIV`, and a partnership as a `FAM` with
+   no `MARR`, which is how GEDCOM 7 says it.
+3. **A divorce and a partnership were invisible.** Édouard Dekeyser and Louise Bocklandt
+   divorced around 1923; the page called them husband and wife. Francisca Van Houtte's
+   record said `partner` for one man and `husband` for another, in prose, and the page
+   printed "wife" over both. It says "partner" now, because a source said so.
+
+The migration parsed 300 records. Eight strings it would not read were settled by hand;
+four values it read as communes — "later", "2nd", "earlier marriage", "act not yet
+found" — were caught by listing every distinct place in the tree and looking at them.
+That check is worth repeating after any bulk edit: a bad value hides perfectly well
+inside a valid field.
+
+### Seventeen people who existed only as strings
+
+Objective b says everyone referenced anywhere gets a record. Twenty-five spouse entries
+had no `id`, so those people could hold no children, be related to nobody, and be counted
+in nothing. Sixteen were named; nine are deliberate placeholders — "(wife unrecorded)" —
+and stay as they are.
+
+The sixteen now have records. No new claims: each was already asserted by the partner's
+record and the partner's source, and the confidence is carried across unchanged, never
+raised. Two are written with a surname and no given name, `nn_vandenberghe` and
+`nn_vyveraert`, the mirror of `elisabeth_nn` — a name half known is recorded half.
+
+Writing Leontine Schreel produced a seventeenth. Édouard's 1946 act, which is why she is
+`doc`, says she was divorced from **Benoni Joseph Rossel** — a documented marriage that
+was sitting in a prose body, which is the thing objective b forbids. So it is a marriage
+entry now, and he has a record: the first husband of the second wife of a man who married
+into the family, and no line of descent will ever run through him. That is the honest end
+of the chain rather than a tidy one.
+
+### What is still not handled
+
+Not fixed, and now written into the charter as limits rather than left to be rediscovered:
+
+- **A marriage ended by death has no end date.** It is derivable from the two death dates,
+  and a field for it would invite recording a guess. Only `divorced` is stored.
+- **Step-relations stay unnamed.** A stepmother reads as "X married Y, who is Z's father";
+  a step-sibling reads as no connection at all. Beyond one marriage step the wording stops
+  meaning anything reliable, and a confident wrong in-law label is the same class of error
+  as a wrong graft.
+
+Tree: 328 → 345 people. Build green, 63 tests pass.
+
+*End of log.

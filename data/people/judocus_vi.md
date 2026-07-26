@@ -14,7 +14,8 @@ line: van-iseghem
 spouses:
   - id: victoria_engelsen
     name: Victoria Eugenia Engelsen
-    detail: Oostende, 25 Mar 1810
+    married: 1810-03-25
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

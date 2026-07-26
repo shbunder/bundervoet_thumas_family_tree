@@ -16,7 +16,8 @@ mother: esther_vanderbeken
 spouses:
   - id: joanna_vdoughstraete
     name: Joanna Van Der Oughstraete
-    detail: Tielt, 23 Nov 1687
+    married: 1687-11-23
+    place: Tielt
 sources:
   - tree-isavdw
   - tree-kathrynann

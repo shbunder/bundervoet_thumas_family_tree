@@ -14,7 +14,8 @@ line: paelinck
 spouses:
   - id: apolonius_p
     name: Apolonius Paelinck
-    detail: Destelbergen, 4 Sep 1770
+    married: 1770-09-04
+    place: Destelbergen
 sources:
   - tree-stefpaelinck
 ---

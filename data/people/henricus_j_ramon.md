@@ -17,7 +17,8 @@ mother: jacoba_ossaert
 spouses:
   - id: lucia_steenkiste
     name: Lucia Theresia Steenkiste
-    detail: Mariakerke, 18 Nov 1806
+    married: 1806-11-18
+    place: Mariakerke
 sources:
   - tree-wernero
 ---

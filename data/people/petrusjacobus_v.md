@@ -17,7 +17,8 @@ mother: sophiavdb
 spouses:
   - id: clementia_w
     name: Clementia Sophia Wagebaert
-    detail: Mariakerke, 21 Jan 1875
+    married: 1875-01-21
+    place: Mariakerke
 sources:
   - fs-wvl-bs
   - tree-stechec

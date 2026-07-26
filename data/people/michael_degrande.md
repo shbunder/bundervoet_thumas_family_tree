@@ -16,7 +16,8 @@ mother: adriana_sabbe
 spouses:
   - id: brigitta_deblaere
     name: Brigitta De Blaere
-    detail: Ruiselede, 4 May 1755
+    married: 1755-05-04
+    place: Ruiselede
 sources:
   - tree-isavdw
 ---

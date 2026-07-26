@@ -17,7 +17,8 @@ mother: noel_t
 spouses:
   - id: quinart
     name: Marie Anne Catherine Quinart (Kinart)
-    detail: Grez-Doiceau, 9 Feb 1801
+    married: 1801-02-09
+    place: Grez-Doiceau
 sources:
   - geneanet
 ---

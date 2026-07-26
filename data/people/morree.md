@@ -12,7 +12,6 @@ sources:
   - S12
 ---
 
-
 STRONG LEAD, NOT GRAFTED (July 2026) — see [[francl_s]] for the whole of it. A Brugge
 marriage act of 1851 gives an Anna Francisca **Morbeé**, daughter of Petrus Josephus Morbeé
 and Joanna De Clerck, marrying a Franciscus Léopoldus Smessaert. The forenames and the

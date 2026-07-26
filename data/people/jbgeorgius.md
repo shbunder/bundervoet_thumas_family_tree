@@ -17,7 +17,8 @@ mother: bossin
 spouses:
   - id: vandenbemden
     name: Joanna Vandenbemden
-    detail: Kraainem, 3 Feb 1902
+    married: 1902-02-03
+    place: Kraainem
 sources:
   - S5
   - tree-marcelcroon

@@ -13,7 +13,6 @@ line: bundervoet
 spouses:
   - id: livinus_bundervoet
     name: Livinus Bundervoet
-    detail: 2nd — mother of Wilhelmina
 sources:
   - tree-paulderidder
 ---

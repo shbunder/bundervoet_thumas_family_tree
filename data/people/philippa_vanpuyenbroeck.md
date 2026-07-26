@@ -12,7 +12,7 @@ line: de-keyser
 spouses:
   - id: daniel_bocklandt
     name: Daniel Bocklandt
-    detail: married 1801
+    married: "1801"
 sources:
   - tree-wete1998
 ---

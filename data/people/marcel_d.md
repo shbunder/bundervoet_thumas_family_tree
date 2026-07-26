@@ -17,6 +17,8 @@ mother: declercq
 spouses:
   - id: yvonne
     name: Yvonne Smessaert (1937)
+    married: 1937-10-16
+    place: Stene
 sources:
   - tree-wernero
 ---

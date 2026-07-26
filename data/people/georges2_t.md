@@ -17,7 +17,8 @@ mother: quinart
 spouses:
   - id: joostens
     name: Marie Catharina Joostens
-    detail: Grez-Doiceau, 17 Feb 1835
+    married: 1835-02-17
+    place: Grez-Doiceau
 sources:
   - S15
   - S11

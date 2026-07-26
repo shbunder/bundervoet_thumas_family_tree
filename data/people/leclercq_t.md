@@ -14,7 +14,8 @@ line: thumas
 spouses:
   - id: jeanlambert_t
     name: Jean Lambert Thumas
-    detail: Wavre, 23 Feb 1743
+    married: 1743-02-23
+    place: Wavre
 sources:
   - S14
   - S6

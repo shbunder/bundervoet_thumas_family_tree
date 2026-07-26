@@ -14,7 +14,8 @@ line: bostyn-cappaert
 spouses:
   - id: anna_c_devriese
     name: Anna Cornelia De Vriese
-    detail: Wingene, 31 May 1719
+    married: 1719-05-31
+    place: Wingene
 sources:
   - tree-isavdw
   - tree-kathrynann

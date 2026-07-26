@@ -17,7 +17,8 @@ mother: joostens
 spouses:
   - id: bossin
     name: Antoina Bossin
-    detail: 20 Jun 1872 (Kraainem)
+    married: 1872-06-20
+    place: Kraainem
 sources:
   - S11
   - S8

@@ -16,10 +16,11 @@ father: adrianus_stroobandt
 mother: anna_m_vanacker
 spouses:
   - name: Isabella De Muynck
-    detail: 1st
+    id: isabella_demuynck
   - id: joanna_keirsebilck
     name: Joanna Keirsebilck
-    detail: 2nd
+    married: 1810-07-24
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

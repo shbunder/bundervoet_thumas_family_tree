@@ -13,7 +13,8 @@ mother: catharina_willems
 spouses:
   - id: jacoba_vanalledewerelt
     name: Jacoba Van Alledewerelt
-    detail: Beernem, 19 Jul 1664
+    married: 1664-07-19
+    place: Beernem
 sources:
   - tree-isavdw
 ---

@@ -14,7 +14,8 @@ line: van-iseghem
 spouses:
   - id: antoine_vanald
     name: Antoine Vanalderweireldt
-    detail: Diksmuide, 8 Jun 1803
+    married: 1803-06-08
+    place: Diksmuide
 sources:
   - tree-bartvanhooren
 ---

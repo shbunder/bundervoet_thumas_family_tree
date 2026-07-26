@@ -17,7 +17,8 @@ mother: rosalia_w
 spouses:
   - id: magdalena_vb
     name: Maria Magdalena Van Bogaert (1888)
-    detail: Sint-Niklaas, 17 Nov 1888
+    married: 1888-11-17
+    place: Sint-Niklaas
 sources:
   - S16
   - S7

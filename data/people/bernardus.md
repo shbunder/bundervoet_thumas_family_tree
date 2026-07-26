@@ -16,9 +16,10 @@ mother: roegiers
 spouses:
   - id: goethals
     name: Marie Eulalie Goethals
-    detail: m. 1875
+    married: "1875"
   - name: Rosalia Dhooge
-    detail: m. 1881 — his 2nd marriage
+    married: "1881"
+    id: rosalia_dhooge
 sources:
   - geneanet
 ---

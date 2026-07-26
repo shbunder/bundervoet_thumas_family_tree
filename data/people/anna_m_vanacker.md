@@ -14,7 +14,8 @@ mother: francisca_vanmaele
 spouses:
   - id: adrianus_stroobandt
     name: Adrianus Stroobandt
-    detail: Oostkamp, 1768
+    married: "1768"
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

@@ -15,7 +15,8 @@ mother: barbara_debaecke
 spouses:
   - id: anna_m_vanacker
     name: Anna Maria Van Acker
-    detail: Oostkamp, 1768
+    married: "1768"
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

@@ -8,6 +8,8 @@ line: bostyn-cappaert
 spouses:
   - id: judocus_vanrenterghem
     name: Judocus Van Renterghem
+    married: 1602-01-20
+    place: Brugge (St-Catharina)
 sources:
   - tree-isavdw
 ---

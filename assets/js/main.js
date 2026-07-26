@@ -23,9 +23,32 @@
     const search = FT.createSearch(tree);
     const { meta, people } = tree;
 
-    const ancestors = kin.directAncestorCount();
+    // Every number the page states about itself comes from the census in the bundle,
+    // so nothing here has to be kept in step by hand as people are added.
+    const n = (count, one, many) => `${count} ${count === 1 ? one : many}`;
+    const c = meta.census;
+    // "Renée & Léon Bundervoet" rather than the surname twice. The names come from the
+    // records, not from the markup, so a page cannot go on naming somebody the data no
+    // longer calls the root.
+    const rootIds = (meta.roots?.length ? meta.roots : [meta.root]).filter(id => people[id]);
+    const surname = people[rootIds[0]].surname;
+    const shared = surname && rootIds.every(id => people[id].surname === surname);
+    const rootNames = shared
+      ? `${rootIds.map(id => people[id].name.replace(surname, '').trim()).join(' & ')} ${surname}`
+      : rootIds.map(id => people[id].name).join(' & ');
+
     $('subtitle').textContent =
-      `${ancestors} direct ancestor${ancestors === 1 ? '' : 's'} recorded`;
+      `${n(c.total, 'person', 'people')} · ${n(c.ancestors, 'direct ancestor', 'direct ancestors')} · ` +
+      `${n(c.relatives, 'blood relative', 'blood relatives')} · ${c.others} married in`;
+    $('linehint').textContent =
+      `The surname lines that flow into ${rootNames}, each as deep as the records reach. ` +
+      'Click any name to open it in the explorer.';
+    $('homeBtn').textContent = `⌂ ${rootNames}`;
+    // The side panel measures from the root, so it is the root that it names.
+    const linkLabel = `Link to ${people[meta.root].name.replace(surname || '', '').trim() || people[meta.root].name}`;
+    $('lineBtn').title = linkLabel;
+    $('lineBtn').querySelector('.lbl').textContent = linkLabel;
+    $('lineTitle').textContent = linkLabel;
 
     $('foot').textContent = meta.footer;
     $('legend').innerHTML = view.legend();

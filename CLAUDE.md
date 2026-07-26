@@ -202,6 +202,19 @@ Invariants:
   child proves a couple** (a record with `father: A`, `mother: B` obliges A and B to
   list each other). The validator enforces both; they are what let the tree be built
   downwards without losing branches.
+- A marriage is an **event**, stored like one: `married` and `divorced` are dates in the
+  grammar above, `place` is where the act was passed, and `kind: partnership` marks a
+  couple who had children without a recorded marriage — so the page never prints "wife"
+  over someone no source called one. `detail` is what none of those can hold, and nothing
+  else: it may not carry a date, a place, or a position in a sequence. **One marriage,
+  one set of facts** — the two records must agree field for field, because before that
+  was checked they gave different places for the same wedding and the first one read won.
+- **Which children came from which marriage is derived, never written.** Every child
+  already names its own father and mother, so "1st — mother of Segerius" in a marriage
+  field was a second copy of a link nothing kept in step. The validator rejects a
+  marriage that names its own child; the tree draws one row of children per marriage,
+  captioned with the other parent, which is what makes a half-sibling visible at the
+  parent instead of only after clicking into a child.
 - `occupation` and `nickname` hold only those things. A relationship is never a field:
   it is a fact about a *pair*, so it is derived from the links. Writing "Ronny's sister"
   into a record puts a second, un-checkable copy of the tree in the prose.
@@ -242,8 +255,17 @@ the validator fails if it is stale, so old data cannot reach the site.
    splitting (by branch or generation) and loading on demand, and the build moving to
    CI so the artefact leaves git. The relation finder's two `<select>`s go the same way.
 2. **Sex is unknown for anyone childless** unless their record states it. Relations then
-   read "sibling" rather than "sister". Fill `sex` in only from what a record says.
-   *(Currently all 307 are known — keep it that way as people are added.)*
+   read "sibling" rather than "sister". Fill `sex` in only from what a record says — a
+   role of "wife", a note calling someone "Roland's sister" — never from a forename.
+   *(Nobody is currently unknown: every person who is nobody's parent states it.)*
+3. **A marriage that ended in death has no end date**, because it is derivable from the
+   two death dates and inventing a field for it would invite recording a guess. Only
+   `divorced` is stored. If that derivation is ever wanted on the page, derive it.
+4. **Step-relations are unnamed on purpose.** `relationBetween` goes blood first, then
+   exactly one marriage step, then stops — so a stepmother reads as "X married Y, who is
+   Z's father" rather than "stepmother", and a step-sibling reads as no connection.
+   Beyond one step the wording stops meaning anything reliable, and a wrong in-law label
+   is the same class of error as a wrong graft: unfalsifiable prose that reads as fact.
 
 ---
 
@@ -271,7 +293,7 @@ docs/searching.md       the search strategy: harvest first, browser second
 docs/sources.md         readable source list — GENERATED from research/sources.json
 pyproject.toml          the uv project. No dependencies, on purpose
 tools/familytree/       the library every tool shares
-  people.py             the loader, the date grammar, the browser record
+  people.py             the loader, the date grammar, the browser record, the census
   frontmatter.py        the parser for the records' strict YAML subset
   sources.py            the registry and the search log, and what makes an entry valid
   bundle.py             data/ + site/ -> dist/bundle.js
@@ -356,9 +378,6 @@ Not yet decided — do not implement unilaterally:
 - **Storage format.** Moving the person files to strict-fielded frontmatter + free-prose
   body. The build step exists now, so the objection has narrowed to whether the working
   files themselves change shape. *(Interchange is settled: GEDCOM 7 is exported.)*
-- **Marriage detail is still prose.** `spouses[].detail` holds "Oostkamp, 30 Sep 1863"
-  as free text, so the GEDCOM exporter still parses it. Person dates are structured;
-  marriages are the last place that isn't.
 **Waiting on you, not on a decision:** the browser server in `.mcp.json` needs Chrome
 started with remote debugging and logged in to the archives once — see
 [docs/searching.md](docs/searching.md). Until then, searches that need a session come

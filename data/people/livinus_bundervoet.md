@@ -13,10 +13,8 @@ father: petrus_bundervoet1560
 spouses:
   - id: elisabeth_nn
     name: Elisabeth NN
-    detail: 1st — mother of Segerius
   - id: catharina_vanhecke
     name: Catharina van Hecke
-    detail: 2nd — mother of Wilhelmina
 sources:
   - tree-paulderidder
   - tree-glorieuxp

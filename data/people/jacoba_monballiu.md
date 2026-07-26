@@ -12,6 +12,8 @@ line: bostyn-cappaert
 spouses:
   - id: petrus_vannieuwenhuyse
     name: Petrus Van Nieuwenhuyse
+    married: 1673-07-23
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

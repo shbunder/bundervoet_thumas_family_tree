@@ -14,7 +14,8 @@ mother: brigitta_deblaere
 spouses:
   - id: petrus_jos_keirsebilck
     name: Petrus Josephus Keirsebilck
-    detail: Oostkamp, 4 Oct 1785
+    married: 1785-10-04
+    place: Oostkamp
 sources:
   - tree-isavdw
   - tree-kathrynann

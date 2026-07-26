@@ -14,7 +14,7 @@ line: bundervoet
 spouses:
   - id: judocus
     name: Judocus Bundervoet
-    detail: "1834"
+    married: "1834"
 sources:
   - geneanet
 ---

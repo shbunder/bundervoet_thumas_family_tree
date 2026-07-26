@@ -12,7 +12,7 @@ line: de-keyser
 spouses:
   - id: philippa_vanpuyenbroeck
     name: Philippa Van Puyenbroeck
-    detail: married 1801
+    married: "1801"
 sources:
   - tree-wete1998
 ---

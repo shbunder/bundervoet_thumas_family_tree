@@ -17,7 +17,8 @@ mother: coekelberghs
 spouses:
   - id: jbgeorgius
     name: J.B. Georgius Thumas
-    detail: Kraainem, 3 Feb 1902
+    married: 1902-02-03
+    place: Kraainem
 sources:
   - S5
   - tree-jswaelens

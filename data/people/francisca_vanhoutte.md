@@ -13,9 +13,9 @@ line: bostyn-cappaert
 spouses:
   - id: petrus_vandewalle
     name: Petrus Vandewalle
-    detail: partner
+    kind: partnership
   - name: Clementius Robaert
-    detail: husband
+    id: clementius_robaert
 sources:
   - tree-isavdw
 ---

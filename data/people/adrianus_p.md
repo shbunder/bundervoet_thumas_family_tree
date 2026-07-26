@@ -16,7 +16,8 @@ mother: petronella_v
 spouses:
   - id: livina_pickaut
     name: Livina Pickaut
-    detail: Lochristi, 17 Jan 1711
+    married: 1711-01-17
+    place: Lochristi
 sources:
   - tree-stefpaelinck
 ---

@@ -12,7 +12,8 @@ line: bostyn-cappaert
 spouses:
   - id: francisca_vanmaele
     name: Francisca Van Maele
-    detail: Beernem, 17 Oct 1730
+    married: 1730-10-17
+    place: Beernem
 sources:
   - tree-isavdw
 ---

@@ -14,7 +14,8 @@ mother: anna_perquy
 spouses:
   - id: mathilde_desmet
     name: Mathilde Desmet
-    detail: Sint-Andries, 11 Sep 1867
+    married: 1867-09-11
+    place: Sint-Andries
 sources:
   - tree-stefanieschil
 ---

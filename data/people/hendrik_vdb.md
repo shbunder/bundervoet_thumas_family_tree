@@ -14,7 +14,7 @@ line: thumas
 spouses:
   - id: coekelberghs
     name: Maria Theresia Coekelberghs
-    detail: 24 Apr 1873
+    married: 1873-04-24
 sources:
   - S5
   - geneanet

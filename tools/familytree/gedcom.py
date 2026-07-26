@@ -13,11 +13,9 @@ from __future__ import annotations
 
 import re
 
-from .people import FIELDS, given_names, load_config, load_people  # noqa: F401
+from .people import FIELDS, given_names, load_config, load_people, marriage_text  # noqa: F401
 from .sources import load_sources
 
-MONTHS = {"jan": "JAN", "feb": "FEB", "mar": "MAR", "apr": "APR", "may": "MAY", "jun": "JUN",
-          "jul": "JUL", "aug": "AUG", "sep": "SEP", "oct": "OCT", "nov": "NOV", "dec": "DEC"}
 MONTH_NUM = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
 
 # QUAY is GEDCOM's certainty scale: 3 primary, 2 secondary, 1 questionable,
@@ -48,92 +46,26 @@ def gedcom_date(d: str | None) -> str | None:
     return None
 
 
-def parse_when(raw, notes: list[str]):
-    """Turn "12 Nov 1876 · Hamme (Oost-Vlaanderen)" or "6 Jan 1905 Oostende" into a
-    GEDCOM date and a place. Anything it cannot read with confidence comes back as
-    None so the caller keeps the original text instead."""
-    if not raw:
+def marriage_of(s: dict) -> dict | None:
+    """The marriage as GEDCOM needs it, read straight off the fields.
+
+    This used to parse "Oostkamp, 30 Sep 1863" back out of a prose note, which meant the
+    export's idea of when a couple married came from a regex over free text — and quietly
+    dropped whatever the regex could not read. The fields are the source now; `detail`
+    only ever becomes a NOTE, because that is all it is.
+    """
+    if not any(s.get(k) for k in ("married", "place", "divorced", "kind", "detail")):
         return None
-    s = str(raw).strip()
-    qualifier = ""
-
-    s = re.sub(r"^†\s*", "", s)
-    s = re.sub(r"^(b|d)\.\s*", "", s, flags=re.I)
-
-    # Some records lead with the place — "Oostende, after 2000". Take it off the front
-    # so the remainder can be read as a date.
-    leading_place = None
-    lead = re.match(r"^([^,0-9<>~]+),\s*(.+)$", s)
-    if lead:
-        leading_place = lead[1].strip()
-        s = lead[2].strip()
-
-    if re.match(r"^(bef\.?|before)\s+", s, re.I):
-        qualifier, s = "BEF", re.sub(r"^(bef\.?|before)\s+", "", s, flags=re.I)
-    elif s.startswith("<"):
-        qualifier, s = "BEF", re.sub(r"^<\s*", "", s)
-    elif re.match(r"^(aft\.?|after)\s+", s, re.I):
-        qualifier, s = "AFT", re.sub(r"^(aft\.?|after)\s+", "", s, flags=re.I)
-    elif s.startswith(">"):
-        qualifier, s = "AFT", re.sub(r"^>\s*", "", s)
-    elif re.match(r"^[~≈]\s*", s) or re.match(r"^(c\.|ca\.?|circa|about|abt\.?)\s+", s, re.I):
-        qualifier = "ABT"
-        s = re.sub(r"^[~≈]\s*", "", s)
-        s = re.sub(r"^(c\.|ca\.?|circa|about|abt\.?)\s+", "", s, flags=re.I)
-
-    date = None
-    rest = s
-    # "1575..1587" is a span, and "1913/14" means one year or the other. GEDCOM says
-    # both with a range, which is more faithful than picking one end.
-    if (m := re.match(r"^(\d{4})\s*\.\.\s*(\d{4})", s)):
-        date, rest, qualifier = f"BET {m[1]} AND {m[2]}", s[m.end():], ""
-    elif (m := re.match(r"^(\d{4})/(\d{1,2})\b", s)):
-        second = m[1][:2] + m[2] if len(m[2]) == 2 else m[1][:3] + m[2]
-        date, rest, qualifier = f"BET {m[1]} AND {second}", s[m.end():], ""
-    elif (m := re.match(r"^(\d{1,2})\s+([A-Za-z]{3})[a-z]*\.?\s+(\d{4})", s)):
-        mon = MONTHS.get(m[2].lower())
-        if mon:
-            date, rest = f"{int(m[1])} {mon} {m[3]}", s[m.end():]
-    elif (m := re.match(r"^([A-Za-z]{3})[a-z]*\.?\s+(\d{4})", s)):
-        mon = MONTHS.get(m[1].lower())
-        if mon:
-            date, rest = f"{mon} {m[2]}", s[m.end():]
-    elif (m := re.match(r"^(\d{4})", s)):
-        date, rest = m[1], s[m.end():]
-    if not date:
-        return None
-
-    # "2017 & 2019 · Leuven" is two people's dates in one field — not a single event.
-    if re.match(r"^\s*&", rest):
-        return None
-
-    place = leading_place or re.sub(r"^\s*[·,]\s*", "", rest).lstrip().strip() or None
-    # A place name starts with a letter. Anything else is parser debris from a date
-    # format not anticipated here, and is dropped rather than published as a place.
-    if place and not re.match(r"^[A-Za-zÀ-ÿ]", place):
-        notes.append(f'discarded "{place}" as a place — from "{raw}"')
-        place = None
-    return {"date": f"{qualifier} {date}" if qualifier else date, "place": place}
-
-
-def parse_marriage(detail, notes):
-    """Marriage details are free text like "Oostkamp, 30 Sep 1863". A leading word with
-    no digits is the place; the rest is tried as a date. The raw text is always kept as
-    a note, so nothing is lost to the parser's judgement."""
-    if not detail:
-        return None
-    out = {"note": detail, "date": None, "place": None}
-    s = re.sub(r"^m\.\s*", "", detail, flags=re.I)
-    s = re.sub(r"^married\s+", "", s, flags=re.I)
-    m = re.match(r"^([^,0-9]+),\s*(.+)$", s)
-    if m:
-        out["place"], s = m[1].strip(), m[2]
-    when = parse_when(s, notes)
-    if when:
-        out["date"] = when["date"]
-        if not out["place"] and when["place"] and not re.search(r"[();—]", when["place"]):
-            out["place"] = when["place"]
-    return out
+    return {
+        "date": gedcom_date(s.get("married")),
+        "place": s.get("place"),
+        "divorced": gedcom_date(s.get("divorced")),
+        # GEDCOM 7 has no tag for an unmarried partnership. A FAM with no MARR is the
+        # standard way to say it: the couple and their children are recorded, the
+        # marriage event simply is not, because there was not one.
+        "kind": s.get("kind") or "marriage",
+        "note": s.get("detail"),
+    }
 
 
 def build():
@@ -141,7 +73,7 @@ def build():
     config = load_config()
     ids, meta, branches = config["roster"], config["meta"], config["branches"]
     people = load_people(ids)
-    report = {"unparsed_dates": [], "occupations": 0, "notes": []}
+    report = {"unparsed_dates": [], "occupations": 0}
 
     # ---------- sex ----------
     # Stated if the record says so, otherwise inferred from being someone's father or
@@ -172,8 +104,8 @@ def build():
         for s in p.get("spouses") or []:
             if s.get("id") and s["id"] in people:
                 fam = family_for(pid, s["id"])
-                if not fam["marriage"] and s.get("detail"):
-                    fam["marriage"] = parse_marriage(s["detail"], report["notes"])
+                if not fam["marriage"]:
+                    fam["marriage"] = marriage_of(s)
 
     # A single parent with no recorded partner still needs a family record, or their
     # children have no way to point back at them.
@@ -287,8 +219,9 @@ def build():
         # Spouses who have no record of their own would vanish entirely otherwise.
         for s in p.get("spouses") or []:
             if not s.get("id"):
-                detail = f" — {s['detail']}" if s.get("detail") else ""
-                put_text(1, "NOTE", f"Spouse (no record of their own): {s['name']}{detail}")
+                said = marriage_text(s)
+                put_text(1, "NOTE", f"Spouse (no record of their own): {s['name']}"
+                                    + (f" — {said}" if said else ""))
 
         if p.get("note"):
             put_text(1, "NOTE", p["note"])
@@ -311,13 +244,21 @@ def build():
             put(1, "WIFE", indi_xref[wife])
         for child in fam["children"]:
             put(1, "CHIL", indi_xref[child])
-        if fam["marriage"]:
-            put(1, "MARR")
-            if fam["marriage"]["date"]:
-                put(2, "DATE", fam["marriage"]["date"])
-            if fam["marriage"]["place"]:
-                put_text(2, "PLAC", fam["marriage"]["place"])
-            put_text(2, "NOTE", f"Recorded as: {fam['marriage']['note']}")
+        m = fam["marriage"]
+        if m:
+            if m["kind"] == "partnership":
+                put_text(1, "NOTE", "Partners; no marriage is recorded for this couple.")
+            else:
+                put(1, "MARR")
+                if m["date"]:
+                    put(2, "DATE", m["date"])
+                if m["place"]:
+                    put_text(2, "PLAC", m["place"])
+            if m["divorced"]:
+                put(1, "DIV")
+                put(2, "DATE", m["divorced"])
+            if m["note"]:
+                put_text(1, "NOTE", m["note"])
 
     for text, xref in source_xref.items():
         put(0, xref, "SOUR")

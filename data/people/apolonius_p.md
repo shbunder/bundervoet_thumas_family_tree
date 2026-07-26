@@ -16,7 +16,8 @@ mother: petronilla_vk
 spouses:
   - id: christina_vm
     name: Christina Van Maele
-    detail: Destelbergen, 4 Sep 1770
+    married: 1770-09-04
+    place: Destelbergen
 sources:
   - tree-stefpaelinck
 ---

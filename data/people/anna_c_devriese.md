@@ -14,7 +14,8 @@ mother: joanna_vdoughstraete
 spouses:
   - id: jacob_deblaere
     name: Jacob Donaas De Blaere
-    detail: Wingene, 31 May 1719
+    married: 1719-05-31
+    place: Wingene
 sources:
   - tree-isavdw
   - tree-kathrynann

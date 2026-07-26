@@ -13,7 +13,8 @@ mother: devos
 spouses:
   - id: marcel_d
     name: Marcel Devriendt
-    detail: Stene, 16 Oct 1937
+    married: 1937-10-16
+    place: Stene
 sources:
   - tree-wernero
 ---

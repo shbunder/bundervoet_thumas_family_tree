@@ -15,7 +15,8 @@ mother: peremans
 spouses:
   - id: georges_cj
     name: Georges Carolus Josephus Thumas
-    detail: 20 Jun 1872 (Kraainem)
+    married: 1872-06-20
+    place: Kraainem
 sources:
   - S11
   - S8

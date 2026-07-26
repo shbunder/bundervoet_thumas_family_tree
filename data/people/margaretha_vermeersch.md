@@ -10,6 +10,8 @@ line: bostyn-cappaert
 spouses:
   - id: laurentius_willems
     name: Laurentius Willems
+    married: 1612-10-18
+    place: Wingene
 sources:
   - tree-isavdw
 ---

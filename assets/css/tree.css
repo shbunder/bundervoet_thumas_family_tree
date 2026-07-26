@@ -65,6 +65,11 @@ h1{font-size:1.9rem;margin:.1em 0 .1em;font-weight:600}
 .gplab{display:none}
 .childlab,.rowlab{text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin:2px auto 6px}
 .rowlab{margin-top:6px}
+/* Whose children the row below is. Only drawn when there is more than one row, so it
+   never states the obvious — and when it is drawn, the rows are two marriages and the
+   caption is the only thing separating them. */
+.bywhom{text-align:center;font-size:.78rem;color:var(--muted);font-style:italic;margin:10px auto 4px}
+.bywhom+.crow{margin-top:0}
 
 .detail{max-width:640px;margin:22px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow)}
 .detail h3{margin:0 0 2px;font-size:1.2rem;color:var(--accent)}

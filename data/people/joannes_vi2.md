@@ -16,7 +16,8 @@ mother: anna_gautiert
 spouses:
   - id: hermanie_janssen
     name: Hermanie Ludovica Janssen
-    detail: Oostende, 23 Aug 1872
+    married: 1872-08-23
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

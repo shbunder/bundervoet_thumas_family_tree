@@ -16,7 +16,8 @@ mother: maria_m_vandewalle
 spouses:
   - id: mauritius_stroobandt
     name: Mauritius Stroobandt
-    detail: Oostkamp, 30 Apr 1732
+    married: 1732-04-30
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

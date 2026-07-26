@@ -13,7 +13,8 @@ mother: agatha_stekelorum
 spouses:
   - id: henr_jos_bostin
     name: Henricus Josephus Bostin
-    detail: Westkerke, 9 May 1833
+    married: 1833-05-09
+    place: Westkerke
 sources:
   - tree-stefanieschil
   - vrijwilligersrab

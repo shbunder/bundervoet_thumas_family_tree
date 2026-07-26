@@ -13,7 +13,8 @@ mother: reine_storms
 spouses:
   - id: henricus_j_ramon
     name: Henricus Josephus Ramon
-    detail: Mariakerke, 18 Nov 1806
+    married: 1806-11-18
+    place: Mariakerke
 sources:
   - tree-wernero
 ---

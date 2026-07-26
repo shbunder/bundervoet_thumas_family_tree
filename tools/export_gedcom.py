@@ -38,10 +38,6 @@ def main() -> int:
         print(f"\nDates kept as text, not parsed into GEDCOM dates ({len(report['unparsed_dates'])}):")
         for d in report["unparsed_dates"]:
             print("  " + d)
-    if report["notes"]:
-        print(f"\nParser debris dropped ({len(report['notes'])}):")
-        for n in report["notes"]:
-            print("  " + n)
     return 0
 
 

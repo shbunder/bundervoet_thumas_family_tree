@@ -14,7 +14,8 @@ line: devriendt
 spouses:
   - id: mattheus_ramon
     name: Mattheus Ramon
-    detail: Zande, 31 May 1772
+    married: 1772-05-31
+    place: Zande
 sources:
   - tree-wernero
 ---

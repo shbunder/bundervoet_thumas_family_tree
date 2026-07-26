@@ -15,7 +15,8 @@ mother: hermanie_janssen
 spouses:
   - id: emma_vincke
     name: Emma Celesta Vincke
-    detail: Oostende, 28 Sep 1907
+    married: 1907-09-28
+    place: Oostende
 sources:
   - fwk-emma-vincke-1974
   - tree-gverdievel

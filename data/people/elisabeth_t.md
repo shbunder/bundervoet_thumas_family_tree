@@ -10,5 +10,6 @@ line: paelinck
 spouses:
   - id: livinus1_p
     name: Livinus Paelinck
-    detail: Gent, 18 Jan 1645
+    married: 1645-01-18
+    place: Gent
 ---

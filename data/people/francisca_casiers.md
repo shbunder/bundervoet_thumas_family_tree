@@ -10,6 +10,7 @@ line: vanstechelman
 spouses:
   - id: joannes_vs
     name: Joannes Vanstechele
+    married: ~1673
 sources:
   - tree-stechec
 ---

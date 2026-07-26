@@ -12,7 +12,7 @@ line: bundervoet
 spouses:
   - id: joannes_b
     name: Joannes Bundervoet
-    detail: ~1745 — his 2nd wife
+    married: ~1745
 sources:
   - tree-paulderidder
   - tree-glorieuxp

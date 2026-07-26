@@ -15,7 +15,8 @@ mother: eugenia_dutreeuw
 spouses:
   - id: lucien_vincke
     name: Lucien Julianus Vincke
-    detail: Diksmuide, 24 May 1865
+    married: 1865-05-24
+    place: Diksmuide
 sources:
   - tree-bartvanhooren
 ---

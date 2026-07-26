@@ -14,7 +14,8 @@ line: paelinck
 spouses:
   - id: ludovicus_p
     name: Ludovicus Paelinck
-    detail: Lochristi, Feb 1681
+    married: 1681-02
+    place: Lochristi
 sources:
   - tree-stefpaelinck
 ---

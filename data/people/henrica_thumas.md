@@ -10,7 +10,8 @@ father: georges_cj
 mother: bossin
 spouses:
   - name: (husband not yet read)
-    detail: Kraainem, 15 Apr 1899
+    married: 1899-04-15
+    place: Kraainem
 sources:
   - agatha
 ---

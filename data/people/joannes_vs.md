@@ -10,7 +10,7 @@ line: vanstechelman
 spouses:
   - id: francisca_casiers
     name: Francisca Casiers
-    detail: ~1673
+    married: ~1673
 sources:
   - tree-stechec
 ---

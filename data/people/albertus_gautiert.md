@@ -14,7 +14,8 @@ line: van-iseghem
 spouses:
   - id: theresia_robbe
     name: Theresia Joanna Monica Robbe
-    detail: Oostende, 5 May 1813
+    married: 1813-05-05
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

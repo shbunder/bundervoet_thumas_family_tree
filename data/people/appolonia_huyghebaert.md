@@ -14,7 +14,8 @@ line: van-iseghem
 spouses:
   - id: josephus_janssen
     name: Josephus Joannes Janssen
-    detail: Oostende, 28 Aug 1851
+    married: 1851-08-28
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

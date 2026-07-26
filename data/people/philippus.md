@@ -16,7 +16,7 @@ mother: bogaert
 spouses:
   - id: adriaenssens
     name: Joanna Maria Adriaenssens
-    detail: "1784"
+    married: "1784"
 sources:
   - tree-paulderidder
 ---

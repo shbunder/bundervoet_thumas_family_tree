@@ -17,7 +17,8 @@ mother: joanna_daneel
 spouses:
   - id: cornelia_verkouille
     name: Cornelia Coleta Verkouille
-    detail: Oostende, 14 Sep 1859
+    married: 1859-09-14
+    place: Oostende
 sources:
   - geneanet
 ---

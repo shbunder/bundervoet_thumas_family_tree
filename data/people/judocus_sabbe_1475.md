@@ -12,6 +12,7 @@ line: bostyn-cappaert
 father: gillis_sabbe
 spouses:
   - name: NN Vandenberghe
+    id: nn_vandenberghe
 sources:
   - tree-isavdw
 ---

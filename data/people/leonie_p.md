@@ -16,7 +16,8 @@ mother: magdalena_vb
 spouses:
   - id: jerome_dk
     name: Jerome Joseph Dekeyser
-    detail: 10 Dec 1919, Sint-Niklaas
+    married: 1919-12-10
+    place: Sint-Niklaas
 sources:
   - S16
   - S7

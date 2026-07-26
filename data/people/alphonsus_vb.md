@@ -10,7 +10,9 @@ father: carolus_vb
 mother: martinet
 spouses:
   - name: Rosalia Moerloos
-    detail: Sint-Niklaas, 7 Apr 1909
+    married: 1909-04-07
+    place: Sint-Niklaas
+    id: rosalia_moerloos
 sources:
   - S18
 ---

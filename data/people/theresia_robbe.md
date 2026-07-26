@@ -14,7 +14,8 @@ line: van-iseghem
 spouses:
   - id: albertus_gautiert
     name: Albertus Jacobus Gautiert
-    detail: Oostende, 5 May 1813
+    married: 1813-05-05
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

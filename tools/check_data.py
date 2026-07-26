@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 import sys
 from hashlib import sha256
 from pathlib import Path
@@ -15,8 +16,18 @@ from familytree.frontmatter import FrontmatterError  # noqa: E402
 from familytree.landing import stale_reason  # noqa: E402
 from familytree.match import build_index, candidates_for, compare, from_person  # noqa: E402
 from familytree.people import (  # noqa: E402
-    ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, ROOT, SPOUSE_FIELDS,
-    is_approximate, is_valid_date, load_artifacts, load_config, load_person, point_year,
+    ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, ROOT, SPOUSE_FIELDS, SPOUSE_KINDS,
+    given_names, is_approximate, is_valid_date, load_artifacts, load_config, load_person,
+    point_year, sort_key,
+)
+
+# A marriage detail may no longer carry a date or say which marriage in a sequence it
+# was. Both are fields or derived now, and a second handwritten copy is what these
+# strings had become — "1st — mother of Segerius" was asserting a parent link that
+# nothing checked against the child's own record.
+DATE_IN_PROSE = re.compile(
+    r"\b\d{4}\b|\b\d{1,2}(st|nd|rd|th)\b|\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*\s+\d",
+    re.I,
 )
 
 # The build runs this validator first, so it passes --skip-generated to avoid being
@@ -103,6 +114,31 @@ def main() -> int:
                     for k in s:
                         if k not in SPOUSE_FIELDS:
                             warnings.append(f'{pid}.md: spouses[{i}] unknown field "{k}"')
+                    # A marriage is an event, so its dates go through the same grammar
+                    # as a birth. Nothing here may be prose that later has to be parsed.
+                    for field in ("married", "divorced"):
+                        if s.get(field) and not is_valid_date(s[field]):
+                            fail(f'{pid}.md: spouses[{i}].{field} "{s[field]}" is not a valid date — '
+                                 "use 1876-11-12, 1876-11, 1876, ~1682, <1727, >1900 or 1575..1587")
+                    if s.get("kind") and s["kind"] not in SPOUSE_KINDS:
+                        fail(f'{pid}.md: spouses[{i}].kind "{s["kind"]}" must be one of '
+                             f"{', '.join(SPOUSE_KINDS)}")
+                    if s.get("divorced") and not s.get("married"):
+                        fail(f"{pid}.md: spouses[{i}] records a divorce but no marriage date")
+                    if s.get("married") and s.get("divorced") and sort_key(s["divorced"]) < sort_key(s["married"]):
+                        fail(f"{pid}.md: spouses[{i}] divorced ({s['divorced']}) before "
+                             f"married ({s['married']})")
+                    if s.get("detail") and DATE_IN_PROSE.search(s["detail"]):
+                        fail(f'{pid}.md: spouses[{i}].detail "{s["detail"]}" carries a date or a '
+                             'position in a sequence — use "married"/"divorced"/"place", or the '
+                             "list order, which is what states the sequence")
+                # Oldest first, so the order carries the sequence and nothing has to
+                # write "his 2nd marriage" into a field that cannot be checked.
+                dated = [(i, sort_key(s["married"])) for i, s in enumerate(p["spouses"]) if s.get("married")]
+                for (i, a), (j, b) in zip(dated, dated[1:]):
+                    if b < a:
+                        fail(f"{pid}.md: spouses are out of order — [{j}] ({p['spouses'][j]['married']}) "
+                             f"is earlier than [{i}] ({p['spouses'][i]['married']}); oldest first")
         for k in p:
             if k not in FIELDS and k != "note":
                 warnings.append(f'{pid}.md: unknown field "{k}"')
@@ -125,8 +161,21 @@ def main() -> int:
                 continue
             if s["id"] == pid:
                 fail(f"{pid}.md: is listed as their own spouse")
-            if not any(t.get("id") == pid for t in people[s["id"]].get("spouses") or []):
+            back = next((t for t in people[s["id"]].get("spouses") or [] if t.get("id") == pid), None)
+            if back is None:
                 fail(f"{pid}.md: lists spouse \"{s['id']}\", but {s['id']}.md does not list \"{pid}\" back")
+                continue
+            # One marriage, one set of facts. The link was already required to be
+            # mutual; the facts were not, so the two records could — and did — give
+            # different places and dates for the same act, with nothing to say which
+            # was right. Whichever record is read first would have won.
+            for field in ("kind", "married", "place", "divorced"):
+                mine, theirs = s.get(field), back.get(field)
+                if field == "kind":
+                    mine, theirs = mine or "marriage", theirs or "marriage"
+                if mine != theirs:
+                    fail(f'{pid}.md and {s["id"]}.md disagree about their marriage: '
+                         f'{field} is "{mine}" here and "{theirs}" there')
 
     # A shared child is proof of a couple, so both parents must record the marriage.
     # This is what keeps the upward tree and the downward tree describing one family.
@@ -138,6 +187,26 @@ def main() -> int:
         for a, b in ((p["father"], p["mother"]), (p["mother"], p["father"])):
             if not any(s.get("id") == b for s in people[a].get("spouses") or []):
                 fail(f'{a}.md: has a child ({pid}) with "{b}" but does not list them as a spouse')
+
+    # Which children came from which marriage is already in the data — every child names
+    # its own father and mother — so writing "mother of Segerius" into the marriage is a
+    # second copy of the tree that nothing keeps in step. The index and the tree derive
+    # that grouping; a note asserting it can only ever go stale or contradict.
+    kids_of_couple: dict[frozenset, list[str]] = {}
+    for pid, p in people.items():
+        if p.get("father") and p.get("mother"):
+            kids_of_couple.setdefault(frozenset((p["father"], p["mother"])), []).append(pid)
+    for pid, p in people.items():
+        for i, s in enumerate(p.get("spouses") or []):
+            if not (s.get("id") and s.get("detail")):
+                continue
+            words = {w.lower() for w in re.findall(r"\w{3,}", s["detail"])}
+            for kid in kids_of_couple.get(frozenset((pid, s["id"])), []):
+                named = [w for w in re.findall(r"\w{3,}", given_names(people[kid])) if w.lower() in words]
+                if named:
+                    fail(f'{pid}.md: spouses[{i}].detail names their own child ({kid}, "{named[0]}") — '
+                         f"{kid}.md already records both parents, so this is a second copy of it; "
+                         "put anything the fields cannot hold in the prose body instead")
 
     for start in people:
         seen: set[str] = set()

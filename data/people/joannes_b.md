@@ -16,10 +16,9 @@ mother: joanna_verbrugghe
 spouses:
   - id: livina_stockman
     name: Livina Stockman
-    detail: 1st — mother of Christoffel & Pieter
   - id: livina_dewilde
     name: Livina De Wilde
-    detail: 2nd, ~1745
+    married: ~1745
 sources:
   - tree-paulderidder
   - tree-glorieuxp

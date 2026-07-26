@@ -16,7 +16,8 @@ mother: catharina_vanmassenhove
 spouses:
   - id: hercules_stroobandt
     name: Hercules Stroobandt
-    detail: Torhout, 14 Jun 1659
+    married: 1659-06-14
+    place: Torhout
 sources:
   - tree-isavdw
 ---

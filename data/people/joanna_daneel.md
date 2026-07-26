@@ -17,7 +17,8 @@ mother: anna_senesael
 spouses:
   - id: pierre_ramon
     name: Pierre Francois Ramon
-    detail: Oostende, 28 Jan 1835
+    married: 1835-01-28
+    place: Oostende
 sources:
   - tree-wernero
 ---

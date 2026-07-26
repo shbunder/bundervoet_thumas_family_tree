@@ -17,9 +17,13 @@ mother: mtheresia_vandenbroeck
 spouses:
   - id: louise_bocklandt
     name: Louise Marie Bocklandt
-    detail: m. 4 May 1901 (legitimized 2 children); divorced ~1923
+    married: 1901-05-04
+    divorced: ~1923
+    detail: legitimized their two eldest children
   - name: Leontine Schreel
-    detail: m. Oostende 9 May 1946 — his 2nd marriage
+    married: 1946-05-09
+    place: Oostende
+    id: leontine_schreel
 sources:
   - agatha
   - familysearch

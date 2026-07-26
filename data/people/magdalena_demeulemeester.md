@@ -11,7 +11,7 @@ father: michiel_demeulemeester
 spouses:
   - id: willem_sabbe_o
     name: Willem Sabbe
-    detail: ~1555
+    married: ~1555
 sources:
   - tree-isavdw
 ---

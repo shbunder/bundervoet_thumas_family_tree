@@ -17,7 +17,7 @@ mother: christina_vm
 spouses:
   - id: joanna_va
     name: Joanna Coleta Van Acker
-    detail: "1795"
+    married: "1795"
 sources:
   - tree-stefpaelinck
 ---

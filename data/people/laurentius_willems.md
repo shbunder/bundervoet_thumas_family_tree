@@ -11,7 +11,8 @@ line: bostyn-cappaert
 spouses:
   - id: margaretha_vermeersch
     name: Margaretha Vermeersch
-    detail: Wingene, 18 Oct 1612
+    married: 1612-10-18
+    place: Wingene
 sources:
   - tree-isavdw
 ---

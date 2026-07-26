@@ -14,7 +14,8 @@ line: paelinck
 spouses:
   - id: adrianus_p
     name: Adrianus Paelinck
-    detail: Lochristi, 17 Jan 1711
+    married: 1711-01-17
+    place: Lochristi
 sources:
   - tree-stefpaelinck
 ---

@@ -13,7 +13,8 @@ mother: maria_vanrenterghem
 spouses:
   - id: carolus_vandewalle
     name: Carolus Vandewalle
-    detail: Oostkamp, 17 May 1662
+    married: 1662-05-17
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

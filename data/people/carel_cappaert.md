@@ -16,7 +16,8 @@ mother: sophia_vh
 spouses:
   - id: juliana_stroobandt
     name: Juliana Stroobandt
-    detail: Oostkamp, 30 Sep 1863
+    married: 1863-09-30
+    place: Oostkamp
 sources:
   - tree-1960dirk
 ---

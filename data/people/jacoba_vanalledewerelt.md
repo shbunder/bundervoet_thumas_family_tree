@@ -12,6 +12,8 @@ line: bostyn-cappaert
 spouses:
   - id: joannes_vanmaele
     name: Joannes Van Maele
+    married: 1664-07-19
+    place: Beernem
 sources:
   - tree-isavdw
 ---

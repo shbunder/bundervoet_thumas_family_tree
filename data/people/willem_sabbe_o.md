@@ -16,7 +16,7 @@ father: petrus_sabbe_1504
 spouses:
   - id: magdalena_demeulemeester
     name: Magdalena Demeulemeester
-    detail: ~1555
+    married: ~1555
 sources:
   - tree-isavdw
 ---

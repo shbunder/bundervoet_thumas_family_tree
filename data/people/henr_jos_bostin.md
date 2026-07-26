@@ -14,7 +14,8 @@ line: bostyn-cappaert
 spouses:
   - id: anna_perquy
     name: Anna Theresia Perquy
-    detail: Westkerke, 9 May 1833
+    married: 1833-05-09
+    place: Westkerke
 sources:
   - tree-stefanieschil
   - vrijwilligersrab

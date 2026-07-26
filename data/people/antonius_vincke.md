@@ -10,7 +10,8 @@ line: van-iseghem
 spouses:
   - id: anne_peperstraete
     name: Anne Therese Peperstraete
-    detail: Westvleteren, 9 May 1797
+    married: 1797-05-09
+    place: Westvleteren
 sources:
   - tree-bartvanhooren
 ---

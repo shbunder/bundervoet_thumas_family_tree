@@ -17,7 +17,8 @@ mother: daix
 spouses:
   - id: leclercq_t
     name: Marie Jacqueline Leclercq
-    detail: Wavre, 23 Feb 1743 — his 2nd marriage
+    married: 1743-02-23
+    place: Wavre
 sources:
   - S14
   - S6

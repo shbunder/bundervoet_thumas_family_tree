@@ -17,7 +17,8 @@ mother: clara_vansieleghem
 spouses:
   - id: barbara_debaecke
     name: Barbara Theresia De Baecke
-    detail: Oostkamp, 30 Apr 1732
+    married: 1732-04-30
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

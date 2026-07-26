@@ -16,7 +16,7 @@ mother: livina_stockman
 spouses:
   - id: marie_anna_dedeckere
     name: Marie Anna de Deckere
-    detail: m. ~1750
+    married: ~1750
 sources:
   - tree-paulderidder
 ---

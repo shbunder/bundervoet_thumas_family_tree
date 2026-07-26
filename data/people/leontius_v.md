@@ -10,7 +10,9 @@ father: petrusjacobus_v
 mother: clementia_w
 spouses:
   - name: Lucia Amelia Maene
-    detail: Oostende, 20 Aug 1922
+    married: 1922-08-20
+    place: Oostende
+    id: lucia_maene
 sources:
   - fs-wvl-bs
 ---

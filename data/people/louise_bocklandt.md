@@ -16,9 +16,11 @@ mother: marie_vanbergen
 spouses:
   - id: edouard_dk
     name: Édouard Dekeyser
-    detail: m. 4 May 1901 (likely Oostende); divorced ~1923
+    married: 1901-05-04
+    divorced: ~1923
+    detail: legitimized their two eldest children
   - name: Petrus Blomme
-    detail: her 2nd marriage, after the ~1923 divorce; act not yet found
+    id: petrus_blomme
 sources:
   - S17
   - tree-wete1998

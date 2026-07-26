@@ -13,7 +13,7 @@ line: thumas
 spouses:
   - id: hendrik_vdb
     name: Henricus Augustinus Vandenbemden
-    detail: 24 Apr 1873
+    married: 1873-04-24
 sources:
   - S5
   - geneanet

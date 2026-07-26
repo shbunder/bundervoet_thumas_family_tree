@@ -16,7 +16,8 @@ mother: louise_bocklandt
 spouses:
   - id: leonie_p
     name: Léonie (Philomena Leonia) Paelinck
-    detail: 10 Dec 1919, Sint-Niklaas
+    married: 1919-12-10
+    place: Sint-Niklaas
 sources:
   - tree-stefpaelinck
   - agatha

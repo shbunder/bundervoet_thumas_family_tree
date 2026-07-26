@@ -14,7 +14,8 @@ mother: virginia_leynseele
 spouses:
   - id: ludovica_vanald
     name: Ludovica Maria Vanalderweireldt
-    detail: Diksmuide, 24 May 1865
+    married: 1865-05-24
+    place: Diksmuide
 sources:
   - tree-bartvanhooren
 ---

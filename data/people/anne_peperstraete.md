@@ -8,7 +8,8 @@ line: van-iseghem
 spouses:
   - id: antonius_vincke
     name: Antonius Vincke
-    detail: Westvleteren, 9 May 1797
+    married: 1797-05-09
+    place: Westvleteren
 sources:
   - tree-bartvanhooren
 ---

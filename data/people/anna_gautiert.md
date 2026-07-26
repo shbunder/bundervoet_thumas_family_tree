@@ -16,7 +16,8 @@ mother: theresia_robbe
 spouses:
   - id: joannes_jos_vi
     name: Joannes Josephus Van Iseghem
-    detail: Oostende, 24 Mar 1847
+    married: 1847-03-24
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

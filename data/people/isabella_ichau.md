@@ -12,7 +12,7 @@ line: de-keyser
 spouses:
   - id: antonius_dominicus_bocklandt
     name: Antonius Dominicus Bocklandt
-    detail: married 1838
+    married: "1838"
 sources:
   - tree-wete1998
 ---

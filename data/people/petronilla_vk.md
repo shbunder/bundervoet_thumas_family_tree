@@ -14,7 +14,8 @@ line: paelinck
 spouses:
   - id: livinus2_p
     name: Livinus Paelinck
-    detail: Kalken, 7 Nov 1739
+    married: 1739-11-07
+    place: Kalken
 sources:
   - tree-stefpaelinck
 ---

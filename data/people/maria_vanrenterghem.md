@@ -11,7 +11,7 @@ father: judocus_vanrenterghem
 mother: appolonia_vandewoestijne
 spouses:
   - name: Cornelius Vandewalle
-    detail: earlier marriage
+    id: cornelius_vandewalle
   - id: michael_rups
     name: Michael Rups
 sources:

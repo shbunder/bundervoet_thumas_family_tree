@@ -16,7 +16,8 @@ mother: anna_c_devriese
 spouses:
   - id: michael_degrande
     name: Michael De Grande
-    detail: Ruiselede, 4 May 1755
+    married: 1755-05-04
+    place: Ruiselede
 sources:
   - tree-isavdw
   - tree-kathrynann

@@ -16,7 +16,8 @@ mother: brigitte_wyllie
 spouses:
   - id: eugenia_dutreeuw
     name: Eugenia Henrica Dutreeuw
-    detail: Diksmuide, 4 Jun 1828
+    married: 1828-06-04
+    place: Diksmuide
 sources:
   - tree-bartvanhooren
 ---

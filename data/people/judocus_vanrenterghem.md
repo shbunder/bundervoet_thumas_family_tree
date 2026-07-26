@@ -16,7 +16,8 @@ mother: barbara_wittenheyns
 spouses:
   - id: appolonia_vandewoestijne
     name: Appolonia Vande Woestijne
-    detail: Brugge (St-Catharina), 20 Jan 1602
+    married: 1602-01-20
+    place: Brugge (St-Catharina)
 sources:
   - tree-isavdw
 ---

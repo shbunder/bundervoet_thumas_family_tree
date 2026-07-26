@@ -14,7 +14,8 @@ mother: jacoba_monballiu
 spouses:
   - id: judocus_sabbe
     name: Judocus Sabbe
-    detail: Oostkamp, 4 Aug 1700
+    married: 1700-08-04
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

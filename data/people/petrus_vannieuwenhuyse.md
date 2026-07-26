@@ -16,7 +16,8 @@ mother: cornelia_govaert
 spouses:
   - id: jacoba_monballiu
     name: Jacoba Monballiu
-    detail: Oostkamp, 23 Jul 1673
+    married: 1673-07-23
+    place: Oostkamp
 sources:
   - tree-isavdw
   - agatha

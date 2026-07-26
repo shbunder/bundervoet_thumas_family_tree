@@ -25,7 +25,15 @@ FIELDS = [
     "nickname", "branch", "line", "father", "mother", "spouses", "sources",
 ]
 EVENT_FIELDS = ["date", "place"]
-SPOUSE_FIELDS = ["id", "name", "detail"]
+# A marriage is an event too, so it is stored like one: `married` and `divorced` are
+# dates in the grammar below, `place` is where the act was passed. `kind` separates a
+# recorded marriage from a partnership that produced children without one — the
+# difference is a fact about the couple, and inferring it from the wording of a note
+# is how "wife" ends up printed under someone who never was one. `detail` survives for
+# what no field can hold, but it may no longer carry a date, a place, or the position
+# of the marriage in a sequence: those are fields now, or derived from list order.
+SPOUSE_FIELDS = ["id", "name", "kind", "married", "place", "divorced", "detail"]
+SPOUSE_KINDS = ("marriage", "partnership")
 # An artifact is a saved primary document — a scan or photograph of an act. It is
 # evidence, so it lives in data/ with the facts, not in docs/ with the writing about
 # them, and it carries its own record in the same frontmatter format.
@@ -134,6 +142,26 @@ def event_text(e: dict | None) -> str:
     if not e:
         return ""
     return " ".join(x for x in (format_date(e.get("date")), e.get("place")) if x)
+
+
+def marriage_text(s: dict) -> str:
+    """The line shown beside a spouse's name. Derived from the fields, never stored.
+
+    The renderer must not have to know that `~1745` means "about" — that is the same
+    reason `display_dates` lives here, and it is what keeps `assets/` free of any
+    opinion about what a date says.
+    """
+    bits = []
+    where_when = ", ".join(x for x in (s.get("place"), format_date(s.get("married"))) if x)
+    if s.get("kind") == "partnership":
+        bits.append("partner" + (f", {where_when}" if where_when else ""))
+    elif where_when:
+        bits.append(f"m. {where_when}")
+    if s.get("divorced"):
+        bits.append(f"divorced {format_date(s['divorced'])}")
+    if s.get("detail"):
+        bits.append(s["detail"])
+    return " · ".join(bits)
 
 
 def display_dates(p: dict) -> str:
@@ -350,9 +378,22 @@ def to_browser_record(p: dict) -> dict:
             out["order"] = sort_key(p["birth"].get("date"))
     if p.get("death"):
         out["died"] = event_text(p["death"])
-    for field in ("occupation", "nickname", "branch", "line", "father", "mother", "spouses"):
+    for field in ("occupation", "nickname", "branch", "line", "father", "mother"):
         if p.get(field):
             out[field] = p[field]
+    # The marriage fields are folded into one display line here, for the same reason
+    # birth and death are. `kind` goes across as itself, because the page has to say
+    # "partner" rather than "wife" and that is a fact, not a formatting choice.
+    if p.get("spouses"):
+        out["spouses"] = [
+            {k: v for k, v in (
+                ("id", s.get("id")),
+                ("name", s.get("name")),
+                ("kind", s.get("kind")),
+                ("detail", marriage_text(s)),
+            ) if v}
+            for s in p["spouses"]
+        ]
     # The records cite the registry by id; the browser wants something readable.
     # Resolving here keeps the citation in one place and the prose out of the data.
     if p.get("sources"):

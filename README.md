@@ -1,8 +1,9 @@
 # Family Tree of Renée & Léon Bundervoet
 
 The family history of Renée and Léon Bundervoet — Bundervoet–De Keyser of the Flemish
-coast and Thumas–Janssens of the Brussels edge, meeting in Leuven. 307 people; the
-deepest documented roots reach the mid-1400s.
+coast and Thumas–Janssens of the Brussels edge, meeting in Leuven. 307 people. The tree
+reaches back to the 1440s, and to the 1640s on records actually read in an archive —
+the older generations rest on other people's trees and are marked as such.
 
 What the project is trying to achieve, and the rules research follows, are in
 [CLAUDE.md](CLAUDE.md). **The method — why those rules exist, the prior work it builds
@@ -116,7 +117,13 @@ mother: mtheresia_vandenbroeck
 spouses:
   - id: louise_bocklandt
     name: Louise Marie Bocklandt
-    detail: m. 4 May 1901; divorced ~1923
+    married: 1901-05-04
+    divorced: ~1923
+    detail: legitimized their two eldest children
+  - id: leontine_schreel
+    name: Leontine Schreel
+    married: 1946-05-09
+    place: Oostende
 source: "PRIMARY: Oostende marriage act nr. 81, 9 May 1946 (FamilySearch)"
 ---
 
@@ -166,12 +173,32 @@ relations are named from it — without it the tree says "sibling" rather than "
 Fill it in only from what a record actually says, never from a forename.
 
 `spouses` is a list, oldest marriage first. Each entry needs a `name`; give it an `id`
-too when that spouse has a record, and the tree becomes walkable sideways. Two rules the
-validator enforces, both so the tree can be built *downwards* as well as up:
+too when that spouse has a record, and the tree becomes walkable sideways.
+
+A marriage is an event, so it is stored like one. `married` and `divorced` take dates in
+the grammar above; `place` is where the act was passed; `kind` is `partnership` for a
+couple who had children without a recorded marriage, and is otherwise omitted. `detail`
+is left for what none of those can hold — and only that. It may not carry a date, a
+place, or which marriage in a sequence this was, because those are fields now, or are
+what the list order already says.
+
+Five rules the validator enforces:
 
 - **Marriage is mutual.** If A lists B as a spouse, B must list A.
 - **A shared child proves a couple.** If a record has `father: A` and `mother: B`, then
   A and B must each list the other.
+- **One marriage, one set of facts.** The two records must give the same `kind`,
+  `married`, `place` and `divorced`. Before this was checked, two records gave different
+  places for the same wedding and whichever was read first won.
+- **Oldest first.** Where both entries are dated, the list order must match them — so
+  the order carries the sequence and nothing has to write "his 2nd marriage" anywhere.
+- **A marriage never names a child.** Which children came from which marriage is already
+  in the data: every child names its own father and mother. "1st — mother of Segerius"
+  in a marriage field was a second copy of a link nothing kept in step.
+
+Which children belong to which marriage is therefore *derived*, and the tree draws it:
+someone who married twice gets one row of children per marriage, captioned with the other
+parent, rather than one row that silently merges two sibships into one.
 
 `sources` is a list of ids from `research/sources.json` — `tree-isavdw`, `S1`. The
 records cite the registry rather than describing it, so "Geneanet tree isavdw

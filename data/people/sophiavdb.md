@@ -16,7 +16,8 @@ mother: delphina_vdb
 spouses:
   - id: felix_v
     name: Felix Vanstechelman
-    detail: Mariakerke, 19 Dec 1844
+    married: 1844-12-19
+    place: Mariakerke
 sources:
   - tree-stechec
 ---

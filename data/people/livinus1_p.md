@@ -11,7 +11,8 @@ line: paelinck
 spouses:
   - id: elisabeth_t
     name: Elisabeth Temmerman
-    detail: Gent, 18 Jan 1645
+    married: 1645-01-18
+    place: Gent
 sources:
   - tree-stefpaelinck
 ---

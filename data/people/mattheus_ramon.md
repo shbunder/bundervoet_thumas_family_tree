@@ -15,10 +15,11 @@ father: stephanus_ramon
 mother: joanna_truant
 spouses:
   - name: Anna Anastasia Norysse
-    detail: 1st
+    id: anna_norysse
   - id: jacoba_ossaert
     name: Jacoba Josepha Ossaert
-    detail: Zande, 31 May 1772 — his 2nd marriage
+    married: 1772-05-31
+    place: Zande
 sources:
   - tree-wernero
 ---

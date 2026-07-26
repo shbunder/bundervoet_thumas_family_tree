@@ -16,7 +16,8 @@ mother: maria_c_declerck
 spouses:
   - id: anna_fr_degrande
     name: Anna Francisca De Grande
-    detail: Oostkamp, 4 Oct 1785
+    married: 1785-10-04
+    place: Oostkamp
 sources:
   - tree-isavdw
 ---

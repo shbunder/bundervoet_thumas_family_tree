@@ -17,7 +17,8 @@ mother: martinet
 spouses:
   - id: eduardus_p
     name: Eduardus Paelinck
-    detail: Sint-Niklaas, 17 Nov 1888 — her 2nd marriage
+    married: 1888-11-17
+    place: Sint-Niklaas
 sources:
   - S16
   - S7

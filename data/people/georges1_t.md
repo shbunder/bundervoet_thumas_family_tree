@@ -17,7 +17,8 @@ mother: leclercq_t
 spouses:
   - id: noel_t
     name: Marie Catherine Noël
-    detail: Grez-Doiceau, 3 Jan 1771
+    married: 1771-01-03
+    place: Grez-Doiceau
 sources:
   - fs-brabant-bs
   - S14

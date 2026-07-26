@@ -17,7 +17,8 @@ mother: morree
 spouses:
   - id: ramon
     name: Eugenia Mathildis Ramon (1882)
-    detail: Oostende, 4 Jan 1882
+    married: 1882-01-04
+    place: Oostende
 sources:
   - tree-wernero
 ---

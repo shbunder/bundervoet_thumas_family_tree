@@ -16,7 +16,8 @@ mother: elisabeth_t
 spouses:
   - id: petronella_v
     name: Petronella Verniers
-    detail: Lochristi, Feb 1681
+    married: 1681-02
+    place: Lochristi
 sources:
   - tree-stefpaelinck
 ---

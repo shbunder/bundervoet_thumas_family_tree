@@ -13,7 +13,8 @@ mother: ramon
 spouses:
   - id: devos
     name: Joanna Paula Devos
-    detail: Oostende, 26 Apr 1919
+    married: 1919-04-26
+    place: Oostende
 sources:
   - tree-wernero
 ---

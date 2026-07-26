@@ -17,7 +17,8 @@ mother: carolina_vh
 spouses:
   - id: sophiavdb
     name: Sophia Van den Broucke
-    detail: Mariakerke, 19 Dec 1844 — his 2nd marriage
+    married: 1844-12-19
+    place: Mariakerke
 sources:
   - tree-stechec
 ---

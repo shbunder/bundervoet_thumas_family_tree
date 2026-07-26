@@ -13,7 +13,8 @@ mother: ludovica_ellebout
 spouses:
   - id: carolus_vanald
     name: Carolus Ludovicus Vanalderweireldt
-    detail: Diksmuide, 4 Jun 1828
+    married: 1828-06-04
+    place: Diksmuide
 sources:
   - tree-bartvanhooren
 ---

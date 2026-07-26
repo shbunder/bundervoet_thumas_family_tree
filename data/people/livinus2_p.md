@@ -16,7 +16,8 @@ mother: livina_pickaut
 spouses:
   - id: petronilla_vk
     name: Petronilla Carolina Van Kerckhove
-    detail: Kalken, 7 Nov 1739
+    married: 1739-11-07
+    place: Kalken
 sources:
   - tree-stefpaelinck
 ---

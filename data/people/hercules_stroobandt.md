@@ -16,7 +16,8 @@ mother: judoca_vanhecke
 spouses:
   - id: joanna_willaert
     name: Joanna Willaert
-    detail: Torhout, 14 Jun 1659
+    married: 1659-06-14
+    place: Torhout
 sources:
   - tree-isavdw
 ---

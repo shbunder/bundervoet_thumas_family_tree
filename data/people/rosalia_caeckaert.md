@@ -13,7 +13,8 @@ mother: godeliva_rotsaert
 spouses:
   - id: florentinus_stroobandt
     name: Florentinus Stroobandt
-    detail: Beernem, 29 Sep 1836
+    married: 1836-09-29
+    place: Beernem
 sources:
   - S10
   - tree-isavdw

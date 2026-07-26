@@ -16,7 +16,6 @@ mother: livina_stockman
 spouses:
   - id: bogaert
     name: Petronilla Bogaert
-    detail: d. 1792
 sources:
   - tree-paulderidder
   - tree-glorieuxp

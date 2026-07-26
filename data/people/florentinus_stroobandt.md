@@ -15,6 +15,8 @@ mother: joanna_keirsebilck
 spouses:
   - id: rosalia_caeckaert
     name: Rosalia Caeckaert
+    married: 1836-09-29
+    place: Beernem
 sources:
   - S10
   - tree-kathrynann

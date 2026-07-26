@@ -13,7 +13,8 @@ mother: clara_vandeputte
 spouses:
   - id: judoca_vandenberghe
     name: Judoca Vandenberghe
-    detail: Oostkamp, 11 Jun 1616
+    married: 1616-06-11
+    place: Oostkamp (Ruddervoorde)
 sources:
   - tree-isavdw
 ---

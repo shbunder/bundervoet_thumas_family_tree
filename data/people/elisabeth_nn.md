@@ -8,7 +8,6 @@ line: bundervoet
 spouses:
   - id: livinus_bundervoet
     name: Livinus Bundervoet
-    detail: 1st — mother of Segerius
 sources:
   - tree-paulderidder
 ---

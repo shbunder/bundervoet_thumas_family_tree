@@ -12,7 +12,6 @@ sources:
   - S12
 ---
 
-
 STRONG LEAD, NOT GRAFTED (July 2026). A Brugge marriage act of 16 August 1851 ([[S12]])
 records a **Franciscus Léopoldus Smessaert** marrying an **Anna Francisca Morbeé**, and
 names both sets of parents: Paulus Smessaert x Isabella Claeys for him, Petrus Josephus

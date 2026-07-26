@@ -15,7 +15,8 @@ line: paelinck
 spouses:
   - id: martinet
     name: Maria Ludovica Martinet
-    detail: Nieuwkerken-Waas, 1 Feb 1860
+    married: 1860-02-01
+    place: Nieuwkerken-Waas
 sources:
   - S18
   - tree-stefpaelinck

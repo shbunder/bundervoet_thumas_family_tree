@@ -14,7 +14,8 @@ father: carolus_vandenberghe
 spouses:
   - id: petrus_sabbe
     name: Petrus Sabbe
-    detail: Oostkamp/Ruddervoorde, 11 Jun 1616
+    married: 1616-06-11
+    place: Oostkamp (Ruddervoorde)
 sources:
   - tree-isavdw
 ---

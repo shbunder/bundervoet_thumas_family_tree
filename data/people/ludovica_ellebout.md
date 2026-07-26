@@ -11,7 +11,8 @@ line: van-iseghem
 spouses:
   - id: ludovicus_dutreeuw
     name: Ludovicus Emanuel Dutreeuw
-    detail: Diksmuide, 27 May 1807
+    married: 1807-05-27
+    place: Diksmuide
 sources:
   - tree-bartvanhooren
 ---

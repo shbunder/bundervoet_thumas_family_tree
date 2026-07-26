@@ -17,7 +17,8 @@ mother: maria_malfait
 spouses:
   - id: carolus_ramon
     name: Carolus Ludovicus Ramon
-    detail: Oostende, 14 Sep 1859
+    married: 1859-09-14
+    place: Oostende
 sources:
   - geneanet
 ---

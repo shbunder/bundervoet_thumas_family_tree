@@ -16,7 +16,8 @@ mother: appolonia_huyghebaert
 spouses:
   - id: joannes_vi2
     name: Joannes Van Iseghem
-    detail: Oostende, 23 Aug 1872
+    married: 1872-08-23
+    place: Oostende
 sources:
   - tree-gverdievel
 ---

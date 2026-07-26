@@ -11,7 +11,8 @@ father: simon_vandewalle_1565
 mother: christina_desangere
 spouses:
   - id: francisca_vanhoutte
-    name: Francisca Van Houtte (partner)
+    name: Francisca Van Houtte
+    kind: partnership
 sources:
   - tree-isavdw
 ---

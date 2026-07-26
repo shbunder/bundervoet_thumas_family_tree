@@ -15,7 +15,8 @@ line: thumas
 spouses:
   - id: georges1_t
     name: Georges Thumas
-    detail: Grez-Doiceau, 3 Jan 1771
+    married: 1771-01-03
+    place: Grez-Doiceau
 sources:
   - S14
   - S6

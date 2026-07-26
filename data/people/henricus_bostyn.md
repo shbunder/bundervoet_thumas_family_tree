@@ -17,7 +17,8 @@ mother: mathilde_desmet
 spouses:
   - id: judith_cappaert
     name: Judith Marie Cappaert
-    detail: Oostkamp, 31 Jul 1900
+    married: 1900-07-31
+    place: Oostkamp
 sources:
   - tree-1960dirk
 ---
