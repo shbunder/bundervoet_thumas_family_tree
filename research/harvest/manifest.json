@@ -2179,6 +2179,19 @@
       "acts": 600
     },
     {
+      "id": "willaert-torhout",
+      "query": {
+        "name": "Willaert",
+        "country_code": "be",
+        "eventplace": "Torhout"
+      },
+      "date": "2026-07-26",
+      "found": 166,
+      "mentions": 166,
+      "complete": true,
+      "acts": 166
+    },
+    {
       "id": "willems",
       "query": {
         "name": "Willems",
@@ -2189,6 +2202,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "willems-wingene",
+      "query": {
+        "name": "Willems",
+        "country_code": "be",
+        "eventplace": "Wingene"
+      },
+      "date": "2026-07-26",
+      "found": 8,
+      "mentions": 8,
+      "complete": true,
+      "acts": 8
     },
     {
       "id": "wittenheyns",
@@ -2203,6 +2229,32 @@
       "acts": 0
     },
     {
+      "id": "wittenheyns-oostkamp",
+      "query": {
+        "name": "Wittenheyns",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "wittock-belsele",
+      "query": {
+        "name": "Wittock",
+        "country_code": "be",
+        "eventplace": "Belsele"
+      },
+      "date": "2026-07-26",
+      "found": 2,
+      "mentions": 2,
+      "complete": true,
+      "acts": 2
+    },
+    {
       "id": "wyllie",
       "query": {
         "name": "Wyllie",
@@ -2213,6 +2265,19 @@
       "mentions": 95,
       "complete": true,
       "acts": 95
+    },
+    {
+      "id": "wyllie-diksmuide",
+      "query": {
+        "name": "Wyllie",
+        "country_code": "be",
+        "eventplace": "Diksmuide"
+      },
+      "date": "2026-07-26",
+      "found": 22,
+      "mentions": 22,
+      "complete": true,
+      "acts": 22
     }
   ],
   "population": {

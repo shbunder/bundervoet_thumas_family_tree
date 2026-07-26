@@ -28,7 +28,8 @@ held here was the certificate/registration date, not the birth date. The Bredene
 act itself (nr. 116, S21), read as an image, says she was born "eergisteren de
 dertigsten April" (the day before yesterday, the thirtieth of April) against an act
 date of 2 May 1886; the 1906 marriage act (nr. 258, S20), read separately, independently
-gives the same 30 April date. See docs/research-log.md §46 for the retraction.
+gives the same 30 April date. See docs/research-log.md §48 for the retraction (§46
+covers a source-id collision from the same pass).
 
 GRAFTED (2026-07-26): parents identified from the same 1906 Oostende marriage act,
 read as an image — father Ludovicus Schalandryn (werkman, resident at Oostende), mother
