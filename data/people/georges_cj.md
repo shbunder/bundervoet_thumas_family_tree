@@ -20,6 +20,9 @@ spouses:
     married: 1872-06-20
     place: Kraainem
 sources:
+  - S26
+  - S27
+  - S28
   - S25
   - S11
   - S8
@@ -48,15 +51,25 @@ later, in his son's 1902 act, he is a *landbouwer en herbergier*. One man, two s
 life; the occupation field keeps the later one because that is how the family is remembered,
 and this note keeps the earlier.
 
-FRONTIER — a daughter the tree does not have. Searching AGATHA for Thumas at Kraainem
-returned a second act beside the 1872 marriage: a **Kraainem marriage of 15 April 1899**,
-in which the bride is **Henrica Thumas** and her parents are given as *Georgius Carolus
-Josephus Thumas* and *Antonia Bossin* — this couple. So Henrica is a daughter of theirs and
-a sister of [[jbgeorgius]], and she belongs in the tree under objective 2.
+FRONTIER CLOSED, AND THEN SOME (2026-07-26). The 1899 Kraainem act naming Henrica was opened,
+and searching the surname pair *Thumas Bossin* found two more like it. **Three daughters, all
+from acts naming this couple as the bride's parents:**
 
-She is named here rather than grafted: the act has not been opened, so her birth date, her
-husband and her own line are all unread. Opening it is the obvious next move, and it would
-name her husband's parents too.
+- [[jcseraphina_t]], b. Kraainem 21 March 1873, m. Jan Baptist Coppens there 27 July 1892 (S26)
+- [[henrica_thumas]], b. Kraainem 24 June 1878, m. Franciscus Coenraets there 15 April 1899 (S27)
+- [[misabella_t]], b. Sint-Stevens-Woluwe 18 August 1880, m. Ludovicus Bossin there 10 April 1900 (S28)
+
+With [[jbgeorgius]], who married at Kraainem in 1902, that is four children — and the acts
+track his own life alongside them. He is a *fabriekbediende* in 1892 and a *herbergier* by
+1899, which is the move into the inn this record already described. The 1892 act has
+[[bossin]] alive and keeping house; the 1899 and 1900 acts give her death date exactly.
+
+STILL OPEN — **a fifth child, probably a son.** A witness at the 1900 wedding is *Georgius
+Thumas, 24, of Kraainem, fabriekwerker*, and a *Georgius Thumas* witnesses at the 1902 wedding
+too. Born about 1875–76, in this couple's commune, standing at two of their children's
+weddings. He is almost certainly their son and he is **not grafted**, because a witness entry
+gives no parents and this family has already produced two brothers called Georges one
+generation up.
 
 FOUR SIBLINGS (2026-07-26), from FamilySearch's index of the Grez-Doiceau civil registers
 (S25), searched by both parents at once: [[mtstephanie_t]] declared 11 August 1835,

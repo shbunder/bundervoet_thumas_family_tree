@@ -17,7 +17,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 28 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 29 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 13 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
@@ -149,6 +149,33 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** Reached from the Open Archives mirror https://www.openarchieven.nl/abl:e18081cf-3acb-279b-061b-5ebd8a678b29 which — unlike the 1873 and 1903 acts — DOES carry a scan link: https://www.familysearch.org/ark:/61903/3:1:9392-HGZ1-T?i=217&cc=1482191&cat=140936 . The image has not been read here, only the transcription. Not grafted: this is the generation above the frontier that found it.
+
+#### `S26` — Marriage act nr. 4 — Jan Baptist Coppens × Joanna Catharina Seraphina Thumas, Kraainem, 27 July 1892
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00204117_0>
+- **Collection:** Burgerlijke stand - Huwelijksakten - Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem
+- **Covers:** AGATHA act analysis: full transcription of both spouses, both sets of parents and the witnesses, with birth dates, residences and trades.
+- **Yielded:** Bride born Kraainem 21 Mar 1873, daughter of Georgius Carolus Josephus Thumas (fabriekbediende) and Antonia Bossin (huishoudster, alive). Groom born Sint-Stevens-Woluwe 6 Mar 1870, metser, son of Hendrik Coppens x Catharina Bossin.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An analysis, not the register image. Complete enough to read like an act, but it is a transcription.
+
+#### `S27` — Marriage act nr. 4 — Franciscus Coenraets × Henrica Thumas, Kraainem, 15 April 1899
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00218431_0>
+- **Collection:** Burgerlijke stand - Huwelijksakten - Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem
+- **Covers:** AGATHA act analysis: full transcription of both spouses, both sets of parents and the witnesses, with birth dates, residences and trades.
+- **Yielded:** Bride born Kraainem 24 June 1878, daughter of Georgius Carolus Josephus Thumas (herbergier) and Antonia Bossin, the mother given as dead at Kraainem on 7 Nov 1894. Groom born Sint-Stevens-Woluwe 13 June 1872, brouwersgast, son of Franciscus Coenraets (winkelier) x Anna Amelia Godts (d. Sint-Stevens-Woluwe 5 Jan 1875).
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An analysis, not the register image. Complete enough to read like an act, but it is a transcription.
+
+#### `S28` — Marriage act nr. 3 — Ludovicus Bossin × Maria Isabella Helena Thumas, Kraainem, 10 April 1900
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00218443_0>
+- **Collection:** Burgerlijke stand - Huwelijksakten - Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem
+- **Covers:** AGATHA act analysis: full transcription of both spouses, both sets of parents and the witnesses, with birth dates, residences and trades.
+- **Yielded:** Bride born Sint-Stevens-Woluwe 18 Aug 1880, dienstmeid, daughter of Georgius Carolus Josephus Thumas (herbergier) and Antonia Bossin, again given as dead at Kraainem 7 Nov 1894. Groom born Sint-Stevens-Woluwe 5 Dec 1879, polijster, son of Joannes Baptista Bossin (d. 19 Mar 1887) x Maria Wolf (herbergierster). Witnesses include Georgius Thumas, 24, of Kraainem — an unidentified probable brother of the bride.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An analysis, not the register image. Complete enough to read like an act, but it is a transcription.
 
 ### FamilySearch
 

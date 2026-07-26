@@ -6,7 +6,8 @@ birth:
   date: 1849-01-10
   place: Sint-Stevens-Woluwe
 death:
-  date: "1894"
+  date: 1894-11-07
+  place: Kraainem
 confidence: doc
 branch: Thumas
 line: thumas
@@ -18,6 +19,8 @@ spouses:
     married: 1872-06-20
     place: Kraainem
 sources:
+  - S27
+  - S28
   - S24
   - S11
   - S8
@@ -52,3 +55,11 @@ The same series gives her two siblings this tree did not have: [[cornelius_bossi
 13 September 1847, and [[ludovica_bossin]], declared 5 October 1853. Both are recorded at
 `sup`; her own already-documented entry sitting in the middle of the sequence is what makes
 them safe to add rather than merely plausible.
+
+DEATH DATED (2026-07-26): this record held only the year. **Two of her daughters' marriage
+acts state it exactly** — Kraainem, **7 November 1894** — [[henrica_thumas]]'s of 15 April 1899
+(S27) and [[misabella_t]]'s of 10 April 1900 (S28), independently, in the field for a dead
+parent. She was forty-five.
+
+Those same acts, with [[jcseraphina_t]]'s of 1892, give her three daughters this tree did not
+have. In 1892 she is alive and keeping house; by 1899 she is a date in her daughters' acts.

@@ -1764,14 +1764,14 @@
     {
       "id": "vaniseghem",
       "query": {
-        "name": "Van Iseghem",
+        "name": "vaniseghem",
         "country_code": "be"
       },
-      "date": "2026-07-25",
-      "found": 1894,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "date": "2026-07-26",
+      "found": 507,
+      "mentions": 507,
+      "complete": true,
+      "acts": 507
     },
     {
       "id": "vaniseghem-lens",
@@ -1930,14 +1930,14 @@
     {
       "id": "vannieuwenhuyse",
       "query": {
-        "name": "Van Nieuwenhuyse",
+        "name": "vannieuwenhuyse",
         "country_code": "be"
       },
-      "date": "2026-07-25",
-      "found": 1909,
-      "mentions": 600,
+      "date": "2026-07-26",
+      "found": 2536,
+      "mentions": 2000,
       "complete": false,
-      "acts": 600
+      "acts": 2000
     },
     {
       "id": "vannieuwenhuyse-oostkamp",

@@ -1,0 +1,31 @@
+---
+id: jbcoppens
+name: Jan Baptist Coppens
+surname: Coppens
+birth:
+  date: 1870-03-06
+  place: Sint-Stevens-Woluwe
+sex: m
+confidence: sup
+occupation: metser (mason)
+branch: Thumas
+line: thumas
+father: hendrik_coppens
+mother: catharina_bossin
+spouses:
+  - id: jcseraphina_t
+    name: Joanna Catharina Seraphina Thumas
+    married: 1892-07-27
+    place: Kraainem
+sources:
+  - S26
+---
+
+Married [[jcseraphina_t]] at Kraainem on **27 July 1892** (act nr. 4, S26). Born at
+Sint-Stevens-Woluwe on **6 March 1870**, a *metser* like his father [[hendrik_coppens]], and
+living in his birth commune when he married.
+
+He turns up again in his sisters-in-law's weddings — a witness, aged 29, at [[henrica_thumas]]'s
+in 1899 and, aged 30, at [[misabella_t]]'s in 1900. The families stayed close.
+
+`sup`: an act analysis, not the register image.
