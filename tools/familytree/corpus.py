@@ -187,6 +187,41 @@ class Act:
         return f"{self.type} {where}".strip()
 
 
+# A name field that does not hold a name.
+#
+# Aalst writes transcription remarks into PersonNameLastName: "de vader is de aangever" —
+# the father is the declarant — appears 128,958 times, which made it by a wide margin the
+# commonest "surname" in a 4.3-million-mention corpus, ahead of De Smet. It is not a rare
+# glitch either: 135,418 mentions across 4,205 distinct values are sentences, ages, dates or
+# numbered lists sitting where a name belongs.
+#
+# Two rules, and both are deliberately narrow, because the cost of over-reaching is deleting
+# somebody's actual name:
+#
+#   a standalone finite verb — a surname is a noun phrase and never contains "is", "doet"
+#   or "zijnde" as a word of its own. ("Van Iseghem" is safe: its "Is" is inside a token.)
+#
+#   a digit — no Flemish surname contains one, and where one appears it is an age, a year or
+#   a list index glued to a name ("Devriese 2", "De Smet - 71 j Aalst zonder"). Those are
+#   dropped whole rather than picked apart: which token is the surname is exactly the sort of
+#   thing this project may not guess at.
+#
+# Checked against the corpus before being applied. Everything of four words or more that
+# survives is a real name — "De Wolf - Coevoet" (9,870), "Van Pottelsberghe de la Potterie",
+# "de Cocquéau des Mottes", "Baron Van der Noot" — so the rule is not eating the long
+# aristocratic and double-barrelled names that a word-count rule would have destroyed.
+#
+# The mention itself is kept. The act does record that somebody took part; it simply does not
+# say who, and an absent name is the truthful representation of that.
+_NOT_A_NAME = re.compile(r"\d|(?:^|\s)(?:is|was|doet|heeft|wordt|refuse|qui|zijnde)(?:\s|$)", re.I)
+
+
+def real_name(value: str | None) -> str:
+    """The value if it is a name, otherwise nothing. See _NOT_A_NAME."""
+    v = (value or "").strip()
+    return "" if not v or _NOT_A_NAME.search(v) else v
+
+
 def _person_name(p: dict) -> tuple[str, str, str]:
     n = p.get("PersonName") or {}
     # Particles are published in their own field by some archives and folded into the
@@ -196,6 +231,9 @@ def _person_name(p: dict) -> tuple[str, str, str]:
         x for x in (n.get("PersonNamePrefix"), n.get("PersonNamePrefixLastName"), n.get("PersonNameLastName")) if x
     ).strip()
     given = " ".join(x for x in (n.get("PersonNameFirstName"), n.get("PersonNameInitials")) if x).strip()
+    # Each independently, because the archive that writes a remark into the surname also
+    # writes it into the forename for a sixth of them.
+    given, surname = real_name(given), real_name(surname)
     return given, surname, " ".join(x for x in (given, surname) if x)
 
 

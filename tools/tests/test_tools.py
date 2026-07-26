@@ -193,6 +193,20 @@ def test_the_prefix_key_blocks_on_the_family_not_the_particle(a, b):
     assert _x(a) == _x(b), f"{a} and {b} must still be compared"
 
 
+def test_a_long_stem_is_not_truncated_into_an_unrelated_family():
+    """The reason the prefix length adapts to the stem rather than being fixed at four.
+
+    "Wittenheyns" has the stem "fitenheins". Cut to four characters that is "fite" — which is
+    also what "De Witte" reduces to, so a surname with no exact match anywhere in the corpus
+    was pulling 28,089 mentions of an unrelated family. A long stem has the characters to
+    spare; a short one does not, which is why both lengths exist.
+    """
+    assert _x("Wittenheyns") != _x("Dewitte")
+    assert _x("Wittenheyns") != _x("De Witte")
+    # …while the short-stem pair it would break if the length were fixed at six still holds.
+    assert _x("Vandevelde") == _x("Vandevelden")
+
+
 @pytest.mark.parametrize("a,b", [
     ("Vandenberghe", "Vandenbroeck"),
     ("Vandenbemden", "Vandenberghe"),
@@ -204,6 +218,70 @@ def test_the_prefix_key_no_longer_buckets_every_van_den_together(a, b):
     bucket, which is a scan wearing a block's clothes. These are different families and
     must land in different buckets."""
     assert _x(a) != _x(b), f"{a} and {b} are different families"
+
+
+@pytest.mark.parametrize("junk", [
+    "de vader is de aangever",              # 128,958 mentions — the commonest "surname" held
+    "De vader is de aangever.",
+    "de aangever is de vader",
+    "de moeder doet de aangifte van erkenning",
+    "Gheeraerdts 2de in rang zijnde Schepen in afwezigheid van den Burgemeester",
+    "De Smet - 71 j Aalst zonder",          # a name welded to an age and a commune
+    "1) Verleysen + 2) Van den Broeck + 3) Vera",
+    "1) 3 februari 1842 en 2) 30 mei 1850",
+])
+def test_a_sentence_in_the_name_field_is_not_a_name(junk):
+    """Aalst writes transcription remarks where a name belongs, and one of them was the
+    commonest surname in the corpus — ahead of De Smet. A remark that blocks as a surname
+    puts 129,000 unrelated people in one bucket and skews every rarity weight measured
+    against the corpus."""
+    from familytree.corpus import real_name
+    assert real_name(junk) == ""
+
+
+@pytest.mark.parametrize("name", [
+    "De Wolf - Coevoet",                    # 9,870 mentions, a real double surname
+    "Van Pottelsberghe de la Potterie",
+    "de Cocquéau des Mottes",
+    "Baron Van der Noot",
+    "Van der Noot de Vreckem",
+    "de Neve de Roden",
+    "Van op den Bosch",
+    "Van Iseghem",                          # contains "Is" — inside a token, not a word
+    "Vandewalle",
+])
+def test_the_rule_does_not_eat_a_real_name(name):
+    """The reason this is not a word-count rule. Five-word surnames exist in this corpus and
+    belong to real families; deleting them would be far worse than the bug being fixed."""
+    from familytree.corpus import real_name
+    assert real_name(name) == name
+
+
+def test_a_nameless_participant_is_still_a_participant():
+    """The act does record that somebody took part. It simply does not say who, and an absent
+    name is the truthful representation of that — not a reason to drop the person."""
+    from familytree.corpus import normalise_act
+    act = normalise_act({
+        "id": "aal:x", "archive": "aal",
+        "record": {
+            "Event": {"EventType": "Geboorte", "EventDate": {"Year": "1908"}},
+            "Person": [
+                {"@pid": "P1", "PersonName": {"PersonNameFirstName": "Romaan",
+                                              "PersonNameLastName": "Sonck"}},
+                {"@pid": "P2", "PersonName": {"PersonNameLastName": "de vader is de aangever"}},
+            ],
+            "RelationEP": [
+                {"PersonKeyRef": "P1", "EventKeyRef": "E1", "RelationType": "Kind"},
+                {"PersonKeyRef": "P2", "EventKeyRef": "E1", "RelationType": "Vader"},
+            ],
+        },
+    })
+    assert len(act.people) == 2, "the participant is not discarded"
+    father = next(p for p in act.people if p.pid == "P2")
+    assert (father.name, father.surname, father.given) == ("", "", "")
+    # And with no name there is nothing to block on, so it cannot be matched to anybody.
+    from familytree.match import block_keys, from_mention
+    assert block_keys(from_mention(father)) == []
 
 
 def test_a_name_that_is_almost_all_particle_keeps_its_whole_form():

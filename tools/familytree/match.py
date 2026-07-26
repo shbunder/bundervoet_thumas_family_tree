@@ -250,16 +250,32 @@ _PARTICLE = re.compile(r"^(?:fanden|fander|fande|fan|des|den|der|de|ten|ter|fer|
 # "Devos" would become "fos". Those keep the whole phonetic form instead.
 _STEM_FLOOR = 4
 
-# Four characters OF THE STEM, which is more of the family name than six characters of the
-# whole surname ever were — six were spent on "fanden". Chosen by measuring, not by taste:
-# against the 223 open frontiers, the prefix key pulls 2,542,433 mentions today and
-# 1,283,746 at four, and every variant pair this key exists for survives — Vanstechele
-# against Vanstechelman, and Vandevelde against Vandevelden, whose stems already differ by
-# the fifth character. Five and six are faster still (3.1x and 3.7x) and each drops one of
-# those pairs, which is a true link silently never compared. This project has always chosen
-# the missed candidate over the missed match, so it takes the strict improvement rather than
-# the trade.
-_STEM_PREFIX = 4
+# How much of the stem the prefix key keeps — and it depends on how long the stem is, which
+# is the part that took two measurements to get right.
+#
+# A SHORT stem needs generosity, because that is where a single trailing character decides
+# everything: "Vandevelde" and "Vandevelden" have stems "felde" and "felden" and are one
+# family. Four characters bridges them.
+#
+# A LONG stem needs none, and four characters actively harm it. "Wittenheyns" has the stem
+# "fitenheins"; cut to four it becomes "fite", which is also what "De Witte" reduces to — so
+# a surname with no exact matches in the corpus at all was pulling 28,089 mentions of an
+# unrelated family, and throwing away six highly discriminating characters to do it.
+#
+# Measured against the 223 open frontiers, mentions pulled through this key:
+#   ph[:6], as it was     2,542,433     the particle ate the prefix
+#   stem[:4]              1,282,568     particle stripped, fixed length
+#   stem, adaptive          941,505     this
+# Both later schemes keep all seven variant pairs the key exists for; only the adaptive one
+# also keeps Wittenheyns and De Witte apart. Strict improvements, not trades — nothing that
+# was compared before is uncompared now.
+_SHORT_STEM = 6
+_PREFIX_SHORT, _PREFIX_LONG = 4, 6
+
+
+def _prefix_key(ph: str) -> str:
+    s = surname_stem(ph)
+    return s[:_PREFIX_SHORT] if len(s) <= _SHORT_STEM else s[:_PREFIX_LONG]
 
 
 @lru_cache(maxsize=None)
@@ -283,7 +299,7 @@ def block_keys(c: Candidate) -> list[str]:
         keys.append(f"p:{ph}")
         # Catches truncated and extended forms — Vanstechele against Vanstechelman — on the
         # part of the name that identifies the family rather than on its particle.
-        keys.append(f"x:{surname_stem(ph)[:_STEM_PREFIX]}")
+        keys.append(f"x:{_prefix_key(ph)}")
         if c.birth_year:
             keys.append(f"pd:{ph}:{c.birth_year // 10}")
         for place in c.places:
