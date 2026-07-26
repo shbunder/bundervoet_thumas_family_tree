@@ -504,6 +504,20 @@ def surname_coverage(surname: str) -> float | None:
 
     None means the surname has never been harvested at all, which is different again:
     unknown, and cheap to resolve.
+
+    THE NUMERATOR IS WHAT IS HELD, NOT WHAT WAS ASKED FOR. This read the manifest's
+    `mentions` — how many that surname's own query returned — which was the same number
+    until acts started arriving by routes that never mentioned a surname. After nine
+    whole-archive harvests the manifest still said 600 De Keyser mentions held of 11,795
+    while the corpus held 3,512, and 600 of 2,370 for Damman while it held 2,334 — call
+    that 98% and it is essentially finished. Both directions of that error are bad and the
+    second is worse: understating coverage sinks the frontier's P, and it makes
+    `frontier.py` recommend "finish the harvest" as the cheapest route to records already
+    on disk. Reporting held as not-held is the same class of mistake as reporting blocked
+    as miss, pointed the other way.
+
+    The denominator stays the venue's own `found`, because that is the only figure that
+    says how many exist. Only the numerator changes: count the corpus.
     """
     h = surname_harvest(surname)
     if h is None:
@@ -511,7 +525,24 @@ def surname_coverage(surname: str) -> float | None:
     if h.get("complete"):
         return 1.0
     found = h.get("found") or 0
-    return min(1.0, (h.get("mentions") or 0) / found) if found else 1.0
+    if not found:
+        return 1.0
+    return min(1.0, mentions_held(surname) / found)
+
+
+def mentions_held(surname: str) -> int:
+    """How many mentions of a surname the corpus actually holds, by any route.
+
+    From the index when there is a current one, because counting it means reading every
+    act. The manifest's own figure is the fallback and it is a floor rather than an
+    answer: it knows only what that surname's own query returned, so it is right until
+    the first act arrives some other way and low for ever after.
+    """
+    from . import store
+    if store.is_current():
+        return store.held_under(surname)
+    h = surname_harvest(surname) or {}
+    return h.get("mentions") or 0
 
 
 # ---------- frequency ----------

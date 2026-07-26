@@ -66,7 +66,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from familytree import store  # noqa: E402
 from familytree.a2a import read_acts  # noqa: E402
 from familytree.corpus import (  # noqa: E402
-    ACTS_DIR, HARVEST, MANIFEST, MENTIONS_DIR, load_manifest, reset_manifest_cache,
+    ACTS_DIR, HARVEST, MANIFEST, MENTIONS_DIR, load_manifest, mentions_held,
+    reset_manifest_cache,
 )
 from familytree.frontier import frontier_rows  # noqa: E402
 from familytree.people import family_key, load_config, load_people  # noqa: E402
@@ -683,14 +684,34 @@ def cmd_status(args):
         print(f"  {h['id']:<30} {h['date']:<11} {h['mentions']:>9} {h['found']:>8} {h['acts']:>6}"
               + ("" if h["complete"] else "   PARTIAL"))
 
-    partial = [h for h in manifest["harvests"] if not h["complete"]]
-    if partial:
-        short = sum((h["found"] or 0) - (h["mentions"] or 0) for h in partial)
-        print(f"\n  {len(partial)} partial, {short} mentions short — raise --max and re-run with --refresh:")
-        for h in partial[:12]:
-            print(f"    {h['id']:<28} --max {h['found']} --refresh")
-        if len(partial) > 12:
-            print(f"    …and {len(partial) - 12} more")
+    # What is still missing, measured against the corpus rather than against the query log.
+    # A surname search capped at 600 is not still 600 short once nine whole archives have
+    # landed on top of it: Damman was recorded 600 of 2,370 and is now 2,334 held, which is
+    # finished. Recommending a re-harvest of records already on disk is the expensive kind
+    # of wrong. See corpus.surname_coverage.
+    partial = []
+    for h in manifest["harvests"]:
+        if h["complete"]:
+            continue
+        name = (h.get("query") or {}).get("name")
+        if not name or name == "*":
+            partial.append((h, None, None))
+            continue
+        held = mentions_held(name)
+        partial.append((h, held, (h["found"] or 0) - held))
+    still_short = [(h, held, gap) for h, held, gap in partial if gap is None or gap > 0]
+    done = len(partial) - len(still_short)
+    if still_short:
+        short = sum(gap for _h, _held, gap in still_short if gap)
+        print(f"\n  {len(still_short)} partial, {short} mentions short — raise --max and re-run with --refresh:")
+        for h, held, gap in sorted(still_short, key=lambda r: -(r[2] or 0))[:12]:
+            got = f"{held} held" if held is not None else "commune harvest"
+            print(f"    {h['id']:<26} {got:<16} --max {h['found']} --refresh")
+        if len(still_short) > 12:
+            print(f"    …and {len(still_short) - 12} more")
+    if done:
+        print(f"\n  {done} harvest(s) recorded PARTIAL are in fact complete — later harvests")
+        print("  filled them in. Nothing to do; the coverage figure is counted from the corpus.")
 
     # Which of the archives already represented here can be had whole, in one request,
     # instead of one act at a time. This is the difference between a surname and a

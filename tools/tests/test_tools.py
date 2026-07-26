@@ -597,6 +597,34 @@ def test_the_index_finds_the_same_candidates_as_a_scan(indexed_corpus):
     assert scan
 
 
+def test_coverage_counts_what_is_HELD_not_what_was_asked_for(indexed_corpus, monkeypatch):
+    """A surname's coverage is a fact about the corpus, not about the query log.
+
+    It used to read the manifest's `mentions` — how many that surname's own search
+    returned — which was the same number right up until acts began arriving by routes that
+    never mentioned a surname. After nine whole-archive harvests the manifest still claimed
+    600 De Keyser mentions held of 11,795 while the corpus held 3,512, and 600 of 2,370 for
+    Damman while it held 2,334, which is essentially finished.
+
+    Understating coverage is not a harmless conservatism: it sinks the frontier's P and it
+    makes the queue recommend "finish the harvest" as the cheapest route to records already
+    on disk. Reporting held as not-held is reporting blocked as miss, pointed the other way.
+    """
+    from familytree import corpus
+    # The manifest remembers a capped search: 1 mention of 100. The corpus holds 4,
+    # because two Bundervoet birth acts each name a Bundervoet father as well.
+    monkeypatch.setattr(corpus, "load_manifest", lambda: {
+        "population": {"be": 1000},
+        "harvests": [{"id": "bundervoet", "query": {"name": "Bundervoet"},
+                      "found": 100, "mentions": 1, "complete": False}],
+    })
+    assert corpus.mentions_held("Bundervoet") == 4
+    assert corpus.surname_coverage("Bundervoet") == pytest.approx(4 / 100)
+    # And the honest floor still applies where there is no index to count with.
+    monkeypatch.setattr(indexed_corpus, "is_current", lambda: False)
+    assert corpus.surname_coverage("Bundervoet") == pytest.approx(1 / 100)
+
+
 def test_the_index_notices_the_harvest_moving_underneath_it(indexed_corpus, tmp_path):
     """A stale index answering "no candidates" for an act fetched an hour ago is the
     corpus form of reporting `blocked` as `miss` — the failure this project is arranged
