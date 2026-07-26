@@ -1501,3 +1501,86 @@ NEXT: the extract was drawn on 28 September 1868 *for a marriage*, so a child of
 Thumas and Marie Catherine Joostens married at Grez-Doiceau around then. This tree knows only
 [[georges_cj]], who married at Kraainem in 1872. That 1868 act is in the same volume near
 image 221 and should name a sibling.
+
+## 51. Bertem and Everberg, through one act — and a confidence this project has been overstating
+
+Maria Theresia Coekelberghs was second on the ranked queue with 892 held candidates and
+**zero searches ever logged against her**. The act that answers her was already in the
+corpus. No browser was needed to find it, only to read it.
+
+**Sint-Stevens-Woluwe, act nr. 6, 24 April 1873.** It names all four parents, which is why
+one marriage act is worth six person-searches. On her side [[jb_coekelberghs]],
+*landbouwer* of Bertem, and [[anna_haesaerts]], *landbouwster* of Bertem, both present,
+both consenting, both declaring themselves unable to write. On his side
+[[jb_vandenbemden]] — a bare name, no residence, no trade, no consent — and
+[[elisabeth_langes]], *landbouwster* of Everberg, present and consenting.
+
+The brief guessed the marriage would be at the bride's commune. It was not: they married
+where they both lived and both served, at Sint-Stevens-Woluwe, while her parents were
+twenty kilometres away at Bertem. Worth remembering the next time a commune is used to
+narrow a search — a servant marries where they work.
+
+**What carries the graft is not her name.** Two identifiers already in this tree agree with
+the act exactly: the marriage date, 24 April 1873, and her husband's birth, Everberg
+19 August 1849, to the day. A third bridge pins her across thirty years. Her **1903
+Kraainem remarriage act** names the same two parents again, and names her late first
+husband as *Henricus August Vandenbemden, overleden Kraainem 12/08/1889* — the same death
+date **and** the same commune that §42's 1902 act established when it corrected this
+tree's Sint-Stevens-Woluwe to Kraainem. Three acts, thirty years apart, agreeing on a
+figure that had itself only just been corrected.
+
+It corrects as well as adds. [[hendrik_vdb]]'s record carried a Geneanet claim flagged *to
+verify*: parents "Joannes Baptista Vandenbemden × Agatha Langa". The act makes the mother
+**Elisabeth Agatha** and the surname **Langes**. The forename was incomplete and the
+surname was wrong. That is what an unverified member-tree claim is worth, and it is worth
+noting that it was close enough to have looked like confirmation.
+
+The 1903 act also gives [[coekelberghs]] a second marriage this tree did not have — to
+[[henricus_vanesch]], a widower born at Bertem in 1836, an *herbergier* at Zaventem,
+fourteen years after she was widowed. Two innkeepers from the same village, marrying in
+their sixties. And it gives her parents their deaths: Bertem, 8 January and 19 November
+1880.
+
+### What is not recorded
+
+Her parents' own 1838 Bertem marriage is registered
+(`bertem-1838-marriage-coeckelberghs-haesaerts`) and **not grafted**. It would give
+[[jb_coekelberghs]] a birth in 1809 and a further generation above, but his trade moves —
+*slagter* in 1838, 1853 and 1867, *landbouwer* in 1858, 1861 and 1873 — while his wife's
+forename is written three ways over the same span: *Anna*, *Anna Maria*, *Anna Catharina*.
+One man and one woman recorded loosely across forty-five years is much the likeliest
+reading. It is still a reading, and *Joannes Baptista Coekelberghs* turns out to be carried
+by several distinct men in Brabant between 1793 and 1921. That act **does** have a scan, at
+`familysearch.org/ark:/61903/3:1:9392-HGZ1-T`, and reading it is the next move on this line.
+
+### The finding that outlives this pass
+
+Verifying the above turned up something that is not about the Coekelberghs at all.
+
+**`S5` is recorded `confidence: doc` in the registry while its own `note` field says it is
+"an AGATHA act analysis … not the scan".** That is not an isolated slip. Five of the seven
+AGATHA-site sources marked `doc` were spot-checked — `S2`, `S5`, `S11`, `S14`, `S19` — and
+every one is a transcription or index page with no scan behind it. AGATHA's act pages are
+the Rijksarchief's own Demogen transcriptions; they are authoritative, complete, and they
+are still not the act.
+
+The charter is not ambiguous about this. `doc` = *a primary act or image was actually
+read*. So roughly twenty records currently read `doc` on evidence that earns `sup` —
+including [[coekelberghs]], [[hendrik_vdb]], [[vandenbemden]], [[jbgeorgius]],
+[[georges_cj]], [[bossin]], [[georges2_t]], [[guilielmus_bossin]], [[peremans]],
+[[arnoldus_bossin]], [[egidius_peremans]], [[elisabeth_deyn]] and [[joanna_verelst]].
+
+This pass downgrades the two records it wrote, [[coekelberghs]] and [[hendrik_vdb]], and
+stops there. The rest is a sweep, not a side-effect: it needs one consistent ruling applied
+in one place, checked per source rather than per person, because some AGATHA citations in
+this tree *were* backed by a register image read separately and must not be swept with the
+others. **Downgrading is always allowed and needs no permission; getting it wrong in either
+direction is the thing to avoid.** That is the next pass on this line, and it is worth more
+than any single graft, because a confidence code that is not honest makes every other one
+unreadable.
+
+NEXT: the confidence sweep above; the FamilySearch register image for the 1873 act
+(Sint-Stevens-Woluwe civil registration 1871–1875 is digitised as DGS **004712751**, item 2,
+images 317–768, and the specific image for act nr. 6 has not been located within it); and
+the two double-attested children of this couple the tree does not yet hold — Felix
+(b. 1876-09-10, m. Kraainem 1897-02-08) and Joannes (b. 1880-08-09, m. Kraainem 1900-09-17).

@@ -1199,14 +1199,14 @@
     {
       "id": "stockman",
       "query": {
-        "name": "Stockman",
+        "name": "stockman",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 1850,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 1850,
+      "complete": true,
+      "acts": 1850
     },
     {
       "id": "stockman-evergem",

@@ -19,6 +19,7 @@ spouses:
     married: 1846-02-24
     place: Zaventem
 sources:
+  - S29
   - S19
   - S11
   - S8
@@ -63,4 +64,18 @@ anchored. The same search, narrowed by parent, then drifted to a quite different
 Peremans in Antwerp — FamilySearch's parent filters are advisory, which this log has recorded
 before — so the rows need opening one by one before any of them becomes a person here.
 
-Opening them is cheap and it is the obvious next move on this line.
+ONE OPENED (2026-07-26), and it anchored. **Maria Josephina** married *Petrús van der Varent*
+on **5 November 1840** — and the place, which the indexed record does not carry, comes from the
+title of the volume the page sits in: ***Zaventem. Huwelijksakten 1840***. Zaventem is where
+this record's father died, where her mother died, and where she herself was born and married.
+Place plus an exact parent pair is two identifiers with one anchored, so [[mjosephina_peremans]]
+is now in the tree as her sister, with a husband and his parents.
+
+*Joannes Athanasius* and *Cornelius* are still unopened and still unanchored. The same move
+should settle them.
+
+**And the 1840 act points at what §47 could not reach.** [[egidius_peremans]] was already dead
+in November 1840, so marrying his daughter required an extract of his death act, bound into
+that volume as a *huwelijksbijlage* — the exact mechanism that produced [[S23]]. Vlaams-Brabant
+indexes no death acts at all, which makes the annexes to this 1840 marriage the best route to
+his 6 March 1837 act, and they are one volume away.

@@ -1089,6 +1089,20 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "An analysis, not the register image. Complete enough to read like an act, but it is a transcription."
+    },
+    {
+      "id": "S29",
+      "site": "familysearch",
+      "kind": "record",
+      "title": "Marriage of Petrus van der Varent x Maria Josephina Peremans, Zaventem, 5 November 1840",
+      "url": "https://www.familysearch.org/ark:/61903/1:1:X98K-CXNQ?lang=nl",
+      "artifact": "vandervarent-peremans-1840-marriage-zaventem",
+      "collection": "Belgium, Brabant, Civil Registration and Church Records, 1704-1916 — volume 'Zaventem. Huwelijksakten 1840'",
+      "covers": "Indexed marriage registration with the register page. The record carries no place; the VOLUME TITLE supplies Zaventem, which is what anchors the identification.",
+      "yielded": "A sister for Joanna Catharina Jacoba Peremans — Maria Josephina, married Petrus van der Varent (27, b. ~1813, son of Joannes van der Varent x Anna Catharina Goossens) at Zaventem on 5 Nov 1840, her parents given as Egidius Peremans x Joanna Theresia ver Elst.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "METHOD: when an indexed record gives no place, open the image and read the VOLUME TITLE — it names the commune and turns a name-only match into an anchored one. Also: Egidius was dead by 1840, so the annexes to this marriage should hold his death-act extract."
     }
   ]
 }
