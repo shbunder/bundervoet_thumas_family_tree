@@ -17,13 +17,13 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 13 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
-| `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 1 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 6 | Belgian civil and church registration, with act images. |
-| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 15 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 15 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 9 | Belgian civil and church registration, with act images. |
+| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
-| `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 0 | Volunteer transcriptions of West-Flemish marriage and death records. |
+| `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 3 | Volunteer transcriptions of West-Flemish marriage and death records. |
 | `vvf` | index | mixed | name-index | 0 | Flemish marriage indexes; the layer beneath several Geneanet trees. |
 | `stadsarchief-oostende` | archive | offline | image-read | 0 | Oostende civil registers after 1900 — not in AGATHA, not digitised. |
 | `inmemoriam` <https://www.inmemoriam.be/> | obituary | open | name-index | 1 | Digitised Belgian obituary notices. |
@@ -32,8 +32,8 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `jammart` <https://www.jammart.be/> | obituary | open | name-index | 1 | ~100,000 scanned memorial cards (bidprentjes). |
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
-| `web` | web | open | full-text | 0 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 19 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `web` | web | open | full-text | 1 | Parenteel documents and family sites published outside the big platforms. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 23 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 4 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
@@ -110,6 +110,14 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07-26
 
+#### `S19` — Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00011036_0>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Zaventem 1846, akte nr. 1
+- **Yielded:** FOUR new ancestors. The groom's parents Arnoldus Bossin x Elisabeth Deyn, both labourers of Sint-Stevens-Woluwe who attended and signed with a mark; and the bride's parents Egidius Peremans (d. Zaventem 6 Mar 1837) x Joanna Theresia Ver Elst (d. Zaventem 19 Dec 1843), both already dead. It also confirms both spouses' births as 1824-25 from their stated ages of 21, gives both their trades, and settles the bride's mother's name — Joanna Catharina Jacoba, as this tree had it, not the shortened Anna Catharina of the 1872 act.
+- **Saved artifact:** `data/artifacts/bossin-peremans-1846-marriage-zaventem.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+
 ### FamilySearch
 
 #### `S1` — Édouard Dekeyser's 1946 Oostende remarriage act (akte nr. 81)
@@ -160,6 +168,22 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** Index entries; none of these acts has been read as an image, so nothing here rises above sup.
+
+#### `S20` — Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:S3HT-D8M7-Y6D?i=172&cat=294936>
+- **Covers:** Register image, film 004166040 image 173 (act body) and image 174, ark:/61903/3:1:S3HT-D8M7-YFW (witnesses and signatures), Oostende marriage register 1906. Read on screen while logged in; no image file has been saved yet.
+- **Yielded:** Both sets of parents, from the act itself: the groom is the of-age son of the LATE Ludovicus Josephus Devriendt and of Silvia Rosalia Brissinck, werkvrouw of Steene, present and consenting; the bride is the MINOR daughter of Ludovicus Schalandrijn, werkman, resident at Oostende, present and consenting, and of the LATE Mathilde Standaert. Gives the bride's birth as Breedene 30 April 1886, two days before the act date this tree had recorded as her birth.
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** FOLLOW-UP: the act body (image 173) and the witnesses/signatures page (image 174) were read on screen at the two arks above, but no image file was ever saved to data/artifacts/. That is the honest state of the evidence, not a silent gap — capturing the artifact is pass-2 material. NOTE ON THE ID: originally logged as S19; renumbered to S20 because a concurrent pass took S19 for the Zaventem Bossin x Peremans act while this id was stashed out of the working tree — see docs/research-log.md §46.
+
+#### `S21` — Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:33S7-9PZQ-LS7>
+- **Covers:** Register image, image 84, Bredene birth register 1886. Read on screen while logged in; no image file has been saved yet.
+- **Yielded:** States she was born 'eergisteren de dertigsten April ten vijf uren 's morgens' (the day before yesterday, the thirtieth of April, at five in the morning) against a certificate/act date of 2 May — the act date this tree had wrongly held as her birth date. Also gives her mother Mathilde Standaert's age as 42 and occupation 'huishoudster, geboortig van Brugge' (housekeeper, native of Bruges), and her father as Ludovicus Schalandryn.
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** FOLLOW-UP: read on screen at the ark above; no image file has been saved to data/artifacts/ — the same named gap as S20.
 
 ### Geneanet
 
@@ -319,6 +343,24 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Covers:** French civil registration.
 - **Yielded:** *nothing yet*
 - **Note:** Two pending record matches. Worth attention: the Van Iseghem family migrated to Lens (Pas-de-Calais) for the coal mines, and Joannes Van Iseghem was born there in 1903 — a French index is exactly where that branch should appear. Paywalled on MyHeritage.
+
+### Vrijwilligers RAB
+
+#### `rab-bs-huwelijken` — West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers
+- **Kind:** collection · <https://www.vrijwilligersrab.be/en/Civil_Status_Marriages_Index>
+- **Covers:** Volunteer-transcribed index of West-Flemish CIVIL marriage acts, searchable by surname of either spouse OR of any of the four parents — which is what makes it answer a parents-unknown frontier directly. Coverage is commune-by-commune and runs from the French period into the 1930s for Oostende, Stene, Bredene, Oudenburg, Brugge. Each hit has a Detail view giving both spouses' birth date and place, residence, profession, civil status, the parents' professions and death dates, remarks, legitimated children and a FamilySearch film+image link to the act itself.
+- **Yielded:** The Devriendt × Schalandryn marriage, Oostende 10 Nov 1906 act nr. 258 — naming all four parents, and pointing at FamilySearch film 004166040 image 173 where the act image was then read. Also the Schalandryn line back to Oudenburg 1836 and nine Devriendt sibling marriages.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** HOW TO QUERY IT WITHOUT A BROWSER. The surname search is a POST to /en/node/148 with a single field 'naam'. Each result row carries a hidden form (Gemeente, Jaar, ID); the Detail view is a GET to /en/node/172 with naam+Gemeente+Jaar+ID. SPELLING IS THE WHOLE GAME: 'Schalandrijn' returns 8 rows and 'Schalandryn' returns 44, and they are different families in different communes. Always run both -ijn and -yn. Also: the English column headers are mislabelled — the header reads 'Mother of the Groom' twice — but the Detail view labels them correctly as 'Given name Father Groom' and 'Given Name Father Bride'. And the transcription is not error-free: this index gives Ludovicus Franciscus Schalandryn's birth as 1822 where the birth index and his memorial card both say 1842.
+
+#### `rab-bs-geboorten` — West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
+- **Kind:** collection · <https://www.vrijwilligersrab.be/en/Civil_Status_Births_Index>
+- **Covers:** The same volunteers' index of West-Flemish civil BIRTH acts, searchable on the surname of the child OR of either parent — so one query on a couple's surname returns their whole sibship. Columns: birth date, certificate date, act number, child, father, mother, remarks, plus a FamilySearch ark link to the register image.
+- **Yielded:** Octavia Maria Schalandryn's Bredene birth registration, act nr. 116, certificate dated 2 May 1886, father Ludovicus Schalandryn, mother Mathilda Standaert — and with it seven siblings and the four Stene births of her own children.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** READ THE TWO DATE COLUMNS APART. 'Birth Date' and 'Certificate Date' are separate columns and many rows fill only the second. A row showing one date is showing the DECLARATION date, not the birth — Octavia Schalandryn's row is blank in Birth Date and 02/05/1886 in Certificate Date, while the 1906 marriage act says she was born 30 April. Four of her siblings show the same one-to-two-day offset against their own marriage acts. Treating the single date as a birth date is how 1886-05-02 got into this tree. Query shape as for the marriage index: POST /en/node/114 with 'naam', detail GET /en/node/160.
 
 ### The family itself
 

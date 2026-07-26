@@ -1151,3 +1151,43 @@ Not fixed, and now written into the charter as limits rather than left to be red
 Tree: 328 → 345 people. Build green, 63 tests pass.
 
 *End of log.
+
+## 46. Two sessions, one source id — and the invariant that caught it
+
+The Devriendt/Schalandryn pass and the Zaventem pass ran against the same working tree
+and both reached for the next free source id. Both got **S19**. The registry ended up
+holding S19 as the 1846 Zaventem marriage and S20/S21 as the 1906 Oostende marriage and
+the 1886 Bredene birth, while four freshly written person files still cited the numbering
+from before the collision.
+
+Nothing about the prose was wrong — every one of those records names its act by number
+in the text ("nr. 258", "nr. 116"), which is the only reason the mismatch was repairable
+at all. A citation that had said only "S19" would have been silently attached to a
+wedding in Brabant that none of these people attended.
+
+The repair itself went wrong once before it went right. Reading the files, then writing
+them, left a gap in which the other session corrected its own numbering; the fix was
+applied on top of the corrected files and shifted four good citations to S21. It was
+caught immediately — the frontmatter then listed S21 twice in one record — and redone by
+matching each citation against the act number in its own prose rather than against a
+remembered numbering. **Read-then-write on a tree another session is editing is not
+safe; match on the content, and assert the shape you expected before writing.**
+
+What actually held the line was the validator. The four new parents had been linked as
+father and mother of [[eugenius_dv]] and [[octavia_schal]] without the couples listing
+each other, and `check_data.py` refused the build on the charter's own rule that a shared
+child proves a couple. Four mutual spouse links were added carrying **no date and no
+place** — the vrijwilligersrab index offers Stene 1876 and Oudenburg 1871 for the two
+marriages, but neither act has been read, so neither date is in the tree.
+
+Also fixed, in the tooling: the phase-B harvest brought back acts whose date fields are
+not numeric — an archive writes "ca" into a year it cannot vouch for and dashes into a
+month it could not read — and `int()` on those took the validator down mid-run. A part
+that will not parse is now dropped rather than guessed. An unreadable day yields
+`1902-08`; an unreadable year yields nothing at all. The date grammar has no syntax for a
+guess, and this was exactly the place one would have got invented.
+
+NEXT: the acts behind the leads, all of which need a logged-in AGATHA session — the
+Diksmuide 1873 birth that would give [[emma_vincke]] an elder sister, the Stene 1876 and
+Oudenburg 1871 marriages that would date the two new couples, and the Oudenburg 1842
+birth that would carry [[ludovicus_schal]] back another generation.

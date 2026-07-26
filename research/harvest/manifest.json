@@ -51,14 +51,14 @@
     {
       "id": "bostyn",
       "query": {
-        "name": "Bostyn",
+        "name": "bostyn",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 2234,
-      "mentions": 600,
-      "complete": false,
-      "acts": 599
+      "mentions": 2234,
+      "complete": true,
+      "acts": 2233
     },
     {
       "id": "boxoens",
@@ -325,6 +325,32 @@
       "acts": 600
     },
     {
+      "id": "devriendt-living",
+      "query": {
+        "name": "Devriendt",
+        "country_code": "be",
+        "eventplace": "living"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "devriendt-stene",
+      "query": {
+        "name": "Devriendt",
+        "country_code": "be",
+        "eventplace": "Stene"
+      },
+      "date": "2026-07-26",
+      "found": 40,
+      "mentions": 40,
+      "complete": true,
+      "acts": 40
+    },
+    {
       "id": "devriese",
       "query": {
         "name": "De Vriese",
@@ -349,6 +375,45 @@
       "acts": 183
     },
     {
+      "id": "dutreeuw-diksmuide",
+      "query": {
+        "name": "Dutreeuw",
+        "country_code": "be",
+        "eventplace": "Diksmuide"
+      },
+      "date": "2026-07-26",
+      "found": 5,
+      "mentions": 5,
+      "complete": true,
+      "acts": 5
+    },
+    {
+      "id": "ellebout-diksmuide",
+      "query": {
+        "name": "Ellebout",
+        "country_code": "be",
+        "eventplace": "Diksmuide"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "engelsen-oostende",
+      "query": {
+        "name": "Engelsen",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
       "id": "gautiert",
       "query": {
         "name": "Gautiert",
@@ -361,6 +426,19 @@
       "acts": 1
     },
     {
+      "id": "gautiert-oostende",
+      "query": {
+        "name": "Gautiert",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
       "id": "goethals",
       "query": {
         "name": "Goethals",
@@ -371,6 +449,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "goethals-evergem",
+      "query": {
+        "name": "Goethals",
+        "country_code": "be",
+        "eventplace": "Evergem"
+      },
+      "date": "2026-07-26",
+      "found": 32,
+      "mentions": 32,
+      "complete": true,
+      "acts": 32
     },
     {
       "id": "govaert",
@@ -397,6 +488,32 @@
       "acts": 600
     },
     {
+      "id": "huyghebaert-oostende",
+      "query": {
+        "name": "Huyghebaert",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 179,
+      "mentions": 179,
+      "complete": true,
+      "acts": 179
+    },
+    {
+      "id": "huyghebaert-oudenburg",
+      "query": {
+        "name": "Huyghebaert",
+        "country_code": "be",
+        "eventplace": "Oudenburg"
+      },
+      "date": "2026-07-26",
+      "found": 22,
+      "mentions": 22,
+      "complete": true,
+      "acts": 22
+    },
+    {
       "id": "janssen",
       "query": {
         "name": "Janssen",
@@ -407,6 +524,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "janssen-oostende",
+      "query": {
+        "name": "Janssen",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 812,
+      "mentions": 400,
+      "complete": false,
+      "acts": 400
     },
     {
       "id": "janssens",
@@ -421,6 +551,19 @@
       "acts": 600
     },
     {
+      "id": "janssens-oostende",
+      "query": {
+        "name": "Janssens",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 2360,
+      "mentions": 400,
+      "complete": false,
+      "acts": 400
+    },
+    {
       "id": "joostens",
       "query": {
         "name": "Joostens",
@@ -431,6 +574,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "joostens-grez-doiceau",
+      "query": {
+        "name": "Joostens",
+        "country_code": "be",
+        "eventplace": "Grez-Doiceau"
+      },
+      "date": "2026-07-26",
+      "found": 8,
+      "mentions": 8,
+      "complete": true,
+      "acts": 8
     },
     {
       "id": "keirsebilck",
@@ -445,10 +601,36 @@
       "acts": 600
     },
     {
+      "id": "keirsebilck-oostkamp",
+      "query": {
+        "name": "Keirsebilck",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 12,
+      "mentions": 12,
+      "complete": true,
+      "acts": 12
+    },
+    {
       "id": "lampsins",
       "query": {
         "name": "Lampsins",
         "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "lampsins-lichtervelde",
+      "query": {
+        "name": "Lampsins",
+        "country_code": "be",
+        "eventplace": "Lichtervelde"
       },
       "date": "2026-07-26",
       "found": 0,
@@ -469,6 +651,19 @@
       "acts": 440
     },
     {
+      "id": "leclercq-grez-doiceau",
+      "query": {
+        "name": "Leclercq",
+        "country_code": "be",
+        "eventplace": "Grez-Doiceau"
+      },
+      "date": "2026-07-26",
+      "found": 5,
+      "mentions": 5,
+      "complete": true,
+      "acts": 5
+    },
+    {
       "id": "maertens",
       "query": {
         "name": "Maertens",
@@ -481,6 +676,45 @@
       "acts": 600
     },
     {
+      "id": "noel-grez-doiceau",
+      "query": {
+        "name": "Noël",
+        "country_code": "be",
+        "eventplace": "Grez-Doiceau"
+      },
+      "date": "2026-07-26",
+      "found": 186,
+      "mentions": 186,
+      "complete": true,
+      "acts": 186
+    },
+    {
+      "id": "ossaert-moere",
+      "query": {
+        "name": "Ossaert",
+        "country_code": "be",
+        "eventplace": "Moere"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "ossaert-zande",
+      "query": {
+        "name": "Ossaert",
+        "country_code": "be",
+        "eventplace": "Zande"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
       "id": "paelinck",
       "query": {
         "name": "Paelinck",
@@ -491,6 +725,84 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "paelinck-belsele",
+      "query": {
+        "name": "Paelinck",
+        "country_code": "be",
+        "eventplace": "Belsele"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "paelinck-destelbergen",
+      "query": {
+        "name": "Paelinck",
+        "country_code": "be",
+        "eventplace": "Destelbergen"
+      },
+      "date": "2026-07-26",
+      "found": 8,
+      "mentions": 8,
+      "complete": true,
+      "acts": 8
+    },
+    {
+      "id": "paelinck-laarne",
+      "query": {
+        "name": "Paelinck",
+        "country_code": "be",
+        "eventplace": "Laarne"
+      },
+      "date": "2026-07-26",
+      "found": 206,
+      "mentions": 206,
+      "complete": true,
+      "acts": 206
+    },
+    {
+      "id": "paelinck-lochristi",
+      "query": {
+        "name": "Paelinck",
+        "country_code": "be",
+        "eventplace": "Lochristi"
+      },
+      "date": "2026-07-26",
+      "found": 3,
+      "mentions": 3,
+      "complete": true,
+      "acts": 3
+    },
+    {
+      "id": "paelinck-lokeren",
+      "query": {
+        "name": "Paelinck",
+        "country_code": "be",
+        "eventplace": "Lokeren"
+      },
+      "date": "2026-07-26",
+      "found": 28,
+      "mentions": 28,
+      "complete": true,
+      "acts": 28
+    },
+    {
+      "id": "paelinck-sint-niklaas",
+      "query": {
+        "name": "Paelinck",
+        "country_code": "be",
+        "eventplace": "Sint-Niklaas"
+      },
+      "date": "2026-07-26",
+      "found": 73,
+      "mentions": 73,
+      "complete": true,
+      "acts": 73
     },
     {
       "id": "peperstraete",
@@ -517,6 +829,32 @@
       "acts": 600
     },
     {
+      "id": "perquy-westkerke",
+      "query": {
+        "name": "Perquy",
+        "country_code": "be",
+        "eventplace": "Westkerke"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "pickaut-lochristi",
+      "query": {
+        "name": "Pickaut",
+        "country_code": "be",
+        "eventplace": "Lochristi"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
       "id": "ramon",
       "query": {
         "name": "Ramon",
@@ -527,6 +865,123 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "ramon-bovekerke",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be",
+        "eventplace": "Bovekerke"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "ramon-handzame",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be",
+        "eventplace": "Handzame"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "ramon-mariakerke",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be",
+        "eventplace": "Mariakerke"
+      },
+      "date": "2026-07-26",
+      "found": 3,
+      "mentions": 3,
+      "complete": true,
+      "acts": 3
+    },
+    {
+      "id": "ramon-middelkerke",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be",
+        "eventplace": "Middelkerke"
+      },
+      "date": "2026-07-26",
+      "found": 12,
+      "mentions": 12,
+      "complete": true,
+      "acts": 12
+    },
+    {
+      "id": "ramon-oostende",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 375,
+      "mentions": 375,
+      "complete": true,
+      "acts": 375
+    },
+    {
+      "id": "ramon-op-zee",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be",
+        "eventplace": "op zee"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "ramon-zande",
+      "query": {
+        "name": "Ramon",
+        "country_code": "be",
+        "eventplace": "Zande"
+      },
+      "date": "2026-07-26",
+      "found": 3,
+      "mentions": 3,
+      "complete": true,
+      "acts": 3
+    },
+    {
+      "id": "robbe-oostende",
+      "query": {
+        "name": "Robbe",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 11,
+      "mentions": 11,
+      "complete": true,
+      "acts": 11
+    },
+    {
+      "id": "roegiers-sleidinge",
+      "query": {
+        "name": "Roegiers",
+        "country_code": "be",
+        "eventplace": "Sleidinge"
+      },
+      "date": "2026-07-26",
+      "found": 66,
+      "mentions": 66,
+      "complete": true,
+      "acts": 66
     },
     {
       "id": "rotsaert",
@@ -553,6 +1008,19 @@
       "acts": 3
     },
     {
+      "id": "rups-oostkamp",
+      "query": {
+        "name": "Rups",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
       "id": "sabbe",
       "query": {
         "name": "Sabbe",
@@ -565,6 +1033,58 @@
       "acts": 600
     },
     {
+      "id": "sabbe-harelbeke",
+      "query": {
+        "name": "Sabbe",
+        "country_code": "be",
+        "eventplace": "Harelbeke"
+      },
+      "date": "2026-07-26",
+      "found": 26,
+      "mentions": 26,
+      "complete": true,
+      "acts": 26
+    },
+    {
+      "id": "sabbe-oostkamp",
+      "query": {
+        "name": "Sabbe",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 4,
+      "mentions": 4,
+      "complete": true,
+      "acts": 4
+    },
+    {
+      "id": "sabbe-wielsbeke",
+      "query": {
+        "name": "Sabbe",
+        "country_code": "be",
+        "eventplace": "Wielsbeke"
+      },
+      "date": "2026-07-26",
+      "found": 20,
+      "mentions": 20,
+      "complete": true,
+      "acts": 20
+    },
+    {
+      "id": "sabbe-zwevegem",
+      "query": {
+        "name": "Sabbe",
+        "country_code": "be",
+        "eventplace": "Zwevegem"
+      },
+      "date": "2026-07-26",
+      "found": 18,
+      "mentions": 18,
+      "complete": true,
+      "acts": 18
+    },
+    {
       "id": "schalandrijn",
       "query": {
         "name": "Schalandrijn",
@@ -575,6 +1095,32 @@
       "mentions": 14,
       "complete": true,
       "acts": 14
+    },
+    {
+      "id": "schalandrijn-bredene",
+      "query": {
+        "name": "Schalandrijn",
+        "country_code": "be",
+        "eventplace": "Bredene"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "schreel-aartrijke",
+      "query": {
+        "name": "Schreel",
+        "country_code": "be",
+        "eventplace": "Aartrijke"
+      },
+      "date": "2026-07-26",
+      "found": 7,
+      "mentions": 7,
+      "complete": true,
+      "acts": 7
     },
     {
       "id": "senesael",
@@ -601,6 +1147,19 @@
       "acts": 600
     },
     {
+      "id": "smessaert-oostende",
+      "query": {
+        "name": "Smessaert",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 11,
+      "mentions": 11,
+      "complete": true,
+      "acts": 11
+    },
+    {
       "id": "steenkiste",
       "query": {
         "name": "Steenkiste",
@@ -611,6 +1170,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "steenkiste-oudenburg",
+      "query": {
+        "name": "Steenkiste",
+        "country_code": "be",
+        "eventplace": "Oudenburg"
+      },
+      "date": "2026-07-26",
+      "found": 3,
+      "mentions": 3,
+      "complete": true,
+      "acts": 3
     },
     {
       "id": "stekelorum",
@@ -637,6 +1209,19 @@
       "acts": 600
     },
     {
+      "id": "stockman-evergem",
+      "query": {
+        "name": "Stockman",
+        "country_code": "be",
+        "eventplace": "Evergem"
+      },
+      "date": "2026-07-26",
+      "found": 9,
+      "mentions": 9,
+      "complete": true,
+      "acts": 9
+    },
+    {
       "id": "stroobandt",
       "query": {
         "name": "Stroobandt",
@@ -647,6 +1232,58 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "stroobandt-ardooie",
+      "query": {
+        "name": "Stroobandt",
+        "country_code": "be",
+        "eventplace": "Ardooie"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "stroobandt-beernem",
+      "query": {
+        "name": "Stroobandt",
+        "country_code": "be",
+        "eventplace": "Beernem"
+      },
+      "date": "2026-07-26",
+      "found": 2,
+      "mentions": 2,
+      "complete": true,
+      "acts": 2
+    },
+    {
+      "id": "stroobandt-oostkamp",
+      "query": {
+        "name": "Stroobandt",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 19,
+      "mentions": 19,
+      "complete": true,
+      "acts": 19
+    },
+    {
+      "id": "stroobandt-torhout",
+      "query": {
+        "name": "Stroobandt",
+        "country_code": "be",
+        "eventplace": "Torhout"
+      },
+      "date": "2026-07-26",
+      "found": 30,
+      "mentions": 30,
+      "complete": true,
+      "acts": 30
     },
     {
       "id": "temmerman",
@@ -673,6 +1310,84 @@
       "acts": 507
     },
     {
+      "id": "thumas-biez",
+      "query": {
+        "name": "Thumas",
+        "country_code": "be",
+        "eventplace": "Biez"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
+      "id": "thumas-brussel",
+      "query": {
+        "name": "Thumas",
+        "country_code": "be",
+        "eventplace": "Brussel"
+      },
+      "date": "2026-07-26",
+      "found": 33,
+      "mentions": 33,
+      "complete": true,
+      "acts": 33
+    },
+    {
+      "id": "thumas-grez-doiceau",
+      "query": {
+        "name": "Thumas",
+        "country_code": "be",
+        "eventplace": "Grez-Doiceau"
+      },
+      "date": "2026-07-26",
+      "found": 283,
+      "mentions": 283,
+      "complete": true,
+      "acts": 283
+    },
+    {
+      "id": "thumas-kraainem",
+      "query": {
+        "name": "Thumas",
+        "country_code": "be",
+        "eventplace": "Kraainem"
+      },
+      "date": "2026-07-26",
+      "found": 20,
+      "mentions": 20,
+      "complete": true,
+      "acts": 20
+    },
+    {
+      "id": "thumas-sint-stevens-woluwe",
+      "query": {
+        "name": "Thumas",
+        "country_code": "be",
+        "eventplace": "Sint-Stevens-Woluwe"
+      },
+      "date": "2026-07-26",
+      "found": 23,
+      "mentions": 23,
+      "complete": true,
+      "acts": 23
+    },
+    {
+      "id": "truant-zande",
+      "query": {
+        "name": "Truant",
+        "country_code": "be",
+        "eventplace": "Zande"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
+    },
+    {
       "id": "vanacker",
       "query": {
         "name": "Van Acker",
@@ -683,6 +1398,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vanacker-lokeren",
+      "query": {
+        "name": "Van Acker",
+        "country_code": "be",
+        "eventplace": "Lokeren"
+      },
+      "date": "2026-07-26",
+      "found": 79,
+      "mentions": 79,
+      "complete": true,
+      "acts": 79
     },
     {
       "id": "vanalderweireldt",
@@ -719,6 +1447,19 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vanbogaert-nieuwkerken-waas",
+      "query": {
+        "name": "Van Bogaert",
+        "country_code": "be",
+        "eventplace": "Nieuwkerken-Waas"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
     },
     {
       "id": "vancraenenbroeck",

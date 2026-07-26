@@ -87,3 +87,12 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 24 | 2026-07-26 | — (scorer) | — | — | Four more leaks closed: act-year veto; forename-only *name* demoted; kin needs a **new** surname; surname disagreement blocks a graft. | b5f0e66 |
 | 24 | 2026-07-26 | — (bug) | — | — | **Every participant in a death act was given the act's year as their own death year** — including living fathers. Now only the deceased. | b5f0e66 |
 | 24 | 2026-07-26 | 12 verified people | — | — | All stayed CORROBORATED across every change — the discriminating test. 9 of 11 known-wrong dropped out. 63 tests. | b5f0e66 |
+| 25 | 2026-07-26 | eugenius_dv, octavia_schal | CORROBORATED | DOCUMENTED | Oostende marriage act nr. 258, 10 Nov 1906 (S20), read as an image. Both moved to `doc`. | — |
+| 25 | 2026-07-26 | octavia_schal | — | CORRECTED | Bredene birth act nr. 116 (S21): born **30 April 1886**, not 2 May — the tree had been holding the certificate's date as the birth. | — |
+| 25 | 2026-07-26 | ludovicus_dv, silvia_brissinck, ludovicus_schal, mathilde_standaert | — | NEW | Four parents transcribed from S20, which names both couples. `doc` on what the act states; every index lead left as a named frontier. | — |
+| 25 | 2026-07-26 | mathilde_standaert | — | DOCUMENTED | S21 states her age (42) and "geboortig van Brugge". The birthplace is the act's; the ~1844 birth year it implies is **not** recorded — an age is not a date. | — |
+| 25 | 2026-07-26 | emma_vincke | PARTIAL | CORROBORATED | AGATHA index: Diksmuide birth act nr. 14, act date 24 Jan 1880, *Emma Celesta Vincke* — one day after the held birth. Index only, stays `sup`. | — |
+| 25 | 2026-07-26 | lucien_vincke | — | LEAD | A probable elder daughter, *Romanie Elodie Vincke*, Diksmuide 8 Oct 1873, both parents matching by full name. Not grafted: index only, and "Lucien Julien" ≠ the "Lucien Julianus" held here. | — |
+| 25 | 2026-07-26 | adrienne_dv | — | CORROBORATED | vrijwilligersrab Geboorten: Stene, 12 April 1908, act 29 — to the day. Index only, stays `sup`. | — |
+| 25 | 2026-07-26 | — (registry) | — | NEW SOURCE | `rab-bs-huwelijken` and `rab-bs-geboorten` registered under vrijwilligersrab. The site's own description named marriages and deaths; it carries births too. | — |
+| 25 | 2026-07-26 | — (correction) | — | — | **Two sessions allocated source id S19 to different acts.** Caught by the validator, not by either session. See §46. | — |
