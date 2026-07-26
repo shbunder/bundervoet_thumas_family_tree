@@ -1772,7 +1772,94 @@ Huwelijken 1796–1832, Overlijdens 1796–1842*, cat 140936), which is unindexe
 blocks by record type, so it is a browse and not a lookup. After that, the Bertem death
 acts of January and November 1880.
 
-## 52. The sweep corroborates its own sources — 20 of 52, measured
+## 54. Autopilot pass 6 — the rest of two families, a wrong graft retracted, and a forename left open
+
+Four things in one pass, all downward from couples already held: the Van den Bemden and
+Coekelberghs children, a correction, a partial correction, and a lead recorded rather than grafted.
+
+**Van den Bemden, complete.** [[hendrik_vdb]] x [[coekelberghs]] now has all seven further
+Sint-Stevens-Woluwe births the held corpus names for them, 1873–1886:
+[[lodewijk_bemden73]], [[victor_bemden74]], [[felix_bemden76]], [[karel_vandenbemd78]],
+[[jan_bemden80]], [[adela_bemden84]] and [[julius_vandenbemd86]]. Four of the seven already
+existed as bulk records from an earlier pass; this pass added the last three (Lodewijk, Victor,
+Adela) — which is also what closes the gap §52 flagged and left unexplained: "`research.py
+children` printed a header saying 27 to add and then listed 24." The three missing were these
+three, found only by a corpus search that went beyond the tool's own printed candidate list, not
+by the tool itself. Every one of the seven carries the same two identifiers — father born
+Everberg, mother born Bertem, matching [[hendrik_vdb]] and [[coekelberghs]]'s own recorded
+birthplaces exactly — plus the event falling inside the couple's 1873 marriage to 1889 death
+window. Lodewijk's birth, 4 July 1873, is ten weeks after the 24 April wedding; that is stated
+plainly on his record as a fact about the two dates, and nothing is concluded from it.
+
+Felix and Jan are **double-attested**: their own Kraainem marriages (1897, 1900) independently
+repeat their births and name their late father's death date and place exactly as the tree already
+holds it. Both marriages are now recorded as events, and — because marriage is mutual and a
+person is never left as a string in someone else's note — their wives get stub records of their
+own: [[amelia_coenraets76]] and [[elisabeth_feyaerts78]], carrying only what their marriage acts
+state. (A second, unrelated Amelia Coenraets, born 1903, was already in the tree as
+[[amelia_coenraets03]]; the new stub notes the distinction explicitly so a later pass does not
+merge the two same-named women.)
+
+**Coekelberghs: one more child accepted.** [[anna_coekelberg53]], born Bertem 27 June 1853, is
+the same birth act already used in §53 to establish [[jb_coekelberghs]]'s own occupation change —
+he self-declares, aged 44, *slagter*, born Bertem — and names the mother in the plain, merged
+form "Anna Haesaerts" rather than one of the disputed variants. Both parents accepted.
+
+**Pardon: the Zaventem move is one family, and a death recovered.** All four children —
+[[henricus_pardon54]], [[joanna_pardon56]], [[cornelius_pardon59]], [[maria_pardon63]] — were
+already recorded. Three of the four are double-attested by their own later Zaventem marriage
+acts, and all three independently name the same father, "Frans/Franciscus/Jan Frans Pardon,
+deceased Zaventem 18/07/1874," and the same mother, [[anna_maria_bossin]]. That settles a
+question the residence change (Sint-Stevens-Woluwe to Zaventem, between the 1856 and 1859
+births) could otherwise have left open: one migrating family, not two couples with the same
+names. The reasoning is written out on [[cornelius_pardon59]], the first Zaventem-born child, and
+[[franciscus_pardon]] now carries the death those three acts gave and this tree did not have:
+**Zaventem, 18 July 1874**. A fifth possible child, **Isabella Pardon** — her own 1890 Zaventem
+marriage act names the same father by the same death date and place, and the same mother — has no
+birth act found in the held corpus, so she is recorded as a named frontier on
+[[franciscus_pardon]] and not given a record.
+
+**Retraction — `appolonia_vandenbemd77` removed.** An earlier pass had grafted a Sint-Stevens-
+Woluwe birth of 28 January 1877 onto [[hendrik_vdb]] x [[coekelberghs]] as their daughter
+Appolonia. Re-reading the act itself refutes it: the parents it actually names are **Willem
+Edouard Vandenbemden** (28, born Everberg, *daglooner*) and **Maria Anna Vandenhoven** (31, born
+Kraainem, *huishoudster*) — a different couple, confirmed a second time as parents of a further
+child, Frans Vandenbemden (b. Kraainem 1872), in that son's own 1897 marriage act. The
+mis-reading is a name-only error compounded by a real coincidence: this Willem Edouard is also
+Everberg-born, of about the same age, and living in the same commune as [[hendrik_vdb]] — enough
+surface similarity that the two men's acts were conflated. `data/people/appolonia_vandenbemd77.md`
+is deleted outright rather than corrected in place, because the child it names belongs to a
+different couple, neither of whom is elsewhere in this tree; there is nothing salvageable to keep
+under that id. `hendrik_vdb`'s own frontier note is updated to record the correction rather than
+silently dropping the old candidate.
+
+That same Willem Edouard is now recorded as a **named frontier on [[jb_vandenbemden]]** instead:
+a second Everberg-born Vandenbemden of much the same age in the same commune as his son
+[[hendrik_vdb]], and a plausible brother — but not grafted. Shared birthplace and a shared decade
+of birth is one identifier, not the two this project requires, and neither act naming him gives
+his own parents, so there is not yet a way to test the reading directly.
+
+**Partial retraction, left as found — `joannes_coekelberg58`.** A correction was made by hand
+before this pass began: the record's `mother: anna_haesaerts` link is removed because the 1858
+Bertem birth act it rests on names the mother as *Anna **Catharina** Haesaerts* — the forename
+variant §51 and §53 deliberately left unmerged with the plain *Anna Haesaerts* this tree holds.
+Grafting the child to her anyway would have resolved that open forename question by side effect,
+which is exactly the failure mode CLAUDE.md's rule 4 exists to prevent: a side effect is not a
+document, and a document is what the question needs. The father link stands, on its own
+evidence (he self-declares, in person, aged 48, born Bertem). This pass does not attempt to
+settle the forename question — it is not a new act, only a re-reading of one already held — and
+leaves the record exactly as the hand correction left it: one parent, one open frontier, honestly
+short of a mother.
+
+**Next frontier.** [[jb_vandenbemden]]'s own marriage (~1840s, Everberg or Kortenberg) and
+Willem Edouard's parentage, which would either confirm or refute the brother lead; the register
+images behind the AGATHA-transcribed acts this pass's new records still rest on; and
+[[anna_haesaerts]]'s own death act (Bertem, 8 January 1880), which is the one document that
+would settle her forename either way.
+
+Tree: 417 → 422 people. Validator green.
+
+## 55. The sweep corroborates its own sources — 20 of 52, measured
 
 The corpus finished harvesting at 85,000 acts, roughly two and a half times what it held this
 morning, and `verify_all.py` ran over the whole tree for the first time on it. Corroborated

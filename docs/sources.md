@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 1 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 32 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 35 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 5 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
@@ -646,10 +646,34 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Kind:** index · <https://www.openarchieven.nl/>
 - **Collection:** Rijksarchief België, burgerlijke stand — Sint-Stevens-Woluwe, Zaventem and Bertem birth registers, via Open Archives
 - **Covers:** The batch surfaced by `research.py children` over the harvested corpus: acts that name a child of a couple this tree already holds. Each person's own record carries the individual act URL.
-- **Yielded:** 24 children across five couples — 9 Coppens, 4 Coenraets, 4 Pardon, 5 Van den Bemden, 2 Coekelberghs. Every one from an act naming both parents.
+- **Yielded:** 27 children across five couples — 9 Coppens, 4 Coenraets, 4 Pardon, 8 Van den Bemden, 2 Coekelberghs. Every one from an act naming both parents.
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** Indexed acts, no register image read for any of them. The harvested mention carries a relation role but NO sex, which is why none of these records states one.
+
+#### `kraainem-1897-marriage-vandenbemden-coenraets` — Marriage act — Felix Van den Bemden × Amelia Coenraets, Kraainem, 8 February 1897
+- **Kind:** record · <https://www.openarchieven.nl/abl:c122cfac-929f-f4a8-ff56-704f485d6171>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1897, akte nr. 1
+- **Yielded:** A second, independent naming of Felix Van den Bemden's birth (10/09/1876, Sint-Stevens-Woluwe) and his parents hendrik_vdb and coekelberghs, repeating the father's death date and place exactly (Kraainem, 12/08/1889). Names the bride, Amelia Coenraets (b. Kraainem 23/04/1876), daughter of Franciscus Coenraets and Anna Maria Deridder, and gives Felix's occupation, schaliedekker.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An Open Archives / Demogen transcription (project huvlb19b), not the register image.
+
+#### `kraainem-1900-marriage-vandenbemden-feyaerts` — Marriage act — Joannes (Jan) Vandenbemden × Elisabeth Leonia Feyaerts, Kraainem, 17 September 1900
+- **Kind:** record · <https://www.openarchieven.nl/abl:4c6b4500-15c3-889f-9fda-ffb9021b817c>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1900, akte nr. 14
+- **Yielded:** A second, independent naming of Jan Vandenbemden's birth (09/08/1880, Sint-Stevens-Woluwe) and his parents hendrik_vdb and coekelberghs, repeating the father's death date and place exactly (Kraainem, 12/08/1889). Names the bride, Elisabeth Leonia Feyaerts (b. Sint-Stevens-Woluwe 06/10/1878), daughter of the late Carolus Feyaerts (d. Kraainem 19/06/1884) and Petronilla Philomena Decoster, and gives Jan's occupation, fabriekwerker.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An Open Archives / Demogen transcription (project huvlb19b), not the register image.
+
+#### `zaventem-pardon-children-marriages-1877-1886` — Three Zaventem marriage acts of Franciscus Pardon's children, 1877–1886 — the batch that gives his death
+- **Kind:** record · <https://www.openarchieven.nl/abl:13b0fac9-fbe1-1339-1809-bc419755b0e8>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Zaventem: 1877 akte 4, 1881 akte 10, 1886 akte 13
+- **Yielded:** Joanna Coleta Pardon x Jan Meert (Zaventem 29/01/1877, abl:13b0fac9), Henricus Pardon x Joanna Rosina Magits (Zaventem 18/07/1881, abl:e23d9b8b) and Maria Thérèsia Pardon x Joseph Reniers (Zaventem 15/11/1886, abl:5f0f9b9e) each independently name their father as 'Frans/Franciscus/Jan Frans Pardon, deceased Zaventem 18/07/1874' and their mother as Anna Maria Bossin — three acts, three dates, one death fact this tree did not previously hold. Each also repeats the child's own birth date and place exactly, and names an until-then-unrecorded spouse (Magits, Meert, Reniers).
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** Open Archives / Demogen transcriptions (project huvlb19b), not the register images. Two of the three (1877, 1886) carry a FamilySearch scan link in the underlying harvested record (SourceAvailableScans) not yet read here.
 
 ### Familiekunde Vlaanderen — dataindexen (indices en klappers)
 

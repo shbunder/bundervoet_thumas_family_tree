@@ -35,3 +35,18 @@ death, which on the reading above falls before April 1873. Two Van den Bemden wi
 stood at his son's wedding — *Lodewijk*, 40, daglooner of Sint-Stevens-Woluwe, and
 *Willem*, 26, landbouwer of Schaarbeek — and one of them is likely his son or his brother.
 Neither is grafted: the act states no kinship for either.
+
+FRONTIER — **Willem Edouard Vandenbemden**, a second Everberg-born Vandenbemden of much the same
+age, living in the same commune as [[hendrik_vdb]], and a strong lead for a brother — but not
+grafted. A Sint-Stevens-Woluwe birth act of 28 January 1877 names him as the declaring father: 28
+years old, born at Everberg, *daglooner*, married to Maria Anna Vandenhoven, born at Kraainem
+(https://www.openarchieven.nl/abl:2c0d71d9-be5c-fa20-000f-fd03a9ac2403). That act was briefly
+misread as [[hendrik_vdb]]'s own child, Appolonia — see the correction on his record. The same
+couple recurs as parents of a further child, Frans Vandenbemden (b. Kraainem 1872-09-28), in
+Frans's own 1897 Sint-Stevens-Woluwe marriage act, which also gives Willem Edouard's death:
+Sint-Stevens-Woluwe, 20 March 1891
+(https://www.openarchieven.nl/abl:caefee09-568f-04b7-f115-22d4b7730684). Not grafted: the 1877
+act states no kinship between Willem Edouard and [[hendrik_vdb]], and a shared birthplace
+(Everberg) and a shared decade of birth is one identifier, not the two this project requires
+before a link is made. Neither act names Willem Edouard's own parents, so there is not yet a way
+to test the "brother" reading directly.

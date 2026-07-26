@@ -1158,10 +1158,46 @@
       "url": "https://www.openarchieven.nl/",
       "collection": "Rijksarchief België, burgerlijke stand — Sint-Stevens-Woluwe, Zaventem and Bertem birth registers, via Open Archives",
       "covers": "The batch surfaced by `research.py children` over the harvested corpus: acts that name a child of a couple this tree already holds. Each person's own record carries the individual act URL.",
-      "yielded": "24 children across five couples — 9 Coppens, 4 Coenraets, 4 Pardon, 5 Van den Bemden, 2 Coekelberghs. Every one from an act naming both parents.",
+      "yielded": "27 children across five couples — 9 Coppens, 4 Coenraets, 4 Pardon, 8 Van den Bemden, 2 Coekelberghs. Every one from an act naming both parents.",
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "Indexed acts, no register image read for any of them. The harvested mention carries a relation role but NO sex, which is why none of these records states one."
+    },
+    {
+      "id": "kraainem-1897-marriage-vandenbemden-coenraets",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Marriage act — Felix Van den Bemden × Amelia Coenraets, Kraainem, 8 February 1897",
+      "url": "https://www.openarchieven.nl/abl:c122cfac-929f-f4a8-ff56-704f485d6171",
+      "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1897, akte nr. 1",
+      "yielded": "A second, independent naming of Felix Van den Bemden's birth (10/09/1876, Sint-Stevens-Woluwe) and his parents hendrik_vdb and coekelberghs, repeating the father's death date and place exactly (Kraainem, 12/08/1889). Names the bride, Amelia Coenraets (b. Kraainem 23/04/1876), daughter of Franciscus Coenraets and Anna Maria Deridder, and gives Felix's occupation, schaliedekker.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "An Open Archives / Demogen transcription (project huvlb19b), not the register image."
+    },
+    {
+      "id": "kraainem-1900-marriage-vandenbemden-feyaerts",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Marriage act — Joannes (Jan) Vandenbemden × Elisabeth Leonia Feyaerts, Kraainem, 17 September 1900",
+      "url": "https://www.openarchieven.nl/abl:4c6b4500-15c3-889f-9fda-ffb9021b817c",
+      "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1900, akte nr. 14",
+      "yielded": "A second, independent naming of Jan Vandenbemden's birth (09/08/1880, Sint-Stevens-Woluwe) and his parents hendrik_vdb and coekelberghs, repeating the father's death date and place exactly (Kraainem, 12/08/1889). Names the bride, Elisabeth Leonia Feyaerts (b. Sint-Stevens-Woluwe 06/10/1878), daughter of the late Carolus Feyaerts (d. Kraainem 19/06/1884) and Petronilla Philomena Decoster, and gives Jan's occupation, fabriekwerker.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "An Open Archives / Demogen transcription (project huvlb19b), not the register image."
+    },
+    {
+      "id": "zaventem-pardon-children-marriages-1877-1886",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Three Zaventem marriage acts of Franciscus Pardon's children, 1877–1886 — the batch that gives his death",
+      "url": "https://www.openarchieven.nl/abl:13b0fac9-fbe1-1339-1809-bc419755b0e8",
+      "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Zaventem: 1877 akte 4, 1881 akte 10, 1886 akte 13",
+      "yielded": "Joanna Coleta Pardon x Jan Meert (Zaventem 29/01/1877, abl:13b0fac9), Henricus Pardon x Joanna Rosina Magits (Zaventem 18/07/1881, abl:e23d9b8b) and Maria Thérèsia Pardon x Joseph Reniers (Zaventem 15/11/1886, abl:5f0f9b9e) each independently name their father as 'Frans/Franciscus/Jan Frans Pardon, deceased Zaventem 18/07/1874' and their mother as Anna Maria Bossin — three acts, three dates, one death fact this tree did not previously hold. Each also repeats the child's own birth date and place exactly, and names an until-then-unrecorded spouse (Magits, Meert, Reniers).",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Open Archives / Demogen transcriptions (project huvlb19b), not the register images. Two of the three (1877, 1886) carry a FamilySearch scan link in the underlying harvested record (SourceAvailableScans) not yet read here."
     }
   ]
 }

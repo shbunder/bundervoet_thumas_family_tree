@@ -57,8 +57,16 @@ DOWNGRADED (2026-07-26) from `doc` to `sup`, for the same reason as [[coekelberg
 every act behind this record is an AGATHA act analysis and none of them has a scan. See
 docs/research-log.md §51.
 
-FRONTIER — his own children beyond [[vandenbemden]]. The held acts name seven further
-Sint-Stevens-Woluwe births to this couple between 1873 and 1886, of which two are
-double-attested by their own Kraainem marriage acts and are the safe ones to enter next:
-**Felix** (b. 1876-09-10, m. Kraainem 1897-02-08) and **Joannes/Jan** (b. 1880-08-09,
-m. Kraainem 1900-09-17).
+RESOLVED (2026-07-26): all seven further Sint-Stevens-Woluwe births the held corpus names for
+this couple, 1873–1886, are now recorded — [[lodewijk_bemden73]], [[victor_bemden74]],
+[[felix_bemden76]], [[karel_vandenbemd78]], [[jan_bemden80]], [[adela_bemden84]] and
+[[julius_vandenbemd86]] — each by an act naming both parents' exact birthplaces (father Everberg,
+mother Bertem), matching this couple's own recorded birthplaces. Felix and Jan are additionally
+double-attested by their own Kraainem marriage acts (1897 and 1900), which independently repeat
+their births and this couple's death and occupation facts twenty years on.
+
+An eighth candidate, *Appolonia* (b. Sint-Stevens-Woluwe 1877-01-28), was checked and
+**REJECTED**: the act names a different couple, Willem Edouard Vandenbemden x Maria Anna
+Vandenhoven — see the frontier on [[jb_vandenbemden]] for that rival family, a lead for a
+brother rather than a graft here. The record this tree briefly carried for that child,
+`data/people/appolonia_vandenbemd77.md`, has been removed.
