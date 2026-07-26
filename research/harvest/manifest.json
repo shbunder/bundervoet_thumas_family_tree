@@ -265,6 +265,18 @@
       "acts": 600
     },
     {
+      "id": "dellaert",
+      "query": {
+        "name": "Dellaert",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 860,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "demeulemeester",
       "query": {
         "name": "Demeulemeester",
