@@ -108,7 +108,13 @@ Each research pass:
    independent identifiers NOT GRAFTABLE, but a score is a shortlist, never a verdict.
 5. **Record** —
    - the person files;
-   - `uv run tools/evaluate.py label …` for **every** ruling, accepted or refuted. A
+   - `uv run tools/evaluate.py label …` for **every** ruling, accepted or refuted. Label
+     the **mention**, `<act-id>#<pid>`, never the act alone: an act names six people, so
+     an act-level ref does not say which one the ruling was about. 45 of the first 48
+     labels were written that way and the scorer was silently handed whichever participant
+     came first — usually the groom — so Maria Thérèsia Pardon was scored against her own
+     husband and the resulting "recall 33%" measured the ambiguity rather than the scorer.
+     `evaluate.py refs` lists the ones still owed a pid. A
      ruling is a labelled pair, and it is the only labelled data this project will ever
      produce. Kept, they turn the thresholds in `match.py` from reasoned guesses into
      measurements — `evaluate.py report` re-scores every past ruling with the current
@@ -280,6 +286,15 @@ The page loads `dist/bundle.js` — one request for the whole tree, whatever it 
 The files in `data/` and `site/` stay the source of truth; the bundle is generated, and
 the validator fails if it is stale, so old data cannot reach the site.
 
+**After any large harvest**, run `uv run tools/evaluate.py report`. The rarity weights are
+counted from the corpus, so a much larger corpus is a different measuring instrument and
+every score moves — a change in precision afterwards is the old thresholds having been
+fitted to a smaller sample, not the harvest being wrong. The ordered list of what else a
+large ingest sets off is [docs/method/scaling.md §3a](docs/method/scaling.md); the short
+version is that the scanning reports (`acts`, `children`, `verify_all`) scale with the
+corpus while the targeted lookups stay flat, and when those become the bottleneck it is the
+signal that the two-tier storage split is no longer optional.
+
 **Known limits of the current model** — the next structural work:
 
 1. **The bundle is loaded eagerly and committed whole.** ~580 bytes per person, so
@@ -384,13 +399,15 @@ uv run tools/link.py <person>              what the held acts say about them
 uv run tools/identify.py "<name>" --birth … is this person already in the tree?
 uv run tools/verify_all.py --json          the whole tree scored at once — the run's worklist
 
-uv run tools/evaluate.py label <person> <ref> --match|--nonmatch --why "…"
+uv run tools/evaluate.py label <person> <act-id>#<pid> --match|--nonmatch --why "…"
+uv run tools/evaluate.py refs               labels that name an act but not which of its people
 uv run tools/evaluate.py report            precision, recall, and every disagreement
 uv run tools/evaluate.py sweep             what moving the graft thresholds would cost
 uv run tools/evaluate.py floor             below which bits no true match has ever been seen
 
 uv run --group dev pytest                  the tests
 uv run --group docs mkdocs serve           the method documentation, live
+uv run --group docs mkdocs build           …and rendered to dist/docs, which IS committed
 
 open index.html                            the site, straight off disk
 ```
@@ -398,6 +415,13 @@ open index.html                            the site, straight off disk
 **After changing anything in `data/`, run `uv run tools/build.py`.** It validates first
 and refuses to generate from a broken tree. `check_data.py` fails if the generated
 files are stale, so the "green before commit" rule already covers this.
+
+**After changing anything in `docs/`, run `uv run --group docs mkdocs build`.** Both
+pages link to `dist/docs/index.html`, and Pages serves this repository as it stands, so
+the rendered docs are committed like `dist/bundle.js`. Unlike the bundle, nothing checks
+them: the validator has no dependencies and mkdocs is an optional group, so a docs edit
+committed without a rebuild ships silently stale. That hole closes when the docs build
+moves to CI.
 
 `exports/family-tree.ged` is the tree in **GEDCOM 7**, the open format every genealogy
 program reads — import it into Gramps, Geneanet, Ancestry or MyHeritage, and it is the

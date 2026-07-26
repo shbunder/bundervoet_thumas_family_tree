@@ -92,6 +92,51 @@ What must survive that migration is the part Splink does not have: the
 **two-independent-classes floor** and the **vetoes**. A probability threshold alone will
 graft on a name.
 
+## 3a. What a large harvest sets off — the ordered list
+
+Ingestion being solved changes the other constraints rather than removing them, and it does
+so in a predictable order. Recorded here because each of these is invisible until the
+corpus is large and then obvious, and because the temptation on meeting one is to tune it
+rather than recognise which item on this list it is.
+
+**The rarity weights recalibrate, so every score moves.** `frequencies()` is counted from
+the corpus, so a corpus ten times larger is a different measuring instrument. This is a
+gain — the counts get closer to the population — but it means comparisons made before and
+after a big harvest are not the same comparison. The instrument for checking it already
+exists: `evaluate.py report` re-scores every past ruling with the current code, so run it
+after any large ingest and read what moved. A drop in precision after a harvest is not the
+harvest being wrong; it is the old thresholds having been fitted to a smaller sample.
+
+**`surname_weight`'s two paths diverge.** It prefers the venue's own figure for a surname
+(`surname_population_count`, recorded by a whole-surname harvest, filtered to Belgium) and
+falls back to counting the corpus. A whole-ARCHIVE harvest fills the corpus without
+recording any per-surname population, so it widens the set of surnames on the fallback
+path — where the count is now measured against a corpus that is one archive's worth of one
+commune, not against Belgium. The fallback is the weaker estimator and it is now used more.
+
+**A harvest scoped by archive is not scoped by country.** The API queries were all
+`country_code=be`; an export is the whole archive. `harvest.py` refuses an archive the
+venue registers outside Belgium (see `out_of_scope`) because pulling one would fill the
+corpus with out-of-scope records and skew the fallback above. The general answer is a
+country filter at parse time, and it needs the gazetteer in §5.
+
+**The scanning reports become the bottleneck.** `research.py acts`, `research.py children`
+and `verify_all.py` genuinely touch every act, so they scale linearly with the corpus while
+the targeted lookups stay flat. At a few million acts these are minutes, and that is the
+signal that §2's two-tier split has stopped being optional. The index does not help them —
+measured, not assumed: `verify_all.py` is slower through it.
+
+**The index rebuild scales with the corpus, and it is rebuilt whole.** About 20 seconds per
+100,000 acts. That is deliberate — an incremental index is the kind of cleverness that
+quietly misses the acts fetched during the run that crashed — but past a few million acts
+the rebuild wants to become incremental with a periodic full verify, not simply faster.
+`harvest.py bulk` takes several archives at once for this reason: one rebuild, not nine.
+
+**Nothing above changes what the tree claims.** Worth stating because every item here is a
+change to how confident the scorer *sounds*. The two-independent-identifiers floor and the
+vetoes are not statistical and do not move with the corpus, and no amount of recalibration
+may be allowed to promote a graft that the floor rejects.
+
 ## 4. Clustering and cluster-level validation
 
 At scale, links form connected components, and that is where the errors surface: a

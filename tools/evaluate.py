@@ -39,7 +39,7 @@ from familytree.corpus import corpus_exists, corpus_mentions  # noqa: E402
 from familytree.corpus import frequencies  # noqa: E402
 from familytree.frontier import children_index  # noqa: E402
 from familytree.match import compare, from_mention, from_person  # noqa: E402
-from familytree.people import ROOT, load_config, load_people  # noqa: E402
+from familytree.people import ROOT, family_key, load_config, load_people  # noqa: E402
 
 LABELS = ROOT / "research" / "labels.jsonl"
 
@@ -108,18 +108,43 @@ def _scored(labels: list[Label]):
     people = load_people(load_config()["roster"])
     children = children_index(people)
     freq = frequencies()
-    by_ref = {f"{m.act.id}#{m.pid}" if m.act else m.pid: m for m in corpus_mentions()}
-    # Labels are written against act ids, which is what link.py prints; a mention ref
-    # carries the participant too.
+    by_ref: dict[str, object] = {}
+    in_act: dict[str, list] = {}
+    for m in corpus_mentions():
+        ref = f"{m.act.id}#{m.pid}" if m.act else m.pid
+        by_ref[ref] = m
+        if m.act:
+            in_act.setdefault(m.act.id, []).append(m)
+
     for lab in labels:
         if lab.person not in people:
             continue
-        mention = by_ref.get(lab.ref) or next(
-            (m for r, m in by_ref.items() if r.split("#")[0] == lab.ref), None)
-        if mention is None:
-            yield lab, None
-            continue
         a = from_person(people[lab.person], people, children)
+        mention = by_ref.get(lab.ref)
+        if mention is None:
+            # An ACT-level ref, which is what `link.py` prints and what 45 of the first 48
+            # labels were written with. An act names six people, so the ref alone does not
+            # say which of them the ruling was about — and taking the first participant, as
+            # this did, silently scored the wrong person: Maria Thérèsia Pardon against
+            # Joseph Reniers, her own husband, and Hendrik Vandenbemden against a witness.
+            # Every one of those came out REJECTED on a sex or birth-date conflict and was
+            # counted as the scorer MISSING a confirmed match, which made recall a
+            # measurement of this bug rather than of the scorer.
+            #
+            # Disambiguated on the surname alone — the cheapest identifier there is, and
+            # the one the label's author was implicitly using. Deliberately not "the
+            # best-matching participant": choosing the mention that scores highest would be
+            # grading the scorer against a pair the scorer picked. The name class is
+            # therefore guaranteed to agree in a resolved pair, which is why `graftable`
+            # and `distinguishing` — both of which exclude the name — remain honest.
+            candidates = [m for m in in_act.get(lab.ref, [])
+                          if family_key(m.surname) and family_key(m.surname) == family_key(a.surname)]
+            if len(candidates) != 1:
+                # None, or several people of that surname in one act: unresolvable without
+                # a human saying which. Reported as unresolved, never guessed.
+                yield lab, None
+                continue
+            mention = candidates[0]
         yield lab, compare(a, from_mention(mention), freq)
 
 
@@ -154,7 +179,14 @@ def cmd_report(args) -> int:
             tn += 1
 
     print(f"{len(labels)} labels · {tp + fp + tn + fn} re-scored"
-          + (f" · {missing} no longer in the corpus" if missing else ""))
+          + (f" · {missing} unresolved" if missing else ""))
+    if missing:
+        # Said loudly, because an unresolved label is a hole in the gold standard and the
+        # figures below are computed without it. Most are act-level refs naming an act with
+        # no participant of that surname, or more than one.
+        print(f"  {missing} label(s) could not be tied to a single participant. An act names six\n"
+              "  people, so an act-level ref does not say which. Re-record those against the\n"
+              "  mention — `<act-id>#<pid>`, as link.py prints it — or they stay uncounted.")
     print(f"\n  confirmed matches the scorer would graft   {tp}")
     print(f"  confirmed matches it would MISS            {fn}")
     print(f"  refuted pairs it would wrongly graft       {fp}")
@@ -202,6 +234,72 @@ def cmd_sweep(args) -> int:
             print(f"  {bits:>5} {classes:>8} {len(graft):>6} {right:>6} {wrong:>6} {missed:>7}")
     print("\n  Current setting: 6 bits, 2 classes. Raising either trades recall for")
     print("  precision, and this project has always chosen precision.")
+    return 0
+
+
+def cmd_refs(args) -> int:
+    """Every label that cannot be tied to one participant, and the command to fix it.
+
+    An act names six people. A label written against the act id says "the ruling was about
+    somebody in here", and for 45 of the first 48 labels that was all it said — so the
+    scorer was handed whichever participant came first, which was usually the groom. The
+    resulting figures measured the ambiguity, not the scorer.
+
+    The fix per label is a human choosing the pid, and this prints the evidence for that
+    choice: who in the act carries the surname, what role the act gives them, and the
+    command to re-record it. It chooses nothing itself. Where the act names a bride AND her
+    father of the same surname, both are listed and the role is what tells them apart.
+    """
+    labels = read_labels()
+    if not labels:
+        return cmd_report(args)
+    if not corpus_exists():
+        raise SystemExit("error nothing harvested yet — the labels cannot be resolved")
+
+    people = load_people(load_config()["roster"])
+    in_act: dict[str, list] = {}
+    for m in corpus_mentions():
+        if m.act:
+            in_act.setdefault(m.act.id, []).append(m)
+
+    unheld, ambiguous, gone = [], [], []
+    for lab in labels:
+        if "#" in lab.ref:
+            continue
+        if lab.person not in people:
+            gone.append(lab)
+            continue
+        parts = in_act.get(lab.ref)
+        if not parts:
+            unheld.append(lab)
+            continue
+        key = family_key(people[lab.person].get("surname"))
+        same = [m for m in parts if family_key(m.surname) and family_key(m.surname) == key]
+        if len(same) != 1:
+            ambiguous.append((lab, parts, same))
+
+    print(f"{len(labels)} labels · {len(ambiguous)} need a participant · "
+          f"{len(unheld)} name an act not held · {len(gone)} name a person no longer in the tree\n")
+
+    for lab, parts, same in ambiguous[: args.limit]:
+        verdict = "--match" if lab.match else "--nonmatch"
+        print(f"── {lab.person}  ×  {lab.ref}   ({'match' if lab.match else 'NOT a match'})")
+        print(f"   {lab.why[:110]}")
+        listed = same or parts
+        print(f"   {len(same)} participant(s) share the surname; the act names {len(parts)}:")
+        for m in listed:
+            when = m.birth or (str(m.birth_year) if m.birth_year else "—")
+            print(f"     {m.pid:<28} {m.role:<22} {m.name[:32]:<34} b. {when}")
+            print(f'       uv run tools/evaluate.py label {lab.person} {lab.ref}#{m.pid} '
+                  f'{verdict} --basis {lab.basis} --why "…"')
+        print()
+
+    if unheld:
+        print(f"{len(unheld)} label(s) name an act the corpus does not hold. Not an error — the")
+        print("  act was read in a browser, or the harvest has not reached it. They will")
+        print("  resolve on their own once it is held:")
+        for lab in unheld[:8]:
+            print(f"    {lab.person:<22} {lab.ref}")
     return 0
 
 
@@ -303,6 +401,10 @@ def main() -> int:
     p = sub.add_parser("sweep", help="what moving the thresholds would cost")
     p.add_argument("--limit", type=int, default=20)
     p.set_defaults(fn=cmd_sweep)
+
+    p = sub.add_parser("refs", help="labels that name an act but not which of its six people")
+    p.add_argument("--limit", type=int, default=25)
+    p.set_defaults(fn=cmd_refs)
 
     p = sub.add_parser("floor", help="below which bits no true match has ever been seen")
     p.add_argument("--limit", type=int, default=20)

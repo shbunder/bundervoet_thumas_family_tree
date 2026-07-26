@@ -19,6 +19,39 @@ from familytree.people import (
 )
 
 
+@pytest.fixture(autouse=True)
+def no_real_corpus(tmp_path, monkeypatch):
+    """No test reads the harvest. Every test, by default.
+
+    `compare` asks `frequencies()` for its rarity weights when a caller does not pass them,
+    and `frequencies()` consults the persistent index — falling back to counting the corpus
+    when the index is stale. So the moment a harvest ran without reindexing, the scoring
+    tests started loading half a million real acts to assert a fact about two invented
+    Candidates: the suite went from 0.2 seconds to 105.
+
+    Speed is the visible half. The real problem is that it made the assertions depend on
+    whichever acts happened to be on this machine, which is the opposite of what these
+    tests are for. Pointed at nothing, the scorer uses its documented no-corpus constants
+    and the results are the same everywhere.
+
+    Tests that DO want a corpus build their own and override this — see `indexed_corpus`.
+    """
+    from familytree import corpus, store
+    empty = tmp_path / "no-acts"
+    empty.mkdir()
+    monkeypatch.setattr(corpus, "ACTS_DIR", empty)
+    monkeypatch.setattr(store, "ACTS_DIR", empty)
+    monkeypatch.setattr(store, "DB", tmp_path / "absent.db")
+    monkeypatch.setattr(corpus, "load_manifest", lambda: {"harvests": []})
+    corpus.load_corpus.cache_clear()
+    corpus.frequencies.cache_clear()
+    store.close()
+    yield
+    corpus.load_corpus.cache_clear()
+    corpus.frequencies.cache_clear()
+    store.close()
+
+
 # ---------- frontmatter ----------
 
 

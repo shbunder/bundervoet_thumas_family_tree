@@ -43,14 +43,28 @@ about whether they are the same person. Until recently those judgements were mad
 thrown away, which meant no threshold in the scorer could ever be measured.
 
 ```bash
-uv run tools/evaluate.py label anna_vc abt:c59c… --match    --basis act   --why "act names both parents"
-uv run tools/evaluate.py label anna_vc gnt:d4f1… --nonmatch --basis index --why "wrong province"
+uv run tools/evaluate.py label anna_vc abt:c59c…#Person3 --match    --basis act   --why "act names both parents"
+uv run tools/evaluate.py label anna_vc gnt:d4f1…#Person1 --nonmatch --basis index --why "wrong province"
 ```
 
 A label records **who decided, on what basis, and why**. A label without a reason is
 rejected by the tool. `basis` is kept explicit — `act`, `index`, `tree`, `reasoning` —
 because a label from a read act and a label from a plausible-looking index page are not
 the same evidence, and a gold standard that mixes them silently measures the wrong thing.
+
+**Label the mention, not the act** — the `#Person3` above is not decoration. An act names
+six people, so `abt:c59c…` alone does not say which of them the ruling concerned. 45 of the
+first 48 labels here were written without it, and the scorer was handed whichever
+participant the record happened to list first: Maria Thérèsia Pardon was scored against
+Joseph Reniers, her own husband; Hendrik Vandenbemden against a witness. Each came back
+REJECTED on a sex or birth-date conflict and was counted as a confirmed match the scorer
+had *missed*, which is how this page could once report 33% recall for a scorer that had no
+known errors at all. The ambiguity was measuring itself.
+
+`evaluate.py refs` lists every label still owed a pid, with the act's participants and
+their roles, and prints the command to re-record each one. It resolves nothing by itself —
+where an act names a bride *and* her father of the same surname, only a human can say which
+the ruling was about, and guessing is what caused this.
 
 Labels are append-only, and later labels supersede earlier ones for the same pair:
 corrections are first-class here exactly as they are in the tree.

@@ -59,6 +59,7 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -366,6 +367,49 @@ def _open(url: str, accept: str = "*/*"):
         raise Blocked(f"{url}: {e}") from e
 
 
+def archive_countries() -> dict[str, str]:
+    """Which country each archive belongs to, according to the venue's own register.
+
+    Read from the ISIL code `stats/archives` publishes — `NL-HtBHIC`, `NL-MdbZA` — whose
+    prefix is the ISO country. Derived in one request rather than kept as a list here,
+    because the register grows and a stale copy would silently mis-classify.
+
+    An absent ISIL means UNREGISTERED, not Belgian. 133 of the 207 archives have none, and
+    every Belgian one in this corpus is among them — but that is a correlation, and turning
+    it into "no ISIL therefore Belgium" is exactly the inference this project refuses to
+    make. So the caller gets "" and treats it as unknown.
+    """
+    try:
+        with _open(f"{API}/stats/archives.json?number_show=500", "application/json") as res:
+            rows = json.loads(res.read().decode("utf-8"))
+    except (Blocked, json.JSONDecodeError):
+        return {}
+    return {r["archive_code"]: (r.get("isilcode") or "").split("-")[0]
+            for r in rows if r.get("archive_code")}
+
+
+def out_of_scope(archive: str) -> str | None:
+    """Why a whole-archive pull would be the wrong thing, or None.
+
+    The trap this exists for: the corpus holds Oostende and Bredene acts from Zeeuws
+    Archief and Historisch Centrum Limburg, which look like Belgian archives and are not.
+    They are only in the corpus because every API harvest was filtered `country_code=be`.
+    Their EXPORTS are the whole archive — Zeeuws Archief alone is millions of Dutch
+    records — so pulling one floods the corpus with material no objective in CLAUDE.md
+    asks for, and skews the fallback rarity weights in `frequencies()` toward Dutch name
+    distributions while `population()` still measures against 30 million Belgian mentions.
+
+    A country filter at parse time would be the general answer, and it needs the
+    historical gazetteer that docs/method/scaling.md lists as future work. Until then this
+    refuses the known-wrong case and says why.
+    """
+    country = archive_countries().get(archive, "")
+    if country and country != "BE":
+        return (f'"{archive}" is registered in {country}, not Belgium. Its export is the '
+                f"whole archive, and only the sliver about Belgian events is in scope.")
+    return None
+
+
 def bulk_archives() -> set[str]:
     """Which archives publish a whole-archive export. Read from the index, not hardcoded —
     the list grows as archives join, and a stale copy here would quietly send the harvester
@@ -378,7 +422,7 @@ def bulk_archives() -> set[str]:
     return set(re.findall(r"/xml/\./([a-z0-9]+)\.xml\.gz", html))
 
 
-def write_acts(rows, archive: str, refresh: bool) -> tuple[int, int]:
+def write_acts(rows, archive: str, refresh: bool) -> tuple[int, int, Exception | None]:
     """Stream acts into the store, skipping the ones already held.
 
     Shared by both bulk routes. The dedup is on the act id, which `a2a.act_id` mints to
@@ -390,46 +434,109 @@ def write_acts(rows, archive: str, refresh: bool) -> tuple[int, int]:
     ACTS_DIR.mkdir(parents=True, exist_ok=True)
     today = dt.date.today().isoformat()
     added = skipped = 0
+    error: Exception | None = None
     with (ACTS_DIR / f"{archive}.jsonl").open("a", encoding="utf-8") as f:
-        for row in rows:
-            if row["id"] in held:
-                skipped += 1
-                continue
-            held.add(row["id"])
-            f.write(json.dumps({**row, "fetched": today}, ensure_ascii=False) + "\n")
-            added += 1
-            if added % 2000 == 0:
-                f.flush()
-                print(f"\r  {added} new acts, {skipped} already held…", end="", flush=True)
+        # The iterator is a live network stream, so it can fail part-way through — and the
+        # acts written before it failed are on disk and held. Catching here rather than in
+        # the caller is what lets the count survive the failure: returning only on success
+        # meant a dropped connection recorded "0 acts" for an archive whose file had just
+        # grown by three and a half thousand, which is the same lie as a capped harvest
+        # reported as complete.
+        try:
+            for row in rows:
+                if row["id"] in held:
+                    skipped += 1
+                    continue
+                held.add(row["id"])
+                f.write(json.dumps({**row, "fetched": today}, ensure_ascii=False) + "\n")
+                added += 1
+                if added % 2000 == 0:
+                    f.flush()
+                    print(f"\r  {added} new acts, {skipped} already held…", end="", flush=True)
+        except (OSError, EOFError, ET.ParseError) as e:
+            # A dropped stream, a truncated gzip member, and XML ending mid-element are the
+            # same event seen at three layers.
+            error = e
     print(f"\r  {added} new acts, {skipped} already held.        ")
-    return added, skipped
+    return added, skipped, error
 
 
 def cmd_bulk(args):
-    """A whole archive in one request.
+    """Whole archives, one request each.
 
     This is the route that changes the arithmetic. Kortrijk holds 140,543 acts; fetching
     them one at a time at the permitted rate is thirteen hours, and the export is a 19 MB
     download. Where an archive publishes one, nothing else should be used.
+
+    Takes several archives because the index is rebuilt once per invocation: pulling nine
+    of them one command at a time means nine rebuilds over a corpus that is growing each
+    time, and the last one is the only rebuild that was ever needed.
     """
-    archive = args.archive.lower()
+    failed = []
+    for archive in args.archive:
+        # One archive failing must not take the rest of the run with it. A batch of nine is
+        # half an hour of downloading, and losing the eight that would have worked because
+        # the first connection dropped is the difference between a tool and a demonstration.
+        try:
+            if not _bulk_one(archive.lower(), args):
+                failed.append(archive.lower())
+        except Blocked as e:
+            print(f"  {archive}: {e}", file=sys.stderr)
+            failed.append(archive.lower())
+    if failed:
+        print(f"\n{len(failed)} archive(s) did not complete: {', '.join(failed)}")
+        print("  Nothing is lost — what arrived is held, and a re-run skips it by act id:")
+        print(f"    uv run tools/harvest.py bulk {' '.join(failed)}")
+
+
+def _bulk_one(archive: str, args) -> bool:
+    """One whole archive. True if it completed, False if it did not.
+
+    A partial pull is recorded as partial, for the same reason a capped surname search is:
+    a harvest that looks complete and is not is the corpus equivalent of an unlogged miss,
+    and every later report would read the gap as evidence of absence.
+    """
+    if (why := out_of_scope(archive)) and not args.anyway:
+        print(f"refusing to bulk-harvest {archive}\n  {why}\n\n"
+              "  Keep using the country-filtered API for this one — it returns only the\n"
+              f'  Belgian records:  uv run tools/harvest.py surname "<name>"\n\n'
+              "  Pass --anyway if you really do want the whole archive.", file=sys.stderr)
+        return True
     url = BULK.format(archive=archive)
     print(f"Bulk export — {archive}\n  {url}")
-    try:
-        res = _open(url, "application/gzip")
-    except Blocked as e:
-        available = sorted(bulk_archives())
-        print(f"  no bulk export for \"{archive}\" ({e})", file=sys.stderr)
-        if available:
-            print(f"\n  {len(available)} archives do publish one: {', '.join(available)}", file=sys.stderr)
-        print(f"\n  For this one, try OAI-PMH instead — still 150 acts a request:\n"
-              f"    uv run tools/harvest.py oai {archive}", file=sys.stderr)
-        return
-    with res:
-        size = res.headers.get("Content-Length")
-        if size:
-            print(f"  {int(size) / 1048576:.0f} MB compressed — streamed, never held whole")
-        added, skipped = write_acts(read_acts(gzip.GzipFile(fileobj=res), archive), archive, args.refresh)
+
+    added = skipped = 0
+    complete = False
+    # Retried, because a multi-megabyte stream from a CDN drops sometimes and a gzip
+    # stream cannot be resumed mid-way. Restarting is cheap in the only sense that
+    # matters: `write_acts` skips by act id, so a second attempt re-reads the export but
+    # writes only what the first one did not reach.
+    for attempt in range(1, 4):
+        try:
+            res = _open(url, "application/gzip")
+        except Blocked as e:
+            available = sorted(bulk_archives())
+            print(f"  no bulk export for \"{archive}\" ({e})", file=sys.stderr)
+            if available:
+                print(f"\n  {len(available)} archives do publish one: {', '.join(available)}", file=sys.stderr)
+            print(f"\n  For this one, try OAI-PMH instead — still 150 acts a request:\n"
+                  f"    uv run tools/harvest.py oai {archive}", file=sys.stderr)
+            return True   # not a failure to retry: this archive has no export
+        with res:
+            size = res.headers.get("Content-Length")
+            if size and attempt == 1:
+                print(f"  {int(size) / 1048576:.0f} MB compressed — streamed, never held whole")
+            got, seen, error = write_acts(read_acts(gzip.GzipFile(fileobj=res), archive), archive, args.refresh)
+        # Counted whether or not the stream finished: those acts are on disk and held.
+        added += got
+        skipped = seen
+        if error is None:
+            complete = True
+            break
+        print(f"  attempt {attempt}: stream failed after {added} new acts — "
+              f"{type(error).__name__}: {error}", file=sys.stderr)
+        if attempt < 3:
+            time.sleep(3 * attempt)
 
     save_manifest({
         "id": f"archive-{archive}",
@@ -437,12 +544,13 @@ def cmd_bulk(args):
         "date": dt.date.today().isoformat(),
         "found": added + skipped,
         "mentions": added + skipped,
-        # A whole-archive export IS the archive, so unlike a capped surname search there
-        # is nothing left behind to be honest about.
-        "complete": True,
+        # A whole-archive export IS the archive, so a completed pull has nothing left
+        # behind to be honest about — and an interrupted one has, so it says so.
+        "complete": complete,
         "acts": added + skipped,
     })
-    print(f"  → {added + skipped} acts held for {archive}\n")
+    print(f"  → {added + skipped} acts held for {archive}" + ("" if complete else " — PARTIAL") + "\n")
+    return complete
 
 
 def cmd_oai(args):
@@ -454,6 +562,10 @@ def cmd_oai(args):
     will report that rather than appear to work.
     """
     archive = args.archive.lower()
+    if (why := out_of_scope(archive)) and not args.anyway:
+        print(f"refusing to harvest all of {archive}\n  {why}\n"
+              "  Pass --anyway to override.", file=sys.stderr)
+        return
     print(f"OAI-PMH — {archive}")
     params = {"verb": "ListRecords", "metadataPrefix": "oai_a2a", "set": archive}
     total_added = total_skipped = 0
@@ -474,21 +586,26 @@ def cmd_oai(args):
                 return
             params = {"verb": "ListRecords", "resumptionToken": token.group(1).decode()}
 
-    total_added, total_skipped = write_acts(pages_of_acts(), archive, args.refresh)
+    total_added, total_skipped, error = write_acts(pages_of_acts(), archive, args.refresh)
     if not (total_added + total_skipped):
         print(f"  the OAI endpoint has no records for \"{archive}\" — it is not one of its sets.\n"
               f"  Fall back to the per-act route: uv run tools/harvest.py surname <name>", file=sys.stderr)
         return
+    if error is not None:
+        print(f"  the feed failed after {total_added} new acts — {type(error).__name__}: {error}\n"
+              "  What arrived is held; re-running resumes by skipping it.", file=sys.stderr)
     save_manifest({
         "id": f"archive-{archive}",
         "query": {"archive": archive, "via": "oai"},
         "date": dt.date.today().isoformat(),
         "found": total_added + total_skipped,
         "mentions": total_added + total_skipped,
-        "complete": True,
+        # Only a feed read to exhaustion is the whole archive.
+        "complete": error is None,
         "acts": total_added + total_skipped,
     })
-    print(f"  → {total_added + total_skipped} acts held for {archive}, over {pages} request(s)\n")
+    print(f"  → {total_added + total_skipped} acts held for {archive}, over {pages} request(s)"
+          + ("" if error is None else " — PARTIAL") + "\n")
 
 
 # ---------- commands ----------
@@ -573,11 +690,21 @@ def cmd_status(args):
         whole = {h["query"]["archive"] for h in manifest["harvests"]
                  if (h.get("query") or {}).get("archive")}
         cheap = sorted((set(by_archive) & exports) - whole, key=lambda a: -by_archive[a])
-        if cheap:
-            print(f"\n  {len(cheap)} archive(s) you already hold acts from publish a WHOLE-ARCHIVE export.")
+        # Split, because recommending them together is how a Dutch archive gets pulled
+        # whole by reflex. See out_of_scope().
+        in_scope = [a for a in cheap if not out_of_scope(a)]
+        elsewhere = [a for a in cheap if out_of_scope(a)]
+        if in_scope:
+            print(f"\n  {len(in_scope)} archive(s) you already hold acts from publish a WHOLE-ARCHIVE export.")
             print("  One request each, and it supersedes every future surname query there:\n")
-            for a in cheap[:10]:
+            for a in in_scope[:12]:
                 print(f"    {a:<6} {by_archive[a]:>6} acts held    uv run tools/harvest.py bulk {a}")
+        if elsewhere:
+            print(f"\n  {len(elsewhere)} more publish one, but are registered OUTSIDE Belgium — the acts")
+            print("  held from them are Belgian only because the API queries were filtered that way.")
+            print("  Pulling their exports would be mostly out-of-scope records:")
+            where = archive_countries()
+            print("    " + ", ".join(f"{a} ({where.get(a) or '?'})" for a in elsewhere))
 
     # Which surnames in the tree have never been harvested. This is objective 3's to-do
     # list, and it is derived rather than kept by hand.
@@ -614,14 +741,18 @@ def main() -> int:
     p.add_argument("place")
     p.set_defaults(fn=cmd_place)
 
-    p = sub.add_parser("bulk", help="a whole archive in ONE request — always try this first")
-    p.add_argument("archive", help="an archive code, e.g. gnt, kor, aal, den")
+    p = sub.add_parser("bulk", help="whole archives, ONE request each — always try this first")
+    p.add_argument("archive", nargs="+", help="archive codes, e.g. gnt kor aal den")
     p.add_argument("--refresh", action="store_true", help="re-read what is already held")
+    p.add_argument("--anyway", action="store_true",
+                   help="pull an archive registered outside Belgium — see out_of_scope()")
     p.set_defaults(fn=cmd_bulk)
 
     p = sub.add_parser("oai", help="a whole archive at 150 acts a request, where there is no export")
     p.add_argument("archive", help="an archive code, e.g. den, ell, sla")
     p.add_argument("--refresh", action="store_true", help="re-read what is already held")
+    p.add_argument("--anyway", action="store_true",
+                   help="pull an archive registered outside Belgium — see out_of_scope()")
     p.set_defaults(fn=cmd_oai)
 
     p = common(sub.add_parser("frontiers", help="harvest the surnames the queue is asking for"))
