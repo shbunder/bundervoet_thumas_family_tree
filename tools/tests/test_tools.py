@@ -446,3 +446,33 @@ def test_a_relatives_surname_still_anchors():
     m = compare(a, b)
     assert "kin" in m.classes
     assert m.independent >= 2
+
+
+def test_only_the_deceased_gets_a_death_year_from_a_death_act():
+    """A death act names the dead person's parents, spouse and informants, and all of
+    them are alive to be named. Giving every participant the act's year as their own
+    death year made anyone in this tree who died in 1861 match the living father in an
+    1861 death act — Joannes Josephus Van Iseghem to a Jacobus, on nothing but a surname
+    and that phantom date."""
+    from familytree.corpus import normalise_act
+    from familytree.match import from_mention
+    act = normalise_act({
+        "id": "t:1", "archive": "t", "archive_org": "T",
+        "record": {
+            "Event": {"EventType": "Overlijden", "EventDate": {"Year": "1861"},
+                      "EventPlace": {"Place": "Brugge"}},
+            "Person": [
+                {"@pid": "P1", "PersonName": {"PersonNameFirstName": "Alida",
+                                              "PersonNameLastName": "Van Iseghem"}},
+                {"@pid": "P2", "PersonName": {"PersonNameFirstName": "Jacobus",
+                                              "PersonNameLastName": "Van Iseghem"}},
+            ],
+            "RelationEP": [
+                {"PersonKeyRef": "P1", "EventKeyRef": "E1", "RelationType": "Overledene"},
+                {"PersonKeyRef": "P2", "EventKeyRef": "E1", "RelationType": "Vader"},
+            ],
+        },
+    })
+    by_name = {p.given: p for p in act.people}
+    assert from_mention(by_name["Alida"]).death_year == 1861, "the deceased did die that year"
+    assert from_mention(by_name["Jacobus"]).death_year is None, "the father was alive to be named"

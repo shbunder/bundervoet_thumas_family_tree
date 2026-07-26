@@ -81,6 +81,9 @@ class Candidate:
     places: list[str] = field(default_factory=list)
     # Where the RECORD happened, as opposed to where this person was. Weak evidence.
     context_places: list[str] = field(default_factory=list)
+    # The year of the record this candidate was read from. A hard bound on who can be in
+    # it, and often the only bound an act offers about a participant it dates not at all.
+    event_year: int | None = None
     occupation: str | None = None
     # Stated, so it can be told apart from a year implied by an age in an act. Only a
     # stated year is strong enough to veto on.
@@ -202,12 +205,18 @@ def from_mention(m: Mention) -> Candidate:
         birth_year=m.birth_year or m.implied_birth_year,
         birth_date=m.birth,
         birth_place=m.birth_place,
-        death_year=act.year if act and act.type == "Overlijden" else None,
+        # ONLY the deceased. A death act names the dead person's parents, spouse and
+        # informants, and all of them are alive to be named — giving every participant
+        # the act's year as their own death year made anyone in this tree who died in
+        # 1861 match the living father in an 1861 death act.
+        death_year=(act.year if act and act.type == "Overlijden"
+                    and re.match(r"^(overledene|gedoopte)?$|^overledene", m.role or "") else None),
         # The person's OWN places only. The act's commune goes in context_places: a
         # marriage held at Oostende says where the wedding was, not where either party
         # was born or lived, and treating it as theirs matched a third of this tree.
         places=[x for x in (m.birth_place, m.residence) if x],
         context_places=[act.place] if act and act.place else [],
+        event_year=act.year if act else None,
         occupation=m.occupation,
         stated_birth_year=bool(m.birth_year),
         kin=[k for k in kin if k],
@@ -258,6 +267,11 @@ def candidates_for(c: Candidate, index: dict[str, list[Candidate]]) -> list[Cand
 # ---------- weights ----------
 MAX_BITS = 14.0  # a surname seen once is very strong evidence, not infinite evidence
 MAX_LIFESPAN = 110  # beyond this the pair is two people, whatever else agrees
+# An act can name someone long dead — a deceased parent, a grandparent — but not
+# indefinitely long. Generous on purpose: the point is to kill the case where an act
+# gives a participant no dates at all, so nothing else can veto, and a man born in 1665
+# is matched to a father named in a marriage of 1911.
+MAX_POSTHUMOUS_MENTION = 120
 _NO_CORPUS = {"surname": 6.0, "given": 3.0, "place": 4.0}
 
 
@@ -304,7 +318,7 @@ CLASSES = ("name", "date", "place", "role", "kin")
 # an act HELD at Oostende matched everyone in the tree who lived there, and two men's
 # wives sharing the forename Simonne matched across seventy years. They still add bits —
 # they are not nothing — but they cannot carry a graft on their own.
-WEAK_CLASSES = ("context", "kin-forename")
+WEAK_CLASSES = ("context", "kin-forename", "name-forename")
 
 
 @dataclass
@@ -362,7 +376,14 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     for g in ga & gb:
         given_bits += _bits(freq.givens.get(g, 0), freq.n, 8.0) if freq.n else _NO_CORPUS["given"]
     if given_bits:
-        add("name", f"forename{'s' if len(ga & gb) > 1 else ''}", min(given_bits, 10.0))
+        # A forename is only half a name. On its own it matched Henricus Josephus BOSTYN
+        # to Henricus Amandus MOMBAERTS, Joanna KEIRSEBILCK to Joanna Maria GOORIS and
+        # Anna Maria GAUTIERT to Anna Catharina VAN RENTERGHEM — three people whose
+        # surnames have nothing to do with ours. It still scores, because a shared
+        # forename plus a shared year is worth noticing; it cannot be one of the two
+        # independent identifiers unless the surname agrees too.
+        cls = "name" if (same_surname or same_phonetic) else "name-forename"
+        add(cls, f"forename{'s' if len(ga & gb) > 1 else ''}", min(given_bits, 10.0))
 
     # --- date ---
     # A day-level agreement between two independently written records is close to
@@ -437,7 +458,11 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
                 # A relative's SURNAME agreeing is the classic second identifier. A
                 # relative's forename agreeing is not: Simonne, Maria and Joanna are
                 # each a large fraction of the women in this material.
-                if same_surname:
+                # ...and only when that surname is NEW information. A son carries his
+                # father's surname, so "the child's surname agrees" is the principal's
+                # own name counted a second time. A mother's maiden name is the case
+                # this is really for.
+                if same_surname and surname_key != family_key(a.surname):
                     kin_anchored = True
                 break
     if kin_bits:
@@ -467,7 +492,22 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
         if birth and death and death - birth > MAX_LIFESPAN:
             conflict.append(f"implied lifespan {death - birth} years")
             break
+    # The record's own year against the person's life. This catches what nothing else
+    # can: an act that gives a participant no dates whatsoever still cannot name someone
+    # who died two centuries before it was drawn up, or who was not yet born.
+    for cand, other in ((a, b), (b, a)):
+        if not other.event_year:
+            continue
+        if cand.death_year and other.event_year - cand.death_year > MAX_POSTHUMOUS_MENTION:
+            conflict.append(f"record of {other.event_year} is {other.event_year - cand.death_year} years after they died")
+            break
+        if cand.birth_year and other.event_year < cand.birth_year:
+            conflict.append(f"record of {other.event_year} predates their birth in {cand.birth_year}")
+            break
 
+    surnames_disagree = bool(
+        family_key(a.surname) and family_key(b.surname) and not same_surname and not same_phonetic
+    )
     independent = sum(1 for c in classes if c in CLASSES)
     distinguishing = sum(bits for cls, _, bits in agree if cls != "name")
     return Match(
@@ -481,7 +521,15 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
         # The project's rule, not a threshold: two independent identifiers is the floor
         # for a graft, and no amount of accumulated score substitutes for it. The bits
         # only decide how far up the list it goes.
-        graftable=not conflict and independent >= 2 and distinguishing >= 6,
+        # A surname disagreement is disqualifying, not merely unhelpful. Judocus
+        # Bundervoet was matched to Judocus ROTIER and Edouard Dekeyser to Edouard BARBE,
+        # each on a forename plus a date — two people who share nothing but a Christian
+        # name and a decade. Where both sides state a surname and the two do not agree,
+        # even phonetically, the pair can still be shown as a lead but must never be
+        # graftable. Women recorded under a married name are the known cost of this, and
+        # they are better handled as a lead than as a silent graft.
+        graftable=(not conflict and independent >= 2 and distinguishing >= 6
+                   and not surnames_disagree),
         band=("rejected" if conflict else
               "strong" if distinguishing >= 12 and independent >= 2 else
               "read the act" if distinguishing >= 6 and independent >= 2 else "noise"),

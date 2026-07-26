@@ -84,3 +84,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 23 | 2026-07-26 | — (scorer) | — | — | **Fixed §44's two leaks.** The act's own commune and a relative's forename now add bits but cannot be an independent identifier. Corroborated 35 → 26. | 708acd7 |
 | 23 | 2026-07-26 | hubert_devriese, edouard_dk, gustaaf, joannes_vi2 | CORROBORATED → KIN-ONLY | — | All four false positives dropped out of the corroborated bucket; joannes_jos_vi dropped out entirely. | 708acd7 |
 | 23 | 2026-07-26 | louise_bocklandt, augusta | — | — | The genuine ones stayed. 3 regression tests added; 62 pass. | 708acd7 |
+| 24 | 2026-07-26 | — (scorer) | — | — | Four more leaks closed: act-year veto; forename-only *name* demoted; kin needs a **new** surname; surname disagreement blocks a graft. | b5f0e66 |
+| 24 | 2026-07-26 | — (bug) | — | — | **Every participant in a death act was given the act's year as their own death year** — including living fathers. Now only the deceased. | b5f0e66 |
+| 24 | 2026-07-26 | 12 verified people | — | — | All stayed CORROBORATED across every change — the discriminating test. 9 of 11 known-wrong dropped out. 63 tests. | b5f0e66 |
