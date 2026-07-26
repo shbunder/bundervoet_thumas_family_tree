@@ -1405,3 +1405,46 @@ births of February 1830, which carry the Pardon line back a generation; and — 
 this pass matters more than its four names — the rest of the Bossin children. One sibling
 found by asking downward means the 1820s Sint-Stevens-Woluwe births are worth a
 commune-level harvest, not a name search.
+
+## 49. The Thumas age conflict: two closed venues, and an argument that was there all along
+
+§42's artifact left a ten-year hole open. Marie Catherine Joostens's 1857 death act names her
+surviving husband as *Georges Thumas, menuisier of Grez-Doiceau* — the trade this tree
+already had, so the man is not in doubt — and gives his age as **63**, putting his birth
+around 1793–94. [[georges2_t]] is recorded as born **24 January 1804**. The act got his
+wife's age right, which is what made the discrepancy hard to dismiss.
+
+**Both documentary routes are now closed at AGATHA, and closed for reasons worth writing
+down rather than re-walking.**
+
+His own 1864 death act is not indexed. Grez-Doiceau deaths are near-complete for **1860**
+— 49 acts — and then collapse to two to four a year through 1874. Searching *Georges
+Thumas* in the role *Overledene* there returns nothing, and all eighteen Thumas appearances
+in Grez-Doiceau death acts of 1860–1880 turn out to be **Charles Julien Thumas as
+*Belanghebbende***: a commune official who appears in dozens of acts. That is a standing trap
+on this line — a match on surname, commune and period would find him again and again, and he
+is nobody's relative here.
+
+His 1804 birth act is not indexed either, and this one is unambiguous. Asking for
+Grez-Doiceau **birth acts across 1796–1815 with no name at all** returns 57 results, and
+every single one falls in **1813 or 1814**. There is no 1804 in the index to search.
+
+**And then the argument that was sitting in the tree the whole time.** The note in
+[[georges2_t]] had compared his father's birth year — 1772 — and concluded that fathering a
+son at 22 or at 32 is equally ordinary, so the parent link decided nothing. But
+[[georgeslambert_t]] married [[quinart]] on **9 February 1801**. A son born in 1793–94 would
+arrive seven years before his parents' marriage; a son born in January 1804 arrives three
+years after it. That is not proof — births before a marriage happen, and the 1801 date is
+itself only `sup`, resting on Geneanet — but it moves the weight decidedly onto 1804.
+
+**One more thing, which is really a lesson about ages.** The 1857 act "got the wife's age
+right" — but the figure it got right was the **deceased's**, the person the act exists to
+record and whose papers were to hand. The 63 was the age of a **surviving spouse**, said in
+passing by whoever came to report the death. Those are not the same kind of number, and the
+act's accuracy on the first says very little about the second. This tree has been treating
+"the act got one age right" as evidence for its other ages; it is not.
+
+Nothing was changed in the record. The conflict stays open and honestly labelled, with the
+weight now stated, and the frontier narrowed from "search AGATHA" to the one thing that would
+settle it: the Brabant-wallon register images on FamilySearch for 1804, and the parish
+registers for 1793–94.

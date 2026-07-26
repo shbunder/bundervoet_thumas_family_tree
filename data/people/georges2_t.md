@@ -46,6 +46,31 @@ Ten years is too wide to be the usual slippage, and the same act gets his wife's
 the 1804 date has never been documented, and the 63 was spoken by whoever reported the death.
 
 Nothing changed. FRONTIER: the Grez-Doiceau baptisms for 1793–94 and for 1804, and his own
-1864 death act, which would state an age to compare. His father [[georgeslambert_t]] was born
-in 1772, so either year makes an ordinary age at fatherhood — the parent link does not decide
-it.
+1864 death act, which would state an age to compare.
+
+REFINED (2026-07-26) — **the parent link does decide something after all, and the earlier
+note here missed it.** It compared only his father's *birth* year, 1772, and concluded that
+fatherhood at 22 or at 32 is equally ordinary. But [[georgeslambert_t]] married
+[[quinart]] on **9 February 1801**. A son born in 1793–94 would arrive *seven years before
+his parents' marriage*; a son born in January 1804 arrives three years after it, which is
+unremarkable. That does not prove 1804 — births before a marriage happen, and this couple's
+marriage date itself rests on Geneanet and is only `sup` — but it moves the weight decidedly
+onto 1804 and away from the 63.
+
+It also matters *whose* age the 1857 act was reporting. The figure it got right, 47, was the
+**deceased's**: the person the act exists to record, checked against her own papers. The 63
+was the age of a **surviving spouse**, stated in passing by whoever came to report the death.
+Those are not equally reliable numbers, and the act getting one right says little about the
+other.
+
+VENUES CLOSED (2026-07-26), so this is not a frontier to re-walk at AGATHA:
+- **his 1864 death act** — Grez-Doiceau deaths are indexed nearly completely for 1860 (49
+  acts) and then only in a trickle: about two to four a year for 1861–1874. No Georges Thumas
+  is among them. All eighteen Thumas appearances in Grez-Doiceau death acts of 1860–1880 are
+  *Charles Julien Thumas as* **Belanghebbende** — a commune official who turns up in dozens of
+  acts, and a standing trap for any match made on surname and place alone.
+- **his 1804 birth act** — AGATHA's Grez-Doiceau birth acts cover **1813 and 1814 only** (57
+  acts, all of them in those two years). 1804 is not in the index at all.
+
+What is left is the register images themselves — FamilySearch's Brabant-wallon civil
+registration for 1804, and the parish registers for 1793–94.
