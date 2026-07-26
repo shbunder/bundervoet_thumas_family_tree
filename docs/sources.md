@@ -17,9 +17,9 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 30 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 44 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 20 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 26 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 1 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 35 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 41 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 5 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
@@ -182,6 +182,102 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Accessed:** 2026-07-26
 - **Note:** An analysis, not the register image. Complete enough to read like an act, but it is a transcription.
 
+#### `agatha-oostende-1907-death-eduardus-bocklandt` — Death act nr. 417 — Eduardus Bocklandt, Oostende, 4 July 1907
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/OVWVL_00502217>
+- **Covers:** ['Bocklandt', 'Ichau', 'Van Bergen']
+- **Yielded:** Eduardus BOCKLANDT, born Hamme (OVL), died Oostende 4 Jul 1907. Father Antonius Dominicus BOCKLANDT (deceased, place not stated); mother Isabella Livina ICHAU (deceased, place not stated); previous partner Maria Ludovica Van Bergen. Sources edouard_bocklandt's parent links and his marriage, and gives him a death date and birthplace the tree did not have.
+- **Confidence:** sup
+- **Accessed:** 2026-07
+- **Note:** AGATHA 'analyse van akte' — the volunteer index transcription, NOT the register image. The image is behind an AGATHA login and was not opened.
+
+#### `agatha-oostende-1888-death-maria-louisa-vanbergen` — Death act nr. 721 — Maria Louisa Vanbergen, Oostende, 23 November 1888
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/OVWVL_00484466>
+- **Covers:** ['Van Bergen', 'Vermandel', 'Bocklandt']
+- **Yielded:** Maria Louisa VANBERGEN, born WAASMUNSTER, werkvrouw, died Oostende 23 Nov 1888. Father Joannes Franciscus VANBERGEN, living at Hamme (OVL), metser; mother Ida VERMANDEL, 'overleden te Hamme'; partner Eduardus BOCKLANDT of Oostende, lijndraaiersknecht. Sources marie_vanbergen's parent links and dates her death exactly — and moves her birth from Hamme to Waasmunster.
+- **Confidence:** sup
+- **Accessed:** 2026-07
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image.
+
+#### `agatha-oostende-1892-death-alphonsus-bocklandt` — Death act nr. 712 — Alphonsus Bocklandt, Oostende, 26 October 1892
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/OVWVL_00487946>
+- **Covers:** ['Bocklandt', 'Van Bergen']
+- **Yielded:** Alphonsus BOCKLANDT, born Hamme (OVL), died Oostende 26 Oct 1892; father Eduardus BOCKLANDT, mother Maria Ludovica VAN BERGEN ('overleden te Oostende'). A previously unrecorded child of the couple, i.e. a sibling of louise_bocklandt, and a second independent statement of the couple.
+- **Confidence:** sup
+- **Accessed:** 2026-07
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image.
+
+#### `agatha-roksem-1855-death-agatha-stekelorum` — Death act nr. 27 — Agatha Stekelorum, Roksem, 24 May 1855
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/OVWVL_00939687>
+- **Covers:** ['Stekelorum', 'Denijs', 'Perquy']
+- **Yielded:** Agatha STEKELORUM died Roksem 24 May 1855; father Pieter STEKELORUM, mother Helena DENIJS, partner Joannes PERQUY. The only act in AGATHA's 13.4M-act index that names Pieter Stekelorum and Helena Denijs together, and it sources agatha_stekelorum's parents and husband at once. Act remark: 'SCAN 586 GSU'.
+- **Confidence:** sup
+- **Accessed:** 2026-07
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image.
+
+#### `agatha-varsenare-1795-marriage-perquy-stekelorum` — Parish marriage — Joannes Jacobus Perquy x Agatha Francisca Stekelorum, Varsenare, 19 May 1795
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/PARHUWVL_00220569>
+- **Covers:** ['Perquy', 'Stekelorum']
+- **Yielded:** Dates and places the Perquy x Stekelorum marriage: Varsenare, 19 May 1795. Both fathers are indexed by surname only ('Stekelorum', 'Perquy') with no forename, so it does NOT name Pieter Stekelorum.
+- **Confidence:** sup
+- **Accessed:** 2026-07
+- **Note:** AGATHA parish-register index entry, not the register image.
+
+#### `agatha-oostkamp-doopregister-1630-1652` — Oostkamp Sint-Pietersbanden parish register: baptisms 26 Jun 1630 - 14 Apr 1652 (and marriages 9 Aug 1631 - 14 Apr 1652), AGATHA digitised item 513_9000_000_00774
+- **Kind:** collection · <https://agatha.arch.be/nl/search/genealogie/35229>
+- **Covers:** ['Van Nieuwenhuyse', 'Monballiu', 'Govaert']
+- **Yielded:** Resolves the reference 'agatha.arch.be scan 513_9000_000_00774' in petrus_vannieuwenhuyse's record. It is a real, unique AGATHA item: /nl/search/genealogie/35229 redirects to /nl/data/images/513/513_9000_000_00774_000/0_0001, the Oostkamp Sint-Pietersbanden baptism register 1630-1652 (the marriage section of the same volume starts at scan 0_0165, /nl/search/genealogie/35226). It is the register that would contain a 7 Mar 1649 Oostkamp baptism. The reference names the VOLUME, not a scan page or an act.
+- **Confidence:** unk
+- **Accessed:** 2026-07
+- **Note:** The images are behind an AGATHA login ('Gelieve in te loggen om de afbeeldingen te bekijken') and were NOT opened, so nothing in the register has been read. Also note the register is Doopakten: a 1649 date read there is a BAPTISM date, not necessarily a birth date. The adjacent volume, baptisms 1652-1673, is marked 'Niet beschikbaar - hiaten in de originele registers en op de microfilms'.
+
+#### `agatha-oostende-1903-death-angela-dekeyser` — Death act nr. 828 — Angela Luciana Dekeyser, Oostende, 20 October 1903
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/OVWVL_00498208>
+- **Covers:** ['Dekeyser', 'Bocklandt']
+- **Yielded:** Angela Luciana DEKEYSER, born and died Oostende, d. 20 Oct 1903; father Eduardus DEKEYSER, 26, werkman; mother Louisa Maria BOCKLANDT, zonder beroep. A previously unrecorded child of edouard_dk x louise_bocklandt. Does not name Louise's own parents.
+- **Confidence:** sup
+- **Accessed:** 2026-07
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image.
+
+#### `agatha-oostende-1888-marriage-bocklandt-ketels` — Marriage act nr. 80 — Petrus Dominicus Ketels x Paulina Bocklandt, Oostende, 26 May 1888
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUWVL2_HUWVL_00579176>
+- **Covers:** ['Bocklandt', 'Van Bergen', 'Ketels']
+- **Yielded:** Paulina BOCKLANDT, born Hamme (O-Vl) 30 Apr 1870, werkmeid, resident Oostende, daughter of Eduardus Bocklandt (50, touwslagersknecht) and Maria Louisa Vanbergen. Married Petrus Dominicus Ketels (b. Waasmunster 15 Oct 1857, touwslagersknecht), father not named in the act (NN NN), mother Maria Louisa Ketels of Waasmunster. A previously unrecorded child of edouard_bocklandt x marie_vanbergen, and a sibling of louise_bocklandt.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image. Found inside the same NAME=Bocklandt ALL_PLACES=Hamme 'Analyses van akten' result set already logged as a miss for a different goal in research/searches.jsonl (the Eduardus x Maria Louisa marriage act itself, which is not among these 18 results).
+
+#### `agatha-oostende-1892-marriage-bocklandt-debuf` — Marriage act nr. 42 — Fredericus Desiderius Debuf x Maria Elodia Bocklandt, Oostende, 26 March 1892
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUWVL2_HUWVL_00583492>
+- **Covers:** ['Bocklandt', 'Van Bergen', 'Debuf']
+- **Yielded:** Maria Elodia BOCKLANDT, born Hamme (O-Vl) 9 Mar 1874, werkmeid, resident Oostende, daughter of Eduardus Bocklandt (54, touwslagersknecht) and the already-deceased Maria Ludovica Vanbergen (d. Oostende 22 Nov 1888). Married Fredericus Desiderius Debuf (b. Oostende 28 Sep 1871, matroos bij het zeewezen), son of Desiderius Joannes Debuf (lost at sea, akte van bekendheid 23 Feb 1892) and Silvia Clementia Vandamme. A previously unrecorded child of edouard_bocklandt x marie_vanbergen, and a sibling of louise_bocklandt.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image. Same NAME=Bocklandt ALL_PLACES=Hamme result set as agatha-oostende-1888-marriage-bocklandt-ketels.
+
+#### `agatha-oostende-1893-marriage-bocklandt-dubuy` — Marriage act nr. 11 — Justinus Vincentius Dubuy x Maria Mathildis Bocklandt, Oostende, 21 January 1893
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUWVL2_HUWVL_00578740>
+- **Covers:** ['Bocklandt', 'Van Bergen', 'Dubuy']
+- **Yielded:** Maria Mathildis BOCKLANDT, born Hamme (O-Vl) 12 May 1872, werkmeid, resident Oostende, daughter of Eduardus Bocklandt (54, touwslagersknecht) and the already-deceased Maria Louisa Vanbergen (act misdates her death 22/11/1858, against every other act's 22 Nov 1888). Married Justinus Vincentius Dubuy (b. Oostende 29 Dec 1870, touwslagersknecht), son of the already-deceased Justinus Vincentius Lud. Dubuy and Carolina Reck. A previously unrecorded child of edouard_bocklandt x marie_vanbergen, and a sibling of louise_bocklandt.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image. Same NAME=Bocklandt ALL_PLACES=Hamme result set as agatha-oostende-1888-marriage-bocklandt-ketels.
+
+#### `agatha-diksmuide-1893-marriage-bocklandt-vincke` — Marriage act nr. 40 — Caesar Antonius Bocklandt x Florence Amelie Vincke, Diksmuide, 11 February 1893
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUWVL2_HUWVL_00087182>
+- **Covers:** ['Bocklandt', 'Van Bergen', 'Vincke', 'Vanalderweireldt']
+- **Yielded:** Caesar Antonius BOCKLANDT, born Hamme (O-Vl) 2 Jul 1867, koordedraaier, resident Oostende, son of Eduard Bocklandt (53, koordedraaier) and the already-deceased Maria Louisa Vanbergen. Married Florence Amelie Vincke (b. Diksmuide 22 Apr 1869, kantwerkster), daughter of Lucien Julianus Vincke and Ludovica Maria Vanalderweireldt of Diksmuide. A previously unrecorded child of edouard_bocklandt x marie_vanbergen, and a sibling of louise_bocklandt. NOT ACTED ON: the bride's parents share full names with this tree's existing lucien_vincke x ludovica_vanald (parents of emma_vincke, Van Iseghem line) — a possible cross-branch link, left as a frontier on caesar_bocklandt's own record rather than grafted.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image. Same NAME=Bocklandt ALL_PLACES=Hamme result set as agatha-oostende-1888-marriage-bocklandt-ketels.
+
+#### `agatha-oostende-1900-marriage-bocklandt-mewis` — Marriage act nr. 100 — Philemondus Bocklandt x Rosalia Cecilia Mewis, Oostende, 12 May 1900
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUWVL2_HUWVL_00583944>
+- **Covers:** ['Bocklandt', 'Van Bergen', 'Mewis']
+- **Yielded:** Philemondus BOCKLANDT, born Hamme (O-Vl) 10 Jun 1880, touwslagersknecht, resident Oostende, son of Eduardus Bocklandt (62, touwslagersknecht) and the already-deceased Maria Louisa Vanbergen. Married Rosalia Cecilia Mewis (b. Oostende 29 Sep 1881, werkmeid), daughter of Franciscus Antonius Mewis and Theresia Lomard of Oostende. A previously unrecorded child of edouard_bocklandt x marie_vanbergen, and a sibling of louise_bocklandt — born two days after his infant brother ludovicus_bocklandt died at Hamme (10 Jun against 8 Jun 1880), a coincidence worth reading with caution given the birthdate is a twenty-years-later recollection, not a contemporary record.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** AGATHA 'analyse van akte' — index transcription, not the register image. Same NAME=Bocklandt ALL_PLACES=Hamme result set as agatha-oostende-1888-marriage-bocklandt-ketels.
+
 ### FamilySearch
 
 #### `S1` — Édouard Dekeyser's 1946 Oostende remarriage act (akte nr. 81)
@@ -316,6 +412,32 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07-26
 - **Note:** The scan link on the Open Archives mirror points at ...?i=217, which the FamilySearch viewer resolves to the opening holding acts nr. 1-4 of 1838; act nr. 8 is one opening further on, at image-index 218 / 'Afbeelding 219', whose own ark is 3:1:9392-HG83-X. The image was read by stitching the deep-zoom tiles: the descriptor is at .../deepzoomcloud/dz/v1/3:1:9392-HG83-X/image.xml (5529x4021, tile 256, overlap 1, max level 13) and the tiles at .../image_files/13/<col>_<row>.jpg. Those endpoints refuse cross-origin fetch from www.familysearch.org, so the stitching has to run on the sg30p0.familysearch.org origin itself. This is the 'gelijkvormige kopij' — the duplicate register deposited with the court — not the commune's original; the printed footer of every act says so. A FamilySearch session is needed, which is why the artifact is kept.
+
+#### `fs-stene-1924-marriage-blomme-bocklandt` — Marriage act nr. 9 — Petrus Augustus Blomme x Louisa Maria Bocklandt, Stene, 1 March 1924 (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:X7YH-857T>
+- **Covers:** ['Bocklandt', 'Blomme', 'Van Bergen', 'Dekeyser', 'Meseure']
+- **Yielded:** The act image, read. Louisa Maria Bocklandt, werkvrouw of Stene, BORN AT HAMME (OOST-VLAANDEREN) 31 DECEMBER 1877, daughter of Eduardus Bocklandt (d. Oostende 4 Jul 1907) and Maria Louisa Van Den Bergen (d. Oostende 22 Nov 1888), DIVORCED WIFE OF EDUARDUS DE KEYSER by decree of the rechtbank van eersten aanleg te Brugge of 14 November 1922; married at Stene on 1 March 1924 Petrus Augustus Blomme, werkman, born Stene 23 January 1884, son of Josephus Blomme (living, Oostende) and Mathilde Sophia Meseure (d. Oostende 21 Jul 1922). Closes the Bocklandt-Blomme frontier named in louise_bocklandt's record, sources her parent link from a primary act, and dates the divorce that the tree held only as '~1923'.
+- **Saved artifact:** `data/artifacts/blomme-bocklandt-1924-marriage-stene.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07
+- **Note:** The REGISTER IMAGE was read in the FamilySearch viewer and is saved as an artifact; this is not an index page. FamilySearch's own index dates the act 1 May 1924 - the register says 1 March 1924.
+
+#### `fs-hamme-1880-death-ludovicus-bocklandt` — Death act nr. 126 — Ludovicus Bocklandt, Hamme (O-Vl), 9 June 1880 (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:6TRL-6YGL>
+- **Covers:** ['Bocklandt', 'Van Bergen']
+- **Yielded:** The act image, read. Eduardus Bocklandt, 40, zeeldraaier of Hamme, declaring the death of his son Ludovicus Bocklandt, about 5, born and living at Hamme, son of himself and Maria Louisa Van Bergen, 39, spinster, of 't Kleinsmiske, Hamme. Places the couple at Hamme in 1880, gives Eduardus an age consistent with birth 1839, adds a further child, and carries his trade forward to the Oostende acts.
+- **Saved artifact:** `data/artifacts/bocklandt-ludovicus-1880-death-hamme.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07
+- **Note:** REGISTER IMAGE read in the FamilySearch viewer, saved as an artifact. Film #004833291 item 1, image 552 of 1082.
+
+#### `fs-hamme-civil-registers-film-004833291` — Hamme (Oost-Vlaanderen) civil registers on FamilySearch — film #004833291: births 1887-1888, deaths 1880-1888, marriages 1881-1888, 1082 browsable images
+- **Kind:** collection · <https://www.familysearch.org/ark:/61903/3:1:33SQ-GPDS-ZJ5?view=index&lang=nl>
+- **Covers:** ['Bocklandt', 'Van Bergen', 'Ichau', 'Vermandel']
+- **Yielded:** Proof that the Hamme (O-Vl) registers ARE digitised and browsable, with a name index, on FamilySearch - the wall that stopped every Open Archives and AGATHA search for this family is a gap in those two venues only. The neighbouring films in the same series are where louise_bocklandt's birth act of 31 Dec 1877 and the Bocklandt x Van Bergen marriage of the 1860s will be.
+- **Confidence:** doc
+- **Accessed:** 2026-07
+- **Note:** Browsable images plus a partial FamilySearch index; the 1877 birth register and the pre-1881 marriage registers are separate films in the same Hamme series and were NOT opened in this pass.
 
 ### Geneanet
 

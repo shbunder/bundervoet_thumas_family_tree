@@ -1,23 +1,37 @@
 ---
 id: petrus_blomme
-name: Petrus Blomme
+name: Petrus Augustus Blomme
 surname: Blomme
 sex: m
-confidence: sup
+birth:
+  date: 1884-01-23
+  place: Stene
+confidence: doc
+occupation: werkman
 branch: DeKeyser
 line: de-keyser
+father: josephus_blomme
+mother: mathilde_meseure
 spouses:
   - id: louise_bocklandt
     name: Louise Marie Bocklandt
+    married: 1924-03-01
+    place: Stene
 sources:
   - S17
+  - fs-stene-1924-marriage-blomme-bocklandt
 ---
 
-Second husband of [[louise_bocklandt]], who had divorced [[edouard_dk]] around 1923.
-The Familiekunde Westkust memorial-card record ([[S17]]) names him as her partner at
-her death on 15 July 1946 — she died a Blomme. The card names him and nothing more.
+Second husband of [[louise_bocklandt]], who had divorced [[edouard_dk]] on 14 November
+1922. The Familiekunde Westkust memorial-card record ([[S17]]) first named him as her
+partner, at her death on 15 July 1946 — she died a Blomme.
 
-No marriage date, so none is recorded. FRONTIER — the Bocklandt–Blomme marriage act.
-It is post-1923 Oostende, so it sits at the Stadsarchief rather than in AGATHA.
+FOUND (2026-07-26), replacing the FRONTIER this record used to carry. Their own marriage
+act — Stene, 1 March 1924, akte nr. 9, register image read directly
+([[fs-stene-1924-marriage-blomme-bocklandt]]). He is *werkman*, living at Stene and born
+there **23 January 1884**, major son of **Josephus Blomme**, *zonder beroep*, living at
+Oostende and present in person, consenting to the marriage; and of **Mathilde Sophia
+Meseure**, dead at Oostende **21 July 1922**. Both parents are given their own record here
+for the first time: [[josephus_blomme]] and [[mathilde_meseure]].
 
-He is a step-relation, not blood: no line of descent here runs through him.
+He is a step-relation, not blood: no line of descent in this tree runs through him.

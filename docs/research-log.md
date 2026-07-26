@@ -1905,3 +1905,108 @@ Two smaller things from the same run, both recorded rather than acted on:
   surname and commune. Refused. The blocking index is right to surface it and a human reading
   is right to drop it; that division of labour is the design working, but it only works if the
   suggestions are actually read rather than applied.
+
+## 56. Autopilot pass 7 — six bare-agatha citations resolved, and the Hamme registers explained
+
+§52's confidence sweep downgraded six records — [[louise_bocklandt]], [[petrus_blomme]] (by
+omission — his own facts came from the same downgraded act), [[edouard_bocklandt]],
+[[marie_vanbergen]], [[pieter_stekelorum]]/[[helena_denijs]] and
+[[petrus_vannieuwenhuyse]] — because their only citation was a bare `agatha`: a site id
+with no page, no artifact, no search-log entry. This pass identified the acts behind five
+of them and repaired the citations. Confidence outcomes differ per record, and the
+difference is the point: a repaired citation is not automatically a `doc`.
+
+**RESTORED to `doc` — louise_bocklandt.** Her Stene marriage act of 1 March 1924 (akte nr.
+9) was read as a register image, not an index — [[fs-stene-1924-marriage-blomme-bocklandt]]
+— and states her birth to the day and commune (31 Dec 1877, Hamme O-Vl) and her divorce
+from [[edouard_dk]] by the Rechtbank van eersten aanleg te Brugge, **14 November 1922**,
+against the tree's own `~1923`. [[edouard_dk]]'s independently-read 1946 remarriage act
+agrees with this 22 years apart, so the two records now carry the same `divorced` field, as
+"one marriage, one set of facts" requires. **FamilySearch's own index misdates the act 1
+May 1924.** The register says *"den eersten Maart"*; the banns (10 Feb) and the facing act
+(nr. 8, 23 Feb) both fit March, not May. The index's raw month field reads `"Maand": "Maa"`
+— truncated Dutch for *Maart*, silently auto-expanded by the site to the English *May*
+instead of being read as Dutch. A genuine indexing bug, now on record so nobody re-derives
+the wrong date from the index page. The same act named [[petrus_blomme]]'s own birth (Stene,
+23 Jan 1884) and parents, who are new records: [[josephus_blomme]] and
+[[mathilde_meseure]].
+
+**REPAIRED, confidence stays `sup` — edouard_bocklandt, marie_vanbergen,
+pieter_stekelorum/helena_denijs.** Each now cites a specific AGATHA act
+([[agatha-oostende-1907-death-eduardus-bocklandt]], [[agatha-oostende-1888-death-maria-louisa-vanbergen]],
+[[agatha-roksem-1855-death-agatha-stekelorum]]) instead of a bare site id, but AGATHA serves
+each of these only as an "analyse van akte" — a volunteer index transcription — with the
+scan itself behind a login nobody in this project has. `doc` means an act or its image was
+actually read; an index entry, however specific, is not that, so `sup` is the honest
+ceiling here regardless of how confidently it reads. Two corrections came out of these
+acts: [[marie_vanbergen]]'s *geboorteplaats* is **Waasmunster**, not Hamme — the family
+prose's "Hamme" was her father's residence, not her birth commune, so her own birth act and
+her parents' marriage belong in the Waasmunster registers, and [[ida_vermandel]] now
+carries that pointer as a frontier. And [[edouard_bocklandt]]'s parents are spelled
+**Isabella Livina Ichau** in the 1907 act against this tree's **Isabella Livia** — ruled the
+same woman, a single-letter variant with no rival Isabella Ichau to collide with, noted on
+both his record and [[isabella_ichau]]'s.
+
+**THE STEKELORUM UNIQUENESS CHECK.** [[agatha_stekelorum]]'s Roksem death act (24 May 1855)
+is the *only* act in AGATHA's 13.4-million-act index that pairs a Pieter Stekelorum with a
+Helena Denijs, checked against all 37 acts naming a Pieter Stekelorum. Two near-namesakes
+were pulled and refuted directly rather than taken on faith: `OVWVL_00197046` is a Pieter
+Stekelorum at Jabbeke whose partner is Joanna Francisca Verplancke — no Denijs in the act at
+all — and `OVWVL_00345955` (Varsenare, 1797) pairs a Helena **Deschacht**, widow of
+Stephanus Denys, with a husband named **Joannes** — not Pieter — Stekelorum: two
+independent mismatches, not one. That is why the Roksem act carries the identification and
+a name match on "Stekelorum" alone would not have.
+
+**RESOLVED BUT STILL BLOCKED — petrus_vannieuwenhuyse.** The citation
+`agatha.arch.be scan 513_9000_000_00774` is real and specific: it resolves via
+`/nl/search/genealogie/35229` to the Oostkamp Sint-Pietersbanden Doopakten register,
+26 June 1630 – 14 April 1652, which does span his 7 March 1649 baptism. It still does not
+restore `doc`, for three separate reasons, all recorded on his record now: it names a
+**volume**, not a page or an act; the images need an AGATHA login this project's browser
+does not have — logged **blocked**, not **miss**; and it is a **baptism** register, so a
+date read there would need relabelling, not just sourcing. Three named frontiers came out
+of mapping the rest of that AGATHA collection: his 1673 marriage volume is also mapped and
+available (`/nl/search/genealogie/35236` = item `513_9000_000_00777`); the Oostkamp
+baptisms of 1652–1673 are marked *"Niet beschikbaar — hiaten in de originele registers en
+op de microfilms"*, which matters for any earlier children or siblings; and a
+Begrafenisakten Oostkamp 1662 entry names a *Marinus Van Nieuwenhuyse* as *"Partner van de
+overledene"*, which does not sit with [[cornelia_govaert]]'s own ~1653 death — no act id
+read for that yet, so it is a frontier, not a correction.
+
+**SEVEN NEW SIBLINGS, FROM ONE SEARCH.** The AGATHA query `NAME=Bocklandt
+ALL_PLACES=Hamme` — already logged in `research/searches.jsonl` as a miss for a different
+goal (looking for Eduardus × Maria Louisa's own marriage act, which is not among the 18
+results) — turns out to hold five of the couple's OTHER children's own
+marriage acts, each naming Eduardus and Maria Louisa as parents by an explicit relational
+role (Vader/Moeder van de bruid or bruidegom): [[paulina_bocklandt]] (m. Ketels, Oostende
+1888), [[elodia_bocklandt]] (m. Debuf, Oostende 1892), [[mathildis_bocklandt]] (m. Dubuy,
+Oostende 1893), [[caesar_bocklandt]] (m. Vincke, Diksmuide 1893) and
+[[philemondus_bocklandt]] (m. Mewis, Oostende 1900) — plus [[alphonsus_bocklandt]] (d.
+Oostende 1892, already held as a citation but never given a record) and
+[[ludovicus_bocklandt]] (d. Hamme 1880, `doc` — the one already backed by a read register
+image). All five new marriage acts are now registered as sources and logged. One is left as
+a named frontier rather than grafted: [[caesar_bocklandt]]'s bride, Florence Amelie Vincke,
+names parents — Lucien Julianus Vincke × Ludovica Maria Vanalderweireldt — matching this
+tree's existing [[lucien_vincke]] and `ludovica_vanald` (parents of [[emma_vincke]], on the
+Van Iseghem line) by full name. If she is their daughter, this 1893 marriage links two
+branches this project has so far treated as disconnected — objective 3 — but a shared name
+in one act is one identifier, not the two a graft needs, and there is no Florence Amelie
+record to graft onto. [[angela_dk]], a sixth De Keyser child named only in her father's
+prose until now, also got her own record from an already-registered citation.
+
+**STRUCTURAL FINDING, for the next passes.** FamilySearch holds the **Hamme
+(Oost-Vlaanderen) civil registers as browsable images** — film #004833291 alone runs births
+1887-1888, deaths 1880-1888 and marriages 1881-1888 across 1,082 images — while **neither
+Open Archives nor AGATHA holds any Hamme civil registration at all.** That is not a search
+failure; it is a real gap in both venues, confirmed by two complete surname harvests
+(Van Bergen, Bocklandt/Ichau all COMPLETE) turning up zero Hamme acts and by AGATHA's own
+"Analyses van akten" projects, which cover West-Vlaanderen and Vlaams-Brabant civil
+registration but have no Oost-Vlaanderen equivalent at all. It is exactly why this family
+was unreachable for so many passes, and exactly why the register image, not another search,
+was what closed [[louise_bocklandt]] and [[petrus_blomme]]. The next frontier this points
+at directly: Louise's own 1877 Hamme birth act, the Bocklandt × Van Bergen marriage of the
+1860s, and Maria Louisa Van Bergen's 1842 birth — now redirected to **Waasmunster** — are
+all sitting in neighbouring, unopened films in the same FamilySearch series.
+
+Not touched this pass: `.tmp-pass5/` (untracked scratch files from a concurrent session,
+left alone).

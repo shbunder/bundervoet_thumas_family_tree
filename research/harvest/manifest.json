@@ -526,6 +526,18 @@
       "acts": 22
     },
     {
+      "id": "ichau",
+      "query": {
+        "name": "Ichau",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 86,
+      "mentions": 86,
+      "complete": true,
+      "acts": 86
+    },
+    {
       "id": "janssen",
       "query": {
         "name": "Janssen",
@@ -686,6 +698,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "monballiu",
+      "query": {
+        "name": "Monballiu",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 357,
+      "mentions": 357,
+      "complete": true,
+      "acts": 357
     },
     {
       "id": "noel-grez-doiceau",
@@ -1457,9 +1481,9 @@
       },
       "date": "2026-07-26",
       "found": 2239,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 2239,
+      "complete": true,
+      "acts": 2239
     },
     {
       "id": "vanbogaert",

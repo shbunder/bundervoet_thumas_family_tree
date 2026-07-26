@@ -18,3 +18,8 @@ sources:
 ---
 
 Paternal grandmother of Louise Bocklandt; wife of Antonius Dominicus Bocklandt. Ichau is a Waasland/Hamme (Oost-Vlaanderen) name.
+
+SPELLING NOTE (2026-07-26). Her son [[edouard_bocklandt]]'s 1907 Oostende death act spells
+her **Isabella Livina Ichau**, against this record's **Isabella Livia**. Ruled the same
+woman: a single-letter variant, and no rival Isabella Ichau exists anywhere in this
+project's evidence to collide with.

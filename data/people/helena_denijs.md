@@ -10,14 +10,15 @@ spouses:
     name: Pieter Stekelorum
 sources:
   - tree-stefanieschil
-  - agatha
+  - agatha-roksem-1855-death-agatha-stekelorum
 ---
 
 FRONTIER above — wife of Pieter Stekelorum; dates not yet recovered.
 
-DOWNGRADED (2026-07-26) from `doc` to `sup`, in the sweep of docs/research-log.md §52.
-Nothing here was refuted. This record's citation is a bare `agatha` with no page id, no
-artifact and no entry in research/searches.jsonl behind it, so there is nothing in this
-project that says which act was consulted or whether its image was ever opened. `doc` is a
-claim about how the evidence was read, and that claim cannot be checked here. Restoring it
-needs the act identified and cited by page id, not an argument.
+CITATION REPAIRED (2026-07-26), replacing the §52 downgrade. The same Roksem death act of
+her daughter [[agatha_stekelorum]], 24 May 1855
+([[agatha-roksem-1855-death-agatha-stekelorum]]), names her as mother — the whole of what
+AGATHA holds on her: one act, one mention, no dates of her own. CONFIDENCE STAYS `sup`: an
+"analyse van akte" index transcription, not the register image. See [[pieter_stekelorum]]
+for the uniqueness check against the rest of the surname — the only AGATHA act pairing a
+Pieter Stekelorum with a Helena Denijs, against two refuted near-collisions.
