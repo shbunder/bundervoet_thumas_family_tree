@@ -1036,6 +1036,20 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "An index. Declaration dates, not birth dates. Search covered 1846-1870 only, so further children are possible."
+    },
+    {
+      "id": "S25",
+      "site": "familysearch",
+      "kind": "index",
+      "title": "The children of Georges Thumas x Marie Catherine Joostens at Grez-Doiceau, 1835-1868",
+      "url": "https://www.familysearch.org/search/record/results?q.surname=Thumas&q.fatherSurname=Thumas&q.motherSurname=Joostens&f.recordCountry=Belgium",
+      "artifact": "thumas-joostens-children-grez-doiceau",
+      "collection": "Belgium, Brabant, Civil Registration and Church Records, 1704-1916",
+      "covers": "Indexed civil registration searchable by both parents at once. No register image read.",
+      "yielded": "Four siblings for Georges Carolus Josephus Thumas: Marie Therese Stephanie (declared 11 Aug 1835), Georges Joseph (31 Mar 1843), Jean Baptiste Zenon (20 Aug 1845), Charles Eugene (d. 9 Apr 1851 as an infant). Plus Georges Joseph's marriage to Sophie Miranda Deridder at Grez-Doiceau on 7 Oct 1868 — the marriage the S23 death extract of 28 Sept 1868 was drawn for. The anchor is georges_cj's own declaration of 16 Sept 1836, one day after the birth read from his 1872 act.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "CAUTION: two brothers named Georges — Georges Charles Joseph (b. 1836, m. Kraainem 1872) and Georges Joseph (b. 1843, m. Grez-Doiceau 1868). Do not merge."
     }
   ]
 }

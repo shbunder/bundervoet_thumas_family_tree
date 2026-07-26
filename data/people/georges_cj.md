@@ -20,6 +20,7 @@ spouses:
     married: 1872-06-20
     place: Kraainem
 sources:
+  - S25
   - S11
   - S8
   - S5
@@ -56,3 +57,18 @@ a sister of [[jbgeorgius]], and she belongs in the tree under objective 2.
 She is named here rather than grafted: the act has not been opened, so her birth date, her
 husband and her own line are all unread. Opening it is the obvious next move, and it would
 name her husband's parents too.
+
+FOUR SIBLINGS (2026-07-26), from FamilySearch's index of the Grez-Doiceau civil registers
+(S25), searched by both parents at once: [[mtstephanie_t]] declared 11 August 1835,
+[[georgesjoseph_t]] 31 March 1843, [[jbzenon_t]] 20 August 1845, and [[charleseugene_t]], born
+1850 and dead at Grez-Doiceau on 9 April 1851.
+
+**His own record is what makes them safe.** His declaration sits in the same series on 16
+September 1836, one day after the 15 September 1836 birth read from his 1872 act at the
+archive. A child already documented, inside the sequence, with the same parents and commune,
+is worth more than any name-matching at the edges of it.
+
+**A warning for every later pass: he had a brother also called Georges.** He is *Georges
+Charles Joseph*, born 1836, married at Kraainem in 1872. [[georgesjoseph_t]] is *Georges
+Joseph*, born 1843, married at Grez-Doiceau in 1868. Same parents, same surname, both
+"Georges Thumas" to a careless index. They are not to be merged.

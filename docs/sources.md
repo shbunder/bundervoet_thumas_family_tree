@@ -19,7 +19,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 |---|---|---|---|---|---|
 | `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 28 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 11 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 13 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -236,6 +236,16 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** An index. Declaration dates, not birth dates. Search covered 1846-1870 only, so further children are possible.
+
+#### `S25` — The children of Georges Thumas x Marie Catherine Joostens at Grez-Doiceau, 1835-1868
+- **Kind:** index · <https://www.familysearch.org/search/record/results?q.surname=Thumas&q.fatherSurname=Thumas&q.motherSurname=Joostens&f.recordCountry=Belgium>
+- **Collection:** Belgium, Brabant, Civil Registration and Church Records, 1704-1916
+- **Covers:** Indexed civil registration searchable by both parents at once. No register image read.
+- **Yielded:** Four siblings for Georges Carolus Josephus Thumas: Marie Therese Stephanie (declared 11 Aug 1835), Georges Joseph (31 Mar 1843), Jean Baptiste Zenon (20 Aug 1845), Charles Eugene (d. 9 Apr 1851 as an infant). Plus Georges Joseph's marriage to Sophie Miranda Deridder at Grez-Doiceau on 7 Oct 1868 — the marriage the S23 death extract of 28 Sept 1868 was drawn for. The anchor is georges_cj's own declaration of 16 Sept 1836, one day after the birth read from his 1872 act.
+- **Saved artifact:** `data/artifacts/thumas-joostens-children-grez-doiceau.md`
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** CAUTION: two brothers named Georges — Georges Charles Joseph (b. 1836, m. Kraainem 1872) and Georges Joseph (b. 1843, m. Grez-Doiceau 1868). Do not merge.
 
 ### Geneanet
 
