@@ -18,6 +18,7 @@ spouses:
     married: 1872-06-20
     place: Kraainem
 sources:
+  - S24
   - S11
   - S8
 ---
@@ -39,3 +40,15 @@ ACT READ (July 2026). The Kraainem marriage act of 20 June 1872 has now been rea
 AGATHA rather than through an index, and it sharpens this record twice: her birth is
 **10 January 1849** where the tree had only the year, at **Sint-Stevens-Woluwe**, and her
 trade at marriage was *fabriekwerkster*. Her parents are named in the act.
+
+CORROBORATED (2026-07-26) — and she turns out to be a middle child. FamilySearch's index of
+the Sint-Stevens-Woluwe civil registers (S24) carries her birth declaration as **11 January
+1849**, one day after the birth of 10 January 1849 that her 1872 marriage act gives — the
+ordinary gap between a birth and its declaration, and an independent confirmation of a date
+read at the archive. The register writes her forename in the Latin masculine, *Antonius*,
+where the act she married under says Antonia.
+
+The same series gives her two siblings this tree did not have: [[cornelius_bossin]], declared
+13 September 1847, and [[ludovica_bossin]], declared 5 October 1853. Both are recorded at
+`sup`; her own already-documented entry sitting in the middle of the sequence is what makes
+them safe to add rather than merely plausible.

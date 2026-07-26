@@ -17,9 +17,9 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 25 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 28 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 10 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 11 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -33,9 +33,9 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 1 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 24 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 31 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
-| `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 4 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
+| `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 5 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
 **`agatha`** — Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …').
 
@@ -226,6 +226,16 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07-26
 - **Note:** METHOD: AGATHA has no Grez-Doiceau death act for 1864, but the extract survives inside the MARRIAGE volume as a huwelijksbijlage. Death acts hide in marriage annexes — the route into every commune whose death series is unindexed.
+
+#### `S24` — Birth declarations at Sint-Stevens-Woluwe for three children of Guilielmus Bossin x Peremans, 1847-1853
+- **Kind:** index · <https://www.familysearch.org/search/record/results?q.surname=Bossin&q.fatherGivenName=Guilielmus&q.fatherSurname=Bossin&q.motherSurname=Peremans&f.recordCountry=Belgium&q.birthLikeDate.from=1846&q.birthLikeDate.to=1870>
+- **Collection:** Belgium, Brabant, Civil Registration and Church Records, 1704-1916
+- **Covers:** Indexed civil birth declarations, searchable by both parents. No register image read.
+- **Yielded:** Three children of the couple at Sint-Stevens-Woluwe: Cornelius (declared 13 Sept 1847), Antonius/Antonia (11 Jan 1849 — this tree's Antonia Bossin, whose birth the 1872 act gives as 10 Jan), Ludovica (5 Oct 1853). Plus Ludovica's marriage at Alsemberg 17 Feb 1884 to Joannes Baptista Julianus Swaelens. The already-documented middle child is what makes the series safe.
+- **Saved artifact:** `data/artifacts/bossin-peremans-children-sint-stevens-woluwe.md`
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An index. Declaration dates, not birth dates. Search covered 1846-1870 only, so further children are possible.
 
 ### Geneanet
 

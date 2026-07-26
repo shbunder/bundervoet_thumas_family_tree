@@ -1022,6 +1022,20 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "Reached from the Open Archives mirror https://www.openarchieven.nl/abl:e18081cf-3acb-279b-061b-5ebd8a678b29 which — unlike the 1873 and 1903 acts — DOES carry a scan link: https://www.familysearch.org/ark:/61903/3:1:9392-HGZ1-T?i=217&cc=1482191&cat=140936 . The image has not been read here, only the transcription. Not grafted: this is the generation above the frontier that found it."
+    },
+    {
+      "id": "S24",
+      "site": "familysearch",
+      "kind": "index",
+      "title": "Birth declarations at Sint-Stevens-Woluwe for three children of Guilielmus Bossin x Peremans, 1847-1853",
+      "url": "https://www.familysearch.org/search/record/results?q.surname=Bossin&q.fatherGivenName=Guilielmus&q.fatherSurname=Bossin&q.motherSurname=Peremans&f.recordCountry=Belgium&q.birthLikeDate.from=1846&q.birthLikeDate.to=1870",
+      "artifact": "bossin-peremans-children-sint-stevens-woluwe",
+      "collection": "Belgium, Brabant, Civil Registration and Church Records, 1704-1916",
+      "covers": "Indexed civil birth declarations, searchable by both parents. No register image read.",
+      "yielded": "Three children of the couple at Sint-Stevens-Woluwe: Cornelius (declared 13 Sept 1847), Antonius/Antonia (11 Jan 1849 — this tree's Antonia Bossin, whose birth the 1872 act gives as 10 Jan), Ludovica (5 Oct 1853). Plus Ludovica's marriage at Alsemberg 17 Feb 1884 to Joannes Baptista Julianus Swaelens. The already-documented middle child is what makes the series safe.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "An index. Declaration dates, not birth dates. Search covered 1846-1870 only, so further children are possible."
     }
   ]
 }
