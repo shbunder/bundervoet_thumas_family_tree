@@ -15,6 +15,7 @@ spouses:
     married: 1801-02-09
     place: Grez-Doiceau
 sources:
+  - S23
   - fs-brabant-bs
   - S13
   - geneanet
@@ -35,3 +36,14 @@ Etienne with his parents given as *Lambert Thumas* and *Marie Catherine Quinart*
 act already registered as [[S13]], reached independently through a second index. Her surname
 appears there in several spellings — Quinart, Kinart, Quinaut — which is worth knowing before
 searching for her.
+
+ACT READ (2026-07-26): named, with [[georgeslambert_t]], as a parent of the deceased in her
+son [[georges2_t]]'s death-act extract (S23) — *fils de Lambert Georges Thumas et de Marie
+Catherine Quinart, **décédés***.
+
+So she was dead by 28 September 1868, and her motherhood of Georges now rests on an act of
+civil registration rather than on a member tree.
+
+The extract writes her **Marie Catherine**, where this record carries *Marie Anne Catherine*
+and the variant *Kinart*. Both forms stand; the act's is recorded here as what the clerk
+wrote, not as a correction.

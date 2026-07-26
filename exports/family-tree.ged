@@ -2239,6 +2239,32 @@
 2 CONT
 2 CONT What is left is the register images themselves — FamilySearch's Brabant-wallon civil
 2 CONT registration for 1804, and the parish registers for 1793–94.
+2 CONT
+2 CONT ACT READ (2026-07-26) — **his own death act, at last, and it was hiding in a marriage
+2 CONT register.** An extract from the Grez-Doiceau death registers (S23), read as a register image,
+2 CONT states that *le douze janvier mil huit cent soixante quatre* Georges Thumas died at
+2 CONT Grez-Doiceau, **veuf de Marie Catherine Joostens**, **fils de Lambert Georges Thumas et de
+2 CONT Marie Catherine Quinart, décédés**.
+2 CONT
+2 CONT Three independent identifiers agree at once, and not one of them is a forename: both parents
+2 CONT by name, and the wife by name. That matters here, because Georges Thumas is the commonest
+2 CONT name in this commune's registers.
+2 CONT
+2 CONT **It documents two things this record had been carrying on a member tree's word.** The death
+2 CONT date, 12 January 1864, is now from civil registration. And the parent link to
+2 CONT [[georgeslambert_t]] and [[quinart]] — never documented before — is now on an act.
+2 CONT
+2 CONT **It does not settle the age conflict.** The extract gives no age and no birth date, so the
+2 CONT ten years between the recorded 1804 and the *63* of the 1857 act stand exactly where §49 left
+2 CONT them.
+2 CONT
+2 CONT The extract was **délivré sur papier libre pour cause d'indigence constatée** — issued free
+2 CONT because the family was certified too poor to pay for the paper.
+2 CONT
+2 CONT FRONTIER: it was drawn up on 28 September 1868 *for a marriage*, which means **a child of
+2 CONT this couple married at Grez-Doiceau around then**. This tree knows only [[georges_cj]], who
+2 CONT married at Kraainem in 1872. The 1868 marriage sits in the same volume, near image 221, and
+2 CONT should name a sibling.
 1 SOUR @S47@
 2 QUAY 3
 0 @I123@ INDI
@@ -2320,7 +2346,23 @@
 2 CONT
 2 CONT A high score with a dead man's date sixty years out is the shape of a coincidence, not a
 2 CONT find. Left ungrafted and uncited.
-1 SOUR @S24@
+2 CONT
+2 CONT ACT READ (2026-07-26): named, with [[quinart]], as a parent of the deceased in his son
+2 CONT [[georges2_t]]'s death-act extract (S23) — *fils de Lambert Georges Thumas et de Marie
+2 CONT Catherine Quinart, **décédés***.
+2 CONT
+2 CONT This is the **first documentary evidence for this record at all**; it had rested entirely on
+2 CONT Geneanet. It does not give his dates, but it does place him: he was dead by 28 September
+2 CONT 1868, which is consistent with the 1863 death held here, and it puts his fatherhood of
+2 CONT Georges on an act of civil registration rather than on a tree.
+2 CONT
+2 CONT Note the name order. This record and Geneanet call him *Georges Lambert*; the extract writes
+2 CONT *Lambert Georges*, and AGATHA's Grez-Doiceau acts write him both ways and sometimes simply
+2 CONT *Lambert*. The forms are recorded as variants, not resolved — his own acts would settle it.
+2 CONT
+2 CONT Confidence stays `sup`: nothing here documents his own birth, marriage or death, only that he
+2 CONT was his son's father and dead by 1868.
+1 SOUR @S49@
 2 QUAY 2
 0 @I125@ INDI
 1 REFN georgius_maertens
@@ -2444,7 +2486,7 @@
 2 CONT His trade moves with him: *arbeider* at twenty-one, *steenslager* at twenty-nine,
 2 CONT *landbouwer* of Kraainem by 1872. He was living at Sint-Stevens-Woluwe, where he was born,
 2 CONT in 1853.
-1 SOUR @S49@
+1 SOUR @S50@
 2 QUAY 3
 0 @I131@ INDI
 1 REFN guilielmus_pardon
@@ -2494,7 +2536,7 @@
 2 CONT Grez-Doiceau death act, read at the archive. He was added to this tree from an index entry a
 2 CONT pass earlier; this is the act behind it. It still gives him no dates, no place and no
 2 CONT occupation, so none is recorded.
-1 SOUR @S50@
+1 SOUR @S51@
 2 QUAY 3
 0 @I133@ INDI
 1 REFN guillielma_dellaert
@@ -2578,7 +2620,7 @@
 2 CONT outside Belgium.
 2 CONT
 2 CONT The leads that matter are still the English ones listed above.
-1 SOUR @S51@
+1 SOUR @S52@
 2 QUAY 2
 0 @I137@ INDI
 1 REFN gustavus_j
@@ -2605,7 +2647,7 @@
 1 SEX F
 1 FAMS @F13@
 1 NOTE FRONTIER above — wife of Pieter Stekelorum; dates not yet recovered.
-1 SOUR @S52@
+1 SOUR @S53@
 2 QUAY 3
 0 @I139@ INDI
 1 REFN hendrik_vdb
@@ -2668,7 +2710,7 @@
 2 CONT her, her father and her mother was read. FRONTIER: opening it would give her husband, his
 2 CONT parents, her age and therefore her birth year, in the same shape as the 1902 act of her
 2 CONT brother's marriage ([[S5]]).
-1 SOUR @S53@
+1 SOUR @S54@
 2 QUAY 2
 0 @I142@ INDI
 1 REFN henricus_bostyn
@@ -2912,7 +2954,7 @@
 1 NOTE Source detail: Index op de huwelijken Wingene 1603–1796 (J. Patteeuw, VVF Brugge); Geneanet kathrynann / isavdw
 2 CONT
 2 CONT FRONTIER above — born Wingene 1695. Top of the De Blaere line in this source.
-1 SOUR @S54@
+1 SOUR @S55@
 2 QUAY 2
 0 @I156@ INDI
 1 REFN jacoba_monballiu
@@ -3038,7 +3080,7 @@
 2 CONT names his parents outright — Georgius Carolus Josephus Thumas and Antonia Bossin. He was
 2 CONT living at Sint-Stevens-Woluwe when he married. The alderman's office in his occupation
 2 CONT field came from elsewhere and is not in this act.
-1 SOUR @S55@
+1 SOUR @S56@
 2 QUAY 3
 0 @I163@ INDI
 1 REFN jean_t
@@ -3084,7 +3126,7 @@
 2 CONT ACT READ (July 2026): named as *Lambert Thumas of Grez*, father of the deceased, in his son
 2 CONT George's 1808 Grez-Doiceau death act — with [[leclercq_t]] as the mother. The couple and the
 2 CONT parentage are now on a civil act.
-1 SOUR @S56@
+1 SOUR @S57@
 2 QUAY 3
 0 @I165@ INDI
 1 REFN jeanne_deconninck
@@ -3109,7 +3151,7 @@
 2 CONT ACT READ (July 2026): named as the mother of the deceased in her daughter's 1857
 2 CONT Grez-Doiceau death act, read at the archive. As with her husband, the act gives her nothing
 2 CONT beyond the name.
-1 SOUR @S50@
+1 SOUR @S51@
 2 QUAY 3
 0 @I166@ INDI
 1 REFN jerome_dk
@@ -3129,7 +3171,7 @@
 1 NOTE Source detail: Stef Paelinck (stefpaelinck) tree; Oostende Burgerzaken; Rijksarchief AGATHA (Oostende birth act nr. 585, 1897)
 2 CONT
 2 CONT CONFIRMED Roland's grandfather (Cosette). Full first names Jérôme Josephus; born Oostende 14 Jun 1897 (birth act nr. 585, Rijksarchief AGATHA). Born before his parents married: he was LEGITIMIZED by their marriage on 4 May 1901 (marginal note 'Gewettigd 4 5 1901' on his birth act). Lived in Oostende (Blauwkasteelstraat 21; later Amsterdamstraat 38). Recorded child: Albert Dekeyser (1920–1972); Gustaaf (Roland's father) is another of their sons. His siblings (children of Édouard × Louise, per AGATHA): Gustavus Josephus (1899, also legitimized 1901), Bertha Alida Theresia (1901), Maria (1902–2002), Angela Luciana (†1903) and Cesar Mauritius (†1905) — the last two died in infancy.
-1 SOUR @S57@
+1 SOUR @S58@
 2 QUAY 3
 0 @I167@ INDI
 1 REFN joanna_b1761
@@ -3429,7 +3471,7 @@
 1 NOTE Source detail: Geneanet trees paulderidder (Sosa 644), glorieuxp, dvandurme1, mjovdl (8+ Evergem trees agree)
 2 CONT
 2 CONT Married twice — Livina Stockman (mother of Christoffel 1709 and of Pieter, who now has his own record as [[petrus_b1727]]), then Livina De Wilde ~1745. That remarriage is what identifies him as the documented Joannes b.1682 and bridges our line into the deep Evergem Bundervoet trunk. Parents Joannes Bundervoet (1637-1707) x Joanna Verbrugghe.
-1 SOUR @S58@
+1 SOUR @S59@
 2 QUAY 2
 0 @I184@ INDI
 1 REFN joannes_b1637
@@ -3446,7 +3488,7 @@
 1 FAMS @F148@
 1 FAMC @F147@
 1 NOTE Father of Joannes Bundervoet (1682). Parents Segerius Bundervoet x Joanna van Hecke.
-1 SOUR @S59@
+1 SOUR @S60@
 2 QUAY 2
 0 @I185@ INDI
 1 REFN joannes_bapt_b1757
@@ -3618,7 +3660,7 @@
 2 CONT card gives it independently of the trees, which is the strongest single reason to believe
 2 CONT this is the same man. This record notes Lens as being in France; the card says only
 2 CONT "Lens", so which Lens is not settled here.
-1 SOUR @S60@
+1 SOUR @S61@
 2 QUAY 2
 0 @I195@ INDI
 1 REFN joannes_vi2
@@ -3737,7 +3779,7 @@
 2 CONT a pass ago were not in this tree at all.
 2 CONT
 2 CONT Her stated age of 47 puts her birth in 1809–10, which agrees with the 1810 held here.
-1 SOUR @S50@
+1 SOUR @S51@
 2 QUAY 3
 0 @I201@ INDI
 1 REFN josephus_caeckaert
@@ -4029,7 +4071,7 @@
 1 FAMS @F66@
 1 FAMC @F120@
 1 NOTE Married Carel Cappaert 1863 Oostkamp. Birth given as 13 Sep 1839 Beernem (kathrynann) or 12 Sep 1839 Oedelem (1960dirk) — adjacent villages. One of eleven Stroobandt children.
-1 SOUR @S61@
+1 SOUR @S62@
 2 QUAY 2
 0 @I218@ INDI
 1 REFN juliette
@@ -4091,7 +4133,7 @@
 2 CONT
 2 CONT ACT READ (July 2026): named as *Marie Leclercq of Grez*, mother of the deceased, in her son
 2 CONT George's 1808 Grez-Doiceau death act, beside the father Lambert Thumas.
-1 SOUR @S56@
+1 SOUR @S57@
 2 QUAY 3
 0 @I222@ INDI
 1 REFN leon
@@ -4444,7 +4486,7 @@
 2 CONT Petrus Blomme has no record here: the card names him and nothing more. FRONTIER — the
 2 CONT Bocklandt–Blomme marriage act, which would date the remarriage and give his parents. It is
 2 CONT post-1923 Oostende, so it sits at the Stadsarchief rather than in AGATHA.
-1 SOUR @S62@
+1 SOUR @S63@
 2 QUAY 3
 0 @I239@ INDI
 1 REFN lucia_maene
@@ -4568,7 +4610,7 @@
 2 CONT February 1876, act 12; his own parents, Ludovicus Devriendt x Joanna Theresia Trogh.
 2 CONT Each needs the underlying act image read before it becomes a fact (verification pass,
 2 CONT 2026-07-26).
-1 SOUR @S63@
+1 SOUR @S64@
 2 QUAY 3
 0 @I246@ INDI
 1 REFN ludovicus_p
@@ -4619,7 +4661,7 @@
 2 CONT
 2 CONT Each needs the underlying act image read before it becomes a fact; none is graftable
 2 CONT on the index alone (verification pass, 2026-07-26).
-1 SOUR @S64@
+1 SOUR @S65@
 2 QUAY 3
 0 @I248@ INDI
 1 REFN magdalena_demeulemeester
@@ -4692,7 +4734,7 @@
 2 CONT
 2 CONT Still `sup`: the index is a transcription of the card, and nobody here has read the card
 2 CONT itself. Francine Bisschop still has no record of her own.
-1 SOUR @S65@
+1 SOUR @S66@
 2 QUAY 2
 0 @I251@ INDI
 1 REFN marcel_d
@@ -5035,7 +5077,7 @@
 2 CONT
 2 CONT Each needs the underlying act image read before it becomes a fact (verification pass,
 2 CONT 2026-07-26).
-1 SOUR @S66@
+1 SOUR @S67@
 2 QUAY 3
 0 @I272@ INDI
 1 REFN mattheus_ramon
@@ -5297,7 +5339,7 @@
 2 CONT Grez-Doiceau death act — written **Marie Catherine Noé** there, not Noël. The act puts the
 2 CONT marriage beyond the trees; the spelling is recorded as a variant rather than adopted, since
 2 CONT her own record and this tree's other sources use Noël.
-1 SOUR @S67@
+1 SOUR @S68@
 2 QUAY 3
 0 @I287@ INDI
 1 REFN octavia_schal
@@ -5325,7 +5367,7 @@
 2 CONT read as an image — father Ludovicus Schalandryn (werkman, resident at Oostende), mother
 2 CONT Mathilde Standaert (already deceased by 1906). See [[ludovicus_schal]] and
 2 CONT [[mathilde_standaert]] for what the acts do and do not support about them beyond this.
-1 SOUR @S68@
+1 SOUR @S69@
 2 QUAY 3
 0 @I288@ INDI
 1 REFN oliverius_stroobandt
@@ -5411,7 +5453,7 @@
 2 CONT twenty-one an orphan on both sides. And it records something registers rarely bother with:
 2 CONT she declared, with her witnesses, that **she had never known her grandparents nor where
 2 CONT they died**. That is a documented dead end, not a gap to keep searching by name.
-1 SOUR @S69@
+1 SOUR @S70@
 2 QUAY 3
 0 @I292@ INDI
 1 REFN petronella_b1754
@@ -5523,7 +5565,7 @@
 2 CONT It is post-1923 Oostende, so it sits at the Stadsarchief rather than in AGATHA.
 2 CONT
 2 CONT He is a step-relation, not blood: no line of descent here runs through him.
-1 SOUR @S70@
+1 SOUR @S71@
 2 QUAY 2
 0 @I297@ INDI
 1 REFN petrus_bundervoet1560
@@ -5619,7 +5661,7 @@
 2 CONT cards. The Doodsprentjes scan is behind a session — the record's image URL returns the
 2 CONT site's search page, not the card — so no image has been read here. Reading it, or the
 2 CONT Oostende 1943 civil death act, is what would make this `doc`.
-1 SOUR @S71@
+1 SOUR @S72@
 2 QUAY 2
 0 @I302@ INDI
 1 REFN petrus_jos_keirsebilck
@@ -5707,7 +5749,7 @@
 1 NOTE Source detail: Geneanet isavdw; birth act agatha.arch.be scan 513_9000_000_00774 (Sosa 3382)
 2 CONT
 2 CONT Father of Anna Van Nieuwenhuyse (1676). Served as a schepen (alderman/magistrate) of Oostkamp. Parents Marinus Van Nieuwenhuyse (~1620-1666) x Cornelia Govaert (~1625-1653).
-1 SOUR @S72@
+1 SOUR @S73@
 2 QUAY 3
 0 @I307@ INDI
 1 REFN petrus_vanrenterghem
@@ -5851,7 +5893,7 @@
 1 SEX M
 1 FAMS @F13@
 1 NOTE FRONTIER above — great-great-grandfather of Elodia Bostyn on the Perquy line. Dates not yet recovered (late-1700s Westkerke area).
-1 SOUR @S52@
+1 SOUR @S53@
 2 QUAY 3
 0 @I315@ INDI
 1 REFN pieterjacobus_v
@@ -5908,7 +5950,18 @@
 2 CONT act already registered as [[S13]], reached independently through a second index. Her surname
 2 CONT appears there in several spellings — Quinart, Kinart, Quinaut — which is worth knowing before
 2 CONT searching for her.
-1 SOUR @S73@
+2 CONT
+2 CONT ACT READ (2026-07-26): named, with [[georgeslambert_t]], as a parent of the deceased in her
+2 CONT son [[georges2_t]]'s death-act extract (S23) — *fils de Lambert Georges Thumas et de Marie
+2 CONT Catherine Quinart, **décédés***.
+2 CONT
+2 CONT So she was dead by 28 September 1868, and her motherhood of Georges now rests on an act of
+2 CONT civil registration rather than on a member tree.
+2 CONT
+2 CONT The extract writes her **Marie Catherine**, where this record carries *Marie Anne Catherine*
+2 CONT and the variant *Kinart*. Both forms stand; the act's is recorded here as what the clerk
+2 CONT wrote, not as a correction.
+1 SOUR @S74@
 2 QUAY 2
 0 @I318@ INDI
 1 REFN ramon
@@ -6069,7 +6122,7 @@
 2 CONT
 2 CONT His 1943 birth certificate (England & Wales GRO, Edmonton district) remains the record that
 2 CONT would confirm both his parents.
-1 SOUR @S74@
+1 SOUR @S75@
 2 QUAY 1
 0 @I327@ INDI
 1 REFN rolandus_govaert
@@ -6111,7 +6164,7 @@
 2 CONT
 2 CONT CORROBORATED (July 2026) as a wife: named alongside her husband in his Oostkamp death act
 2 CONT of 4 March 1876, which puts the marriage on a civil act.
-1 SOUR @S75@
+1 SOUR @S76@
 2 QUAY 2
 0 @I330@ INDI
 1 REFN rosalia_dhooge
@@ -6167,7 +6220,7 @@
 1 FAMS @F159@
 1 FAMC @F12@
 1 NOTE Ronny’s mother; predeceased Marcel. Her Van Iseghem line traces back through Oostende to the 1780s — see her father Joannes and beyond.
-1 SOUR @S76@
+1 SOUR @S77@
 2 QUAY 1
 0 @I334@ INDI
 1 REFN sancha
@@ -6250,7 +6303,7 @@
 2 CONT image level: Joannes Franciskus Brissinck x Theresia Francisca Levecke. No specific
 2 CONT act reference is held for this pass; it needs the underlying act image read before it
 2 CONT becomes a fact (verification pass, 2026-07-26).
-1 SOUR @S63@
+1 SOUR @S64@
 2 QUAY 3
 0 @I339@ INDI
 1 REFN simon_sabbe
@@ -6329,7 +6382,7 @@
 2 CONT
 2 CONT Her identity still turns on the record her own note names: the Gustaaf x Simonne marriage,
 2 CONT or Roland's 1943 English birth certificate with the mother's maiden name.
-1 SOUR @S74@
+1 SOUR @S75@
 2 QUAY 1
 0 @I343@ INDI
 1 REFN sonja_dv
@@ -6452,7 +6505,7 @@
 2 CONT on 15 June 1882, living at Kraainem, *naaister* — the occupation already held here,
 2 CONT confirmed word for word — and daughter of Henricus Augustinus Vandenbemden and Maria
 2 CONT Theresia Coekelberghs.
-1 SOUR @S77@
+1 SOUR @S78@
 2 QUAY 3
 0 @I351@ INDI
 1 REFN victoria_engelsen
@@ -7600,65 +7653,67 @@
 0 @S46@ SOUR
 1 TITL België, Brabant, burgerlijke stand, 1582-1950; Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
 0 @S47@ SOUR
-1 TITL Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Geneanet
+1 TITL Extract from the Grez-Doiceau death register — Georges Thumas, d. 12 January 1864 (issued 28 September 1868 as a marriage annex); Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Geneanet
 0 @S48@ SOUR
 1 TITL Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; Geneanet
 0 @S49@ SOUR
-1 TITL Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans; Marriage act nr. 9 — Françiscus Pardon × Anna Maria Bossin, Sint-Stevens-Woluwe, 1 December 1853; Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872
+1 TITL Extract from the Grez-Doiceau death register — Georges Thumas, d. 12 January 1864 (issued 28 September 1868 as a marriage annex); Geneanet
 0 @S50@ SOUR
-1 TITL Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Death act of Marie Catherine Joostens, Grez-Doiceau, 10 June 1857
+1 TITL Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans; Marriage act nr. 9 — Françiscus Pardon × Anna Maria Bossin, Sint-Stevens-Woluwe, 1 December 1853; Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872
 0 @S51@ SOUR
-1 TITL stefpaelinck (Stef Paelinck); The family itself
+1 TITL Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Death act of Marie Catherine Joostens, Grez-Doiceau, 10 June 1857
 0 @S52@ SOUR
-1 TITL stefanieschil; Rijksarchief AGATHA — Belgian State Archives search robot
+1 TITL stefpaelinck (Stef Paelinck); The family itself
 0 @S53@ SOUR
-1 TITL Rijksarchief AGATHA — Belgian State Archives search robot
+1 TITL stefanieschil; Rijksarchief AGATHA — Belgian State Archives search robot
 0 @S54@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; Familiekunde Vlaanderen (VVF)
+1 TITL Rijksarchief AGATHA — Belgian State Archives search robot
 0 @S55@ SOUR
-1 TITL Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; marcelcroon (Marcel Croon); jswaelens
+1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; Familiekunde Vlaanderen (VVF)
 0 @S56@ SOUR
-1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
+1 TITL Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; marcelcroon (Marcel Croon); jswaelens
 0 @S57@ SOUR
-1 TITL stefpaelinck (Stef Paelinck); Rijksarchief AGATHA — Belgian State Archives search robot
+1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
 0 @S58@ SOUR
-1 TITL paulderidder; glorieuxp; dvandurme1; mjovdl
+1 TITL stefpaelinck (Stef Paelinck); Rijksarchief AGATHA — Belgian State Archives search robot
 0 @S59@ SOUR
-1 TITL paulderidder; glorieuxp; mjovdl
+1 TITL paulderidder; glorieuxp; dvandurme1; mjovdl
 0 @S60@ SOUR
-1 TITL Memorial card — Joannes Vaniseghem, d. Oostende 5 May 1969; bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
+1 TITL paulderidder; glorieuxp; mjovdl
 0 @S61@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; 1960dirk (Dirk Teerlinck)
+1 TITL Memorial card — Joannes Vaniseghem, d. Oostende 5 May 1969; bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
 0 @S62@ SOUR
-1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946; wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Rijksarchief AGATHA — Belgian State Archives search robot
+1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; 1960dirk (Dirk Teerlinck)
 0 @S63@ SOUR
-1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946; wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Rijksarchief AGATHA — Belgian State Archives search robot
 0 @S64@ SOUR
-1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S65@ SOUR
-1 TITL Familiekunde Vlaanderen Westkust memorial card — Marcel Bundervoet, d. Oostende 20 November 2015; The family itself
+1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S66@ SOUR
-1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL Familiekunde Vlaanderen Westkust memorial card — Marcel Bundervoet, d. Oostende 20 November 2015; The family itself
 0 @S67@ SOUR
-1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; Geneanet
+1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S68@ SOUR
-1 TITL gverdievel (Guy Verdievel); Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886
+1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; Geneanet
 0 @S69@ SOUR
-1 TITL Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans; Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872
+1 TITL gverdievel (Guy Verdievel); Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886
 0 @S70@ SOUR
-1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946
+1 TITL Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans; Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872
 0 @S71@ SOUR
-1 TITL Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943; Familiekunde Vlaanderen Westkust memorial card — Pieter-Franciscus Bundervoet, d. Oostende 21 July 1943; Geneanet
+1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946
 0 @S72@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; Rijksarchief AGATHA — Belgian State Archives search robot
+1 TITL Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943; Familiekunde Vlaanderen Westkust memorial card — Pieter-Franciscus Bundervoet, d. Oostende 21 July 1943; Geneanet
 0 @S73@ SOUR
-1 TITL België, Brabant, burgerlijke stand, 1582-1950; Death act of Etienne Thumas, Grez-Doiceau, 18 October 1812; Geneanet
+1 TITL isavdw — Rijksarchief-sourced, with scan links; Rijksarchief AGATHA — Belgian State Archives search robot
 0 @S74@ SOUR
-1 TITL Geneanet; The family itself
+1 TITL Extract from the Grez-Doiceau death register — Georges Thumas, d. 12 January 1864 (issued 28 September 1868 as a marriage annex); België, Brabant, burgerlijke stand, 1582-1950; Death act of Etienne Thumas, Grez-Doiceau, 18 October 1812; Geneanet
 0 @S75@ SOUR
-1 TITL Death act of Florentinus Stroobandt, Oostkamp, 4 March 1876; isavdw — Rijksarchief-sourced, with scan links
+1 TITL Geneanet; The family itself
 0 @S76@ SOUR
-1 TITL bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
+1 TITL Death act of Florentinus Stroobandt, Oostkamp, 4 March 1876; isavdw — Rijksarchief-sourced, with scan links
 0 @S77@ SOUR
+1 TITL bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
+0 @S78@ SOUR
 1 TITL Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; jswaelens
 0 TRLR

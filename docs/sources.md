@@ -17,9 +17,9 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 24 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 25 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 9 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 10 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 1 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 23 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 24 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 4 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
@@ -126,6 +126,30 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Accessed:** 2026-07-26
 - **Note:** An analysis, not the register image — the scan is not linked from the page. Complete enough to read like an act, but it is a transcription.
 
+#### `ssw-1873-marriage-vandenbemden-coekelberghs` — Sint-Stevens-Woluwe marriage act nr. 6, 24 April 1873 — Van den Bemden × Coekelberghs
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00057332_0>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Sint-Stevens-Woluwe 1873, akte nr. 6
+- **Yielded:** All FOUR parents in one act: Maria Theresia Coekelberghs (b. Bertem 22/11/1848, dienstmeid) as daughter of Jan Baptist Coekelberghs (landbouwer, Bertem) and Anna Haesaerts (landbouwster, Bertem); Hendrik August Van den Bemden (b. Everberg 19/08/1849, dienstbode) as son of Jan Baptist Van den Bemden and Elisabeth Agatha Langes (landbouwster, Everberg). Plus her birth date and place, which the tree held only as the year 1848, and two Van den Bemden witnesses, Lodewijk (40, Sint-Stevens-Woluwe) and Willem (26, Schaarbeek).
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An AGATHA act analysis — the Rijksarchief's own transcription, Demogen project huvlb19b — NOT the scan. AGATHA records no image for this act (its URL field reads 'NN'), Open Archives holds no scan for it, and FamilySearch's full-text index does not cover Belgian civil registration. The same transcription is mirrored at https://www.openarchieven.nl/abl:87f9bbf6-4880-593a-8f37-d68346a42f2b . The AGATHA act page renders without a login.
+
+#### `kraainem-1903-marriage-vanesch-coekelberghs` — Kraainem marriage act nr. 16, 6 November 1903 — Van Esch × Coekelberghs, her remarriage
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00222866_0>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Kraainem 1903, akte nr. 16
+- **Yielded:** A second, independent naming of Maria Theresia Coekelberghs's parents — Joannes Baptista Coekelberghs (d. Bertem 19/11/1880) and Anna Haesaerts (d. Bertem 08/01/1880) — with their death dates, which no other held act gives. It also names her late first husband Henricus August Vandenbemden, d. Kraainem 12/08/1889, matching the tree exactly, and gives her a second marriage, to the widower Henricus Van Esch (b. Bertem 23/11/1836, herbergier at Zaventem), fourteen years after she was widowed.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** An AGATHA act analysis (Demogen project huvlb20), not the scan. Mirrored at https://www.openarchieven.nl/abl:c22fd42f-4ba4-db17-7908-0e97725a2f08 . Caution for whoever cites the Open Archives page: its rendered HTML gives the three death dates one day earlier than both the API record and the AGATHA page — 11/08/1889, 18/11/1880, 07/01/1880. The AGATHA values are the ones quoted above, and they agree with the API.
+
+#### `bertem-1838-marriage-coeckelberghs-haesaerts` — Bertem marriage act nr. 8, 30 October 1838 — Coeckelberghs × Haesaerts
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00146698_0>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Bertem 1838, akte nr. 8
+- **Yielded:** The marriage of the couple the 1873 and 1903 acts name as Maria Theresia's parents, with their own birth dates and their own parents: Joannes Baptista Coeckelberghs (b. Bertem 29/07/1809, slagter), son of Henricus Coeckelberghs and Petronella Elseviers; Anna Haesaerts (b. Bertem 24/10/1810, landbouwster), daughter of Joannes Baptist Haesaerts and Elisabeth Vanden Broeck. All six lived at Bertem.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** Reached from the Open Archives mirror https://www.openarchieven.nl/abl:e18081cf-3acb-279b-061b-5ebd8a678b29 which — unlike the 1873 and 1903 acts — DOES carry a scan link: https://www.familysearch.org/ark:/61903/3:1:9392-HGZ1-T?i=217&cc=1482191&cat=140936 . The image has not been read here, only the transcription. Not grafted: this is the generation above the frontier that found it.
+
 ### FamilySearch
 
 #### `S1` — Édouard Dekeyser's 1946 Oostende remarriage act (akte nr. 81)
@@ -192,6 +216,16 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07-26
 - **Note:** FOLLOW-UP: read on screen at the ark above; no image file has been saved to data/artifacts/ — the same named gap as S20.
+
+#### `S23` — Extract from the Grez-Doiceau death register — Georges Thumas, d. 12 January 1864 (issued 28 September 1868 as a marriage annex)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:3QS7-L93X-692M?view=index&personArk=%2Fark%3A%2F61903%2F1%3A1%3A6VSH-GSKT&lang=nl>
+- **Collection:** Grez-Doiceau, Huwelijksakten september 1866 - april 1873, image 221 of 772 — the volume binds the huwelijksbijlagen with the acts
+- **Covers:** Register image, read at full resolution. A death-act extract drawn up for a child's marriage.
+- **Yielded:** Georges Thumas died at Grez-Doiceau on 12 January 1864, widower of Marie Catherine Joostens, son of Lambert Georges Thumas and Marie Catherine Quinart, both then dead. First documentary proof of his parent link, which had rested on Geneanet alone, and of the death date. Delivered free of charge for certified indigence. Gives no age, so the 1804/1794 conflict stays open.
+- **Saved artifact:** `data/artifacts/georges-thumas-1864-death-extract-grez-doiceau.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** METHOD: AGATHA has no Grez-Doiceau death act for 1864, but the extract survives inside the MARRIAGE volume as a huwelijksbijlage. Death acts hide in marriage annexes — the route into every commune whose death series is unindexed.
 
 ### Geneanet
 

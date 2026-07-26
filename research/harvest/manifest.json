@@ -1578,14 +1578,14 @@
     {
       "id": "vandenbroucke",
       "query": {
-        "name": "Van den Broucke",
+        "name": "vandenbroucke",
         "country_code": "be"
       },
       "date": "2026-07-26",
-      "found": 2047,
-      "mentions": 600,
+      "found": 9523,
+      "mentions": 2100,
       "complete": false,
-      "acts": 600
+      "acts": 2100
     },
     {
       "id": "vandenbroucke-nieuwmunster",

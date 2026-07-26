@@ -1448,3 +1448,56 @@ Nothing was changed in the record. The conflict stays open and honestly labelled
 weight now stated, and the frontier narrowed from "search AGATHA" to the one thing that would
 settle it: the Brabant-wallon register images on FamilySearch for 1804, and the parish
 registers for 1793–94.
+
+## 50. Death acts hide in marriage annexes
+
+§49 closed two AGATHA venues on [[georges2_t]] and said the only thing left was the register
+images. That turned out to be right, and the image was one search away — on the venue this
+project's own ladder calls highest-value and least-used.
+
+FamilySearch, asked for the surname pair **Thumas × Quinart** in Belgium, returns **196
+historical records**. AGATHA, asked for the same pair across 1790–1815, returns five. That
+gap is the finding on its own.
+
+One of the 196 is indexed as an *Overlijdensakte* with Georges Thumas as principal, his
+parents Lambert Georges Thumas and Marie Catherine Quinart, and his wife Marie Catherine
+Joostens. Reading the image — assembled from the register's own deepzoom tiles — gives the
+text in full:
+
+> Que le **douze janvier mil huit cent soixante quatre**, est décédé à Grez-Doiceau
+> **Georges Thumas**, veuf de **Marie Catherine Joostens**, fils de **Lambert Georges
+> Thumas** et de **Marie Catherine Quinart**, décédés. … Délivré sur papier libre **pour
+> cause d'indigence constatée**, au voeu de la loi. A Grez-Doiceau le 28 7bre 1868.
+
+**Three independent identifiers agree and not one is a forename** — both parents by name and
+the wife by name. That is what makes it safe, because Georges Thumas is the commonest name in
+Grez-Doiceau's registers, and §49 had just found a *Charles Julien Thumas* appearing as a
+commune official in dozens of acts, exactly the trap a name-and-place match walks into.
+
+**What it documents.** The death date, 12 January 1864, was in this tree from a member tree;
+it is now from civil registration. And the parent link — [[georgeslambert_t]] × [[quinart]]
+— had **never been documented at all**. Those two records rested entirely on Geneanet; this
+is the first document of any kind that touches them, and it also places them both as dead by
+September 1868.
+
+**What it does not do is settle §49.** The extract gives no age and no birth date. The ten
+years between the recorded 1804 and the *63* of the 1857 act stand precisely where they were.
+A death act that names parents and spouse but no age is a reminder that documents answer the
+questions they were written to answer, not the ones we bring.
+
+**And the method, which is the durable part.** This is a *huwelijksbijlage* — a marriage
+annex. When someone married and a parent was dead, the commune drew up an extract of that
+parent's death act and bound it into the **marriage** volume. So AGATHA can be right that
+there is no indexed Grez-Doiceau death act for 1864, and the death act can still be sitting
+in the marriage register, filmed and reachable. **Where a commune's death series is
+unindexed, look in the marriage annexes of the children.** That applies directly to the
+Peremans and Ver Elst deaths of §47–48, which Vlaams-Brabant does not index at all.
+
+**A hard detail, recorded because it is part of the life.** The extract was issued free of
+charge *pour cause d'indigence constatée*: on certified poverty. A carpenter's family that
+could not pay for the paper.
+
+NEXT: the extract was drawn on 28 September 1868 *for a marriage*, so a child of Georges
+Thumas and Marie Catherine Joostens married at Grez-Doiceau around then. This tree knows only
+[[georges_cj]], who married at Kraainem in 1872. That 1868 act is in the same volume near
+image 221 and should name a sibling.

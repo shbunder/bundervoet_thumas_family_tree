@@ -20,6 +20,7 @@ spouses:
     married: 1835-02-17
     place: Grez-Doiceau
 sources:
+  - S23
   - S15
   - S11
   - S8
@@ -74,3 +75,29 @@ VENUES CLOSED (2026-07-26), so this is not a frontier to re-walk at AGATHA:
 
 What is left is the register images themselves — FamilySearch's Brabant-wallon civil
 registration for 1804, and the parish registers for 1793–94.
+
+ACT READ (2026-07-26) — **his own death act, at last, and it was hiding in a marriage
+register.** An extract from the Grez-Doiceau death registers (S23), read as a register image,
+states that *le douze janvier mil huit cent soixante quatre* Georges Thumas died at
+Grez-Doiceau, **veuf de Marie Catherine Joostens**, **fils de Lambert Georges Thumas et de
+Marie Catherine Quinart, décédés**.
+
+Three independent identifiers agree at once, and not one of them is a forename: both parents
+by name, and the wife by name. That matters here, because Georges Thumas is the commonest
+name in this commune's registers.
+
+**It documents two things this record had been carrying on a member tree's word.** The death
+date, 12 January 1864, is now from civil registration. And the parent link to
+[[georgeslambert_t]] and [[quinart]] — never documented before — is now on an act.
+
+**It does not settle the age conflict.** The extract gives no age and no birth date, so the
+ten years between the recorded 1804 and the *63* of the 1857 act stand exactly where §49 left
+them.
+
+The extract was **délivré sur papier libre pour cause d'indigence constatée** — issued free
+because the family was certified too poor to pay for the paper.
+
+FRONTIER: it was drawn up on 28 September 1868 *for a marriage*, which means **a child of
+this couple married at Grez-Doiceau around then**. This tree knows only [[georges_cj]], who
+married at Kraainem in 1872. The 1868 marriage sits in the same volume, near image 221, and
+should name a sibling.
