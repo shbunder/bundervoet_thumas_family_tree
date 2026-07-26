@@ -237,13 +237,39 @@ def _attaches_to(role: str, principals: list[Mention]) -> Mention | None:
     return principals[0] if len(principals) == 1 else None
 
 
+def _principal_event(r: dict) -> dict:
+    """The event an act is ABOUT, when the record carries more than one.
+
+    A2A allows several. Lommel publishes 1,620 marriage records holding both the wedding
+    and the `Ondertrouw` — the banns, three weeks earlier — as two events with two dates
+    for one union. `Act` models a single event, so this has to choose, and the choice is
+    read off the record rather than guessed: `RelationEP` ties each participant to an event
+    by `EventKeyRef`, so the event the most participants are attached to is the one the act
+    is about. Ties and unreferenced events fall back to document order.
+
+    This surfaced as a crash — `'list' object has no attribute 'get'` — the first time a
+    whole-archive harvest brought in an archive whose records do this. Every surname-filtered
+    harvest before it had missed them, which is worth remembering about coverage: the code
+    had been wrong all along and the data had never said so.
+    """
+    events = _as_list(r.get("Event"))
+    if len(events) <= 1:
+        return events[0] if events else {}
+    referenced: Counter = Counter()
+    for rel in _as_list(r.get("RelationEP")):
+        if rel.get("EventKeyRef"):
+            referenced[rel["EventKeyRef"]] += 1
+    return max(events, key=lambda e: referenced.get(e.get("@eid"), 0))
+
+
 def normalise_act(row: dict) -> Act:
     # Every record enters here, so this is the one place the annotated-value convention
     # has to be dealt with. See unwrap_annotated.
     row = unwrap_annotated(row)
     r = row.get("record") or {}
-    ev = r.get("Event") or {}
-    src = r.get("Source") or {}
+    ev = _principal_event(r)
+    # Coerced for the same reason: nothing guarantees an archive publishes exactly one.
+    src = next(iter(_as_list(r.get("Source"))), {}) or {}
     date = _api_date(ev.get("EventDate"))
     year = year_of(date)
 

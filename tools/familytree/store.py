@@ -49,6 +49,15 @@ CREATE TABLE acts (id TEXT PRIMARY KEY, path TEXT, offset INTEGER, length INTEGE
 CREATE TABLE mentions (ref TEXT PRIMARY KEY, act_id TEXT, pid TEXT, surname_key TEXT);
 CREATE TABLE blocks (key TEXT, ref TEXT);
 CREATE TABLE freq (kind TEXT, value TEXT, n INTEGER);
+"""
+
+# Built AFTER the rows are in, not alongside them. `blocks` gets five or six keys per
+# mention — about thirty million rows at a corpus of 1.7 million acts — and maintaining a
+# B-tree across every one of those inserts was most of the build time: the first attempt
+# at this scale was heading for twenty minutes, which is far too slow for something the
+# validator triggers before a commit. Indexing a table that has stopped changing is one
+# sequential sort instead.
+INDEXES = """
 CREATE INDEX blocks_key ON blocks (key);
 CREATE INDEX mentions_surname ON mentions (surname_key);
 CREATE INDEX freq_lookup ON freq (kind, value);
@@ -134,6 +143,11 @@ def build(verbose: bool = False) -> int:
     seen: set[str] = set()
 
     with sqlite3.connect(tmp) as db:
+        # Safe to relax both: this is a scratch file built from scratch, and if the machine
+        # dies mid-build the answer is to build it again, not to recover it. The real
+        # database is only ever created by the atomic rename at the end.
+        db.execute("PRAGMA journal_mode = OFF")
+        db.execute("PRAGMA synchronous = OFF")
         db.executescript(SCHEMA)
         acts_rows, mention_rows, block_rows = [], [], []
         for path in sorted(ACTS_DIR.glob("*.jsonl")) if ACTS_DIR.is_dir() else []:
@@ -180,6 +194,10 @@ def build(verbose: bool = False) -> int:
         db.executemany("INSERT INTO freq VALUES ('place', ?, ?)", places.items())
         db.executemany("INSERT INTO meta VALUES (?, ?)",
                        [("signature", signature()), ("n", str(n)), ("acts", str(len(seen)))])
+        if verbose:
+            print(f"\r  indexed {len(seen)} acts, {n} mentions — building the lookups…",
+                  end="", flush=True)
+        db.executescript(INDEXES)
     # Renamed into place only once it is complete, so an interrupted build leaves the
     # previous index intact rather than a half-written one that reads as current.
     close()
@@ -236,6 +254,20 @@ def held_under(surname: str) -> int:
         row = db.execute("SELECT count(*) FROM mentions WHERE surname_key = ?",
                          (normalise_key(surname),)).fetchone()
     return row[0] if row else 0
+
+
+def acts_by_id(act_ids) -> dict:
+    """Named acts, read straight out of the JSONL by offset.
+
+    The lookup the gold standard needs. `evaluate.py` was resolving 48 label refs by
+    building a dictionary of every mention in the corpus — fine at a hundred thousand acts,
+    and at 1.7 million it is a three-minute wait to answer a question about 48 of them.
+    """
+    ids = sorted(set(act_ids))
+    if not ids:
+        return {}
+    with _connect() as db:
+        return _hydrate(db, ids)
 
 
 def candidate_count(c: Candidate) -> int:

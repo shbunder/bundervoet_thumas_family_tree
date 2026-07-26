@@ -621,6 +621,67 @@ def test_the_index_holds_offsets_not_a_second_copy_of_the_evidence(indexed_corpu
     assert all(isinstance(r[2], int) and r[3] > 0 for r in rows)
 
 
+def test_an_act_with_two_events_takes_the_one_it_is_about():
+    """A2A allows several events in one record, and Lommel uses that: 1,620 marriages
+    carrying both the wedding and the `Ondertrouw` — the banns, three weeks earlier — as
+    two events with two dates for one union.
+
+    `Act` holds a single event, so it has to choose, and the choice is read off the record:
+    `RelationEP` ties each participant to an event, so the event the participants are
+    attached to is the one the act is about. Picking the banns would date every one of those
+    marriages three weeks early.
+
+    This was a crash, not a wrong answer — `'list' object has no attribute 'get'` — and it
+    took a whole-archive harvest to find, because every surname-filtered harvest before it
+    had missed those records entirely. Worth remembering about coverage: the code had been
+    wrong all along and the data had never said so.
+    """
+    from familytree.corpus import normalise_act
+    act = normalise_act({
+        "id": "sla:two", "archive": "sla", "archive_org": "Test",
+        "record": {
+            "Event": [
+                {"@eid": "Event1", "EventType": "Trouwen",
+                 "EventDate": {"Year": "1807", "Month": "07", "Day": "07"},
+                 "EventPlace": {"Place": "Lommel"}},
+                {"@eid": "Event2", "EventType": "Ondertrouw",
+                 "EventDate": {"Year": "1807", "Month": "06", "Day": "20"},
+                 "EventPlace": {"Place": "Lommel"}},
+            ],
+            "Person": [
+                {"@pid": "P1", "PersonName": {"PersonNameFirstName": "Jan",
+                                              "PersonNameLastName": "Geboers"}},
+                {"@pid": "P2", "PersonName": {"PersonNameFirstName": "Anna",
+                                              "PersonNameLastName": "Dingenen"}},
+            ],
+            "RelationEP": [
+                {"PersonKeyRef": "P1", "EventKeyRef": "Event1", "RelationType": "Bruidegom"},
+                {"PersonKeyRef": "P2", "EventKeyRef": "Event1", "RelationType": "Bruid"},
+            ],
+        },
+    })
+    assert act.type == "Trouwen"
+    assert act.date == "1807-07-07", "the banns are not the wedding"
+    # And the couple edge still forms, which is the whole reason a marriage act is worth
+    # more than any other record.
+    assert {"type": "couple", "a": "P1", "b": "P2"} in act.edges
+
+
+def test_a_source_published_as_a_list_does_not_crash():
+    """Nothing guarantees an archive publishes exactly one Source, and a record that will
+    not parse takes the whole validator down mid-run rather than degrading."""
+    from familytree.corpus import normalise_act
+    act = normalise_act({
+        "id": "t:src", "archive": "t",
+        "record": {
+            "Event": {"EventType": "Geboorte", "EventDate": {"Year": "1880"}},
+            "Person": [{"@pid": "P1", "PersonName": {"PersonNameLastName": "Test"}}],
+            "Source": [{"SourceType": "BS Geboorte"}, {"SourceType": "duplicate"}],
+        },
+    })
+    assert act.source_type == "BS Geboorte"
+
+
 def _cand(**kw):
     from familytree.match import Candidate
     base = dict(ref="x", name="", surname="", given="")

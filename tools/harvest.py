@@ -422,6 +422,15 @@ def bulk_archives() -> set[str]:
     return set(re.findall(r"/xml/\./([a-z0-9]+)\.xml\.gz", html))
 
 
+def _held_in(archive: str) -> int:
+    """How many acts are actually on disk for one archive — the figure the manifest owes."""
+    path = ACTS_DIR / f"{archive}.jsonl"
+    if not path.exists():
+        return 0
+    with path.open("rb") as f:
+        return sum(1 for line in f if line.strip())
+
+
 def write_acts(rows, archive: str, refresh: bool) -> tuple[int, int, Exception | None]:
     """Stream acts into the store, skipping the ones already held.
 
@@ -538,18 +547,23 @@ def _bulk_one(archive: str, args) -> bool:
         if attempt < 3:
             time.sleep(3 * attempt)
 
+    # Counted off the file rather than from this run's tallies. A run that dies part-way
+    # has seen fewer acts than are held — `ell` reported 1,859 while its file held 3,584
+    # from an earlier attempt — and a count that is lower than the truth is still a count
+    # that is not the truth.
+    held = _held_in(archive)
     save_manifest({
         "id": f"archive-{archive}",
         "query": {"archive": archive, "via": "bulk"},
         "date": dt.date.today().isoformat(),
-        "found": added + skipped,
-        "mentions": added + skipped,
+        "found": held,
+        "mentions": held,
         # A whole-archive export IS the archive, so a completed pull has nothing left
         # behind to be honest about — and an interrupted one has, so it says so.
         "complete": complete,
-        "acts": added + skipped,
+        "acts": held,
     })
-    print(f"  → {added + skipped} acts held for {archive}" + ("" if complete else " — PARTIAL") + "\n")
+    print(f"  → {held} acts held for {archive}" + ("" if complete else " — PARTIAL") + "\n")
     return complete
 
 

@@ -13,6 +13,114 @@
       "acts": 600
     },
     {
+      "id": "archive-aal",
+      "query": {
+        "archive": "aal",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 680324,
+      "mentions": 680324,
+      "complete": true,
+      "acts": 680324
+    },
+    {
+      "id": "archive-abs",
+      "query": {
+        "archive": "abs",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 7576,
+      "mentions": 7576,
+      "complete": true,
+      "acts": 7576
+    },
+    {
+      "id": "archive-den",
+      "query": {
+        "archive": "den",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 384172,
+      "mentions": 384172,
+      "complete": true,
+      "acts": 384172
+    },
+    {
+      "id": "archive-ell",
+      "query": {
+        "archive": "ell",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 1859,
+      "mentions": 1859,
+      "complete": false,
+      "acts": 1859
+    },
+    {
+      "id": "archive-gnt",
+      "query": {
+        "archive": "gnt",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 361158,
+      "mentions": 361158,
+      "complete": true,
+      "acts": 361158
+    },
+    {
+      "id": "archive-kor",
+      "query": {
+        "archive": "kor",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 140543,
+      "mentions": 140543,
+      "complete": true,
+      "acts": 140543
+    },
+    {
+      "id": "archive-sad",
+      "query": {
+        "archive": "sad",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 15189,
+      "mentions": 15189,
+      "complete": true,
+      "acts": 15189
+    },
+    {
+      "id": "archive-sla",
+      "query": {
+        "archive": "sla",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 26739,
+      "mentions": 26739,
+      "complete": true,
+      "acts": 26739
+    },
+    {
+      "id": "archive-ton",
+      "query": {
+        "archive": "ton",
+        "via": "bulk"
+      },
+      "date": "2026-07-26",
+      "found": 6379,
+      "mentions": 6379,
+      "complete": true,
+      "acts": 6379
+    },
+    {
       "id": "bocklandt",
       "query": {
         "name": "bocklandt",

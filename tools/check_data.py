@@ -11,6 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from familytree import sources as reg  # noqa: E402
+from familytree import store  # noqa: E402
 from familytree.bundle import build_bundle  # noqa: E402
 from familytree.frontmatter import FrontmatterError  # noqa: E402
 from familytree.landing import stale_reason  # noqa: E402
@@ -443,6 +444,13 @@ def _check_duplicates(people, children_of):
             for b in kids[i + 1:]:
                 related.add(frozenset((a, b)))  # siblings
 
+    # The duplicate check compares tree people with each other, but `compare` reaches for
+    # the corpus frequencies to weigh a surname — and when the index is stale that falls
+    # back to counting every held act. The validator runs before every commit, so it is the
+    # last place that should silently pay for a 1.7-million-act scan: bringing the index
+    # up to date once is cheaper than scanning on every run, and it is announced rather
+    # than appearing as an unexplained pause.
+    store.ensure(verbose=True)
     candidates = [from_person(p, people, children_of) for p in people.values()]
     index = build_index(candidates)
     seen: set[frozenset] = set()

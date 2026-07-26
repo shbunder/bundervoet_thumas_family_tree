@@ -35,8 +35,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from familytree import store  # noqa: E402
-from familytree.corpus import corpus_exists, corpus_mentions  # noqa: E402
-from familytree.corpus import frequencies  # noqa: E402
+from familytree.corpus import corpus_exists  # noqa: E402
 from familytree.frontier import children_index  # noqa: E402
 from familytree.match import compare, from_mention, from_person  # noqa: E402
 from familytree.people import ROOT, family_key, load_config, load_people  # noqa: E402
@@ -107,14 +106,18 @@ def _scored(labels: list[Label]):
     """
     people = load_people(load_config()["roster"])
     children = children_index(people)
-    freq = frequencies()
+    store.ensure(verbose=True)
+    freq = store.frequencies()
+    # Only the acts the labels actually name. See store.acts_by_id — resolving 48 refs by
+    # indexing every mention in the corpus cost three minutes once the corpus passed a
+    # million acts.
+    acts = store.acts_by_id(lab.ref.split("#", 1)[0] for lab in labels)
     by_ref: dict[str, object] = {}
     in_act: dict[str, list] = {}
-    for m in corpus_mentions():
-        ref = f"{m.act.id}#{m.pid}" if m.act else m.pid
-        by_ref[ref] = m
-        if m.act:
-            in_act.setdefault(m.act.id, []).append(m)
+    for act in acts.values():
+        for m in act.people:
+            by_ref[f"{act.id}#{m.pid}"] = m
+            in_act.setdefault(act.id, []).append(m)
 
     for lab in labels:
         if lab.person not in people:
@@ -257,10 +260,9 @@ def cmd_refs(args) -> int:
         raise SystemExit("error nothing harvested yet — the labels cannot be resolved")
 
     people = load_people(load_config()["roster"])
-    in_act: dict[str, list] = {}
-    for m in corpus_mentions():
-        if m.act:
-            in_act.setdefault(m.act.id, []).append(m)
+    store.ensure(verbose=True)
+    in_act = {aid: act.people for aid, act in
+              store.acts_by_id(lab.ref.split("#", 1)[0] for lab in labels).items()}
 
     unheld, ambiguous, gone = [], [], []
     for lab in labels:
@@ -359,7 +361,7 @@ def cmd_floor(args) -> int:
     print("\n  What that suppresses in the live candidate stream, not just in the labels:")
     people = load_people(load_config()["roster"])
     children = children_index(people)
-    freq = frequencies()
+    freq = store.frequencies()
     seen = suppressed = 0
     for pid in sorted(people)[: args.people]:
         c = from_person(people[pid], people, children)
