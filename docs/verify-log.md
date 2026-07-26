@@ -146,10 +146,10 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 
 ---
 
-## Interim summary — passes 25–35 (2026-07-26)
+## Summary — passes 25–36 (2026-07-26)
 
-**The tree went 328 → 386 people.** 39 now sit at `doc`, 321 at `sup`, 26 at `fam`. 17 saved
-artifacts, 122 logged searches. Green at every commit.
+**The tree went 328 → 390 people.** 39 now sit at `doc`, 325 at `sup`, 26 at `fam`. 17 saved
+artifacts, 126 logged searches. Green at every commit.
 
 ### The one thing that changed everything
 
@@ -181,12 +181,16 @@ graft from a guess.
 - **Octavia Schalandrijn** — born **30 April 1886**, not 2 May; the tree had been holding the
   certificate's date as the birth. *(From the concurrent session's pass, §46.)*
 
-### What was added — 58 people, every one named by a document
+### What was added — 62 people, every one named by a document
 
 Four ancestors from the 1846 Zaventem act. A sister for Guilielmus Bossin and the Pardon
 household. Two siblings for Antonia Bossin. Five siblings for Georges Carolus Josephus Thumas.
-Three of his daughters with their husbands and all six in-law parents. Two siblings for
-Joanna Catharina Jacoba Peremans, with a husband and his parents.
+Three of his daughters with their husbands and all six in-law parents. **All three** siblings
+of Joanna Catharina Jacoba Peremans, with two spouses and four in-law parents.
+
+Nobody was added on a name alone. Every one came from a record that named at least two people
+around them — usually both parents — and each is at the confidence the source earns, with what
+has *not* been read written into the prose.
 
 ### What was refused
 
@@ -213,6 +217,14 @@ Joanna Catharina Jacoba Peremans, with a husband and his parents.
 - A standing trap: **Charles Julien Thumas** appears as *Belanghebbende* in dozens of
   Grez-Doiceau death acts. He is a commune official and nobody's relative here.
 
+### One pattern worth keeping
+
+Egidius Peremans died in March 1837 and Joanna Theresia Ver Elst on 19 December 1843. Their
+three known children then married at Zaventem inside twenty-six months — April 1844, November
+1844, February 1846 — the youngest twenty-one and orphaned on both sides, and telling her own
+wedding that she had never known her grandparents nor where they died. The pattern is in the
+records; the cause is not, and is not claimed.
+
 ### Still open
 
 - **The Thumas age conflict** (1804 vs the *63* of the 1857 act) is **not** resolved. His
@@ -220,7 +232,6 @@ Joanna Catharina Jacoba Peremans, with a husband and his parents.
   1793–94 would precede their marriage by seven years. And the 1857 act's reliable figure was
   the *deceased's* age, not the surviving spouse's — those are not the same kind of number.
 - **The 1840 Zaventem marriage annexes**, which should hold Egidius Peremans's 1837 death act.
-- **Joannes Athanasius Peremans** — one sibling row still unopened.
 - **The whole-tree sweep has not run yet.** A straggler harvest has been writing the corpus for
   ~50 minutes and sweeping during a harvest once produced a false count, so `verify_all.py` is
   chained to its exit. The corpus has meanwhile grown from ~34,500 acts to **83,000+**, which
