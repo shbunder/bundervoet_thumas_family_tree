@@ -63,3 +63,8 @@ __pycache__/
 #
 # Revisit when the docs build moves to CI; at that point both generated artefacts leave
 # git together. See the scaling notes in CLAUDE.md.
+#
+# The source maps are the exception: 1.2 MB of the 4.3 MB, they exist to debug MkDocs'
+# own minified bundle, nobody reading this tree will ever open one, and they change
+# whenever the theme is rebuilt. The site works without them.
+dist/docs/**/*.map

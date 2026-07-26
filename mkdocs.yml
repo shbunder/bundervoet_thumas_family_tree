@@ -2,8 +2,12 @@ site_name: Reconstructing Flanders
 site_description: >-
   An evidence-first, machine-assisted reconstruction of Flemish families from parish and
   civil registers — the method, the rules, and the prior work it builds on.
-site_url: https://example.invalid/family-tree/
-repo_url: https://github.com/example/family-tree
+# Where the rendered docs sit once Pages serves this repository as it stands. It is not
+# decoration: Material writes a <link rel="canonical"> and the sitemap from it, so the
+# old example.invalid placeholder would have told crawlers the real page lives somewhere
+# that does not exist. Correct this if Pages ever moves or a custom domain appears.
+site_url: https://shbunder.github.io/bundervoet_thumas_family_tree/dist/docs/
+repo_url: https://github.com/shbunder/bundervoet_thumas_family_tree
 edit_uri: ""
 
 # NOT the default "site/". That directory is source — it holds site/labels.json, the
@@ -11,6 +15,14 @@ edit_uri: ""
 # every build. Pointing this at the default would silently destroy a data file.
 site_dir: dist/docs
 docs_dir: docs
+
+# One file per page, not one directory per page. The default writes method/linkage/ and
+# links to it as a directory, which a web server resolves to its index.html and a
+# browser reading file:// does not — it offers the folder instead of the page. This site
+# has to work opened straight off disk, the same rule that keeps the tree's own scripts
+# plain and non-modular, so pages are addressed as method/linkage.html and both routes
+# behave the same.
+use_directory_urls: false
 
 theme:
   name: material
