@@ -72,3 +72,7 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 20 | 2026-07-26 | marie_anna_dedeckere +8 | — | ADDED | Pieter Bundervoet's wife and all eight children (paulderidder). | 4eeeeee |
 | 20 | 2026-07-26 | livinus_b1615, maria_b1623, catharina_vanhecke, wilhelmina_b1650 | — | ADDED | Segerius's siblings, his father's 2nd wife and her daughter. | 4eeeeee |
 | 20 | 2026-07-26 | etienne_thumas, henrica_thumas | — | ADDED | From the 1812 Grez-Doiceau death act and the 1899 Kraainem marriage index. | 4eeeeee |
+| 21 | 2026-07-26 | louise_bocklandt | CORROBORATED | CORROBORATED | Death fixed to **15 Jul 1946** Oostende, and a **second husband — Petrus Blomme**, after the ~1923 divorce from Édouard. | 8eb229a |
+| 21 | 2026-07-26 | carolus_vb, martinet | CORROBORATED | CORROBORATED | Couple attested by their son's 1909 Sint-Niklaas marriage act. | 8eb229a |
+| 21 | 2026-07-26 | alphonsus_vb | — | ADDED | Their son, brother of magdalena_vb, from the same act. 328 people. | 8eb229a |
+| 21 | 2026-07-26 | — (tooling) | — | — | Second `_text()` gap fixed: person-level place/residence/profession/age also arrive as dicts. verify_all crashed on it. | 8eb229a |

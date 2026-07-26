@@ -878,6 +878,28 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "Index entries; none of these acts has been read as an image, so nothing here rises above sup."
+    },
+    {
+      "id": "S17",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946",
+      "url": "https://www.openarchieven.nl/fwk:93d18189-14c6-9fd3-05d3-26142749d8b9",
+      "collection": "Familiekunde Vlaanderen regio Westkust, bidprentjes/rouwbrieven",
+      "yielded": "Her exact death date — 15 July 1946 at Oostende, where the tree had only the year — her birthplace Hamme, and a SECOND HUSBAND: the card names her partner as Petrus Blomme, not Edouard Dekeyser. She had divorced Edouard around 1923 and evidently remarried.",
+      "confidence": "sup",
+      "accessed": "2026-07-26"
+    },
+    {
+      "id": "S18",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Marriage act — Alphonsus Van Bogaert × Rosalia Moerloos, Sint-Niklaas, 7 April 1909",
+      "url": "https://www.openarchieven.nl/abt:78f3eb53-a706-9e24-4a46-4203498072a3",
+      "collection": "Burgerlijke stand Sint-Niklaas, huwelijken 1909 (via Open Archives)",
+      "yielded": "Confirms Carolus Ludovicus Van Bogaert x Maria Ludovica Martinet as a couple from a civil act — they are named as the bridegroom's parents — and reveals a son, Alphonsus Van Bogaert, who is a brother of Maria Magdalena and not in the tree. The bride's parents are given as Vitalis Moerloos x Nathalia Van Acker.",
+      "confidence": "sup",
+      "accessed": "2026-07-26"
     }
   ]
 }

@@ -121,6 +121,18 @@
       "acts": 600
     },
     {
+      "id": "coekelberghs",
+      "query": {
+        "name": "Coekelberghs",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 648,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "daneel",
       "query": {
         "name": "Daneel",
@@ -203,6 +215,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "desangere",
+      "query": {
+        "name": "Desangere",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 0,
+      "mentions": 0,
+      "complete": true,
+      "acts": 0
     },
     {
       "id": "devos",
@@ -649,6 +673,18 @@
       "acts": 600
     },
     {
+      "id": "vandeputte",
+      "query": {
+        "name": "Vande Putte",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 860,
+      "mentions": 600,
+      "complete": false,
+      "acts": 600
+    },
+    {
       "id": "vandewalle",
       "query": {
         "name": "Vandewalle",
@@ -697,6 +733,18 @@
       "acts": 600
     },
     {
+      "id": "vanhille",
+      "query": {
+        "name": "Van Hille",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 237,
+      "mentions": 237,
+      "complete": true,
+      "acts": 237
+    },
+    {
       "id": "vaniseghem",
       "query": {
         "name": "Van Iseghem",
@@ -719,6 +767,18 @@
       "mentions": 600,
       "complete": false,
       "acts": 599
+    },
+    {
+      "id": "vanmassenhove",
+      "query": {
+        "name": "Van Massenhove",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 588,
+      "mentions": 588,
+      "complete": true,
+      "acts": 588
     },
     {
       "id": "vannieuwenhuyse",

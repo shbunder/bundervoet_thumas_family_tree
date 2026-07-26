@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 0 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 17 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 19 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 4 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
@@ -452,6 +452,20 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Yielded:** Names the dead child's parents as Lambert Thumas and Marie Catherine Quinart — corroborating that couple, and revealing a son, Etienne, who died in 1812 and is not in the tree.
 - **Confidence:** sup
 - **Accessed:** 2026-07-25
+
+#### `S17` — Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946
+- **Kind:** record · <https://www.openarchieven.nl/fwk:93d18189-14c6-9fd3-05d3-26142749d8b9>
+- **Collection:** Familiekunde Vlaanderen regio Westkust, bidprentjes/rouwbrieven
+- **Yielded:** Her exact death date — 15 July 1946 at Oostende, where the tree had only the year — her birthplace Hamme, and a SECOND HUSBAND: the card names her partner as Petrus Blomme, not Edouard Dekeyser. She had divorced Edouard around 1923 and evidently remarried.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+
+#### `S18` — Marriage act — Alphonsus Van Bogaert × Rosalia Moerloos, Sint-Niklaas, 7 April 1909
+- **Kind:** record · <https://www.openarchieven.nl/abt:78f3eb53-a706-9e24-4a46-4203498072a3>
+- **Collection:** Burgerlijke stand Sint-Niklaas, huwelijken 1909 (via Open Archives)
+- **Yielded:** Confirms Carolus Ludovicus Van Bogaert x Maria Ludovica Martinet as a couple from a civil act — they are named as the bridegroom's parents — and reveals a son, Alphonsus Van Bogaert, who is a brother of Maria Magdalena and not in the tree. The bride's parents are given as Vitalis Moerloos x Nathalia Van Acker.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
 
 ### Familiekunde Vlaanderen — dataindexen (indices en klappers)
 

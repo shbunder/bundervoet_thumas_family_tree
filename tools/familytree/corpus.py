@@ -171,7 +171,7 @@ def _person_name(p: dict) -> tuple[str, str, str]:
 
 def _normalise_person(p: dict, event_year: int | None) -> Mention:
     given, surname, name = _person_name(p)
-    age_raw = (p.get("Age") or {}).get("PersonAgeYears")
+    age_raw = _text((p.get("Age") or {}).get("PersonAgeYears"))
     try:
         age = int(age_raw) if age_raw is not None else None
     except (TypeError, ValueError):
@@ -185,9 +185,9 @@ def _normalise_person(p: dict, event_year: int | None) -> Mention:
         sex={"Man": "m", "Vrouw": "f"}.get(p.get("Gender")),
         birth=birth,
         birth_year=year_of(birth),
-        birth_place=(p.get("BirthPlace") or {}).get("Place"),
-        residence=(p.get("Residence") or {}).get("Place"),
-        occupation=p.get("Profession"),
+        birth_place=_text((p.get("BirthPlace") or {}).get("Place")),
+        residence=_text((p.get("Residence") or {}).get("Place")),
+        occupation=_text(p.get("Profession")),
         age=age,
     )
     # An age in an act is a birth year with error bars, and it is very often the only
