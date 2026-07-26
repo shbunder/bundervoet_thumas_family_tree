@@ -6,7 +6,6 @@ birth:
   date: 1914-10-11
   place: Oostende
 confidence: sup
-branch: Devriendt
 line: devriendt
 father: georgius_s
 mother: devos

@@ -10,7 +10,6 @@ death:
   place: Grez-Doiceau
 confidence: sup
 occupation: menuisier (carpenter)
-branch: Thumas
 line: thumas
 father: georges1_t
 mother: noel_t

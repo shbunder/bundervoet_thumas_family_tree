@@ -7,7 +7,6 @@ birth:
   place: Belsele
 confidence: sup
 occupation: huisvrouw (housewife)
-branch: Paelinck
 line: paelinck
 spouses:
   - id: joannesf_p

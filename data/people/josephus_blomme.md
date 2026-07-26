@@ -3,7 +3,6 @@ id: josephus_blomme
 name: Josephus Blomme
 surname: Blomme
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: mathilde_meseure

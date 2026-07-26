@@ -8,7 +8,6 @@ death:
   date: "1711"
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_sabbe
 mother: judoca_vandenberghe

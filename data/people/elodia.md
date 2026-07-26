@@ -9,7 +9,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: werkster (labourer)
-branch: Bundervoet
 line: bundervoet
 father: henricus_bostyn
 mother: judith_cappaert

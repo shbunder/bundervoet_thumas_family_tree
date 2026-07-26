@@ -6,7 +6,6 @@ birth:
   date: 1859-09-05
   place: Zaventem
 confidence: sup
-branch: Thumas
 line: thumas
 father: franciscus_pardon
 mother: anna_maria_bossin

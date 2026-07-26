@@ -5,7 +5,6 @@ surname: Wybau
 birth:
   date: ~1600
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: petrus_debaecke

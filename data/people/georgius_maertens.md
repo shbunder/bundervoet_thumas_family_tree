@@ -7,7 +7,6 @@ birth:
 death:
   date: "1693"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: joanna_leenaert

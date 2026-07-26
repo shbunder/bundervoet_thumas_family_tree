@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import re
 
-from .people import FIELDS, given_names, load_config, load_people, marriage_text  # noqa: F401
+from .people import given_names, load_config, load_people, marriage_text  # noqa: F401
 from .sources import load_sources
 
 MONTH_NUM = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
@@ -71,7 +71,7 @@ def marriage_of(s: dict) -> dict | None:
 def build():
     """Return ``(lines, report, problems)``. Nothing is written unless problems is empty."""
     config = load_config()
-    ids, meta, branches = config["roster"], config["meta"], config["branches"]
+    ids, meta = config["roster"], config["meta"]
     people = load_people(ids)
     report = {"unparsed_dates": [], "occupations": 0}
 
@@ -126,8 +126,7 @@ def build():
         p = people[pid]
         if p.get("sources"):
             return "; ".join(registry.get(s, s) for s in p["sources"])
-        fallback = branches.get(p.get("branch")) or meta["defaultSource"]
-        return registry.get(fallback, meta["defaultSource"])
+        return registry.get(meta["defaultSource"], meta["defaultSource"])
 
     source_xref: dict[str, str] = {}
     for pid in ids:

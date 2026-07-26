@@ -3,7 +3,6 @@ id: joannes_perquy
 name: Joannes Perquy
 surname: Perquy
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: agatha_stekelorum

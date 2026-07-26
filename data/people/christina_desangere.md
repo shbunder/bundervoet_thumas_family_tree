@@ -7,7 +7,6 @@ birth:
 death:
   date: 1610-02-01
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: simon_vandewalle_1565

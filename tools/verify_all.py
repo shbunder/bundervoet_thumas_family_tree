@@ -21,18 +21,14 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree.corpus import (  # noqa: E402
+from familytree.corpus import (
     corpus_exists, corpus_mentions, frequencies, normalise_key,
 )
-from familytree.match import (  # noqa: E402
+from familytree.match import (
     build_index, candidates_for, compare, from_mention, from_person,
 )
-from familytree.frontier import children_index  # noqa: E402
-from familytree.people import load_config, load_people  # noqa: E402
+from familytree.people import children_index, load_config, load_people
 
 
 def main() -> int:

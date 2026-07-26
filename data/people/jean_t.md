@@ -9,13 +9,14 @@ death:
   date: 1995-03-22
   place: Kraainem
 confidence: sup
-branch: Thumas
 line: thumas
 father: jbgeorgius
 mother: vandenbemden
 spouses:
   - id: crabbe
     name: Marie Louise Crabbé
+sources:
+  - tree-jswaelens
 ---
 
 DOCUMENTED (b. 23 Oct 1907, d. 22 Mar 1995, both in Kraainem; Geneanet, marcelcroon). He lived his whole life in Kraainem and is the strongly-supported grandfather of Thiery. The ONE remaining sealed link is Jean → François (Thiery’s father), whose 20th-century birth is behind the 100-year civil-registration privacy wall.

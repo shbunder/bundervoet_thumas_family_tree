@@ -3,7 +3,6 @@ id: reine_storms
 name: Reine Storms
 surname: Storms
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: louis_steenkiste

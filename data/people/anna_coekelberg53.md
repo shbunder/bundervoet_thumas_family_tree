@@ -6,7 +6,6 @@ birth:
   date: 1853-06-27
   place: Bertem
 confidence: sup
-branch: Thumas
 line: thumas
 father: jb_coekelberghs
 mother: anna_haesaerts

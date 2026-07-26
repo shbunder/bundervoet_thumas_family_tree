@@ -7,7 +7,6 @@ birth:
 death:
   date: "1746"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: egidius_degrande

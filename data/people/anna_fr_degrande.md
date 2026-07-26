@@ -7,7 +7,6 @@ birth:
 death:
   date: "1821"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: michael_degrande
 mother: brigitta_deblaere

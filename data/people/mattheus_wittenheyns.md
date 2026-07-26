@@ -8,7 +8,6 @@ death:
   date: ~1546
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: maria_deruwe

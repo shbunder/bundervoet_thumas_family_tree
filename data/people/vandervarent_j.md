@@ -3,7 +3,6 @@ id: vandervarent_j
 name: Joannes van der Varent
 surname: van der Varent
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: goossens

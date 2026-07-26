@@ -8,7 +8,6 @@ birth:
 sex: m
 confidence: sup
 occupation: polijster (polisher)
-branch: Thumas
 line: thumas
 father: jbbossin
 mother: maria_wolf

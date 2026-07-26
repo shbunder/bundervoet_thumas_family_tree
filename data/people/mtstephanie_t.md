@@ -8,7 +8,6 @@ birth:
   place: Grez-Doiceau
 sex: f
 confidence: sup
-branch: Thumas
 line: thumas
 father: georges2_t
 mother: joostens

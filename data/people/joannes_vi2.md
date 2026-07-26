@@ -9,7 +9,6 @@ death:
   date: 1933-11-13
   place: Stene
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: joannes_jos_vi
 mother: anna_gautiert

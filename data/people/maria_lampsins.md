@@ -8,7 +8,6 @@ birth:
 death:
   date: 1709-09-02
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: paulus_lampsins
 mother: clara_lampsins

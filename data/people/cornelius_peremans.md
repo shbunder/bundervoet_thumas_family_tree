@@ -4,7 +4,6 @@ name: Cornelius Peremans
 surname: Peremans
 sex: m
 confidence: sup
-branch: Thumas
 line: thumas
 father: egidius_peremans
 mother: joanna_verelst

@@ -6,7 +6,6 @@ death:
   date: 1837-03-06
   place: Zaventem
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: joanna_verelst

@@ -10,7 +10,6 @@ death:
   place: Grez-Doiceau
 confidence: sup
 occupation: bailli (bailiff) van Piétrebais
-branch: Thumas
 line: thumas
 spouses:
   - id: daix

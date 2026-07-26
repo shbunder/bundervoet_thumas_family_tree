@@ -9,7 +9,6 @@ death:
   date: "1992"
 confidence: doc
 nickname: Meme Lenie
-branch: Paelinck
 line: de-keyser
 father: eduardus_p
 mother: magdalena_vb

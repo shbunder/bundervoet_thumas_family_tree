@@ -8,7 +8,6 @@ death:
   date: "1744"
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: joannes_stockman
 mother: guillielma_dellaert

@@ -6,7 +6,6 @@ birth:
   date: 1896-12-25
   place: Sint-Stevens-Woluwe
 confidence: sup
-branch: Thumas
 line: thumas
 father: jbcoppens
 mother: jcseraphina_t

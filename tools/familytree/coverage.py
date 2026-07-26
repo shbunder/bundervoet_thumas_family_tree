@@ -27,8 +27,8 @@ from . import store
 from .corpus import Act, corpus_exists, load_corpus, normalise_key
 from .labels import refutations
 from .match import build_index, candidates_for, compare, from_mention, from_person
-from .people import ancestors_of, family_key
-from .frontier import children_index, generations
+from .frontier import generations
+from .people import ancestors_of, children_index, family_key
 
 # ---------- which act to fetch ----------
 

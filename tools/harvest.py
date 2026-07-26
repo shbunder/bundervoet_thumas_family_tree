@@ -61,16 +61,16 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree import store  # noqa: E402
-from familytree.a2a import read_acts  # noqa: E402
-from familytree.corpus import (  # noqa: E402
+from familytree import store
+from familytree.a2a import read_acts
+from familytree.corpus import (
     ACTS_DIR, HARVEST, MANIFEST, MENTIONS_DIR, load_manifest, mentions_held,
     reset_manifest_cache,
 )
-from familytree.frontier import frontier_rows  # noqa: E402
-from familytree.people import family_key, load_config, load_people  # noqa: E402
+from familytree.frontier import frontier_rows
+from familytree.people import (
+    family_key, load_config, load_people, surname_counts,
+)
 
 API = "https://api.openarch.nl/1.1"
 # Open Archives asks for a descriptive user-agent so they can get in touch, and
@@ -670,7 +670,7 @@ def cmd_place(args):
 def cmd_frontiers(args):
     """Harvest what the queue is actually asking for, rather than what someone thought
     of. A frontier's surname is exactly the axis the API filters on."""
-    rows = [r for r in frontier_rows()][: args.limit]
+    rows = frontier_rows()[: args.limit]
     print(f"Harvesting for the top {len(rows)} frontiers.\n")
     for r in rows:
         if not r.surname:
@@ -745,9 +745,11 @@ def cmd_replay(args):
     for h, how in sorted(todo, key=lambda r: order.get(r[1], 9)):
         q = h["query"]
         if how in ("bulk", "oai"):
-            fn = _bulk_one if how == "bulk" else cmd_oai
             ns = argparse.Namespace(archive=q["archive"], refresh=False, anyway=args.anyway)
-            fn(q["archive"], ns) if how == "bulk" else fn(ns)
+            if how == "bulk":
+                _bulk_one(q["archive"], ns)
+            else:
+                cmd_oai(ns)
         elif how == "surname":
             harvest(h["id"], f'Surname "{q["name"]}", replayed',
                     {k: v for k, v in q.items() if k != "via"},
@@ -829,12 +831,7 @@ def cmd_status(args):
     # list, and it is derived rather than kept by hand.
     people = load_people(load_config()["roster"])
     held = {h["id"] for h in manifest["harvests"]}
-    counts: dict[str, tuple[int, str]] = {}
-    for p in people.values():
-        if p.get("surname"):
-            key = family_key(p["surname"])
-            n, name = counts.get(key, (0, p["surname"]))
-            counts[key] = (n + 1, name)
+    counts = surname_counts(people)
     missing = {k: v for k, v in counts.items() if k not in held}
     if missing:
         print(f"\n  {len(missing)} of {len(counts)} surnames in the tree never harvested — largest families first:")

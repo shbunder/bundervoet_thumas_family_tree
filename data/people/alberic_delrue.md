@@ -4,7 +4,6 @@ name: Alberic Luciaan Delrue
 surname: Delrue
 sex: m
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 spouses:
   - id: paula_v

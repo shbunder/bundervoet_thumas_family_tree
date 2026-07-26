@@ -8,7 +8,6 @@ birth:
 death:
   date: "1809"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: petrus_b1727

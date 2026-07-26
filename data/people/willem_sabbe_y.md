@@ -5,7 +5,6 @@ surname: Sabbe
 birth:
   date: 1560..1569
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: willem_sabbe_o
 mother: magdalena_demeulemeester

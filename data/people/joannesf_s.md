@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: werkman (labourer)
-branch: Devriendt
 line: devriendt
 father: francl_s
 mother: morree

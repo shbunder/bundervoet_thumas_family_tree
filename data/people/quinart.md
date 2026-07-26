@@ -7,7 +7,6 @@ birth:
 death:
   date: "1855"
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: georgeslambert_t

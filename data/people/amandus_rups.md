@@ -5,7 +5,6 @@ surname: Rups
 death:
   date: "1657"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - name: (wife unrecorded, d. ~1649)

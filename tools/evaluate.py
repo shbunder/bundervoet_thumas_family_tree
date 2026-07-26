@@ -28,22 +28,18 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
-import sys
-from dataclasses import dataclass
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree import store  # noqa: E402
-from familytree.corpus import corpus_exists  # noqa: E402
-from familytree.frontier import children_index  # noqa: E402
-from familytree.match import compare, from_mention, from_person  # noqa: E402
-from familytree.people import ROOT, family_key, load_config, load_people  # noqa: E402
+from familytree import store
+from familytree.corpus import corpus_exists
+from familytree.match import compare, from_mention, from_person
+from familytree.people import (
+    ROOT, children_index, family_key, load_config, load_people,
+)
 
 # The reader lives in familytree/labels.py, not here. It was private to this file, which is
 # why nothing else could read the gold standard and the queues went on re-proposing what a
 # verifier had already refuted — see that module's opening note.
-from familytree.labels import BASES, LABELS, Label, read_labels, reset_cache  # noqa: E402,F401
+from familytree.labels import BASES, LABELS, Label, read_labels, reset_cache  # noqa: F401
 
 
 def cmd_label(args) -> int:

@@ -9,7 +9,6 @@ death:
   date: 1922-10-04
   place: Mariakerke
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: petrusjacobus_v
 mother: clementia_w

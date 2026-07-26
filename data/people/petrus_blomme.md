@@ -8,7 +8,6 @@ birth:
   place: Stene
 confidence: doc
 occupation: werkman
-branch: DeKeyser
 line: de-keyser
 father: josephus_blomme
 mother: mathilde_meseure

@@ -23,7 +23,7 @@ SITE = ROOT / "site"
 # The fields a person record may carry, in the order they are written.
 FIELDS = [
     "id", "name", "surname", "sex", "birth", "death", "confidence", "occupation",
-    "nickname", "branch", "line", "father", "mother", "spouses", "sources",
+    "nickname", "line", "father", "mother", "spouses", "sources",
 ]
 EVENT_FIELDS = ["date", "place"]
 # A marriage is an event too, so it is stored like one: `married` and `divorced` are
@@ -119,11 +119,22 @@ def point_year(date: str | None) -> int | None:
     return None
 
 
-# The youngest anyone in this material becomes a parent. Deliberately below what is
-# plausible rather than at it: the point is to catch a graft that is off by a GENERATION,
-# never to adjudicate an unusual but real life. `check_data._check_plausibility` had this
-# inline and `match.py` needed the same number, and two copies of a bound is how they drift.
+# The bounds a human life is held to. All four are deliberately looser than what is
+# plausible: the point is to catch a graft that is off by a GENERATION — the recurring
+# failure in this material, where a forename returns every second generation — and never
+# to adjudicate an unusual but real life.
+#
+# They live here because both readers need the same numbers. `match.py` vetoes on them and
+# `check_data._check_plausibility` warns on them, and each had its own copy: MIN_PARENT_AGE
+# was inline in the validator until it was hoisted, and MAX_LIFESPAN stayed behind in
+# `match.py` with the validator hardcoding 110 eleven lines below the import that would
+# have given it the name. Two copies of a bound is how they drift.
 MIN_PARENT_AGE = 13
+MAX_LIFESPAN = 110
+# A father can father a child until he dies; a mother cannot. Split, because a single
+# bound wide enough for both catches neither.
+MAX_MOTHER_AGE = 50
+MAX_FATHER_AGE = 75
 
 
 # How far an "about" year may be out, either way.
@@ -267,7 +278,6 @@ def load_config() -> dict:
         "meta": meta,
         # The explorer opens on the first root; a forest just has more of them.
         "root": meta["roots"][0],
-        "branches": _read_json(DATA / "branches.json")["branches"],
         "lineages": _read_json(DATA / "lineages.json")["lineages"],
         "site": site,
         "groups": site["groups"],
@@ -356,6 +366,37 @@ def family_key(surname: str | None) -> str:
 # ---------- what the tree contains ----------
 
 
+def children_index(people: dict) -> dict[str, list[str]]:
+    """parent id -> the ids of their children. Derived, like every downward view.
+
+    Here rather than in `frontier.py`, where it started: it is a fact about the records,
+    not about the queue, and five tools were importing the ranked-queue module to get it
+    while `check_data` and `census` each rebuilt it inline — with one of the two copies
+    quietly omitting the "parent exists" guard.
+    """
+    children: dict[str, list[str]] = {}
+    for pid, p in people.items():
+        for parent in (p.get("father"), p.get("mother")):
+            if parent and parent in people:
+                children.setdefault(parent, []).append(pid)
+    return children
+
+
+def surname_counts(people: dict) -> dict[str, tuple[int, str]]:
+    """family key -> (how many carry it, one spelling of it as written).
+
+    The key is folded so Bostyn and Bostin are one family; the spelling comes back with
+    it because every caller has to print something a person would recognise.
+    """
+    counts: dict[str, tuple[int, str]] = {}
+    for p in people.values():
+        if p.get("surname"):
+            key = family_key(p["surname"])
+            n, name = counts.get(key, (0, p["surname"]))
+            counts[key] = (n + 1, name)
+    return counts
+
+
 def ancestors_of(people: dict, pid: str) -> set[str]:
     """Everyone above someone in the tree. The person themselves is not in it."""
     seen: set[str] = set()
@@ -395,11 +436,7 @@ def census(people: dict, config: dict) -> dict:
         ancestors |= ancestors_of(people, root)
     ancestors -= set(roots)
 
-    children: dict[str, list[str]] = {}
-    for p in people.values():
-        for parent in (p.get("father"), p.get("mother")):
-            if parent:
-                children.setdefault(parent, []).append(p["id"])
+    children = children_index(people)
 
     # Blood is the roots, everyone above them, and everyone descended from any of
     # those — an ancestor's sibling's grandchild is a blood relative (objective 2).
@@ -461,7 +498,7 @@ def to_browser_record(p: dict) -> dict:
             out["order"] = sort_key(p["birth"].get("date"))
     if p.get("death"):
         out["died"] = event_text(p["death"])
-    for field in ("occupation", "nickname", "branch", "line", "father", "mother"):
+    for field in ("occupation", "nickname", "line", "father", "mother"):
         if p.get(field):
             out[field] = p[field]
     # The marriage fields are folded into one display line here, for the same reason

@@ -4,7 +4,6 @@ name: Joanna Loontjens
 surname: Loontjens
 sex: f
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: judocus_devriese

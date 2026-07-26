@@ -6,7 +6,6 @@ death:
   date: 1639-06-06
   place: Wingene
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: margaretha_vermeersch

@@ -6,7 +6,6 @@ birth:
   date: 1807-02-17
   place: Diksmuide
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: antonius_vincke
 mother: anne_peperstraete

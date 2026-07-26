@@ -9,7 +9,6 @@ death:
   date: 1921-02-11
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: florentinus_stroobandt
 mother: rosalia_caeckaert

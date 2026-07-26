@@ -10,7 +10,6 @@ death:
   place: Middelkerke
 confidence: sup
 occupation: hovenier (gardener)
-branch: Devriendt
 line: devriendt
 father: mattheus_ramon
 mother: jacoba_ossaert

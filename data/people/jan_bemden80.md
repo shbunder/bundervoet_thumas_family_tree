@@ -7,7 +7,6 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: sup
 occupation: fabriekwerker (factory worker)
-branch: Thumas
 line: thumas
 father: hendrik_vdb
 mother: coekelberghs

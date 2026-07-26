@@ -5,7 +5,6 @@ surname: Vandewalle
 death:
   date: "1658"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: simon_vandewalle_1565
 mother: christina_desangere

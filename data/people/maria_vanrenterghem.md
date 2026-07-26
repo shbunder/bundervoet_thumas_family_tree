@@ -5,7 +5,6 @@ surname: Van Renterghem
 birth:
   date: ~1610
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: judocus_vanrenterghem
 mother: appolonia_vandewoestijne

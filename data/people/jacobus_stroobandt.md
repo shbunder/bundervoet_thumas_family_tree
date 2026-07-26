@@ -10,7 +10,6 @@ death:
   place: Oostkamp
 confidence: sup
 occupation: schoenmaker (shoemaker)
-branch: Bundervoet
 line: bostyn-cappaert
 father: adrianus_stroobandt
 mother: anna_m_vanacker

@@ -6,7 +6,6 @@ birth:
   date: 1642-01-29
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: michael_rups
 mother: maria_vanrenterghem

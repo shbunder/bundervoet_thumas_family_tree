@@ -8,7 +8,6 @@ death:
   date: 1737-02-05
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: simon_sabbe
 mother: joanna_rotsaert_sabbe

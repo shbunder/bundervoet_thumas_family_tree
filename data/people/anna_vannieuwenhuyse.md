@@ -7,7 +7,6 @@ birth:
 death:
   date: "1722"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_vannieuwenhuyse
 mother: jacoba_monballiu

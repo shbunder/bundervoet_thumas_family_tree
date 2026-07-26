@@ -8,7 +8,6 @@ birth:
 death:
   date: 1702-01-19
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_vandewalle
 mother: francisca_vanhoutte

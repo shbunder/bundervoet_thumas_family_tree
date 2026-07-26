@@ -8,7 +8,6 @@ birth:
 death:
   date: <1748
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: andreas_v
 mother: pluvier

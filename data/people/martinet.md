@@ -7,7 +7,6 @@ birth:
 death:
   date: "1911"
 confidence: sup
-branch: Paelinck
 line: paelinck
 spouses:
   - id: carolus_vb

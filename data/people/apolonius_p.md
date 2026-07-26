@@ -9,7 +9,6 @@ death:
   date: 1836-09-22
   place: Laarne
 confidence: sup
-branch: Paelinck
 line: paelinck
 father: livinus2_p
 mother: petronilla_vk

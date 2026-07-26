@@ -60,7 +60,6 @@ FamilyTree.createSearch = function ({ people }) {
     { key: 'spouse', weight: 35 },
     { key: 'occupation', weight: 30 },
     { key: 'nickname', weight: 30 },
-    { key: 'branch', weight: 20 },
     { key: 'note', weight: 10 },
     { key: 'source', weight: 5 },
   ];

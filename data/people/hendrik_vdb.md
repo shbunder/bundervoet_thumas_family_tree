@@ -10,7 +10,6 @@ death:
   place: Kraainem
 confidence: sup
 occupation: dienstbode (servant)
-branch: Thumas
 line: thumas
 father: jb_vandenbemden
 mother: elisabeth_langes

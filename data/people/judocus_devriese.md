@@ -7,7 +7,6 @@ birth:
 death:
   date: "1684"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: michael_devriese_o
 mother: judoca_scherrens

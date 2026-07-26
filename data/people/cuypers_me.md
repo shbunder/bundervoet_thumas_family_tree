@@ -4,7 +4,6 @@ name: Maria Elisabeth Cuypers
 surname: Cuypers
 sex: f
 confidence: sup
-branch: Thumas
 line: thumas
 father: cuypers_ae
 mother: dehose

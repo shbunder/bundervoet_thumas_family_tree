@@ -8,7 +8,6 @@ death:
   date: "1860"
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: philippus
 mother: adriaenssens

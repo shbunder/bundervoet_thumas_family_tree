@@ -9,7 +9,6 @@ death:
   date: 1750-05-10
   place: Leuven
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: antoine_t

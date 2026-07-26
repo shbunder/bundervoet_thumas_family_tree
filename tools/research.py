@@ -22,19 +22,18 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree import sources as reg  # noqa: E402
-from familytree import store  # noqa: E402
-from familytree.corpus import corpus_exists, load_corpus, load_manifest  # noqa: E402
-from familytree.coverage import (  # noqa: E402
+from familytree import sources as reg
+from familytree import store
+from familytree.corpus import corpus_exists, load_corpus, load_manifest
+from familytree.coverage import (
     act_coverage, greedy_cover, missing_children, pedigree_collapse, surname_clusters,
     tree_components,
 )
-from familytree.frontier import frontier_rows  # noqa: E402
-from familytree.people import ROOT, family_key, load_artifacts, load_config, load_people  # noqa: E402
+from familytree.frontier import frontier_rows
+from familytree.people import (
+    ROOT, load_artifacts, load_config, load_people, surname_counts,
+)
 
 LOG_FIELDS = ("found", "why", "scope", "url", "artifact", "note")
 
@@ -359,12 +358,7 @@ def cmd_components(args):
 
 
 def _largest_surname(people):
-    counts: dict[str, tuple[int, str]] = {}
-    for p in people.values():
-        if p.get("surname"):
-            key = family_key(p["surname"])
-            n, name = counts.get(key, (0, p["surname"]))
-            counts[key] = (n + 1, name)
+    counts = surname_counts(people)
     return max(counts.values(), key=lambda v: v[0])[1] if counts else ""
 
 

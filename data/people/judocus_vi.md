@@ -9,7 +9,6 @@ death:
   date: 1832-04-19
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: victoria_engelsen

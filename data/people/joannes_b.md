@@ -9,7 +9,6 @@ death:
   date: 1760-11-07
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: joannes_b1637
 mother: joanna_verbrugghe

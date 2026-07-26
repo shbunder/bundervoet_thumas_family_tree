@@ -5,7 +5,6 @@ surname: Demeulemeester
 birth:
   date: 1530..1539
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: michiel_demeulemeester
 spouses:

@@ -9,7 +9,6 @@ death:
   place: Evergem
 confidence: sup
 occupation: farmer, innkeeper, shopkeeper
-branch: Bundervoet
 line: bundervoet
 father: judocus
 mother: roegiers

@@ -7,7 +7,6 @@ birth:
 death:
   date: "1659"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: clara_lampsins

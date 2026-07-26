@@ -10,7 +10,6 @@ death:
   place: Oostkamp
 confidence: sup
 occupation: herbergier (innkeeper)
-branch: Bundervoet
 line: bostyn-cappaert
 father: guillielmus_stroobandt
 mother: clara_vansieleghem

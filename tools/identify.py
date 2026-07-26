@@ -21,17 +21,14 @@ from __future__ import annotations
 
 import argparse
 import re
-import sys
 import unicodedata
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree.match import (  # noqa: E402
+from familytree.match import (
     Candidate, build_index, candidates_for, compare, from_person, phonetic,
 )
-from familytree.frontier import children_index  # noqa: E402
-from familytree.people import PEOPLE_DIR, family_key, load_config, load_people  # noqa: E402
+from familytree.people import (
+    PEOPLE_DIR, children_index, family_key, load_config, load_people,
+)
 
 
 def candidate_from_args(args) -> Candidate:

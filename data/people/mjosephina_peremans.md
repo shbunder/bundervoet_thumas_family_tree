@@ -4,7 +4,6 @@ name: Maria Josephina Peremans
 surname: Peremans
 sex: f
 confidence: sup
-branch: Thumas
 line: thumas
 father: egidius_peremans
 mother: joanna_verelst

@@ -4,7 +4,6 @@ name: Ludovicus Franciscus Schalandryn
 surname: Schalandryn
 occupation: werkman (labourer)
 confidence: doc
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: mathilde_standaert

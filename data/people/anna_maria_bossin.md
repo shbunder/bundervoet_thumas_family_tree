@@ -7,7 +7,6 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: sup
 occupation: dagloonster (day labourer)
-branch: Thumas
 line: thumas
 father: arnoldus_bossin
 mother: elisabeth_deyn

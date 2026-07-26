@@ -5,7 +5,6 @@ surname: De Baecke
 birth:
   date: ~1600
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: margaretha_wybau

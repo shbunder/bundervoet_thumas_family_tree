@@ -7,7 +7,6 @@ birth:
 death:
   date: "1706"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: egidia_damman

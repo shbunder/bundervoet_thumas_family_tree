@@ -4,7 +4,6 @@ name: Anna Anastasia Norysse
 surname: Norysse
 sex: f
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: mattheus_ramon

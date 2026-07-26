@@ -9,7 +9,6 @@ death:
   date: 1767-12-02
   place: Zedelgem (Loppem)
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: engelbertus_vanmaele
 mother: judoca_maertens

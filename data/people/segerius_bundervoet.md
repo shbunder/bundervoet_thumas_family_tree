@@ -8,7 +8,6 @@ death:
   date: 1669-06-16
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: livinus_bundervoet
 mother: elisabeth_nn

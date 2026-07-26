@@ -6,7 +6,6 @@ birth:
   date: 1906-08-11
   place: Sint-Stevens-Woluwe
 confidence: sup
-branch: Thumas
 line: thumas
 father: coenraets_f
 mother: henrica_thumas

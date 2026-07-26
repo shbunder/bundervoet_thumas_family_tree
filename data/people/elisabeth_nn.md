@@ -3,7 +3,6 @@ id: elisabeth_nn
 name: Elisabeth NN
 sex: f
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: livinus_bundervoet

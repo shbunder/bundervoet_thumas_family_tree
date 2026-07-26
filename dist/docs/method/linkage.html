@@ -520,6 +520,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#the-prefix-key-strips-the-particle-and-its-length-adapts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The prefix key strips the particle, and its length adapts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#flemish-phonetics" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -624,6 +635,17 @@
     <span class="md-ellipsis">
       
         Every veto reads what a date rules out, never what it says
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-veto-rule-lives-in-three-places-and-that-is-a-cost-being-paid-on-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The veto rule lives in three places, and that is a cost being paid on purpose
       
     </span>
   </a>
@@ -1020,6 +1042,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#the-prefix-key-strips-the-particle-and-its-length-adapts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The prefix key strips the particle, and its length adapts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#flemish-phonetics" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1130,6 +1163,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#the-veto-rule-lives-in-three-places-and-that-is-a-cost-being-paid-on-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The veto rule lives in three places, and that is a cost being paid on purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1186,13 +1230,67 @@ compare only inside the groups.</p>
 phonetic key misses <em>Vanstechele</em> against <em>Vanstechelman</em>; a date key misses an undated
 record.</p>
 <div class="highlight"><pre><span></span><code><span class="n">p</span><span class="p">:</span><span class="o">&lt;</span><span class="n">phonetic</span> <span class="n">surname</span><span class="o">&gt;</span>                  <span class="c1"># the main pass</span>
-<span class="n">x</span><span class="p">:</span><span class="o">&lt;</span><span class="n">phonetic</span> <span class="n">surname</span><span class="p">,</span> <span class="n">first</span> <span class="mi">6</span> <span class="n">chars</span><span class="o">&gt;</span>   <span class="c1"># truncated and extended forms</span>
+<span class="n">x</span><span class="p">:</span><span class="o">&lt;</span><span class="n">phonetic</span> <span class="n">surname</span> <span class="n">STEM</span><span class="p">,</span> <span class="mi">4</span> <span class="ow">or</span> <span class="mi">6</span><span class="o">&gt;</span>     <span class="c1"># truncated and extended forms — see below</span>
 <span class="n">pd</span><span class="p">:</span><span class="o">&lt;</span><span class="n">phonetic</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">birth</span> <span class="n">decade</span><span class="o">&gt;</span>          <span class="c1"># tightened by date</span>
 <span class="n">pp</span><span class="p">:</span><span class="o">&lt;</span><span class="n">phonetic</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">place</span><span class="o">&gt;</span>                 <span class="c1"># tightened by place</span>
 <span class="n">g</span><span class="p">:</span><span class="o">&lt;</span><span class="n">first</span> <span class="n">forename</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">birth</span> <span class="n">decade</span><span class="o">&gt;</span>     <span class="c1"># survives a surname nobody spelled twice</span>
 </code></pre></div>
 <p>A pair agreeing on <strong>any</strong> key is compared; a pair agreeing on none never is. That is
 what keeps this off the O(n²) curve as the corpus grows.</p>
+<h3 id="the-prefix-key-strips-the-particle-and-its-length-adapts">The prefix key strips the particle, and its length adapts<a class="headerlink" href="#the-prefix-key-strips-the-particle-and-its-length-adapts" title="Permanent link">&para;</a></h3>
+<p>The <code>x:</code> key was <code>ph[:6]</code> — the first six characters of the phonetic surname — and in Flemish
+that is usually the <em>particle</em>, which says nothing about the family. A quarter of these
+surnames begin "Van den", "Van der" or "De", so the key put 150,611 mentions under <code>fanden</code>,
+137,463 under <code>defade</code> and 116,538 under <code>fander</code>: <strong>17% of a 1.7-million-act corpus in
+fourteen buckets.</strong> A block holding a sixth of the population is not blocking, it is a scan
+with extra steps, and it is what made <code>research.py acts</code> take seven minutes.</p>
+<p>Stripping the particle also <em>fixes</em> a case the old key missed. "Vandenberghe" and "Van
+Berghe" share no six-character prefix at all (<code>fanden</code> against <code>fanber</code>) and were never
+compared; on the stem both are <code>berge</code>.</p>
+<p>How much of the stem to keep depends on how long it is, and that took two measurements:</p>
+<ul>
+<li>a <strong>short</strong> stem needs generosity, because a single trailing character decides everything —
+  "Vandevelde" and "Vandevelden" have stems <code>felde</code> and <code>felden</code> and are one family, which
+  four characters bridges;</li>
+<li>a <strong>long</strong> stem needs none, and four characters actively harm it. "Wittenheyns" has the stem
+  <code>fitenheins</code>; cut to four it is <code>fite</code>, which is also what "De Witte" reduces to. A surname
+  with no exact match anywhere in the corpus was pulling 28,089 mentions of an unrelated
+  family, and throwing away six highly discriminating characters to do it.</li>
+</ul>
+<p>Measured against the 223 open frontiers, mentions pulled through this key:</p>
+<table>
+<thead>
+<tr>
+<th>scheme</th>
+<th>mentions pulled</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ph[:6]</code>, as it was</td>
+<td>2,542,433</td>
+<td>the particle ate the prefix</td>
+</tr>
+<tr>
+<td><code>stem[:4]</code></td>
+<td>1,282,568</td>
+<td>particle stripped, fixed length</td>
+</tr>
+<tr>
+<td><code>stem</code>, adaptive</td>
+<td><strong>941,505</strong></td>
+<td>this</td>
+</tr>
+</tbody>
+</table>
+<p>Both later schemes keep all seven variant pairs the key exists for; only the adaptive one
+<em>also</em> keeps Wittenheyns and De Witte apart. These are strict improvements rather than
+trades — nothing that was compared before is uncompared now.</p>
+<p>Below four characters the particle was most of the name and what remains cannot discriminate
+("Devos" would become <code>fos</code>), so those keep the whole phonetic form instead. The stem is used
+for <strong>blocking only</strong>: <code>family_key</code> and <code>phonetic</code> still decide whether two surnames <em>agree</em>,
+and this only decides which pairs are worth comparing at all.</p>
 <h3 id="flemish-phonetics">Flemish phonetics<a class="headerlink" href="#flemish-phonetics" title="Permanent link">&para;</a></h3>
 <p>Flemish orthography drifted for centuries, and the same family is spelled several ways
 within this tree's own records. The folding rules are deliberately <strong>conservative</strong>:</p>
@@ -1403,6 +1501,29 @@ all.</p>
 not belong in <code>raw</code>. A record whose only date was prose was, to the matcher, entirely
 undated — which is how a boy born 1901 was offered as a man whose birth was declared in
 1847, with nothing able to veto it.</p>
+<h3 id="the-veto-rule-lives-in-three-places-and-that-is-a-cost-being-paid-on-purpose">The veto rule lives in three places, and that is a cost being paid on purpose<a class="headerlink" href="#the-veto-rule-lives-in-three-places-and-that-is-a-cost-being-paid-on-purpose" title="Permanent link">&para;</a></h3>
+<p><code>match.compare</code> is the definition. But <code>store._veto_sql</code> re-states two of the vetoes — sex,
+and a stated birth year — as a SQL <code>WHERE</code> clause, and <code>check_data._check_plausibility</code>
+re-states the age and lifespan bounds as build-time warnings. Three copies of a rule is
+exactly what the rest of this project forbids, so it is worth being explicit about why these
+survive:</p>
+<ul>
+<li><strong>The SQL copy buys the corpus.</strong> A common Flemish surname now blocks against tens of
+  thousands of acts, and reading each one so the scorer could reject it on a birth year two
+  centuries out was most of the cost of a lookup. It is a <em>pre-filter</em>, conservative by
+  construction — an unknown sex, an absent year and an implied-rather-than-stated year all
+  survive it — so it can only ever be a performance change, never a decision. The equivalence
+  is pinned by a test against the scanning route rather than argued.</li>
+<li><strong>The validator copy asks a different question.</strong> <code>compare</code> asks "could these two records be
+  one person"; the validator asks "is this tree internally plausible", and it <em>warns</em> where the
+  scorer <em>vetoes</em>, because a record can be right and strange and no validator gets to overrule
+  a document.</li>
+</ul>
+<p>What keeps them from drifting is that the numbers themselves are not duplicated:
+<code>MIN_PARENT_AGE</code>, <code>MAX_LIFESPAN</code>, <code>MAX_MOTHER_AGE</code> and <code>MAX_FATHER_AGE</code> are defined once in
+<code>familytree/people.py</code> and imported by both readers. They were not always — the validator
+hardcoded <code>110</code> eleven lines below the import that would have named it — and that is the form
+this kind of duplication actually fails in.</p>
 <hr />
 <h2 id="what-this-does-not-do">What this does <em>not</em> do<a class="headerlink" href="#what-this-does-not-do" title="Permanent link">&para;</a></h2>
 <p>It does not decide. It ranks, and it vetoes. Everything surviving is a <strong>candidate for

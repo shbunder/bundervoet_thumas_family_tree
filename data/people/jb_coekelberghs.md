@@ -10,7 +10,6 @@ death:
   place: Bertem
 confidence: sup
 occupation: landbouwer (farmer)
-branch: Thumas
 line: thumas
 father: henricus_coekelberghs
 mother: petronella_elseviers

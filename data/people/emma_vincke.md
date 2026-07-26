@@ -9,7 +9,6 @@ death:
   date: 1974-10-06
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: lucien_vincke
 mother: ludovica_vanald

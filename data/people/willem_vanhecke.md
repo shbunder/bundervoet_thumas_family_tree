@@ -5,7 +5,6 @@ surname: van Hecke
 birth:
   date: ~1580
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - name: (wife unrecorded)

@@ -6,7 +6,6 @@ birth:
   date: 1856-11-19
   place: Sint-Stevens-Woluwe
 confidence: sup
-branch: Thumas
 line: thumas
 father: franciscus_pardon
 mother: anna_maria_bossin

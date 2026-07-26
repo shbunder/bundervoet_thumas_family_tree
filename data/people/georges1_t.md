@@ -10,7 +10,6 @@ death:
   place: Grez-Doiceau
 confidence: sup
 occupation: menuisier (schrijnwerker / carpenter)
-branch: Thumas
 line: thumas
 father: jeanlambert_t
 mother: leclercq_t

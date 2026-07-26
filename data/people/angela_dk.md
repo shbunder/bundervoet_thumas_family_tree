@@ -6,7 +6,6 @@ death:
   date: 1903-10-20
   place: Oostende
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 father: edouard_dk
 mother: louise_bocklandt

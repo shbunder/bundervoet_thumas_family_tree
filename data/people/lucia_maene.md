@@ -4,7 +4,6 @@ name: Lucia Amelia Maene
 surname: Maene
 sex: f
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 spouses:
   - id: leontius_v

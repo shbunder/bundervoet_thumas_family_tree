@@ -10,7 +10,6 @@ death:
   place: Grez-Doiceau
 confidence: sup
 occupation: marguillier & greffier (church warden / parish clerk)
-branch: Thumas
 line: thumas
 father: antoine_t
 mother: daix

@@ -7,7 +7,6 @@ birth:
 death:
   date: "1743"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: georgius_maertens
 mother: joanna_leenaert

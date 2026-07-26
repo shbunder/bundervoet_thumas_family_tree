@@ -7,7 +7,6 @@ birth:
   place: Kraainem
 confidence: sup
 occupation: zonder beroep (no occupation)
-branch: Thumas
 line: thumas
 spouses:
   - id: felix_bemden76

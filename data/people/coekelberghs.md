@@ -9,7 +9,6 @@ death:
   date: "1919"
 confidence: sup
 occupation: herbergierster (innkeeper)
-branch: Thumas
 line: thumas
 father: jb_coekelberghs
 mother: anna_haesaerts

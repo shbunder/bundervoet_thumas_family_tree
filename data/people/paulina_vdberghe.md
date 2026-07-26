@@ -6,7 +6,6 @@ birth:
   date: "1849"
   place: Hamme (Oost-Vlaanderen)
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 father: jan_van_bergen
 mother: ida_vermandel

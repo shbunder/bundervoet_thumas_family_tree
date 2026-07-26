@@ -10,7 +10,6 @@ death:
   place: Mariakerke
 confidence: sup
 occupation: herbergier (innkeeper)
-branch: Vanstechelman
 line: vanstechelman
 father: pieterjacobus_v
 mother: carolina_vh

@@ -9,7 +9,6 @@ death:
   date: 1821-07-12
   place: Lokeren
 confidence: sup
-branch: Paelinck
 line: paelinck
 spouses:
   - id: janbaptist_p

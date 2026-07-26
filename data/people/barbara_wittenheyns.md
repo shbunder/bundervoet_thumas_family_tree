@@ -5,7 +5,6 @@ surname: Wittenheyns
 birth:
   date: ~1535
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_wittenheyns
 mother: judoca_tjonck

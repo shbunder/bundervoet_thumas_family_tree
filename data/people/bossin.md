@@ -9,7 +9,6 @@ death:
   date: 1894-11-07
   place: Kraainem
 confidence: sup
-branch: Thumas
 line: thumas
 father: guilielmus_bossin
 mother: peremans

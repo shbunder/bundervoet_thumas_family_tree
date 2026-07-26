@@ -9,7 +9,6 @@ death:
   date: 1808-07-21
   place: Diksmuide
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: brigitte_wyllie

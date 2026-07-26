@@ -9,7 +9,6 @@ death:
   date: 1926-11-13
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: josephus_janssen
 mother: appolonia_huyghebaert

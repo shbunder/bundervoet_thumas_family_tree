@@ -6,7 +6,6 @@ death:
   date: 1652-12-31
   place: Oostkamp (Ruddervoorde)
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: willem_sabbe_y
 mother: clara_vandeputte

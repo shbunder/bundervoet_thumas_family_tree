@@ -5,7 +5,6 @@ surname: Vermeersch
 death:
   date: "1645"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: laurentius_willems

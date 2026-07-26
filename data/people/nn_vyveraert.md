@@ -4,7 +4,6 @@ name: NN Vyveraert
 surname: Vyveraert
 sex: f
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: petrus_bundervoet1560

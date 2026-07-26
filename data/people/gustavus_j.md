@@ -7,7 +7,6 @@ birth:
   date: 1899-05-19
   place: Oostende
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 father: edouard_dk
 mother: louise_bocklandt

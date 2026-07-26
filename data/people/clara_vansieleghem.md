@@ -7,7 +7,6 @@ birth:
 death:
   date: "1747"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: josephus_vansieleghem
 mother: maria_lampsins

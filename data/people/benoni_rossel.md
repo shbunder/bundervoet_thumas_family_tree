@@ -4,7 +4,6 @@ name: Benoni Joseph Rossel
 surname: Rossel
 sex: m
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: leontine_schreel

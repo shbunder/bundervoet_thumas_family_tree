@@ -4,7 +4,6 @@ name: Rosalia Moerloos
 surname: Moerloos
 sex: f
 confidence: sup
-branch: DeKeyser
 line: paelinck
 spouses:
   - id: alphonsus_vb

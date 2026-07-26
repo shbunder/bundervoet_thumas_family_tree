@@ -9,7 +9,6 @@ death:
   date: 2015-11-20
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: alphonsus
 mother: elodia

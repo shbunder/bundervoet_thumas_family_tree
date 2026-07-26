@@ -7,7 +7,6 @@ birth:
 death:
   date: "1870"
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: antonius_dominicus_bocklandt

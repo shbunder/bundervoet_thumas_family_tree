@@ -10,7 +10,6 @@ death:
   place: op zee (lost at sea)
 confidence: sup
 occupation: visser (fisherman)
-branch: Devriendt
 line: devriendt
 father: pierre_ramon
 mother: joanna_daneel

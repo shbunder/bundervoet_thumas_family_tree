@@ -8,7 +8,6 @@ birth:
 death:
   date: "1694"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: joannes_stockman

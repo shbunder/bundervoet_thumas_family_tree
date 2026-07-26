@@ -7,7 +7,6 @@ birth:
 death:
   date: ~1605
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - name: NN Vyveraert

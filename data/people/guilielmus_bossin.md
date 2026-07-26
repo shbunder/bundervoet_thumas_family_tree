@@ -9,7 +9,6 @@ death:
   date: "1888"
 confidence: sup
 occupation: landbouwer (farmer)
-branch: Thumas
 line: thumas
 father: arnoldus_bossin
 mother: elisabeth_deyn

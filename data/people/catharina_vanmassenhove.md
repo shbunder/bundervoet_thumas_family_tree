@@ -3,7 +3,6 @@ id: catharina_vanmassenhove
 name: Catharina Van Massenhove
 surname: Van Massenhove
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: nicolas_willaert

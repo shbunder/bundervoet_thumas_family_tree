@@ -9,12 +9,9 @@ compares them to the source records.
 from __future__ import annotations
 
 import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree.gedcom import build  # noqa: E402
-from familytree.people import ROOT, load_config  # noqa: E402
+from familytree.gedcom import build
+from familytree.people import ROOT, load_config
 
 OUT = ROOT / "exports" / "family-tree.ged"
 

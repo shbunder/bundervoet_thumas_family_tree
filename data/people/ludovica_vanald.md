@@ -8,7 +8,6 @@ birth:
 death:
   date: "1914"
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: carolus_vanald
 mother: eugenia_dutreeuw

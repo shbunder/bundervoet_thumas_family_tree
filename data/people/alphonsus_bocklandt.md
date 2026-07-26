@@ -6,7 +6,6 @@ death:
   date: 1892-10-26
   place: Oostende
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 father: edouard_bocklandt
 mother: marie_vanbergen

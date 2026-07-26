@@ -8,7 +8,6 @@ birth:
 death:
   date: "1809"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: jacobus_stroobandt

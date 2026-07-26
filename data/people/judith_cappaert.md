@@ -7,7 +7,6 @@ birth:
 death:
   date: "1944"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: carel_cappaert
 mother: juliana_stroobandt

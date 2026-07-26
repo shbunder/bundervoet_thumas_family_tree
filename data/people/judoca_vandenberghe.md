@@ -8,7 +8,6 @@ death:
   date: 1664-09-02
   place: Brugge (Lissewege)
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: carolus_vandenberghe
 spouses:

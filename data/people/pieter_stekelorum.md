@@ -3,7 +3,6 @@ id: pieter_stekelorum
 name: Pieter Stekelorum
 surname: Stekelorum
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: helena_denijs

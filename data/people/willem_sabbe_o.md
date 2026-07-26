@@ -10,7 +10,6 @@ death:
   place: Wielsbeke (Ooigem)
 confidence: sup
 occupation: landbouwer (farmer)
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_sabbe_1504
 spouses:

@@ -7,7 +7,6 @@ death:
   date: "1750"
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: joannes_b

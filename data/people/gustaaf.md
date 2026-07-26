@@ -6,7 +6,6 @@ birth:
   date: 1920..1929
   place: Oostende
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 father: jerome_dk
 mother: leonie_p

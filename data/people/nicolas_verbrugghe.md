@@ -3,7 +3,6 @@ id: nicolas_verbrugghe
 name: Nicolas Verbrugghe
 surname: Verbrugghe
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - name: (wife unrecorded)

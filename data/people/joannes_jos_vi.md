@@ -9,7 +9,6 @@ death:
   date: 1861-11-06
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: judocus_vi
 mother: victoria_engelsen

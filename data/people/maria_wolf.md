@@ -4,7 +4,6 @@ name: Maria Wolf
 surname: Wolf
 confidence: sup
 occupation: herbergierster (innkeeper)
-branch: Thumas
 line: thumas
 spouses:
   - id: jbbossin

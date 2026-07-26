@@ -7,7 +7,6 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: sup
 occupation: fabriekwerkster (factory worker)
-branch: Thumas
 line: thumas
 spouses:
   - id: jan_bemden80

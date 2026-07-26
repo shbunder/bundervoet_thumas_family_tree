@@ -7,7 +7,6 @@ birth:
 death:
   date: "1683"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: paulus_lampsins

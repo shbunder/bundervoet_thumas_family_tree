@@ -9,7 +9,6 @@ death:
   date: 1809-10-22
   place: Zevekote
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: andreasandries_v
 mother: boxoens

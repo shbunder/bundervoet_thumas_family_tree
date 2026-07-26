@@ -6,7 +6,6 @@ birth:
   date: 1781-11-09
   place: Diksmuide
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: ludovica_ellebout

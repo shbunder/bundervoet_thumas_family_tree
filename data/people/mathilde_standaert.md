@@ -4,7 +4,6 @@ name: Mathilde Standaert
 surname: Standaert
 occupation: huishoudster (housekeeper)
 confidence: doc
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: ludovicus_schal

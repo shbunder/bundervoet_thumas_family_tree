@@ -6,7 +6,6 @@ birth:
   date: 1858-01-15
   place: Bertem
 confidence: sup
-branch: Thumas
 line: thumas
 father: jb_coekelberghs
 sources:

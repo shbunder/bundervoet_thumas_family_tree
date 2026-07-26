@@ -10,7 +10,6 @@ death:
   place: Mariakerke
 confidence: sup
 occupation: metser (mason)
-branch: Vanstechelman
 line: vanstechelman
 father: felix_v
 mother: sophiavdb

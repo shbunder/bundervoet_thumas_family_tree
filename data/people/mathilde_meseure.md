@@ -6,7 +6,6 @@ death:
   date: 1922-07-21
   place: Oostende
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: josephus_blomme

@@ -8,7 +8,6 @@ death:
   date: "1781"
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_keirsebilck_1697
 mother: adriana_devriese

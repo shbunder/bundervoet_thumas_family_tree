@@ -6,7 +6,6 @@ death:
   date: 1875-01-05
   place: Sint-Stevens-Woluwe
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: coenraets_sr

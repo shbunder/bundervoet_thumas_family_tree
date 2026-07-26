@@ -6,7 +6,6 @@ birth:
   date: ~1813
 sex: m
 confidence: sup
-branch: Thumas
 line: thumas
 father: vandervarent_j
 mother: goossens

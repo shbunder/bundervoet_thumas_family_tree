@@ -5,7 +5,6 @@ surname: Damman
 death:
   date: "1676"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: martinus_degrande

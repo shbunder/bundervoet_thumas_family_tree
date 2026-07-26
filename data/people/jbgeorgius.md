@@ -10,7 +10,6 @@ death:
   place: Brussel
 confidence: sup
 occupation: fabriekwerker & gemeenteschepen (factory worker & alderman)
-branch: Thumas
 line: thumas
 father: georges_cj
 mother: bossin

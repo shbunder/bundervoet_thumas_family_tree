@@ -7,7 +7,6 @@ birth:
 death:
   date: "1820"
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: daniel_bocklandt

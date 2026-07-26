@@ -7,7 +7,6 @@ birth:
 death:
   date: "1752"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_vanmaele
 mother: jacoba_vanalledewerelt

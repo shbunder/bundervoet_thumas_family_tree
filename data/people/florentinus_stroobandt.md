@@ -8,7 +8,6 @@ death:
   date: 1876-03-04
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: jacobus_stroobandt
 mother: joanna_keirsebilck

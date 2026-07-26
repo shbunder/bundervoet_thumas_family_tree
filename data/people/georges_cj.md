@@ -10,7 +10,6 @@ death:
   place: Sint-Stevens-Woluwe
 confidence: sup
 occupation: landbouwer & herbergier (farmer & innkeeper)
-branch: Thumas
 line: thumas
 father: georges2_t
 mother: joostens

@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: werkman / meestergast
-branch: Bundervoet
 line: bundervoet
 father: bernardus
 mother: goethals

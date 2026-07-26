@@ -5,7 +5,6 @@ surname: Vincke
 birth:
   date: 1770..1779
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: anne_peperstraete

@@ -7,7 +7,6 @@ birth:
   place: Diksmuide
 confidence: sup
 occupation: metserdiener (mason's assistant)
-branch: Bundervoet
 line: van-iseghem
 father: engel_antonius_vincke
 mother: virginia_leynseele

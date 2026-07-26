@@ -7,7 +7,6 @@ birth:
 death:
   date: "1703"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: georgius_maertens

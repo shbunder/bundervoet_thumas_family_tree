@@ -8,7 +8,6 @@ death:
   date: "1807"
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: mauritius_stroobandt
 mother: barbara_debaecke

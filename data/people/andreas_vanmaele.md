@@ -5,7 +5,6 @@ surname: Van Maele
 death:
   date: "1669"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: catharina_willems

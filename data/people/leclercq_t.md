@@ -9,7 +9,6 @@ death:
   date: 1786-04-14
   place: Grez-Doiceau
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: jeanlambert_t

@@ -10,7 +10,6 @@ death:
   place: Hamme (Oost-Vlaanderen)
 confidence: doc
 occupation: arbeidster (labourer)
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: jan_van_bergen

@@ -28,11 +28,12 @@ from dataclasses import dataclass, field
 from functools import lru_cache
 
 from .corpus import (
-    Frequencies, Mention, frequencies, normalise_key, population, stated_kin,
+    Frequencies, Mention, frequencies, given_tokens, normalise_key, population, stated_kin,
     surname_population_count,
 )
 from .people import (
-    DAY, MIN_PARENT_AGE, family_key, given_names, point_year, year_of, year_span,
+    DAY, MAX_LIFESPAN, MIN_PARENT_AGE, family_key, given_names, load_forenames, point_year,
+    year_of, year_span,
 )
 
 # ---------- phonetics ----------
@@ -126,22 +127,10 @@ _KIN_BUCKET = {
 }
 
 
-# Particles and placeholders are not forenames, and treating them as ones manufactures
-# agreement out of nothing: "van" is a token in a large share of Flemish names, so a
-# spouse recorded as "Catharina van Hecke" matched every "… Van Keymeulen" in the corpus
-# and scored it as a shared forename. "NN" is this project's marker for a name a record
-# never gave, which makes it the emptiest evidence there is.
-_NOT_A_FORENAME = frozenset({
-    "van", "de", "den", "der", "des", "ten", "ter", "het", "t", "d", "le", "la", "du",
-    "vande", "vanden", "vander", "vandc", "nn", "onbekend", "ux", "uxor",
-})
-
-
 def given_keys(text: str | None) -> frozenset[str]:
-    """The comparable forename tokens in a name. One definition, because a particle
-    slipping through here is indistinguishable from evidence downstream."""
-    return frozenset(g for g in (normalise_key(x) for x in (text or "").split())
-                     if g and g not in _NOT_A_FORENAME)
+    """The comparable forename tokens, as a set — comparison does not care about order.
+    `corpus.given_tokens` is the definition; this is the shape the scorer wants."""
+    return frozenset(given_tokens(text))
 
 
 # ---------- the same name in another language ----------
@@ -165,7 +154,6 @@ def _forename_groups() -> dict[str, str]:
     canonical form is prefixed by block so that two same-spelled names in different blocks
     still never unify.
     """
-    from .people import load_forenames
     out: dict[str, str] = {}
     for sex, groups in load_forenames().items():
         for group in groups:
@@ -341,43 +329,19 @@ def from_mention(m: Mention) -> Candidate:
 # ---------- blocking ----------
 
 
-# The particles, as they look AFTER phonetic() has run — v and w both fold to f, so "van"
-# is "fan" and "ver" is "fer" by the time this sees them.
+# The `x:` prefix key: particle stripped, then a length that adapts to what is left. Why —
+# the 17%-of-the-corpus-in-fourteen-buckets measurement, the Vandenberghe/Van Berghe case it
+# fixes, and the Wittenheyns/De Witte case that forced the adaptive length — is written up in
+# docs/method/linkage.md § "The prefix key strips the particle, and its length adapts".
 #
-# They are stripped before the prefix key is taken, because otherwise the prefix IS the
-# particle and carries no information about the family. A quarter of Flemish surnames begin
-# "Van den", "Van der" or "De", so `x:{ph[:6]}` put 150,611 mentions under `x:fanden`,
-# 137,463 under `x:defade` and 116,538 under `x:fander` — 17% of a 1.7-million-act corpus in
-# fourteen buckets. A block that holds a sixth of the population is not blocking; it is a
-# scan with extra steps, and it is what made `research.py acts` seven minutes.
-#
-# Stripping also FIXES a case the old key missed: "Vandenberghe" and "Van Berghe" share no
-# six-character prefix at all (`fanden` vs `fanber`) and were never compared. On the stem
-# they are both `berge`.
+# Particles as they look AFTER phonetic() has run: v and w both fold to f, so "van" is "fan"
+# and "ver" is "fer" by the time this sees them.
 _PARTICLE = re.compile(r"^(?:fanden|fander|fande|fan|des|den|der|de|ten|ter|fer|het|le|la|du|t)+")
-# Below this, the particle was most of the name and what is left cannot discriminate:
-# "Devos" would become "fos". Those keep the whole phonetic form instead.
+# Below this the particle was most of the name and the remainder cannot discriminate
+# ("Devos" would become "fos"), so those keep the whole phonetic form instead.
 _STEM_FLOOR = 4
-
-# How much of the stem the prefix key keeps — and it depends on how long the stem is, which
-# is the part that took two measurements to get right.
-#
-# A SHORT stem needs generosity, because that is where a single trailing character decides
-# everything: "Vandevelde" and "Vandevelden" have stems "felde" and "felden" and are one
-# family. Four characters bridges them.
-#
-# A LONG stem needs none, and four characters actively harm it. "Wittenheyns" has the stem
-# "fitenheins"; cut to four it becomes "fite", which is also what "De Witte" reduces to — so
-# a surname with no exact matches in the corpus at all was pulling 28,089 mentions of an
-# unrelated family, and throwing away six highly discriminating characters to do it.
-#
-# Measured against the 223 open frontiers, mentions pulled through this key:
-#   ph[:6], as it was     2,542,433     the particle ate the prefix
-#   stem[:4]              1,282,568     particle stripped, fixed length
-#   stem, adaptive          941,505     this
-# Both later schemes keep all seven variant pairs the key exists for; only the adaptive one
-# also keeps Wittenheyns and De Witte apart. Strict improvements, not trades — nothing that
-# was compared before is uncompared now.
+# A short stem needs generosity (Vandevelde/Vandevelden); a long one does not, and being
+# generous with it actively merges families.
 _SHORT_STEM = 6
 _PREFIX_SHORT, _PREFIX_LONG = 4, 6
 
@@ -413,8 +377,10 @@ def block_keys(c: Candidate) -> list[str]:
             keys.append(f"pd:{ph}:{c.birth_year // 10}")
         for place in c.places:
             keys.append(f"pp:{ph}:{normalise_key(place)}")
-    # The pass that survives a surname nobody spelled the same way twice.
-    givens = [g for g in (normalise_key(x) for x in (c.given or "").split()) if g]
+    # The pass that survives a surname nobody spelled the same way twice. On the FIRST
+    # token, which is why `given_tokens` returns a list — and why it drops particles, so
+    # this cannot key a whole family off "van".
+    givens = given_tokens(c.given)
     if givens and c.birth_year:
         keys.append(f"g:{givens[0]}:{c.birth_year // 10}")
     return list(dict.fromkeys(keys))
@@ -439,7 +405,6 @@ def candidates_for(c: Candidate, index: dict[str, list[Candidate]]) -> list[Cand
 
 # ---------- weights ----------
 MAX_BITS = 14.0  # a surname seen once is very strong evidence, not infinite evidence
-MAX_LIFESPAN = 110  # beyond this the pair is two people, whatever else agrees
 # An act can name someone long dead — a deceased parent, a grandparent — but not
 # indefinitely long. Generous on purpose: the point is to kill the case where an act
 # gives a participant no dates at all, so nothing else can veto, and a man born in 1665
@@ -759,12 +724,10 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
         if died[1] is not None and born[0] is not None and born[0] > died[1]:
             conflict.append("born after the other died")
             break
-    # If the pair were one person, that person lived this long. Kept generous on
-    # purpose — the point is to kill the grandfather-grafted-onto-grandson case, which
-    # recurs in this material because the forename is reused every second generation,
-    # and not to adjudicate anyone's actual longevity.
-    # The SHORTEST lifespan the two spans allow, so the veto only fires when even that is
-    # impossible: latest possible birth against earliest possible death.
+    # If the pair were one person, that person lived this long. On the SHORTEST lifespan
+    # the two spans allow, so the veto only fires when even that is impossible: latest
+    # possible birth against earliest possible death. Why the bound is generous is on
+    # MAX_LIFESPAN itself.
     for birth, death in ((a_birth, b_death), (b_birth, a_death)):
         if birth[1] is not None and death[0] is not None and death[0] - birth[1] > MAX_LIFESPAN:
             conflict.append(f"implied lifespan {death[0] - birth[1]} years")

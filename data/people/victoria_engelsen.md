@@ -9,7 +9,6 @@ death:
   date: 1849-09-08
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: judocus_vi

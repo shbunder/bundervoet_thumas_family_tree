@@ -8,7 +8,6 @@ death:
   date: "1898"
 confidence: sup
 occupation: metser (mason)
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: ida_vermandel

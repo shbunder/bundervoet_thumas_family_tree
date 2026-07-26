@@ -7,7 +7,6 @@ birth:
 death:
   date: "1729"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: hubert_devriese
 mother: joanna_vdoughstraete

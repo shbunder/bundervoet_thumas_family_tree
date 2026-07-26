@@ -7,7 +7,6 @@ birth:
 death:
   date: ~1653
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: rolandus_govaert
 mother: maria_vandenbussche

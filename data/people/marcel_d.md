@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: smid (blacksmith)
-branch: Devriendt
 line: devriendt
 father: camiel_d
 mother: declercq

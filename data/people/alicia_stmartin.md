@@ -4,7 +4,6 @@ name: Alicia Mathildis St Martin
 surname: St Martin
 sex: f
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 spouses:
   - id: henricus_e_v

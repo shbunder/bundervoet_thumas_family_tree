@@ -9,7 +9,6 @@ death:
   date: 1726-12-02
   place: Lochristi
 confidence: sup
-branch: Paelinck
 line: paelinck
 father: ludovicus_p
 mother: petronella_v

@@ -8,7 +8,6 @@ death:
   date: 1707-12-01
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: segerius_bundervoet
 mother: joanna_vanhecke

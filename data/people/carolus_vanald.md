@@ -9,7 +9,6 @@ death:
   date: 1853-08-14
   place: Diksmuide
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: antoine_vanald
 mother: brigitte_wyllie

@@ -10,7 +10,6 @@ death:
   place: Sint-Niklaas
 confidence: sup
 occupation: arbeider (labourer)
-branch: Paelinck
 line: paelinck
 spouses:
   - id: martinet

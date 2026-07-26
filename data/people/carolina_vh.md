@@ -9,7 +9,6 @@ death:
   date: 1809-10-11
   place: Zevekote
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 spouses:
   - id: pieterjacobus_v

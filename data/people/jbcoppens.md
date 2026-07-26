@@ -8,7 +8,6 @@ birth:
 sex: m
 confidence: sup
 occupation: metser (mason)
-branch: Thumas
 line: thumas
 father: hendrik_coppens
 mother: catharina_bossin

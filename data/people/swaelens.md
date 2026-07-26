@@ -3,7 +3,6 @@ id: swaelens
 name: Joannes Baptista Julianus Swaelens
 surname: Swaelens
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: ludovica_bossin

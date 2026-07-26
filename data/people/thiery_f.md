@@ -5,7 +5,6 @@ surname: Thumas
 birth:
   date: 1930..1939
 confidence: fam
-branch: Thumas
 line: thumas
 father: jean_t
 mother: crabbe

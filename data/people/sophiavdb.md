@@ -9,7 +9,6 @@ death:
   date: "1896"
   place: Oostende
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: christianus_vdb
 mother: delphina_vdb

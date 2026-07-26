@@ -7,7 +7,6 @@ death:
   raw: alive on 30 October 1838; death not known
 confidence: sup
 occupation: landbouwster (farmer)
-branch: Thumas
 line: thumas
 spouses:
   - id: henricus_coekelberghs

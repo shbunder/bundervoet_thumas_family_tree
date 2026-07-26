@@ -5,7 +5,6 @@ surname: Devos
 birth:
   date: "1896"
 confidence: sup
-branch: Devriendt
 line: devriendt
 father: petrus_devos
 mother: loncke
@@ -14,4 +13,6 @@ spouses:
     name: Georgius Antonius Julianus Smessaert
     married: 1919-04-26
     place: Oostende
+sources:
+  - tree-wernero
 ---

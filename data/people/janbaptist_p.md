@@ -10,7 +10,6 @@ death:
   place: Lokeren
 confidence: sup
 occupation: dagloner (day labourer)
-branch: Paelinck
 line: paelinck
 father: apolonius_p
 mother: christina_vm

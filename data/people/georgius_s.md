@@ -6,7 +6,6 @@ birth:
   date: 1894-10-11
   place: Oostende
 confidence: sup
-branch: Devriendt
 line: devriendt
 father: joannesf_s
 mother: ramon

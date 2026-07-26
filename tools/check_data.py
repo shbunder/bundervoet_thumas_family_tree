@@ -3,23 +3,24 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
+from dataclasses import dataclass, field
 from hashlib import sha256
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree import sources as reg  # noqa: E402
-from familytree import store  # noqa: E402
-from familytree.bundle import build_bundle  # noqa: E402
-from familytree.frontmatter import FrontmatterError  # noqa: E402
-from familytree.landing import stale_reason  # noqa: E402
-from familytree.match import build_index, candidates_for, compare, from_person  # noqa: E402
-from familytree.people import (  # noqa: E402
-    ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, MIN_PARENT_AGE, ROOT, SPOUSE_FIELDS,
-    SPOUSE_KINDS, given_names, is_approximate, is_valid_date, load_artifacts, load_config,
+from familytree import sources as reg
+from familytree import store
+from familytree.bundle import build_bundle
+from familytree.corpus import NOT_A_FORENAME, normalise_key
+from familytree.frontmatter import FrontmatterError
+from familytree.landing import stale_reason
+from familytree.match import build_index, candidates_for, compare, from_person
+from familytree.people import (
+    ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, MAX_FATHER_AGE, MAX_LIFESPAN,
+    MAX_MOTHER_AGE, MIN_PARENT_AGE, ROOT, SPOUSE_FIELDS, SPOUSE_KINDS, children_index,
+    given_names, is_approximate, is_valid_date, load_artifacts, load_config, load_forenames,
     load_person, point_year, sort_key,
 )
 
@@ -32,22 +33,40 @@ DATE_IN_PROSE = re.compile(
     re.I,
 )
 
-# The build runs this validator first, so it passes --skip-generated to avoid being
-# told the files it is about to write are out of date.
-SKIP_GENERATED = "--skip-generated" in sys.argv
 
-errors: list[str] = []
-warnings: list[str] = []
+@dataclass
+class Report:
+    """What the checks found, threaded through them rather than accumulated in a global.
+
+    It was two module-level lists and a bare `fail()`. That reads fine in a script, and it
+    quietly made the checks untestable: with nowhere to put a second run's findings, a test
+    could assert that a check passes but never that it FAILS. So the test written to pin the
+    cross-partition forename check reimplemented the check in its own body and asserted on
+    that — it would have passed with `_check_forenames` deleted. A check handed a fresh
+    Report can be asked what it says about a deliberately bad file.
+    """
+
+    errors: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+
+    def fail(self, m: str) -> None:
+        self.errors.append(m)
+
+    def warn(self, m: str) -> None:
+        self.warnings.append(m)
 
 
-def fail(m):
-    errors.append(m)
-
-
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    # The build runs this validator first, so it passes --skip-generated to avoid being
+    # told the files it is about to write are out of date.
+    parser.add_argument("--skip-generated", action="store_true",
+                        help="do not check that dist/ and index.html are up to date")
+    args = parser.parse_args(argv)
+    report = Report()
     config = load_config()
     ids, meta, root = config["roster"], config["meta"], config["root"]
-    branches, lineages, groups = config["branches"], config["lineages"], config["groups"]
+    lineages, groups = config["lineages"], config["groups"]
     group_keys = {g["key"] for g in groups}
     sites, pages = reg.load_sources()
     source_ids = {s["id"] for s in [*sites, *pages]}
@@ -58,27 +77,25 @@ def main() -> int:
         try:
             p = load_person(pid)
         except FrontmatterError as e:
-            fail(str(e))
+            report.fail(str(e))
             continue
         people[pid] = p
 
         if p.get("id") != pid:
-            fail(f"{pid}.md: \"id\" field says \"{p.get('id')}\"")
+            report.fail(f"{pid}.md: \"id\" field says \"{p.get('id')}\"")
         if not p.get("name"):
-            fail(f'{pid}.md: missing "name"')
+            report.fail(f'{pid}.md: missing "name"')
         # The surname is stated because it cannot be computed, so the one thing worth
         # checking is that it is really part of the name — a typo here would split a
         # family in two without anything else noticing.
         if p.get("surname") and p["surname"] not in p.get("name", ""):
-            fail(f"{pid}.md: surname \"{p['surname']}\" does not appear in name \"{p.get('name')}\"")
+            report.fail(f"{pid}.md: surname \"{p['surname']}\" does not appear in name \"{p.get('name')}\"")
         if p.get("confidence") not in confidence:
-            fail(f"{pid}.md: confidence \"{p.get('confidence')}\" is not one of {', '.join(sorted(confidence))}")
-        if p.get("branch") and p["branch"] not in branches:
-            fail(f"{pid}.md: branch \"{p['branch']}\" is not in data/branches.json")
+            report.fail(f"{pid}.md: confidence \"{p.get('confidence')}\" is not one of {', '.join(sorted(confidence))}")
         if p.get("line") and p["line"] not in group_keys:
-            fail(f"{pid}.md: line \"{p['line']}\" is not a group key in site/labels.json")
+            report.fail(f"{pid}.md: line \"{p['line']}\" is not a group key in site/labels.json")
         if "sex" in p and p["sex"] not in ("f", "m"):
-            fail(f"{pid}.md: sex \"{p['sex']}\" must be \"f\" or \"m\"")
+            report.fail(f"{pid}.md: sex \"{p['sex']}\" must be \"f\" or \"m\"")
 
         # A date is either in the grammar or explicitly marked raw. There is no third
         # option, because a half-parsed date is one that later gets read as a fact.
@@ -87,16 +104,16 @@ def main() -> int:
             if not e:
                 continue
             if not isinstance(e, dict):
-                fail(f'{pid}.md: "{ev}" must be a block with date/place')
+                report.fail(f'{pid}.md: "{ev}" must be a block with date/place')
                 continue
             for k in e:
                 if k not in EVENT_FIELDS and k != "raw":
-                    warnings.append(f'{pid}.md: {ev} has unknown field "{k}"')
+                    report.warn(f'{pid}.md: {ev} has unknown field "{k}"')
             if e.get("date") and not is_valid_date(e["date"]):
-                fail(f"{pid}.md: {ev}.date \"{e['date']}\" is not a valid date — "
+                report.fail(f"{pid}.md: {ev}.date \"{e['date']}\" is not a valid date — "
                      "use 1876-11-12, 1876-11, 1876, ~1682, <1727, >1900 or 1575..1587")
             if not e.get("date") and not e.get("raw"):
-                fail(f'{pid}.md: "{ev}" has neither a date nor a raw value')
+                report.fail(f'{pid}.md: "{ev}" has neither a date nor a raw value')
 
         # A citation is a link into research/sources.json, so a typo is caught here
         # rather than becoming a claim backed by a source that does not exist.
@@ -105,33 +122,33 @@ def main() -> int:
             listed = raw if isinstance(raw, list) else [raw]
             for sid in (x if isinstance(x, str) else x.get("id") for x in listed):
                 if sid not in source_ids:
-                    fail(f'{pid}.md: cites source "{sid}", which is not in research/sources.json')
+                    report.fail(f'{pid}.md: cites source "{sid}", which is not in research/sources.json')
         if "spouses" in p:
             if not isinstance(p["spouses"], list):
-                fail(f'{pid}.md: "spouses" must be a list')
+                report.fail(f'{pid}.md: "spouses" must be a list')
             else:
                 for i, s in enumerate(p["spouses"]):
                     if not s.get("name"):
-                        fail(f'{pid}.md: spouses[{i}] has no "name"')
+                        report.fail(f'{pid}.md: spouses[{i}] has no "name"')
                     for k in s:
                         if k not in SPOUSE_FIELDS:
-                            warnings.append(f'{pid}.md: spouses[{i}] unknown field "{k}"')
+                            report.warn(f'{pid}.md: spouses[{i}] unknown field "{k}"')
                     # A marriage is an event, so its dates go through the same grammar
                     # as a birth. Nothing here may be prose that later has to be parsed.
                     for field in ("married", "divorced"):
                         if s.get(field) and not is_valid_date(s[field]):
-                            fail(f'{pid}.md: spouses[{i}].{field} "{s[field]}" is not a valid date — '
+                            report.fail(f'{pid}.md: spouses[{i}].{field} "{s[field]}" is not a valid date — '
                                  "use 1876-11-12, 1876-11, 1876, ~1682, <1727, >1900 or 1575..1587")
                     if s.get("kind") and s["kind"] not in SPOUSE_KINDS:
-                        fail(f'{pid}.md: spouses[{i}].kind "{s["kind"]}" must be one of '
+                        report.fail(f'{pid}.md: spouses[{i}].kind "{s["kind"]}" must be one of '
                              f"{', '.join(SPOUSE_KINDS)}")
                     if s.get("divorced") and not s.get("married"):
-                        fail(f"{pid}.md: spouses[{i}] records a divorce but no marriage date")
+                        report.fail(f"{pid}.md: spouses[{i}] records a divorce but no marriage date")
                     if s.get("married") and s.get("divorced") and sort_key(s["divorced"]) < sort_key(s["married"]):
-                        fail(f"{pid}.md: spouses[{i}] divorced ({s['divorced']}) before "
+                        report.fail(f"{pid}.md: spouses[{i}] divorced ({s['divorced']}) before "
                              f"married ({s['married']})")
                     if s.get("detail") and DATE_IN_PROSE.search(s["detail"]):
-                        fail(f'{pid}.md: spouses[{i}].detail "{s["detail"]}" carries a date or a '
+                        report.fail(f'{pid}.md: spouses[{i}].detail "{s["detail"]}" carries a date or a '
                              'position in a sequence — use "married"/"divorced"/"place", or the '
                              "list order, which is what states the sequence")
                 # Oldest first, so the order carries the sequence and nothing has to
@@ -139,17 +156,17 @@ def main() -> int:
                 dated = [(i, sort_key(s["married"])) for i, s in enumerate(p["spouses"]) if s.get("married")]
                 for (i, a), (j, b) in zip(dated, dated[1:]):
                     if b < a:
-                        fail(f"{pid}.md: spouses are out of order — [{j}] ({p['spouses'][j]['married']}) "
+                        report.fail(f"{pid}.md: spouses are out of order — [{j}] ({p['spouses'][j]['married']}) "
                              f"is earlier than [{i}] ({p['spouses'][i]['married']}); oldest first")
         for k in p:
             if k not in FIELDS and k != "note":
-                warnings.append(f'{pid}.md: unknown field "{k}"')
+                report.warn(f'{pid}.md: unknown field "{k}"')
 
     # Parent links point at people who exist, and nobody is their own ancestor.
     for pid, p in people.items():
         for rel in ("father", "mother"):
             if p.get(rel) and p[rel] not in people:
-                fail(f"{pid}.md: {rel} \"{p[rel]}\" does not exist")
+                report.fail(f"{pid}.md: {rel} \"{p[rel]}\" does not exist")
 
     # Spouse links point at people who exist, and marriage is mutual: if A records B, B
     # records A. Without that, building the tree downwards silently loses branches — a
@@ -159,13 +176,13 @@ def main() -> int:
             if not s.get("id"):
                 continue
             if s["id"] not in people:
-                fail(f"{pid}.md: spouse id \"{s['id']}\" does not exist")
+                report.fail(f"{pid}.md: spouse id \"{s['id']}\" does not exist")
                 continue
             if s["id"] == pid:
-                fail(f"{pid}.md: is listed as their own spouse")
+                report.fail(f"{pid}.md: is listed as their own spouse")
             back = next((t for t in people[s["id"]].get("spouses") or [] if t.get("id") == pid), None)
             if back is None:
-                fail(f"{pid}.md: lists spouse \"{s['id']}\", but {s['id']}.md does not list \"{pid}\" back")
+                report.fail(f"{pid}.md: lists spouse \"{s['id']}\", but {s['id']}.md does not list \"{pid}\" back")
                 continue
             # One marriage, one set of facts. The link was already required to be
             # mutual; the facts were not, so the two records could — and did — give
@@ -176,7 +193,7 @@ def main() -> int:
                 if field == "kind":
                     mine, theirs = mine or "marriage", theirs or "marriage"
                 if mine != theirs:
-                    fail(f'{pid}.md and {s["id"]}.md disagree about their marriage: '
+                    report.fail(f'{pid}.md and {s["id"]}.md disagree about their marriage: '
                          f'{field} is "{mine}" here and "{theirs}" there')
 
     # A shared child is proof of a couple, so both parents must record the marriage.
@@ -188,7 +205,7 @@ def main() -> int:
             continue
         for a, b in ((p["father"], p["mother"]), (p["mother"], p["father"])):
             if not any(s.get("id") == b for s in people[a].get("spouses") or []):
-                fail(f'{a}.md: has a child ({pid}) with "{b}" but does not list them as a spouse')
+                report.fail(f'{a}.md: has a child ({pid}) with "{b}" but does not list them as a spouse')
 
     # Which children came from which marriage is already in the data — every child names
     # its own father and mother — so writing "mother of Segerius" into the marriage is a
@@ -206,7 +223,7 @@ def main() -> int:
             for kid in kids_of_couple.get(frozenset((pid, s["id"])), []):
                 named = [w for w in re.findall(r"\w{3,}", given_names(people[kid])) if w.lower() in words]
                 if named:
-                    fail(f'{pid}.md: spouses[{i}].detail names their own child ({kid}, "{named[0]}") — '
+                    report.fail(f'{pid}.md: spouses[{i}].detail names their own child ({kid}, "{named[0]}") — '
                          f"{kid}.md already records both parents, so this is a second copy of it; "
                          "put anything the fields cannot hold in the prose body instead")
 
@@ -217,7 +234,7 @@ def main() -> int:
             if not pid or pid in seen or pid not in people:
                 return
             if pid == start and seen:
-                fail(f"{start}.md: parent chain loops back to itself")
+                report.fail(f"{start}.md: parent chain loops back to itself")
                 return
             seen.add(pid)
             walk(people[pid].get("father"))
@@ -228,11 +245,12 @@ def main() -> int:
 
     # Config files only reference people who exist.
     if root not in people:
-        fail(f'meta.json: roots[0] "{root}" does not exist')
+        report.fail(f'meta.json: roots[0] "{root}" does not exist')
 
     def lineage_chain(lineage):
-        if lineage.get("chain"):
-            return lineage["chain"]
+        """Walked up from `head`, never written down. A `chain:` field used to be allowed
+        as an override and no lineage ever used one — a hand-kept copy of something the
+        father-links already say, which is the duplication the data model forbids."""
         out, seen, pid = [], set(), lineage.get("head")
         while pid and pid in people and pid not in seen:
             seen.add(pid)
@@ -242,30 +260,25 @@ def main() -> int:
 
     for lineage in lineages:
         if lineage.get("head") and lineage["head"] not in people:
-            fail(f"lineages.json ({lineage['key']}): head \"{lineage['head']}\" does not exist")
+            report.fail(f"lineages.json ({lineage['key']}): head \"{lineage['head']}\" does not exist")
         for pid in lineage_chain(lineage):
             if pid not in people:
-                fail(f"lineages.json ({lineage['key']}): \"{pid}\" does not exist")
+                report.fail(f"lineages.json ({lineage['key']}): \"{pid}\" does not exist")
     for g in groups:
         if not g.get("key") or not g.get("title"):
-            fail("site/labels.json: every group needs a key and a title")
-    _check_wording(config["site"])
+            report.fail("site/labels.json: every group needs a key and a title")
+    _check_wording(report, config["site"])
 
     roots = [r for r in meta["roots"] if r in people]
     for r in meta["roots"]:
         if r not in people:
-            fail(f'meta.json: roots entry "{r}" does not exist')
-    for b, sid in branches.items():
-        if sid not in source_ids:
-            fail(f'branches.json: "{b}" cites source "{sid}", which is not registered')
+            report.fail(f'meta.json: roots entry "{r}" does not exist')
+    if meta["defaultSource"] not in source_ids:
+        report.fail(f'meta.json: defaultSource "{meta["defaultSource"]}" is not registered')
 
     # Not fatal, but usually a mistake: a record connected to nothing. Marriage counts
     # as a connection, which is how a spouse with no children still belongs.
-    children_of: dict[str, list[str]] = {}
-    for pid, p in people.items():
-        for rel in ("father", "mother"):
-            if p.get(rel) in people:
-                children_of.setdefault(p[rel], []).append(pid)
+    children_of = children_index(people)
 
     def neighbours(pid):
         p = people[pid]
@@ -283,28 +296,28 @@ def main() -> int:
     for pid in ids:
         if pid in reachable or pid not in people:
             continue
-        warnings.append(
+        report.warn(
             f"{pid}.md: connected to nobody — no parents, children or spouse"
             if not neighbours(pid)
             else f"{pid}.md: not connected to any root in meta.json (add a root, or link them in)"
         )
 
-    _check_duplicates(people, children_of)
-    _check_plausibility(people, children_of)
-    _check_search_log(people, sites, pages)
-    _check_forenames()
-    _check_labels(people)
-    _check_artifacts(people, source_ids)
+    _check_duplicates(report, people, children_of)
+    _check_plausibility(report, people, children_of)
+    _check_search_log(report, sites, pages, people)
+    _check_forenames(report)
+    _check_labels(report, people)
+    _check_artifacts(report, people, source_ids)
 
     # The page loads dist/bundle.js, not the individual files, so a stale bundle is a
     # site silently showing old data. Catching it here means it cannot be committed:
     # the rule is that this validator is green before every commit.
-    if not SKIP_GENERATED:
+    if not args.skip_generated:
         bundle_path = ROOT / "dist" / "bundle.js"
         if not bundle_path.exists():
-            fail("dist/bundle.js is missing — run: uv run tools/build.py")
+            report.fail("dist/bundle.js is missing — run: uv run tools/build.py")
         elif bundle_path.read_text(encoding="utf-8") != build_bundle():
-            fail("dist/bundle.js is out of date with data/people/ — run: uv run tools/build.py")
+            report.fail("dist/bundle.js is out of date with data/people/ — run: uv run tools/build.py")
 
         # index.html states the size of the tree in prose, because it loads no
         # JavaScript and cannot count. That is the one number on the site that can go
@@ -314,18 +327,18 @@ def main() -> int:
         if landing.exists():
             stale = stale_reason(landing.read_text(encoding="utf-8"), people, config)
             if stale:
-                fail(stale)
+                report.fail(stale)
 
-    for w in warnings:
+    for w in report.warnings:
         print("warn  " + w, file=sys.stderr)
-    for e in errors:
+    for e in report.errors:
         print("error " + e, file=sys.stderr)
-    print(f"\n{len(errors)} error(s) in {len(ids)} people." if errors else
-          f"OK — {len(ids)} people, {len(branches)} branches, {len(lineages)} lineages, {len(groups)} index groups.")
-    return 1 if errors else 0
+    print(f"\n{len(report.errors)} error(s) in {len(ids)} people." if report.errors else
+          f"OK — {len(ids)} people, {len(lineages)} lineages, {len(groups)} index groups.")
+    return 1 if report.errors else 0
 
 
-def _check_wording(site):
+def _check_wording(report, site):
     """Every word the page shows, in every language it offers.
 
     A missing translation does not break anything — the i18n layer falls back to the
@@ -336,16 +349,16 @@ def _check_wording(site):
     """
     langs = [lang["code"] for lang in site.get("languages", [])]
     if not langs:
-        fail("site/labels.json: no languages declared")
+        report.fail("site/labels.json: no languages declared")
         return
 
     def every_language(entry, where):
         if not isinstance(entry, dict):
-            fail(f"site/labels.json: {where} is not a per-language object")
+            report.fail(f"site/labels.json: {where} is not a per-language object")
             return
         for code in langs:
             if not str(entry.get(code) or "").strip():
-                fail(f"site/labels.json: {where} has no {code} translation")
+                report.fail(f"site/labels.json: {where} has no {code} translation")
 
     every_language(site.get("footer"), "footer")
     for code, label in site.get("confidenceLabels", {}).items():
@@ -362,16 +375,16 @@ def _check_wording(site):
     kinship = {k: v for k, v in site.get("kinship", {}).items() if not k.startswith("_")}
     for code in langs:
         if code not in kinship:
-            fail(f"site/labels.json: kinship has no {code} vocabulary")
+            report.fail(f"site/labels.json: kinship has no {code} vocabulary")
     shapes = {code: set(v) for code, v in kinship.items()}
     if shapes:
         expected = set.union(*shapes.values())
         for code, keys in shapes.items():
             for missing in sorted(expected - keys):
-                fail(f"site/labels.json: kinship.{code} is missing \"{missing}\"")
+                report.fail(f"site/labels.json: kinship.{code} is missing \"{missing}\"")
 
 
-def _check_plausibility(people, children_of):
+def _check_plausibility(report, people, children_of):
     """Arithmetic on the links, which is how a wrong graft announces itself.
 
     A false parent link almost never looks wrong in the record — the names agree, that
@@ -397,9 +410,9 @@ def _check_plausibility(people, children_of):
         (born, born_slack), (died, died_slack) = dated(p, "birth"), dated(p, "death")
         slack = born_slack + died_slack
         if born and died and died < born - slack:
-            warnings.append(f"{pid}.md: dies {died} but is born {born}")
-        if born and died and died - born > 110 + slack:
-            warnings.append(f"{pid}.md: lifespan {died - born} years — check the pair is one person")
+            report.warn(f"{pid}.md: dies {died} but is born {born}")
+        if born and died and died - born > MAX_LIFESPAN + slack:
+            report.warn(f"{pid}.md: lifespan {died - born} years — check the pair is one person")
 
         for cid in children_of.get(pid, []):
             child_born, child_slack = dated(people[cid], "birth")
@@ -408,20 +421,18 @@ def _check_plausibility(people, children_of):
             age = child_born - born
             give = born_slack + child_slack
             is_mother = people[cid].get("mother") == pid
-            # A father can father a child until he dies; a mother cannot. Split, because
-            # a single bound wide enough for both catches neither.
-            upper = 50 if is_mother else 75
+            upper = MAX_MOTHER_AGE if is_mother else MAX_FATHER_AGE
             if age < MIN_PARENT_AGE - give or age > upper + give:
                 role = "mother" if is_mother else "father"
-                warnings.append(
+                report.warn(
                     f"{pid}.md: is {role} of {cid} at age {age} — a generation may be missing")
             # A father's child may be born after he dies; a mother's may not.
             if died and child_born > died + died_slack + child_slack + (0 if is_mother else 1):
-                warnings.append(
+                report.warn(
                     f"{pid}.md: {cid} is born {child_born}, after this parent dies {died}")
 
 
-def _check_duplicates(people, children_of):
+def _check_duplicates(report, people, children_of):
     """Two records for one person.
 
     At 302 people you can see it; at ten thousand, with Bostyn/Bostin and De Keyser/
@@ -465,23 +476,23 @@ def _check_duplicates(people, children_of):
             seen.add(pair)
             m = compare(c, other)
             if m.band == "strong" and "date" in m.classes:
-                warnings.append(
+                report.warn(
                     f"{c.ref}.md and {other.ref}.md may be the same person — {m.explain()}. "
                     f"Check with: uv run tools/identify.py --person {c.ref}"
                 )
 
 
-def _check_search_log(people, sites, pages):
+def _check_search_log(report, sites, pages, people):
     try:
         log = reg.load_log()
     except ValueError as e:
-        fail(str(e))
+        report.fail(str(e))
         return
     for problem in reg.registry_problems(sites, pages, log, people, load_artifacts()):
-        fail(problem)
+        report.fail(problem)
 
 
-def _check_forenames():
+def _check_forenames(report):
     """`data/forenames.json` — the names that are one name in another language.
 
     Errors, not warnings, unlike the label checks: a bad entry here silently changes what the
@@ -490,34 +501,31 @@ def _check_forenames():
     `corneille`, the French masculine Cornelius, which the first draft of the table also put
     into the feminine `cornelia` group.
     """
-    from familytree.corpus import normalise_key  # noqa: PLC0415
-    from familytree.match import _NOT_A_FORENAME  # noqa: PLC0415
-    from familytree.people import load_forenames  # noqa: PLC0415
     try:
         blocks = load_forenames()
     except FileNotFoundError:
-        return fail("data/forenames.json is missing")
+        return report.fail("data/forenames.json is missing")
     if set(blocks) != {"m", "f"}:
-        fail(f'data/forenames.json: blocks must be exactly "m" and "f", not {sorted(blocks)}')
+        report.fail(f'data/forenames.json: blocks must be exactly "m" and "f", not {sorted(blocks)}')
     where: dict[str, str] = {}
     for sex, groups in blocks.items():
         for group in groups:
             if len(group) < 2:
-                fail(f"data/forenames.json: {sex} group {group} has nothing to fold to")
+                report.fail(f"data/forenames.json: {sex} group {group} has nothing to fold to")
             for token in group:
                 if normalise_key(token) != token:
-                    fail(f'data/forenames.json: "{token}" is not normalised — '
+                    report.fail(f'data/forenames.json: "{token}" is not normalised — '
                          f'write it as "{normalise_key(token)}"')
-                if token in _NOT_A_FORENAME:
-                    fail(f'data/forenames.json: "{token}" is a particle, not a forename')
+                if token in NOT_A_FORENAME:
+                    report.fail(f'data/forenames.json: "{token}" is a particle, not a forename')
                 if token in where:
-                    fail(f'data/forenames.json: "{token}" appears in {where[token]} and in '
+                    report.fail(f'data/forenames.json: "{token}" appears in {where[token]} and in '
                          f"{sex} {group[0]} — a name folds one way or it folds ambiguously, "
                          "and across the sexes it merges a brother with his sister")
                 where[token] = f"{sex} {group[0]}"
 
 
-def _check_labels(people):
+def _check_labels(report, people):
     """The gold standard, checked for the two ways it goes quietly useless.
 
     `research/searches.jsonl` has been validated here since it existed;
@@ -542,18 +550,18 @@ def _check_labels(people):
         try:
             label = json.loads(line)
         except json.JSONDecodeError as e:
-            fail(f"research/labels.jsonl:{n}: not valid JSON — {e}")
+            report.fail(f"research/labels.jsonl:{n}: not valid JSON — {e}")
             continue
         for required in ("person", "ref"):
             if not label.get(required):
-                fail(f'research/labels.jsonl:{n}: no "{required}"')
+                report.fail(f'research/labels.jsonl:{n}: no "{required}"')
         person, ref = label.get("person"), label.get("ref") or ""
         # A ruling about a person who is no longer in the tree cannot be re-scored, so it
         # silently stops counting. The known case is a record retracted after the act was
         # re-read: correct to retract, and the ruling that justified it was left pointing at
         # nothing. It is still evidence — re-point it at whoever remains the frontier.
         if person and person not in people:
-            warnings.append(
+            report.warn(
                 f'research/labels.jsonl:{n}: labels "{person}", who has no record — '
                 "the ruling cannot be re-scored until it names someone in the tree")
         if ref and "#" not in ref:
@@ -575,54 +583,54 @@ def _check_labels(people):
         # where exactly one participant shares the surname, so some of these do score. How
         # many is its question to answer, and duplicating that disambiguation here would put
         # a second copy of it in a file whose job is to have no opinions about scoring.
-        warnings.append(
+        report.warn(
             f"research/labels.jsonl: {len(actionable)} label(s) name a held act rather than one "
             "of its people. `uv run tools/evaluate.py refs` prints the command for each "
             "participant; `report` says how many are going uncounted because of it")
     waiting = len(act_level) - len(actionable)
     if waiting:
-        warnings.append(
+        report.warn(
             f"research/labels.jsonl: {waiting} label(s) name an act not yet harvested — "
             "nothing to do, they resolve when it is held")
 
 
-def _check_artifacts(people, source_ids):
+def _check_artifacts(report, people, source_ids):
     """Artifacts are the evidence itself. A record pointing at a file that is missing is
     a citation to nothing; a file whose bytes no longer match the recorded digest is
     worse, because the claim still looks sourced while the proof has changed under it."""
     artifacts = load_artifacts()
     for aid, a in artifacts.items():
         if a.get("id") != aid:
-            fail(f"artifacts/{aid}.md: \"id\" says \"{a.get('id')}\"")
+            report.fail(f"artifacts/{aid}.md: \"id\" says \"{a.get('id')}\"")
         if not a.get("title"):
-            fail(f'artifacts/{aid}.md: missing "title"')
+            report.fail(f'artifacts/{aid}.md: missing "title"')
         for k in a:
             if k not in ARTIFACT_FIELDS and k != "note":
-                warnings.append(f'artifacts/{aid}.md: unknown field "{k}"')
+                report.warn(f'artifacts/{aid}.md: unknown field "{k}"')
         if a.get("date") and not is_valid_date(a["date"]):
-            fail(f"artifacts/{aid}.md: date \"{a['date']}\" is not a valid date")
+            report.fail(f"artifacts/{aid}.md: date \"{a['date']}\" is not a valid date")
         if a.get("source") and a["source"] not in source_ids:
-            fail(f"artifacts/{aid}.md: source \"{a['source']}\" is not registered")
+            report.fail(f"artifacts/{aid}.md: source \"{a['source']}\" is not registered")
         for pid in a.get("evidences") or []:
             if pid not in people:
-                fail(f"artifacts/{aid}.md: evidences \"{pid}\", who does not exist")
+                report.fail(f"artifacts/{aid}.md: evidences \"{pid}\", who does not exist")
 
         if not a.get("file"):
-            fail(f'artifacts/{aid}.md: missing "file"')
+            report.fail(f'artifacts/{aid}.md: missing "file"')
             continue
         f = ARTIFACTS_DIR / a["file"]
         if not f.exists():
-            fail(f"artifacts/{aid}.md: file \"{a['file']}\" is missing")
+            report.fail(f"artifacts/{aid}.md: file \"{a['file']}\" is missing")
             continue
         data = f.read_bytes()
         if a.get("bytes") and int(a["bytes"]) != len(data):
-            fail(f"artifacts/{aid}.md: file is {len(data)} bytes, the record says {a['bytes']}")
+            report.fail(f"artifacts/{aid}.md: file is {len(data)} bytes, the record says {a['bytes']}")
         if a.get("sha256") and sha256(data).hexdigest() != a["sha256"]:
-            fail(f"artifacts/{aid}.md: sha256 does not match the file — the evidence has changed")
+            report.fail(f"artifacts/{aid}.md: sha256 does not match the file — the evidence has changed")
     if ARTIFACTS_DIR.is_dir():
         for f in sorted(ARTIFACTS_DIR.iterdir()):
             if f.suffix != ".md" and not any(a.get("file") == f.name for a in artifacts.values()):
-                warnings.append(f"artifacts/{f.name}: no record describes this file")
+                report.warn(f"artifacts/{f.name}: no record describes this file")
 
 
 if __name__ == "__main__":

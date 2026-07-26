@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: zeeldraaier (ropemaker)
-branch: DeKeyser
 line: de-keyser
 father: antonius_dominicus_bocklandt
 mother: isabella_ichau

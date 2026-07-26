@@ -4,7 +4,6 @@ name: Catharina Bossin
 surname: Bossin
 confidence: sup
 occupation: huishoudster (housekeeper)
-branch: Thumas
 line: thumas
 spouses:
   - id: hendrik_coppens

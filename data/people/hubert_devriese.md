@@ -9,7 +9,6 @@ death:
   date: 1728-01-14
   place: Wingene
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: judocus_devriese
 mother: esther_vanderbeken

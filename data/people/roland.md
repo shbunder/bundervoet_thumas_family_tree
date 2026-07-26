@@ -8,7 +8,6 @@ birth:
 death:
   date: "2003"
 confidence: fam
-branch: DeKeyser
 line: de-keyser
 father: gustaaf
 mother: simonne

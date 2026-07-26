@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: tuinier & zeeman (gardener/seaman)
-branch: Devriendt
 line: devriendt
 father: henricus_j_ramon
 mother: lucia_steenkiste

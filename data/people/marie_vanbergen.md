@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: werkvrouw
-branch: DeKeyser
 line: de-keyser
 father: jan_van_bergen
 mother: ida_vermandel

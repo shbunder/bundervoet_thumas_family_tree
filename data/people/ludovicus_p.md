@@ -9,7 +9,6 @@ death:
   date: 1720-04-17
   place: Destelbergen
 confidence: sup
-branch: Paelinck
 line: paelinck
 father: livinus1_p
 mother: elisabeth_t

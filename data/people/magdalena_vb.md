@@ -10,7 +10,6 @@ death:
   place: Sint-Niklaas
 confidence: doc
 occupation: huishoudster (housekeeper)
-branch: Paelinck
 line: paelinck
 father: carolus_vb
 mother: martinet

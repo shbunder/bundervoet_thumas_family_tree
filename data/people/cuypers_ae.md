@@ -3,7 +3,6 @@ id: cuypers_ae
 name: Antonius Cuypers
 surname: Cuypers
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: dehose

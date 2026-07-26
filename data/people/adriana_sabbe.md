@@ -7,7 +7,6 @@ birth:
 death:
   date: "1768"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: judocus_sabbe
 mother: anna_vannieuwenhuyse

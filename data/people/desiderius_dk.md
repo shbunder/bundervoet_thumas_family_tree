@@ -6,7 +6,6 @@ death:
   date: <1946
   raw: before 9 May 1946
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: mtheresia_vandenbroeck

@@ -7,7 +7,6 @@ birth:
   place: Sint-Stevens-Woluwe
 sex: f
 confidence: sup
-branch: Thumas
 line: thumas
 father: georges_cj
 mother: bossin

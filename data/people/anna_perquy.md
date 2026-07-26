@@ -6,7 +6,6 @@ birth:
   date: 1806-07-09
   place: Westkerke
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_perquy
 mother: agatha_stekelorum

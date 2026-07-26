@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: labourer
-branch: Bundervoet
 line: bundervoet
 father: petrus_f
 mother: augusta

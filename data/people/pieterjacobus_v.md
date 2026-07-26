@@ -9,7 +9,6 @@ death:
   date: 1827-09-28
   place: Zevekote
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: silvester_v
 mother: angela_c

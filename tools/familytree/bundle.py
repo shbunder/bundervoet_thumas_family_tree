@@ -62,7 +62,6 @@ def build_bundle() -> str:
             "kinship": {k: v for k, v in site["kinship"].items() if not k.startswith("_")},
         }),
         # Branches cite the registry by id; the page wants something readable.
-        _call("branches", {b: resolve(sid) for b, sid in config["branches"].items()}),
         _call("lineages", config["lineages"]),
         _call("groups", site["groups"]),
         _call("roster", roster),

@@ -8,7 +8,6 @@ birth:
   place: Hamme (Oost-Vlaanderen)
 confidence: sup
 occupation: koordedraaier (ropemaker)
-branch: DeKeyser
 line: de-keyser
 father: edouard_bocklandt
 mother: marie_vanbergen

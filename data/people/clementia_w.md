@@ -7,7 +7,6 @@ birth:
 death:
   date: "1927"
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: henricus_w
 mother: angela_vd

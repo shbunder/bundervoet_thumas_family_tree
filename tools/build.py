@@ -11,18 +11,18 @@ files can never be produced from a broken tree.
 
 from __future__ import annotations
 
+import re
 import subprocess
 import sys
 from datetime import date
 from hashlib import sha256
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
+from familytree.bundle import build_bundle
+from familytree.landing import census_sentence, fill, missing_markers
+from familytree.people import ROOT, format_date, load_config, load_people
 
-from familytree.bundle import build_bundle  # noqa: E402
-from familytree.landing import census_sentence, fill, missing_markers  # noqa: E402
-from familytree.people import ROOT, format_date, load_config, load_people  # noqa: E402
+HERE = Path(__file__).resolve().parent
 
 
 def run(script: str, *args: str) -> None:
@@ -83,8 +83,6 @@ def stamp_pages() -> None:
     for f in inputs:
         h.update(f.read_bytes())
     stamp = h.hexdigest()[:8]
-
-    import re
 
     changed = []
     for page in ("index.html", "Renee-Leon-family-tree.html"):

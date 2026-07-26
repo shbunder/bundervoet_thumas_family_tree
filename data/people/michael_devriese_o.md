@@ -7,7 +7,6 @@ birth:
 death:
   date: "1681"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: judoca_scherrens

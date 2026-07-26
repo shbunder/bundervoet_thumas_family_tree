@@ -14,7 +14,6 @@ and "hit the paywall" point at completely different next moves.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 from .people import ROOT
 

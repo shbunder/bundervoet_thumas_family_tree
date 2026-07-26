@@ -7,7 +7,6 @@ birth:
 death:
   date: "1727"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: adrianus_debaecke
 mother: anna_lamsens

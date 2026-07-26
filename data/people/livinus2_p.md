@@ -9,7 +9,6 @@ death:
   date: 1784-12-01
   place: Destelbergen
 confidence: sup
-branch: Paelinck
 line: paelinck
 father: adrianus_p
 mother: livina_pickaut

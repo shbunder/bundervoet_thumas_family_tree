@@ -7,7 +7,6 @@ birth:
 death:
   date: "1721"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: hercules_stroobandt
 mother: joanna_willaert

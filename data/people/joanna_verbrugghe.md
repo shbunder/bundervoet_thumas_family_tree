@@ -7,7 +7,6 @@ birth:
 death:
   date: "1704"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: nicolas_verbrugghe
 spouses:

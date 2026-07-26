@@ -4,7 +4,6 @@ name: Paula Mathilde Vanstechelman
 surname: Vanstechelman
 sex: f
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: petrusjacobus_v
 mother: clementia_w

@@ -9,7 +9,6 @@ death:
   date: 1873-04-27
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: albertus_gautiert

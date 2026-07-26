@@ -1122,17 +1122,13 @@ def test_every_validator_check_at_least_runs():
     the conclusions have their own tests. An ImportError or a signature change fails here.
     """
     import check_data
-    from familytree.people import load_config, load_people
+    from familytree.people import children_index, load_config, load_people
     people = load_people(load_config()["roster"])
-    children: dict[str, list[str]] = {}
-    for pid, p in people.items():
-        for parent in (p.get("father"), p.get("mother")):
-            if parent:
-                children.setdefault(parent, []).append(pid)
-    check_data._check_forenames()
-    check_data._check_plausibility(people, children)
-    check_data._check_labels(people)
-    assert not check_data.errors, check_data.errors
+    report = check_data.Report()
+    check_data._check_forenames(report)
+    check_data._check_plausibility(report, people, children_index(people))
+    check_data._check_labels(report, people)
+    assert not report.errors, report.errors
 
 
 def test_the_table_is_checked_for_the_mistake_that_was_actually_made(tmp_path, monkeypatch):
@@ -1141,21 +1137,42 @@ def test_the_table_is_checked_for_the_mistake_that_was_actually_made(tmp_path, m
     feminine `cornelia` group as well. The sex partition makes a fold safe only if nothing
     appears on both sides of it.
 
-    Checked here against a temp file rather than by editing the real one — the first attempt to
-    verify this mutated `data/forenames.json` in place, and when the validator outran its
-    timeout the restore never ran and left the table minified with the bad group still in it.
+    This calls the VALIDATOR. The version before it reimplemented the cross-block scan in its
+    own body and asserted on that, so it would have passed with `_check_forenames` deleted —
+    which is the failure mode of a test written against a check that had nowhere to report to
+    but a module global. `Report` is what makes asking "what does it say about a bad file"
+    possible.
+
+    Against a temp file rather than the real one: the first attempt to verify this mutated
+    `data/forenames.json` in place, and when the validator outran its timeout the restore never
+    ran and left the table minified with the bad group still in it.
     """
     import json
+    import check_data
     from familytree import people as ppl
     bad = {"m": [["cornelius", "corneille"]], "f": [["cornelia", "corneille"]]}
-    path = tmp_path / "forenames.json"
-    path.write_text(json.dumps(bad), encoding="utf-8")
+    (tmp_path / "forenames.json").write_text(json.dumps(bad), encoding="utf-8")
     monkeypatch.setattr(ppl, "DATA", tmp_path)
-    blocks = ppl.load_forenames()
-    seen: dict[str, str] = {}
-    clashes = [t for sex, gs in blocks.items() for g in gs for t in g
-               if t in seen or seen.setdefault(t, sex) is None]
-    assert "corneille" in clashes, "a token on both sides of the partition must be caught"
+
+    report = check_data.Report()
+    check_data._check_forenames(report)
+    assert any("corneille" in e for e in report.errors), (
+        f"a token on both sides of the partition must be an error, got {report.errors}")
+
+
+def test_a_good_forename_table_passes_the_same_check(tmp_path, monkeypatch):
+    """The other half of the pair. A check that never passes is as useless as one that never
+    fails, and only a Report can tell the two apart."""
+    import json
+    import check_data
+    from familytree import people as ppl
+    good = {"m": [["cornelius", "corneille"]], "f": [["cornelia", "cornelie"]]}
+    (tmp_path / "forenames.json").write_text(json.dumps(good), encoding="utf-8")
+    monkeypatch.setattr(ppl, "DATA", tmp_path)
+
+    report = check_data.Report()
+    check_data._check_forenames(report)
+    assert not report.errors, report.errors
 
 
 def test_the_fold_can_never_cross_the_sexes():

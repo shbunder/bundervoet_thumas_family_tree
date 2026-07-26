@@ -6,7 +6,6 @@ death:
   date: 1773-04-08
   place: Zande
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: stephanus_ramon

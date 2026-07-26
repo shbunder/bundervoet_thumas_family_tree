@@ -6,7 +6,6 @@ sex: f
 birth:
   date: 1940..1949
 confidence: fam
-branch: DeKeyser
 line: de-keyser
 father: gustaaf
 mother: simonne

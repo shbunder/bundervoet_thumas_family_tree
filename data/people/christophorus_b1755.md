@@ -6,7 +6,6 @@ sex: m
 birth:
   date: "1755"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: petrus_b1727
 mother: marie_anna_dedeckere

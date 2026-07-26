@@ -9,7 +9,6 @@ death:
   date: 1824-04-15
   place: Laarne
 confidence: sup
-branch: Paelinck
 line: paelinck
 spouses:
   - id: apolonius_p

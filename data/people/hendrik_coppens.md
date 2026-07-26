@@ -4,7 +4,6 @@ name: Hendrik Coppens
 surname: Coppens
 confidence: sup
 occupation: metser (mason)
-branch: Thumas
 line: thumas
 spouses:
   - id: catharina_bossin

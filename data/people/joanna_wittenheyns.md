@@ -5,7 +5,6 @@ surname: Wittenheyns
 birth:
   date: ~1530
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: mattheus_wittenheyns
 mother: maria_deruwe

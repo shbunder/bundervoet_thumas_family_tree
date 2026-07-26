@@ -15,15 +15,79 @@ Markdown prose below it for everything a field cannot hold.
 ```
 data/people/<id>.md     strict frontmatter + prose body
 data/artifacts/<id>.*   a saved primary document + a record describing it
-data/meta.json          roots, confidence codes
-data/branches.json      surname branch → its default source id
+data/meta.json          roots, the default source, confidence codes
 data/lineages.json      the surname chains
 data/forenames.json     forenames that are one name in another language, split by sex
 ```
 
 Nothing in `data/` is executable. It is JSON and Markdown, readable by any tool without a
-JavaScript engine — `jq '.branches' data/branches.json` works, and so does `grep` over the
+JavaScript engine — `jq '.lineages' data/lineages.json` works, and so does `grep` over the
 person records. That is a deliberate durability property: the data outlives the tooling.
+
+## Where everything lives
+
+**The one authoritative listing.** `CLAUDE.md` and `README.md` link here rather than
+repeating it: there were three copies, and when `data/forenames.json` was added only two of
+them learned about it.
+
+Three top-level directories are kept apart because different rules apply to each. `data/` is
+the only place a name or a date may appear; `site/` is wording the page shows and cannot
+change what the tree claims; `assets/` contains neither.
+
+```
+index.html                      landing page — loads no JavaScript
+Renee-Leon-family-tree.html     the interactive tree (page shell only)
+
+data/people/<id>.md             source of truth: strict frontmatter + prose body
+data/artifacts/<id>.*           a saved primary document + a record describing it
+data/meta.json                  roots, the default source, confidence codes
+data/lineages.json              the surname chains
+data/forenames.json             forenames that are one name in another language, by sex
+
+site/labels.json                presentation only, in every language: UI strings, Index
+                                headings, footer, relation vocabulary. No word the page
+                                shows is written anywhere else — see assets/js/i18n.js
+
+research/sources.json           the registry — SITES (venues) and PAGES (trees, documents)
+research/searches.jsonl         the search log, append-only: what each search found, or why not
+research/labels.jsonl           the gold standard: every verifier ruling, as a labelled pair
+research/harvest/               the corpus — acts from Open Archives. GITIGNORED
+research/harvest/corpus.db      the derived index over those acts. GITIGNORED, rebuildable
+research/harvest/manifest.json  which queries were run — committed, so the corpus replays
+
+tools/familytree/               the library every tool shares
+  people.py                     the loader, the date grammar, the browser record, the census
+  frontmatter.py                the parser for the records' strict YAML subset
+  sources.py                    the registry and the search log, and what makes an entry valid
+  labels.py                     the gold standard, readable by the QUEUES and not only the scorer
+  landing.py                    what index.html says about the size of the tree
+  bundle.py                     data/ + site/ -> dist/bundle.js
+  gedcom.py                     the GEDCOM 7 writer and its round-trip self-check
+  corpus.py                     harvested acts read as EVENTS: roles, parent edges, frequencies
+  a2a.py                        the same acts as XML — what makes a whole archive one request
+  store.py                      the corpus as a SQLite index: blocking keys, offsets, frequencies
+  match.py                      blocking keys, Flemish phonetics, rarity-weighted scoring
+  frontier.py                   the ranked queue: value x P(resolvable) / cost
+  coverage.py                   which act answers most frontiers; components; pedigree collapse
+tools/build.py                  validates, then writes everything generated
+tools/check_data.py             the validator
+tools/verify_all.py             the whole tree scored against the whole corpus, in one pass
+tools/research.py               the log, the registry, and every derived report
+tools/harvest.py                pull acts from Open Archives and keep them
+tools/link.py                   join the held acts to a frontier — candidates, never conclusions
+tools/identify.py               is this person already in the tree? ask before writing a record
+tools/evaluate.py               the gold standard: label a ruling, then measure the scorer on it
+tools/export_gedcom.py          writes exports/family-tree.ged
+
+assets/                         presentation only — no names, no dates
+docs/                           the method, written up — mkdocs.yml renders it to dist/docs/
+docs/research-log.md            numbered passes: found / checked-and-negative / next
+docs/sources.md                 readable source list — GENERATED from research/sources.json
+dist/bundle.js                  GENERATED — what the page loads
+exports/family-tree.ged         GENERATED — GEDCOM 7
+archive/                        superseded drafts, not part of the site
+pyproject.toml                  the uv project. No dependencies, on purpose
+```
 
 ## Stored versus derived
 
@@ -149,4 +213,16 @@ people, which is much closer to how `corpus.py` already works.
    [Scaling](method/scaling.md).
 2. **Sex is unknown for anyone childless** unless their record states it — relations then
    read "sibling" rather than "sister". Fill `sex` in only from what a record says, never
-   from a forename.
+   from a forename. *(Nobody is currently unknown: every person who is nobody's parent
+   states it.)*
+3. **A marriage that ended in death has no end date**, because it is derivable from the two
+   death dates and inventing a field for it would invite recording a guess. Only `divorced`
+   is stored. If that derivation is ever wanted on the page, derive it.
+4. **Step-relations are unnamed on purpose.** `relationBetween` goes blood first, then
+   exactly one marriage step, then stops — so a stepmother reads as "X married Y, who is
+   Z's father" rather than "stepmother", and a step-sibling reads as no connection. Beyond
+   one step the wording stops meaning anything reliable, and a wrong in-law label is the
+   same class of error as a wrong graft: unfalsifiable prose that reads as fact.
+5. **The veto rule is stated in three places** — the scorer, a SQL pre-filter and the
+   validator. Deliberate, and the reasoning is in
+   [Record linkage](method/linkage.md#the-veto-rule-lives-in-three-places-and-that-is-a-cost-being-paid-on-purpose).

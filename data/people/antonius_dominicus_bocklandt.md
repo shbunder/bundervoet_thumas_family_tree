@@ -7,7 +7,6 @@ birth:
 death:
   date: "1883"
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 father: daniel_bocklandt
 mother: philippa_vanpuyenbroeck

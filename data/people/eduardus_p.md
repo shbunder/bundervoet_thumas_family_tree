@@ -10,7 +10,6 @@ death:
   place: Sint-Niklaas
 confidence: doc
 occupation: leurder (itinerant pedlar)
-branch: Paelinck
 line: paelinck
 father: joannesf_p
 mother: rosalia_w

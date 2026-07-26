@@ -9,7 +9,6 @@ death:
   date: 1860-05-26
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: albertus_gautiert
 mother: theresia_robbe

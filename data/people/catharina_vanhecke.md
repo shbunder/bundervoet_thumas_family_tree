@@ -8,7 +8,6 @@ birth:
 death:
   date: ~1670
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: livinus_bundervoet

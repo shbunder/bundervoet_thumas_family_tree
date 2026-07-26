@@ -9,7 +9,6 @@ death:
   date: 1798-10-27
   place: Zande
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: mattheus_ramon

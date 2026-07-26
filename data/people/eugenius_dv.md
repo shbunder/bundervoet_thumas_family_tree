@@ -6,7 +6,6 @@ birth:
   date: 1882-04-13
   place: Stene
 confidence: doc
-branch: Bundervoet
 line: van-iseghem
 father: ludovicus_dv
 mother: silvia_brissinck

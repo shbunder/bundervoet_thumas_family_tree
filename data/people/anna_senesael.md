@@ -3,7 +3,6 @@ id: anna_senesael
 name: Anna Theresia Senesael
 surname: Senesael
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: philippus_daneel

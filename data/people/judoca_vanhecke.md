@@ -5,7 +5,6 @@ surname: Van Hecke
 death:
   date: "1655"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: oliverius_stroobandt

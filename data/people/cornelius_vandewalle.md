@@ -4,7 +4,6 @@ name: Cornelius Vandewalle
 surname: Vandewalle
 sex: m
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: maria_vanrenterghem

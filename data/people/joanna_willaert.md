@@ -9,7 +9,6 @@ death:
   date: 1694-05-03
   place: Torhout
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: nicolas_willaert
 mother: catharina_vanmassenhove

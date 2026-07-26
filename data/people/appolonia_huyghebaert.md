@@ -9,7 +9,6 @@ death:
   date: 1895-01-27
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: josephus_janssen

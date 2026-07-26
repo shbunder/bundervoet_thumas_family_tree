@@ -8,7 +8,6 @@ death:
   date: 1857-06-10
   place: Grez-Doiceau
 confidence: sup
-branch: Thumas
 line: thumas
 father: guillaume_joostens
 mother: jeanne_deconninck

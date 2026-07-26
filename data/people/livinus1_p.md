@@ -6,7 +6,6 @@ birth:
   date: ~1618
   place: Lochristi
 confidence: sup
-branch: Paelinck
 line: paelinck
 spouses:
   - id: elisabeth_t

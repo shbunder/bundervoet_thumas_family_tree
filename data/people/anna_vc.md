@@ -5,7 +5,6 @@ surname: Van Craenenbroeck
 death:
   raw: Zaventem/Leuven, a few years ago
 confidence: fam
-branch: Thumas
 line: janssens
 spouses:
   - id: rene_j

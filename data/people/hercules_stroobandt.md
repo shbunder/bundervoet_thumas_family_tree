@@ -9,7 +9,6 @@ death:
   date: 1664-05-17
   place: Torhout
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: oliverius_stroobandt
 mother: judoca_vanhecke

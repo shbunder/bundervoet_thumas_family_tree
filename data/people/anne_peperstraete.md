@@ -3,7 +3,6 @@ id: anne_peperstraete
 name: Anne Therese Peperstraete
 surname: Peperstraete
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: antonius_vincke

@@ -7,7 +7,6 @@ birth:
 death:
   date: "1759"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: adriana_devriese

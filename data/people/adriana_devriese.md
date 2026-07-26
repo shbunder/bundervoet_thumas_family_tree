@@ -7,7 +7,6 @@ birth:
 death:
   date: "1744"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: joannes_keirsebilck_1697

@@ -7,7 +7,6 @@ birth:
 death:
   date: "1723"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: hubert_devriese

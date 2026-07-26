@@ -8,7 +8,6 @@ death:
   date: 1668-04-17
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: petrus_vandewalle

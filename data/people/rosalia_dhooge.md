@@ -4,7 +4,6 @@ name: Rosalia Dhooge
 surname: Dhooge
 sex: f
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: bernardus

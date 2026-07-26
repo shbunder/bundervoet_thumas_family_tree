@@ -45,42 +45,10 @@ checked by different rules:
 
 `dist/` and `exports/` are generated from those and are never edited by hand.
 
-```
-index.html                     landing page
-Renee-Leon-family-tree.html    the interactive tree (page shell only)
-data/                          FACTS — JSON and Markdown, nothing executable
-  people/<id>.md               one file per person — the source of truth
-  meta.json                    where the tree starts; the confidence codes
-  branches.json                surname branch → its default source id
-  lineages.json                the surname chains
-site/                          PRESENTATION — the words the page shows
-  labels.json                  every word, in every language: UI, headings, footer,
-                               confidence labels, the relation vocabulary
-assets/                        how it looks and behaves — no names, no dates,
-                               and no words either
-  css/tree.css                 styling for the tree page
-  css/site.css                 styling for the landing page
-  js/core.js                   the FamilyTree namespace and the data loader
-  js/i18n.js                   which language, and how a stored string is rendered
-  js/kinship.js                relationships, children, source resolution
-  js/render.js                 records → markup
-  js/ui.js                     the two round switches, hover card, tabs, segments
-  js/main.js                   wires it together
-research/                      the search state
-  sources.json                 sites we can search, and the pages inside them
-  searches.jsonl               what was searched, how, and how it went
-  harvest/                     acts pulled from Open Archives — gitignored, rebuildable
-dist/bundle.js                 GENERATED — what the browser actually loads
-exports/family-tree.ged        GENERATED — the tree in GEDCOM 7
-data/artifacts/                saved primary documents + a record for each
-docs/research-log.md           what's documented, what's inferred, what to pull next
-pyproject.toml                 the uv project — no dependencies, on purpose
-tools/familytree/              the library: records, dates, sources, corpus, matching
-tools/build.py                 validates, then writes the generated files
-tools/harvest.py               pulls acts from Open Archives and keeps them
-tools/link.py                  joins held acts to a person — candidates, never facts
-tools/identify.py              is this person already in the tree?
-```
+The file-by-file listing is in the method docs, under
+[Data model → Where everything lives](dist/docs/data-model.html). It is not repeated here:
+there were three copies of it, and when `data/forenames.json` was added only two of them
+learned about it.
 
 Nothing is compiled and the site has no dependencies — the files are served exactly as
 they are. There is one generation step, `uv run tools/build.py`, which turns `data/`
@@ -114,7 +82,6 @@ death:
   place: Oostende
 confidence: doc
 occupation: werkman
-branch: DeKeyser
 father: desiderius_dk
 mother: mtheresia_vandenbroeck
 spouses:
@@ -207,7 +174,7 @@ parent, rather than one row that silently merges two sibships into one.
 records cite the registry rather than describing it, so "Geneanet tree isavdw
 (Rijksarchief scans)" is written once, in one place, instead of on 107 people. The
 validator rejects an id that isn't registered. Leave it out and the person inherits
-the default citation for their `branch`.
+`defaultSource` from `data/meta.json`.
 
 `line` names which Index heading the person belongs under, keyed to `groups.js`. The
 person says it once; there is no membership list anywhere.
@@ -222,7 +189,7 @@ offers four:
 
 | Grouping | The cards are | Derived from |
 | --- | --- | --- |
-| Family line | the curated headings — "Bostyn & Cappaert (Marcel's mother)" | the person's own `line`, falling back to `branch` |
+| Family line | the curated headings — "Bostyn & Cappaert (Marcel's mother)" | the person's own `line` |
 | First letter | A, B, C … | the folded family key, so "De Keyser", "Dekeyser" and "'t Jonck" land where you'd look |
 | Century | 15th century … , plus one card for the undated | the birth date |
 | Ancestor / blood / other | the direct line above the root; blood off that line; married in or unconnected | the parent and marriage links |
@@ -237,8 +204,8 @@ there is no list anywhere that regrouping would have to rewrite. Both choices ar
 remembered between visits.
 
 `site/labels.json` doesn't decide who appears, only what the family-line headings are
-called. Anyone it doesn't mention is filed under their `branch`, which is why nobody
-can go missing.
+called. Anyone it doesn't mention is filed under "unplaced", which is why nobody can go
+missing.
 
 ## Relations
 

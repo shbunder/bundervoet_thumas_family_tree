@@ -5,7 +5,6 @@ surname: Vandewalle
 birth:
   date: ~1530
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: joanna_wittenheyns

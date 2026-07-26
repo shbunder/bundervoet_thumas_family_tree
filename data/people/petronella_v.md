@@ -9,7 +9,6 @@ death:
   date: 1709-02-16
   place: Destelbergen
 confidence: sup
-branch: Paelinck
 line: paelinck
 spouses:
   - id: ludovicus_p

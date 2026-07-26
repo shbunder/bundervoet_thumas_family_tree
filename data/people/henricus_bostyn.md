@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: metser (mason)
-branch: Bundervoet
 line: bostyn-cappaert
 father: henricus_j_bostyn
 mother: mathilde_desmet

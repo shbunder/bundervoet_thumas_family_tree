@@ -6,7 +6,6 @@ birth:
   date: ~1822
 sex: m
 confidence: sup
-branch: Thumas
 line: thumas
 father: egidius_peremans
 mother: joanna_verelst

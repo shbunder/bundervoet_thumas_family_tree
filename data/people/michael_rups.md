@@ -3,7 +3,6 @@ id: michael_rups
 name: Michael Rups
 surname: Rups
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: amandus_rups
 spouses:

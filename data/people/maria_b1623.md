@@ -8,7 +8,6 @@ birth:
 death:
   date: "1676"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: livinus_bundervoet
 mother: elisabeth_nn

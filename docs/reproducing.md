@@ -101,7 +101,7 @@ The parts that are specific, and what to change:
 | What | Where | Note |
 |---|---|---|
 | The roots | `data/meta.json` | Takes a list — a forest is fine |
-| Surname branches and lineages | `data/branches.json`, `data/lineages.json` | |
+| Surname lineages | `data/lineages.json` | `head` is walked up through father-links |
 | Page wording | `site/labels.json` | Presentation only; carries no facts |
 | Venue registry | `research/sources.json` | Sites and pages, with what each has yielded |
 | Phonetic folding | `familytree/match.py` | **Tuned to Flemish.** See below |

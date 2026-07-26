@@ -9,7 +9,6 @@ death:
   date: 1801-04-19
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_degrande
 mother: adriana_sabbe

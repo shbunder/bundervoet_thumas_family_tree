@@ -7,7 +7,6 @@ birth:
 death:
   date: ~1651
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: petrus_bundervoet1560
 spouses:

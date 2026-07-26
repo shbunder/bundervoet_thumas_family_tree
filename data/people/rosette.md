@@ -3,7 +3,6 @@ id: rosette
 name: Rosette Van Iseghem
 surname: Van Iseghem
 confidence: fam
-branch: Bundervoet
 line: bundervoet
 father: joannes_vi
 mother: adrienne_dv

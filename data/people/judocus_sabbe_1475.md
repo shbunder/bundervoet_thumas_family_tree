@@ -7,7 +7,6 @@ birth:
 death:
   date: "1534"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: gillis_sabbe
 spouses:

@@ -7,7 +7,6 @@ death:
   date: 1812-10-18
   place: Grez-Doiceau
 confidence: sup
-branch: Thumas
 line: thumas
 father: georgeslambert_t
 mother: quinart

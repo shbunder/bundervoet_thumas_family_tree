@@ -4,7 +4,6 @@ name: Leontius Ivo Vanstechelman
 surname: Vanstechelman
 sex: m
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: petrusjacobus_v
 mother: clementia_w

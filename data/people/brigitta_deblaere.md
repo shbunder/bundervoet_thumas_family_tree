@@ -9,7 +9,6 @@ death:
   date: 1796-07-15
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: jacob_deblaere
 mother: anna_c_devriese

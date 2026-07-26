@@ -6,7 +6,6 @@ death:
   date: <1906
   raw: before 10 November 1906
 confidence: doc
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: silvia_brissinck

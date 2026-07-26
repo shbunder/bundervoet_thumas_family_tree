@@ -7,7 +7,6 @@ birth:
   place: Bertem
 confidence: sup
 occupation: herbergier (innkeeper)
-branch: Thumas
 line: thumas
 spouses:
   - id: coekelberghs

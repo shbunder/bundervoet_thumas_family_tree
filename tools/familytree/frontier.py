@@ -46,7 +46,7 @@ from dataclasses import dataclass
 from . import store
 from .corpus import corpus_exists, corpus_mentions, frequencies, surname_coverage
 from .match import build_index, candidates_for, from_mention, from_person, surname_weight
-from .people import DAY, load_config, load_people, point_year
+from .people import DAY, children_index, load_config, load_people, point_year
 from .sources import ACCESS_COST, load_log, load_sources
 
 
@@ -62,15 +62,6 @@ def generations(people: dict, meta: dict) -> dict[str, int]:
                 depth[parent] = depth[pid] + 1
                 queue.append(parent)
     return depth
-
-
-def children_index(people: dict) -> dict[str, list[str]]:
-    children: dict[str, list[str]] = {}
-    for pid, p in people.items():
-        for parent in (p.get("father"), p.get("mother")):
-            if parent and parent in people:
-                children.setdefault(parent, []).append(pid)
-    return children
 
 
 def descendant_counts(people: dict) -> dict[str, int]:

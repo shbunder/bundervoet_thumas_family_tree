@@ -7,7 +7,6 @@ birth:
 death:
   date: "1837"
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: philippa_vanpuyenbroeck

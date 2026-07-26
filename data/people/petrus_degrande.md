@@ -7,7 +7,6 @@ birth:
 death:
   date: "1765"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: egidius_degrande
 mother: joanna_wallays

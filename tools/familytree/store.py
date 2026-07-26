@@ -37,7 +37,7 @@ import json
 import sqlite3
 from collections import Counter
 
-from .corpus import ACTS_DIR, HARVEST, Frequencies, normalise_act, normalise_key
+from .corpus import ACTS_DIR, HARVEST, Frequencies, given_tokens, normalise_act, normalise_key
 from .match import Candidate, block_keys, from_mention
 from .people import year_span
 
@@ -117,7 +117,9 @@ def _load(blob: str) -> Candidate:
 #   2  particle-stripped adaptive prefix key; `death_date` on the stored Candidate
 #   3  `birth_before` on the stored Candidate — the parent-predates-child bound, which is
 #      derived from the act's edges at index time and cannot be recovered from the row later
-FORMAT = 3
+#   4  one definition of a forename token (`corpus.given_tokens`): the `g:` blocking key
+#      and the `givens` frequency table now drop particles, as the scorer always had
+FORMAT = 4
 
 
 def signature() -> str:
@@ -241,9 +243,8 @@ def build(verbose: bool = False) -> int:
                         n += 1
                         if skey:
                             surnames[skey] += 1
-                        for g in (normalise_key(x) for x in (m.given or "").split()):
-                            if g:
-                                givens[g] += 1
+                        for g in given_tokens(m.given):
+                            givens[g] += 1
                         place = normalise_key(act.place)
                         if place:
                             places[place] += 1

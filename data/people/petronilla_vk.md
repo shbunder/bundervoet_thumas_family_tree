@@ -9,7 +9,6 @@ death:
   date: 1791-03-17
   place: Destelbergen
 confidence: sup
-branch: Paelinck
 line: paelinck
 spouses:
   - id: livinus2_p

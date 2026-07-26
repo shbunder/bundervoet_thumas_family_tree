@@ -8,7 +8,6 @@ birth:
 death:
   date: "1972"
 confidence: sup
-branch: DeKeyser
 line: de-keyser
 father: jerome_dk
 mother: leonie_p

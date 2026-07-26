@@ -7,7 +7,6 @@ birth:
 death:
   date: 1575..1587
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_vanrenterghem
 spouses:

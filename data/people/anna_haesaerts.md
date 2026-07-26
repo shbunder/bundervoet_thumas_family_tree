@@ -10,7 +10,6 @@ death:
   place: Bertem
 confidence: sup
 occupation: landbouwster (farmer)
-branch: Thumas
 line: thumas
 father: jb_haesaerts
 mother: elisabeth_vdbroeck

@@ -10,7 +10,6 @@ window.FamilyTree = (function () {
     people: {},
     roster_: [],
     meta_: null,
-    branches_: {},
     lineages_: [],
     groups_: [],
     strings_: null,
@@ -25,9 +24,6 @@ window.FamilyTree = (function () {
   };
   FT.meta = function (m) {
     FT.meta_ = m;
-  };
-  FT.branches = function (b) {
-    FT.branches_ = b;
   };
   FT.lineages = function (l) {
     FT.lineages_ = l;
@@ -82,7 +78,6 @@ window.FamilyTree = (function () {
     return {
       meta: FT.meta_,
       people: FT.people,
-      branches: FT.branches_,
       lineages: FT.lineages_,
       groups: FT.groups_,
     };

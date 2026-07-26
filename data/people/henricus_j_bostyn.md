@@ -7,7 +7,6 @@ birth:
   place: Varsenare
 confidence: sup
 occupation: herbergier (innkeeper)
-branch: Bundervoet
 line: bostyn-cappaert
 father: henr_jos_bostin
 mother: anna_perquy

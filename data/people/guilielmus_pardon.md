@@ -7,7 +7,6 @@ death:
   raw: alive on 1 December 1853; death not known
 confidence: sup
 occupation: daglooner (day labourer)
-branch: Thumas
 line: thumas
 spouses:
   - id: maria_anna_pergijsels

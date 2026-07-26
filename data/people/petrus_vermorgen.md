@@ -3,7 +3,6 @@ id: petrus_vermorgen
 name: Petrus Vermorgen
 surname: Vermorgen
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: paulina_vdberghe

@@ -18,7 +18,7 @@ record.
 
 ```python
 p:<phonetic surname>                  # the main pass
-x:<phonetic surname, first 6 chars>   # truncated and extended forms
+x:<phonetic surname STEM, 4 or 6>     # truncated and extended forms — see below
 pd:<phonetic>:<birth decade>          # tightened by date
 pp:<phonetic>:<place>                 # tightened by place
 g:<first forename>:<birth decade>     # survives a surname nobody spelled twice
@@ -26,6 +26,46 @@ g:<first forename>:<birth decade>     # survives a surname nobody spelled twice
 
 A pair agreeing on **any** key is compared; a pair agreeing on none never is. That is
 what keeps this off the O(n²) curve as the corpus grows.
+
+### The prefix key strips the particle, and its length adapts
+
+The `x:` key was `ph[:6]` — the first six characters of the phonetic surname — and in Flemish
+that is usually the *particle*, which says nothing about the family. A quarter of these
+surnames begin "Van den", "Van der" or "De", so the key put 150,611 mentions under `fanden`,
+137,463 under `defade` and 116,538 under `fander`: **17% of a 1.7-million-act corpus in
+fourteen buckets.** A block holding a sixth of the population is not blocking, it is a scan
+with extra steps, and it is what made `research.py acts` take seven minutes.
+
+Stripping the particle also *fixes* a case the old key missed. "Vandenberghe" and "Van
+Berghe" share no six-character prefix at all (`fanden` against `fanber`) and were never
+compared; on the stem both are `berge`.
+
+How much of the stem to keep depends on how long it is, and that took two measurements:
+
+- a **short** stem needs generosity, because a single trailing character decides everything —
+  "Vandevelde" and "Vandevelden" have stems `felde` and `felden` and are one family, which
+  four characters bridges;
+- a **long** stem needs none, and four characters actively harm it. "Wittenheyns" has the stem
+  `fitenheins`; cut to four it is `fite`, which is also what "De Witte" reduces to. A surname
+  with no exact match anywhere in the corpus was pulling 28,089 mentions of an unrelated
+  family, and throwing away six highly discriminating characters to do it.
+
+Measured against the 223 open frontiers, mentions pulled through this key:
+
+| scheme | mentions pulled | |
+|---|---|---|
+| `ph[:6]`, as it was | 2,542,433 | the particle ate the prefix |
+| `stem[:4]` | 1,282,568 | particle stripped, fixed length |
+| `stem`, adaptive | **941,505** | this |
+
+Both later schemes keep all seven variant pairs the key exists for; only the adaptive one
+*also* keeps Wittenheyns and De Witte apart. These are strict improvements rather than
+trades — nothing that was compared before is uncompared now.
+
+Below four characters the particle was most of the name and what remains cannot discriminate
+("Devos" would become `fos`), so those keep the whole phonetic form instead. The stem is used
+for **blocking only**: `family_key` and `phonetic` still decide whether two surnames *agree*,
+and this only decides which pairs are worth comparing at all.
 
 ### Flemish phonetics
 
@@ -203,6 +243,31 @@ The corollary is a rule about the *data*, not the code: a date the grammar **can
 not belong in `raw`. A record whose only date was prose was, to the matcher, entirely
 undated — which is how a boy born 1901 was offered as a man whose birth was declared in
 1847, with nothing able to veto it.
+
+### The veto rule lives in three places, and that is a cost being paid on purpose
+
+`match.compare` is the definition. But `store._veto_sql` re-states two of the vetoes — sex,
+and a stated birth year — as a SQL `WHERE` clause, and `check_data._check_plausibility`
+re-states the age and lifespan bounds as build-time warnings. Three copies of a rule is
+exactly what the rest of this project forbids, so it is worth being explicit about why these
+survive:
+
+- **The SQL copy buys the corpus.** A common Flemish surname now blocks against tens of
+  thousands of acts, and reading each one so the scorer could reject it on a birth year two
+  centuries out was most of the cost of a lookup. It is a *pre-filter*, conservative by
+  construction — an unknown sex, an absent year and an implied-rather-than-stated year all
+  survive it — so it can only ever be a performance change, never a decision. The equivalence
+  is pinned by a test against the scanning route rather than argued.
+- **The validator copy asks a different question.** `compare` asks "could these two records be
+  one person"; the validator asks "is this tree internally plausible", and it *warns* where the
+  scorer *vetoes*, because a record can be right and strange and no validator gets to overrule
+  a document.
+
+What keeps them from drifting is that the numbers themselves are not duplicated:
+`MIN_PARENT_AGE`, `MAX_LIFESPAN`, `MAX_MOTHER_AGE` and `MAX_FATHER_AGE` are defined once in
+`familytree/people.py` and imported by both readers. They were not always — the validator
+hardcoded `110` eleven lines below the import that would have named it — and that is the form
+this kind of duplication actually fails in.
 
 ---
 

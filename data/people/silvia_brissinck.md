@@ -4,7 +4,6 @@ name: Silvia Rosalia Brissinck
 surname: Brissinck
 occupation: werkvrouw (working woman / labourer)
 confidence: doc
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: ludovicus_dv

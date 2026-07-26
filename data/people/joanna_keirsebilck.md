@@ -9,7 +9,6 @@ death:
   date: 1866-07-10
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_jos_keirsebilck
 mother: anna_fr_degrande

@@ -6,7 +6,6 @@ birth:
   date: 1808-02-28
   place: Diksmuide
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: ludovicus_dutreeuw
 mother: ludovica_ellebout

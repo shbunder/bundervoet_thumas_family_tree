@@ -9,7 +9,6 @@ death:
   date: 1847-09-08
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: theresia_robbe

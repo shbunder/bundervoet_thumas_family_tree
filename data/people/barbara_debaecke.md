@@ -9,7 +9,6 @@ death:
   date: 1761-03-10
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: rogerius_debaecke
 mother: maria_m_vandewalle

@@ -9,7 +9,6 @@ death:
   date: 1851-04-09
   place: Grez-Doiceau
 confidence: sup
-branch: Thumas
 line: thumas
 father: georges2_t
 mother: joostens

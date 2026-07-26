@@ -7,7 +7,6 @@ birth:
 death:
   date: ~1547
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: mattheus_wittenheyns

@@ -4,7 +4,6 @@ name: Franciscus Coenraets
 surname: Coenraets
 confidence: sup
 occupation: winkelier (shopkeeper)
-branch: Thumas
 line: thumas
 spouses:
   - id: godts

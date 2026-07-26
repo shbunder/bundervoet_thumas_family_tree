@@ -8,7 +8,6 @@ birth:
 death:
   date: 1692-05-14
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_vansieleghem
 mother: joanna_defoort

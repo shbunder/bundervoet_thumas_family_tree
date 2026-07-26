@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: dienstmeid (maidservant)
-branch: Devriendt
 line: devriendt
 father: philippus_daneel
 mother: anna_senesael

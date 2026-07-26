@@ -7,7 +7,6 @@ birth:
 death:
   date: <1520
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - name: (wife unrecorded)

@@ -9,7 +9,6 @@ death:
   date: 1726-11-22
   place: Lochristi
 confidence: sup
-branch: Paelinck
 line: paelinck
 spouses:
   - id: adrianus_p

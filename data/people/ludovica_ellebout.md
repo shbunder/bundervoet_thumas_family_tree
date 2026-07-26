@@ -6,7 +6,6 @@ birth:
   date: 1765-04-29
   place: Diksmuide
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: ludovicus_dutreeuw

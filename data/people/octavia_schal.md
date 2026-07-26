@@ -6,7 +6,6 @@ birth:
   date: 1886-04-30
   place: Bredene
 confidence: doc
-branch: Bundervoet
 line: van-iseghem
 father: ludovicus_schal
 mother: mathilde_standaert

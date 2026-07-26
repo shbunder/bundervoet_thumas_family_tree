@@ -9,7 +9,6 @@ death:
   date: 1792-07-11
   place: Zevekote
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 spouses:
   - id: silvester_v

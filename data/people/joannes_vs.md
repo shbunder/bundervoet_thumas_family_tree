@@ -5,7 +5,6 @@ surname: Vanstechele
 birth:
   date: <1673
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 spouses:
   - id: francisca_casiers

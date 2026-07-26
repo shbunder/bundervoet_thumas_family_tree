@@ -10,7 +10,6 @@ death:
   place: Oostkamp
 confidence: sup
 occupation: koster / landman (church sexton / farmer)
-branch: Bundervoet
 line: bostyn-cappaert
 father: simon_vandewalle_1530
 mother: joanna_wittenheyns

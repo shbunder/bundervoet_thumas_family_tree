@@ -4,7 +4,6 @@ name: NN Vandenberghe
 surname: Vandenberghe
 sex: f
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: judocus_sabbe_1475

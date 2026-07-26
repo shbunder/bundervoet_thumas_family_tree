@@ -9,7 +9,6 @@ death:
   place: Oostkamp
 confidence: sup
 occupation: kerkmeester & dischmeester (churchwarden / poor-relief master)
-branch: Bundervoet
 line: bostyn-cappaert
 father: guillielmus_vanrenterghem
 mother: barbara_wittenheyns

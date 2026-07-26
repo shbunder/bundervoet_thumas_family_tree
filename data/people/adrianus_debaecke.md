@@ -5,7 +5,6 @@ surname: De Baecke
 birth:
   date: "1630"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: petrus_debaecke
 mother: margaretha_wybau

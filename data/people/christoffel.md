@@ -9,7 +9,6 @@ death:
   date: 1786-11-19
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: joannes_b
 mother: livina_stockman

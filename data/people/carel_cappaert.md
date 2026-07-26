@@ -9,7 +9,6 @@ death:
   place: Oostkamp
 confidence: sup
 occupation: dagloner (day-labourer)
-branch: Bundervoet
 line: bostyn-cappaert
 father: bernardus_cap
 mother: sophia_vh

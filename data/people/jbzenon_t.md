@@ -7,7 +7,6 @@ birth:
   raw: declared at Grez-Doiceau on 20 August 1845
   place: Grez-Doiceau
 confidence: sup
-branch: Thumas
 line: thumas
 father: georges2_t
 mother: joostens

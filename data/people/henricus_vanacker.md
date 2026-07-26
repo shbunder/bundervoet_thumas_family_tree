@@ -7,7 +7,6 @@ birth:
 death:
   date: "1749"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: francisca_vanmaele

@@ -10,7 +10,6 @@ death:
   place: Grez-Doiceau
 confidence: sup
 occupation: bierverkoopster (beer seller)
-branch: Thumas
 line: thumas
 spouses:
   - id: georges1_t

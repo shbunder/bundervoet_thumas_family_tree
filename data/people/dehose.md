@@ -3,7 +3,6 @@ id: dehose
 name: Anna Maria de Hose
 surname: de Hose
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: cuypers_ae

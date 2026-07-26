@@ -7,7 +7,6 @@ birth:
 death:
   date: "1696"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: guillielma_dellaert

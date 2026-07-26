@@ -3,7 +3,6 @@ id: helena_denijs
 name: Helena Denijs
 surname: Denijs
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: pieter_stekelorum

@@ -3,7 +3,6 @@ id: philippus_daneel
 name: Philippus Daneel
 surname: Daneel
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: anna_senesael

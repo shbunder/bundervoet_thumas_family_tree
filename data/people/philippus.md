@@ -9,7 +9,6 @@ death:
   date: 1832-05-06
   place: Evergem
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: christoffel
 mother: bogaert

@@ -6,7 +6,6 @@ birth:
   date: 1815-04-25
   place: Brugge (Assebroek)
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: josephus_caeckaert
 mother: godeliva_rotsaert

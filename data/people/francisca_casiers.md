@@ -5,7 +5,6 @@ surname: Casiers
 birth:
   date: <1673
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 spouses:
   - id: joannes_vs

@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: doc
 occupation: werkman
-branch: DeKeyser
 line: de-keyser
 father: desiderius_dk
 mother: mtheresia_vandenbroeck

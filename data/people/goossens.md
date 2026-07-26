@@ -3,7 +3,6 @@ id: goossens
 name: Anna Catharina Goossens
 surname: Goossens
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: vandervarent_j

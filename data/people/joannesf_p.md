@@ -7,7 +7,6 @@ birth:
   place: Lokeren
 confidence: sup
 occupation: arbeider (labourer)
-branch: Paelinck
 line: paelinck
 father: janbaptist_p
 mother: joanna_va

@@ -6,7 +6,6 @@ birth:
   date: 1874-12-18
   place: Sint-Stevens-Woluwe
 confidence: sup
-branch: Thumas
 line: thumas
 father: hendrik_vdb
 mother: coekelberghs

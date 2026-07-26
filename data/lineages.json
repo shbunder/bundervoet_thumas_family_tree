@@ -1,5 +1,5 @@
 {
-  "_comment": "The surname chains. `head` is walked up through father-links, so the chain always tracks the data. `origin` is what is known about where the surname came from.",
+  "_comment": "The surname chains. `head` is walked up through father-links, so the chain always tracks the data and is never written down. `origin` is what is known about where the surname came from.",
   "lineages": [
     {
       "key": "Bundervoet",

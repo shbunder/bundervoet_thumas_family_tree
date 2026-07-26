@@ -9,7 +9,6 @@ death:
   date: "1777"
   raw: buried 13 December 1777 at Assenede, aged about 50
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: joannes_b
 mother: livina_stockman

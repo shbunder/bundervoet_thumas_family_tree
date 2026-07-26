@@ -9,7 +9,6 @@ death:
   date: 1867-07-17
   place: Varsenare
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: anna_perquy

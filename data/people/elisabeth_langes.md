@@ -7,7 +7,6 @@ death:
   raw: alive on 24 April 1873; death not known
 confidence: sup
 occupation: landbouwster (farmer)
-branch: Thumas
 line: thumas
 spouses:
   - id: jb_vandenbemden

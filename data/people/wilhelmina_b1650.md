@@ -6,7 +6,6 @@ sex: f
 birth:
   date: ~1650
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: livinus_bundervoet
 mother: catharina_vanhecke

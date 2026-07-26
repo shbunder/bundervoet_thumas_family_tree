@@ -10,7 +10,6 @@ death:
   place: Kraainem
 confidence: sup
 occupation: naaister (seamstress)
-branch: Thumas
 line: thumas
 father: hendrik_vdb
 mother: coekelberghs

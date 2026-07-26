@@ -7,7 +7,6 @@ birth:
 death:
   date: "1768"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_declerck
 mother: judoca_vandekeere

@@ -4,7 +4,6 @@ name: Sophie Miranda Deridder
 surname: Deridder
 sex: f
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: georgesjoseph_t

@@ -9,7 +9,6 @@ death:
   date: 1880-06-08
   place: Hamme (Oost-Vlaanderen)
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 father: edouard_bocklandt
 mother: marie_vanbergen

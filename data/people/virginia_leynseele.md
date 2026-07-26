@@ -5,7 +5,6 @@ surname: Leynseele
 birth:
   date: "1818"
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: engel_antonius_vincke

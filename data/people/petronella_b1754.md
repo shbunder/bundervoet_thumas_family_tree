@@ -8,7 +8,6 @@ birth:
 death:
   date: "1794"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: petrus_b1727
 mother: marie_anna_dedeckere

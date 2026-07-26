@@ -9,7 +9,6 @@ death:
   date: "1557"
 confidence: sup
 occupation: landbouwer (farmer)
-branch: Bundervoet
 line: bostyn-cappaert
 father: judocus_sabbe_1475
 spouses:

@@ -6,7 +6,6 @@ death:
   date: 1843-12-19
   place: Zaventem
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: egidius_peremans

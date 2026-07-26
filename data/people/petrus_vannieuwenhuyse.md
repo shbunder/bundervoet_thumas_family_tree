@@ -9,7 +9,6 @@ death:
   date: "1701"
 confidence: sup
 occupation: schepen van Oostkamp (alderman)
-branch: Bundervoet
 line: bostyn-cappaert
 father: marinus_vannieuwenhuyse
 mother: cornelia_govaert

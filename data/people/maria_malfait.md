@@ -3,9 +3,10 @@ id: maria_malfait
 name: Maria Lodewijka Malfait
 surname: Malfait
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: livinus_verkouille
     name: Livinus Hermanus Verkouille
+sources:
+  - tree-wernero
 ---

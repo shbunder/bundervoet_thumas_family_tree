@@ -6,7 +6,6 @@ birth:
   date: 1913..1914
   place: Oostende?
 confidence: fam
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: gustaaf

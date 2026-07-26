@@ -4,7 +4,6 @@ name: Francine Bisschop
 surname: Bisschop
 sex: f
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: marcel_b

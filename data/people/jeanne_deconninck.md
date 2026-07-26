@@ -4,7 +4,6 @@ name: Jeanne Marie Deconninck
 surname: Deconninck
 sex: f
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: guillaume_joostens

@@ -10,7 +10,6 @@ death:
   place: Grez-Doiceau
 confidence: doc
 occupation: menuisier (carpenter)
-branch: Thumas
 line: thumas
 father: georgeslambert_t
 mother: quinart

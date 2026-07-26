@@ -10,7 +10,6 @@ death:
   place: Oostende
 confidence: sup
 occupation: werkster (charwoman)
-branch: Devriendt
 line: devriendt
 father: livinus_verkouille
 mother: maria_malfait

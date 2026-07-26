@@ -9,7 +9,6 @@ death:
   date: 1866-07-26
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: appolonia_huyghebaert

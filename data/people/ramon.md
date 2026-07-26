@@ -7,7 +7,6 @@ birth:
   place: Oostende
 confidence: sup
 occupation: werkmeid & herbergierster (maid/innkeeper)
-branch: Devriendt
 line: devriendt
 father: carolus_ramon
 mother: cornelia_verkouille

@@ -3,7 +3,6 @@ id: rolandus_govaert
 name: Rolandus Govaert
 surname: Govaert
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: maria_vandenbussche

@@ -359,10 +359,9 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
 
   // ---------- lineages ----------
 
-  // Resolve a lineage's people: an explicit chain if given, otherwise walk
-  // father-links up from `head` so the chain always tracks the data.
+  // A lineage's people, walked up through father-links from `head`, so the chain always
+  // tracks the data. Never stored: a written-down chain is a second copy of the links.
   function lineageChain(line) {
-    if (line.chain) return line.chain;
     const out = [];
     const seen = new Set();
     let id = line.head;
@@ -439,7 +438,7 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
   const FIELD_LABEL = {
     name: 'lblName', born: 'lblBorn', died: 'lblDied', dates: 'lblDates',
     spouse: 'lblSpouse', occupation: 'lblOccupation', nickname: 'lblNickname',
-    branch: 'lblBranch', note: 'lblNote', source: 'lblSource',
+    note: 'lblNote', source: 'lblSource',
   };
 
   function searchResults(results, term) {
@@ -588,11 +587,11 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
         };
       };
     }
-    // The curated headings, in the order site/labels.json gives them. Anyone it
-    // does not mention falls back to their branch, which is why nobody goes missing.
+    // The curated headings, in the order site/labels.json gives them. Anyone it does
+    // not mention falls through to 'unplaced', which is why nobody goes missing.
     return id => {
       const p = people[id];
-      const title = (p.line && titleOfLine(p.line)) || p.branch || t('unplaced');
+      const title = (p.line && titleOfLine(p.line)) || t('unplaced');
       return {
         key: title,
         title,

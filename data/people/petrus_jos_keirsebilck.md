@@ -9,7 +9,6 @@ death:
   date: 1817-05-20
   place: Oostkamp
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: joannes_keirsebilck_1728
 mother: maria_c_declerck

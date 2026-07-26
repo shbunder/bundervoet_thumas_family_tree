@@ -5,7 +5,6 @@ surname: Stroobandt
 death:
   date: 1660..1670
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: judoca_vanhecke

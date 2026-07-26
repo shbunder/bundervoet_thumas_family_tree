@@ -8,7 +8,6 @@ death:
   date: 1945-06-27
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: joannes_vi2
 mother: hermanie_janssen

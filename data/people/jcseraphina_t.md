@@ -7,7 +7,6 @@ birth:
   place: Kraainem
 sex: f
 confidence: sup
-branch: Thumas
 line: thumas
 father: georges_cj
 mother: bossin

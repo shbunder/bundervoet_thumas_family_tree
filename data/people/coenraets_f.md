@@ -8,7 +8,6 @@ birth:
 sex: m
 confidence: sup
 occupation: brouwersgast (brewer's man)
-branch: Thumas
 line: thumas
 father: coenraets_sr
 mother: godts

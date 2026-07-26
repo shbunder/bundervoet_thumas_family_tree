@@ -7,7 +7,6 @@ birth:
   raw: declared at Sint-Stevens-Woluwe on 5 October 1853
   place: Sint-Stevens-Woluwe
 confidence: sup
-branch: Thumas
 line: thumas
 father: guilielmus_bossin
 mother: peremans

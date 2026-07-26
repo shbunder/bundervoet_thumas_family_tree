@@ -9,7 +9,6 @@ death:
   date: 1747-12-29
   place: Wingene
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: anna_c_devriese

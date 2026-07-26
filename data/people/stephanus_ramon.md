@@ -6,7 +6,6 @@ death:
   date: 1776-03-29
   place: Zande
 confidence: sup
-branch: Devriendt
 line: devriendt
 spouses:
   - id: joanna_truant

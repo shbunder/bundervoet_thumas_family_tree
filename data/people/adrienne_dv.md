@@ -9,7 +9,6 @@ death:
   date: 1991-09-22
   place: Oostende
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 father: eugenius_dv
 mother: octavia_schal

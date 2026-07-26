@@ -4,7 +4,6 @@ name: Clementius Robaert
 surname: Robaert
 sex: m
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: francisca_vanhoutte

@@ -5,7 +5,7 @@
 // of a pair, so it can relate anyone to anyone. The tree's familiar labels
 // ("Great-grandmother") are just that engine pointed at the root.
 
-FamilyTree.createKinship = function ({ meta, people, branches }, i18n) {
+FamilyTree.createKinship = function ({ meta, people }, i18n) {
   const ROOT = meta.root;
   // A forest has more than one starting family. `roots` is what the index and the
   // validator measure from; a tree with a single root is the one-element case.
@@ -391,11 +391,11 @@ FamilyTree.createKinship = function ({ meta, people, branches }, i18n) {
 
   // ---------- sources ----------
 
-  // Per-person source wins, then the branch default, then the catch-all.
-  const sourceFor = id => {
-    const p = people[id];
-    return p.source || (p.branch && branches[p.branch]) || meta.defaultSource;
-  };
+  // The record's own citation, or the catch-all. There used to be a `branch` default
+  // between the two — a per-person field on 425 records that only ever answered "which
+  // source backs this person", for the 31 who cited nothing themselves. Those 31 now cite
+  // it directly, which is both shorter and more honest: the citation is on the record.
+  const sourceFor = id => people[id].source || meta.defaultSource;
 
   const confidenceOf = id => people[id]?.confidence || 'doc';
   const isResearchable = id => Boolean(people[id]) && confidenceOf(id) !== 'unk';

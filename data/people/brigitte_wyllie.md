@@ -9,7 +9,6 @@ death:
   date: 1824-11-08
   place: Diksmuide
 confidence: sup
-branch: Bundervoet
 line: van-iseghem
 spouses:
   - id: antoine_vanald

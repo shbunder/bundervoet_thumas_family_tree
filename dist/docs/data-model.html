@@ -662,6 +662,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-everything-lives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where everything lives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stored-versus-derived" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -974,6 +985,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-everything-lives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where everything lives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stored-versus-derived" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1098,14 +1120,73 @@ this shape, and what the validator guarantees.</p>
 Markdown prose below it for everything a field cannot hold.</p>
 <div class="highlight"><pre><span></span><code>data/people/&lt;id&gt;.md     strict frontmatter + prose body
 data/artifacts/&lt;id&gt;.*   a saved primary document + a record describing it
-data/meta.json          roots, confidence codes
-data/branches.json      surname branch → its default source id
+data/meta.json          roots, the default source, confidence codes
 data/lineages.json      the surname chains
 data/forenames.json     forenames that are one name in another language, split by sex
 </code></pre></div>
 <p>Nothing in <code>data/</code> is executable. It is JSON and Markdown, readable by any tool without a
-JavaScript engine — <code>jq '.branches' data/branches.json</code> works, and so does <code>grep</code> over the
+JavaScript engine — <code>jq '.lineages' data/lineages.json</code> works, and so does <code>grep</code> over the
 person records. That is a deliberate durability property: the data outlives the tooling.</p>
+<h2 id="where-everything-lives">Where everything lives<a class="headerlink" href="#where-everything-lives" title="Permanent link">&para;</a></h2>
+<p><strong>The one authoritative listing.</strong> <code>CLAUDE.md</code> and <code>README.md</code> link here rather than
+repeating it: there were three copies, and when <code>data/forenames.json</code> was added only two of
+them learned about it.</p>
+<p>Three top-level directories are kept apart because different rules apply to each. <code>data/</code> is
+the only place a name or a date may appear; <code>site/</code> is wording the page shows and cannot
+change what the tree claims; <code>assets/</code> contains neither.</p>
+<div class="highlight"><pre><span></span><code>index.html                      landing page — loads no JavaScript
+Renee-Leon-family-tree.html     the interactive tree (page shell only)
+
+data/people/&lt;id&gt;.md             source of truth: strict frontmatter + prose body
+data/artifacts/&lt;id&gt;.*           a saved primary document + a record describing it
+data/meta.json                  roots, the default source, confidence codes
+data/lineages.json              the surname chains
+data/forenames.json             forenames that are one name in another language, by sex
+
+site/labels.json                presentation only, in every language: UI strings, Index
+                                headings, footer, relation vocabulary. No word the page
+                                shows is written anywhere else — see assets/js/i18n.js
+
+research/sources.json           the registry — SITES (venues) and PAGES (trees, documents)
+research/searches.jsonl         the search log, append-only: what each search found, or why not
+research/labels.jsonl           the gold standard: every verifier ruling, as a labelled pair
+research/harvest/               the corpus — acts from Open Archives. GITIGNORED
+research/harvest/corpus.db      the derived index over those acts. GITIGNORED, rebuildable
+research/harvest/manifest.json  which queries were run — committed, so the corpus replays
+
+tools/familytree/               the library every tool shares
+  people.py                     the loader, the date grammar, the browser record, the census
+  frontmatter.py                the parser for the records&#39; strict YAML subset
+  sources.py                    the registry and the search log, and what makes an entry valid
+  labels.py                     the gold standard, readable by the QUEUES and not only the scorer
+  landing.py                    what index.html says about the size of the tree
+  bundle.py                     data/ + site/ -&gt; dist/bundle.js
+  gedcom.py                     the GEDCOM 7 writer and its round-trip self-check
+  corpus.py                     harvested acts read as EVENTS: roles, parent edges, frequencies
+  a2a.py                        the same acts as XML — what makes a whole archive one request
+  store.py                      the corpus as a SQLite index: blocking keys, offsets, frequencies
+  match.py                      blocking keys, Flemish phonetics, rarity-weighted scoring
+  frontier.py                   the ranked queue: value x P(resolvable) / cost
+  coverage.py                   which act answers most frontiers; components; pedigree collapse
+tools/build.py                  validates, then writes everything generated
+tools/check_data.py             the validator
+tools/verify_all.py             the whole tree scored against the whole corpus, in one pass
+tools/research.py               the log, the registry, and every derived report
+tools/harvest.py                pull acts from Open Archives and keep them
+tools/link.py                   join the held acts to a frontier — candidates, never conclusions
+tools/identify.py               is this person already in the tree? ask before writing a record
+tools/evaluate.py               the gold standard: label a ruling, then measure the scorer on it
+tools/export_gedcom.py          writes exports/family-tree.ged
+
+assets/                         presentation only — no names, no dates
+docs/                           the method, written up — mkdocs.yml renders it to dist/docs/
+docs/research-log.md            numbered passes: found / checked-and-negative / next
+docs/sources.md                 readable source list — GENERATED from research/sources.json
+dist/bundle.js                  GENERATED — what the page loads
+exports/family-tree.ged         GENERATED — GEDCOM 7
+archive/                        superseded drafts, not part of the site
+pyproject.toml                  the uv project. No dependencies, on purpose
+</code></pre></div>
 <h2 id="stored-versus-derived">Stored versus derived<a class="headerlink" href="#stored-versus-derived" title="Permanent link">&para;</a></h2>
 <p>The central discipline. <strong>Only irreducible facts are stored.</strong> Everything else is
 computed on load from <code>father</code>/<code>mother</code> links:</p>
@@ -1275,7 +1356,19 @@ people, which is much closer to how <code>corpus.py</code> already works.</p>
    <a href="method/scaling.html">Scaling</a>.</li>
 <li><strong>Sex is unknown for anyone childless</strong> unless their record states it — relations then
    read "sibling" rather than "sister". Fill <code>sex</code> in only from what a record says, never
-   from a forename.</li>
+   from a forename. <em>(Nobody is currently unknown: every person who is nobody's parent
+   states it.)</em></li>
+<li><strong>A marriage that ended in death has no end date</strong>, because it is derivable from the two
+   death dates and inventing a field for it would invite recording a guess. Only <code>divorced</code>
+   is stored. If that derivation is ever wanted on the page, derive it.</li>
+<li><strong>Step-relations are unnamed on purpose.</strong> <code>relationBetween</code> goes blood first, then
+   exactly one marriage step, then stops — so a stepmother reads as "X married Y, who is
+   Z's father" rather than "stepmother", and a step-sibling reads as no connection. Beyond
+   one step the wording stops meaning anything reliable, and a wrong in-law label is the
+   same class of error as a wrong graft: unfalsifiable prose that reads as fact.</li>
+<li><strong>The veto rule is stated in three places</strong> — the scorer, a SQL pre-filter and the
+   validator. Deliberate, and the reasoning is in
+   <a href="method/linkage.html#the-veto-rule-lives-in-three-places-and-that-is-a-cost-being-paid-on-purpose">Record linkage</a>.</li>
 </ol>
 
 

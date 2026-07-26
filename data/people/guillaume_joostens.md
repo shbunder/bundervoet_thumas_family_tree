@@ -3,7 +3,6 @@ id: guillaume_joostens
 name: Guillaume Joostens
 surname: Joostens
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: jeanne_deconninck

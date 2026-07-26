@@ -7,7 +7,6 @@ birth:
   date: 1890-01-11
   place: Aartrijke
 confidence: doc
-branch: DeKeyser
 line: de-keyser
 spouses:
   - id: benoni_rossel

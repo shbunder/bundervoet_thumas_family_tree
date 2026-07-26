@@ -21,16 +21,12 @@ make it.
 from __future__ import annotations
 
 import argparse
-import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from familytree import store  # noqa: E402
-from familytree.corpus import Mention, corpus_exists, surname_coverage  # noqa: E402
-from familytree.frontier import children_index, frontier_rows  # noqa: E402
-from familytree.match import compare, from_person, surname_weight  # noqa: E402
-from familytree.people import load_config, load_people  # noqa: E402
+from familytree import store
+from familytree.corpus import Mention, corpus_exists, surname_coverage
+from familytree.frontier import frontier_rows
+from familytree.match import compare, from_person, surname_weight
+from familytree.people import children_index, load_config, load_people
 
 BANDS = {"strong": "STRONG", "read the act": "READ THE ACT", "noise": "weak", "rejected": "rejected"}
 

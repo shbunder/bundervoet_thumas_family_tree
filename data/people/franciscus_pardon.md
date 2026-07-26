@@ -10,7 +10,6 @@ death:
   place: Zaventem
 confidence: sup
 occupation: dienstbode (servant)
-branch: Thumas
 line: thumas
 father: guilielmus_pardon
 mother: maria_anna_pergijsels

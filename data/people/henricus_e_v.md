@@ -9,7 +9,6 @@ death:
   date: 1941-01-17
   place: Oostende
 confidence: sup
-branch: Vanstechelman
 line: vanstechelman
 father: petrusjacobus_v
 mother: clementia_w

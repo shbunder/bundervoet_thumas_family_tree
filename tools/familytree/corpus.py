@@ -70,6 +70,36 @@ def normalise_key(s: str | None) -> str:
     return re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", (s or "").lower()))
 
 
+# Particles and placeholders are not forenames, and treating them as ones manufactures
+# agreement out of nothing: "van" is a token in a large share of Flemish names, so a
+# spouse recorded as "Catharina van Hecke" matched every "… Van Keymeulen" in the corpus
+# and scored it as a shared forename. "NN" is this project's marker for a name a record
+# never gave, which makes it the emptiest evidence there is.
+NOT_A_FORENAME = frozenset({
+    "van", "de", "den", "der", "des", "ten", "ter", "het", "t", "d", "le", "la", "du",
+    "vande", "vanden", "vander", "vandc", "nn", "onbekend", "ux", "uxor",
+})
+
+
+def given_tokens(text: str | None) -> list[str]:
+    """The comparable forename tokens in a name, in the order they were written.
+
+    THE definition, and it has to be one: a particle slipping through is indistinguishable
+    from evidence downstream. It had become four — this one, the blocking key in
+    `match.block_keys`, and the frequency counters in `store.build` and
+    `count_frequencies` — of which only this one dropped the particles, so the rarity
+    tables counted "van" and "nn" as forenames and a blocking key could be minted off one.
+    Nothing looked those up, which is the only reason it never showed.
+
+    Ordered, not a set, because the blocking key takes the FIRST token and a frozenset
+    would hand it an arbitrary one — a different blocking key per interpreter run.
+    Compound given names are the norm here ("Christianus Josephus") and each element
+    carries its own rarity, so they stay separate.
+    """
+    return [g for g in (normalise_key(x) for x in (text or "").split())
+            if g and g not in NOT_A_FORENAME]
+
+
 def _as_list(v):
     """Single-element lists arrive as bare objects, so everything is coerced to a list
     before it is read. Getting this wrong loses the only participant in an act."""
@@ -631,11 +661,8 @@ def count_frequencies() -> Frequencies:
         s = normalise_key(m.surname)
         if s:
             f.surnames[s] += 1
-        # Compound given names are the norm here ("Christianus Josephus"), and each
-        # element carries its own rarity, so they are counted separately.
-        for g in (normalise_key(x) for x in (m.given or "").split()):
-            if g:
-                f.givens[g] += 1
+        for g in given_tokens(m.given):
+            f.givens[g] += 1
         place = normalise_key(m.act.place if m.act else None)
         if place:
             f.places[place] += 1

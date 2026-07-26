@@ -3,7 +3,6 @@ id: carolus_vandenberghe
 name: Carolus Vandenberghe
 surname: Vandenberghe
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - name: (wife uncertain)

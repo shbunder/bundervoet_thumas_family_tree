@@ -7,7 +7,6 @@ birth:
 death:
   date: "1678"
 confidence: sup
-branch: Bundervoet
 line: bundervoet
 father: willem_vanhecke
 spouses:

@@ -6,7 +6,6 @@ death:
   date: "1855"
   place: Roksem
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: pieter_stekelorum
 mother: helena_denijs

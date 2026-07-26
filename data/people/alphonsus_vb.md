@@ -4,7 +4,6 @@ name: Alphonsus Van Bogaert
 surname: Van Bogaert
 sex: m
 confidence: sup
-branch: DeKeyser
 line: paelinck
 father: carolus_vb
 mother: martinet

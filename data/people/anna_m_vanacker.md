@@ -7,7 +7,6 @@ birth:
 death:
   date: "1820"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: henricus_vanacker
 mother: francisca_vanmaele

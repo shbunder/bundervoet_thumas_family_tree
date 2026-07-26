@@ -6,7 +6,6 @@ death:
   date: >1846
   raw: alive on 24 February 1846; not stated to be present in 1853
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: arnoldus_bossin

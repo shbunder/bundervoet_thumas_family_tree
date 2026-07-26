@@ -8,7 +8,6 @@ birth:
   place: Hamme (Oost-Vlaanderen)
 confidence: sup
 occupation: werkmeid (housemaid)
-branch: DeKeyser
 line: de-keyser
 father: edouard_bocklandt
 mother: marie_vanbergen

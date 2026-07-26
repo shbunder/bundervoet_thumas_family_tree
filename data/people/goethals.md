@@ -10,7 +10,6 @@ death:
   place: Evergem
 confidence: sup
 occupation: farm woman
-branch: Bundervoet
 line: bundervoet
 spouses:
   - id: bernardus

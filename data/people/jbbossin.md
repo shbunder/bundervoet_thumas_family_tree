@@ -6,7 +6,6 @@ death:
   date: 1887-03-19
   place: Sint-Stevens-Woluwe
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: maria_wolf

@@ -6,7 +6,6 @@ birth:
   date: 1670-02-21
   place: Dentergem (Wakken)
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: martinus_degrande
 mother: egidia_damman

@@ -9,7 +9,6 @@ death:
   date: "1907"
 confidence: sup
 occupation: huishoudster (housekeeper)
-branch: Thumas
 line: thumas
 father: egidius_peremans
 mother: joanna_verelst

@@ -6,7 +6,6 @@ birth:
   date: 1641-07-02
   place: Wingene
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: andreas_vanmaele
 mother: catharina_willems

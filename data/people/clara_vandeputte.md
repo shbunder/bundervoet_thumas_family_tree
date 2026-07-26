@@ -3,7 +3,6 @@ id: clara_vandeputte
 name: Clara Vande Putte
 surname: Vande Putte
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 spouses:
   - id: willem_sabbe_y

@@ -9,7 +9,6 @@ death:
   date: 1790-10-31
   place: Handzame
 confidence: sup
-branch: Devriendt
 line: devriendt
 father: stephanus_ramon
 mother: joanna_truant

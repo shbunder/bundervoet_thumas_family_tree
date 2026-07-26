@@ -3,7 +3,6 @@ id: jb_vandenbemden
 name: Jan Baptist Van den Bemden
 surname: Van den Bemden
 confidence: sup
-branch: Thumas
 line: thumas
 spouses:
   - id: elisabeth_langes

@@ -7,7 +7,6 @@ birth:
 death:
   date: "1666"
 confidence: sup
-branch: Bundervoet
 line: bostyn-cappaert
 father: laurentius_willems
 mother: margaretha_vermeersch
