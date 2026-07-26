@@ -76,3 +76,8 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 21 | 2026-07-26 | carolus_vb, martinet | CORROBORATED | CORROBORATED | Couple attested by their son's 1909 Sint-Niklaas marriage act. | 8eb229a |
 | 21 | 2026-07-26 | alphonsus_vb | — | ADDED | Their son, brother of magdalena_vb, from the same act. 328 people. | 8eb229a |
 | 21 | 2026-07-26 | — (tooling) | — | — | Second `_text()` gap fixed: person-level place/residence/profession/age also arrive as dicts. verify_all crashed on it. | 8eb229a |
+| 22 | 2026-07-26 | hubert_devriese | CORROBORATED | REJECTED | b.1665 Tielt matched to a **1911 Brussels** marriage. ~200 years out. | 69665d9 |
+| 22 | 2026-07-26 | edouard_dk | CORROBORATED | REJECTED | d.1951 matched to a 1963 Oostende death (Albert Dekeyser). | 69665d9 |
+| 22 | 2026-07-26 | gustaaf | CORROBORATED | REJECTED | Matched via **Simonne Barbier** d.2016 — because his wife was also a Simonne. | 69665d9 |
+| 22 | 2026-07-26 | joannes_jos_vi, joannes_vi2 | CORROBORATED | REJECTED | Van Iseghems with different forenames (Jacobus; Charles Thomas Jean). | 69665d9 |
+| 22 | 2026-07-26 | — (finding) | — | — | **The bucket is still too generous.** All five anchored on a big commune merely *appearing* in the act, with kin agreement on a forename. §43's rule was necessary, not sufficient. | 69665d9 |

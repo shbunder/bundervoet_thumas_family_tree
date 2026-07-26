@@ -1001,3 +1001,49 @@ registers.
 Validator green — 309 people, 19 documented, 53 registered sources, 5 artifacts.
 
 *End of log.
+
+## 44. What "corroborated" is still letting through
+
+Working the corroborated bucket to the bottom. Of the twelve people in it who had no act
+citation yet, **two were real and five were plainly wrong** — and the five are wrong in the
+same way, which is worth writing down.
+
+- **[[hubert_devriese]]**, born 1665 at Tielt and dead 1728 at Wingene, was matched to a
+  **Brussels marriage of 1911**. Nearly two centuries out.
+- **[[edouard_dk]]**, died 1951, was matched to an Albert Dekeyser standing as surviving
+  partner in a **1963** Oostende death.
+- **[[gustaaf]]** was matched to André Dekeyser, widower of **Simonne Barbier**, who died at
+  Oostende in **2016** — because our Gustaaf's wife was also a Simonne. A shared forename
+  between two men's wives, seventy years apart, read as a spouse agreement.
+- **[[joannes_jos_vi]]** and **[[joannes_vi2]]** were matched to Van Iseghems with entirely
+  different forenames — Jacobus, and Charles Thomas Jean.
+
+In every case the anchor that let them into the bucket was a **place**, and in every case the
+place was a large commune — Oostende, Brugge, Tielt — appearing *somewhere* in the act rather
+than as the person's own event place. The supporting evidence was a **kin agreement on a
+forename**, not a surname.
+
+So the rule added in §43 — that a date or place must agree, not only names — was necessary and
+is not sufficient. Two refinements suggest themselves, and both are matters for the scorer
+rather than for a record:
+
+1. **A place should only anchor when it is the person's own event place.** "Oostende appears
+   in this act" is not evidence; a third of this tree lived there.
+2. **Kin agreement should need the relative's surname, not just their forename.** Two Simonnes
+   is a coincidence. Two Simonne Vandewalles is not.
+
+The five are labelled as non-matches with `tools/evaluate.py`, which is the first real content
+in that file — and the report already earns its keep, because it says the scorer's own
+`graftable` gate would have refused all five. The gate is stricter than the sweep's display,
+which means **the number this run has been reporting as "corroborated" is too generous**, and
+the honest count of usable corroborations is nearer half of it.
+
+Recorded rather than fixed: the sweep is mid-run and the instruction is not to edit the tools
+during one.
+
+**What was real in the same bucket**, and is written up in §43's successors: Louise Bocklandt's
+death fixed to 15 July 1946 with a second husband, Petrus Blomme; and Carolus Ludovicus Van
+Bogaert and Maria Ludovica Martinet attested as a couple by their son's 1909 marriage act,
+which also produced a son the tree lacked.
+
+*End of log.
