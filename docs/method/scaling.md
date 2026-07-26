@@ -8,22 +8,39 @@ Current state: **~307 people, ~3,000 acts.** Target: order **10⁷ person-record
 
 ---
 
-## 1. Ingestion — the binding constraint
+## 1. Ingestion — done, and it was the binding constraint
 
-Harvesting currently fetches one act per API call at ~3 requests/second. Belgium is on
-the order of 8 million acts: **roughly a month of continuous fetching**, against a free
+Harvesting used to fetch one act per API call at ~3 requests/second. Belgium is on the
+order of 8 million acts: **roughly a month of continuous fetching**, against a free
 service run by other people. Possible, but the wrong tool and a poor guest.
 
-**The fix already exists at the venue.** Open Archives publishes:
+**The fix already existed at the venue.** Open Archives publishes:
 
 - **bulk data dumps** in the A2A model — N-Triples (linked data), XML, and CSV;
 - an **OAI-PMH provider** for incremental harvesting.
 
-So `harvest.py` should become three phases: *bulk download → local normalise → OAI-PMH
-delta*, with `records/show` retained only for gap-filling. This is the single
-highest-leverage change available, and it fixes something else for free — the rarity
-counts stop depending on which surnames happened to be harvested, because the whole
-population is present.
+Both are now used. `harvest.py bulk <archive>` downloads and streams a whole archive's
+gzipped A2A export; `harvest.py oai <archive>` pages the OAI-PMH feed at 150 full records
+a request; `records/show` is retained for gap-filling and for the archives that publish
+neither. `familytree/a2a.py` reads that XML into the exact shape the JSON API returns, so
+the routes are interchangeable rather than merely similar — checked against real data:
+all 1,361 Kortrijk acts held from the API normalise to records identical to the same acts
+read out of the bulk export.
+
+The measured difference is the whole argument. Kortrijk is **140,543 acts in a 19 MB
+download, parsed in 12 seconds**, where months of per-act harvesting had reached 1,361 of
+them. Where an archive publishes an export, nothing else should be used.
+
+**What is still missing.** The two collections this tree mostly rests on — the Rijksarchief
+civil acts (`ab*`) and the Familiekunde Vlaanderen sets (`fv*`, `fwk`) — publish neither an
+export nor an OAI set, so for those the per-act endpoint remains the only route. That is now
+the binding constraint on ingestion, and it is a question to put to the venue rather than an
+engineering problem. 18 of the 52 archives already represented in the corpus do have exports;
+`harvest.py status` lists them.
+
+The side benefit promised here has arrived with the same caveat: rarity counts stop depending
+on which surnames happened to be harvested *for the archives pulled whole*, and still depend
+on it everywhere else.
 
 ## 2. Storage — two tiers, not one
 
@@ -34,7 +51,19 @@ makes an existing rule physical:
 | Tier | Holds | Scale | Where |
 |---|---|---|---|
 | **Conclusions** | Verified identities, citations, prose reasoning | 10³–10⁵ | `data/people/*.md`, in git |
-| **Corpus** | Acts, mentions, scored candidate links, clusters | 10⁷+ | Columnar store (DuckDB/Parquet), rebuildable, gitignored |
+| **Corpus** | Acts, mentions, scored candidate links, clusters | 10⁷+ | Columnar store (DuckDB/Parquet), re-buildable, gitignored |
+
+The first half of that row exists: `familytree/store.py` is a SQLite index over the harvest —
+blocking keys, per-mention fields, the frequency tables, and byte offsets into the JSONL
+rather than a second copy of the acts. It made a candidate lookup a query instead of a parse
+of the whole corpus (`link.py`: 12 s → 0.3 s), and it carries the signature of every harvest
+file so it rebuilds instead of silently lagging behind the acts.
+
+SQLite rather than DuckDB/Parquet for one reason: it is stdlib, and `pyproject.toml`
+deliberately declares no dependencies. The columnar store is the right answer at 10⁷ and the
+wrong answer at 10⁵, and the schema here is ordinary enough to port when the time comes. What
+should *not* change is the invariant below, which is why the index holds no evidence of its
+own — deleting it loses nothing.
 
 The invariant that keeps this honest:
 

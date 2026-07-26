@@ -27,6 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from familytree import sources as reg  # noqa: E402
+from familytree import store  # noqa: E402
 from familytree.corpus import corpus_exists, load_corpus, load_manifest  # noqa: E402
 from familytree.coverage import (  # noqa: E402
     act_coverage, greedy_cover, missing_children, pedigree_collapse, surname_clusters,
@@ -538,6 +539,12 @@ def main() -> int:
         p.set_defaults(fn=fn)
 
     args = parser.parse_args()
+    # The reports that read the corpus want the index current before they start, so the
+    # rebuild is announced and attributed rather than appearing as an unexplained pause
+    # in the middle of a report. The rest — the log, the registry, the docs — never touch
+    # the corpus and must not pay for it.
+    if args.command in ("frontiers", "acts", "children", "components"):
+        store.ensure(verbose=True)
     args.fn(args)
     return 0
 

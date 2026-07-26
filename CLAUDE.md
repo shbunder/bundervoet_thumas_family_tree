@@ -140,6 +140,29 @@ person and throws away the other five. So acts are now **harvested and kept**
 every open frontier at once. This is family reconstitution, which historical
 demography has done since Louis Henry; the modern form is the IISG's LINKS project.
 
+**Fetching was one HTTP request per act.** Which is fine for a surname and hopeless for a
+province: at the four requests a second the venue permits, Belgium's ~30 million
+person-mentions are about a month of continuous fetching, and 1.2% of them are held. The
+same records are published whole — a gzipped A2A export per archive, and an OAI-PMH feed
+serving 150 full records a request — so `harvest.py bulk` takes an archive in one request
+and `harvest.py oai` in a few hundred. Kortrijk is 140,543 acts in a 19 MB download, where
+the per-act route had fetched 1,361 of them. `familytree/a2a.py` reads that XML into
+exactly the shape the JSON API returns, which is what makes the routes interchangeable:
+all 1,361 Kortrijk acts held both ways normalise to identical records. The per-act endpoint
+remains the only route to the Rijksarchief and Familiekunde sets, which publish neither.
+
+**Every command re-derived the whole corpus.** Reading 100,000 acts to answer a question
+about one person — 9.5 seconds and half a gigabyte, per invocation, and `link.py` paid it
+again for the next person. The blocking keys already say which records could possibly be
+compared, so `familytree/store.py` keeps them in a SQLite index and a candidate lookup
+becomes a query: `link.py` went from 12 seconds to 0.3. The index holds byte offsets, never
+a second copy of the acts, and stores the signature of every harvest file so it rebuilds
+rather than silently lagging — an index answering "no candidates" for an act fetched an
+hour ago is the corpus form of reporting `blocked` as `miss`. The in-memory scan stays for
+the reports that genuinely touch every act: `verify_all.py` is *slower* through the index
+(40s against 27s) because a whole-tree sweep needs nearly all of them, and that was
+measured rather than assumed.
+
 **The work was O(people × venues), and both grow.** 147 open frontiers against 17
 registered venues is 2,500 cells, and every person added opens up to two more. A queue
 that ranks only by generation cannot converge — it has no way to prefer the frontier
@@ -298,6 +321,7 @@ research/sources.json   the registry — SITES (venues) and PAGES (trees, docume
 research/searches.jsonl the search log, append-only: what each search found, or why not
 research/labels.jsonl   the gold standard: every verifier ruling, as a labelled pair
 research/harvest/       the corpus — acts pulled from Open Archives. GITIGNORED
+research/harvest/corpus.db      the derived index over those acts. GITIGNORED, rebuildable
 research/harvest/manifest.json  which queries were run — committed, so the corpus is reproducible
 docs/research-log.md    numbered passes: found / checked-and-negative / next
 docs/searching.md       the search strategy: harvest first, browser second
@@ -310,6 +334,8 @@ tools/familytree/       the library every tool shares
   bundle.py             data/ + site/ -> dist/bundle.js
   gedcom.py             the GEDCOM 7 writer and its round-trip self-check
   corpus.py             harvested acts, read as EVENTS: roles, parent edges, frequencies
+  a2a.py                the same acts as XML — what makes a whole archive one request
+  store.py              the corpus as a SQLite index: blocking keys, offsets, frequencies
   match.py              blocking keys, Flemish phonetics, rarity-weighted scoring
   frontier.py           the ranked queue: value x P(resolvable) / cost
   coverage.py           which act answers most frontiers; components; pedigree collapse
@@ -349,15 +375,19 @@ uv run tools/research.py components        disconnected families — objective 3
 uv run tools/research.py collapse          where the tree folds back on itself
 uv run tools/research.py log …             record a search — hit or miss
 
+uv run tools/harvest.py bulk <archive>     a WHOLE archive in one request — try this first
+uv run tools/harvest.py oai <archive>      a whole archive at 150 acts a request
 uv run tools/harvest.py frontiers          pull the acts the queue is asking for
 uv run tools/harvest.py surname Bundervoet every Belgian record for one surname
-uv run tools/harvest.py status             what is held, and which surnames are missing
+uv run tools/harvest.py status             what is held, what is missing, what is bulk-able
 uv run tools/link.py <person>              what the held acts say about them
 uv run tools/identify.py "<name>" --birth … is this person already in the tree?
+uv run tools/verify_all.py --json          the whole tree scored at once — the run's worklist
 
 uv run tools/evaluate.py label <person> <ref> --match|--nonmatch --why "…"
 uv run tools/evaluate.py report            precision, recall, and every disagreement
 uv run tools/evaluate.py sweep             what moving the graft thresholds would cost
+uv run tools/evaluate.py floor             below which bits no true match has ever been seen
 
 uv run --group dev pytest                  the tests
 uv run --group docs mkdocs serve           the method documentation, live

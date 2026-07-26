@@ -24,6 +24,8 @@ bruid* — so a parent link is a field rather than something to read out of pros
 each act links to its scan and to its `search.arch.be` page.
 
 ```
+uv run tools/harvest.py bulk gnt              a WHOLE archive in ONE request — try first
+uv run tools/harvest.py oai den               a whole archive, 150 acts a request
 uv run tools/harvest.py frontiers            pull what the queue is asking for
 uv run tools/harvest.py surname Bundervoet   every Belgian record for one surname
 uv run tools/harvest.py status               what is held, which surnames are not

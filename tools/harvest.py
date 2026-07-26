@@ -62,6 +62,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from familytree import store  # noqa: E402
 from familytree.a2a import read_acts  # noqa: E402
 from familytree.corpus import (  # noqa: E402
     ACTS_DIR, HARVEST, MANIFEST, MENTIONS_DIR, load_manifest, reset_manifest_cache,
@@ -571,7 +572,7 @@ def cmd_status(args):
             by_archive[f.stem] = sum(1 for line in f.open(encoding="utf-8") if line.strip())
         whole = {h["query"]["archive"] for h in manifest["harvests"]
                  if (h.get("query") or {}).get("archive")}
-        cheap = sorted(set(by_archive) & exports - whole, key=lambda a: -by_archive[a])
+        cheap = sorted((set(by_archive) & exports) - whole, key=lambda a: -by_archive[a])
         if cheap:
             print(f"\n  {len(cheap)} archive(s) you already hold acts from publish a WHOLE-ARCHIVE export.")
             print("  One request each, and it supersedes every future surname query there:\n")
@@ -638,6 +639,12 @@ def main() -> int:
         # Deliberately loud and deliberately not recorded as an empty result.
         print(f"blocked {e}\n  Nothing was read, so nothing is exhausted. Try again later.", file=sys.stderr)
         return 2
+    # The harvest is the only thing that changes the corpus, so it is the right place to
+    # bring the index back into step. Doing it here rather than lazily in whatever report
+    # runs next means the cost lands on the command that caused it, and no later command
+    # quietly answers "no candidates" out of an index that predates the acts.
+    if args.command != "status":
+        store.ensure(verbose=True)
     return 0
 
 

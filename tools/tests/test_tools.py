@@ -398,6 +398,196 @@ def test_an_annotated_value_is_unwrapped_wherever_it_appears():
     assert person.age == 42
 
 
+# ---------- A2A as XML: the bulk and OAI routes ----------
+# The whole case for reading whole archives instead of one act at a time rests on the
+# claim that the XML and the JSON API carry the same record. If that ever stops being
+# true, a bulk harvest silently fills the corpus with subtly different acts, and the
+# scoring built on top of them moves for no visible reason. These pin the convention.
+
+
+def test_a2a_xml_reproduces_the_json_apis_own_shape():
+    """The API is this XML rendered by a fixed convention: attributes become `@name`, an
+    element carrying both an attribute and a value becomes `{"@attr": …, "$": value}`, and
+    a tag repeated inside its parent becomes a list. `corpus.unwrap_annotated` already
+    depends on the middle one — Lommel's annotated place names forced it — so the reader
+    has to reproduce the convention rather than invent a second one."""
+    from xml.etree import ElementTree as ET
+    from familytree.a2a import to_json
+    elem = ET.fromstring(
+        '<A2A xmlns="http://Mindbus.nl/A2A" Version="1.7">'
+        '<Person pid="P1"><PersonName><PersonNameFirstName>Joanna</PersonNameFirstName></PersonName></Person>'
+        '<Person pid="P2"><PersonName><PersonNameFirstName>Petrus</PersonNameFirstName></PersonName></Person>'
+        '<Event><EventPlace><Place TranscriptionRemark="Lommel-Centrum">Lommel</Place></EventPlace></Event>'
+        '<Source><SourcePlace></SourcePlace></Source>'
+        "</A2A>"
+    )
+    got = to_json(elem)
+    assert got["@Version"] == "1.7"
+    # Repeated tag -> list; each keeps its attribute under an @ key.
+    assert [p["@pid"] for p in got["Person"]] == ["P1", "P2"]
+    # Text only -> a bare string, not a wrapper.
+    assert got["Person"][0]["PersonName"]["PersonNameFirstName"] == "Joanna"
+    # Text plus an attribute -> the annotated form unwrap_annotated knows.
+    assert got["Event"]["EventPlace"]["Place"] == {"@TranscriptionRemark": "Lommel-Centrum", "$": "Lommel"}
+    # Empty -> absent, so `(src.get("SourcePlace") or {})` reads it the way corpus.py does.
+    assert got["Source"]["SourcePlace"] is None
+
+
+def test_a2a_act_id_matches_the_apis_identifier():
+    """The API's identifier is the record's own RecordGUID with the braces off and the
+    case folded — checked against a full OAI page, 150 headers against 150 GUIDs. It is
+    what lets a whole-archive export deduplicate against acts already fetched one at a
+    time instead of storing everything twice."""
+    from familytree.a2a import act_id
+    assert act_id("den", {"Source": {"RecordGUID": "{4CC17044-D32A-ED11-A635-2D52D61F5E7A}"}}) == \
+        "den:4cc17044-d32a-ed11-a635-2d52d61f5e7a"
+    # No GUID: fall back to the OAI header, which already carries the archive prefix.
+    assert act_id("den", {}, "den:abc") == "den:abc"
+    assert act_id("den", {}, "abc") == "den:abc"
+    # Neither: an act with no id cannot be deduplicated, so it is dropped, not guessed at.
+    assert act_id("den", {}) is None
+
+
+def test_a2a_xml_and_json_normalise_to_the_same_act():
+    """The claim the bulk route rests on, end to end. Verified against real data too —
+    all 1,361 Kortrijk acts held from the JSON API normalise identically to the same acts
+    read out of the bulk export — but that needs the network, so this pins the same
+    equivalence on a record small enough to write down."""
+    import io
+    from familytree.a2a import read_acts
+    from familytree.corpus import normalise_act
+    xml = (
+        '<?xml version="1.0"?><A2ACollection xmlns:a2a="http://Mindbus.nl/A2A">'
+        '<a2a:A2A xmlns:a2a="http://Mindbus.nl/A2A">'
+        '<a2a:Person pid="P1"><a2a:PersonName><a2a:PersonNameFirstName>Alida</a2a:PersonNameFirstName>'
+        "<a2a:PersonNameLastName>Van Iseghem</a2a:PersonNameLastName></a2a:PersonName></a2a:Person>"
+        '<a2a:Person pid="P2"><a2a:PersonName><a2a:PersonNameFirstName>Jacobus</a2a:PersonNameFirstName>'
+        "<a2a:PersonNameLastName>Van Iseghem</a2a:PersonNameLastName></a2a:PersonName></a2a:Person>"
+        "<a2a:Event><a2a:EventType>Overlijden</a2a:EventType>"
+        "<a2a:EventDate><a2a:Year>1861</a2a:Year></a2a:EventDate>"
+        "<a2a:EventPlace><a2a:Place>Brugge</a2a:Place></a2a:EventPlace></a2a:Event>"
+        "<a2a:RelationEP><a2a:PersonKeyRef>P1</a2a:PersonKeyRef>"
+        "<a2a:RelationType>Overledene</a2a:RelationType></a2a:RelationEP>"
+        "<a2a:RelationEP><a2a:PersonKeyRef>P2</a2a:PersonKeyRef>"
+        "<a2a:RelationType>Vader</a2a:RelationType></a2a:RelationEP>"
+        "<a2a:Source><a2a:RecordGUID>{AAAAAAAA-0000-0000-0000-000000000001}</a2a:RecordGUID>"
+        "</a2a:Source></a2a:A2A></A2ACollection>"
+    )
+    rows = list(read_acts(io.BytesIO(xml.encode()), "t", "Test"))
+    assert len(rows) == 1
+    act = normalise_act(rows[0])
+    assert act.id == "t:aaaaaaaa-0000-0000-0000-000000000001"
+    assert (act.type, act.date, act.place) == ("Overlijden", "1861", "Brugge")
+    assert [(p.name, p.role) for p in act.people] == [
+        ("Alida Van Iseghem", "overledene"), ("Jacobus Van Iseghem", "vader")]
+    # The parent edge the whole harvest exists to find.
+    assert {"type": "father", "parent": "P2", "child": "P1"} in act.edges
+
+
+# ---------- the persistent index ----------
+# The index exists to make a question about one person cheap. What must never happen is
+# that it makes it DIFFERENT: a candidate found through the index and one found by
+# scanning have to be the same candidate, or the tools quietly disagree about what the
+# corpus says depending on which one was asked.
+
+
+@pytest.fixture
+def indexed_corpus(tmp_path, monkeypatch):
+    """A three-act corpus on disk, indexed. Small enough to reason about, real enough to
+    go through exactly the code the harvest does."""
+    import json as _json
+    from familytree import corpus, store
+
+    def act(n, given, surname, year, place):
+        return {
+            "id": f"t:{n}", "archive": "t", "archive_org": "Test",
+            "record": {
+                "Event": {"EventType": "Geboorte", "EventDate": {"Year": str(year)},
+                          "EventPlace": {"Place": place}},
+                "Person": [
+                    {"@pid": "P1", "PersonName": {"PersonNameFirstName": given,
+                                                  "PersonNameLastName": surname},
+                     "BirthDate": {"Year": str(year)}, "BirthPlace": {"Place": place}},
+                    {"@pid": "P2", "PersonName": {"PersonNameFirstName": "Vader",
+                                                  "PersonNameLastName": surname}},
+                ],
+                "RelationEP": [
+                    {"PersonKeyRef": "P1", "RelationType": "Kind"},
+                    {"PersonKeyRef": "P2", "RelationType": "Vader"},
+                ],
+            },
+        }
+
+    acts_dir = tmp_path / "acts"
+    acts_dir.mkdir()
+    (acts_dir / "t.jsonl").write_text(
+        "".join(_json.dumps(a) + "\n" for a in (
+            act(1, "Petrus", "Bundervoet", 1879, "Evergem"),
+            act(2, "Petrus", "Bundervoet", 1912, "Evergem"),
+            act(3, "Joanna", "Schalandrijn", 1880, "Hamme"),
+        )), encoding="utf-8")
+
+    monkeypatch.setattr(corpus, "ACTS_DIR", acts_dir)
+    monkeypatch.setattr(store, "ACTS_DIR", acts_dir)
+    monkeypatch.setattr(store, "DB", tmp_path / "corpus.db")
+    monkeypatch.setattr(corpus, "load_manifest", lambda: {"harvests": [], "population": {"be": 1000}})
+    corpus.load_corpus.cache_clear()
+    corpus.frequencies.cache_clear()
+    store.close()
+    store.build()
+    yield store
+    store.close()
+    corpus.load_corpus.cache_clear()
+    corpus.frequencies.cache_clear()
+
+
+def test_the_index_counts_the_same_frequencies_as_a_scan(indexed_corpus):
+    """Every rarity weight in the scorer is measured against these tables, so a
+    divergence here would move every score in the project without changing a single
+    visible threshold."""
+    from familytree import corpus
+    scanned, indexed = corpus.count_frequencies(), indexed_corpus.frequencies()
+    assert (indexed.n, indexed.surnames, indexed.givens, indexed.places) == \
+        (scanned.n, scanned.surnames, scanned.givens, scanned.places)
+
+
+def test_the_index_finds_the_same_candidates_as_a_scan(indexed_corpus):
+    from familytree.corpus import corpus_mentions
+    from familytree.match import build_index, candidates_for, from_mention
+    from familytree.match import Candidate
+    me = Candidate(ref="me", name="Petrus Bundervoet", surname="Bundervoet",
+                   given="Petrus", birth_year=1879, places=["Evergem"])
+    scan = {c.ref for c in candidates_for(me, build_index(from_mention(m) for m in corpus_mentions()))}
+    assert scan == {c.ref for c in indexed_corpus.candidates_for(me)}
+    assert indexed_corpus.candidate_count(me) == len(scan)
+    # And it did find something, so the assertion above is not two empty sets agreeing.
+    assert scan
+
+
+def test_the_index_notices_the_harvest_moving_underneath_it(indexed_corpus, tmp_path):
+    """A stale index answering "no candidates" for an act fetched an hour ago is the
+    corpus form of reporting `blocked` as `miss` — the failure this project is arranged
+    against. So staleness is detected, not assumed away."""
+    import json as _json
+    assert indexed_corpus.is_current()
+    with (tmp_path / "acts" / "t.jsonl").open("a", encoding="utf-8") as f:
+        f.write(_json.dumps({"id": "t:4", "archive": "t", "record": {}}) + "\n")
+    assert not indexed_corpus.is_current()
+
+
+def test_the_index_holds_offsets_not_a_second_copy_of_the_evidence(indexed_corpus):
+    """The JSONL files stay the only copy of the acts. An index that duplicated them
+    could drift from the harvest, and deleting it would lose evidence rather than a
+    derived file."""
+    import sqlite3
+    with sqlite3.connect(indexed_corpus.DB) as db:
+        cols = {r[1] for r in db.execute("PRAGMA table_info(acts)")}
+        rows = db.execute("SELECT id, path, offset, length FROM acts ORDER BY id").fetchall()
+    assert cols == {"id", "path", "offset", "length"}
+    assert [r[0] for r in rows] == ["t:1", "t:2", "t:3"]
+    assert all(isinstance(r[2], int) and r[3] > 0 for r in rows)
+
+
 def _cand(**kw):
     from familytree.match import Candidate
     base = dict(ref="x", name="", surname="", given="")

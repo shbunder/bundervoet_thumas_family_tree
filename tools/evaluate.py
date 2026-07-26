@@ -34,6 +34,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from familytree import store  # noqa: E402
 from familytree.corpus import corpus_exists, corpus_mentions  # noqa: E402
 from familytree.corpus import frequencies  # noqa: E402
 from familytree.frontier import children_index  # noqa: E402
@@ -204,6 +205,81 @@ def cmd_sweep(args) -> int:
     return 0
 
 
+def cmd_floor(args) -> int:
+    """Where the verifier need never look — measured, not guessed.
+
+    `sweep` asks what it would cost to move the GRAFT threshold up. This asks the opposite
+    and cheaper question: how far DOWN the scale can a candidate be discarded without ever
+    having discarded a true match. Everything below that line is work the verifier is
+    currently doing for nothing — and verifier time is the expensive resource in this
+    project, because it is the one that is not a computer.
+
+    The floor is set by the weakest confirmed match in the labels, and nothing else. Not
+    by a percentile, not by a ratio of true to false: by the single true pair that scored
+    lowest, because the cost of being wrong here is a missed link, and this project's
+    standing choice is that a missed link is the only acceptable error.
+
+    That makes the floor honest about small evidence, too. With a few dozen labels the
+    weakest true match is a weak estimate, so the margin below it matters, and the
+    recommendation stays conservative until there are enough labels to move it.
+    """
+    labels = read_labels()
+    if not labels:
+        return cmd_report(args)
+    if not corpus_exists():
+        raise SystemExit("error nothing harvested yet — the labels cannot be re-scored")
+
+    scored = [(lab, m) for lab, m in _scored(labels) if m is not None]
+    matches = [m for lab, m in scored if lab.match]
+    refuted = [m for lab, m in scored if not lab.match]
+    if not matches:
+        print("No confirmed matches among the labels yet, so nothing sets a floor.")
+        print("A floor drawn from rejections alone would be a guess with arithmetic on top.")
+        return 0
+
+    weakest = min(m.distinguishing for m in matches)
+    print(f"{len(scored)} labelled pairs · {len(matches)} confirmed · {len(refuted)} refuted\n")
+    print(f"  The weakest CONFIRMED match scores {weakest:.1f} distinguishing bits.")
+    print(f"  ({', '.join(f'{m.distinguishing:.1f}' for m in sorted(matches, key=lambda m: m.distinguishing)[:8])}"
+          f"{' …' if len(matches) > 8 else ''})")
+
+    # A margin below the weakest true pair, because the weakest true pair is an estimate
+    # from a few dozen labels and not a law. Half of it, floored at nothing — with a
+    # weakest match this low there may be no safe floor at all, and saying so is the
+    # answer.
+    safe = weakest / 2
+    below = [m for m in refuted if m.distinguishing < safe]
+    lost = [m for m in matches if m.distinguishing < safe]
+    print(f"\n  Proposed auto-reject floor: {safe:.1f} bits — half the weakest true match, as a margin.")
+    print(f"    refuted pairs it would discard unseen   {len(below)} of {len(refuted)}")
+    print(f"    confirmed matches it would lose         {len(lost)}   ← must be 0")
+    if lost:
+        print("\n  It is not 0, so there is no safe floor at this label count. Keep showing")
+        print("  everything, and label more rulings — especially rejections.")
+        return 0
+
+    print("\n  What that suppresses in the live candidate stream, not just in the labels:")
+    people = load_people(load_config()["roster"])
+    children = children_index(people)
+    freq = frequencies()
+    seen = suppressed = 0
+    for pid in sorted(people)[: args.people]:
+        c = from_person(people[pid], people, children)
+        for other in store.candidates_for(c):
+            m = compare(c, other, freq)
+            if m.conflict:
+                continue
+            seen += 1
+            if m.distinguishing < safe:
+                suppressed += 1
+    if seen:
+        print(f"    {suppressed} of {seen} unvetoed candidates across {min(args.people, len(people))} people"
+              f" — {suppressed / seen:.0%} the verifier would never have to read.")
+    print("\n  This is a measurement, not a change. Nothing is suppressed until the floor is")
+    print("  written into the tools, and that is a judgement about this project's purpose.")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -227,6 +303,11 @@ def main() -> int:
     p = sub.add_parser("sweep", help="what moving the thresholds would cost")
     p.add_argument("--limit", type=int, default=20)
     p.set_defaults(fn=cmd_sweep)
+
+    p = sub.add_parser("floor", help="below which bits no true match has ever been seen")
+    p.add_argument("--limit", type=int, default=20)
+    p.add_argument("--people", type=int, default=60, help="how many people to sample for the live figure")
+    p.set_defaults(fn=cmd_floor)
 
     args = parser.parse_args()
     return args.fn(args)

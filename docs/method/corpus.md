@@ -37,6 +37,8 @@ It is the venue everything rests on because it is *cheap, reproducible by anyone
 and keeps what it finds*. It does not replace the logged-in archives; it goes first.
 
 ```bash
+uv run tools/harvest.py bulk gnt                 a whole archive in ONE request
+uv run tools/harvest.py oai den                  a whole archive, 150 acts a request
 uv run tools/harvest.py surname Bundervoet
 uv run tools/harvest.py surname "Van Craenenbroeck" --place Zaventem
 uv run tools/harvest.py place Oostende

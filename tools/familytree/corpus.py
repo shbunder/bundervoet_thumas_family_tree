@@ -509,6 +509,27 @@ class Frequencies:
 
 @lru_cache(maxsize=1)
 def frequencies() -> Frequencies:
+    """The rarity tables — from the index when there is a current one, else counted.
+
+    Every caller of `compare` needs these, and counting them means reading the whole
+    corpus: 8.5 seconds and half a gigabyte to answer a question about one person.
+    `store` counts the identical tables in the pass it already makes over the acts, and
+    `count_frequencies` below stays as the definition both are measured against.
+
+    Imported here rather than at the top because `store` imports this module. A stale
+    index is never silently rebuilt — a report is not the place to spend twenty seconds
+    nobody asked for — so it falls back to counting, and the tools that want the index
+    call `store.ensure()` for themselves.
+    """
+    from . import store
+    if store.is_current():
+        return store.frequencies()
+    return count_frequencies()
+
+
+def count_frequencies() -> Frequencies:
+    """The tables, counted from the corpus itself. The reference implementation: `store`
+    reproduces this at index time, and the test pins that the two agree exactly."""
     f = Frequencies()
     for m in corpus_mentions():
         f.n += 1

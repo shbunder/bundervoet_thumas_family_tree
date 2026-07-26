@@ -43,6 +43,7 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 
+from . import store
 from .corpus import corpus_exists, corpus_mentions, frequencies, surname_coverage
 from .match import build_index, candidates_for, from_mention, from_person, surname_weight
 from .people import load_config, load_people
@@ -137,8 +138,17 @@ def frontier_rows(people: dict | None = None) -> list[Frontier]:
     freq = frequencies()
     children = children_index(people)
 
-    # The corpus, indexed once for all frontiers rather than scanned per person.
-    index = build_index(from_mention(m) for m in corpus_mentions()) if corpus_exists() else None
+    # The corpus, indexed once for all frontiers rather than scanned per person — and
+    # from the persistent index when there is a current one, in which case even that is
+    # not needed, because all the queue wants from the corpus is a count per frontier.
+    #
+    # The in-memory fallback stays because it must: an index that does not exist yet, or
+    # one the harvest has moved past, has to degrade to being slow rather than to being
+    # wrong. Building it here is not this function's business — the reports call
+    # `store.ensure()` before they start.
+    indexed = store.is_current()
+    index = None if indexed or not corpus_exists() else build_index(
+        from_mention(m) for m in corpus_mentions())
 
     rows: list[Frontier] = []
     for pid, p in people.items():
@@ -155,7 +165,10 @@ def frontier_rows(people: dict | None = None) -> list[Frontier]:
         is_ancestor = pid in depth and depth[pid] > 0
         reach = reach_of.get(pid, 0)
 
-        candidates = len(candidates_for(c, index)) if index is not None else None
+        if indexed:
+            candidates = store.candidate_count(c)
+        else:
+            candidates = len(candidates_for(c, index)) if index is not None else None
         # Three states, not two, and the middle one is the whole point. Never harvested
         # is UNKNOWN and cheap to resolve. Harvested completely and empty is EVIDENCE of
         # absence. Harvested part-way and empty is neither — it is the corpus form of

@@ -5,6 +5,8 @@ argument-hint: "[number of passes, default 10]"
 
 Run $1 research passes (default 10) one after another, without checking in between.
 
+`dir` in the log is up/down/act — the rotation is described below.
+
 I am not watching. **Do not ask me questions.** Where you would normally ask, choose what
 the rules in [CLAUDE.md](../../CLAUDE.md) already imply, record the choice in the log, and
 keep going. Work from the tools, never from memory or from anything earlier in this
@@ -19,12 +21,23 @@ seems to, that is a finding to report at the end, not a change to make now.
 
 1. `uv run tools/check_data.py` — if it is not green, stop and say why. Never begin from a
    broken tree.
-2. `uv run tools/harvest.py status` — finish every harvest still marked PARTIAL, largest
-   `found` first, with the command the status output prints. A partial harvest is the
-   reason a frontier looks unsearchable when it simply has not been fetched, and
-   `link.py` will say so per surname.
-3. `uv run tools/research.py frontiers` and `uv run tools/research.py children` — read
-   both before starting, so the alternation below has somewhere to go.
+2. `uv run tools/harvest.py status` — it now ends with the archives you already hold acts
+   from that publish a **whole-archive export**. Take those first: one request each, and
+   it supersedes every future surname query in that archive. Kortrijk is 140,543 acts in a
+   19 MB download against thirteen hours of per-act fetching, so this is not a marginal
+   saving and it is the difference between a surname and a province.
+
+   Then finish every harvest still marked PARTIAL, largest `found` first, with the command
+   the status output prints. A partial harvest is the reason a frontier looks unsearchable
+   when it simply has not been fetched, and `link.py` will say so per surname.
+3. `uv run tools/verify_all.py --json > .autopilot-worklist.json` — the whole tree scored
+   against the whole corpus, **once**. Every pass reads its row out of this instead of
+   asking the same question again; a run of ten passes used to pay for it ten times. Delete
+   the file at the end of the run — it is a scratch file, not a record, and a stale copy
+   is worse than none.
+4. `uv run tools/research.py frontiers`, `uv run tools/research.py children` and
+   `uv run tools/research.py acts` — read all three before starting, so the rotation below
+   has somewhere to go.
 
 ## Each pass
 
@@ -32,11 +45,13 @@ Run the `/research-pass` loop: **strategist → searcher → verifier → record
 separate. That separation is the whole defence against grafting the wrong person, and it
 is worth nothing if one agent both finds a match and decides it is true.
 
-### Alternate the direction
+### Rotate the direction, three ways
 
-- **Odd passes go up.** `research.py frontiers` — "who were this person's parents".
-- **Even passes go down.** `research.py children` — children the held acts name for
+- **Pass 1 of 3 goes up.** `research.py frontiers` — "who were this person's parents".
+- **Pass 2 of 3 goes down.** `research.py children` — children the held acts name for
   couples already in the tree.
+- **Pass 3 of 3 goes by ACT.** `research.py acts` — the held act that answers the most open
+  frontiers at once, taken from the top of the greedy cover.
 
 Left to itself the queue only asks the upward question, so the direct lines get deeper and
 no sibling is ever found. Objective 2 does not happen by accident. If the downward pass
@@ -44,10 +59,21 @@ has nothing because the corpus holds too few birth acts, spend that pass on
 `harvest.py place <commune>` instead — a birth act is indexed under the child, so a
 sibling is only reachable through the commune or the parents.
 
+The third pass is the one that matches the unit of work to the unit of evidence. A frontier
+is one person; a marriage act is one document about six, four of them parents. Working an
+act resolves whatever it resolves — which is why `research.py acts` orders them by what
+each one *adds* rather than by what it repeats. A pass spent on the top act is worth
+several spent on the frontiers underneath it, and it is the same reading either way.
+
 ### Three routes, cheapest first
 
 1. **Harvest.** Open Archives needs no login, and what it pulls is kept, so it answers this
-   frontier and every later one on that surname.
+   frontier and every later one on that surname. Reach for `harvest.py bulk <archive>`
+   before `harvest.py surname <name>`: where an archive publishes an export, the whole
+   archive costs one request, and the acts it yields are identical to the ones the per-act
+   endpoint returns. `harvest.py oai <archive>` is the same idea at 150 acts a request,
+   for archives with no export. The per-act route is a last resort — it is where the
+   Rijksarchief and Familiekunde sets still have to be read, because they publish neither.
 2. **The open web.** `WebSearch` and `WebFetch` reach public archive indexes, WikiTree,
    Find A Grave, digitised newspapers, local-history transcriptions, and venues the
    registry has never heard of. Register a new one in `research/sources.json` when it pays
@@ -81,8 +107,8 @@ having actually read the act or its image.
   |------|------|-----|----------|---------|-------|--------|
   ```
 
-  `dir` is up/down. `verdict` is GRAFTED / NOT PROVEN / REJECTED / BLOCKED. `added` is the
-  person ids created, or `—`. This file is an index into the research log and the git
+  `dir` is up/down/act. `verdict` is GRAFTED / NOT PROVEN / REJECTED / BLOCKED. `added` is
+  the person ids created, or `—`. This file is an index into the research log and the git
   history, not a second copy of either — keep each row to one line.
 - `uv run tools/build.py`, then one commit per pass. **Do not push.**
 

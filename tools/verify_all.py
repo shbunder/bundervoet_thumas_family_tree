@@ -19,6 +19,7 @@ before a claim may even be considered — not a decision that it is true.
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -39,6 +40,8 @@ def main() -> int:
     ap.add_argument("--line", help="only people on this line")
     ap.add_argument("--strong-only", action="store_true", help="only people with a graftable match")
     ap.add_argument("--min-bits", type=float, default=0.0, help="ignore matches below this")
+    ap.add_argument("--json", action="store_true",
+                    help="the worklist as data — run once per session, read it every pass")
     args = ap.parse_args()
 
     if not corpus_exists():
@@ -49,8 +52,16 @@ def main() -> int:
     mentions = corpus_mentions()
     freq = frequencies()
 
-    # Index the corpus once. Everything after this is a lookup inside a block rather
-    # than a scan, which is the only reason a full sweep is affordable at all.
+    # Index the corpus in memory, deliberately, even though familytree/store.py now holds
+    # a persistent index that makes `link.py` about forty times faster.
+    #
+    # This is the one job the persistent index is the wrong tool for, and it was measured
+    # rather than assumed: the store took this sweep from 27 seconds to 40. A sweep asks
+    # about every person in the tree, so the acts it needs are very nearly all of them —
+    # and reaching them through the index means a seek and a JSON parse per act per
+    # person who blocks against it, where one sequential pass reads each act exactly
+    # once. The index wins when a question touches a few dozen acts and loses when it
+    # touches a hundred thousand. Both routes produce identical verdicts.
     index = build_index([from_mention(m) for m in mentions])
 
     # How many mentions the corpus holds under each surname. Without this, a person
@@ -111,6 +122,28 @@ def main() -> int:
                 print(f"      {', '.join(lbl for _, lbl, _ in m.agree)}")
                 if getattr(m.b, "url", None):
                     print(f"      {m.b.url}")
+
+    if args.json:
+        # The worklist, once, as data. A run of ten passes used to ask this question ten
+        # times over — and each pass paid for it separately. Written once at the start of
+        # a run, every pass reads its own row out of it.
+        json.dump({
+            "people": len(rows),
+            "verdicts": {
+                "corroborated": [r[0] for r in strong],
+                "name_and_kin_only": [r[0] for r in unanchored],
+                "partial": [r[0] for r in weak],
+                "not_reached": [r[0] for r in none],
+            },
+            "best": {
+                pid: {"ref": m.b.ref, "bits": round(m.bits, 2), "independent": m.independent,
+                      "classes": m.classes, "graftable": m.graftable, "why": m.explain(),
+                      "url": m.b.mention.act.url if m.b.mention and m.b.mention.act else None}
+                for pid, _p, m, _why in rows if m
+            },
+        }, sys.stdout, indent=2, ensure_ascii=False)
+        print()
+        return 0
 
     print(f"{len(rows)} people compared against {len(mentions)} mentions held.")
     show("CORROBORATED — a date or place agrees as well as the names, and nothing conflicts", strong)

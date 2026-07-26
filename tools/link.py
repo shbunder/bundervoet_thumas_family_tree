@@ -26,13 +26,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from familytree.corpus import (  # noqa: E402
-    Mention, corpus_exists, corpus_mentions, frequencies, normalise_key, surname_coverage,
-)
+from familytree import store  # noqa: E402
+from familytree.corpus import Mention, corpus_exists, surname_coverage  # noqa: E402
 from familytree.frontier import children_index, frontier_rows  # noqa: E402
-from familytree.match import (  # noqa: E402
-    build_index, candidates_for, compare, from_mention, from_person, surname_weight,
-)
+from familytree.match import compare, from_person, surname_weight  # noqa: E402
 from familytree.people import load_config, load_people  # noqa: E402
 
 BANDS = {"strong": "STRONG", "read the act": "READ THE ACT", "noise": "weak", "rejected": "rejected"}
@@ -70,12 +67,12 @@ def relatives_in_act(m: Mention) -> list[str]:
     return out
 
 
-def report(person, index, freq, show_all: bool, people=None, children=None) -> int:
+def report(person, freq, show_all: bool, people=None, children=None) -> int:
     # With the tree passed in, the person brings their relatives to the comparison, and
     # a father's name in an act becomes the second identifier the rule asks for.
     c = from_person(person, people, children)
     weight = surname_weight(c.surname, freq)
-    held = sum(1 for m in corpus_mentions() if normalise_key(m.surname) == normalise_key(c.surname))
+    held = store.held_under(c.surname)
     rarity = f"{weight.bits:.1f} bits"
     rarity += f" ({weight.count} in Belgium)" if weight.count is not None else " (estimated)"
     coverage = surname_coverage(c.surname) if c.surname else None
@@ -94,8 +91,11 @@ def report(person, index, freq, show_all: bool, people=None, children=None) -> i
         print("  below is unsearched, not missing. Finish it with:")
         print(f"    uv run tools/harvest.py surname \"{c.surname}\" --max {weight.count or 20000} --refresh")
 
+    # Straight to the blocked candidates. This used to mean parsing all 103,705 held acts
+    # to build an in-memory index and then looking at a few dozen of them — and doing it
+    # again for the next person.
     matches = sorted(
-        (compare(c, other, freq) for other in candidates_for(c, index)),
+        (compare(c, other, freq) for other in store.candidates_for(c)),
         key=lambda m: -m.bits,
     )
     shown = [m for m in matches if show_all or m.band in ("strong", "read the act")]
@@ -148,10 +148,10 @@ def main() -> int:
         if pid not in people:
             raise SystemExit(f'error unknown person "{pid}"')
 
-    freq = frequencies()
-    index = build_index(from_mention(m) for m in corpus_mentions())
+    store.ensure(verbose=True)
+    freq = store.frequencies()
     children = children_index(people)
-    total = sum(report(people[pid], index, freq, args.all, people, children) for pid in targets)
+    total = sum(report(people[pid], freq, args.all, people, children) for pid in targets)
     print(f"\n{total} candidate(s) across {len(targets)} person(s). None of them is a fact yet:")
     print("  every one still has to survive an attempt to refute it before it is grafted.")
     return 0
