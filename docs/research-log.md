@@ -1352,3 +1352,56 @@ bound stays at 1846.
 
 NEXT: the Winksele births of February 1830, which would carry the Pardons back a
 generation on a surname rare enough to search alone — *Pergijsels* more so than Pardon.
+
+## 49. Sint-Stevens-Woluwe, 1 December 1853 — the first sibling of that generation
+
+§47 grafted Guilielmus Bossin's parents and closed the Peremans line above them. It also
+left the obvious downward question unasked: [[arnoldus_bossin]] and [[elisabeth_deyn]]
+had one recorded child, and 127 couples in this tree are in that position. The frontier
+queue would never have asked it, because a frontier is someone whose parents are unknown
+and theirs are now known.
+
+Searching AGATHA on the surname pair *Bossin* at Sint-Stevens-Woluwe — the same
+surname-pair move that produced §47 and §48 — returned a marriage act nine years later
+in the same commune. **Sint-Stevens-Woluwe, act nr. 9, 1 December 1853**: Françiscus
+Pardon × Anna Maria Bossin, and the bride's parents are named as Arnoldus Bossin,
+*daglooner* of Sint-Stevens-Woluwe, and Elisabeth Deyn.
+
+That is the first identifier. The second is standing in the act: **Guilielmus Bossin,
+29, steenslager of Sint-Stevens-Woluwe**, is a witness at the wedding. So the graft does
+not rest on the parents' names alone — the brother this tree already holds is physically
+present, and his stated age is the third independent check on a birth year the tree had
+been carrying from a member tree since before any act was read. He is 29 on 1 December
+1853, which places his birth between December 1823 and December 1824; his own 1846 act
+(S19) made him 21 on 24 February, which places it between February 1824 and February
+1825. The two windows overlap only in **1824, between late February and early December**.
+Two acts, five years apart, neither knowing about the other.
+
+Four people enter the index: [[anna_maria_bossin]], born at Sint-Stevens-Woluwe on
+**3 November 1829** — a date the act gives to the day, and the first thing this tree
+knows about that generation besides her brother; her husband [[franciscus_pardon]], born
+at Winksele 16 February 1830, a *dienstbode* living at Zaventem; and his parents
+[[guilielmus_pardon]] and [[maria_anna_pergijsels]], *daglooner* and *dagloonster* of
+Winksele, both at the wedding and both consenting.
+
+**All four are `sup`, not `doc`, and that is the point of the pass.** This is AGATHA's
+act analysis — the Rijksarchief volunteers' field-by-field transcription — and it reads
+so completely (every birth date, every trade, every residence, the clerk's remarks about
+who could not write) that it is easy to mistake for the act. The scan is referenced only
+as an archive reference and is not linked from the page. §47's four ancestors are `doc`
+because the register image was pulled; these four are not, and the register image at
+Sint-Stevens-Woluwe is the named next step for them.
+
+What is *not* recorded, again deliberately: the Pardon parents get no birth dates, because
+the act gives them no ages and their son's twenty-three would only license a guess. And
+nothing is recorded from [[elisabeth_deyn]]'s silence — she appears here as a bare name,
+with none of the *present and consenting* the act gives her husband, where in 1846 she was
+present. Absent, dead, or simply not transcribed in that field cannot be told from an
+analysis, so the record says so and stops.
+
+NEXT on this line: the Sint-Stevens-Woluwe register image for act nr. 9, which would move
+all four to `doc` and settle whether Elisabeth Deyn consented in person; the Winksele
+births of February 1830, which carry the Pardon line back a generation; and — the reason
+this pass matters more than its four names — the rest of the Bossin children. One sibling
+found by asking downward means the 1820s Sint-Stevens-Woluwe births are worth a
+commune-level harvest, not a name search.
