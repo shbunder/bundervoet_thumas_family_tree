@@ -171,6 +171,49 @@ def test_blocking_survives_a_surname_spelled_differently():
     assert set(block_keys(a)) & set(block_keys(b))
 
 
+def _x(surname):
+    """The prefix blocking key for a surname."""
+    return next(k for k in block_keys(Candidate(ref="_", name="", surname=surname, given="")) if k.startswith("x:"))
+
+
+@pytest.mark.parametrize("a,b", [
+    # The pair the prefix key exists for: same family, one name longer than the other.
+    ("Vanstechele", "Vanstechelman"),
+    # The pair that fixes the prefix LENGTH at four rather than five or six: these stems
+    # are "felde" and "felden", so they part company at the fifth character. Six is 3.7x
+    # faster and drops them, which is a true link never compared.
+    ("Vandevelde", "Vandevelden"),
+    ("Vandewalle", "Vandewalles"),
+    # And the pair it used to MISS, because the particle ate the whole prefix: `fanden`
+    # against `fanber` share nothing, though the family is the same.
+    ("Vandenberghe", "Van Berghe"),
+    ("Van der Varent", "Vervarent"),
+])
+def test_the_prefix_key_blocks_on_the_family_not_the_particle(a, b):
+    assert _x(a) == _x(b), f"{a} and {b} must still be compared"
+
+
+@pytest.mark.parametrize("a,b", [
+    ("Vandenberghe", "Vandenbroeck"),
+    ("Vandenbemden", "Vandenberghe"),
+    ("Van der Varent", "Van der Beken"),
+])
+def test_the_prefix_key_no_longer_buckets_every_van_den_together(a, b):
+    """A quarter of Flemish surnames begin Van den / Van der / De, so a prefix taken from
+    the whole name put 150,611 mentions under `x:fanden` — a sixth of the corpus in one
+    bucket, which is a scan wearing a block's clothes. These are different families and
+    must land in different buckets."""
+    assert _x(a) != _x(b), f"{a} and {b} are different families"
+
+
+def test_a_name_that_is_almost_all_particle_keeps_its_whole_form():
+    """Stripping "de" from Devos leaves "fos", which discriminates nothing. Below the floor
+    the full phonetic form is kept instead."""
+    from familytree.match import surname_stem, phonetic
+    assert surname_stem(phonetic("Devos")) == phonetic("Devos")
+    assert surname_stem(phonetic("Vandenberghe")) != phonetic("Vandenberghe")
+
+
 # ---------- scoring ----------
 
 

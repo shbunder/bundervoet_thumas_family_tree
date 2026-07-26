@@ -232,6 +232,47 @@ def from_mention(m: Mention) -> Candidate:
 # ---------- blocking ----------
 
 
+# The particles, as they look AFTER phonetic() has run — v and w both fold to f, so "van"
+# is "fan" and "ver" is "fer" by the time this sees them.
+#
+# They are stripped before the prefix key is taken, because otherwise the prefix IS the
+# particle and carries no information about the family. A quarter of Flemish surnames begin
+# "Van den", "Van der" or "De", so `x:{ph[:6]}` put 150,611 mentions under `x:fanden`,
+# 137,463 under `x:defade` and 116,538 under `x:fander` — 17% of a 1.7-million-act corpus in
+# fourteen buckets. A block that holds a sixth of the population is not blocking; it is a
+# scan with extra steps, and it is what made `research.py acts` seven minutes.
+#
+# Stripping also FIXES a case the old key missed: "Vandenberghe" and "Van Berghe" share no
+# six-character prefix at all (`fanden` vs `fanber`) and were never compared. On the stem
+# they are both `berge`.
+_PARTICLE = re.compile(r"^(?:fanden|fander|fande|fan|des|den|der|de|ten|ter|fer|het|le|la|du|t)+")
+# Below this, the particle was most of the name and what is left cannot discriminate:
+# "Devos" would become "fos". Those keep the whole phonetic form instead.
+_STEM_FLOOR = 4
+
+# Four characters OF THE STEM, which is more of the family name than six characters of the
+# whole surname ever were — six were spent on "fanden". Chosen by measuring, not by taste:
+# against the 223 open frontiers, the prefix key pulls 2,542,433 mentions today and
+# 1,283,746 at four, and every variant pair this key exists for survives — Vanstechele
+# against Vanstechelman, and Vandevelde against Vandevelden, whose stems already differ by
+# the fifth character. Five and six are faster still (3.1x and 3.7x) and each drops one of
+# those pairs, which is a true link silently never compared. This project has always chosen
+# the missed candidate over the missed match, so it takes the strict improvement rather than
+# the trade.
+_STEM_PREFIX = 4
+
+
+@lru_cache(maxsize=None)
+def surname_stem(ph: str) -> str:
+    """A phonetic surname with its leading particle removed, for blocking only.
+
+    Never used as evidence and never shown: `family_key` and `phonetic` remain what decides
+    whether two surnames agree. This only decides which pairs are worth comparing at all.
+    """
+    s = _PARTICLE.sub("", ph)
+    return s if len(s) >= _STEM_FLOOR else ph
+
+
 def block_keys(c: Candidate) -> list[str]:
     """Several passes over the same records. A pair that agrees on ANY key is compared;
     a pair that agrees on none never is. That is what keeps this off the O(n²) curve as
@@ -240,7 +281,9 @@ def block_keys(c: Candidate) -> list[str]:
     keys: list[str] = []
     if ph:
         keys.append(f"p:{ph}")
-        keys.append(f"x:{ph[:6]}")  # catches truncated and extended forms
+        # Catches truncated and extended forms — Vanstechele against Vanstechelman — on the
+        # part of the name that identifies the family rather than on its particle.
+        keys.append(f"x:{surname_stem(ph)[:_STEM_PREFIX]}")
         if c.birth_year:
             keys.append(f"pd:{ph}:{c.birth_year // 10}")
         for place in c.places:
