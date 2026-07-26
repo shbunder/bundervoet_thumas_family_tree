@@ -14,6 +14,7 @@ from familytree import sources as reg
 from familytree import store
 from familytree.bundle import build_bundle
 from familytree.corpus import NOT_A_FORENAME, normalise_key
+from familytree.docsite import stale_reason as docs_stale_reason
 from familytree.frontmatter import FrontmatterError
 from familytree.landing import stale_reason
 from familytree.match import build_index, candidates_for, compare, from_person
@@ -328,6 +329,14 @@ def main(argv: list[str] | None = None) -> int:
             stale = stale_reason(landing.read_text(encoding="utf-8"), people, config)
             if stale:
                 report.fail(stale)
+
+        # The rendered docs are committed like the bundle and, until now, were the one
+        # generated artefact nothing checked — because this validator cannot import
+        # MkDocs to regenerate them. It compares a signature over the inputs instead;
+        # see familytree/docsite.py for what that does and does not catch.
+        docs_stale = docs_stale_reason()
+        if docs_stale:
+            report.fail(docs_stale)
 
     for w in report.warnings:
         print("warn  " + w, file=sys.stderr)

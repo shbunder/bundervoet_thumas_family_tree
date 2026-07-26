@@ -1346,3 +1346,86 @@ def test_an_unparseable_date_part_is_dropped_not_guessed():
     assert _api_date({"Year": "ca", "Month": "8", "Day": "8"}) is None
     assert _api_date({"Year": "1902", "Month": "13", "Day": "8"}) == "1902"
     assert _api_date({"Year": " 1902 "}) == "1902"
+
+
+# ---------- the rendered docs, which nothing used to check ----------
+
+
+def test_docs_signature_tracks_its_inputs(tmp_path, monkeypatch):
+    """A docs edit must change the signature, and a revert must change it back.
+
+    `dist/docs/` is committed like the bundle, and it was the one generated artefact with
+    no staleness check — the validator cannot import MkDocs to regenerate it, so it
+    compares a signature over the inputs instead. This pins that the signature is actually
+    sensitive to the thing it claims to cover.
+    """
+    from familytree import docsite
+    docs = tmp_path / "docs"
+    (docs / "method").mkdir(parents=True)
+    (docs / "index.md").write_text("# hello\n", encoding="utf-8")
+    (docs / "method" / "linkage.md").write_text("# linkage\n", encoding="utf-8")
+    config = tmp_path / "mkdocs.yml"
+    config.write_text("site_name: t\n", encoding="utf-8")
+    monkeypatch.setattr(docsite, "ROOT", tmp_path)
+    monkeypatch.setattr(docsite, "DOCS_DIR", docs)
+    monkeypatch.setattr(docsite, "CONFIG", config)
+
+    before = docsite.signature()
+    (docs / "method" / "linkage.md").write_text("# linkage, edited\n", encoding="utf-8")
+    assert docsite.signature() != before, "editing a docs page must change the signature"
+    (docs / "method" / "linkage.md").write_text("# linkage\n", encoding="utf-8")
+    assert docsite.signature() == before, "reverting must restore it — content, not mtime"
+
+    # mkdocs.yml is an input too: the nav decides which pages exist at all.
+    config.write_text("site_name: t\nnav: [index.md]\n", encoding="utf-8")
+    assert docsite.signature() != before, "mkdocs.yml must be covered"
+
+
+def test_docs_signature_ignores_os_droppings(tmp_path, monkeypatch):
+    """A .DS_Store landing next to the docs must not report the whole site as stale."""
+    from familytree import docsite
+    docs = tmp_path / "docs"
+    docs.mkdir()
+    (docs / "index.md").write_text("# hello\n", encoding="utf-8")
+    config = tmp_path / "mkdocs.yml"
+    config.write_text("site_name: t\n", encoding="utf-8")
+    monkeypatch.setattr(docsite, "ROOT", tmp_path)
+    monkeypatch.setattr(docsite, "DOCS_DIR", docs)
+    monkeypatch.setattr(docsite, "CONFIG", config)
+
+    before = docsite.signature()
+    (docs / ".DS_Store").write_bytes(b"\x00\x01")
+    assert docsite.signature() == before
+
+
+def test_docs_staleness_is_reported_for_each_way_it_goes_wrong(tmp_path, monkeypatch):
+    """The three states, and the message each gets. The middle one is why the signature
+    file has no leading dot: MkDocs's clean skips dotfiles (site_dir may hold .git), so a
+    dotted name SURVIVED a bare `mkdocs build` and a freshly-rendered site was reported
+    stale — fail-closed, but with a message that sent you looking for the wrong thing."""
+    from familytree import docsite
+    docs, site = tmp_path / "docs", tmp_path / "dist" / "docs"
+    docs.mkdir()
+    site.mkdir(parents=True)
+    (docs / "index.md").write_text("# hello\n", encoding="utf-8")
+    config = tmp_path / "mkdocs.yml"
+    config.write_text("site_name: t\n", encoding="utf-8")
+    monkeypatch.setattr(docsite, "ROOT", tmp_path)
+    monkeypatch.setattr(docsite, "DOCS_DIR", docs)
+    monkeypatch.setattr(docsite, "CONFIG", config)
+    monkeypatch.setattr(docsite, "SITE_DIR", site)
+    monkeypatch.setattr(docsite, "SIGNATURE", site / "build-signature")
+
+    assert "has not been built" in docsite.stale_reason()
+
+    (site / "index.html").write_text("<html></html>", encoding="utf-8")
+    assert "without recording" in docsite.stale_reason()
+
+    docsite.record()
+    assert docsite.stale_reason() is None
+
+    (docs / "index.md").write_text("# hello, edited\n", encoding="utf-8")
+    assert "out of date" in docsite.stale_reason()
+
+    docsite.record()
+    assert docsite.stale_reason() is None

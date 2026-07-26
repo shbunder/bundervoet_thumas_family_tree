@@ -283,11 +283,15 @@ open index.html                            the site, straight off disk
 refuses to generate from a broken tree. `check_data.py` fails if the generated files are
 stale, so the "green before commit" rule already covers this.
 
-**After changing anything in `docs/`, run `uv run --group docs mkdocs build`.** Both pages
-link to `dist/docs/index.html` and Pages serves this repository as it stands, so the
-rendered docs are committed like `dist/bundle.js`. Unlike the bundle, nothing checks them:
-the validator has no dependencies and mkdocs is an optional group, so a docs edit committed
-without a rebuild ships silently stale. That hole closes when the docs build moves to CI.
+**After changing anything in `docs/`, run `uv run tools/build.py` too** — it renders the
+docs as its last step and records what it rendered them from. Both pages link to
+`dist/docs/index.html` and Pages serves this repository as it stands, so the rendered docs
+are committed like `dist/bundle.js`, and the validator now refuses a `docs/` edit that was
+not rebuilt. It cannot regenerate them to compare — mkdocs is an optional group and the
+validator must run from a bare clone — so it checks a signature over the inputs instead;
+`familytree/docsite.py` says what that does and does not catch. Use
+`uv run --group docs mkdocs serve` for live preview, but **not** bare `mkdocs build`: it
+renders without recording, and the validator will say so.
 
 ---
 

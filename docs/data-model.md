@@ -118,7 +118,7 @@ field. It is never a second copy of one.
 | Every referenced person has their own file | No one exists only as a string in someone else's note |
 | Every citation resolves to `research/sources.json` | A claim with no citation is not a claim |
 | Every artifact's `sha256`/`bytes` recompute correctly | Evidence cannot change under a citation |
-| Generated files are not stale | Old data cannot reach the site |
+| Generated files are not stale — the bundle, `index.html`'s counts, **and the rendered docs** | Old data cannot reach the site |
 | Demographic plausibility | The arithmetic signature of a graft off by a generation |
 
 Ids are stable. Renaming one breaks every reference — don't.

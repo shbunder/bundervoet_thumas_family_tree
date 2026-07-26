@@ -18,6 +18,7 @@ from datetime import date
 from hashlib import sha256
 from pathlib import Path
 
+from familytree import docsite
 from familytree.bundle import build_bundle
 from familytree.landing import census_sentence, fill, missing_markers
 from familytree.people import ROOT, format_date, load_config, load_people
@@ -98,6 +99,37 @@ def stamp_pages() -> None:
           else f"\nCache stamp unchanged at ?v={stamp}")
 
 
+def build_docs() -> None:
+    """Render docs/ to dist/docs, then record what it was built from.
+
+    LAST, because `research.py docs` regenerates docs/sources.md and that file is one of
+    the inputs the signature covers — recording before it is written would sign a version
+    of the docs that was never rendered.
+
+    Through `uv run --group docs`, because MkDocs is deliberately an optional group: the
+    validator, the bundle and the exporters must keep running from a bare clone with
+    nothing fetched, and the docs are the one part that may reasonably need the network.
+    So a missing MkDocs is reported and skipped rather than failing the build — the tree
+    itself is fine. What it costs is only the signature, and `check_data.py` will then say
+    the rendered docs are stale, which is true and is the honest place to say it.
+    """
+    r = subprocess.run(
+        ["uv", "run", "--group", "docs", "mkdocs", "build", "--strict", "--quiet"],
+        cwd=ROOT, capture_output=True, text=True,
+    )
+    if r.returncode != 0:
+        detail = (r.stderr or r.stdout or "").strip().splitlines()
+        print("\ndist/docs — NOT rebuilt:", file=sys.stderr)
+        for line in detail[-6:]:
+            print(f"    {line}", file=sys.stderr)
+        print("    the tree is fine; check_data.py will report the docs as stale until "
+              "this succeeds.", file=sys.stderr)
+        return
+    docsite.record()
+    print(f"dist/docs — rendered from {len(docsite.inputs())} source files, "
+          f"signature {docsite.signature()[:8]}")
+
+
 def main() -> int:
     check = subprocess.run([sys.executable, str(HERE / "check_data.py"), "--skip-generated"])
     if check.returncode != 0:
@@ -120,6 +152,7 @@ def main() -> int:
     run("research.py", "docs")
     fill_landing_page()
     stamp_pages()
+    build_docs()
     return 0
 
 
