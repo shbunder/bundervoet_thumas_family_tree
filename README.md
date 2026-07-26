@@ -39,8 +39,8 @@ checked by different rules:
 
 - **`data/`** — the facts. JSON and Markdown, nothing executable. A name or a date
   only ever lives here.
-- **`site/`** — the wording the page shows: headings, labels, the footer. Editing it
-  can never change what the tree claims.
+- **`site/`** — the wording the page shows: headings, labels, the footer, in every
+  language it offers them in. Editing it can never change what the tree claims.
 - **`assets/`** — how it looks and behaves. Contains no names and no dates at all.
 
 `dist/` and `exports/` are generated from those and are never edited by hand.
@@ -54,14 +54,17 @@ data/                          FACTS — JSON and Markdown, nothing executable
   branches.json                surname branch → its default source id
   lineages.json                the surname chains
 site/                          PRESENTATION — the words the page shows
-  labels.json                  confidence labels, Index headings, footer
-assets/                        how it looks and behaves — no names, no dates
+  labels.json                  every word, in every language: UI, headings, footer,
+                               confidence labels, the relation vocabulary
+assets/                        how it looks and behaves — no names, no dates,
+                               and no words either
   css/tree.css                 styling for the tree page
   css/site.css                 styling for the landing page
   js/core.js                   the FamilyTree namespace and the data loader
+  js/i18n.js                   which language, and how a stored string is rendered
   js/kinship.js                relationships, children, source resolution
   js/render.js                 records → markup
-  js/ui.js                     theme switch, hover card, tabs
+  js/ui.js                     the two round switches, hover card, tabs, segments
   js/main.js                   wires it together
 research/                      the search state
   sources.json                 sites we can search, and the pages inside them
@@ -214,19 +217,56 @@ escapes on the way out.
 
 ## The Index
 
-Everyone is sorted into **Ancestors** (the direct line above the root), **Blood
-relatives** (related, but off that line) and **Others** (married in, or not yet
-connected). Those three are worked out from the links, so adding someone to the data
-is all it takes for them to appear — there is no second list to keep in step.
+Everyone in the tree, cut into groups by whichever question you ask of it. **Group by**
+offers four:
 
-`site/labels.json` no longer decides who appears, only what the sub-headings are called:
-"Bostyn & Cappaert (Marcel's mother)" reads better than the bare branch name. Anyone it
-doesn't mention is filed under their `branch`, which is why nobody can go missing.
+| Grouping | The cards are | Derived from |
+| --- | --- | --- |
+| Family line | the curated headings — "Bostyn & Cappaert (Marcel's mother)" | the person's own `line`, falling back to `branch` |
+| First letter | A, B, C … | the folded family key, so "De Keyser", "Dekeyser" and "'t Jonck" land where you'd look |
+| Century | 15th century … , plus one card for the undated | the birth date |
+| Ancestor / blood / other | the direct line above the root; blood off that line; married in or unconnected | the parent and marriage links |
+
+and **Sort by** orders inside each card: by generation (closest to the root first, the
+default, and the only one of the three that tells a story), by family name, or by birth
+date.
+
+Every one of those is *derived*, which is the whole reason the controls can exist:
+adding someone to `data/` files them correctly under all four groupings at once, and
+there is no list anywhere that regrouping would have to rewrite. Both choices are
+remembered between visits.
+
+`site/labels.json` doesn't decide who appears, only what the family-line headings are
+called. Anyone it doesn't mention is filed under their `branch`, which is why nobody
+can go missing.
 
 The same tab answers **how any two people are related** — pick two names and it gives
 the relation and the ancestor they share. It works from the lowest common ancestor of
 the pair rather than from the root, so it can relate anyone to anyone, and it falls
 back to one step through marriage when there is no blood link.
+
+## Two languages
+
+The flag under the theme switch turns the page between English and Dutch. It opens in
+whichever of the two the browser asks for, and remembers a choice made against that.
+
+Switching is not a reload: the reader keeps their place, their focus, their search and
+their index grouping. That is only possible because **no word is written in
+`assets/`** — every one of them, down to the field labels and the relation vocabulary,
+comes from `site/labels.json` through the bundle. Adding a third language is editing
+that file; nothing in `assets/` would need to know.
+
+The relation names are generated rather than listed, so they had to be translated as a
+*grammar* and not as a phrasebook. Each language brings its own prefixes:
+`great-grandmother` stacks one word for ever, where Dutch has `overgrootmoeder` and
+then `betovergrootmoeder` before it too needs a count. Descent, aunts and nieces take
+three different prefixes in Dutch (`achter-`, `oud-`, `achter-`) where English uses
+`great-` for all three. Dutch cousins are numbered — `tweedegraads neef` — because
+`achterneef` means both "second cousin" and "great-nephew", and a label that could be
+either is the same class of error as a wrong graft.
+
+The validator refuses a build with a hole in the table. Falling back to English is
+invisible on the page, which is exactly why a build has to be the thing that notices.
 
 ## The GEDCOM export
 

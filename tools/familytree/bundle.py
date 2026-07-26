@@ -45,12 +45,21 @@ def build_bundle() -> str:
             "root": config["root"],
             "roots": meta["roots"],
             "defaultSource": resolve(meta["defaultSource"]),
-            "confidenceLabels": site["confidenceLabels"],
-            "footer": site["footer"],
             # Counted here rather than in the browser so that the landing page, which
             # loads no JavaScript at all, and this page cannot disagree about how big
             # the tree is. Both read this one derivation.
             "census": census(people, config),
+        }),
+        # The wording, in every language the site offers it in. It travels whole
+        # rather than one language at a time because the page switches without
+        # reloading, and a second request for the other language is a second thing
+        # that can be stale.
+        _call("strings", {
+            "languages": site["languages"],
+            "confidenceLabels": site["confidenceLabels"],
+            "footer": site["footer"],
+            "ui": {k: v for k, v in site["ui"].items() if not k.startswith("_")},
+            "kinship": {k: v for k, v in site["kinship"].items() if not k.startswith("_")},
         }),
         # Branches cite the registry by id; the page wants something readable.
         _call("branches", {b: resolve(sid) for b, sid in config["branches"].items()}),

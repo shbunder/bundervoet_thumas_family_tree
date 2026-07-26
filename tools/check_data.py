@@ -247,6 +247,7 @@ def main() -> int:
     for g in groups:
         if not g.get("key") or not g.get("title"):
             fail("site/labels.json: every group needs a key and a title")
+    _check_wording(config["site"])
 
     roots = [r for r in meta["roots"] if r in people]
     for r in meta["roots"]:
@@ -318,6 +319,52 @@ def main() -> int:
     print(f"\n{len(errors)} error(s) in {len(ids)} people." if errors else
           f"OK — {len(ids)} people, {len(branches)} branches, {len(lineages)} lineages, {len(groups)} index groups.")
     return 1 if errors else 0
+
+
+def _check_wording(site):
+    """Every word the page shows, in every language it offers.
+
+    A missing translation does not break anything — the i18n layer falls back to the
+    first language — which is exactly why it has to be caught here. Falling back is
+    invisible: the page stays readable, and the untranslated string sits in the
+    middle of it until somebody happens to be reading in that language and notices.
+    A build is the only place that can see the whole table at once.
+    """
+    langs = [lang["code"] for lang in site.get("languages", [])]
+    if not langs:
+        fail("site/labels.json: no languages declared")
+        return
+
+    def every_language(entry, where):
+        if not isinstance(entry, dict):
+            fail(f"site/labels.json: {where} is not a per-language object")
+            return
+        for code in langs:
+            if not str(entry.get(code) or "").strip():
+                fail(f"site/labels.json: {where} has no {code} translation")
+
+    every_language(site.get("footer"), "footer")
+    for code, label in site.get("confidenceLabels", {}).items():
+        every_language(label, f"confidenceLabels.{code}")
+    for g in site.get("groups", []):
+        every_language(g.get("title"), f"groups.{g.get('key')}.title")
+    for key, value in site.get("ui", {}).items():
+        if not key.startswith("_"):
+            every_language(value, f"ui.{key}")
+
+    # The relation vocabulary is keyed by language at the top, because its *shape*
+    # differs: English stacks one prefix where Dutch has a word per step. So it is
+    # checked for the same set of keys in each language rather than field by field.
+    kinship = {k: v for k, v in site.get("kinship", {}).items() if not k.startswith("_")}
+    for code in langs:
+        if code not in kinship:
+            fail(f"site/labels.json: kinship has no {code} vocabulary")
+    shapes = {code: set(v) for code, v in kinship.items()}
+    if shapes:
+        expected = set.union(*shapes.values())
+        for code, keys in shapes.items():
+            for missing in sorted(expected - keys):
+                fail(f"site/labels.json: kinship.{code} is missing \"{missing}\"")
 
 
 def _check_plausibility(people, children_of):

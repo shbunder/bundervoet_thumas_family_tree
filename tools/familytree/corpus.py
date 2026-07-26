@@ -62,6 +62,10 @@ OFFICIAL = re.compile(r"^other:(ambtenaar|beambte)")
 _ATTACHES = re.compile(r"(?:van\s+de\s+)?(bruidegom|bruid|overledene|kind)\b")
 
 
+# Memoised for the same reason as `family_key`, and more urgently: a profile of
+# `research.py acts` counted 21,176,327 calls to this against 63,018 distinct inputs.
+# It is pure — a string in, a string out, no state — so the cache cannot go stale.
+@lru_cache(maxsize=None)
 def normalise_key(s: str | None) -> str:
     return re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", (s or "").lower()))
 
@@ -380,10 +384,35 @@ def corpus_mentions(acts: tuple[Act, ...] | None = None) -> list[Mention]:
     return [p for act in (acts if acts is not None else load_corpus()) for p in act.people]
 
 
+# The single most expensive line in the project before it was cached.
+#
+# `surname_weight` asks the manifest two questions — the population, and how many
+# records exist under this surname — and the scorer calls `surname_weight` once per
+# comparison. A profile of `research.py acts` found 342,568 reads of this 49 KB file:
+# 138 seconds of a 220-second run, 104 of them inside `json.raw_decode`, to parse the
+# same bytes over and over. Caching it took that run to 13 seconds.
+#
+# The cache holds one entry because there is one manifest. It is invalidated by
+# `reset_manifest_cache`, which `harvest.py` calls around every write — see the
+# read-merge-write note on `save_manifest`, which exists precisely because this file
+# changes underneath a long harvest.
+@lru_cache(maxsize=1)
 def load_manifest() -> dict:
     if not MANIFEST.exists():
         return {"harvests": []}
     return json.loads(MANIFEST.read_text(encoding="utf-8"))
+
+
+def reset_manifest_cache() -> None:
+    """Forget the held manifest, so the next read comes off disk.
+
+    Anything that WRITES the manifest must call this, on both sides of the write: before,
+    because another process may have added a harvest since this one last looked, and
+    after, because the caller is about to read back what it just merged. A harvest that
+    reads a stale manifest re-fetches thousands of records it already holds, which is the
+    opposite of what the cache is for.
+    """
+    load_manifest.cache_clear()
 
 
 def population() -> int:

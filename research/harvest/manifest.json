@@ -891,6 +891,110 @@
       "acts": 0
     },
     {
+      "id": "place-bertem",
+      "query": {
+        "name": "*",
+        "eventplace": "Bertem",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 33756,
+      "mentions": 100,
+      "complete": false,
+      "acts": 100
+    },
+    {
+      "id": "place-bredene",
+      "query": {
+        "name": "*",
+        "eventplace": "Bredene",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 10037,
+      "mentions": 10000,
+      "complete": false,
+      "acts": 10000
+    },
+    {
+      "id": "place-everberg",
+      "query": {
+        "name": "*",
+        "eventplace": "Everberg",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 10954,
+      "mentions": 10000,
+      "complete": false,
+      "acts": 10000
+    },
+    {
+      "id": "place-kraainem",
+      "query": {
+        "name": "*",
+        "eventplace": "Kraainem",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 8344,
+      "mentions": 8344,
+      "complete": true,
+      "acts": 8344
+    },
+    {
+      "id": "place-oostende",
+      "query": {
+        "name": "*",
+        "eventplace": "Oostende",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 262554,
+      "mentions": 100,
+      "complete": false,
+      "acts": 100
+    },
+    {
+      "id": "place-sint-stevens-woluwe",
+      "query": {
+        "name": "*",
+        "eventplace": "Sint-Stevens-Woluwe",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 25859,
+      "mentions": 10000,
+      "complete": false,
+      "acts": 10000
+    },
+    {
+      "id": "place-stene",
+      "query": {
+        "name": "*",
+        "eventplace": "Stene",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 2448,
+      "mentions": 2448,
+      "complete": true,
+      "acts": 2448
+    },
+    {
+      "id": "place-zaventem",
+      "query": {
+        "name": "*",
+        "eventplace": "Zaventem",
+        "country_code": "be"
+      },
+      "date": "2026-07-26",
+      "found": 50191,
+      "mentions": 100,
+      "complete": false,
+      "acts": 100
+    },
+    {
       "id": "ramon",
       "query": {
         "name": "Ramon",

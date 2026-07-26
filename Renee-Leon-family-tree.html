@@ -4,32 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Family Tree of Renée &amp; Léon Bundervoet</title>
-<link rel="stylesheet" href="./assets/css/tree.css?v=341968cc">
+<link rel="stylesheet" href="./assets/css/tree.css?v=b93a0ce3">
 </head>
 <body>
-<button id="themeBtn" title="Theme">🖥 Auto</button>
+<!-- Two round switches, sharing a corner. Neither carries a word: the theme one is a
+     glyph and the language one is a flag, so neither has to be re-laid-out when the
+     page changes language. What they mean is in their title and aria-label, which
+     are translated like everything else. -->
+<div class="chrome">
+  <button id="themeBtn" class="rnd"></button>
+  <button id="langBtn" class="rnd"></button>
+</div>
 <div class="wrap">
   <header>
     <div class="crest">❦</div>
-    <h1>The Family Tree of Renée &amp; Léon Bundervoet</h1>
-    <!-- filled in from the data at load time; see main.js -->
+    <!-- The names come from the records, not from this markup, so the page cannot go
+         on naming somebody the data no longer calls the root. See main.js. -->
+    <h1 id="pagetitle"></h1>
     <p class="subtitle" id="subtitle"></p>
   </header>
 
   <div class="tabs">
-    <button class="tab active" data-view="explore">Tree</button>
-    <button class="tab" data-view="lineages">Lineages</button>
-    <button class="tab" data-view="everyone">Index</button>
+    <button class="tab active" data-view="explore" data-i18n="tabTree"></button>
+    <button class="tab" data-view="lineages" data-i18n="tabLineages"></button>
+    <button class="tab" data-view="everyone" data-i18n="tabIndex"></button>
     <div class="searchbox" id="searchbox">
       <span class="ic">⌕</span>
       <input id="q" type="search" autocomplete="off" spellcheck="false"
-             placeholder="Search names, years, places…"
-             aria-label="Search the family tree">
-      <button class="clr" id="qClear" title="Clear search" aria-label="Clear search">×</button>
+             data-i18n-attr="placeholder:searchPlaceholder;aria-label:searchAria">
+      <button class="clr" id="qClear" data-i18n-attr="title:clearSearch;aria-label:clearSearch">×</button>
     </div>
   </div>
   <div class="toprow">
-    <span class="tip" id="tip">Hover any name for full details &amp; source</span>
+    <span class="tip" id="tip"></span>
   </div>
 
   <div class="legend" id="legend"></div>
@@ -39,11 +46,9 @@
     <div class="controls">
       <!-- labelled from the data at load time; see main.js -->
       <button class="btn" id="homeBtn"></button>
-      <button class="btn" id="backBtn">← Back</button>
+      <button class="btn" id="backBtn" data-i18n="back"></button>
     </div>
-    <p class="hint">Four rows around whoever is in focus: grandparents, parents, their own
-       generation — brothers, sisters and whoever they married — and their children.
-       Click any card to open that person; “Back” returns.</p>
+    <p class="hint" data-i18n="exploreHint"></p>
     <div class="ped" id="ped"></div>
     <div class="detail" id="detail"></div>
   </div>
@@ -57,19 +62,32 @@
 
   <!-- EVERYONE -->
   <div class="view" id="view-everyone">
-    <p class="hint">Everyone in the tree, grouped by how they relate to the family.</p>
+    <p class="hint" data-i18n="indexHint"></p>
 
     <div class="relfinder">
-      <h4>How are two people related?</h4>
-      <p class="relhint">Pick any two. Where they are related, the arch shows the route:
-         up one side to the ancestor they share, and down the other. Click a card to open
-         that person.</p>
+      <h4 data-i18n="relTitle"></h4>
+      <p class="relhint" data-i18n="relHint"></p>
       <div class="relpick">
-        <select id="relA" aria-label="First person"></select>
-        <span class="amp">and</span>
-        <select id="relB" aria-label="Second person"></select>
+        <select id="relA" data-i18n-attr="aria-label:relFirst"></select>
+        <span class="amp" data-i18n="relAnd"></span>
+        <select id="relB" data-i18n-attr="aria-label:relSecond"></select>
       </div>
       <div class="relout" id="relOut"></div>
+    </div>
+
+    <!-- Both dimensions are derived from the links and the records, so regrouping
+         the index rewrites nothing — see indexCards() in render.js. -->
+    <div class="indexctl">
+      <div class="ctlgroup">
+        <span class="ctllab" data-i18n="groupBy"></span>
+        <div class="segs" id="groupBy" role="radiogroup"
+             data-i18n-attr="aria-label:groupBy"></div>
+      </div>
+      <div class="ctlgroup">
+        <span class="ctllab" data-i18n="sortBy"></span>
+        <div class="segs" id="sortBy" role="radiogroup"
+             data-i18n-attr="aria-label:sortBy"></div>
+      </div>
     </div>
 
     <div id="branchgrid"></div>
@@ -91,7 +109,7 @@
 <aside id="linepanel" class="collapsed" aria-hidden="true">
   <header>
     <h4 id="lineTitle"></h4>
-    <button id="lineClose" title="Close" aria-label="Close">×</button>
+    <button id="lineClose" data-i18n-attr="title:close;aria-label:close">×</button>
   </header>
   <div id="lineBody"></div>
 </aside>
@@ -99,16 +117,17 @@
 <div id="tt"></div>
 
 <!-- Plain scripts, not modules, so the page also works opened straight from disk. -->
-<script src="./assets/js/core.js?v=341968cc"></script>
+<script src="./assets/js/core.js?v=b93a0ce3"></script>
 
 <!-- One request for the whole tree. Generated by tools/build.py from the files
      in data/ — those stay the source of truth; this is what the page reads. -->
-<script src="./dist/bundle.js?v=341968cc"></script>
+<script src="./dist/bundle.js?v=b93a0ce3"></script>
 
-<script src="./assets/js/kinship.js?v=341968cc"></script>
-<script src="./assets/js/search.js?v=341968cc"></script>
-<script src="./assets/js/render.js?v=341968cc"></script>
-<script src="./assets/js/ui.js?v=341968cc"></script>
-<script src="./assets/js/main.js?v=341968cc"></script>
+<script src="./assets/js/i18n.js?v=b93a0ce3"></script>
+<script src="./assets/js/kinship.js?v=b93a0ce3"></script>
+<script src="./assets/js/search.js?v=b93a0ce3"></script>
+<script src="./assets/js/render.js?v=b93a0ce3"></script>
+<script src="./assets/js/ui.js?v=b93a0ce3"></script>
+<script src="./assets/js/main.js?v=b93a0ce3"></script>
 </body>
 </html>

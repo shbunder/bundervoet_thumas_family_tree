@@ -13,8 +13,11 @@ const spouseText = sp => '❦ ' + (sp.detail ? `${sp.name} — ${sp.detail}` : s
 // Someone can have married more than once; the list is chronological.
 const spousesText = p => (p.spouses || []).map(spouseText).join('   ');
 
-FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
+FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
   const conf = id => kin.confidenceOf(id);
+  // Every word this file prints comes through here. Nothing below writes English —
+  // it writes a key, and site/labels.json decides what that reads as.
+  const t = (key, params) => i18n.t(key, params);
 
   // ---------- shared pieces ----------
 
@@ -34,28 +37,29 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     return r && r.kind === 'blood' ? r.label : '';
   };
 
-  const spouseWord = (sp, of) =>
-    (of && kin.spouseKind(of, sp.id)) ||
-    (sp.kind === 'partnership' ? 'partner' : null) ||
-    ({ f: 'wife', m: 'husband' })[kin.genderOf(sp.id)] ||
-    'spouse';
-
   // Whose children a group is. Named, because with more than one group an unlabelled
   // row of children is the half-sibling ambiguity itself: it shows four children and
   // says nothing about the two mothers they had.
   const withWhom = other =>
-    other && people[other] ? `with ${esc(people[other].name)}` : 'other parent not recorded';
+    other && people[other]
+      ? t('withWhom', { name: esc(people[other].name) })
+      : t('otherParentUnknown');
 
   function node(id, { role, arrow = '↑', focus = false, cls = '' } = {}) {
-    if (!id) return '<div class="node unk"><div class="nm">Unknown</div><div class="dt">to research</div></div>';
+    if (!id) {
+      return `<div class="node unk"><div class="nm">${esc(t('unknownCard'))}</div>` +
+        `<div class="dt">${esc(t('toResearch'))}</div></div>`;
+    }
     const p = people[id];
     const c = conf(id);
     // Every other card on the row says what it is to the person in focus, so the
     // focus card cannot also say what it is to the root without the two readings
     // being mistaken for each other. What they are to the root is stated once,
     // with room to name the root, in the detail card below.
-    const label = focus ? 'in focus' : role || kin.relationship(id) || p.occupation || '';
-    const climb = !focus && c !== 'unk' ? `<span class="climb">${arrow ? `climb ${arrow}` : 'open'}</span>` : '';
+    const label = focus ? t('inFocus') : role || kin.relationship(id) || p.occupation || '';
+    const climb = !focus && c !== 'unk'
+      ? `<span class="climb">${esc(arrow ? t('climb', { arrow }) : t('openCard'))}</span>`
+      : '';
     return (
       `<div class="node ${focus ? 'focus ' : ''}${cls ? cls + ' ' : ''}${c}" data-id="${esc(id)}">` +
       climb +
@@ -70,8 +74,8 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
   // open them and go on into their family. One who is only a name stays flat.
   const spouseNode = (sp, of) =>
     sp.id && people[sp.id]
-      ? node(sp.id, { role: spouseWord(sp, of), arrow: '' })
-      : `<div class="node fam spouse"><div class="rl">${esc(spouseWord(sp))}</div>` +
+      ? node(sp.id, { role: kin.spouseLabel(sp, of), arrow: '' })
+      : `<div class="node fam spouse"><div class="rl">${esc(kin.spouseLabel(sp))}</div>` +
         `<div class="nm">${esc(sp.name)}</div>` +
         (sp.detail ? `<div class="dt">${esc(sp.detail)}</div>` : '') +
         '</div>';
@@ -84,7 +88,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const p = parentId && people[parentId];
     if (!p || (!p.father && !p.mother)) return '';
     return (
-      `<div class="gplab">${esc(p.name)}’s parents</div>` +
+      `<div class="gplab">${esc(t('parentsOf', { name: p.name }))}</div>` +
       `<div class="couple">${node(p.father, { role: relTo(p.father, focus) })}<span class="xmark">×</span>` +
       `${node(p.mother, { role: relTo(p.mother, focus) })}</div>` +
       '<div class="vline"></div>'
@@ -114,7 +118,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const p = people[id];
     const rel = kin.relationship(id);
     return [
-      rel && `${rootName}’s ${rel.toLowerCase()}`,
+      rel && t('ofRoot', { root: rootName, rel: rel.toLowerCase() }),
       p.dates,
       p.occupation,
       p.nickname && `“${p.nickname}”`,
@@ -132,21 +136,25 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const groups = kin.childGroupsOf(id);
     const kidLines = groups
       .map(g => {
-        const label = groups.length > 1 ? `Children ${withWhom(g.other)}` : 'Children';
+        const label = groups.length > 1
+          ? `${esc(t('lblChildren'))} ${withWhom(g.other)}`
+          : esc(t('lblChildren'));
         return `<div class="kv"><b>${label}:</b> ` +
           `${esc(g.children.map(k => people[k].name).join(', '))}</div>`;
       })
       .join('');
     return (
-      `<span class="conf conf-${c}">${esc(meta.confidenceLabels[c])}</span>` +
+      `<span class="conf conf-${c}">${esc(i18n.conf(c))}</span>` +
       `<h5>${esc(p.name)}</h5>` +
       (sub ? `<div class="r">${esc(sub)}</div>` : '') +
-      (p.spouses?.length ? `<div class="kv"><b>Spouse:</b> ${esc(spousesText(p))}</div>` : '') +
-      parentLine('Father', p.father) +
-      parentLine('Mother', p.mother) +
+      (p.spouses?.length
+        ? `<div class="kv"><b>${esc(t('lblSpouse'))}:</b> ${esc(spousesText(p))}</div>`
+        : '') +
+      parentLine(esc(t('lblFather')), p.father) +
+      parentLine(esc(t('lblMother')), p.mother) +
       kidLines +
       (p.note ? `<div class="nt">${esc(p.note)}</div>` : '') +
-      `<div class="sr"><b>Source:</b> ${esc(kin.sourceFor(id))}</div>`
+      `<div class="sr"><b>${esc(t('lblSource'))}:</b> ${esc(kin.sourceFor(id))}</div>`
     );
   }
 
@@ -169,7 +177,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     }
     if (p.father || p.mother) {
       html +=
-        `<div class="gplab">${esc(p.name)}’s parents</div>` +
+        `<div class="gplab">${esc(t('parentsOf', { name: p.name }))}</div>` +
         `<div class="pgrid parents"><div class="pcol">${node(p.father, { role: relTo(p.father, focus) })}</div>` +
         '<div class="pcol xcol"><span class="xmark">×</span></div>' +
         `<div class="pcol">${node(p.mother, { role: relTo(p.mother, focus) })}</div></div>` +
@@ -193,7 +201,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
       .join('');
 
     if (siblings.length) {
-      html += '<div class="rowlab">brothers &amp; sisters, in birth order · click to open one</div>';
+      html += `<div class="rowlab">${esc(t('siblingRow'))}</div>`;
     }
     // The inner wrapper is what lets a row centre when it fits and scroll when it
     // does not: `margin:auto` gives back negative free space as zero, where
@@ -206,7 +214,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     // clicking into a child and reading the label there.
     const groups = kin.childGroupsOf(focus);
     if (groups.length) {
-      html += '<div class="vline tall"></div><div class="childlab">children · click to climb down ↓</div>';
+      html += `<div class="vline tall"></div><div class="childlab">${esc(t('childrenRow'))}</div>`;
       html += groups
         .map(g => {
           const row = g.children
@@ -232,37 +240,39 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     const push = (label, value) => value && rows.push(`<div class="kv"><b>${label}:</b> ${value}</div>`);
     const list = ids => ids.map(id => refLink(id)).join('<span class="sep">·</span>');
 
-    push('Born', esc(p.born));
-    push('Died', esc(p.died));
-    push('Occupation', esc(p.occupation));
+    push(esc(t('lblBorn')), esc(p.born));
+    push(esc(t('lblDied')), esc(p.died));
+    push(esc(t('lblOccupation')), esc(p.occupation));
     if (p.spouses?.length) {
       push(
-        'Married',
+        esc(t('lblMarried')),
         p.spouses
           .map(sp => (sp.id && people[sp.id] ? refLink(sp.id) : esc(sp.name)) + (sp.detail ? ` <span class="d">— ${esc(sp.detail)}</span>` : ''))
           .join('<span class="sep">·</span>')
       );
     }
-    push('Father', p.father && people[p.father] ? refLink(p.father) : '');
-    push('Mother', p.mother && people[p.mother] ? refLink(p.mother) : '');
+    push(esc(t('lblFather')), p.father && people[p.father] ? refLink(p.father) : '');
+    push(esc(t('lblMother')), p.mother && people[p.mother] ? refLink(p.mother) : '');
 
     const siblings = kin.siblingsOf(focus).slice().sort(byBirth);
-    if (siblings.length) push(siblings.length === 1 ? 'Sibling' : 'Siblings', list(siblings));
+    if (siblings.length) {
+      push(esc(t(siblings.length === 1 ? 'lblSibling' : 'lblSiblings')), list(siblings));
+    }
     // Same reason as the rows above: with two marriages, one "Children:" line reads as
     // one family. The label carries the other parent so it cannot.
     const groups = kin.childGroupsOf(focus);
     for (const g of groups) {
       const kids = g.children.slice().sort(byBirth);
-      const word = kids.length === 1 ? 'Child' : 'Children';
+      const word = esc(t(kids.length === 1 ? 'lblChild' : 'lblChildren'));
       push(groups.length > 1 ? `${word} ${withWhom(g.other)}` : word, list(kids));
     }
 
     return (
       `<h3>${esc(p.name)}</h3><div class="sub">${esc(subtitleFor(focus))}</div>` +
-      `<div class="conf conf-${c}">${esc(meta.confidenceLabels[c])}</div>` +
+      `<div class="conf conf-${c}">${esc(i18n.conf(c))}</div>` +
       rows.join('') +
       (p.note ? `<div class="disc">${esc(p.note)}</div>` : '') +
-      `<div class="src"><b>Source:</b> ${esc(kin.sourceFor(focus))}</div>`
+      `<div class="src"><b>${esc(t('lblSource'))}:</b> ${esc(kin.sourceFor(focus))}</div>`
     );
   }
 
@@ -281,7 +291,9 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     '<svg class="ubridge" viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden="true">' +
     '<path d="M50 0 V12 M25 12 H75 M25 12 V34 M75 12 V34" vector-effect="non-scaling-stroke"/></svg>';
 
-  const MARRIED = '<div class="uconn marr"><span>married</span></div>';
+  // A function, not a constant: the language can change without the renderer being
+  // rebuilt, and a string captured at construction would stay in the old one.
+  const MARRIED = () => `<div class="uconn marr"><span>${esc(t('marriedConn'))}</span></div>`;
 
   function ucard(id, label, cls = '') {
     const p = people[id];
@@ -307,14 +319,14 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
         );
       })
       .join('');
-    return steps + (marriedIn ? MARRIED + ucard(marriedIn, '', ' here') : '');
+    return steps + (marriedIn ? MARRIED() + ucard(marriedIn, '', ' here') : '');
   }
 
   function linkGraph(a, b) {
     const d = kin.linkDiagram(a, b);
     if (!d || d.kind === 'self') return '';
     if (d.kind === 'spouse') {
-      return `<div class="ulink pair">${ucard(a, '', ' here')}${MARRIED}${ucard(b, '', ' here')}</div>`;
+      return `<div class="ulink pair">${ucard(a, '', ' here')}${MARRIED()}${ucard(b, '', ' here')}</div>`;
     }
 
     // Each arm without the ancestor at its top — that card is drawn once, at the
@@ -328,7 +340,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
       const atApex = marriedOn(emptyLeft ? 'left' : 'right');
       return (
         '<div class="ulink straight">' +
-        (atApex ? ucard(atApex, '', ' here') + MARRIED : '') +
+        (atApex ? ucard(atApex, '', ' here') + MARRIED() : '') +
         ucard(d.via, '', atApex ? '' : ' here') +
         arm(emptyLeft ? right : left, marriedOn(emptyLeft ? 'right' : 'left')) +
         '</div>'
@@ -337,7 +349,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
 
     return (
       '<div class="ulink">' +
-      `<div class="uapex">${ucard(d.via, 'they meet here')}</div>` +
+      `<div class="uapex">${ucard(d.via, t('meetHere'))}</div>` +
       BRIDGE +
       `<div class="ucols"><div class="uside">${arm(left, marriedOn('left'))}</div>` +
       `<div class="uside">${arm(right, marriedOn('right'))}</div></div>` +
@@ -379,8 +391,10 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
           `<div class="col"><h3>${esc(line.key)}</h3>` +
           `<div class="cap">${esc(line.caption)}</div>` +
           `<div class="chain">${chain}</div>` +
-          `<div class="depthlab">${known} generation${known > 1 ? 's' : ''} known</div>` +
-          (line.origin ? `<div class="origin"><span class="ol">Name origin.</span> ${esc(line.origin)}</div>` : '') +
+          `<div class="depthlab">${esc(t('generationsKnown', { n: known }))}</div>` +
+          (line.origin
+            ? `<div class="origin"><span class="ol">${esc(t('nameOrigin'))}</span> ${esc(line.origin)}</div>`
+            : '') +
           '</div>'
         );
       })
@@ -420,19 +434,27 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
     return (from > 0 ? '… ' : '') + mark(raw.slice(from, to), shifted) + (to < raw.length ? ' …' : '');
   }
 
+  // Which field a hit was found in. The search index carries the field's key, not a
+  // word for it — the word is wording, and belongs with the rest of it.
+  const FIELD_LABEL = {
+    name: 'lblName', born: 'lblBorn', died: 'lblDied', dates: 'lblDates',
+    spouse: 'lblSpouse', occupation: 'lblOccupation', nickname: 'lblNickname',
+    branch: 'lblBranch', note: 'lblNote', source: 'lblSource',
+  };
+
   function searchResults(results, term) {
     if (!term.trim()) {
-      return '<p class="hint">Search for a name, a year, or a place — “Oostende”, “1943”, “Evergem 1879”.</p>';
+      return `<p class="hint">${esc(t('searchEmpty'))}</p>`;
     }
     if (!results.length) {
-      return `<p class="hint">Nobody matches “${esc(term.trim())}”.</p>`;
+      return `<p class="hint">${esc(t('noMatches', { term: term.trim() }))}</p>`;
     }
     const rows = results
       .map(r => {
         const p = people[r.id];
         const meta = [kin.relationship(r.id), p.dates].filter(Boolean).join(' · ');
         const ctx = r.context
-          ? `<div class="hc"><span class="hk">${esc(r.context.label)}</span>` +
+          ? `<div class="hc"><span class="hk">${esc(t(FIELD_LABEL[r.context.key] || r.context.key))}</span>` +
             `${excerpt(r.context.raw, r.ranges[r.context.key])}</div>`
           : '';
         return (
@@ -444,10 +466,8 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
         );
       })
       .join('');
-    const n = results.length;
     return (
-      `<p class="rescount">${n} ${n === 1 ? 'person' : 'people'} of ` +
-      `${Object.keys(people).length} · click to open in the tree</p>` +
+      `<p class="rescount">${esc(t('resultCount', { n: results.length, total: Object.keys(people).length }))}</p>` +
       `<div class="results">${rows}</div>`
     );
   }
@@ -459,132 +479,218 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
   // that the old single thread had to apologise for in prose.
   function descent(id) {
     if (id === kin.ROOT) {
-      return (
-        `<p class="lnote">${esc(people[id].name)} is where this tree is measured from — ` +
-        'every line in it ends here.</p>'
-      );
+      return `<p class="lnote">${esc(t('rootNote', { name: people[id].name }))}</p>`;
     }
     return `<div class="lhead">${relationText(id, kin.ROOT)}</div>` + linkGraph(id, kin.ROOT);
   }
 
   const legend = () =>
-    Object.entries(meta.confidenceLabels)
-      .map(([key, label]) => `<span><i class="swatch sw-${key}"></i>${esc(label)}</span>`)
+    i18n.confCodes
+      .map(key => `<span><i class="swatch sw-${key}"></i>${esc(i18n.conf(key))}</span>`)
       .join('');
 
   // ---------- index ----------
 
-  // The index is grouped by how each person relates to the root family, and
-  // membership is derived rather than listed — someone added to the data shows up
-  // here without anyone having to remember to add them to a second file.
+  // Everyone, cut into groups by whichever question the reader asked and sorted
+  // inside each group by whichever order they asked for. Both are *derived* — from
+  // the person's own `line`, their surname, their birth date, their position in the
+  // links — so someone added to data/ appears under the right heading in all four
+  // groupings without a single list being edited anywhere.
   //
-  // `groups.js` is still used, but only for its headings: where it has a curated
-  // title for someone ("Bostyn & Cappaert (Marcel's mother)") that reads better
-  // than the bare branch name, so it wins. Anyone it does not mention falls back
-  // to their branch, which is why nobody can go missing.
-  function indexCards() {
-    const rootName = people[kin.ROOT] ? people[kin.ROOT].name : '';
-    const CATEGORIES = [
-      { key: 'ancestor', title: 'Ancestors', blurb: `The direct line above ${rootName} — parents, grandparents, and up.` },
-      { key: 'relative', title: 'Blood relatives', blurb: 'Blood, but off the direct line: siblings, aunts and uncles, cousins, and their descendants.' },
-      { key: 'other', title: 'Others', blurb: 'Married into the family, or not yet connected to it.' },
-    ];
+  // Which is the whole reason the controls can exist at all: a hand-kept index can
+  // be regrouped only by rewriting it.
 
-    // Each person names their own line; groups.js only says what the lines are
-    // called and in what order. Nobody is listed twice, and nobody can be left
-    // out of a list, because there is no list.
-    const titleOfLine = {};
-    const orderOfTitle = {};
-    groups.forEach((g, i) => {
-      titleOfLine[g.key] = g.title;
-      orderOfTitle[g.title] = i;
-    });
+  const INDEX_GROUPINGS = ['line', 'letter', 'century', 'relation'];
+  const INDEX_SORTS = ['generation', 'name', 'birth'];
+  const GROUP_LABEL = {
+    line: 'groupLine', letter: 'groupLetter', century: 'groupCentury', relation: 'groupRelation',
+  };
+  const SORT_LABEL = { generation: 'sortGeneration', name: 'sortName', birth: 'sortBirth' };
 
-    const personRow = id => {
-      const p = people[id];
-      const rel = kin.relationship(id);
-      const extra = [rel, p.occupation, p.nickname && `“${p.nickname}”`].filter(Boolean).join(' · ');
-      return (
-        `<div class="p" data-id="${esc(id)}" style="cursor:pointer"><b>${esc(p.name)}</b>` +
-        (p.dates ? ` <span class="d">— ${esc(p.dates)}</span>` : '') +
-        (extra ? ` <span class="d">· ${esc(extra)}</span>` : '') +
-        '</div>'
-      );
-    };
+  // What the two controls above the index offer. Built here, beside the code that
+  // honours them, so a grouping cannot be offered that nothing implements.
+  const indexOptions = () => ({
+    group: INDEX_GROUPINGS.map(key => ({ key, label: t(GROUP_LABEL[key]) })),
+    sort: INDEX_SORTS.map(key => ({ key, label: t(SORT_LABEL[key]) })),
+  });
 
-    return CATEGORIES.map(catg => {
-      const members = Object.keys(people).filter(id => kin.categoryOf(id) === catg.key);
-      if (!members.length) return '';
+  // `order` is the birth date reduced to a sortable string by the build, so its
+  // first four characters are the year whatever precision the rest of it has.
+  const birthYear = id => {
+    const o = people[id].order;
+    const y = o ? Number(String(o).slice(0, 4)) : NaN;
+    return Number.isFinite(y) ? y : null;
+  };
 
-      const buckets = new Map();
-      for (const id of members) {
-        const key = titleOfLine[people[id].line] || people[id].branch || 'Unplaced';
-        if (!buckets.has(key)) buckets.set(key, []);
-        buckets.get(key).push(id);
-      }
+  // 1801–1900 is the 19th century, and 1900 is still in it. English wants the
+  // ordinal and Dutch the bare number, so both go to the label and it takes one.
+  const ordSuffix = n =>
+    n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th';
 
-      // Curated headings keep the order they have in groups.js; anything derived
-      // from a branch name follows, alphabetically.
-      const titles = [...buckets.keys()].sort((a, b) => {
-        const ia = a in orderOfTitle ? orderOfTitle[a] : Infinity;
-        const ib = b in orderOfTitle ? orderOfTitle[b] : Infinity;
-        return ia !== ib ? ia - ib : a.localeCompare(b);
-      });
+  // Each person names their own line; site/labels.json only says what the lines are
+  // called and in what order. Nobody is listed twice, and nobody can be left out of
+  // a list, because there is no list.
+  const lineTitles = {};
+  const orderOfLine = {};
+  groups.forEach((g, i) => {
+    lineTitles[g.key] = g.title;
+    orderOfLine[g.key] = i;
+  });
+  // Resolved per call, not once: these headings are translated too, and the language
+  // can change without the renderer being rebuilt.
+  const titleOfLine = key => (key in lineTitles ? i18n.pick(lineTitles[key]) : null);
 
-      // Within a heading, read down the generations rather than alphabetically —
-      // closest to the root first. Both are derived, but only one tells a story.
-      const byGeneration = (a, b) => {
-        const da = a in kin.distance ? kin.distance[a] : Infinity;
-        const db = b in kin.distance ? kin.distance[b] : Infinity;
-        return da - db || people[a].name.localeCompare(people[b].name);
+  const CATEGORY = {
+    ancestor: { title: 'catAncestors', blurb: 'catAncestorsBlurb', rank: 0 },
+    relative: { title: 'catRelatives', blurb: 'catRelativesBlurb', rank: 1 },
+    other: { title: 'catOthers', blurb: 'catOthersBlurb', rank: 2 },
+  };
+
+  // Which card a person lands on. `rank` orders the cards themselves; within one
+  // grouping every rank is the same type, so comparing them is well defined.
+  function grouper(mode) {
+    if (mode === 'letter') {
+      return id => {
+        const p = people[id];
+        // The folded family key, not the name as written: it has already had the
+        // particle spacing and the accents taken out, so "De Keyser", "Dekeyser"
+        // and "'t Jonck" land where a reader would look for them.
+        const ch = (p.family || p.surname || '').replace(/[^a-z]/gi, '').charAt(0).toUpperCase();
+        return ch
+          ? { key: ch, title: ch, rank: ch }
+          : { key: '~none', title: t('letterUnknown'), rank: '￿' };
       };
-      const cards = titles
-        .map(t => `<div class="bcard"><h4>${esc(t)}</h4>${buckets.get(t).sort(byGeneration).map(personRow).join('')}</div>`)
-        .join('');
+    }
+    if (mode === 'century') {
+      return id => {
+        const y = birthYear(id);
+        if (!y) return { key: '~none', title: t('centuryUnknown'), rank: Infinity };
+        const c = Math.floor((y - 1) / 100) + 1;
+        return {
+          key: String(c),
+          title: t('century', { n: c, ord: c + ordSuffix(c) }),
+          // Stated, because "19th century" meaning 1801–1900 is a convention half
+          // the readers of a family tree do not hold.
+          blurb: `${(c - 1) * 100 + 1}–${c * 100}`,
+          rank: c,
+        };
+      };
+    }
+    if (mode === 'relation') {
+      return id => {
+        const c = kin.categoryOf(id);
+        const cat = CATEGORY[c] || CATEGORY.other;
+        return {
+          key: c,
+          title: t(cat.title),
+          blurb: t(cat.blurb, { root: rootName }),
+          rank: cat.rank,
+        };
+      };
+    }
+    // The curated headings, in the order site/labels.json gives them. Anyone it
+    // does not mention falls back to their branch, which is why nobody goes missing.
+    return id => {
+      const p = people[id];
+      const title = (p.line && titleOfLine(p.line)) || p.branch || t('unplaced');
+      return {
+        key: title,
+        title,
+        rank: p.line && p.line in orderOfLine ? orderOfLine[p.line] : Infinity,
+      };
+    };
+  }
 
-      return (
-        `<h3 class="catsec">${esc(catg.title)}<span class="n">${members.length}</span></h3>` +
-        `<p class="catblurb">${esc(catg.blurb)}</p>` +
-        `<div class="branchgrid">${cards}</div>`
-      );
-    }).join('');
+  // Within a card. "Generation" reads down the descent, closest to the root first —
+  // all three are derived, but only that one tells a story, so it stays the default.
+  function sorter(mode) {
+    if (mode === 'name') {
+      return (a, b) =>
+        (people[a].family || '￿').localeCompare(people[b].family || '￿') ||
+        people[a].name.localeCompare(people[b].name);
+    }
+    if (mode === 'birth') return byBirth;
+    return (a, b) => {
+      const da = a in kin.distance ? kin.distance[a] : Infinity;
+      const db = b in kin.distance ? kin.distance[b] : Infinity;
+      return da - db || people[a].name.localeCompare(people[b].name);
+    };
+  }
+
+  const personRow = id => {
+    const p = people[id];
+    const rel = kin.relationship(id);
+    const extra = [rel, p.occupation, p.nickname && `“${p.nickname}”`].filter(Boolean).join(' · ');
+    return (
+      `<div class="p" data-id="${esc(id)}"><b>${esc(p.name)}</b>` +
+      (p.dates ? ` <span class="d">— ${esc(p.dates)}</span>` : '') +
+      (extra ? ` <span class="d">· ${esc(extra)}</span>` : '') +
+      '</div>'
+    );
+  };
+
+  function indexCards(groupBy, sortBy) {
+    const key = grouper(INDEX_GROUPINGS.indexOf(groupBy) >= 0 ? groupBy : INDEX_GROUPINGS[0]);
+    const cmp = sorter(INDEX_SORTS.indexOf(sortBy) >= 0 ? sortBy : INDEX_SORTS[0]);
+
+    const buckets = new Map();
+    for (const id of Object.keys(people)) {
+      const g = key(id);
+      if (!buckets.has(g.key)) buckets.set(g.key, { title: g.title, blurb: g.blurb, rank: g.rank, ids: [] });
+      buckets.get(g.key).ids.push(id);
+    }
+
+    const cards = [...buckets.values()]
+      .sort((a, b) =>
+        (a.rank < b.rank ? -1 : a.rank > b.rank ? 1 : 0) || a.title.localeCompare(b.title))
+      .map(g =>
+        `<div class="bcard"><h4>${esc(g.title)}<span class="n">${g.ids.length}</span></h4>` +
+        (g.blurb ? `<div class="bblurb">${esc(g.blurb)}</div>` : '') +
+        g.ids.sort(cmp).map(personRow).join('') +
+        '</div>')
+      .join('');
+
+    return `<div class="branchgrid">${cards}</div>`;
   }
 
   // Objective (c): name the relation between any two people in the index.
+  // These sentences carry their own markup — the <em> around the relation, the <b>
+  // around each name — so what goes into them is escaped here, before it does.
   function relationText(a, b) {
-    if (!a || !b || !people[a] || !people[b]) return '<span class="muted">Pick two people.</span>';
-    const r = kin.relationBetween(a, b);
-    if (!r) {
-      return (
-        `<b>${esc(people[a].name)}</b> and <b>${esc(people[b].name)}</b> have no connection recorded in the tree — ` +
-        'no shared ancestor, and no marriage linking them.'
-      );
+    if (!a || !b || !people[a] || !people[b]) {
+      return `<span class="muted">${esc(t('pickTwo'))}</span>`;
     }
-    if (r.kind === 'self') return `<b>${esc(people[a].name)}</b> — that is the same person.`;
-
     const A = `<b>${esc(people[a].name)}</b>`;
     const B = `<b>${esc(people[b].name)}</b>`;
-    const line = `${A} is ${B}’s <em>${esc(r.label)}</em>.`;
+    const r = kin.relationBetween(a, b);
+    if (!r) return t('noConnection', { a: A, b: B });
+    if (r.kind === 'self') return t('samePersonLine', { a: A });
+
+    const line = t('isRelOf', { a: A, b: B, rel: esc(r.label) });
     // An in-law is two facts, not one — a blood relation and a marriage — and saying
     // it as one produces "X is Y's aunt of Y's husband". Two clauses, one per step.
     if (r.kind === 'marriage' && r.through) {
-      const T = `<b>${esc(people[r.through].name)}</b>`;
-      return r.married === 'b'
-        ? `${A} is the <em>${esc(r.label)}</em> of ${T}, who married ${B}.`
-        : `${A} married ${T}, who is ${B}’s <em>${esc(r.label)}</em>.`;
+      const through = `<b>${esc(people[r.through].name)}</b>`;
+      return t(r.married === 'b' ? 'inLawB' : 'inLawA', { a: A, b: B, through, rel: esc(r.label) });
     }
     if (r.kind !== 'blood' || !r.via) return line;
     // When one of them is the common ancestor, saying so again explains nothing —
     // the relation already is the line between them.
     if (r.da === 0 || r.db === 0) {
       const steps = Math.max(r.da, r.db);
-      return line + `<div class="via">${steps} generation${steps === 1 ? '' : 's'} apart, in a direct line.</div>`;
+      return line + `<div class="via">${esc(t('directLine', { n: steps }))}</div>`;
     }
-    const gen = n => `${n} generation${n === 1 ? '' : 's'} up`;
     return (
       line +
-      `<div class="via">Common ancestor: <b>${esc(people[r.via].name)}</b> — ` +
-      `${gen(r.da)} from ${esc(people[a].name)}, ${gen(r.db)} from ${esc(people[b].name)}.</div>`
+      '<div class="via">' +
+      t('commonAncestorLine', {
+        via: `<b>${esc(people[r.via].name)}</b>`,
+        ga: esc(t('genUp', { n: r.da })),
+        gb: esc(t('genUp', { n: r.db })),
+        a: esc(people[a].name),
+        b: esc(people[b].name),
+      }) +
+      '</div>'
     );
   }
 
@@ -594,7 +700,7 @@ FamilyTree.createRenderer = function ({ meta, people, lineages, groups }, kin) {
   const relationPanel = (a, b) => relationText(a, b) + linkGraph(a, b);
 
   return {
-    tooltip, pedigree, detail, lineageColumns, indexCards, relationPanel,
+    tooltip, pedigree, detail, lineageColumns, indexCards, indexOptions, relationPanel,
     legend, searchResults, descent,
   };
 };

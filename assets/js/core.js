@@ -13,6 +13,7 @@ window.FamilyTree = (function () {
     branches_: {},
     lineages_: [],
     groups_: [],
+    strings_: null,
   };
 
   // ---- called by the data files ----
@@ -33,6 +34,11 @@ window.FamilyTree = (function () {
   };
   FT.groups = function (g) {
     FT.groups_ = g;
+  };
+  // Every word the page shows, in every language it shows them in. Kept out of
+  // `meta` because it is presentation: it comes from site/, not from data/.
+  FT.strings = function (s) {
+    FT.strings_ = s;
   };
 
   // Where the data lives, worked out from this script's own URL so the pages keep

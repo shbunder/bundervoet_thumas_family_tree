@@ -19,8 +19,8 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 |---|---|---|---|---|---|
 | `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 44 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 26 | Belgian civil and church registration, with act images. |
-| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 32 | Belgian civil and church registration, with act images. |
+| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 17 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
 | `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 3 | Volunteer transcriptions of West-Flemish marriage and death records. |
@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 1 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 41 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 44 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 5 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 
@@ -438,6 +438,47 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07
 - **Note:** Browsable images plus a partial FamilySearch index; the 1877 birth register and the pre-1881 marriage registers are separate films in the same Hamme series and were NOT opened in this pass.
+
+#### `fs-hamme-1865-death-ida-vermandel` — Death act nr. 123 — Ida Vermandel, Hamme (Oost-Vlaanderen), died 21 June 1865 (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:S3HY-67JS-YLV?i=79&cat=koha%3A349052&lang=nl>
+- **Covers:** ['Vermandel', 'Van Bergen', 'Verplancken']
+- **Yielded:** The act image, read. Ida Vermandel, 39, arbeidster, BORN AT ZELZATE, living at Hamme, wife of Joannes Franciscus Van Bergen, died 21 June 1865 at half past eight in the evening in the women's burgerhospitaal on the Marktplein at Hamme; act drawn up 22 June 1865 by burgemeester Jacques Johannes Vertongen, declared by Norbertus Joannes Stabbaert (38) and Petrus Seraphinus Dieriex (51, veldwachter). NAMES HER PARENTS, both still living in 1865: [P]rimus Vermandel and [?]phina Verplancken — the father's forename reads 'Primus', the mother's capital is ambiguous (Josephina / Delphina). Turns a year-only death into a day and a place, gives her birth commune, her trade, and the next generation up as a CANDIDATE, not a graft.
+- **Saved artifact:** `data/artifacts/vermandel-ida-1865-death-hamme.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** REGISTER IMAGE, read by stitching the FamilySearch deep-zoom tiles on the sg30p0 origin. Film #1114009 / DGS 004198666, item 1, image 80 of 556. Located from the 1865 tafel on the same film, image 107.
+
+#### `fs-hamme-civil-registers-1796-1900` — Hamme (Oost-Vlaanderen) civil registers 1796-1900 on FamilySearch — catalogue koha:349052, 88 browsable film items
+- **Kind:** collection · <https://www.familysearch.org/nl/search/catalog/koha:349052>
+- **Covers:** ['Bocklandt', 'Van Bergen', 'Vermandel', 'Ichau']
+- **Yielded:** The full film map for Hamme (O-Vl), every item online. Births 1796-1814/1815-1822/1823-1830/1831-1839/1840-1850/1851-1857/1858-1864/1865-1871/1872 (DGS 004091375-004091384, 004091246); MARRIAGES 1796-1803 (004817680), 1803-1818 (004817776), 1819-1829 (004817777), 1830-1840 (004817778), 1841-1850 (004817779), 1851-1861 (004817780), 1862-1872 (004817781); DEATHS 1796-1801 (004198937) … 1851-1863 (004198943), 1864-1872 (004198666); plus huwelijksafkondigingen and a near-complete run of huwelijksbijlagen. This is the index that turns 'Hamme is unreachable' into 'Hamme is a browse'.
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** Filmed from the originals at the Gerechtshof te Dendermonde. Supersedes the single-film entry fs-hamme-civil-registers-film-004833291 as the way in; that film is item 1768237 in this same catalogue record.
+
+#### `fs-waasmunster-civil-registers-1796-1900` — Waasmunster (Oost-Vlaanderen) civil registers 1796-1900 on FamilySearch — catalogue koha:15958, 34 microfilm reels
+- **Kind:** collection · <https://www.familysearch.org/nl/search/catalog/koha:15958>
+- **Covers:** ['Van Bergen', 'Vermandel']
+- **Yielded:** Establishes that Waasmunster civil registration IS digitised and browsable, which neither Open Archives nor AGATHA holds in any form. Births 1796-1814 (DGS 004794009), 1815-1843 (004794010), 1844-1872 (004794011); MARRIAGES 1796-1850 (004794012), 1851-1877 (004794013); huwelijksbijlagen 1806-1835+; ten-year tables on separate films (marriages 1833-1842 = film 1074817). Marie-Louise Van Bergen's 1842 birth act and any Van Bergen x Vermandel marriage before 1850 sit on films 004794010 and 004794012.
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** Filmed from the originals at the Gerechtshof te Dendermonde. Parish registers for Waasmunster (O.-L.-Vrouw, 1586-1807) and Vervoort's transcriptions of the baptisms 1743-1779 and marriages 1733-1783 are separate catalogue records at the same place.
+
+#### `fs-zelzate-civil-registers-1796-1870` — Zelzate (Oost-Vlaanderen) civil registers 1796-1870 on FamilySearch — catalogue koha:20457
+- **Kind:** collection · <https://www.familysearch.org/nl/search/catalog/koha:20457>
+- **Covers:** ['Vermandel', 'Verplancken']
+- **Yielded:** The route to Ida Vermandel's own birth act, c. 1825-26. TIENJARIGE TAFELS 1802-1870 on one film (DGS 005089047) — one lookup gives the act number; Geboorten 1816-1840 (004670480); Huwelijken 1821-1860 (004670484) and 1797-1820 (004670483) for her parents' marriage; Overlijden 1811-1840 (004186911) and 1841-1870 (004186912) for [P]rimus Vermandel and [?]phina Verplancken, both alive in June 1865.
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** Not yet opened. Registered here because the 1865 Hamme death act names Zelzate as Ida's birth commune, which is what makes this film set the next act to read.
+
+#### `fs-hamme-1882-marriage-vermorgen-vandenberghe` — Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:6TRL-HZTX?lang=nl>
+- **Covers:** FamilySearch film 004833291, item 1, image 249 — the register page itself, read by stitching the deep-zoom tiles on the sg30p0.familysearch.org origin. Previously registered from the name index alone.
+- **Yielded:** Names the bride as meerderjarige dochter van Joannes Franciscus Van Den Berghe, metser, 65, living at Hamme, present and consenting, en van wijlen Ida Vermandel, overleden te Hamme den eenen twintigste Juny achttien honderd vyf en zestig. That death date and place match, to the day, the Hamme death act nr. 123 read separately seventeen years earlier — so it resolves the Van Bergen / Van Den Berghe spelling as one family rather than two, and makes Paulina a graftable daughter. It also gives the father's age (65 in May 1882, so born about 1817) and his trade, metser, the same trade his daughter Marie-Louise's 1888 Oostende death act gives him.
+- **Confidence:** doc
+- **Accessed:** 2026-07-26
+- **Note:** INDEX ENTRY ONLY — the FamilySearch name index over Hamme film #004833291, image 331ff. The register image was not read, and the index gives no place field for the birth years. The 1865 death act of Ida Vermandel spells the husband's surname VAN BERGEN, so the two spellings are the same family or two families sharing a rare wife's name; the register image of this 1882 act would settle it.
 
 ### Geneanet
 

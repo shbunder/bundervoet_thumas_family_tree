@@ -5,7 +5,7 @@
 // of a pair, so it can relate anyone to anyone. The tree's familiar labels
 // ("Great-grandmother") are just that engine pointed at the root.
 
-FamilyTree.createKinship = function ({ meta, people, branches }) {
+FamilyTree.createKinship = function ({ meta, people, branches }, i18n) {
   const ROOT = meta.root;
   // A forest has more than one starting family. `roots` is what the index and the
   // validator measure from; a tree with a single root is the one-element case.
@@ -132,19 +132,34 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
 
   // ---------- naming a relationship ----------
 
+  // Not a constant, because the language can change without the tree being rebuilt.
+  // Read at the moment a relation is named, so every label on the page is in the
+  // language the page is currently in.
+  const V = () => i18n.kin();
+
   const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
-  const greatPrefix = n => (n <= 0 ? '' : n === 1 ? 'great-' : `${n}×-great-`);
-  const greats = (n, word) => greatPrefix(n) + word;
-  const ORDINALS = ['', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'];
-  const ordinal = n => ORDINALS[n] || `${n}th`;
-  const TIMES = ['', 'once', 'twice', 'three times', 'four times', 'five times'];
-  const removedWord = n => TIMES[n] || `${n} times`;
+
+  // "great-grandmother", "3×-great-grandmother", "betovergrootmoeder". The prefix
+  // list is the language's own: one entry per step it has a word for, and the last
+  // entry is the template for everything past them. English stacks `great-` for
+  // ever; Dutch has `over-` and `betover-` and then needs a count as well.
+  function prefix(list, n) {
+    if (n <= 0) return list[0] || '';
+    const last = list.length - 1;
+    return n < last ? list[n] : String(list[last] || '').replace('{n}', n);
+  }
+
   // Falls back to the neutral word when the record does not say, so an unknown
   // never silently reads as a man.
-  const byGender = (id, female, male, neutral) => {
+  function word(id, key) {
+    const set = V()[key];
     const g = genderOf(id);
-    return g === 'f' ? female : g === 'm' ? male : neutral !== undefined ? neutral : male;
-  };
+    const chosen = g === 'f' ? set.f : g === 'm' ? set.m : set.n;
+    return chosen != null ? chosen : set.m;
+  }
+
+  const ordinal = n => V().ordinals[n] || V().ordinalN.replace('{n}', n);
+  const removedWord = n => V().times[n] || V().timesN.replace('{n}', n);
 
   // The closest ancestor the two share. Ties are broken toward the most balanced
   // pair of distances, so a couple's shared child reads as "sibling" rather than
@@ -172,7 +187,7 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
   // Names the blood relation of a to b — "a is b's ___" — or null if they share
   // no ancestor. `via` is the common ancestor, so callers can show the join.
   function bloodRelation(a, b) {
-    if (a === b) return { label: 'the same person', via: a, kind: 'self' };
+    if (a === b) return { label: V().samePerson, via: a, kind: 'self' };
     if (!people[a] || !people[b]) return null;
     const lca = commonAncestor(a, b);
     if (!lca) return null;
@@ -182,13 +197,13 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     // One is an ancestor of the other: the common ancestor IS one of them.
     if (da === 0) {
       return out(db === 1
-        ? byGender(a, 'mother', 'father', 'parent')
-        : greats(db - 2, byGender(a, 'grandmother', 'grandfather', 'grandparent')));
+        ? word(a, 'parent')
+        : prefix(V().greatUp, db - 2) + word(a, 'grandparent'));
     }
     if (db === 0) {
       return out(da === 1
-        ? byGender(a, 'daughter', 'son', 'child')
-        : greats(da - 2, byGender(a, 'granddaughter', 'grandson', 'grandchild')));
+        ? word(a, 'child')
+        : prefix(V().greatDown, da - 2) + word(a, 'grandchild'));
     }
 
     // Siblings. Sharing both parents is a full sibling; sharing one is a half.
@@ -196,19 +211,20 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
       const pa = people[a];
       const pb = people[b];
       const shared = [pa.father, pa.mother].filter(x => x && (x === pb.father || x === pb.mother)).length;
-      const word = byGender(a, 'sister', 'brother', 'sibling');
-      return out(shared >= 2 ? word : `half-${word}`);
+      const w = word(a, 'sibling');
+      return out(shared >= 2 ? w : V().half.replace('{rel}', w));
     }
 
     // One sits a generation or more above the other's line: aunt/uncle downward,
     // niece/nephew upward.
-    if (da === 1) return out(greats(db - 2, byGender(a, 'aunt', 'uncle', 'aunt or uncle')));
-    if (db === 1) return out(greats(da - 2, byGender(a, 'niece', 'nephew', 'niece or nephew')));
+    if (da === 1) return out(prefix(V().greatAunt, db - 2) + word(a, 'auntUncle'));
+    if (db === 1) return out(prefix(V().greatNiece, da - 2) + word(a, 'nieceNephew'));
 
     // Otherwise cousins: the degree is the shorter leg, the removal is the gap.
     const degree = Math.min(da, db) - 1;
     const removed = Math.abs(da - db);
-    return out(`${ordinal(degree)} cousin${removed ? ` ${removedWord(removed)} removed` : ''}`);
+    const label = word(a, 'cousin').replace('{ordinal}', ordinal(degree));
+    return out(removed ? label + V().removed.replace('{times}', removedWord(removed)) : label);
   }
 
   const spouseIdsOf = id => (people[id]?.spouses || []).map(s => s.id).filter(id2 => id2 && people[id2]);
@@ -251,7 +267,18 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
   // would be the record asserting something no source said.
   function spouseKind(a, b) {
     const entry = (people[a]?.spouses || []).find(s => s.id === b);
-    return entry?.kind === 'partnership' ? 'partner' : null;
+    return entry?.kind === 'partnership' ? V().partner : null;
+  }
+
+  // What to print over the card of the person someone married. A spouse who is only
+  // a name in someone else's record has no id and therefore no recorded sex, which
+  // is exactly the case the neutral word exists for.
+  function spouseLabel(sp, of) {
+    if (of && sp.id && spouseKind(of, sp.id)) return V().partner;
+    if (sp.kind === 'partnership') return V().partner;
+    const set = V().spouse;
+    const g = sp.id ? genderOf(sp.id) : null;
+    return g === 'f' ? set.f : g === 'm' ? set.m : set.n;
   }
 
   // Blood first; failing that, look one marriage step away. Beyond one step the
@@ -263,7 +290,7 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
     if (blood) return blood;
 
     if (spouseIdsOf(a).includes(b)) {
-      return { label: spouseKind(a, b) || byGender(a, 'wife', 'husband', 'spouse'), kind: 'marriage' };
+      return { label: spouseKind(a, b) || word(a, 'spouse'), kind: 'marriage' };
     }
     // Related through exactly one marriage, from one end or the other. The blood
     // relation is returned as itself and the marriage step as `through`, rather than
@@ -375,7 +402,7 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
 
   return {
     ROOT, ROOTS, relationship, relationBetween, bloodRelation, ancestorsOf, commonAncestor,
-    childrenOf, childGroupsOf, siblingsOf, genderOf, spouseKind, categoryOf, sourceFor,
-    confidenceOf, isResearchable, distance, ancestorLine, linkDiagram,
+    childrenOf, childGroupsOf, siblingsOf, genderOf, spouseKind, spouseLabel, categoryOf,
+    sourceFor, confidenceOf, isResearchable, distance, ancestorLine, linkDiagram,
   };
 };

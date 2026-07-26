@@ -3,30 +3,26 @@
 (function (FT) {
   const $ = id => document.getElementById(id);
 
-  FT.initTheme($('themeBtn'));
+  const i18n = FT.createI18n(FT.strings_);
+  const applyTheme = FT.initTheme($('themeBtn'), i18n);
+  FT.initLanguage($('langBtn'), i18n);
 
   FT.loadPeople(function (missing) {
     if (missing.length) {
-      $('ped').innerHTML =
-        '<p class="hint">Could not load ' +
-        missing.length +
-        ' of the person files (' +
-        missing.slice(0, 5).join(', ') +
-        (missing.length > 5 ? ', …' : '') +
-        '). Check that each id in data/people.js has a matching file in data/people/.</p>';
+      FT.applyStatic(i18n, document);
+      $('ped').textContent = i18n.t('loadError', {
+        n: missing.length,
+        ids: missing.slice(0, 5).join(', ') + (missing.length > 5 ? ', …' : ''),
+      });
       return;
     }
 
     const tree = FT.tree();
-    const kin = FT.createKinship(tree);
-    const view = FT.createRenderer(tree, kin);
+    const kin = FT.createKinship(tree, i18n);
+    const view = FT.createRenderer(tree, kin, i18n);
     const search = FT.createSearch(tree);
     const { meta, people } = tree;
 
-    // Every number the page states about itself comes from the census in the bundle,
-    // so nothing here has to be kept in step by hand as people are added.
-    const n = (count, one, many) => `${count} ${count === 1 ? one : many}`;
-    const c = meta.census;
     // "Renée & Léon Bundervoet" rather than the surname twice. The names come from the
     // records, not from the markup, so a page cannot go on naming somebody the data no
     // longer calls the root.
@@ -36,29 +32,55 @@
     const rootNames = shared
       ? `${rootIds.map(id => people[id].name.replace(surname, '').trim()).join(' & ')} ${surname}`
       : rootIds.map(id => people[id].name).join(' & ');
+    const rootShort =
+      people[meta.root].name.replace(surname || '', '').trim() || people[meta.root].name;
 
-    $('subtitle').textContent =
-      `${n(c.total, 'person', 'people')} · ${n(c.ancestors, 'direct ancestor', 'direct ancestors')} · ` +
-      `${n(c.relatives, 'blood relative', 'blood relatives')} · ${c.others} married in`;
-    $('linehint').textContent =
-      `The surname lines that flow into ${rootNames}, each as deep as the records reach. ` +
-      'Click any name to open it in the explorer.';
-    $('homeBtn').textContent = `⌂ ${rootNames}`;
-    // The side panel measures from the root, so it is the root that it names.
-    const linkLabel = `Link to ${people[meta.root].name.replace(surname || '', '').trim() || people[meta.root].name}`;
-    $('lineBtn').title = linkLabel;
-    $('lineBtn').querySelector('.lbl').textContent = linkLabel;
-    $('lineTitle').textContent = linkLabel;
+    // ---- how the index is cut up ----
+    // Remembered, because a reader who prefers the index by century wants it by
+    // century on the next visit too; both are validated by the renderer, so a stale
+    // or hand-edited value falls back rather than breaking the page.
+    const remember = (key, value) => {
+      try {
+        window.localStorage.setItem(key, value);
+      } catch (e) {
+        /* private mode just forgets the choice */
+      }
+    };
+    const recall = key => {
+      try {
+        return window.localStorage.getItem(key);
+      } catch (e) {
+        return null;
+      }
+    };
+    let groupBy = recall('familytree.groupBy') || 'line';
+    let sortBy = recall('familytree.sortBy') || 'generation';
 
-    $('foot').textContent = meta.footer;
-    $('legend').innerHTML = view.legend();
-    $('cols').innerHTML = view.lineageColumns();
-    $('branchgrid').innerHTML = view.indexCards();
+    function paintIndex() {
+      const opts = view.indexOptions();
+      FT.renderSegments($('groupBy'), opts.group, groupBy);
+      FT.renderSegments($('sortBy'), opts.sort, sortBy);
+      $('branchgrid').innerHTML = view.indexCards(groupBy, sortBy);
+    }
+
+    FT.onSegmentPick($('groupBy'), key => {
+      groupBy = key;
+      remember('familytree.groupBy', key);
+      paintIndex();
+    });
+    FT.onSegmentPick($('sortBy'), key => {
+      sortBy = key;
+      remember('familytree.sortBy', key);
+      paintIndex();
+    });
 
     // ---- relation finder ----
     // Two pickers over everyone, sorted by name. A <select> is the right control
     // at this size; it is also the first thing that will need replacing when the
-    // tree reaches thousands of people.
+    // tree reaches thousands of people. The options are names and dates, so they
+    // are built once — it is only the sentence below them that is translated.
+    const relA = $('relA');
+    const relB = $('relB');
     (() => {
       const byName = Object.keys(people).sort((a, b) => people[a].name.localeCompare(people[b].name));
       const options = byName
@@ -70,22 +92,17 @@
             .replace(/</g, '&lt;')}</option>`;
         })
         .join('');
-      const a = $('relA');
-      const b = $('relB');
-      a.innerHTML = options;
-      b.innerHTML = options;
-      a.value = meta.root;
-      b.value = byName.find(id => id !== meta.root) || meta.root;
-      const update = () => ($('relOut').innerHTML = view.relationPanel(a.value, b.value));
-      a.addEventListener('change', update);
-      b.addEventListener('change', update);
-      update();
+      relA.innerHTML = options;
+      relB.innerHTML = options;
+      relA.value = meta.root;
+      relB.value = byName.find(id => id !== meta.root) || meta.root;
     })();
+    const updateRelation = () =>
+      ($('relOut').innerHTML = view.relationPanel(relA.value, relB.value));
+    relA.addEventListener('change', updateRelation);
+    relB.addEventListener('change', updateRelation);
 
     FT.initTooltip($('tt'), id => (people[id] ? view.tooltip(id) : null));
-    if (!FT.canHover()) {
-      $('tip').textContent = 'Tap any name to open it — full details appear below';
-    }
     const showView = FT.initTabs();
 
     // ---- explorer state ----
@@ -112,6 +129,46 @@
       // at its left, which is the eldest, and the rows above hold two cards.
       const sibrow = $('ped').querySelector('.sibrow');
       centreOn(sibrow, sibrow && sibrow.querySelector('.fcell'));
+    }
+
+    // Everything the page says, said again. Language is not a page reload here — the
+    // reader keeps their focus, their history and their place in the index — so every
+    // piece of wording has to be settable rather than set once at load, and this is
+    // the one list of them. Anything not called from here would silently stay in the
+    // language the page opened in.
+    function paint() {
+      FT.applyStatic(i18n, document);
+      applyTheme();
+
+      // Every number the page states about itself comes from the census in the
+      // bundle, so nothing here has to be kept in step by hand as people are added.
+      const c = meta.census;
+      document.title = i18n.t('treeOf', { names: rootNames });
+      $('pagetitle').textContent = document.title;
+      $('subtitle').textContent = [
+        i18n.t('countPeople', { n: c.total }),
+        i18n.t('countAncestors', { n: c.ancestors }),
+        i18n.t('countRelatives', { n: c.relatives }),
+        i18n.t('countMarriedIn', { n: c.others }),
+      ].join(' · ');
+
+      $('homeBtn').textContent = `⌂ ${rootNames}`;
+      $('linehint').textContent = i18n.t('lineHint', { names: rootNames });
+      $('tip').textContent = i18n.t(FT.canHover() ? 'hoverTip' : 'tapTip');
+
+      // The side panel measures from the root, so it is the root that it names.
+      const linkLabel = i18n.t('linkTo', { name: rootShort });
+      $('lineBtn').title = linkLabel;
+      $('lineBtn').querySelector('.lbl').textContent = linkLabel;
+      $('lineTitle').textContent = linkLabel;
+
+      $('foot').textContent = i18n.footer();
+      $('legend').innerHTML = view.legend();
+      $('cols').innerHTML = view.lineageColumns();
+      paintIndex();
+      updateRelation();
+      if (q.value) runSearch();
+      draw();
     }
 
     function climbTo(id) {
@@ -255,6 +312,7 @@
       if (window.matchMedia('(max-width:720px)').matches) setPanel(false);
     });
 
-    draw();
+    i18n.onChange(paint);
+    paint();
   });
 })(window.FamilyTree);

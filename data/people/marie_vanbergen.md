@@ -45,3 +45,9 @@ Death date and act date differ by one day: she died 22 November 1888, the act wa
 Occupation *werkvrouw* is from this 1888 act, at Oostende; the 1880 Hamme death act of her
 son Ludovicus ([[fs-hamme-1880-death-ludovicus-bocklandt]]) calls her *spinster*, aged 39,
 eight years earlier — the field keeps the later trade, this note keeps the earlier one.
+
+A SISTER (2026-07-26): [[paulina_vdberghe]], born at Hamme about 1849, whose own 1882
+marriage act names the same parents — and dates their mother's death to the day that
+[[ida_vermandel]]'s own death act gives independently. Two more probable siblings, Josephus
+(b. 1852) and Henricus (b. 1861), are named as frontiers on their mother's record and are
+not grafted: they rest on a name index and their acts have not been read.

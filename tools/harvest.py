@@ -47,7 +47,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from familytree.corpus import ACTS_DIR, HARVEST, MANIFEST, MENTIONS_DIR, load_manifest  # noqa: E402
+from familytree.corpus import (  # noqa: E402
+    ACTS_DIR, HARVEST, MANIFEST, MENTIONS_DIR, load_manifest, reset_manifest_cache,
+)
 from familytree.frontier import frontier_rows  # noqa: E402
 from familytree.people import family_key, load_config, load_people  # noqa: E402
 
@@ -117,8 +119,14 @@ def save_manifest(entry: dict | None = None, population: dict | None = None) -> 
     silently erased every harvest that finished in between: the acts survived on disk,
     but the record of which query produced them — and the `found` count that every
     rarity weight is measured against — did not.
+
+    `load_manifest` is cached now, which would reintroduce that bug in a subtler form —
+    the copy read here would be however old this process is — so the cache is dropped on
+    both sides of the write: before, so the merge is against what is on disk now, and
+    after, so the next reader sees what was just merged.
     """
     HARVEST.mkdir(parents=True, exist_ok=True)
+    reset_manifest_cache()
     manifest = load_manifest()
     if population:
         manifest.setdefault("population", population)
@@ -126,6 +134,7 @@ def save_manifest(entry: dict | None = None, population: dict | None = None) -> 
         manifest["harvests"] = [h for h in manifest["harvests"] if h["id"] != entry["id"]] + [entry]
     manifest["harvests"].sort(key=lambda h: h["id"])
     MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    reset_manifest_cache()
 
 
 def held_act_ids() -> set[str]:

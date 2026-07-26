@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from functools import lru_cache
 from pathlib import Path
 
 from . import frontmatter
@@ -258,6 +259,13 @@ def given_names(p: dict) -> str:
     return re.sub(r"\s{2,}", " ", p["name"][:at] + p["name"][at + len(surname):]).strip()
 
 
+# Memoised because the scorer calls it about seven times per comparison and a full
+# `research.py acts` run makes 350,000 comparisons: 2.5 million calls, of which 31,681
+# were distinct. The cache is unbounded on purpose — the key space is the set of
+# surnames the corpus actually contains, which grows like the vocabulary of a corpus
+# rather than like the corpus, so a bounded LRU would thrash on a scanning workload for
+# no saving worth having. See the same note on `normalise_key` and `phonetic`.
+@lru_cache(maxsize=None)
 def family_key(surname: str | None) -> str:
     """The grouping key.
 

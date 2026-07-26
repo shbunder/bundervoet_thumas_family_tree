@@ -25,6 +25,7 @@ from __future__ import annotations
 import math
 import re
 from dataclasses import dataclass, field
+from functools import lru_cache
 
 from .corpus import (
     Frequencies, Mention, frequencies, normalise_key, population, stated_kin,
@@ -52,6 +53,10 @@ _RULES: list[tuple[re.Pattern, str]] = [
 ]
 
 
+# Sixteen regex substitutions per call, and `block_keys` calls it for every candidate on
+# both sides of every comparison: 1,404,305 calls against 39,335 distinct surnames in one
+# `research.py acts` run. Pure, so memoising it is free. See `family_key` on the maxsize.
+@lru_cache(maxsize=None)
 def phonetic(surname: str | None) -> str:
     s = normalise_key(surname)
     if not s:

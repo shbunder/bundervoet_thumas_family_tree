@@ -1440,6 +1440,82 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "AGATHA 'analyse van akte' — index transcription, not the register image. Same NAME=Bocklandt ALL_PLACES=Hamme result set as agatha-oostende-1888-marriage-bocklandt-ketels."
+    },
+    {
+      "id": "fs-hamme-1865-death-ida-vermandel",
+      "site": "familysearch",
+      "kind": "record",
+      "title": "Death act nr. 123 — Ida Vermandel, Hamme (Oost-Vlaanderen), died 21 June 1865 (register image)",
+      "url": "https://www.familysearch.org/ark:/61903/3:1:S3HY-67JS-YLV?i=79&cat=koha%3A349052&lang=nl",
+      "artifact": "vermandel-ida-1865-death-hamme",
+      "covers": [
+        "Vermandel",
+        "Van Bergen",
+        "Verplancken"
+      ],
+      "yielded": "The act image, read. Ida Vermandel, 39, arbeidster, BORN AT ZELZATE, living at Hamme, wife of Joannes Franciscus Van Bergen, died 21 June 1865 at half past eight in the evening in the women's burgerhospitaal on the Marktplein at Hamme; act drawn up 22 June 1865 by burgemeester Jacques Johannes Vertongen, declared by Norbertus Joannes Stabbaert (38) and Petrus Seraphinus Dieriex (51, veldwachter). NAMES HER PARENTS, both still living in 1865: [P]rimus Vermandel and [?]phina Verplancken — the father's forename reads 'Primus', the mother's capital is ambiguous (Josephina / Delphina). Turns a year-only death into a day and a place, gives her birth commune, her trade, and the next generation up as a CANDIDATE, not a graft.",
+      "confidence": "doc",
+      "accessed": "2026-07-26",
+      "note": "REGISTER IMAGE, read by stitching the FamilySearch deep-zoom tiles on the sg30p0 origin. Film #1114009 / DGS 004198666, item 1, image 80 of 556. Located from the 1865 tafel on the same film, image 107."
+    },
+    {
+      "id": "fs-hamme-civil-registers-1796-1900",
+      "site": "familysearch",
+      "kind": "collection",
+      "title": "Hamme (Oost-Vlaanderen) civil registers 1796-1900 on FamilySearch — catalogue koha:349052, 88 browsable film items",
+      "url": "https://www.familysearch.org/nl/search/catalog/koha:349052",
+      "covers": [
+        "Bocklandt",
+        "Van Bergen",
+        "Vermandel",
+        "Ichau"
+      ],
+      "yielded": "The full film map for Hamme (O-Vl), every item online. Births 1796-1814/1815-1822/1823-1830/1831-1839/1840-1850/1851-1857/1858-1864/1865-1871/1872 (DGS 004091375-004091384, 004091246); MARRIAGES 1796-1803 (004817680), 1803-1818 (004817776), 1819-1829 (004817777), 1830-1840 (004817778), 1841-1850 (004817779), 1851-1861 (004817780), 1862-1872 (004817781); DEATHS 1796-1801 (004198937) … 1851-1863 (004198943), 1864-1872 (004198666); plus huwelijksafkondigingen and a near-complete run of huwelijksbijlagen. This is the index that turns 'Hamme is unreachable' into 'Hamme is a browse'.",
+      "confidence": "doc",
+      "accessed": "2026-07-26",
+      "note": "Filmed from the originals at the Gerechtshof te Dendermonde. Supersedes the single-film entry fs-hamme-civil-registers-film-004833291 as the way in; that film is item 1768237 in this same catalogue record."
+    },
+    {
+      "id": "fs-waasmunster-civil-registers-1796-1900",
+      "site": "familysearch",
+      "kind": "collection",
+      "title": "Waasmunster (Oost-Vlaanderen) civil registers 1796-1900 on FamilySearch — catalogue koha:15958, 34 microfilm reels",
+      "url": "https://www.familysearch.org/nl/search/catalog/koha:15958",
+      "covers": [
+        "Van Bergen",
+        "Vermandel"
+      ],
+      "yielded": "Establishes that Waasmunster civil registration IS digitised and browsable, which neither Open Archives nor AGATHA holds in any form. Births 1796-1814 (DGS 004794009), 1815-1843 (004794010), 1844-1872 (004794011); MARRIAGES 1796-1850 (004794012), 1851-1877 (004794013); huwelijksbijlagen 1806-1835+; ten-year tables on separate films (marriages 1833-1842 = film 1074817). Marie-Louise Van Bergen's 1842 birth act and any Van Bergen x Vermandel marriage before 1850 sit on films 004794010 and 004794012.",
+      "confidence": "doc",
+      "accessed": "2026-07-26",
+      "note": "Filmed from the originals at the Gerechtshof te Dendermonde. Parish registers for Waasmunster (O.-L.-Vrouw, 1586-1807) and Vervoort's transcriptions of the baptisms 1743-1779 and marriages 1733-1783 are separate catalogue records at the same place."
+    },
+    {
+      "id": "fs-zelzate-civil-registers-1796-1870",
+      "site": "familysearch",
+      "kind": "collection",
+      "title": "Zelzate (Oost-Vlaanderen) civil registers 1796-1870 on FamilySearch — catalogue koha:20457",
+      "url": "https://www.familysearch.org/nl/search/catalog/koha:20457",
+      "covers": [
+        "Vermandel",
+        "Verplancken"
+      ],
+      "yielded": "The route to Ida Vermandel's own birth act, c. 1825-26. TIENJARIGE TAFELS 1802-1870 on one film (DGS 005089047) — one lookup gives the act number; Geboorten 1816-1840 (004670480); Huwelijken 1821-1860 (004670484) and 1797-1820 (004670483) for her parents' marriage; Overlijden 1811-1840 (004186911) and 1841-1870 (004186912) for [P]rimus Vermandel and [?]phina Verplancken, both alive in June 1865.",
+      "confidence": "doc",
+      "accessed": "2026-07-26",
+      "note": "Not yet opened. Registered here because the 1865 Hamme death act names Zelzate as Ida's birth commune, which is what makes this film set the next act to read."
+    },
+    {
+      "id": "fs-hamme-1882-marriage-vermorgen-vandenberghe",
+      "site": "familysearch",
+      "kind": "record",
+      "title": "Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image)",
+      "url": "https://www.familysearch.org/ark:/61903/1:1:6TRL-HZTX?lang=nl",
+      "covers": "FamilySearch film 004833291, item 1, image 249 — the register page itself, read by stitching the deep-zoom tiles on the sg30p0.familysearch.org origin. Previously registered from the name index alone.",
+      "yielded": "Names the bride as meerderjarige dochter van Joannes Franciscus Van Den Berghe, metser, 65, living at Hamme, present and consenting, en van wijlen Ida Vermandel, overleden te Hamme den eenen twintigste Juny achttien honderd vyf en zestig. That death date and place match, to the day, the Hamme death act nr. 123 read separately seventeen years earlier — so it resolves the Van Bergen / Van Den Berghe spelling as one family rather than two, and makes Paulina a graftable daughter. It also gives the father's age (65 in May 1882, so born about 1817) and his trade, metser, the same trade his daughter Marie-Louise's 1888 Oostende death act gives him.",
+      "confidence": "doc",
+      "accessed": "2026-07-26",
+      "note": "INDEX ENTRY ONLY — the FamilySearch name index over Hamme film #004833291, image 331ff. The register image was not read, and the index gives no place field for the birth years. The 1865 death act of Ida Vermandel spells the husband's surname VAN BERGEN, so the two spellings are the same family or two families sharing a rare wife's name; the register image of this 1882 act would settle it."
     }
   ]
 }

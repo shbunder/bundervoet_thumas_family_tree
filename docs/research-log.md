@@ -2010,3 +2010,134 @@ all sitting in neighbouring, unopened films in the same FamilySearch series.
 
 Not touched this pass: `.tmp-pass5/` (untracked scratch files from a concurrent session,
 left alone).
+
+## 57. The commune harvest, and the ceiling it found at ten thousand
+
+The downward queue ran dry: `research.py children` fell to three entries, because a birth
+act is indexed under the *child*, so a sibling is reachable only through the commune or
+through the parents. The charter's answer is `harvest.py place`, and this pass ran it on
+the five communes this tree is densest in.
+
+| commune | mentions | held |
+|---|---|---|
+| Stene | 2,448 | **2,448 — complete** |
+| Kraainem | 8,344 | **8,344 — complete** |
+| Bredene | 10,037 | 10,000 |
+| Everberg | 10,954 | 10,000 |
+| Sint-Stevens-Woluwe | 25,859 | 10,000 |
+| *Oostende* | *262,554* | *not attempted* |
+
+The corpus went from 40,347 acts at the start of this run to **103,705**.
+
+**Open Archives' `records/search` returns HTTP 400 once paging passes about ten thousand
+mentions.** Everberg and Sint-Stevens-Woluwe both died at exactly that point on the first
+attempt, and — because the harvester treats a failed run as having read nothing — **kept
+nothing at all**. Bisected, the wall sits at a start offset of roughly 10,000–10,020. A
+verifier confirmed it independently against the API.
+
+This is a structural limit, not a coverage one, and it bites precisely where objective 2
+needs the harvest most: Sint-Stevens-Woluwe is the commune where the Bossin, Thumas,
+Vandenbemden and Pardon families all lived, and 61% of it is unreachable by this route.
+Oostende, the stretch goal's whole subject, is 262,554 mentions — twenty-six ceilings deep.
+
+**A place harvest above ten thousand mentions has to be sliced** — by year range, or by
+event type — and nothing in the tooling does that yet or warns that it silently truncated.
+That is a change to `tools/harvest.py` and this run is not permitted to make it, so it is
+recorded here as the finding it is. The workaround this pass used was `--max 10000`, which
+at least keeps what it fetched instead of discarding the lot.
+
+Two smaller notes for whoever picks this up. `harvest.py place X --max 1` **caches a
+hundred-mention stub** that then blocks the real harvest until `--refresh` — probing a
+commune's size costs a wasted cache entry. And Bredene failed once on a bare
+`RemoteDisconnected` rather than the ceiling, so a retry is worth trying before concluding
+anything about a commune.
+
+## 58. Hamme, 21 June 1865 — a grandmother read off the register, and a spelling that was blocking three grafts
+
+[[ida_vermandel]] was in this tree with a bare `1825`, a bare `1865`, no place at either
+end, no occupation, no parents, and one source: a Geneanet tree. She sat high on the ranked
+queue with 771 held candidates and the `vermandel` harvest complete at 736/736 — meaning a
+miss would have been meaningful.
+
+### First, the venue question, because it decided the pass
+
+§56 established that Open Archives and AGATHA hold no Hamme (Oost-Vlaanderen) civil
+registration. This pass measured the surrounding communes properly, by event type:
+
+| commune | records | marriages | births | what it actually is |
+|---|---|---|---|---|
+| Waasmunster | 9,732 | **0** | **0** | 959 of 1,000 sampled are memorial cards |
+| Hamme | 16,936 | 1,729 | 0 | **all 600 sampled marriages are Rijksarchief LEUVEN** |
+| Hamme (O.-Vl.) | 2,220 | 0 | 0 | one collector's memorial cards, 1920s–2010s |
+| Elversele | 4,087 | 0 | 0 | but 154 of 300 sampled are *BS Overlijden*, Rijksarchief Gent |
+
+The second row is the important one and it sharpens §56 from a gap into a trap: **every
+"Hamme" marriage Open Archives holds is Hamme-Merchtem in Vlaams-Brabant — a different
+Hamme.** This project has already burned effort on that confusion once, when "Hamme" in
+Louise Bocklandt's record turned out to be her birth town in Oost-Vlaanderen rather than a
+marriage place. It is the same trap, one layer down. And Elversele proves the emptiness is
+commune-specific, not provincial: the Waasland is not missing from Open Archives, these two
+communes are.
+
+FamilySearch holds both as browsable images. Waasmunster (koha:15958, 34 reels) and Hamme
+(koha:349052, 88 items) are now mapped film by film in the registry, along with Zelzate
+(koha:20457) — including the ten-year tables, which are what turn a browse into a lookup.
+
+### The act
+
+**Hamme death act nr. 123, 1865**, reached by opening the deaths film, finding the year
+covers in grid view, reading the **1865 alphabetical *tafel*** — "*[Van] Bergen, Joannes
+Franciscus vrouw geboren Vermandel Ida … 123*" — and stitching the deep-zoom tiles for
+image 80. She died on **21 June 1865**, aged thirty-nine, an *arbeidster*, in the town
+hospital on the Marktplein. Two identifiers, neither of them her name: the commune, which
+her daughter's 1888 Oostende act independently gives as where Ida died, and her husband's
+full name.
+
+And her birthplace is **Zelzate**. §56 had just moved this family's assumed origin from
+Hamme to Waasmunster on the daughter's evidence; this moves the *mother* somewhere else
+again, and both are true. Marie-Louise was born at Waasmunster in 1842, Ida at Zelzate
+around 1825 — a commune on the Dutch border north of Gent, not in the Waasland at all. A
+family's "origin" was never one place.
+
+Her parents are named in the act and are **not recorded**. It says they were *nog levende*,
+still living, which is a useful constraint. But the forenames do not survive magnification:
+the father's is a looped capital and *-rimus*, with P, F and S all plausible against the
+same clerk's *Petrus* and *Franciscus* on the same page; the mother's sits between
+*Josephina* and *Delphina*. The surnames are legible, *Vermandel* and *Verplancken*, and
+that is all that goes down. A forename read at the edge of legibility is a guess, and the
+grammar has no syntax for one.
+
+### The spelling that was blocking three grafts
+
+A name index over the Hamme films offered three more children of an *Ida Vermandel* at
+Hamme — Paulina (1849), Josephus (1852), Henricus (1861) — all spelled **Van Den Berghe**.
+The register spells this family **Van Bergen**: Ida's own death act does, and the 1865
+*tafel* files it among Van-acker, Van-**B**ergen, Van-**B**ochstael, Van-**B**ogaert, so it
+is not a *Van den* name there. From an index alone, one clerk's drift and two families
+sharing an unusually rare wife's surname look exactly the same.
+
+So the act was opened. **Hamme marriage, 18 May 1882**, Petrus Vermorgen × Paulina Van Den
+Berghe: *meerderjarige dochter van* **Joannes Franciscus Van Den Berghe**, *metser*, 65,
+present and consenting, *en van wijlen* **Ida Vermandel, overleden te Hamme den eenen
+twintigste Juny achttien honderd vyf en zestig**.
+
+That death date is the graft. Twenty-one June 1865 at Hamme, from a different act by a
+different clerk seventeen years later, neither knowing about the other. The second
+identifier is the father's trade — *metser*, the same trade his other daughter's 1888
+Oostende act gives him. [[paulina_vdberghe]] enters at `doc`, with [[petrus_vermorgen]]
+alongside her because a person named in this tree gets a record rather than a mention.
+
+[[jan_van_bergen]] gains the trade from three agreeing sources and an age — 65 in May 1882,
+so born about 1817, which the held 1815 survives without being confirmed by. He stays
+`sup`: the images prove he existed, married, worked and was alive at Hamme in 1865 and
+1882, and his birth, his death and his parents are still a tree's word.
+
+Josephus and Henricus stay ungrafted, on the index alone. Paulina stood in exactly their
+position this morning, which is the whole argument for reading their acts.
+
+NEXT, in order: **Ida's Zelzate birth act** — the ten-year table 1802–1870 (DGS 005089047)
+makes it one lookup, and it settles both her parents' forenames and her birth date. Then
+the **marriage**, which names all four parents, and which should be sought at Zelzate
+(Huwelijken 1821–1860, DGS 004670484) *before* Waasmunster or Hamme, because that is now
+where the bride is from. Then Josephus's and Henricus's acts, and Jan's death, which the
+1882 act narrows to 1882–1898 (Hamme deaths 1894–1900, DGS 004835775).

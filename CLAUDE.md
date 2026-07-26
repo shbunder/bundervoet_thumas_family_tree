@@ -239,10 +239,19 @@ because it still reads as sourced. Say in the record whether the act *image* was
 or only an index page; they are different evidence and only one is `doc`.
 
 Kinship is root-free: `relationBetween(a, b)` in `assets/js/kinship.js` works from the
-pair's lowest common ancestor, so it relates anyone to anyone (objective c). The Index's
-three categories are derived from the links, so a new person appears without being added
-to any list. `meta.roots` takes a list for the forest case (objective 3); with one root
-it is the ordinary tree.
+pair's lowest common ancestor, so it relates anyone to anyone (objective c). It names
+the relation out of a *vocabulary* held in `site/labels.json`, not out of words in the
+code — which is what lets the page say "3×-overgrootmoeder" as readily as
+"3×-great-grandmother", and what makes a third language an edit to one data file.
+`meta.roots` takes a list for the forest case (objective 3); with one root it is the
+ordinary tree.
+
+**The Index groups four ways and sorts three, and every one of them is derived** — by
+family line (the person's own `line`), by first letter (the folded family key), by
+century (the birth date), or by ancestor/blood/other (the links). So a person added to
+`data/` files themselves correctly under all four at once, and there is no list that
+regrouping would have to rewrite. That is the rule from the data model — nothing is
+listed twice — paying off: a hand-kept index can be regrouped only by rewriting it.
 
 The page loads `dist/bundle.js` — one request for the whole tree, whatever it grows to.
 The files in `data/` and `site/` stay the source of truth; the bundle is generated, and
@@ -282,7 +291,9 @@ data/artifacts/<id>.*   a saved primary document + a record describing it
 data/meta.json          roots, confidence codes
 data/branches.json      surname branch -> its default source id
 data/lineages.json      the surname chains
-site/labels.json        presentation only: labels, Index headings, footer
+site/labels.json        presentation only, in every language: UI strings, Index
+                        headings, footer, and the relation vocabulary. No word the
+                        page shows is written anywhere else — see assets/js/i18n.js
 research/sources.json   the registry — SITES (venues) and PAGES (trees, documents)
 research/searches.jsonl the search log, append-only: what each search found, or why not
 research/labels.jsonl   the gold standard: every verifier ruling, as a labelled pair

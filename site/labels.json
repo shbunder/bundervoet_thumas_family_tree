@@ -1,52 +1,282 @@
 {
-  "_comment": "Presentation only: the words the site shows. No facts about people live here — those are in data/.",
+  "_comment": "Presentation only: the words the site shows. No facts about people live here — those are in data/. Every translatable value is an object keyed by language code, so a missing translation is visible in the diff rather than in the browser; the validator refuses a build where one is absent. `kinship` is keyed by language at the top instead, because the shape of the vocabulary is not the same in both: English stacks one prefix (great-great-) where Dutch has a different word for each of the first steps (over-, betover-).",
+
+  "languages": [
+    { "code": "en", "name": "English", "flag": "gb" },
+    { "code": "nl", "name": "Nederlands", "flag": "nl" }
+  ],
+
   "confidenceLabels": {
-    "doc": "Documented record",
-    "fam": "Family knowledge",
-    "sup": "Strongly supported",
-    "unk": "Unknown — to research"
+    "doc": { "en": "Documented record", "nl": "Gedocumenteerde akte" },
+    "fam": { "en": "Family knowledge", "nl": "Familieoverlevering" },
+    "sup": { "en": "Strongly supported", "nl": "Sterk onderbouwd" },
+    "unk": { "en": "Unknown — to research", "nl": "Onbekend — te onderzoeken" }
   },
-  "footer": "A living draft. Documented lines rest on Belgian civil and parish records, reached through the state archives and the member trees credited in the sources list; the rest is family knowledge, marked as such. Living individuals were not researched beyond what the family volunteered.",
+
+  "footer": {
+    "en": "A living draft. Documented lines rest on Belgian civil and parish records, reached through the state archives and the member trees credited in the sources list; the rest is family knowledge, marked as such. Living individuals were not researched beyond what the family volunteered.",
+    "nl": "Een levend concept. De gedocumenteerde lijnen berusten op Belgische akten van de burgerlijke stand en parochieregisters, geraadpleegd via het rijksarchief en de ledenstambomen die in de bronnenlijst vermeld staan; de rest is familiekennis, en staat als zodanig aangeduid. Naar levende personen is niet verder gezocht dan wat de familie zelf heeft verteld."
+  },
+
   "groups": [
     {
       "key": "immediate",
-      "title": "The children & parents"
+      "title": { "en": "The children & parents", "nl": "De kinderen & ouders" }
     },
     {
       "key": "bundervoet",
-      "title": "Bundervoet line (father)"
+      "title": { "en": "Bundervoet line (father)", "nl": "Lijn Bundervoet (vader)" }
     },
     {
       "key": "van-iseghem",
-      "title": "Van Iseghem line — Rosette (Ronny's mother), to the 1780s"
+      "title": {
+        "en": "Van Iseghem line — Rosette (Ronny's mother), to the 1780s",
+        "nl": "Lijn Van Iseghem — Rosette (moeder van Ronny), tot de jaren 1780"
+      }
     },
     {
       "key": "bostyn-cappaert",
-      "title": "Bostyn & Cappaert (Marcel’s mother)"
+      "title": {
+        "en": "Bostyn & Cappaert (Marcel’s mother)",
+        "nl": "Bostyn & Cappaert (moeder van Marcel)"
+      }
     },
     {
       "key": "vanstechelman",
-      "title": "Vanstechelman line (to ~1640s)"
+      "title": { "en": "Vanstechelman line (to ~1640s)", "nl": "Lijn Vanstechelman (tot ~1640)" }
     },
     {
       "key": "de-keyser",
-      "title": "De Keyser line (Roland)"
+      "title": { "en": "De Keyser line (Roland)", "nl": "Lijn De Keyser (Roland)" }
     },
     {
       "key": "paelinck",
-      "title": "Paelinck line — Léonie’s side (to ~1618)"
+      "title": {
+        "en": "Paelinck line — Léonie’s side (to ~1618)",
+        "nl": "Lijn Paelinck — de kant van Léonie (tot ~1618)"
+      }
     },
     {
       "key": "devriendt",
-      "title": "Devriendt · Smessaert · Ramon (Hugette)"
+      "title": {
+        "en": "Devriendt · Smessaert · Ramon (Hugette)",
+        "nl": "Devriendt · Smessaert · Ramon (Hugette)"
+      }
     },
     {
       "key": "thumas",
-      "title": "Thumas line — Kraainem, to 1656"
+      "title": { "en": "Thumas line — Kraainem, to 1656", "nl": "Lijn Thumas — Kraainem, tot 1656" }
     },
     {
       "key": "janssens",
-      "title": "Janssens & Vandenhoeck (mother)"
+      "title": { "en": "Janssens & Vandenhoeck (mother)", "nl": "Janssens & Vandenhoeck (moeder)" }
     }
-  ]
+  ],
+
+  "ui": {
+    "_comment_chrome": "The page shell: tabs, search, the two round buttons.",
+    "treeOf": { "en": "The Family Tree of {names}", "nl": "De stamboom van {names}" },
+    "tabTree": { "en": "Tree", "nl": "Stamboom" },
+    "tabLineages": { "en": "Lineages", "nl": "Naamlijnen" },
+    "tabIndex": { "en": "Index", "nl": "Register" },
+    "searchPlaceholder": { "en": "Search names, years, places…", "nl": "Zoek namen, jaren, plaatsen…" },
+    "searchAria": { "en": "Search the family tree", "nl": "Doorzoek de stamboom" },
+    "clearSearch": { "en": "Clear search", "nl": "Zoekopdracht wissen" },
+    "hoverTip": { "en": "Hover any name for full details & source", "nl": "Wijs een naam aan voor alle gegevens & de bron" },
+    "tapTip": { "en": "Tap any name to open it — full details appear below", "nl": "Tik op een naam om die te openen — de gegevens verschijnen hieronder" },
+    "theme": { "en": "Theme", "nl": "Thema" },
+    "themeAuto": { "en": "System", "nl": "Systeem" },
+    "themeLight": { "en": "Light", "nl": "Licht" },
+    "themeDark": { "en": "Dark", "nl": "Donker" },
+    "language": { "en": "Language", "nl": "Taal" },
+    "switchTo": { "en": "Switch to {lang}", "nl": "Wissel naar {lang}" },
+    "loadError": {
+      "en": "Could not load {n} of the person files ({ids}). Check that each id in the roster has a matching file in data/people/.",
+      "nl": "{n} van de persoonsbestanden konden niet geladen worden ({ids}). Controleer of elke id in de roster een bestand heeft in data/people/."
+    },
+
+    "_comment_census": "The line under the title. The plural sits in the string, after a |, because the rule for it is not the same in every language.",
+    "countPeople": { "en": "{n} person|{n} people", "nl": "{n} persoon|{n} personen" },
+    "countAncestors": { "en": "{n} direct ancestor|{n} direct ancestors", "nl": "{n} directe voorouder|{n} directe voorouders" },
+    "countRelatives": { "en": "{n} blood relative|{n} blood relatives", "nl": "{n} bloedverwant|{n} bloedverwanten" },
+    "countMarriedIn": { "en": "{n} married in|{n} married in", "nl": "{n} aangetrouwd|{n} aangetrouwd" },
+
+    "_comment_explore": "The four rows and the cards on them.",
+    "back": { "en": "← Back", "nl": "← Terug" },
+    "exploreHint": {
+      "en": "Four rows around whoever is in focus: grandparents, parents, their own generation — brothers, sisters and whoever they married — and their children. Click any card to open that person; “Back” returns.",
+      "nl": "Vier rijen rond wie er in beeld staat: grootouders, ouders, de eigen generatie — broers, zussen en met wie zij trouwden — en de kinderen. Klik op een kaart om die persoon te openen; “Terug” gaat weer terug."
+    },
+    "parentsOf": { "en": "{name}’s parents", "nl": "Ouders van {name}" },
+    "siblingRow": { "en": "brothers & sisters, in birth order · click to open one", "nl": "broers & zussen, op geboortevolgorde · klik om er een te openen" },
+    "childrenRow": { "en": "children · click to climb down ↓", "nl": "kinderen · klik om af te dalen ↓" },
+    "inFocus": { "en": "in focus", "nl": "in beeld" },
+    "climb": { "en": "climb {arrow}", "nl": "ga {arrow}" },
+    "openCard": { "en": "open", "nl": "open" },
+    "unknownCard": { "en": "Unknown", "nl": "Onbekend" },
+    "toResearch": { "en": "to research", "nl": "te onderzoeken" },
+    "withWhom": { "en": "with {name}", "nl": "met {name}" },
+    "otherParentUnknown": { "en": "other parent not recorded", "nl": "andere ouder niet vastgelegd" },
+    "ofRoot": { "en": "{root}’s {rel}", "nl": "{rel} van {root}" },
+
+    "_comment_labels": "Field labels — used both in the detail card and as the context line under a search hit.",
+    "lblName": { "en": "Name", "nl": "Naam" },
+    "lblBorn": { "en": "Born", "nl": "Geboren" },
+    "lblDied": { "en": "Died", "nl": "Overleden" },
+    "lblDates": { "en": "Dates", "nl": "Jaartallen" },
+    "lblOccupation": { "en": "Occupation", "nl": "Beroep" },
+    "lblNickname": { "en": "Known as", "nl": "Bekend als" },
+    "lblBranch": { "en": "Branch", "nl": "Tak" },
+    "lblNote": { "en": "Note", "nl": "Notitie" },
+    "lblSource": { "en": "Source", "nl": "Bron" },
+    "lblSpouse": { "en": "Spouse", "nl": "Partner" },
+    "lblMarried": { "en": "Married", "nl": "Gehuwd met" },
+    "lblFather": { "en": "Father", "nl": "Vader" },
+    "lblMother": { "en": "Mother", "nl": "Moeder" },
+    "lblSibling": { "en": "Sibling", "nl": "Broer of zus" },
+    "lblSiblings": { "en": "Siblings", "nl": "Broers & zussen" },
+    "lblChild": { "en": "Child", "nl": "Kind" },
+    "lblChildren": { "en": "Children", "nl": "Kinderen" },
+
+    "_comment_lineages": "The surname columns.",
+    "lineHint": {
+      "en": "The surname lines that flow into {names}, each as deep as the records reach. Click any name to open it in the explorer.",
+      "nl": "De naamlijnen die uitkomen bij {names}, elk zo diep als de akten reiken. Klik op een naam om die in de verkenner te openen."
+    },
+    "generationsKnown": { "en": "{n} generation known|{n} generations known", "nl": "{n} generatie bekend|{n} generaties bekend" },
+    "nameOrigin": { "en": "Name origin.", "nl": "Naamsherkomst." },
+
+    "_comment_index": "The index, and the two controls that decide how it is cut up.",
+    "indexHint": {
+      "en": "Everyone in the tree. Choose how to group them, and how to sort within each group.",
+      "nl": "Iedereen in de stamboom. Kies hoe je ze groepeert, en hoe je binnen elke groep sorteert."
+    },
+    "groupBy": { "en": "Group by", "nl": "Groeperen op" },
+    "sortBy": { "en": "Sort by", "nl": "Sorteren op" },
+    "groupLine": { "en": "Family line", "nl": "Familielijn" },
+    "groupLetter": { "en": "First letter", "nl": "Beginletter" },
+    "groupCentury": { "en": "Century", "nl": "Eeuw" },
+    "groupRelation": { "en": "Ancestor / blood / other", "nl": "Voorouder / bloed / overig" },
+    "sortGeneration": { "en": "Generation", "nl": "Generatie" },
+    "sortName": { "en": "Family name", "nl": "Familienaam" },
+    "sortBirth": { "en": "Birth date", "nl": "Geboortedatum" },
+    "letterUnknown": { "en": "No family name recorded", "nl": "Geen familienaam vastgelegd" },
+    "century": { "en": "{ord} century", "nl": "{n}e eeuw" },
+    "centuryUnknown": { "en": "Birth date unknown", "nl": "Geboortedatum onbekend" },
+    "unplaced": { "en": "Unplaced", "nl": "Niet ingedeeld" },
+    "catAncestors": { "en": "Ancestors", "nl": "Voorouders" },
+    "catAncestorsBlurb": {
+      "en": "The direct line above {root} — parents, grandparents, and up.",
+      "nl": "De directe lijn boven {root} — ouders, grootouders en hoger."
+    },
+    "catRelatives": { "en": "Blood relatives", "nl": "Bloedverwanten" },
+    "catRelativesBlurb": {
+      "en": "Blood, but off the direct line: siblings, aunts and uncles, cousins, and their descendants.",
+      "nl": "Bloedverwant, maar naast de directe lijn: broers en zussen, ooms en tantes, neven en nichten, en hun nakomelingen."
+    },
+    "catOthers": { "en": "Others", "nl": "Overigen" },
+    "catOthersBlurb": {
+      "en": "Married into the family, or not yet connected to it.",
+      "nl": "Aangetrouwd, of nog niet met de familie verbonden."
+    },
+
+    "_comment_relations": "The relation finder. These carry markup, so whatever is put into them is escaped by the caller.",
+    "relTitle": { "en": "How are two people related?", "nl": "Hoe zijn twee personen verwant?" },
+    "relHint": {
+      "en": "Pick any two. Where they are related, the arch shows the route: up one side to the ancestor they share, and down the other. Click a card to open that person.",
+      "nl": "Kies er twee. Waar zij verwant zijn, toont de boog de route: langs de ene kant omhoog naar de gedeelde voorouder, en langs de andere weer omlaag. Klik op een kaart om die persoon te openen."
+    },
+    "relFirst": { "en": "First person", "nl": "Eerste persoon" },
+    "relSecond": { "en": "Second person", "nl": "Tweede persoon" },
+    "relAnd": { "en": "and", "nl": "en" },
+    "pickTwo": { "en": "Pick two people.", "nl": "Kies twee personen." },
+    "samePersonLine": { "en": "{a} — that is the same person.", "nl": "{a} — dat is dezelfde persoon." },
+    "noConnection": {
+      "en": "{a} and {b} have no connection recorded in the tree — no shared ancestor, and no marriage linking them.",
+      "nl": "{a} en {b} hebben geen verbinding in de stamboom — geen gedeelde voorouder, en geen huwelijk dat hen verbindt."
+    },
+    "isRelOf": { "en": "{a} is {b}’s <em>{rel}</em>.", "nl": "{a} is de <em>{rel}</em> van {b}." },
+    "inLawB": { "en": "{a} is the <em>{rel}</em> of {through}, who married {b}.", "nl": "{a} is de <em>{rel}</em> van {through}, die met {b} trouwde." },
+    "inLawA": { "en": "{a} married {through}, who is {b}’s <em>{rel}</em>.", "nl": "{a} trouwde met {through}, die de <em>{rel}</em> van {b} is." },
+    "directLine": {
+      "en": "{n} generation apart, in a direct line.|{n} generations apart, in a direct line.",
+      "nl": "{n} generatie ertussen, in rechte lijn.|{n} generaties ertussen, in rechte lijn."
+    },
+    "commonAncestorLine": {
+      "en": "Common ancestor: {via} — {ga} from {a}, {gb} from {b}.",
+      "nl": "Gedeelde voorouder: {via} — {ga} vanaf {a}, {gb} vanaf {b}."
+    },
+    "genUp": { "en": "{n} generation up|{n} generations up", "nl": "{n} generatie omhoog|{n} generaties omhoog" },
+    "meetHere": { "en": "they meet here", "nl": "hier komen ze samen" },
+    "marriedConn": { "en": "married", "nl": "gehuwd" },
+
+    "_comment_panel": "The side panel: this person's link back to the root.",
+    "linkTo": { "en": "Link to {name}", "nl": "Verbinding met {name}" },
+    "close": { "en": "Close", "nl": "Sluiten" },
+    "rootNote": {
+      "en": "{name} is where this tree is measured from — every line in it ends here.",
+      "nl": "{name} is het punt waar deze stamboom vanaf gemeten wordt — elke lijn eindigt hier."
+    },
+
+    "_comment_search": "Search results.",
+    "searchEmpty": {
+      "en": "Search for a name, a year, or a place — “Oostende”, “1943”, “Evergem 1879”.",
+      "nl": "Zoek op een naam, een jaar of een plaats — “Oostende”, “1943”, “Evergem 1879”."
+    },
+    "noMatches": { "en": "Nobody matches “{term}”.", "nl": "Niemand komt overeen met “{term}”." },
+    "resultCount": {
+      "en": "{n} person of {total} · click to open in the tree|{n} people of {total} · click to open in the tree",
+      "nl": "{n} persoon van {total} · klik om te openen in de stamboom|{n} personen van {total} · klik om te openen in de stamboom"
+    }
+  },
+
+  "kinship": {
+    "_comment": "The vocabulary `relationBetween` builds a relation out of. Each entry is f/m/n — the neutral form is what someone whose sex no record states gets, because guessing it from a forename would be inventing a fact. A prefix list is read: index 0 for no step, then one entry per step, and the last entry is the template for everything beyond them. English stacks `great-` forever; Dutch has over-, betover-, and then needs a count too.",
+    "en": {
+      "samePerson": "the same person",
+      "parent": { "f": "mother", "m": "father", "n": "parent" },
+      "grandparent": { "f": "grandmother", "m": "grandfather", "n": "grandparent" },
+      "child": { "f": "daughter", "m": "son", "n": "child" },
+      "grandchild": { "f": "granddaughter", "m": "grandson", "n": "grandchild" },
+      "sibling": { "f": "sister", "m": "brother", "n": "sibling" },
+      "auntUncle": { "f": "aunt", "m": "uncle", "n": "aunt or uncle" },
+      "nieceNephew": { "f": "niece", "m": "nephew", "n": "niece or nephew" },
+      "cousin": { "f": "{ordinal} cousin", "m": "{ordinal} cousin", "n": "{ordinal} cousin" },
+      "spouse": { "f": "wife", "m": "husband", "n": "spouse" },
+      "partner": "partner",
+      "half": "half-{rel}",
+      "greatUp": ["", "great-", "{n}×-great-"],
+      "greatDown": ["", "great-", "{n}×-great-"],
+      "greatAunt": ["", "great-", "{n}×-great-"],
+      "greatNiece": ["", "great-", "{n}×-great-"],
+      "ordinals": ["", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth"],
+      "ordinalN": "{n}th",
+      "removed": " {times} removed",
+      "times": ["", "once", "twice", "three times", "four times", "five times"],
+      "timesN": "{n} times"
+    },
+    "nl": {
+      "samePerson": "dezelfde persoon",
+      "parent": { "f": "moeder", "m": "vader", "n": "ouder" },
+      "grandparent": { "f": "grootmoeder", "m": "grootvader", "n": "grootouder" },
+      "child": { "f": "dochter", "m": "zoon", "n": "kind" },
+      "grandchild": { "f": "kleindochter", "m": "kleinzoon", "n": "kleinkind" },
+      "sibling": { "f": "zus", "m": "broer", "n": "broer of zus" },
+      "auntUncle": { "f": "tante", "m": "oom", "n": "oom of tante" },
+      "nieceNephew": { "f": "nicht", "m": "neef", "n": "neef of nicht" },
+      "cousin": { "f": "{ordinal}graads nicht", "m": "{ordinal}graads neef", "n": "{ordinal}graads neef of nicht" },
+      "spouse": { "f": "echtgenote", "m": "echtgenoot", "n": "partner" },
+      "partner": "partner",
+      "half": "half{rel}",
+      "greatUp": ["", "over", "betover", "{n}×-over"],
+      "greatDown": ["", "achter", "{n}×-achter"],
+      "greatAunt": ["", "oud", "{n}×-oud"],
+      "greatNiece": ["", "achter", "{n}×-achter"],
+      "ordinals": ["", "eerste", "tweede", "derde", "vierde", "vijfde", "zesde", "zevende", "achtste", "negende", "tiende"],
+      "ordinalN": "{n}e",
+      "removed": ", {times} verwijderd",
+      "times": ["", "één generatie", "twee generaties", "drie generaties", "vier generaties", "vijf generaties"],
+      "timesN": "{n} generaties"
+    }
+  }
 }
