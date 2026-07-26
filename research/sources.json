@@ -900,6 +900,18 @@
       "yielded": "Confirms Carolus Ludovicus Van Bogaert x Maria Ludovica Martinet as a couple from a civil act — they are named as the bridegroom's parents — and reveals a son, Alphonsus Van Bogaert, who is a brother of Maria Magdalena and not in the tree. The bride's parents are given as Vitalis Moerloos x Nathalia Van Acker.",
       "confidence": "sup",
       "accessed": "2026-07-26"
+    },
+    {
+      "id": "S19",
+      "site": "agatha",
+      "kind": "record",
+      "title": "Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans",
+      "url": "https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00011036_0",
+      "artifact": "bossin-peremans-1846-marriage-zaventem",
+      "collection": "Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Zaventem 1846, akte nr. 1",
+      "yielded": "FOUR new ancestors. The groom's parents Arnoldus Bossin x Elisabeth Deyn, both labourers of Sint-Stevens-Woluwe who attended and signed with a mark; and the bride's parents Egidius Peremans (d. Zaventem 6 Mar 1837) x Joanna Theresia Ver Elst (d. Zaventem 19 Dec 1843), both already dead. It also confirms both spouses' births as 1824-25 from their stated ages of 21, gives both their trades, and settles the bride's mother's name — Joanna Catharina Jacoba, as this tree had it, not the shortened Anna Catharina of the 1872 act.",
+      "confidence": "doc",
+      "accessed": "2026-07-26"
     }
   ]
 }

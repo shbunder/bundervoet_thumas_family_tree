@@ -107,14 +107,33 @@ def _api_date(d) -> str | None:
     for a guess and this is exactly where one would get invented."""
     if not d:
         return None
-    y, mo, da = d.get("Year"), d.get("Month"), d.get("Day")
-    if not y:
+
+    # These fields are not reliably numeric. Archives put "ca" in a year they are
+    # unsure of, and leave dashes, question marks and empty strings in a month or day
+    # they could not read. int() on any of those took the whole validator down mid-run,
+    # so a part that will not parse is DROPPED rather than guessed: a record with an
+    # unreadable day becomes "1902-08", and one with an unreadable year becomes nothing
+    # at all. The grammar has no syntax for a guess and this is exactly where one would
+    # get invented.
+    def num(v):
+        try:
+            return int(str(v).strip())
+        except (TypeError, ValueError):
+            return None
+
+    year = num(d.get("Year"))
+    if not year:
         return None
-    year = str(y)
+    year = f"{year:04d}"
+    mo, da = num(d.get("Month")), num(d.get("Day"))
+    if mo and not 1 <= mo <= 12:
+        mo = None
+    if da and not 1 <= da <= 31:
+        da = None
     if mo and da:
-        return f"{year}-{int(mo):02d}-{int(da):02d}"
+        return f"{year}-{mo:02d}-{da:02d}"
     if mo:
-        return f"{year}-{int(mo):02d}"
+        return f"{year}-{mo:02d}"
     return year
 
 

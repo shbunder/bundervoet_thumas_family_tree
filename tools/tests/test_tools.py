@@ -476,3 +476,17 @@ def test_only_the_deceased_gets_a_death_year_from_a_death_act():
     by_name = {p.given: p for p in act.people}
     assert from_mention(by_name["Alida"]).death_year == 1861, "the deceased did die that year"
     assert from_mention(by_name["Jacobus"]).death_year is None, "the father was alive to be named"
+
+
+def test_an_unparseable_date_part_is_dropped_not_guessed():
+    """Archives write "ca" into a year they are unsure of and leave dashes or blanks in a
+    month or day they could not read. int() on those killed the validator mid-run. A part
+    that will not parse is dropped — never rounded, never defaulted to 1 — because the
+    date grammar has no syntax for a guess and this is where one would get invented."""
+    from familytree.corpus import _api_date
+    assert _api_date({"Year": "1902", "Month": "8", "Day": "8"}) == "1902-08-08"
+    assert _api_date({"Year": "1902", "Month": "8", "Day": "ca"}) == "1902-08"
+    assert _api_date({"Year": "1902", "Month": "-", "Day": "8"}) == "1902"
+    assert _api_date({"Year": "ca", "Month": "8", "Day": "8"}) is None
+    assert _api_date({"Year": "1902", "Month": "13", "Day": "8"}) == "1902"
+    assert _api_date({"Year": " 1902 "}) == "1902"
