@@ -2141,3 +2141,120 @@ the **marriage**, which names all four parents, and which should be sought at Ze
 (Huwelijken 1821–1860, DGS 004670484) *before* Waasmunster or Hamme, because that is now
 where the bride is from. Then Josephus's and Henricus's acts, and Jan's death, which the
 1882 act narrows to 1882–1898 (Hamme deaths 1894–1900, DGS 004835775).
+
+## 59. What sixty-three thousand acts did not do — and a queue with no memory
+
+Pass 8 more than doubled the corpus: 40,347 acts at the start of this run, **103,705** now,
+of which about 63,000 arrived in one afternoon of commune harvesting. The obvious next
+question was what that bought the downward objective. The answer is worth writing down
+because it is nothing, and the reason is structural rather than a shortfall.
+
+### What the communes actually hold
+
+| commune | acts held with that event place | births | dominant type |
+|---|---|---|---|
+| Sint-Stevens-Woluwe | 3,812 | **2,618 (68.7%)** | Geboorte |
+| Bredene | 4,336 | 645 (14.9%) | Overlijden 3,519 |
+| Everberg | 1,223 | **0** | Huwelijk 1,049 |
+| Kraainem | 1,087 | **0** | Huwelijk 787 |
+| Stene | 1,243 | **0** | Overlijden 1,243 — every single one |
+
+Across the whole corpus: 67.5% deaths, 18.3% marriages, **12.1% births**.
+
+Three of the five communes yield **no birth acts at all**. Stene's Open Archives layer is
+memorial cards end to end, exactly as the charter warns about the coastal communes. Everberg
+and Kraainem give marriages and almost nothing else. Only Sint-Stevens-Woluwe behaves the
+way `harvest.py place` assumes a commune will, and it is 61% unreachable behind §57's paging
+ceiling.
+
+So "a birth act is indexed under the child, so a sibling is reachable only through the
+commune" is right about the *record*, and can still be useless about the *venue*. Before
+spending an afternoon on a commune, it is worth one query to ask whether that commune has
+any indexed births at all.
+
+### And the harvest could not have moved the downward queue anyway
+
+`research.py children` is **couple-indexed**: it proposes children of couples the tree
+already holds. A commune harvest does not add couples, it adds acts about people who are
+not in the tree yet. The queue fell from 28 entries to 3 during this run because earlier
+passes mined the couples, and 63,000 new acts left it at 3.
+
+That is not a bug in the report — it answers the question it was built to answer. It is a
+gap in the set of questions. Nothing asks *which couples in the corpus are probably related
+to this tree but are not in it yet*, which is the question a commune harvest is actually
+good at, and the question objective 3 needs. Recorded here as a finding; it wants a report,
+and this run is not permitted to write one.
+
+### The three that remain are all decisions this run already made
+
+The most useful thing in this pass is the state of those last three queue entries.
+
+**One is a graft this run retracted six hours earlier.** `research.py children` proposes
+*Appolonia Vandenbemden*, b. Sint-Stevens-Woluwe 1877-01-28, as a child of [[hendrik_vdb]]
+× [[coekelberghs]]. §54 deleted exactly that record after reading the act, which names
+**Willem Edouard Vandenbemden** × **Maria Anna Vandenhoven** — a different couple in the
+same commune, corroborated by a second act naming them as parents of another child. The
+refutation is in `research/labels.jsonl`, with its full reasoning, written by the verifier
+that found it. **The queue does not consult it.** Left alone, the next unattended run
+re-grafts the same wrong person, and the run after that.
+
+**One is a link this run deliberately declined.** The queue proposes attaching
+[[joannes_coekelberg58]] to [[anna_haesaerts]] as his mother. §54 removed exactly that
+link, because the 1858 act names *Anna **Catharina** Haesaerts* and §51/§53 left that
+forename deliberately unmerged. The record's own prose says so. The queue re-proposes it.
+
+**One is a match no verifier would make.** It suggests that *Karel Joseph Bossin*, born at
+Sint-Stevens-Woluwe on **27 February 1901**, is the [[cornelius_bossin]] already in the
+tree — a man whose birth was declared at Sint-Stevens-Woluwe on **13 September 1847**. A
+fifty-four-year gap, on a shared surname and a shared commune. `link.py` scores in bits of
+rare-evidence agreement and vetoes a stated conflict; the `[LINK →]` suggestion in
+`children` evidently does neither.
+
+### Why this is the finding and not a footnote
+
+The charter's whole defence is that a refuted candidate is recorded so the next pass does
+not walk into it. `research.py log` gives that to *searches* and `research.py stale` reads
+it back. `evaluate.py label` gives it to *rulings* — 48 of them now, this run added more
+than half — and `evaluate.py report` reads them back to score the matcher.
+
+Nothing reads them back to the **queues**. So the one thing an unattended loop cannot
+afford — proposing, every night, the graft it refuted last night — is the one thing
+currently unguarded. A rejection is the more valuable label precisely because it is a pair
+that scored well enough to reach a verifier and was still wrong; it should be the cheapest
+thing in the system to act on, and right now it is inert.
+
+This pass grafts nothing. It measured a harvest, found the downward queue empty for a
+structural reason rather than an evidential one, and found that all three of its remaining
+entries are this run's own refusals coming back.
+
+NEXT, and it is a tools change so it is recorded rather than done: `research.py children`
+and the frontier queue should filter against `research/labels.jsonl`, and a `[LINK →]`
+suggestion should be subject to the same date-conflict veto `link.py` already applies.
+Until then, **every entry in the downward queue must be checked against the labels by hand
+before it is worked** — including the two above, which must not be grafted.
+
+### What the labels now say about the scorer
+
+`evaluate.py report`, run at the end of this pass: **48 labels, 33 re-scored, precision
+80.0%, recall 33.3%.** More than half the labels were written today.
+
+The two false positives are both on [[marie_vanbergen]], and they are the ones to look at.
+The scorer would graft *Maria Emilia Josephina van Bergen* (d. Aarschot 1923) at **28.6
+bits** and *Joanna Van Bergen* (d. Wuustwezel 1906) at **23.7 bits**, each on the same
+three-part agreement: surname, birth year ±1, and **father's forename**. Wrong province in
+both cases, wrong parents in both cases. A father called *Joannes* or *Maryn* against a
+father called *Joannes Franciscus* is not evidence in a country where those forenames are
+everywhere, and "birth year ±1" is nearly free when the tree holds a bare year. Two rivals
+clearing 23 bits on a common surname is a threshold problem, and it is now measured rather
+than suspected.
+
+The recall figure needs reading with care, because a good part of it is a **labelling
+convention** rather than the matcher. Several labelled matches score `REJECTED` on
+nonsense — `coekelberghs` against her own 1873 marriage act comes back *"sex disagrees;
+birth dates 1848-11-22 vs 1849-08-19"*, which is her being compared to **her husband**.
+The label cites the act id; an act names six people; the scorer picked one. Earlier labels
+in this file use a `…#Person1` suffix and those score correctly. Until the convention is
+consistent, recall is measuring the labels as much as the code — and that, too, is a
+finding worth having, since these are the only labelled data this project will ever
+produce.
+

@@ -19,6 +19,17 @@ Harvesting stops there and makes no claim about who any of them is. Linking them
 tree is tools/link.py, and grafting is still a decision made under the rules in
 CLAUDE.md.
 
+A SEARCH is still one request per act, and that is the wall a province runs into: at the
+four requests a second the venue permits, Belgium's ~30 million person-mentions are about
+a month of continuous fetching. The same records are published whole — a gzipped export
+per archive, and an OAI-PMH feed serving 150 full records a request — so `bulk` and `oai`
+below fetch an entire archive for the price of a few searches, and produce acts that
+normalise identically to the ones fetched one at a time. Reach for those first; the
+per-act route is for the archives that publish neither, which unfortunately includes the
+Rijksarchief and Familiekunde sets this tree mostly rests on.
+
+    uv run tools/harvest.py bulk gnt                a whole archive in ONE request
+    uv run tools/harvest.py oai den                 a whole archive, 150 acts a request
     uv run tools/harvest.py surname Bundervoet
     uv run tools/harvest.py surname "Van Craenenbroeck" --place Zaventem
     uv run tools/harvest.py place Oostende
@@ -35,18 +46,23 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import gzip
+import io
 import json
 import re
 import sys
+import threading
 import time
 import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from familytree.a2a import read_acts  # noqa: E402
 from familytree.corpus import (  # noqa: E402
     ACTS_DIR, HARVEST, MANIFEST, MENTIONS_DIR, load_manifest, reset_manifest_cache,
 )
@@ -58,10 +74,46 @@ API = "https://api.openarch.nl/1.1"
 # throttles to four requests a second per IP. Going under that deliberately: losing
 # access to the one open venue in the registry would cost far more than the wait.
 UA = "family-tree/0.1 (genealogy research; contact via repository)"
-GAP = 0.3
+RATE = 3.0        # requests a second, aggregate across every worker
+WORKERS = 4       # concurrent act fetches
 PAGE = 100
 
-_last_call = 0.0
+# Where the same records can be had without paying a request per act. See familytree/a2a.py
+# for why these are equivalent to `records/show` and how that was checked.
+BULK = "https://oa-export.s3.nl-ams.scw.cloud/xml/{archive}.xml.gz"
+BULK_INDEX = "https://www.openarchieven.nl/exports/xml/"
+OAI = "http://api.openarch.nl/oai-pmh/"
+
+
+class Throttle:
+    """The four-a-second limit, enforced across threads instead of between them.
+
+    The old form was a single `_last_call` timestamp and a sleep to the next slot, which
+    is correct for one thread and also means the gap starts when the previous request
+    RETURNS. With a 300 ms round trip that is 0.3 s of waiting plus 0.3 s of flight per
+    act — about 1.6 requests a second against a budget of four, and the difference is
+    pure latency rather than politeness.
+
+    A token bucket separates the two: the rate is what the venue asked for, and the
+    workers only decide how much of it is left idle. Four workers against a 3/s bucket
+    stays under the published limit whatever the network does.
+    """
+
+    def __init__(self, rate: float):
+        self.gap = 1.0 / rate
+        self.lock = threading.Lock()
+        self.next_at = 0.0
+
+    def wait(self) -> None:
+        with self.lock:
+            now = time.monotonic()
+            at = max(now, self.next_at)
+            self.next_at = at + self.gap
+        if at > now:
+            time.sleep(at - now)
+
+
+_throttle = Throttle(RATE)
 
 
 class Blocked(RuntimeError):
@@ -70,13 +122,9 @@ class Blocked(RuntimeError):
 
 
 def api(endpoint: str, params: dict) -> dict:
-    global _last_call
     url = f"{API}/{endpoint}.json?" + urllib.parse.urlencode(params)
     for attempt in range(1, 5):
-        wait = GAP - (time.monotonic() - _last_call)
-        if wait > 0:
-            time.sleep(wait)
-        _last_call = time.monotonic()
+        _throttle.wait()
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
         try:
             with urllib.request.urlopen(req, timeout=60) as res:
@@ -203,31 +251,49 @@ def fetch_acts(mentions: list[dict], refresh: bool) -> tuple[int, int]:
     # thousands of requests over several minutes; writing only on success meant a
     # Ctrl-C, a dropped connection or a closed laptop threw all of it away and the next
     # run started from nothing.
+    # Concurrent, because the limit that matters is the venue's four-a-second and a
+    # single thread never reaches it — it spends most of each slot waiting for the
+    # previous response to come back. The rate itself is unchanged and enforced centrally
+    # by `Throttle`, so this is the same politeness at closer to the permitted speed.
     handles: dict[str, object] = {}
+    write_lock = threading.Lock()
     done = 0
     today = dt.date.today().isoformat()
+
+    def fetch(item):
+        key, m = item
+        try:
+            record = api("records/show", {"archive": m["archive_code"], "identifier": m["identifier"]})
+        except Blocked as e:
+            return key, e, None
+        return key, None, {
+            "id": key,
+            "archive": m["archive_code"],
+            "archive_org": m.get("archive_org"),
+            "fetched": today,
+            "record": record,
+        }
+
     try:
-        for key, m in wanted.items():
-            try:
-                record = api("records/show", {"archive": m["archive_code"], "identifier": m["identifier"]})
-            except Blocked as e:
-                print(f"\n  skipped {key}: {e}")
-                continue
-            archive = m["archive_code"]
-            if archive not in handles:
-                handles[archive] = (ACTS_DIR / f"{archive}.jsonl").open("a", encoding="utf-8")
-            handles[archive].write(json.dumps({
-                "id": key,
-                "archive": archive,
-                "archive_org": m.get("archive_org"),
-                "fetched": today,
-                "record": record,
-            }, ensure_ascii=False) + "\n")
-            # Flushed per act: the point of streaming is that an interrupted harvest
-            # keeps what it already paid for, and a buffered line is a lost one.
-            handles[archive].flush()
-            done += 1
-            print(f"\r  fetched {done}/{len(wanted)} acts…", end="", flush=True)
+        with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+            for key, error, row in pool.map(fetch, wanted.items()):
+                if error is not None:
+                    print(f"\n  skipped {key}: {error}")
+                    continue
+                # One writer at a time. The workers only fetch; the file handles are
+                # shared, and a half-written line is a corrupt act that survives every
+                # future run of the harvester.
+                with write_lock:
+                    archive = row["archive"]
+                    if archive not in handles:
+                        handles[archive] = (ACTS_DIR / f"{archive}.jsonl").open("a", encoding="utf-8")
+                    handles[archive].write(json.dumps(row, ensure_ascii=False) + "\n")
+                    # Flushed per act: the point of streaming is that an interrupted
+                    # harvest keeps what it already paid for, and a buffered line is a
+                    # lost one.
+                    handles[archive].flush()
+                    done += 1
+                    print(f"\r  fetched {done}/{len(wanted)} acts…", end="", flush=True)
     finally:
         for h in handles.values():
             h.close()
@@ -281,6 +347,147 @@ def harvest(harvest_id: str, label: str, params: dict, cap: int, refresh: bool) 
     print(f"  → {entry['mentions']}/{entry['found']} mentions, {entry['acts']} acts"
           + ("" if entry["complete"] else " — PARTIAL") + "\n")
     return entry
+
+
+# ---------- whole archives, without a request per act ----------
+
+
+def _open(url: str, accept: str = "*/*"):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": accept})
+    try:
+        return urllib.request.urlopen(req, timeout=300)
+    except urllib.error.HTTPError as e:
+        # The export bucket answers 403, not 404, for an archive it does not carry, so
+        # "no bulk export" and "refused" look identical from here and both mean the same
+        # thing to the caller: this route is not available, try another.
+        raise Blocked(f"{url}: HTTP {e.code}") from e
+    except (urllib.error.URLError, TimeoutError) as e:
+        raise Blocked(f"{url}: {e}") from e
+
+
+def bulk_archives() -> set[str]:
+    """Which archives publish a whole-archive export. Read from the index, not hardcoded —
+    the list grows as archives join, and a stale copy here would quietly send the harvester
+    back to fetching one act at a time."""
+    try:
+        with _open(BULK_INDEX, "text/html") as res:
+            html = res.read().decode("utf-8", "replace")
+    except Blocked:
+        return set()
+    return set(re.findall(r"/xml/\./([a-z0-9]+)\.xml\.gz", html))
+
+
+def write_acts(rows, archive: str, refresh: bool) -> tuple[int, int]:
+    """Stream acts into the store, skipping the ones already held.
+
+    Shared by both bulk routes. The dedup is on the act id, which `a2a.act_id` mints to
+    match the JSON API's exactly — so pulling an archive in bulk after months of per-act
+    harvesting adds only what is genuinely new, and the acts already cited by records in
+    the tree keep the ids those citations use.
+    """
+    held = set() if refresh else held_act_ids()
+    ACTS_DIR.mkdir(parents=True, exist_ok=True)
+    today = dt.date.today().isoformat()
+    added = skipped = 0
+    with (ACTS_DIR / f"{archive}.jsonl").open("a", encoding="utf-8") as f:
+        for row in rows:
+            if row["id"] in held:
+                skipped += 1
+                continue
+            held.add(row["id"])
+            f.write(json.dumps({**row, "fetched": today}, ensure_ascii=False) + "\n")
+            added += 1
+            if added % 2000 == 0:
+                f.flush()
+                print(f"\r  {added} new acts, {skipped} already held…", end="", flush=True)
+    print(f"\r  {added} new acts, {skipped} already held.        ")
+    return added, skipped
+
+
+def cmd_bulk(args):
+    """A whole archive in one request.
+
+    This is the route that changes the arithmetic. Kortrijk holds 140,543 acts; fetching
+    them one at a time at the permitted rate is thirteen hours, and the export is a 19 MB
+    download. Where an archive publishes one, nothing else should be used.
+    """
+    archive = args.archive.lower()
+    url = BULK.format(archive=archive)
+    print(f"Bulk export — {archive}\n  {url}")
+    try:
+        res = _open(url, "application/gzip")
+    except Blocked as e:
+        available = sorted(bulk_archives())
+        print(f"  no bulk export for \"{archive}\" ({e})", file=sys.stderr)
+        if available:
+            print(f"\n  {len(available)} archives do publish one: {', '.join(available)}", file=sys.stderr)
+        print(f"\n  For this one, try OAI-PMH instead — still 150 acts a request:\n"
+              f"    uv run tools/harvest.py oai {archive}", file=sys.stderr)
+        return
+    with res:
+        size = res.headers.get("Content-Length")
+        if size:
+            print(f"  {int(size) / 1048576:.0f} MB compressed — streamed, never held whole")
+        added, skipped = write_acts(read_acts(gzip.GzipFile(fileobj=res), archive), archive, args.refresh)
+
+    save_manifest({
+        "id": f"archive-{archive}",
+        "query": {"archive": archive, "via": "bulk"},
+        "date": dt.date.today().isoformat(),
+        "found": added + skipped,
+        "mentions": added + skipped,
+        # A whole-archive export IS the archive, so unlike a capped surname search there
+        # is nothing left behind to be honest about.
+        "complete": True,
+        "acts": added + skipped,
+    })
+    print(f"  → {added + skipped} acts held for {archive}\n")
+
+
+def cmd_oai(args):
+    """A whole archive at 150 acts a request, for the archives with no bulk export.
+
+    The Rijksarchief and Familiekunde Vlaanderen sets — the backbone of Belgian civil
+    registration, and most of what this tree already rests on — publish neither an export
+    nor an OAI set, so for those the per-act endpoint is still the only route and this
+    will report that rather than appear to work.
+    """
+    archive = args.archive.lower()
+    print(f"OAI-PMH — {archive}")
+    params = {"verb": "ListRecords", "metadataPrefix": "oai_a2a", "set": archive}
+    total_added = total_skipped = 0
+    pages = 0
+
+    def pages_of_acts():
+        nonlocal pages
+        nonlocal params
+        while True:
+            _throttle.wait()
+            with _open(OAI + "?" + urllib.parse.urlencode(params), "text/xml") as res:
+                body = res.read()
+            pages += 1
+            found = list(read_acts(io.BytesIO(body), archive))
+            yield from found
+            token = re.search(rb"<resumptionToken[^>]*>([^<]+)</resumptionToken>", body)
+            if not token or not found:
+                return
+            params = {"verb": "ListRecords", "resumptionToken": token.group(1).decode()}
+
+    total_added, total_skipped = write_acts(pages_of_acts(), archive, args.refresh)
+    if not (total_added + total_skipped):
+        print(f"  the OAI endpoint has no records for \"{archive}\" — it is not one of its sets.\n"
+              f"  Fall back to the per-act route: uv run tools/harvest.py surname <name>", file=sys.stderr)
+        return
+    save_manifest({
+        "id": f"archive-{archive}",
+        "query": {"archive": archive, "via": "oai"},
+        "date": dt.date.today().isoformat(),
+        "found": total_added + total_skipped,
+        "mentions": total_added + total_skipped,
+        "complete": True,
+        "acts": total_added + total_skipped,
+    })
+    print(f"  → {total_added + total_skipped} acts held for {archive}, over {pages} request(s)\n")
 
 
 # ---------- commands ----------
@@ -346,9 +553,30 @@ def cmd_status(args):
 
     partial = [h for h in manifest["harvests"] if not h["complete"]]
     if partial:
-        print(f"\n  {len(partial)} partial — raise --max and re-run with --refresh to complete:")
-        for h in partial:
+        short = sum((h["found"] or 0) - (h["mentions"] or 0) for h in partial)
+        print(f"\n  {len(partial)} partial, {short} mentions short — raise --max and re-run with --refresh:")
+        for h in partial[:12]:
             print(f"    {h['id']:<28} --max {h['found']} --refresh")
+        if len(partial) > 12:
+            print(f"    …and {len(partial) - 12} more")
+
+    # Which of the archives already represented here can be had whole, in one request,
+    # instead of one act at a time. This is the difference between a surname and a
+    # province: the per-act route is about three acts a second, so Kortrijk's 140,543
+    # acts are thirteen hours of fetching or a 19 MB download.
+    if not args.offline:
+        exports = bulk_archives()
+        by_archive: dict[str, int] = {}
+        for f in ACTS_DIR.glob("*.jsonl") if ACTS_DIR.is_dir() else []:
+            by_archive[f.stem] = sum(1 for line in f.open(encoding="utf-8") if line.strip())
+        whole = {h["query"]["archive"] for h in manifest["harvests"]
+                 if (h.get("query") or {}).get("archive")}
+        cheap = sorted(set(by_archive) & exports - whole, key=lambda a: -by_archive[a])
+        if cheap:
+            print(f"\n  {len(cheap)} archive(s) you already hold acts from publish a WHOLE-ARCHIVE export.")
+            print("  One request each, and it supersedes every future surname query there:\n")
+            for a in cheap[:10]:
+                print(f"    {a:<6} {by_archive[a]:>6} acts held    uv run tools/harvest.py bulk {a}")
 
     # Which surnames in the tree have never been harvested. This is objective 3's to-do
     # list, and it is derived rather than kept by hand.
@@ -385,11 +613,22 @@ def main() -> int:
     p.add_argument("place")
     p.set_defaults(fn=cmd_place)
 
+    p = sub.add_parser("bulk", help="a whole archive in ONE request — always try this first")
+    p.add_argument("archive", help="an archive code, e.g. gnt, kor, aal, den")
+    p.add_argument("--refresh", action="store_true", help="re-read what is already held")
+    p.set_defaults(fn=cmd_bulk)
+
+    p = sub.add_parser("oai", help="a whole archive at 150 acts a request, where there is no export")
+    p.add_argument("archive", help="an archive code, e.g. den, ell, sla")
+    p.add_argument("--refresh", action="store_true", help="re-read what is already held")
+    p.set_defaults(fn=cmd_oai)
+
     p = common(sub.add_parser("frontiers", help="harvest the surnames the queue is asking for"))
     p.add_argument("--limit", type=int, default=5)
     p.set_defaults(fn=cmd_frontiers)
 
     p = sub.add_parser("status", help="what is held, and what is missing")
+    p.add_argument("--offline", action="store_true", help="skip the check for whole-archive exports")
     p.set_defaults(fn=cmd_status)
 
     args = parser.parse_args()
