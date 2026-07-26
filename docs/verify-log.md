@@ -148,8 +148,15 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 
 ## Summary — passes 25–36 (2026-07-26)
 
-**The tree went 328 → 390 people.** 39 now sit at `doc`, 325 at `sup`, 26 at `fam`. 17 saved
+**The tree went 328 → 418 people.** 15 sit at `doc`, 377 at `sup`, 26 at `fam`. 17 saved
 artifacts, 126 logged searches. Green at every commit.
+
+> **The `doc` count went *down*, and that is the most honest thing in this report.** It read
+> 39 partway through. §51 then established that an **AGATHA act analysis is a transcription,
+> not an image** — the Rijksarchief's own Demogen index, with no scan behind it on AGATHA or
+> Open Archives — and about twenty-four records citing one were downgraded to `sup`. Nothing
+> was refuted. What changed is the claim being made about the evidence. Only **15** people in
+> this tree now rest on an act or image that was actually read.
 
 ### The one thing that changed everything
 
@@ -243,3 +250,8 @@ records; the cause is not, and is not claimed.
 - Oostende civil registration after 1900 — Stadsarchief, offline.
 | 36 | 2026-07-26 | jathanasius_peremans | LEAD | **ANCHORED → NEW** | The last of the three sibling rows. Born ~1822, married Maria Elisabeth Cuypers at **Zaventem, 28 Nov 1844** (S31). This entry **labels the roles** — Vader, Moeder, spouse, spouse's parents — so nothing is inferred. Four people. | — |
 | 36 | 2026-07-26 | peremans | — | PATTERN | All three sibling leads now closed. Their father died Mar 1837, mother Dec 1843 — and **three weddings followed in 26 months**, all at Zaventem: Apr 1844, Nov 1844, Feb 1846. Pattern recorded; cause not claimed. | — |
+| 37 | 2026-07-26 | 24 children | NOT REACHED → | **NEW** | The sweep on the finished 85k-act corpus, then `research.py children`: **24 children across five couples**, each from a birth act naming both parents. 9 Coppens, 4 Coenraets, 4 Pardon, 5 Van den Bemden, 2 Coekelberghs (S32). | — |
+| 37 | 2026-07-26 | — (sweep) | — | — | Corroborated **26 → 52** on the doubled corpus. But see the caution below: for anyone *added* this session the corroboration is partly an echo, not an independent check. | — |
+| 37 | 2026-07-26 | — (sex) | — | NOT INFERRED | None of the 24 states a `sex`. The harvested mention carries a relation role and **never a sex**, and this project does not read a sex off a forename. That knowingly regresses CLAUDE.md's "nobody is currently unknown". | — |
+| 37 | 2026-07-26 | Karel Joseph Bossin | — | **MERGE REFUSED** | `research.py children` proposed linking a boy born **1901** to `cornelius_bossin`, born **1847** — a 54-year gap. The blocking index matched on surname and commune. Not followed. | — |
+| 37 | 2026-07-26 | — (tool) | — | FINDING | `research.py children` printed a header of "27 to add" and then listed **24**. The discrepancy is unexplained and worth a look before the number is trusted. | — |

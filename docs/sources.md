@@ -642,6 +642,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 
+#### `S32` — Civil birth acts naming both parents, for couples already in the tree (harvested corpus, July 2026)
+- **Kind:** index · <https://www.openarchieven.nl/>
+- **Collection:** Rijksarchief België, burgerlijke stand — Sint-Stevens-Woluwe, Zaventem and Bertem birth registers, via Open Archives
+- **Covers:** The batch surfaced by `research.py children` over the harvested corpus: acts that name a child of a couple this tree already holds. Each person's own record carries the individual act URL.
+- **Yielded:** 24 children across five couples — 9 Coppens, 4 Coenraets, 4 Pardon, 5 Van den Bemden, 2 Coekelberghs. Every one from an act naming both parents.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** Indexed acts, no register image read for any of them. The harvested mention carries a relation role but NO sex, which is why none of these records states one.
+
 ### Familiekunde Vlaanderen — dataindexen (indices en klappers)
 
 #### `fv-ttind-gent` — Totaalindex op de oude parochieregisters — Arrondissement Gent (table 008_GENT)

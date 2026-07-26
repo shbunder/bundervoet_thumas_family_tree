@@ -1149,6 +1149,19 @@
       "confidence": "doc",
       "accessed": "2026-07-26",
       "note": "The scan link on the Open Archives mirror points at ...?i=217, which the FamilySearch viewer resolves to the opening holding acts nr. 1-4 of 1838; act nr. 8 is one opening further on, at image-index 218 / 'Afbeelding 219', whose own ark is 3:1:9392-HG83-X. The image was read by stitching the deep-zoom tiles: the descriptor is at .../deepzoomcloud/dz/v1/3:1:9392-HG83-X/image.xml (5529x4021, tile 256, overlap 1, max level 13) and the tiles at .../image_files/13/<col>_<row>.jpg. Those endpoints refuse cross-origin fetch from www.familysearch.org, so the stitching has to run on the sg30p0.familysearch.org origin itself. This is the 'gelijkvormige kopij' — the duplicate register deposited with the court — not the commune's original; the printed footer of every act says so. A FamilySearch session is needed, which is why the artifact is kept."
+    },
+    {
+      "id": "S32",
+      "site": "openarch",
+      "kind": "index",
+      "title": "Civil birth acts naming both parents, for couples already in the tree (harvested corpus, July 2026)",
+      "url": "https://www.openarchieven.nl/",
+      "collection": "Rijksarchief België, burgerlijke stand — Sint-Stevens-Woluwe, Zaventem and Bertem birth registers, via Open Archives",
+      "covers": "The batch surfaced by `research.py children` over the harvested corpus: acts that name a child of a couple this tree already holds. Each person's own record carries the individual act URL.",
+      "yielded": "24 children across five couples — 9 Coppens, 4 Coenraets, 4 Pardon, 5 Van den Bemden, 2 Coekelberghs. Every one from an act naming both parents.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Indexed acts, no register image read for any of them. The harvested mention carries a relation role but NO sex, which is why none of these records states one."
     }
   ]
 }
