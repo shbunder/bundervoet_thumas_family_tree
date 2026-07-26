@@ -445,6 +445,8 @@ def test_every_class_compare_emits_is_declared_strong_or_weak():
          _cand(ref="y", surname="Mombaerts", given="Henricus", birth_year=1876)),
         (_cand(surname="Pardon", given="Maria", occupation="landbouwer"),
          _cand(ref="y", surname="Pardon", given="Maria", occupation="landbouwer")),
+        (_cand(surname="Van Bergen", given="Maria", birth_year=1843),
+         _cand(ref="y", surname="Van Bergen", given="Maria", birth_year=1844)),
     ]
     seen = set()
     for a, b in pairs:
@@ -455,6 +457,27 @@ def test_every_class_compare_emits_is_declared_strong_or_weak():
         # The point of the split: a weak class must never reach the two-identifier floor.
         assert m.independent == sum(1 for c in m.classes if c in CLASSES)
     assert seen & set(WEAK_CLASSES), "these pairs are supposed to exercise the weak classes"
+
+
+def test_a_birth_year_off_by_one_is_not_an_independent_identifier():
+    """"Birth year ±1 is nearly free when the tree holds a bare year" — §59, before the gold
+    standard could show it. Once the act-level rejections started scoring, both Van Bergen
+    rivals turned out to reach graftable on exactly this: surname plus a ±1 year, wrong
+    province and wrong parents in each case. It still scores its two bits, because it is worth
+    noticing; it cannot be one of the two identifiers a graft needs.
+
+    An EXACT year still is one, which is the half that must not be broken."""
+    from familytree.match import CLASSES, compare
+    near = compare(_cand(surname="Van Bergen", given="Maria", birth_year=1843),
+                   _cand(ref="y", surname="Van Bergen", given="Maria", birth_year=1844))
+    assert "date-near" in near.classes and "date" not in near.classes
+    assert near.independent < 2 and not near.graftable
+    assert near.distinguishing > 0, "a near miss is still worth noticing"
+
+    exact = compare(_cand(surname="Van Bergen", given="Maria", birth_year=1843),
+                    _cand(ref="y", surname="Van Bergen", given="Maria", birth_year=1843))
+    assert "date" in exact.classes and exact.independent >= 2
+    assert "date-near" not in CLASSES
 
 
 def test_agreement_beyond_the_name_is_what_promotes_a_candidate():

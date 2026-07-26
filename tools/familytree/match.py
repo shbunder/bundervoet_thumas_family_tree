@@ -387,7 +387,7 @@ CLASSES = ("name", "date", "place", "role", "kin")
 # an act HELD at Oostende matched everyone in the tree who lived there, and two men's
 # wives sharing the forename Simonne matched across seventy years. They still add bits —
 # they are not nothing — but they cannot carry a graft on their own.
-WEAK_CLASSES = ("context", "kin-forename", "name-forename")
+WEAK_CLASSES = ("context", "kin-forename", "name-forename", "date-near")
 
 
 @dataclass
@@ -516,7 +516,18 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
         if gap == 0:
             add("date", f"birth year {a_born}", 6.0)
         elif gap <= 2:
-            add("date", f"birth year ±{gap}", 2.0)
+            # A NEAR miss is corroboration, not identification, so it cannot be one of the
+            # two independent identifiers. §59 of the research log had already said why —
+            # "birth year ±1 is nearly free when the tree holds a bare year" — and the gold
+            # standard now shows it costing precision: both Van Bergen rivals reached
+            # graftable on surname plus a ±1 year, wrong province and wrong parents in each
+            # case. Two bits was always the honest weight; the mistake was calling it a class.
+            #
+            # Deliberately not the alternative the sweep offers. Raising the floor to three
+            # classes kills all three false positives and one true match with them, and it
+            # would contradict rule 1 of the charter, which says two. This keeps the rule and
+            # fixes what was never an identifier in the first place.
+            add("date-near", f"birth year ±{gap}", 2.0)
     if a_died and b_died and a_died == b_died:
         add("date", f"death year {a_died}", 5.0)
 

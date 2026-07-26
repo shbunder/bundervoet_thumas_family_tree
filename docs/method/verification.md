@@ -79,6 +79,33 @@ uncounted one**, and reporting all of them as work-for-a-human overstated the ba
 times over. Most were waiting on a harvest, not on anybody. Counting them apart is the
 difference between a number someone acts on and a number everyone ignores.
 
+### An act-level *rejection* is a ruling, and it can be scored
+
+The ten that name no participant resembling the person were the last to be understood. Every
+one says the same shape of thing — *"the act's principal is a different person of the same
+surname; ours is X"* — and there is no single pair to name, because that is the content of the
+ruling. Asking anyone to choose a participant would be asking them to invent the thing the
+label denies.
+
+But *"no participant of this act is this person"* **quantifies over the act**, and a quantified
+claim is testable. The scorer satisfies it when it would graft none of them and violates it
+when it would graft any — a **stricter** test than a single pair, not a weaker one. An accept
+cannot be handled this way: it asserts the person *is* in the act, which is existential and
+needs a specific someone.
+
+Scoring them changed the picture immediately, and for the better:
+
+| | before | after |
+|---|---|---|
+| re-scored pairs | 28 | **33** |
+| refuted pairs it would wrongly graft | 0 | **3** |
+| precision | 100% | **88.9%** |
+
+Those five were the *hardest* rejections in the file — rival candidates of the same surname,
+in the wrong province, with the wrong parents — and excluding them was what made precision
+look perfect. A gold standard that cannot score its hardest cases is measuring its own
+convenience.
+
 Labels are append-only, and later labels supersede earlier ones for the same pair:
 corrections are first-class here exactly as they are in the tree.
 

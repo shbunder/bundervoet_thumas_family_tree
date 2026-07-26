@@ -2427,3 +2427,106 @@ the way `site/labels.json` holds the relation words, not a table buried in `matc
 - `.tmp-pass5/` — 26 MB of autopilot scratch — was untracked and **not** gitignored, while
   the same run is instructed to commit once per pass. Ignored now, with
   `.autopilot-worklist.json`.
+
+## 61. Scoring the rulings that name no pair, and the retiming coverage.py asked for
+
+The two cheapest things §60 left, both done, and one of them moved the precision figure for
+the first time in this project's history.
+
+### An act-level rejection is a ruling, and it can be scored
+
+§60 sorted 45 act-level labels down to five, and called those five "not pairwise rulings" —
+correctly. Every one says the same shape of thing: *the act's principal is a different person
+of the same surname; ours is X.* There is no single participant to name, because that is the
+content of the ruling, and forcing one would invent the thing the label denies. §60 forced one
+and retracted it.
+
+What §60 got wrong was the conclusion that they were therefore unscoreable. *"No participant
+of this act is this person"* **quantifies over the act**, and a quantified claim is testable:
+the scorer satisfies it when it would graft none of them, and violates it when it would graft
+any. That is a **stricter** test than a single pair, not a weaker one. An accept cannot be
+handled this way — it asserts the person *is* in the act, which is existential and needs a
+specific someone, so those still wait for a human.
+
+It changed the picture at once:
+
+| | before | after |
+|---|---|---|
+| re-scored pairs | 28 | **33** |
+| refuted pairs the scorer would wrongly graft | 0 | **3** |
+| precision | 100% | **88.9%** |
+
+Those five were the *hardest* rejections in the file — rival candidates of the same surname,
+wrong province, wrong parents — and leaving them uncounted was what had made precision look
+perfect. **A gold standard that cannot score its hardest cases is measuring its own
+convenience.** Every precision figure this project has ever reported was computed without them.
+
+### A birth year off by one was never an identifier
+
+The instinct was to raise the bits floor. `evaluate.py sweep` said otherwise, which is what it
+is for: 6 → 12 bits removes one false positive of three, and only `classes 2 → 3` removes all
+three — at the cost of one true match, and of contradicting rule 1 of the charter, which says
+two.
+
+The real culprit was narrower, and §59 had already named it a year ago: *"birth year ±1 is
+nearly free when the tree holds a bare year."* Both Van Bergen rivals reached graftable on
+exactly that — surname plus a ±1 year — with the wrong province, the wrong parents and the
+wrong death year in each. A near miss is corroboration, not identification. It is a weak class
+now: it still scores its two bits, because it is worth noticing, and it can no longer be one of
+the two identifiers a graft needs.
+
+**Precision 88.9% → 96.0%, recall 100%, no true match lost.** Fixing something that was never
+an identifier is not the same as raising the bar, and only one of the two was available.
+
+One false positive survives, and it reorders what to do next. `joannes_vi2` is graftable on
+`name + place` while the forenames actively disagree — **Joannes** against *Charles Thomas
+Jean*. Closing it needs a forename-disagreement veto, and that is **unsafe until the folding
+table exists**: without it, Henricus/Hendrik reads as a disagreement and breaks the correct
+Vandenbemden graft from §60. So the forename vocabulary is not a recall improvement to be
+deferred; it is the prerequisite for the last known false positive.
+
+And it cannot be learned. Measured over the obvious candidates, the Latin masculine/feminine
+pairs that must **never** fold are *more* similar than the Latin/vernacular pairs that should:
+
+| fold these | | never fold these | |
+|---|---|---|---|
+| Henricus / Hendrik | 0.67 | Ludovicus / **Ludovica** | 0.82 |
+| Gustavus / Gustaaf | 0.67 | Franciscus / **Francisca** | 0.84 |
+| Joannes / Jan | 0.60 | Augustinus / **Augustina** | 0.84 |
+| Ludovicus / Lodewijk | 0.35 | Josephus / **Josepha** | 0.80 |
+| Theodorus / Dirk | 0.31 | Henricus / **Henrica** | 0.80 |
+
+The distributions are inverted, so no threshold separates them, and what a similarity heuristic
+reaches for first is a brother and his sister — in a tree that leans on a sex veto, the worst
+available false merge. Learning the pairs from confirmed matches instead is the other trap: the
+equivalence would not be independent of the match that taught it, which manufactures a second
+identifier out of the first. It wants a curated vocabulary in `data/`, pairs and never a
+stemmer, sex-preserving, scored below an exact agreement the way the surname phonetic fold
+already takes `w * 0.6`. The corpus's job is to say which pairs are worth writing down — count
+forename frequency by period and commune — never to decide them.
+
+### The retiming, done
+
+`coverage.py` carried a note saying its own 786s benchmark for the inverted route predated the
+blocking fix and should be re-measured before it was trusted. Both routes, same 1,721,654-act
+corpus, and the same three leads out — verified identical rather than assumed:
+
+| | |
+|---|---|
+| scan | **103.3s** |
+| inverted | **604.9s** (604.7s of it building the identification map) |
+
+The scan still wins, and by more than before: 2.7× has become 5.9×. Selective blocking helped
+the scan (289.5s → 117.9s → 103.3s) more than it helped the inversion (786s → 604.9s), because
+the inversion's cost was never the bucket sizes — it is that all 434 tree people each pull
+their whole bucket and JSON-decode every stored candidate in it, and the tree grows.
+`act_coverage` inverts profitably because it asks about 223 open frontiers and reads only the
+acts they point at; this one asks about everybody. Worth timing again if
+`store.candidates_for` stops materialising a Candidate per row, and not before.
+
+### And one silent subtraction, in the new code
+
+`evaluate.py` was skipping the label whose person §54 retracted, rather than reporting it: 48
+labels, 33 re-scored, 14 unresolved, and one that simply evaporated from every total. That is
+the same failure as a list truncating without saying it truncated, which §60 fixed in four
+reports and then reintroduced here. It is yielded as unresolved now, and 33 + 15 = 48.

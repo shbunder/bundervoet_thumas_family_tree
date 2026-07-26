@@ -93,6 +93,11 @@ def _scored(labels: list[Label]):
 
     for lab in labels:
         if lab.person not in people:
+            # Yielded as unresolved rather than skipped. Skipping dropped it out of every
+            # total — 48 labels, 33 re-scored, 14 unresolved, and one that simply evaporated —
+            # which is the same silent-subtraction failure as a truncated list that does not
+            # say it truncated. A ruling about a retracted record is still a ruling.
+            yield lab, None
             continue
         a = from_person(people[lab.person], people, children)
         mention = by_ref.get(lab.ref)
@@ -115,9 +120,29 @@ def _scored(labels: list[Label]):
             candidates = [m for m in in_act.get(lab.ref, [])
                           if family_key(m.surname) and family_key(m.surname) == family_key(a.surname)]
             if len(candidates) != 1:
-                # None, or several people of that surname in one act: unresolvable without
-                # a human saying which. Reported as unresolved, never guessed.
-                yield lab, None
+                # AN ACT-LEVEL REJECTION IS A RULING, not a malformed pairwise one, and it
+                # can be scored without inventing a participant for it.
+                #
+                # Every remaining one says the same shape of thing: "the act's principal is a
+                # different person of the same surname; ours is X." There is no single pair to
+                # name — that is the point of the ruling — and the ten labels of this kind name
+                # no participant resembling our person at all. Asking a human to choose one
+                # would be asking them to invent the thing the label denies, and forcing the
+                # choice mechanically is exactly the bug this whole block exists because of.
+                #
+                # But "no participant of this act is this person" quantifies over the act, and
+                # a quantified claim is testable: the scorer satisfies it when it would graft
+                # NONE of them, and violates it when it would graft any. That is a stricter
+                # test than a single pair, not a weaker one. Reported as the worst offender, so
+                # a violation names the mention that caused it.
+                #
+                # An ACCEPT cannot be handled this way. It asserts our person IS in the act,
+                # which is existential and needs a specific someone; those stay unresolved.
+                if lab.match or not in_act.get(lab.ref):
+                    yield lab, None
+                    continue
+                scored = [compare(a, from_mention(m), freq) for m in in_act[lab.ref]]
+                yield lab, max(scored, key=lambda m: (m.graftable, m.bits))
                 continue
             mention = candidates[0]
         yield lab, compare(a, from_mention(mention), freq)
@@ -138,9 +163,11 @@ def cmd_report(args) -> int:
     tp = fp = tn = fn = 0
     missing = 0
     disagreements = []
+    unresolved = []
     for lab, m in _scored(labels):
         if m is None:
             missing += 1
+            unresolved.append((lab, m))
             continue
         proposed = m.graftable
         if lab.match and proposed:
@@ -161,11 +188,18 @@ def cmd_report(args) -> int:
         # figures below are computed without it — but broken down, because most of the hole
         # is not waiting on anybody. Reporting all of them as "re-record these" made the
         # backlog look like human work when the large majority resolves on the next harvest.
+        # Counted directly, each from its own condition. Deriving one of them by subtracting
+        # the others printed "-1" the moment act-level rejections started scoring, because a
+        # category that is no longer part of `missing` cannot be recovered from it.
         held = store.acts_by_id(lab.ref.split("#", 1)[0] for lab in labels)
-        absent = sum(1 for lab in labels
-                     if not lab.names_a_mention and lab.ref.split("#", 1)[0] not in held)
-        gone = sum(1 for lab in labels if lab.person not in people)
-        needs_a_person = missing - absent - gone
+        absent = gone = needs_a_person = 0
+        for lab, m in unresolved:
+            if lab.person not in people:
+                gone += 1
+            elif lab.ref.split("#", 1)[0] not in held:
+                absent += 1
+            else:
+                needs_a_person += 1
         print(f"  {missing} label(s) are not counted above:")
         if needs_a_person:
             print(f"    {needs_a_person:>3} name a held act but not which of its people. An act names six,\n"

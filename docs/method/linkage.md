@@ -87,6 +87,23 @@ two hundred relatives.
 | `noise` | anything less |
 | `rejected` | any stated conflict |
 
+### A near miss is corroboration, not identification
+
+An **exact** birth-year agreement is one of the two identifiers a graft needs. A year off by
+one or two is not, and it now sits in a weak class — it still scores its two bits, because it
+is worth noticing, but it cannot carry a graft.
+
+This was suspected long before it could be shown: *"birth year ±1 is nearly free when the tree
+holds a bare year."* The gold standard settled it. Once act-level rejections became scoreable,
+both Van Bergen rivals turned out to have reached graftable on exactly this — surname plus a
+±1 year — with the wrong province, the wrong parents and the wrong death year in each case.
+Demoting it took precision from 88.9% to **96.0% and lost no true match at all**.
+
+The alternative the sweep offered was raising the floor from two agreeing classes to three.
+That kills all three false positives — and one true match with them, and it would contradict
+rule 1 of the charter, which says two. Fixing something that was never an identifier is not
+the same as raising the bar, and only one of the two is available to us.
+
 ---
 
 ## The kin class

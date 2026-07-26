@@ -260,15 +260,23 @@ def missing_children(people: dict, children: dict | None = None,
     # So the direction to ask from is not a matter of taste: it depends on how many
     # candidates the asking side drags in, and the honest way to know is to time both.
     #
-    # THAT 786 IS NOW OUT OF DATE, AND THE RETIMING IS OWED. It was measured when the prefix
-    # key took six characters off the front of the surname, so a Vandenbemden pulled the
-    # 150,611 mentions sharing `x:fanden`. The key now strips the particle and blocks on the
-    # family, which cut the mentions pulled across all open frontiers from 2,542,433 to
-    # 941,505 — and the scan side of this report fell from 289.5s to 117.9s on the same
-    # change. Scaling the 786 by that same factor lands near 290s, which would still lose to
-    # the scan, but that is arithmetic on an old measurement and not a measurement. The
-    # condition this comment used to end with — "if the prefix key is ever made selective" —
-    # has been met, so the number above should be re-measured before it is trusted again.
+    # RE-MEASURED after the prefix key was made selective, because that 786 was taken when the
+    # key took six characters off the front of the surname and a Vandenbemden pulled the
+    # 150,611 mentions sharing `x:fanden`. Both routes, same corpus of 1,721,654 acts, same 3
+    # leads out — verified identical, not assumed:
+    #
+    #   scan       103.3s
+    #   inverted   604.9s   of which 604.7s is building the identification map
+    #
+    # The scan still wins, and by MORE than before: 2.7x has become 5.9x. Selective blocking
+    # helped the scan (289.5s → 117.9s → 103.3s) more than it helped the inversion
+    # (786s → 604.9s), because the inversion's cost is not the bucket sizes — it is that all
+    # 434 tree people each pull their whole bucket and JSON-decode every stored candidate in
+    # it, and the tree grows. `act_coverage` inverts profitably because it asks about the 223
+    # open frontiers and reads only the acts they point at; this asks about everyone.
+    #
+    # Worth timing again if `store.candidates_for` ever stops materialising a Candidate per
+    # row, or if the tree grows enough that the scan's per-act parse dominates. Not before.
     index = build_index([from_person(p, people, children) for p in people.values()])
 
     refuted = refutations()
