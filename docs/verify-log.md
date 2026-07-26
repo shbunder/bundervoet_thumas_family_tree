@@ -143,3 +143,90 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 35 | 2026-07-26 | cornelius_peremans | LEAD | **ANCHORED → NEW** | Second sibling. Banns at **Zaventem, 21 April 1844** (S30) — anchored by the volume title again. Four months after his mother's death, seven years after his father's. | — |
 | 35 | 2026-07-26 | cornelius_peremans | — | NOT RECORDED | His **bride is left blank on purpose**: the index names three more people in the document and gives none of them a role. Guessing which of three unlabelled people he married is the invention the rules forbid. | — |
 | 35 | 2026-07-26 | Joannes Athanasius Peremans | — | STILL A LEAD | One sibling row remains unopened. | — |
+
+---
+
+## Interim summary — passes 25–35 (2026-07-26)
+
+**The tree went 328 → 386 people.** 39 now sit at `doc`, 321 at `sup`, 26 at `fam`. 17 saved
+artifacts, 122 logged searches. Green at every commit.
+
+### The one thing that changed everything
+
+**Death acts hide in marriage annexes.** When someone married and a parent was dead, the
+commune drew up an extract of that parent's death act and bound it into the **marriage**
+volume. So an archive can be genuinely right that it has no death act for a commune and year,
+and the death act can still be sitting in the marriage register, filmed and reachable.
+
+That is how Georges Thumas's 1864 death act was finally read (§50) after §49 had closed both
+AGATHA routes to him. It is the standing route into every commune whose death series is
+unindexed — which now demonstrably includes **all of Vlaams-Brabant**.
+
+A second, cheaper technique came out of §34: **when an indexed record gives no place, open the
+image and read the volume title.** *"Zaventem. Huwelijksakten 1840"* is what turned a
+name-only Peremans match into an anchored one. It costs one click and it is what separates a
+graft from a guess.
+
+### What was documented
+
+- **Georges Thumas** — death **12 January 1864** at Grez-Doiceau, and his parent link to
+  Georges Lambert Thumas × Marie Catherine Quinart, both of which had rested on Geneanet
+  alone. Those two parent records had **no document of any kind** before this.
+- **Guilielmus Bossin** — dated by two acts seven years apart (21 in Feb 1846, 29 in Dec
+  1853), which overlap only in 1824.
+- **Joanna Catharina Jacoba Peremans** — the forename dispute settled in the tree's favour by
+  the act she married under.
+- **Antonia Bossin** — death was the bare year "1894"; two of her daughters' acts give
+  **7 November 1894** at Kraainem. She was forty-five.
+- **Octavia Schalandrijn** — born **30 April 1886**, not 2 May; the tree had been holding the
+  certificate's date as the birth. *(From the concurrent session's pass, §46.)*
+
+### What was added — 58 people, every one named by a document
+
+Four ancestors from the 1846 Zaventem act. A sister for Guilielmus Bossin and the Pardon
+household. Two siblings for Antonia Bossin. Five siblings for Georges Carolus Josephus Thumas.
+Three of his daughters with their husbands and all six in-law parents. Two siblings for
+Joanna Catharina Jacoba Peremans, with a husband and his parents.
+
+### What was refused
+
+- **Elisabeth Deyn's death.** She is a bare name in the 1853 act where her husband gets
+  residence, trade and consent. Reading that silence as her death is the inference this
+  project keeps having to retract. Her bound stays at 1846.
+- **Théophile Thumas**, d. 1837 — commune, decade and father's forename all agree; the
+  mother's forename does not. Two of three is not a child.
+- **Cornelius Peremans's bride** — the index names three people in the document and gives
+  none of them a role.
+- **A fifth Thumas child.** *Georgius Thumas, 24, of Kraainem* witnesses at two of the
+  family's weddings and is almost certainly a son. A witness entry names no parents.
+- **The Sint-Stevens-Woluwe Bossins.** Three of them marry into a family whose own mother is
+  a Bossin of that village. Very likely kin; the acts do not say how.
+
+### Coverage limits proved, not guessed
+
+- **AGATHA has no Vlaams-Brabant death acts at all.** Asking for Zaventem deaths *with no
+  name* returns 58 acts and not one is a Zaventem act. This retro-explains earlier Brabant
+  death misses and it will not change by re-searching.
+- **Grez-Doiceau births** are indexed for **1813–14 only** (57 acts, no other year).
+- **Grez-Doiceau deaths** are near-complete for 1860, then 2–4 a year to 1874.
+- **Oostende post-1900** remains offline at the Stadsarchief.
+- A standing trap: **Charles Julien Thumas** appears as *Belanghebbende* in dozens of
+  Grez-Doiceau death acts. He is a commune official and nobody's relative here.
+
+### Still open
+
+- **The Thumas age conflict** (1804 vs the *63* of the 1857 act) is **not** resolved. His
+  death act gives no age. What did move: his parents married on 9 February 1801, so a birth in
+  1793–94 would precede their marriage by seven years. And the 1857 act's reliable figure was
+  the *deceased's* age, not the surviving spouse's — those are not the same kind of number.
+- **The 1840 Zaventem marriage annexes**, which should hold Egidius Peremans's 1837 death act.
+- **Joannes Athanasius Peremans** — one sibling row still unopened.
+- **The whole-tree sweep has not run yet.** A straggler harvest has been writing the corpus for
+  ~50 minutes and sweeping during a harvest once produced a false count, so `verify_all.py` is
+  chained to its exit. The corpus has meanwhile grown from ~34,500 acts to **83,000+**, which
+  is the single biggest unlock still pending.
+
+### Needs you, not another search
+
+- FV-Oostende marriage annexes (O-1013MM) — on-site only.
+- Oostende civil registration after 1900 — Stadsarchief, offline.
