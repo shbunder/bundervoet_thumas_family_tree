@@ -13,6 +13,7 @@ window.FamilyTree = (function () {
     branches_: {},
     lineages_: [],
     groups_: [],
+    strings_: null,
   };
 
   // ---- called by the data files ----
@@ -34,6 +35,11 @@ window.FamilyTree = (function () {
   FT.groups = function (g) {
     FT.groups_ = g;
   };
+  // Every word the page shows, in every language it shows them in. Kept out of
+  // `meta` because it is presentation: it comes from site/, not from data/.
+  FT.strings = function (s) {
+    FT.strings_ = s;
+  };
 
   // Where the data lives, worked out from this script's own URL so the pages keep
   // working if they are ever moved into a subfolder.
@@ -47,10 +53,14 @@ window.FamilyTree = (function () {
   var version = (self.match(/[?&]v=([^&]*)/) || [])[1];
   var stamp = version ? '?v=' + version : '';
 
-  // Loads every person named in the roster. Order does not matter — each file just
-  // adds itself to FT.people — so they all go out at once.
+  // Loads any person in the roster who has not registered yet. Normally that is
+  // nobody: the page loads data/bundle.js, which already contains everyone, and
+  // this returns immediately. It still works file-by-file when the bundle is not
+  // there, so the individual data files remain openable on their own.
   FT.loadPeople = function (done) {
-    var ids = FT.roster_;
+    var ids = FT.roster_.filter(function (id) {
+      return !FT.people[id];
+    });
     var pending = ids.length;
     var missing = [];
 

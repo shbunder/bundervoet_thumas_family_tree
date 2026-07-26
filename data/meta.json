@@ -1,0 +1,14 @@
+{
+  "_comment": "Where the tree starts. `roots` is a list for the forest case; the first is where the explorer opens. Confidence codes are data; their human labels are in site/.",
+  "roots": [
+    "renee",
+    "leon"
+  ],
+  "defaultSource": "family",
+  "confidence": [
+    "doc",
+    "sup",
+    "fam",
+    "unk"
+  ]
+}

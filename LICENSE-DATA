@@ -1,0 +1,20 @@
+The contents of data/, docs/ and research/ are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made.
+
+This covers the records, the research narrative and the documentation produced
+by this project. It does NOT cover:
+
+  * Material harvested from Open Archives (openarch.nl) and the archives it
+    aggregates. That material remains under its own terms and is deliberately
+    not redistributed here — research/harvest/ is gitignored, and only the
+    manifest of queries is committed, so the corpus is reproducible without
+    republishing anyone else's data.
+
+  * Images in data/artifacts/ whose rights belong to the holding institution.
+    Each artifact record names its repository; check there before reuse.

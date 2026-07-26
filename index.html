@@ -16,12 +16,16 @@
 
   <p class="intro">
     Bundervoet–De Keyser of Oostende and Thumas–Janssens of Kraainem, meeting in Leuven.
-    128 people; the deepest documented roots reach the early 1600s.
+    <!-- Everything between these markers is written by tools/build.py from the data.
+         This page loads no JavaScript, so the numbers are filled in at build time
+         rather than counted in the browser — but they come from the same census the
+         tree itself reads, so the two pages cannot disagree. Edit data/, not this. -->
+    <!--census-->434 people — 306 direct ancestors, 82 other blood relatives and 46 married in. It reaches back to the 1440s, and to the 1800s on records read in the archive.<!--/census-->
   </p>
 
   <a class="card" href="./Renee-Leon-family-tree.html">
     <h2>The interactive tree →</h2>
-    <p>Climb from Renée &amp; Léon up through every documented ancestor, browse the four
+    <p>Climb from Renée &amp; Léon up through every documented ancestor, browse the
        surname lineages, or read the full index of names.</p>
   </a>
 
@@ -33,8 +37,17 @@
   </a>
 
   <footer>
-    A living draft · updated 21 July 2026.
+    A living draft · updated <!--updated-->26 Jul 2026<!--/updated-->.
     Private living individuals were not researched beyond names given by the family.
+    <!-- The two ways off this page: the method, as its own site (mkdocs → dist/docs),
+         and the repository. Footer links rather than a third card — the cards are the
+         tree, and these are about how it was made. -->
+    <nav class="offsite">
+      <a href="./dist/docs/index.html">How this tree is built</a>
+      <a href="https://github.com/shbunder/bundervoet_thumas_family_tree">
+        <svg class="ghmark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Source &amp; data on GitHub
+      </a>
+    </nav>
   </footer>
 </div>
 </body>

@@ -1,103 +1,395 @@
-// Everything derived from the raw records: how people relate to the root of the
-// tree, who their children are, and which source backs each person.
+// Everything derived from the raw records: how any two people are related, who
+// their children are, and which source backs each person.
+//
+// The engine underneath is root-free — it works from the lowest common ancestor
+// of a pair, so it can relate anyone to anyone. The tree's familiar labels
+// ("Great-grandmother") are just that engine pointed at the root.
 
-FamilyTree.createKinship = function ({ meta, people, branches }) {
+FamilyTree.createKinship = function ({ meta, people, branches }, i18n) {
   const ROOT = meta.root;
+  // A forest has more than one starting family. `roots` is what the index and the
+  // validator measure from; a tree with a single root is the one-element case.
+  const ROOTS = (meta.roots && meta.roots.length ? meta.roots : [ROOT]).filter(id => people[id]);
 
-  // Walk up from the root through father/mother, recording both how many
-  // generations away each ancestor is and which child they were reached through.
-  // That second map is what lets us replay a single line back down again.
-  const distance = { [ROOT]: 0 };
-  const descendant = {};
+  const ids = Object.keys(people);
+
+  // ---------- indexes built once ----------
+  // These were previously scans over every person, run per lookup. That is O(n²)
+  // across a full render, which is invisible at 300 people and fatal at 10,000.
+
+  // Sex comes from the record if it states one, and is otherwise inferred from the
+  // role someone plays for their children — being recorded as a `father` is
+  // evidence, not a guess. For anyone who is nobody's parent and says nothing, it
+  // stays unknown, and the relation names below fall back to neutral wording
+  // rather than picking one. Guessing from a forename would be inventing a fact.
+  const gender = {};
+  const children = {};
+  for (const id of ids) {
+    const p = people[id];
+    if (p.sex === 'f' || p.sex === 'm') gender[id] = p.sex;
+    if (p.father) {
+      if (!people[p.father]?.sex) gender[p.father] = 'm';
+      (children[p.father] = children[p.father] || []).push(id);
+    }
+    if (p.mother) {
+      if (!people[p.mother]?.sex) gender[p.mother] = 'f';
+      (children[p.mother] = children[p.mother] || []).push(id);
+    }
+  }
+  const genderOf = id => gender[id] || null;
+  const childrenOf = id => children[id] || [];
+
+  // Everyone born of either of the same parents. Half-siblings are in, because they
+  // are siblings; which kind they are is what `bloodRelation` is for, and the row
+  // that shows them says so on each card.
+  function siblingsOf(id) {
+    const p = people[id];
+    if (!p) return [];
+    const seen = new Set([id]);
+    const out = [];
+    for (const parent of [p.father, p.mother]) {
+      for (const kid of childrenOf(parent)) {
+        if (!seen.has(kid)) {
+          seen.add(kid);
+          out.push(kid);
+        }
+      }
+    }
+    return out;
+  }
+
+  // ---------- ancestry ----------
+
+  // Every ancestor of someone, mapped to how many generations up they sit. The
+  // person themselves is in it at 0, which is what makes the relation cases below
+  // fall out uniformly. Breadth-first, so the first time a person is reached is
+  // by their shortest line — cousin marriages put the same ancestor on two paths.
+  const ancestorCache = {};
+  function ancestorsOf(id) {
+    if (ancestorCache[id]) return ancestorCache[id];
+    const out = new Map([[id, 0]]);
+    const queue = [id];
+    for (let i = 0; i < queue.length; i++) {
+      const at = queue[i];
+      const p = people[at];
+      if (!p) continue;
+      const d = out.get(at);
+      for (const parent of [p.father, p.mother]) {
+        if (parent && people[parent] && !out.has(parent)) {
+          out.set(parent, d + 1);
+          queue.push(parent);
+        }
+      }
+    }
+    return (ancestorCache[id] = out);
+  }
+
+  // The actual steps from someone up to one of their ancestors — [from, …, anc] —
+  // by the same shortest route `ancestorsOf` counted, so the distance the relation
+  // is named from and the chain the page draws can never disagree. Null if `anc` is
+  // not above `from` at all.
+  function ancestorLine(from, anc) {
+    if (!people[from] || !people[anc]) return null;
+    if (from === anc) return [from];
+    const cameFrom = new Map([[from, null]]);
+    const queue = [from];
+    for (let i = 0; i < queue.length; i++) {
+      const at = queue[i];
+      const p = people[at];
+      if (!p) continue;
+      for (const parent of [p.father, p.mother]) {
+        if (!parent || !people[parent] || cameFrom.has(parent)) continue;
+        cameFrom.set(parent, at);
+        if (parent === anc) {
+          const path = [];
+          for (let step = parent; step !== null; step = cameFrom.get(step)) path.push(step);
+          return path.reverse();
+        }
+        queue.push(parent);
+      }
+    }
+    return null;
+  }
+
+  // How many generations up from the root each ancestor sits. The index reads it to
+  // order a heading's people by generation instead of alphabetically.
+  const distance = {};
   (() => {
     const queue = [ROOT];
+    distance[ROOT] = 0;
     for (let i = 0; i < queue.length; i++) {
       const p = people[queue[i]];
       if (!p) continue;
       for (const parent of [p.father, p.mother]) {
         if (parent && people[parent] && !(parent in distance)) {
           distance[parent] = distance[queue[i]] + 1;
-          descendant[parent] = queue[i];
           queue.push(parent);
         }
       }
     }
   })();
 
-  // Everyone the walk above reached is, by construction, a direct ancestor:
-  // it only ever steps through father/mother, so siblings, aunts, uncles and
-  // spouses who are nobody's parent are not in it. Distance 0 is the root pair
-  // themselves, who are not their own ancestors. Someone appearing in two lines
-  // is counted once.
-  const directAncestorCount = () => Object.keys(distance).filter(id => distance[id] > 0).length;
 
-  // The single thread from an ancestor down to the root, oldest first.
-  const descentFrom = id => {
-    if (!(id in distance)) return null;
-    const path = [id];
-    let at = id;
-    while (at !== ROOT) {
-      at = descendant[at];
-      path.push(at);
-    }
-    return path;
-  };
+  // ---------- naming a relationship ----------
 
-  // How anyone connects to the root — directly, or as the child of someone who does.
-  // Aunts, uncles and siblings have no descent of their own, but the line they
-  // branch off is still the interesting thing to show.
-  function lineOfDescent(id) {
-    const direct = descentFrom(id);
-    if (direct) return { kind: 'direct', path: direct };
-
-    const p = people[id];
-    if (p) {
-      const parents = [p.father, p.mother].filter(x => x && x in distance);
-      if (parents.length) {
-        // Prefer whichever parent sits closest to the root.
-        const via = parents.sort((a, b) => distance[a] - distance[b])[0];
-        return { kind: 'collateral', path: descentFrom(via), branchesFrom: via, person: id };
-      }
-    }
-    return { kind: 'none', path: null };
-  }
-
-  // Inferred from the role a person plays for their children, since the records
-  // carry no gender field of their own.
-  const genderOf = id => {
-    for (const p of Object.values(people)) {
-      if (p.father === id) return 'm';
-      if (p.mother === id) return 'f';
-    }
-    return null;
-  };
+  // Not a constant, because the language can change without the tree being rebuilt.
+  // Read at the moment a relation is named, so every label on the page is in the
+  // language the page is currently in.
+  const V = () => i18n.kin();
 
   const cap = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
-  const greatPrefix = n => (n <= 0 ? '' : n === 1 ? 'Great-' : `${n}×-great-`);
 
-  function relationship(id) {
-    if (id === ROOT) return 'The children';
-    const g = genderOf(id);
-    const d = distance[id];
-    if (d !== undefined) {
-      if (d === 1) return g === 'f' ? 'Mother' : 'Father';
-      return cap(greatPrefix(d - 2) + 'grand' + (g === 'f' ? 'mother' : 'father'));
-    }
-    // Not a direct ancestor: describe them by their parents' distance instead.
-    const p = people[id];
-    if (!p) return '';
-    const parentDepths = [p.father, p.mother]
-      .filter(x => x && x in distance)
-      .map(x => distance[x]);
-    if (parentDepths.length && g) {
-      const step = Math.min(...parentDepths) - 1;
-      if (step >= 1) return cap(greatPrefix(step - 1) + (g === 'f' ? 'aunt' : 'uncle'));
-    }
-    return p.role || '';
+  // "great-grandmother", "3×-great-grandmother", "betovergrootmoeder". The prefix
+  // list is the language's own: one entry per step it has a word for, and the last
+  // entry is the template for everything past them. English stacks `great-` for
+  // ever; Dutch has `over-` and `betover-` and then needs a count as well.
+  function prefix(list, n) {
+    if (n <= 0) return list[0] || '';
+    const last = list.length - 1;
+    return n < last ? list[n] : String(list[last] || '').replace('{n}', n);
   }
 
-  const childrenOf = id =>
-    Object.keys(people).filter(k => people[k].father === id || people[k].mother === id);
+  // Falls back to the neutral word when the record does not say, so an unknown
+  // never silently reads as a man.
+  function word(id, key) {
+    const set = V()[key];
+    const g = genderOf(id);
+    const chosen = g === 'f' ? set.f : g === 'm' ? set.m : set.n;
+    return chosen != null ? chosen : set.m;
+  }
+
+  const ordinal = n => V().ordinals[n] || V().ordinalN.replace('{n}', n);
+  const removedWord = n => V().times[n] || V().timesN.replace('{n}', n);
+
+  // The closest ancestor the two share. Ties are broken toward the most balanced
+  // pair of distances, so a couple's shared child reads as "sibling" rather than
+  // picking whichever grandparent happened to be visited first.
+  function commonAncestor(a, b) {
+    const A = ancestorsOf(a);
+    const B = ancestorsOf(b);
+    // Iterate the smaller set.
+    const [small, large, flip] = A.size <= B.size ? [A, B, false] : [B, A, true];
+    let best = null;
+    for (const [anc, d1] of small) {
+      const d2 = large.get(anc);
+      if (d2 === undefined) continue;
+      const da = flip ? d2 : d1;
+      const db = flip ? d1 : d2;
+      const total = da + db;
+      const skew = Math.abs(da - db);
+      if (!best || total < best.total || (total === best.total && skew < best.skew)) {
+        best = { id: anc, da, db, total, skew };
+      }
+    }
+    return best;
+  }
+
+  // Names the blood relation of a to b — "a is b's ___" — or null if they share
+  // no ancestor. `via` is the common ancestor, so callers can show the join.
+  function bloodRelation(a, b) {
+    if (a === b) return { label: V().samePerson, via: a, kind: 'self' };
+    if (!people[a] || !people[b]) return null;
+    const lca = commonAncestor(a, b);
+    if (!lca) return null;
+    const { da, db } = lca;
+    const out = label => ({ label, via: lca.id, da, db, kind: 'blood' });
+
+    // One is an ancestor of the other: the common ancestor IS one of them.
+    if (da === 0) {
+      return out(db === 1
+        ? word(a, 'parent')
+        : prefix(V().greatUp, db - 2) + word(a, 'grandparent'));
+    }
+    if (db === 0) {
+      return out(da === 1
+        ? word(a, 'child')
+        : prefix(V().greatDown, da - 2) + word(a, 'grandchild'));
+    }
+
+    // Siblings. Sharing both parents is a full sibling; sharing one is a half.
+    if (da === 1 && db === 1) {
+      const pa = people[a];
+      const pb = people[b];
+      const shared = [pa.father, pa.mother].filter(x => x && (x === pb.father || x === pb.mother)).length;
+      const w = word(a, 'sibling');
+      return out(shared >= 2 ? w : V().half.replace('{rel}', w));
+    }
+
+    // One sits a generation or more above the other's line: aunt/uncle downward,
+    // niece/nephew upward.
+    if (da === 1) return out(prefix(V().greatAunt, db - 2) + word(a, 'auntUncle'));
+    if (db === 1) return out(prefix(V().greatNiece, da - 2) + word(a, 'nieceNephew'));
+
+    // Otherwise cousins: the degree is the shorter leg, the removal is the gap.
+    const degree = Math.min(da, db) - 1;
+    const removed = Math.abs(da - db);
+    const label = word(a, 'cousin').replace('{ordinal}', ordinal(degree));
+    return out(removed ? label + V().removed.replace('{times}', removedWord(removed)) : label);
+  }
+
+  const spouseIdsOf = id => (people[id]?.spouses || []).map(s => s.id).filter(id2 => id2 && people[id2]);
+
+  // Someone's children, split by who the other parent was.
+  //
+  // The links already say this — every child names its own father and mother — but
+  // read as one flat row, two marriages become one sibship, and the reader loses the
+  // one fact they came to a remarriage for. Livinus Bundervoet's four children are
+  // three by Elisabeth and one by Catharina; undivided, they look like four full
+  // siblings. Derived here rather than written into the marriage, because a note
+  // saying "mother of Segerius" is a second copy of a link nothing checks.
+  //
+  // Groups come out in spouse-list order, which is marriage order, so the groups read
+  // down the person's life. A co-parent who is nobody's spouse follows, and children
+  // whose other parent has no record at all come last — they are the least said, not
+  // the earliest.
+  function childGroupsOf(id) {
+    if (!people[id]) return [];
+    const groups = new Map();
+    for (const kid of childrenOf(id)) {
+      const k = people[kid];
+      const other = k.father === id ? k.mother : k.father;
+      const key = other && people[other] ? other : '';
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(kid);
+    }
+    const order = spouseIdsOf(id);
+    const rank = key => {
+      const at = order.indexOf(key);
+      return at >= 0 ? at : key ? order.length : order.length + 1;
+    };
+    return [...groups.keys()]
+      .sort((a, b) => rank(a) - rank(b))
+      .map(other => ({ other: other || null, children: groups.get(other) }));
+  }
+
+  // What to call the person someone is married to. A partnership that produced
+  // children without a marriage is a different fact, and printing "wife" over it
+  // would be the record asserting something no source said.
+  function spouseKind(a, b) {
+    const entry = (people[a]?.spouses || []).find(s => s.id === b);
+    return entry?.kind === 'partnership' ? V().partner : null;
+  }
+
+  // What to print over the card of the person someone married. A spouse who is only
+  // a name in someone else's record has no id and therefore no recorded sex, which
+  // is exactly the case the neutral word exists for.
+  function spouseLabel(sp, of) {
+    if (of && sp.id && spouseKind(of, sp.id)) return V().partner;
+    if (sp.kind === 'partnership') return V().partner;
+    const set = V().spouse;
+    const g = sp.id ? genderOf(sp.id) : null;
+    return g === 'f' ? set.f : g === 'm' ? set.m : set.n;
+  }
+
+  // Blood first; failing that, look one marriage step away. Beyond one step the
+  // phrasing stops meaning anything useful, so it stops there rather than
+  // inventing chains of in-laws.
+  function relationBetween(a, b) {
+    if (!people[a] || !people[b]) return null;
+    const blood = bloodRelation(a, b);
+    if (blood) return blood;
+
+    if (spouseIdsOf(a).includes(b)) {
+      return { label: spouseKind(a, b) || word(a, 'spouse'), kind: 'marriage' };
+    }
+    // Related through exactly one marriage, from one end or the other. The blood
+    // relation is returned as itself and the marriage step as `through`, rather than
+    // folded into one string: only the caller knows whether it is writing a sentence
+    // or drawing the join, and a label that has already committed to a sentence
+    // cannot be drawn.
+    for (const sp of spouseIdsOf(b)) {
+      const r = bloodRelation(a, sp);
+      if (r) return { label: r.label, kind: 'marriage', through: sp, married: 'b' };
+    }
+    for (const sp of spouseIdsOf(a)) {
+      const r = bloodRelation(sp, b);
+      if (r) return { label: r.label, kind: 'marriage', through: sp, married: 'a' };
+    }
+    return null;
+  }
+
+  // The same connection `relationBetween` names, but as the route rather than the
+  // word for it: two arms that climb from each person to the ancestor they share.
+  // Drawn, that is an arch — up one side, across, down the other — and it is the
+  // only form that shows *where* two people meet rather than asserting that they do.
+  //
+  // `left` and `right` both run person-first, ancestor-last, so they are the two
+  // sides of the arch read outwards-in. A marriage step, when one is needed, hangs
+  // off the foot of its arm: the blood link is between `married.to` and the other
+  // person, and `married.id` is attached to it by marriage, never inside it.
+  function linkDiagram(a, b) {
+    if (!people[a] || !people[b]) return null;
+    if (a === b) return { kind: 'self' };
+
+    const blood = commonAncestor(a, b);
+    if (blood) {
+      return { kind: 'blood', via: blood.id, left: ancestorLine(a, blood.id), right: ancestorLine(b, blood.id) };
+    }
+    // Checked before the loops below, which would otherwise pair someone with
+    // themselves through their own spouse.
+    if (spouseIdsOf(a).includes(b)) return { kind: 'spouse', left: [a], right: [b] };
+
+    const step = (x, y, side) => {
+      for (const sp of spouseIdsOf(y)) {
+        const lca = commonAncestor(x, sp);
+        if (!lca) continue;
+        const arms = { left: ancestorLine(x, lca.id), right: ancestorLine(sp, lca.id) };
+        return {
+          kind: 'marriage',
+          via: lca.id,
+          left: side === 'right' ? arms.left : arms.right,
+          right: side === 'right' ? arms.right : arms.left,
+          married: { id: y, to: sp, side },
+        };
+      }
+      return null;
+    };
+    // One marriage step, from either end. Beyond one the drawing would claim a
+    // relationship that the wording already refuses to name.
+    return step(a, b, 'right') || step(b, a, 'left');
+  }
+
+  // The label the tree shows on a node: their relation to the root. The roots are
+  // the reference point, so they get no label of their own — saying a child is
+  // their own sibling's sibling explains nothing.
+  const rootSet = new Set(ROOTS);
+  function relationship(id) {
+    if (rootSet.has(id)) return '';
+    const r = bloodRelation(id, ROOT);
+    return r && r.kind === 'blood' ? cap(r.label) : '';
+  }
+
+  // ---------- who belongs where ----------
+
+  // Three groups, all derived, so nobody can be added to the data and then be
+  // missing from the index because a hand-kept list was not updated.
+  //   ancestor — a direct ancestor of a root
+  //   relative — blood, but not a direct ancestor: siblings, cousins, descendants
+  //   other    — connected by marriage only, or not connected at all
+  const category = (() => {
+    const ancestors = new Set();
+    for (const r of ROOTS) for (const [anc, d] of ancestorsOf(r)) if (d > 0) ancestors.add(anc);
+
+    // Everyone descended from a root or from any of its ancestors is blood.
+    const blood = new Set([...ROOTS, ...ancestors]);
+    const queue = [...blood];
+    for (let i = 0; i < queue.length; i++) {
+      for (const kid of childrenOf(queue[i])) {
+        if (!blood.has(kid)) {
+          blood.add(kid);
+          queue.push(kid);
+        }
+      }
+    }
+
+    const out = {};
+    for (const id of ids) out[id] = ancestors.has(id) ? 'ancestor' : blood.has(id) ? 'relative' : 'other';
+    return out;
+  })();
+
+  const categoryOf = id => category[id] || 'other';
+
+  // ---------- sources ----------
 
   // Per-person source wins, then the branch default, then the catch-all.
   const sourceFor = id => {
@@ -109,7 +401,8 @@ FamilyTree.createKinship = function ({ meta, people, branches }) {
   const isResearchable = id => Boolean(people[id]) && confidenceOf(id) !== 'unk';
 
   return {
-    ROOT, relationship, childrenOf, sourceFor, confidenceOf, isResearchable,
-    distance, descentFrom, lineOfDescent, directAncestorCount,
+    ROOT, ROOTS, relationship, relationBetween, bloodRelation, ancestorsOf, commonAncestor,
+    childrenOf, childGroupsOf, siblingsOf, genderOf, spouseKind, spouseLabel, categoryOf,
+    sourceFor, confidenceOf, isResearchable, distance, ancestorLine, linkDiagram,
   };
 };

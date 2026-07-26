@@ -1,0 +1,233 @@
+/* The documentation, in the tree's own colours.
+ *
+ * These values are the palette of assets/css/site.css and assets/css/tree.css — sage
+ * paper, ink, a green accent — written out a third time because this is a second,
+ * separate build: MkDocs copies docs_dir and cannot reach ../assets, and the docs must
+ * still render from a clone with only the `docs` group fetched. The tokens below are
+ * the only place the values appear in this file; everything under them maps a token
+ * onto a Material variable, so a change to the palette is a change to eight lines.
+ *
+ * Material's own scheme names (default/slate) stay in charge of light and dark — the
+ * page follows the reader's system setting, the same way index.html does.
+ */
+
+/* ---- the palette ---- */
+
+[data-md-color-scheme="default"] {
+  --ft-bg:     #e9f0e1;
+  --ft-panel:  #fbfdf6;
+  --ft-ink:    #243026;
+  --ft-muted:  #5c6b56;
+  --ft-line:   #c1d0b5;
+  --ft-accent: #356b34;
+  --ft-accent-bright: #2f7d54;
+  --ft-deep:   #2c5729;   /* footer: the header colour, a shade further down */
+  --ft-deeper: #24471f;
+}
+
+[data-md-color-scheme="slate"] {
+  --ft-bg:     #151b13;
+  --ft-panel:  #1e261c;
+  --ft-ink:    #e6efdc;
+  --ft-muted:  #9aa892;
+  --ft-line:   #374332;
+  --ft-accent: #86c17c;
+  --ft-accent-bright: #a8d79e;
+  --ft-deep:   #1a2118;
+  --ft-deeper: #141a12;
+}
+
+/* ---- typography ----
+ * The same serif stack the tree uses. `font: false` in mkdocs.yml stops Material
+ * fetching Roboto from Google, which also keeps the docs building and rendering with
+ * no third-party request — the rule the rest of the project runs on.
+ *
+ * These are the inner variables, not --md-text-font-family: the theme declares the
+ * -family pair on `body` itself, and a declaration on the element beats an inherited
+ * one whatever the specificity, so a :root override of those two silently does
+ * nothing. --md-text-font is the hole the theme leaves for exactly this. */
+
+:root {
+  --md-text-font: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia;
+  --md-code-font: ui-monospace, SFMono-Regular, "SF Mono", Menlo;
+}
+
+/* ---- the mapping ---- */
+
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        var(--ft-accent);
+  --md-primary-fg-color--light: var(--ft-accent-bright);
+  --md-primary-fg-color--dark:  var(--ft-deep);
+  --md-primary-bg-color:        var(--ft-panel);
+  --md-primary-bg-color--light: var(--ft-panel);
+
+  --md-accent-fg-color:             var(--ft-accent-bright);
+  --md-accent-fg-color--transparent: rgba(53, 107, 52, .1);
+  --md-accent-bg-color:             var(--ft-panel);
+  --md-accent-bg-color--light:      var(--ft-panel);
+
+  --md-default-bg-color: var(--ft-bg);
+  --md-default-fg-color: var(--ft-ink);
+
+  --md-typeset-color:   var(--ft-ink);
+  --md-typeset-a-color: var(--ft-accent);
+
+  --md-code-bg-color: var(--ft-panel);
+  --md-code-fg-color: var(--ft-ink);
+
+  --md-footer-bg-color:       var(--ft-deep);
+  --md-footer-bg-color--dark: var(--ft-deeper);
+  --md-footer-fg-color:       var(--ft-panel);
+}
+
+/* In dark mode the header is the panel colour rather than the accent: a bright green
+ * bar across a dark page reads as a warning, not as a heading. */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--ft-panel);
+  --md-primary-bg-color: var(--ft-ink);
+  /* The search placeholder and the header's dimmed icons read this one. Left as the
+     panel colour it is the header's own background, i.e. invisible. */
+  --md-primary-bg-color--light: rgba(230, 239, 220, .62);
+  --md-primary-fg-color--dark: var(--ft-deeper);
+  --md-accent-fg-color--transparent: rgba(134, 193, 124, .12);
+}
+
+/* Material derives its greys from --md-default-fg-color; these are stated so muted
+ * text is the tree's muted green rather than a neutral grey over sage paper. */
+[data-md-color-scheme="default"] {
+  --md-default-fg-color--light:   #5c6b56;
+  --md-default-fg-color--lighter: rgba(36, 48, 38, .32);
+  --md-default-fg-color--lightest: rgba(36, 48, 38, .07);
+  --md-default-bg-color--light:   rgba(233, 240, 225, .7);
+  --md-default-bg-color--lighter: rgba(233, 240, 225, .45);
+  --md-default-bg-color--lightest: rgba(233, 240, 225, .12);
+  --md-shadow-z1: 0 2px 10px rgba(40, 60, 40, .13);
+  --md-shadow-z2: 0 5px 16px rgba(60, 50, 30, .18);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-fg-color--light:   #9aa892;
+  --md-default-fg-color--lighter: rgba(230, 239, 220, .32);
+  --md-default-fg-color--lightest: rgba(230, 239, 220, .08);
+  --md-shadow-z1: 0 2px 12px rgba(0, 0, 0, .55);
+  --md-shadow-z2: 0 5px 18px rgba(0, 0, 0, .6);
+}
+
+/* ---- the few places a variable is not enough ---- */
+
+/* The tree's pages rule off the title with a hairline; the same rule here separates
+ * the sections of a long method page without shouting. */
+.md-typeset h1 {
+  color: var(--ft-ink);
+  font-weight: 600;
+}
+
+.md-typeset h2 {
+  color: var(--ft-ink);
+  font-weight: 600;
+  border-bottom: 1px solid var(--ft-line);
+  padding-bottom: .2em;
+}
+
+.md-typeset h3,
+.md-typeset h4 {
+  color: var(--ft-accent);
+  font-weight: 600;
+}
+
+/* Panels — the raised cream surfaces of the tree's cards. */
+.md-typeset pre > code,
+.md-typeset table:not([class]) th {
+  background: var(--ft-panel);
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--ft-line);
+  border-radius: 10px;
+  box-shadow: var(--md-shadow-z1);
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  color: var(--ft-ink);
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) td {
+  border-top-color: var(--ft-line);
+}
+
+.md-typeset code {
+  border: 1px solid var(--ft-line);
+  border-radius: 4px;
+  padding: 0 .25em;
+}
+
+.md-typeset pre > code {
+  border-radius: 10px;
+}
+
+/* A quotation is where this project's prior work is cited, so it gets the accent
+ * edge the tree gives a sourced card. */
+.md-typeset blockquote {
+  border-left: 4px solid var(--ft-accent);
+  color: var(--ft-muted);
+}
+
+.md-typeset hr {
+  border-bottom-color: var(--ft-line);
+}
+
+.md-typeset .md-button {
+  border-color: var(--ft-accent);
+  color: var(--ft-accent);
+}
+
+/* The sidebar's active entry, and the line under the search box. */
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--ft-accent);
+}
+
+.md-nav__title {
+  color: var(--ft-muted);
+}
+
+.md-search__form {
+  background: rgba(255, 255, 255, .16);
+}
+
+.md-search__form:hover {
+  background: rgba(255, 255, 255, .28);
+}
+
+[data-md-color-scheme="slate"] .md-search__form {
+  background: rgba(255, 255, 255, .08);
+}
+
+/* The search result sheet is a panel like any other. */
+.md-search__output,
+.md-search-result__meta {
+  background: var(--ft-panel);
+}
+
+.md-header {
+  box-shadow: var(--md-shadow-z1);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  border-bottom: 1px solid var(--ft-line);
+}
+
+/* The footer's prev/next pair sits on the deep green; keep its text legible there
+ * rather than inheriting the body ink. */
+.md-footer__link {
+  color: var(--ft-panel);
+}
+
+.md-footer-meta__inner,
+.md-footer__direction {
+  color: rgba(251, 253, 246, .7);
+}

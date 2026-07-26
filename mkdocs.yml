@@ -1,0 +1,82 @@
+site_name: Reconstructing Flanders
+site_description: >-
+  An evidence-first, machine-assisted reconstruction of Flemish families from parish and
+  civil registers — the method, the rules, and the prior work it builds on.
+# Where the rendered docs sit once Pages serves this repository as it stands. It is not
+# decoration: Material writes a <link rel="canonical"> and the sitemap from it, so the
+# old example.invalid placeholder would have told crawlers the real page lives somewhere
+# that does not exist. Correct this if Pages ever moves or a custom domain appears.
+site_url: https://shbunder.github.io/bundervoet_thumas_family_tree/dist/docs/
+repo_url: https://github.com/shbunder/bundervoet_thumas_family_tree
+edit_uri: ""
+
+# NOT the default "site/". That directory is source — it holds site/labels.json, the
+# wording the tree's own page shows — and MkDocs deletes its output directory before
+# every build. Pointing this at the default would silently destroy a data file.
+site_dir: dist/docs
+docs_dir: docs
+
+# One file per page, not one directory per page. The default writes method/linkage/ and
+# links to it as a directory, which a web server resolves to its index.html and a
+# browser reading file:// does not — it offers the folder instead of the page. This site
+# has to work opened straight off disk, the same rule that keeps the tree's own scripts
+# plain and non-modular, so pages are addressed as method/linkage.html and both routes
+# behave the same.
+use_directory_urls: false
+
+theme:
+  name: material
+  # `custom` means Material defines no colours of its own and reads them from
+  # docs/stylesheets/extra.css, which holds the tree's palette — the same sage paper,
+  # ink and green the site itself uses. Light and dark follow the reader's system
+  # setting, as index.html does.
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle: {icon: material/weather-sunny, name: Light mode}
+  # No Roboto from Google. The serif stack is set in extra.css, and the docs then build
+  # and render without a third-party request — the same rule as the rest of the project.
+  font: false
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Overview: index.md
+  - Prior work: prior-work.md
+  - Method:
+      - The research loop: method/overview.md
+      - Rules of evidence: method/evidence.md
+      - The corpus: method/corpus.md
+      - Record linkage: method/linkage.md
+      - Verification and measurement: method/verification.md
+      - Scaling to Flanders: method/scaling.md
+  - Reference:
+      - Data model: data-model.md
+      - Reproducing this: reproducing.md
+      - Sources: sources.md
+      - Searching: searching.md
+  - Research log: research-log.md
+  - Autopilot log: autopilot-log.md

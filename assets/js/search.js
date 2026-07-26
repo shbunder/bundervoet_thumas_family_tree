@@ -49,22 +49,25 @@ function locate(folded, term) {
 }
 
 FamilyTree.createSearch = function ({ people }) {
-  // Ordered by how much a match in each field says about relevance.
+  // Ordered by how much a match in each field says about relevance. The key travels
+  // to the renderer, never a word for it: what the field is *called* is wording, and
+  // it lives with the rest of the wording so it can be shown in either language.
   const FIELDS = [
-    { key: 'name', label: 'Name', weight: 100 },
-    { key: 'born', label: 'Born', weight: 60 },
-    { key: 'died', label: 'Died', weight: 60 },
-    { key: 'dates', label: 'Dates', weight: 55 },
-    { key: 'spouse', label: 'Spouse', weight: 35 },
-    { key: 'role', label: 'Role', weight: 30 },
-    { key: 'branch', label: 'Branch', weight: 20 },
-    { key: 'note', label: 'Note', weight: 10 },
-    { key: 'source', label: 'Source', weight: 5 },
+    { key: 'name', weight: 100 },
+    { key: 'born', weight: 60 },
+    { key: 'died', weight: 60 },
+    { key: 'dates', weight: 55 },
+    { key: 'spouse', weight: 35 },
+    { key: 'occupation', weight: 30 },
+    { key: 'nickname', weight: 30 },
+    { key: 'branch', weight: 20 },
+    { key: 'note', weight: 10 },
+    { key: 'source', weight: 5 },
   ];
 
   const textOf = (p, key) => {
     if (key === 'spouse') {
-      return p.spouse ? [p.spouse.name, p.spouse.detail].filter(Boolean).join(' — ') : '';
+      return (p.spouses || []).map(s => [s.name, s.detail].filter(Boolean).join(' — ')).join('   ');
     }
     return p[key] || '';
   };
@@ -73,7 +76,7 @@ FamilyTree.createSearch = function ({ people }) {
     id,
     fields: FIELDS.map(f => {
       const raw = textOf(people[id], f.key);
-      return raw ? { key: f.key, label: f.label, weight: f.weight, raw, folded: fold(raw) } : null;
+      return raw ? { key: f.key, weight: f.weight, raw, folded: fold(raw) } : null;
     }).filter(Boolean),
   }));
 
@@ -118,7 +121,7 @@ FamilyTree.createSearch = function ({ people }) {
         id: entry.id,
         score,
         ranges,
-        context: context ? { label: context.label, key: context.key, raw: context.raw } : null,
+        context: context ? { key: context.key, raw: context.raw } : null,
       });
     }
 

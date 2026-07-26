@@ -1,0 +1,1315 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An evidence-first, machine-assisted reconstruction of Flemish families from parish and civil registers — the method, the rules, and the prior work it builds on.">
+      
+      
+      
+        <link rel="canonical" href="https://shbunder.github.io/bundervoet_thumas_family_tree/dist/docs/autopilot-log.html">
+      
+      
+        <link rel="prev" href="research-log.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Autopilot log - Reconstructing Flanders</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autopilot-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Reconstructing Flanders" class="md-header__button md-logo" aria-label="Reconstructing Flanders" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Reconstructing Flanders
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Autopilot log
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shbunder/bundervoet_thumas_family_tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Reconstructing Flanders" class="md-nav__button md-logo" aria-label="Reconstructing Flanders" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Reconstructing Flanders
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shbunder/bundervoet_thumas_family_tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="prior-work.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prior work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Method
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Method
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="method/overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The research loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="method/evidence.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules of evidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="method/corpus.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The corpus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="method/linkage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Record linkage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="method/verification.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verification and measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="method/scaling.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scaling to Flanders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data-model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reproducing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproducing this
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="searching.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Searching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="research-log.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autopilot log
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="autopilot-log.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autopilot log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#run-summary-2026-07-26-ten-passes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run summary — 2026-07-26, ten passes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run summary — 2026-07-26, ten passes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grafted-and-the-two-independent-identifiers-that-carried-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafted, and the two independent identifiers that carried each
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refuted-and-by-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refuted, and by what
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corrected
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocked-needs-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocked — needs you
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-labels-say-about-the-scorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the labels say about the scorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-single-most-valuable-thing-to-do-next-and-it-needs-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The single most valuable thing to do next — and it needs you
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#run-summary-2026-07-26-ten-passes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run summary — 2026-07-26, ten passes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run summary — 2026-07-26, ten passes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grafted-and-the-two-independent-identifiers-that-carried-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grafted, and the two independent identifiers that carried each
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refuted-and-by-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refuted, and by what
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corrected
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocked-needs-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocked — needs you
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-labels-say-about-the-scorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the labels say about the scorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-single-most-valuable-thing-to-do-next-and-it-needs-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The single most valuable thing to do next — and it needs you
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="autopilot-log">Autopilot log<a class="headerlink" href="#autopilot-log" title="Permanent link">&para;</a></h1>
+<p><strong>This is the file to read after an unattended run.</strong> One row per research pass, appended
+by <code>/autopilot</code>. It is an index into <a href="research-log.html">the research log</a> and the git
+history — not a second copy of either — so every row stays on one line and the reasoning
+stays where reasoning belongs.</p>
+<ul>
+<li><code>dir</code> — <strong>up</strong> = whose parents are unknown (<code>research.py frontiers</code>),
+  <strong>down</strong> = children of couples already held (<code>research.py children</code>).</li>
+<li><code>verdict</code> — <strong>GRAFTED</strong> a link was made · <strong>NOT PROVEN</strong> plausible, insufficient, now a
+  named frontier · <strong>REJECTED</strong> refuted · <strong>BLOCKED</strong> the material was never reached.</li>
+<li><code>added</code> — the person ids created, or <code>—</code>.</li>
+</ul>
+<p>Most passes end NOT PROVEN. That is the system working: the verifier defaults to rejecting
+when unsure, because a missed link is found again next pass and a false link is invisible
+forever. A run of ten passes producing two grafts and thirty logged misses is a good run —
+the misses and the labels are the accumulating asset.</p>
+<table>
+<thead>
+<tr>
+<th>pass</th>
+<th>date</th>
+<th>dir</th>
+<th>frontier</th>
+<th>verdict</th>
+<th>added</th>
+<th>commit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2026-07-26</td>
+<td>up</td>
+<td>octavia_schal</td>
+<td>GRAFTED</td>
+<td>ludovicus_schal, mathilde_standaert, ludovicus_dv, silvia_brissinck</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2026-07-26</td>
+<td>down</td>
+<td>anna_maria_bossin</td>
+<td>GRAFTED</td>
+<td>anna_maria_bossin, franciscus_pardon, guilielmus_pardon, maria_anna_pergijsels</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2026-07-26</td>
+<td>up</td>
+<td>coekelberghs</td>
+<td>GRAFTED</td>
+<td>jb_coekelberghs, anna_haesaerts, jb_vandenbemden, elisabeth_langes, henricus_vanesch</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2026-07-26</td>
+<td>—</td>
+<td>confidence sweep (all AGATHA sources)</td>
+<td>CORRECTED</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2026-07-26</td>
+<td>up</td>
+<td>jb_coekelberghs</td>
+<td>GRAFTED</td>
+<td>henricus_coekelberghs, petronella_elseviers, jb_haesaerts, elisabeth_vdbroeck</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2026-07-26</td>
+<td>down</td>
+<td>hendrik_vdb + coekelberghs</td>
+<td>GRAFTED</td>
+<td>lodewijk_bemden73, victor_bemden74, adela_bemden84, amelia_coenraets76, elisabeth_feyaerts78</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2026-07-26</td>
+<td>up</td>
+<td>six bare-agatha citations</td>
+<td>GRAFTED</td>
+<td>angela_dk, josephus_blomme, mathilde_meseure, paulina_bocklandt, elodia_bocklandt, mathildis_bocklandt, caesar_bocklandt, philemondus_bocklandt, alphonsus_bocklandt, ludovicus_bocklandt</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2026-07-26</td>
+<td>down</td>
+<td>commune harvest (5 communes)</td>
+<td>NOT PROVEN</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td>2026-07-26</td>
+<td>up</td>
+<td>ida_vermandel</td>
+<td>GRAFTED</td>
+<td>paulina_vdberghe, petrus_vermorgen</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2026-07-26</td>
+<td>down</td>
+<td>commune-harvest yield</td>
+<td>NOT PROVEN</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="run-summary-2026-07-26-ten-passes">Run summary — 2026-07-26, ten passes<a class="headerlink" href="#run-summary-2026-07-26-ten-passes" title="Permanent link">&para;</a></h2>
+<p><strong>345 → 434 people.</strong> Corpus <strong>40,347 → 103,705 acts</strong> (90 harvests → 194), including five
+commune harvests. 26 commits. <code>research/searches.jsonl</code> 166 entries, <code>research/labels.jsonl</code>
+48 labels — more than half written today.</p>
+<p><strong>Caveat on the numbers: other Claude Code sessions were editing this repository throughout
+the run.</strong> Some commits in the range are theirs, and part of the growth above is theirs. The
+passes below are this run's; §54's retraction was of another session's graft.</p>
+<h3 id="grafted-and-the-two-independent-identifiers-that-carried-each">Grafted, and the two independent identifiers that carried each<a class="headerlink" href="#grafted-and-the-two-independent-identifiers-that-carried-each" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>pass</th>
+<th>graft</th>
+<th>identifier 1</th>
+<th>identifier 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>octavia_schal</code> + <code>eugenius_dv</code> parents — 4 people, <strong>doc</strong></td>
+<td>1906 Oostende marriage act <strong>image</strong>: groom b. Steene 13 Apr 1882, to the day</td>
+<td>Bredene birth act image: <em>"geboren eergisteren de dertigsten April"</em></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>anna_maria_bossin</code> + Pardon parents — 4 people, sup</td>
+<td>parents named identically to her brother's 1846 act</td>
+<td>her brother <strong>Guilielmus Bossin, 29</strong>, a witness at the wedding</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>coekelberghs</code> + <code>hendrik_vdb</code> parents — 5 people, sup</td>
+<td>marriage date 24 Apr 1873</td>
+<td>groom's birth, Everberg 19 Aug 1849, to the day</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>jb_coekelberghs</code> + <code>anna_haesaerts</code> parents — 4 people, sup</td>
+<td>1838 Bertem marriage act <strong>image</strong>, spousal pair</td>
+<td>father self-declaring aged 44 (1853) and 48 (1858), both consistent with b. Jul 1809</td>
+</tr>
+<tr>
+<td>6</td>
+<td>11 children of three couples, sup</td>
+<td>each act's father b. <strong>Everberg</strong>, mother b. <strong>Bertem</strong></td>
+<td>every date inside the marriage-to-death window</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>louise_bocklandt</code> restored to <strong>doc</strong>, + 10 people</td>
+<td>1924 Stene marriage act <strong>image</strong>: b. 31 Dec 1877 Hamme, to the day</td>
+<td>the De Keyser marriage <em>and</em> divorce</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>paulina_vdberghe</code> + <code>petrus_vermorgen</code>, <strong>doc</strong></td>
+<td>1882 Hamme act <strong>image</strong> dates the mother's death 21 Jun 1865 Hamme</td>
+<td>father's trade <em>metser</em>, matching two other acts</td>
+</tr>
+</tbody>
+</table>
+<p>Four act <strong>images</strong> were read (1838 Bertem, 1865 Hamme, 1882 Hamme, 1924 Stene), each by
+stitching FamilySearch deep-zoom tiles on the <code>sg30p0</code> origin — the viewer does not work.</p>
+<h3 id="refuted-and-by-what">Refuted, and by what<a class="headerlink" href="#refuted-and-by-what" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>appolonia_vandenbemd77</code> — deleted.</strong> Her 1877 act names <em>Willem Edouard Vandenbemden ×
+  Maria Anna Vandenhoven</em>, not this couple. A rival family, same surname, same commune.</li>
+<li><strong><code>joannes_coekelberg58</code> — mother link removed.</strong> The act says <em>Anna </em><em>Catharina</em>**
+  Haesaerts, the variant §51/§53 deliberately left unmerged.</li>
+<li><strong>Two Octavia Schalandryns</strong>, first cousins, both dying in 1964 — separated by birthplace,
+  birth year, death place and death date.</li>
+<li><strong>Two rival Van Bergens</strong> (Aarschot 1923, Wuustwezel 1906) that the scorer would graft at
+  28.6 and 23.7 bits — wrong province, wrong parents.</li>
+<li><strong>Two Stekelorum near-collisions</strong> — a Jabbeke <em>Pieter</em> who survived Joanna Francisca
+  Verplancke, and a Varsenare <em>Helena Deschacht</em> married to a <em>Joannes</em> Stekelorum.</li>
+</ul>
+<h3 id="corrected">Corrected<a class="headerlink" href="#corrected" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pass 4: 24 records went <code>doc</code> → <code>sup</code>.</strong> Six AGATHA pages registered <code>doc</code> are act
+  <em>analyses</em> with no scan. The site line changed from "reaches back to the 1640s on records
+  read in the archive" to <strong>the 1800s</strong> — nine centuries of claimed documentary depth were an
+  artefact of the confidence code. One source went the other way (<code>S16</code>).</li>
+<li><code>octavia_schal</code> b. 1886-05-02 → <strong>1886-04-30</strong> (the first was the act date).</li>
+<li><code>marie_vanbergen</code> born <strong>Waasmunster</strong>, not Hamme; <code>ida_vermandel</code> born <strong>Zelzate</strong>.</li>
+<li>Louise Bocklandt's divorce <code>~1923</code> → <strong>1922-11-14</strong>.</li>
+<li>Geneanet's "Agatha Langa" → <strong>Elisabeth Agatha Langes</strong>.</li>
+</ul>
+<h3 id="blocked-needs-you">Blocked — needs you<a class="headerlink" href="#blocked-needs-you" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AGATHA is not logged in.</strong> Act pages render by direct id, but images show <em>"Gelieve in te
+  loggen"</em>. That is the one thing standing between <code>petrus_vannieuwenhuyse</code> and <code>doc</code>: his
+  scan reference resolves to a real, specific volume (Oostkamp doopakten 1630–1652).</li>
+<li><strong>Geneanet <code>/fonds/</code> returns 403</strong> unauthenticated, though Chrome is signed in to Geneanet
+  — worth one manual visit.</li>
+</ul>
+<h3 id="what-the-labels-say-about-the-scorer">What the labels say about the scorer<a class="headerlink" href="#what-the-labels-say-about-the-scorer" title="Permanent link">&para;</a></h3>
+<p>Precision <strong>80.0%</strong>, recall <strong>33.3%</strong> over 33 re-scored labels. The two false positives are
+both <code>marie_vanbergen</code>, both clearing 23 bits on <em>surname + birth-year ±1 + father's
+forename</em> — that combination is nearly free on a common surname and wants a threshold look.
+The recall figure partly measures the <strong>labels</strong>, not the code: several cite an act id where
+an act names six people, so the scorer compares a woman against her husband. Labels using
+the <code>…#Person1</code> form score correctly.</p>
+<h3 id="the-single-most-valuable-thing-to-do-next-and-it-needs-you">The single most valuable thing to do next — and it needs you<a class="headerlink" href="#the-single-most-valuable-thing-to-do-next-and-it-needs-you" title="Permanent link">&para;</a></h3>
+<p><strong>Make the queues read <code>research/labels.jsonl</code>.</strong> All three remaining entries in
+<code>research.py children</code> are decisions <em>this run already made</em>: a graft it retracted, a link it
+declined, and a proposal that a man born 1847 is a child born 1901. The refutations are
+recorded, with reasoning, and nothing reads them back. Left as it is, the next unattended run
+re-grafts the wrong Appolonia — and the run after that.</p>
+<p>It is a change to <code>tools/</code>, so this run did not make it. <strong>Until it exists, every downward
+queue entry must be checked against the labels by hand.</strong></p>
+<p>Two more <code>tools/</code> findings, same reason: Open Archives' <code>records/search</code> <strong>returns HTTP 400
+past ~10,000 mentions</strong> and the harvester then keeps <em>nothing</em>, so a large commune needs
+slicing (Oostende is 262,554 — twenty-six ceilings deep); and <code>harvest.py place X --max 1</code>
+caches a 100-mention stub that silently blocks the real harvest.</p>
+<p>One change to <code>tools/</code> <strong>was</strong> made, by a subagent, before this constraint was enforced —
+commit <code>3af3326</code>, a crash fix in <code>corpus.py</code> for archive dates like <code>"ca"</code> and <code>"-"</code> that
+was killing the validator, with six cases pinned in a test. It is load-bearing for the rest
+of the run. <strong>It needs your review.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.top", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
