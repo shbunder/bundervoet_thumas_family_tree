@@ -81,3 +81,6 @@ venues. A single miss at one archive is not a negative — it is one archive mis
 | 22 | 2026-07-26 | gustaaf | CORROBORATED | REJECTED | Matched via **Simonne Barbier** d.2016 — because his wife was also a Simonne. | 69665d9 |
 | 22 | 2026-07-26 | joannes_jos_vi, joannes_vi2 | CORROBORATED | REJECTED | Van Iseghems with different forenames (Jacobus; Charles Thomas Jean). | 69665d9 |
 | 22 | 2026-07-26 | — (finding) | — | — | **The bucket is still too generous.** All five anchored on a big commune merely *appearing* in the act, with kin agreement on a forename. §43's rule was necessary, not sufficient. | 69665d9 |
+| 23 | 2026-07-26 | — (scorer) | — | — | **Fixed §44's two leaks.** The act's own commune and a relative's forename now add bits but cannot be an independent identifier. Corroborated 35 → 26. | 708acd7 |
+| 23 | 2026-07-26 | hubert_devriese, edouard_dk, gustaaf, joannes_vi2 | CORROBORATED → KIN-ONLY | — | All four false positives dropped out of the corroborated bucket; joannes_jos_vi dropped out entirely. | 708acd7 |
+| 23 | 2026-07-26 | louise_bocklandt, augusta | — | — | The genuine ones stayed. 3 regression tests added; 62 pass. | 708acd7 |

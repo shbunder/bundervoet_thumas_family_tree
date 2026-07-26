@@ -396,3 +396,53 @@ def test_an_annotated_value_is_unwrapped_wherever_it_appears():
     assert person.residence == "Lommel"
     assert person.occupation == "landbouwster"
     assert person.age == 42
+
+
+def _cand(**kw):
+    from familytree.match import Candidate
+    base = dict(ref="x", name="", surname="", given="")
+    base.update(kw)
+    return Candidate(**base)
+
+
+def test_the_commune_an_act_was_drawn_up_in_cannot_anchor_a_graft():
+    """A marriage held at Oostende says where the wedding was, not where either party
+    lived. Treating the act's commune as the person's own matched Edouard Dekeyser, who
+    died in 1951, to a 1963 Oostende death, and Hubert De Vriese, born 1665 at Tielt, to a
+    1911 Brussels marriage. It still counts for something — hence the bits — but it can
+    never be one of the two independent identifiers."""
+    from familytree.match import compare
+    a = _cand(surname="Dekeyser", given="Eduardus", places=["Oostende"])
+    b = _cand(ref="y", surname="Dekeyser", given="Albert", context_places=["Oostende"])
+    m = compare(a, b)
+    assert "context" in m.classes
+    assert "place" not in m.classes
+    assert m.independent < 2, "the act's commune must not supply a second identifier"
+
+
+def test_a_relatives_forename_alone_cannot_anchor_a_graft():
+    """Gustaaf Dekeyser's wife was a Simonne; so was Andre Dekeyser's, seventy years later.
+    A shared forename among relatives is a coincidence in this material — Simonne, Maria
+    and Joanna are each a large share of the women. A relative's SURNAME agreeing is the
+    classic second identifier; a forename is not."""
+    from familytree.match import compare
+    kin_a = [("spouse", "vandewalle", frozenset({"simonne"}))]
+    kin_b = [("spouse", "barbier", frozenset({"simonne"}))]
+    a = _cand(surname="Dekeyser", given="Gustaaf", kin=kin_a)
+    b = _cand(ref="y", surname="Dekeyser", given="Andre", kin=kin_b)
+    m = compare(a, b)
+    assert "kin-forename" in m.classes
+    assert "kin" not in m.classes
+    assert m.independent < 2, "a shared forename must not supply a second identifier"
+
+
+def test_a_relatives_surname_still_anchors():
+    """The counterpart: two Simonne Vandewalles is not a coincidence, and the mother's
+    maiden name remains the strongest second identifier this material offers."""
+    from familytree.match import compare
+    kin = [("spouse", "vandewalle", frozenset({"simonne"}))]
+    a = _cand(surname="Dekeyser", given="Gustaaf", kin=kin)
+    b = _cand(ref="y", surname="Dekeyser", given="Gustaaf", kin=list(kin))
+    m = compare(a, b)
+    assert "kin" in m.classes
+    assert m.independent >= 2

@@ -79,6 +79,8 @@ class Candidate:
     birth_place: str | None = None
     death_year: int | None = None
     places: list[str] = field(default_factory=list)
+    # Where the RECORD happened, as opposed to where this person was. Weak evidence.
+    context_places: list[str] = field(default_factory=list)
     occupation: str | None = None
     # Stated, so it can be told apart from a year implied by an age in an act. Only a
     # stated year is strong enough to veto on.
@@ -201,7 +203,11 @@ def from_mention(m: Mention) -> Candidate:
         birth_date=m.birth,
         birth_place=m.birth_place,
         death_year=act.year if act and act.type == "Overlijden" else None,
-        places=[x for x in (m.birth_place, m.residence, act.place if act else None) if x],
+        # The person's OWN places only. The act's commune goes in context_places: a
+        # marriage held at Oostende says where the wedding was, not where either party
+        # was born or lived, and treating it as theirs matched a third of this tree.
+        places=[x for x in (m.birth_place, m.residence) if x],
+        context_places=[act.place] if act and act.place else [],
         occupation=m.occupation,
         stated_birth_year=bool(m.birth_year),
         kin=[k for k in kin if k],
@@ -293,6 +299,12 @@ def surname_weight(surname: str | None, freq: Frequencies | None = None) -> Weig
 # two of THESE, not two fields — a matching forename and a matching surname are both
 # the name, and the log is full of right-name/wrong-province rejections that prove it.
 CLASSES = ("name", "date", "place", "role", "kin")
+# Agreements that are real evidence but must never be one of the two independent
+# identifiers. Both were promoted to full classes once and both produced false grafts:
+# an act HELD at Oostende matched everyone in the tree who lived there, and two men's
+# wives sharing the forename Simonne matched across seventy years. They still add bits —
+# they are not nothing — but they cannot carry a graft on their own.
+WEAK_CLASSES = ("context", "kin-forename")
 
 
 @dataclass
@@ -372,6 +384,15 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     pa = {normalise_key(x) for x in a.places if normalise_key(x)}
     pb = {normalise_key(x) for x in b.places if normalise_key(x)}
     shared = sorted(pa & pb)
+    if not shared:
+        # Fall back to where the record was drawn up. Same bits, weaker class: it cannot
+        # anchor a graft, because a busy commune appears in thousands of acts.
+        ca = pa | {normalise_key(x) for x in a.context_places if normalise_key(x)}
+        cb = pb | {normalise_key(x) for x in b.context_places if normalise_key(x)}
+        ctx = sorted(ca & cb)
+        if ctx:
+            w = _bits(freq.places.get(ctx[0], 0), freq.n, 5.0) if freq.n else _NO_CORPUS["place"]
+            add("context", f"record at {ctx[0]}", max(w, 2.0))
     if shared:
         # Capped low on purpose. Place counts come from the harvest, and a harvest is
         # filtered to one surname — so the commune that family lived in looks rare
@@ -394,7 +415,7 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     #
     # Only relatives in the same bucket are compared, and the weight follows the same
     # rule as everything else — what the agreement would cost to get by chance.
-    kin_bits, kin_labels = 0.0, []
+    kin_bits, kin_labels, kin_anchored = 0.0, [], False
     for bucket, surname_key, givens in a.kin:
         for o_bucket, o_surname, o_givens in b.kin:
             if bucket != o_bucket:
@@ -413,10 +434,16 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
             if bits:
                 kin_bits += bits
                 kin_labels.append(bucket)
+                # A relative's SURNAME agreeing is the classic second identifier. A
+                # relative's forename agreeing is not: Simonne, Maria and Joanna are
+                # each a large fraction of the women in this material.
+                if same_surname:
+                    kin_anchored = True
                 break
     if kin_bits:
         seen = ", ".join(dict.fromkeys(kin_labels))
-        add("kin", f"{seen} name{'s' if len(kin_labels) > 1 else ''}", min(kin_bits, 16.0))
+        cls = "kin" if kin_anchored else "kin-forename"
+        add(cls, f"{seen} name{'s' if len(kin_labels) > 1 else ''}", min(kin_bits, 16.0))
 
     # --- vetoes ---
     # Defaults to rejecting, in the verifier's spirit. Only STATED values veto; a birth
