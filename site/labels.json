@@ -79,6 +79,7 @@
     "tabTree": { "en": "Tree", "nl": "Stamboom" },
     "tabLineages": { "en": "Lineages", "nl": "Naamlijnen" },
     "tabIndex": { "en": "Index", "nl": "Register" },
+    "tabRelations": { "en": "Relations", "nl": "Verwantschap" },
     "searchPlaceholder": { "en": "Search names, years, places…", "nl": "Zoek namen, jaren, plaatsen…" },
     "searchAria": { "en": "Search the family tree", "nl": "Doorzoek de stamboom" },
     "clearSearch": { "en": "Clear search", "nl": "Zoekopdracht wissen" },
@@ -180,11 +181,10 @@
       "nl": "Aangetrouwd, of nog niet met de familie verbonden."
     },
 
-    "_comment_relations": "The relation finder. These carry markup, so whatever is put into them is escaped by the caller.",
-    "relTitle": { "en": "How are two people related?", "nl": "Hoe zijn twee personen verwant?" },
+    "_comment_relations": "The relation finder, on its own tab. The tab names it, so it needs no heading of its own. These sentences carry markup, so whatever is put into them is escaped by the caller.",
     "relHint": {
-      "en": "Pick any two. Where they are related, the arch shows the route: up one side to the ancestor they share, and down the other. Click a card to open that person.",
-      "nl": "Kies er twee. Waar zij verwant zijn, toont de boog de route: langs de ene kant omhoog naar de gedeelde voorouder, en langs de andere weer omlaag. Klik op een kaart om die persoon te openen."
+      "en": "How are two people related? Pick any two. Where they are related, the arch shows the route: up one side to the ancestor they share, and down the other. Click a card to open that person.",
+      "nl": "Hoe zijn twee personen verwant? Kies er twee. Waar zij verwant zijn, toont de boog de route: langs de ene kant omhoog naar de gedeelde voorouder, en langs de andere weer omlaag. Klik op een kaart om die persoon te openen."
     },
     "relFirst": { "en": "First person", "nl": "Eerste persoon" },
     "relSecond": { "en": "Second person", "nl": "Tweede persoon" },

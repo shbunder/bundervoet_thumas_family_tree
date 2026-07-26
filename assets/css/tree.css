@@ -121,9 +121,12 @@ h1{font-size:1.9rem;margin:.1em 0 .1em;font-weight:600}
 /* The span a century covers. "19th century" meaning 1801–1900 is a convention half
    the readers of a family tree do not hold, so the card states it. */
 .bblurb{margin:-2px 0 7px;color:var(--muted);font-size:.75rem;font-style:italic;line-height:1.4}
-.relfinder{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin-bottom:6px;box-shadow:var(--shadow)}
-.relfinder h4{margin:0 0 4px;color:var(--accent);font-size:1rem}
-.relhint{margin:0 0 9px;color:var(--muted);font-size:.79rem;font-style:italic;line-height:1.45}
+/* Its own view now, not a panel stacked above the roster, so it is centred rather
+   than filling the page. Wide enough for two pickers side by side and not much more:
+   a <select> truncates what it cannot fit, and these options are names. The arch
+   drawn underneath centres itself inside this at its own narrower width. */
+.relfinder{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:14px 17px;box-shadow:var(--shadow)}
 .relpick{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .relpick select{flex:1 1 220px;min-width:0;padding:6px 8px;border:1px solid var(--line);border-radius:8px;
   background:var(--bg);color:var(--ink);font-family:inherit;font-size:.85rem}
@@ -289,6 +292,11 @@ body.dark mark{background:#6b5520;color:#f7ecd0}
 .uconn.marr span{position:relative;background:var(--panel);color:var(--muted);font-size:.58rem;
   padding:0 5px;line-height:1;text-transform:uppercase;letter-spacing:.05em}
 @media(max-width:720px){
+  /* Side by side again here. Stacked, the lower of the two lands on the title —
+     which wraps to two lines at this width and reaches the left edge — so the
+     column that keeps them out of the way on a wide screen is what puts them in
+     it on a narrow one. Across, they stay on the crest's line. */
+  .chrome{flex-direction:row}
   .searchbox{flex-basis:100%;width:auto;margin-left:0;margin-top:4px}
   /* A phone gets one scrolling row per generation rather than one scrolling
      pedigree: the four rows stay stacked and readable, and swiping the row of

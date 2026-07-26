@@ -240,10 +240,19 @@ remembered between visits.
 called. Anyone it doesn't mention is filed under their `branch`, which is why nobody
 can go missing.
 
-The same tab answers **how any two people are related** — pick two names and it gives
-the relation and the ancestor they share. It works from the lowest common ancestor of
-the pair rather than from the root, so it can relate anyone to anyone, and it falls
-back to one step through marriage when there is no blood link.
+## Relations
+
+Its own tab, because it answers a different question: the Index says who is in the
+tree, this says **what any two of them are to each other**. Pick two names and it gives
+the relation, the ancestor they share, and the route between them drawn as an arch — up
+one side, across, down the other, so the shape is the argument rather than the label
+being a claim.
+
+It works from the lowest common ancestor of the pair rather than from the root, so it
+can relate anyone to anyone (objective c), and it falls back to one step through
+marriage when there is no blood link. It stops there: beyond one step the wording stops
+meaning anything reliable, and a wrong in-law label is the same class of error as a
+wrong graft.
 
 ## Two languages
 
