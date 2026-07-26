@@ -1192,7 +1192,51 @@ Diksmuide 1873 birth that would give [[emma_vincke]] an elder sister, the Stene 
 Oudenburg 1871 marriages that would date the two new couples, and the Oudenburg 1842
 birth that would carry [[ludovicus_schal]] back another generation.
 
-## 47. The Devriendt × Schalandryn marriage act: four ancestors, and a birth date corrected
+## 47. Zaventem, 24 February 1846 — two orphans, four parents, and a documented dead end
+
+Antonia Bossin's own 1849 birth act was the target, and it is not reachable: AGATHA
+indexes marriages for Sint-Stevens-Woluwe and no births at all. Searching her parents by
+surname pair instead — *Bossin Peremans*, the move the charter recommends and which has
+now produced both of this project's breakthroughs — returned their own marriage act, which
+is the richer record by far.
+
+**Zaventem, act nr. 1, 24 February 1846.** [[guilielmus_bossin]], born at
+Sint-Stevens-Woluwe, twenty-one, an *arbeider*. [[peremans]], born at Zaventem,
+twenty-one, an *arbeidster*. Two ages that confirm from a civil act the 1824 both records
+had been carrying from a member tree, and two birthplaces the tree did not have.
+
+It settles a name dispute, and it settles it in the tree's favour. The 1872 Kraainem act
+called the bride's mother *Anna Catharina Peremans* where this tree said *Joanna Catharina
+Jacoba*, and §42 recorded both rather than choosing. The act that married her writes the
+long form in full. A civil act quoting a parent from memory is now the outlier, and the
+tree's reading is the documented one.
+
+Four people enter the index from it. On the groom's side [[arnoldus_bossin]], an
+*arbeider* of Sint-Stevens-Woluwe, and [[elisabeth_deyn]] — both at the wedding, both
+consenting, and both signing with a mark, because the act says neither could write. On the
+bride's side [[egidius_peremans]], dead at Zaventem on 6 March 1837, and
+[[joanna_verelst]], dead at Zaventem on 19 December 1843. She married at twenty-one having
+lost both parents, the second of them barely two years earlier.
+
+**And the act closes a line rather than opening one.** The bride declared, with her
+witnesses, that she had never known her grandparents nor where they died. Registers
+almost never say this. It means the Peremans and Ver Elst generation before 1837 was
+already beyond the family's own memory in 1846 — so it is a dead end to be recorded, not a
+gap to keep searching by name. Only the Zaventem registers themselves will reach it.
+
+What is *not* recorded is as deliberate. The four new records carry no birth dates: the
+act gives the parents no ages, and deriving one from a twenty-one-year-old child would be
+a guess wearing a date's clothes. Elisabeth Deyn gets no occupation and neither Peremans
+parent does, because the act names one only for Arnoldus. And the two living Bossins get
+no death date — `>1846` would be a false claim, since either could have died that March,
+so the bound sits in `raw` where the grammar cannot express it.
+
+NEXT on this line: the two Zaventem death acts, 1837 and 1843, which would give the
+Peremans couple their ages and probably their parents despite what their daughter did not
+know; and the Bossin–Deyn marriage, which the Sint-Stevens-Woluwe or Zaventem registers
+should hold for roughly 1815–1824.
+
+## 48. The Devriendt × Schalandryn marriage act: four ancestors, and a birth date corrected
 
 The act behind §46's collision, read as an image rather than the vrijwilligersrab index
 alone: Oostende marriage act nr. 258, 10 November 1906, Eugenius Alphonsius Devriendt ×
@@ -1254,47 +1298,3 @@ Rijksarchief visit for the Schalandryn/Devriendt ones). Capturing the S20/S21 ac
 as artifacts is the other standing follow-up — both were read on screen but never saved.
 
 Tree: 345 → 349 people. Build green, 64 tests pass.
-
-## 47. Zaventem, 24 February 1846 — two orphans, four parents, and a documented dead end
-
-Antonia Bossin's own 1849 birth act was the target, and it is not reachable: AGATHA
-indexes marriages for Sint-Stevens-Woluwe and no births at all. Searching her parents by
-surname pair instead — *Bossin Peremans*, the move the charter recommends and which has
-now produced both of this project's breakthroughs — returned their own marriage act, which
-is the richer record by far.
-
-**Zaventem, act nr. 1, 24 February 1846.** [[guilielmus_bossin]], born at
-Sint-Stevens-Woluwe, twenty-one, an *arbeider*. [[peremans]], born at Zaventem,
-twenty-one, an *arbeidster*. Two ages that confirm from a civil act the 1824 both records
-had been carrying from a member tree, and two birthplaces the tree did not have.
-
-It settles a name dispute, and it settles it in the tree's favour. The 1872 Kraainem act
-called the bride's mother *Anna Catharina Peremans* where this tree said *Joanna Catharina
-Jacoba*, and §42 recorded both rather than choosing. The act that married her writes the
-long form in full. A civil act quoting a parent from memory is now the outlier, and the
-tree's reading is the documented one.
-
-Four people enter the index from it. On the groom's side [[arnoldus_bossin]], an
-*arbeider* of Sint-Stevens-Woluwe, and [[elisabeth_deyn]] — both at the wedding, both
-consenting, and both signing with a mark, because the act says neither could write. On the
-bride's side [[egidius_peremans]], dead at Zaventem on 6 March 1837, and
-[[joanna_verelst]], dead at Zaventem on 19 December 1843. She married at twenty-one having
-lost both parents, the second of them barely two years earlier.
-
-**And the act closes a line rather than opening one.** The bride declared, with her
-witnesses, that she had never known her grandparents nor where they died. Registers
-almost never say this. It means the Peremans and Ver Elst generation before 1837 was
-already beyond the family's own memory in 1846 — so it is a dead end to be recorded, not a
-gap to keep searching by name. Only the Zaventem registers themselves will reach it.
-
-What is *not* recorded is as deliberate. The four new records carry no birth dates: the
-act gives the parents no ages, and deriving one from a twenty-one-year-old child would be
-a guess wearing a date's clothes. Elisabeth Deyn gets no occupation and neither Peremans
-parent does, because the act names one only for Arnoldus. And the two living Bossins get
-no death date — `>1846` would be a false claim, since either could have died that March,
-so the bound sits in `raw` where the grammar cannot express it.
-
-NEXT on this line: the two Zaventem death acts, 1837 and 1843, which would give the
-Peremans couple their ages and probably their parents despite what their daughter did not
-know; and the Bossin–Deyn marriage, which the Sint-Stevens-Woluwe or Zaventem registers
-should hold for roughly 1815–1824.

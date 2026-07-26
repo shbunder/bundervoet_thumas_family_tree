@@ -1563,6 +1563,19 @@
       "acts": 600
     },
     {
+      "id": "vandenberghe-brugge",
+      "query": {
+        "name": "Vandenberghe",
+        "country_code": "be",
+        "eventplace": "Brugge"
+      },
+      "date": "2026-07-26",
+      "found": 1841,
+      "mentions": 400,
+      "complete": false,
+      "acts": 400
+    },
+    {
       "id": "vandenbroucke",
       "query": {
         "name": "Van den Broucke",
@@ -1635,6 +1648,32 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vandewalle-oostende",
+      "query": {
+        "name": "Vandewalle",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 325,
+      "mentions": 325,
+      "complete": true,
+      "acts": 325
+    },
+    {
+      "id": "vandewalle-oostkamp",
+      "query": {
+        "name": "Vandewalle",
+        "country_code": "be",
+        "eventplace": "Oostkamp"
+      },
+      "date": "2026-07-26",
+      "found": 36,
+      "mentions": 36,
+      "complete": true,
+      "acts": 36
     },
     {
       "id": "vandewoestijne",
@@ -1976,6 +2015,32 @@
       "acts": 400
     },
     {
+      "id": "vanstechelman-mariakerke",
+      "query": {
+        "name": "Vanstechelman",
+        "country_code": "be",
+        "eventplace": "Mariakerke"
+      },
+      "date": "2026-07-26",
+      "found": 8,
+      "mentions": 8,
+      "complete": true,
+      "acts": 8
+    },
+    {
+      "id": "vanstechelman-oostende",
+      "query": {
+        "name": "Vanstechelman",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 100,
+      "mentions": 100,
+      "complete": true,
+      "acts": 100
+    },
+    {
       "id": "vanstechelman-woumen",
       "query": {
         "name": "Van Stechelman",
@@ -1987,6 +2052,19 @@
       "mentions": 0,
       "complete": true,
       "acts": 0
+    },
+    {
+      "id": "vanstechelman-zevekote",
+      "query": {
+        "name": "Vanstechelman",
+        "country_code": "be",
+        "eventplace": "Zevekote"
+      },
+      "date": "2026-07-26",
+      "found": 5,
+      "mentions": 5,
+      "complete": true,
+      "acts": 5
     },
     {
       "id": "verbrugghe",
@@ -2013,6 +2091,32 @@
       "acts": 95
     },
     {
+      "id": "verkouille-oostende",
+      "query": {
+        "name": "Verkouille",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 39,
+      "mentions": 39,
+      "complete": true,
+      "acts": 39
+    },
+    {
+      "id": "verniers-destelbergen",
+      "query": {
+        "name": "Verniers",
+        "country_code": "be",
+        "eventplace": "Destelbergen"
+      },
+      "date": "2026-07-26",
+      "found": 2,
+      "mentions": 2,
+      "complete": true,
+      "acts": 2
+    },
+    {
       "id": "vincke",
       "query": {
         "name": "Vincke",
@@ -2023,6 +2127,32 @@
       "mentions": 600,
       "complete": false,
       "acts": 600
+    },
+    {
+      "id": "vincke-diksmuide",
+      "query": {
+        "name": "Vincke",
+        "country_code": "be",
+        "eventplace": "Diksmuide"
+      },
+      "date": "2026-07-26",
+      "found": 33,
+      "mentions": 33,
+      "complete": true,
+      "acts": 33
+    },
+    {
+      "id": "vincke-oostende",
+      "query": {
+        "name": "Vincke",
+        "country_code": "be",
+        "eventplace": "Oostende"
+      },
+      "date": "2026-07-26",
+      "found": 64,
+      "mentions": 64,
+      "complete": true,
+      "acts": 64
     },
     {
       "id": "wagebaert",
