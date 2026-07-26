@@ -46,7 +46,18 @@ SCHEMA = """
 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);
 -- Where the act lives, not the act. See the note on duplication above.
 CREATE TABLE acts (id TEXT PRIMARY KEY, path TEXT, offset INTEGER, length INTEGER);
-CREATE TABLE mentions (ref TEXT PRIMARY KEY, act_id TEXT, pid TEXT, surname_key TEXT);
+-- `birth_year`/`stated`/`sex` are here to be VETOED on before anything is read. See
+-- candidates_for: they are the only two conflicts in `match.compare` that turn on scalars,
+-- so they are the only two that can be applied without reproducing the scorer in SQL.
+--
+-- `cand` is the comparable Candidate itself, as JSON. Comparing used to mean rebuilding the
+-- whole Act a mention belongs to — every participant, every edge, `unwrap_annotated` over
+-- the entire record — to look at one person: a profile of forty frontiers showed 280,594
+-- acts parsed to make 393,369 comparisons, 101 of 202 seconds in hydration and only 14 in
+-- the scorer. The act is still the evidence and is still read from the JSONL, but only for
+-- the handful of candidates that survive scoring.
+CREATE TABLE mentions (ref TEXT PRIMARY KEY, act_id TEXT, pid TEXT, surname_key TEXT,
+                       birth_year INTEGER, stated INTEGER, sex TEXT, cand TEXT);
 CREATE TABLE blocks (key TEXT, ref TEXT);
 CREATE TABLE freq (kind TEXT, value TEXT, n INTEGER);
 """
@@ -62,6 +73,32 @@ CREATE INDEX blocks_key ON blocks (key);
 CREATE INDEX mentions_surname ON mentions (surname_key);
 CREATE INDEX freq_lookup ON freq (kind, value);
 """
+
+
+# Every field of a Candidate that `match.compare` reads. Listed once, used by both
+# directions, so a field added to the scorer and forgotten here fails the round-trip test
+# rather than silently comparing as absent — which would look like a weaker match, not a
+# bug. `mention` is deliberately absent: it holds the Act, which is what this avoids
+# rebuilding, and callers who need the evidence hydrate it for the survivors.
+_CAND_FIELDS = (
+    "ref", "name", "surname", "given", "sex", "birth_year", "birth_date", "birth_place",
+    "death_year", "places", "context_places", "event_year", "occupation",
+    "stated_birth_year",
+)
+
+
+def _dump(c: Candidate) -> str:
+    d = {f: getattr(c, f) for f in _CAND_FIELDS}
+    # kin is a list of (bucket, surname_key, frozenset(givens)); JSON has neither tuples
+    # nor sets, so the shape is restored on the way back in.
+    d["kin"] = [[b, s, sorted(g)] for b, s, g in c.kin]
+    return json.dumps(d, ensure_ascii=False, separators=(",", ":"))
+
+
+def _load(blob: str) -> Candidate:
+    d = json.loads(blob)
+    kin = [(b, s, frozenset(g)) for b, s, g in d.pop("kin", [])]
+    return Candidate(**d, kin=kin)
 
 
 def signature() -> str:
@@ -170,8 +207,15 @@ def build(verbose: bool = False) -> int:
                     for m in act.people:
                         ref = f"{act.id}#{m.pid}"
                         skey = normalise_key(m.surname)
-                        mention_rows.append((ref, act.id, m.pid, skey))
-                        for key in block_keys(from_mention(m)):
+                        c = from_mention(m)
+                        # Taken off the Candidate rather than the Mention, so what is stored
+                        # is exactly what the scorer would compare — `birth_year` already
+                        # falls back to the year implied by an age, and `stated` records
+                        # which of the two it is, because only a stated year may veto.
+                        mention_rows.append((ref, act.id, m.pid, skey, c.birth_year,
+                                             1 if c.stated_birth_year else 0, c.sex,
+                                             _dump(c)))
+                        for key in block_keys(c):
                             block_rows.append((key, ref))
                         # The frequency tables, counted in the same pass rather than in a
                         # second one over the same 350,000 mentions.
@@ -209,7 +253,7 @@ def build(verbose: bool = False) -> int:
 
 def _flush(db, acts_rows, mention_rows, block_rows) -> None:
     db.executemany("INSERT OR IGNORE INTO acts VALUES (?, ?, ?, ?)", acts_rows)
-    db.executemany("INSERT OR IGNORE INTO mentions VALUES (?, ?, ?, ?)", mention_rows)
+    db.executemany("INSERT OR IGNORE INTO mentions VALUES (?, ?, ?, ?, ?, ?, ?, ?)", mention_rows)
     db.executemany("INSERT INTO blocks VALUES (?, ?)", block_rows)
     acts_rows.clear()
     mention_rows.clear()
@@ -270,21 +314,65 @@ def acts_by_id(act_ids) -> dict:
         return _hydrate(db, ids)
 
 
-def candidate_count(c: Candidate) -> int:
+# Past this many candidates the queue cannot tell the difference, so counting further is
+# work bought for nothing. `frontier.discriminability` feeds the count through
+# `1 - exp(-n/6)`, which is 0.9987 at forty and 1.0000 at sixty to four places — so a
+# frontier with sixty candidates and one with five hundred score identically, and one of
+# them was a count over a third of a million index rows. A capped count is reported as
+# "60+" rather than as sixty, because a number that is not the number should say so.
+CANDIDATE_CAP = 60
+
+# Comfortably under SQLite's bound-variable limit, which is 999 on older builds. Anything
+# that binds one variable per row has to batch — see _hydrate.
+_SQL_VARS = 900
+
+
+def _veto_sql(c: Candidate) -> tuple[str, list]:
+    """`compare`'s two scalar vetoes, as a WHERE clause — the pre-filter that makes this
+    affordable at a corpus of millions.
+
+    Not an optimisation of the scoring: it is the same two conflicts, applied earlier. A
+    Flemish surname now blocks against tens of thousands of acts, and `candidates_for` was
+    reading and parsing every one of them so that `compare` could reject most on a stated
+    birth year two centuries out. Rejecting those in the index instead means they are never
+    read.
+
+    CONSERVATIVE BY CONSTRUCTION, and it has to be: a pre-filter that drops a pair the
+    scorer would have accepted is a missed link, invisible and unfindable. So each clause
+    keeps every row unless the veto is CERTAIN — an unknown sex, an absent year and an
+    implied-rather-than-stated year all survive, exactly as they do in `compare`, where
+    only a stated value may veto. The equivalence is checked against the scanning route
+    rather than argued.
+    """
+    where, params = "", []
+    if c.sex:
+        where += " AND (m.sex IS NULL OR m.sex = ?)"
+        params.append(c.sex)
+    if c.stated_birth_year and c.birth_year:
+        where += " AND (m.stated = 0 OR m.birth_year IS NULL OR abs(m.birth_year - ?) <= 2)"
+        params.append(c.birth_year)
+    return where, params
+
+
+def candidate_count(c: Candidate, cap: int = CANDIDATE_CAP) -> int:
     """How many corpus mentions could be this person, without building any of them.
 
     The frontier queue asks only this — `P(resolvable)` rises with the number of
     candidates the corpus holds — and answering it by materialising every candidate was
-    most of what made the queue expensive. A count is one indexed query.
+    most of what made the queue expensive. A count is one indexed query, and a capped one
+    stops as soon as the answer cannot change.
     """
     keys = block_keys(c)
     if not keys:
         return 0
     marks = ",".join("?" * len(keys))
+    where, params = _veto_sql(c)
     with _connect() as db:
         row = db.execute(
-            f"SELECT count(DISTINCT ref) FROM blocks WHERE key IN ({marks}) AND ref <> ?",
-            [*keys, c.ref],
+            f"SELECT count(*) FROM (SELECT DISTINCT b.ref FROM blocks b "
+            f"JOIN mentions m ON m.ref = b.ref "
+            f"WHERE b.key IN ({marks}) AND b.ref <> ?{where} LIMIT ?)",
+            [*keys, c.ref, *params, cap],
         ).fetchone()
     return row[0] if row else 0
 
@@ -305,12 +393,18 @@ def _hydrate(db, act_ids: list[str]) -> dict[str, object]:
     if not missing:
         return out
 
+    # Chunked, because `IN (?,?,?…)` is one bound variable per id and SQLite caps those.
+    # It held until a surname started blocking against tens of thousands of acts, which is
+    # what a 1.7-million-act corpus does to a common Flemish name: "too many SQL variables",
+    # from a query that had worked for months.
     by_path: dict[str, list[tuple[int, int, str]]] = {}
-    marks = ",".join("?" * len(missing))
-    for aid, path, offset, length in db.execute(
-        f"SELECT id, path, offset, length FROM acts WHERE id IN ({marks})", missing
-    ):
-        by_path.setdefault(path, []).append((offset, length, aid))
+    for start in range(0, len(missing), _SQL_VARS):
+        batch = missing[start:start + _SQL_VARS]
+        marks = ",".join("?" * len(batch))
+        for aid, path, offset, length in db.execute(
+            f"SELECT id, path, offset, length FROM acts WHERE id IN ({marks})", batch
+        ):
+            by_path.setdefault(path, []).append((offset, length, aid))
     for path, wanted in by_path.items():
         with (ACTS_DIR / path).open("rb") as f:
             # In offset order, so a run of acts from one file is a forward walk through it
@@ -335,21 +429,31 @@ def candidates_for(c: Candidate) -> list[Candidate]:
     keys = block_keys(c)
     if not keys:
         return []
+    where, params = _veto_sql(c)
+    marks = ",".join("?" * len(keys))
     with _connect() as db:
-        marks = ",".join("?" * len(keys))
-        refs = {r for (r,) in db.execute(
-            f"SELECT DISTINCT ref FROM blocks WHERE key IN ({marks})", keys)}
-        refs.discard(c.ref)
-        if not refs:
-            return []
-        acts = _hydrate(db, sorted({r.split("#", 1)[0] for r in refs}))
-    out: list[Candidate] = []
-    for ref in sorted(refs):
-        act_id, _, pid = ref.partition("#")
+        rows = db.execute(
+            f"SELECT DISTINCT b.ref, m.cand FROM blocks b JOIN mentions m ON m.ref = b.ref "
+            f"WHERE b.key IN ({marks}){where}", [*keys, *params]).fetchall()
+    # Straight from the stored Candidate — no act is read to make a comparison. The evidence
+    # is fetched by `attach` for whatever survives scoring, which is a few hundred rather
+    # than a few hundred thousand.
+    return [_load(blob) for ref, blob in rows if ref != c.ref and blob]
+
+
+def attach(candidates) -> list[Candidate]:
+    """Give these candidates their act back, for the ones worth showing a person.
+
+    Scoring does not need the act; reporting does — the url, the scan, the roles, the
+    parent edges an act asserts. So it is read here, once, for the survivors only.
+    """
+    wanted = [c for c in candidates if c.mention is None]
+    if not wanted:
+        return list(candidates)
+    acts = acts_by_id(c.ref.split("#", 1)[0] for c in wanted)
+    for c in wanted:
+        act_id, _, pid = c.ref.partition("#")
         act = acts.get(act_id)
-        if not act:
-            continue
-        mention = next((m for m in act.people if m.pid == pid), None)
-        if mention is not None:
-            out.append(from_mention(mention))
-    return out
+        if act is not None:
+            c.mention = next((m for m in act.people if m.pid == pid), None)
+    return list(candidates)

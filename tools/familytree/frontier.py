@@ -189,7 +189,11 @@ def frontier_rows(people: dict | None = None) -> list[Frontier]:
 
         # The cheapest thing left to try, and what it costs.
         if candidates:
-            route, cost = f"link — {candidates} candidates already held", 0.5
+            # "60+" when the count was capped — see store.CANDIDATE_CAP. Saying sixty when
+            # the truth is five hundred would be a number nobody could reconcile with
+            # link.py's own output.
+            how_many = f"{candidates}+" if indexed and candidates >= store.CANDIDATE_CAP else str(candidates)
+            route, cost = f"link — {how_many} candidates already held", 0.5
         elif p.get("surname") and coverage is None:
             route, cost = f'harvest surname "{p["surname"]}"', 1.0
         elif coverage is not None and coverage < 0.95:

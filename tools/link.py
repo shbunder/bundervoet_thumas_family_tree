@@ -99,6 +99,11 @@ def report(person, freq, show_all: bool, people=None, children=None) -> int:
         key=lambda m: -m.bits,
     )
     shown = [m for m in matches if show_all or m.band in ("strong", "read the act")]
+    # The acts, for the ones about to be printed. Scoring never needed them; the report
+    # does — the roles, the parent names, the scan. A candidate whose act has gone from the
+    # store since it was indexed is dropped rather than printed half-formed.
+    store.attach([m.b for m in shown])
+    shown = [m for m in shown if m.b.mention is not None and m.b.mention.act is not None]
     if not shown:
         blocked_by = sum(1 for m in matches if m.conflict)
         print(f"  {len(matches)} candidates compared, none above the noise floor"

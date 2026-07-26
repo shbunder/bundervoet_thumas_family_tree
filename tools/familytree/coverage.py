@@ -23,6 +23,7 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 
+from . import store
 from .corpus import Act, corpus_exists, load_corpus, normalise_key
 from .match import build_index, candidates_for, compare, from_mention, from_person
 from .people import ancestors_of, family_key
@@ -48,6 +49,15 @@ def act_coverage(people: dict, frontier_ids: set[str]) -> list[ActCoverage]:
     "Resolves" means the act names that person AND names a parent of them — the act
     would answer the frontier, not merely mention it. Everything else is a mention:
     still worth reading, worth much less.
+
+    ASKED FROM THE FRONTIER SIDE, because blocking is symmetric. A mention and a target are
+    compared exactly when they share a blocking key, so walking 223 frontiers and asking the
+    index which mentions block with each gives the identical set of pairs as walking 4.3
+    million mentions and asking which frontiers block with each. The second is what this
+    did, and at 1.7 million acts it took 525 seconds to reach the same answer.
+
+    The in-memory scan stays underneath for when there is no current index — it has to
+    degrade to slow rather than to wrong.
     """
     if not corpus_exists():
         return []
@@ -55,20 +65,43 @@ def act_coverage(people: dict, frontier_ids: set[str]) -> list[ActCoverage]:
     targets = [from_person(people[pid], people, children) for pid in frontier_ids if pid in people]
     if not targets:
         return []
-    index = build_index(targets)
 
+    if store.is_current():
+        by_act: dict[str, ActCoverage] = {}
+        parents_in: dict[str, set[str]] = {}
+        for target in targets:
+            # Scored first, then the survivors get their acts. "rejected" is not a weak
+            # match, it is a vetoed one — a stated conflict. Letting it through here listed
+            # contradicted people as though the act would resolve them.
+            scored = [(c, m) for c, m in
+                      ((c, compare(target, c)) for c in store.candidates_for(target))
+                      if m.band not in ("noise", "rejected")]
+            store.attach([c for c, _ in scored])
+            for c, match in scored:
+                if c.mention is None:
+                    continue
+                act = c.mention.act
+                cov = by_act.get(act.id)
+                if cov is None:
+                    cov = by_act[act.id] = ActCoverage(act=act)
+                    # A parent edge exists for this mention, so the act states their parentage.
+                    parents_in[act.id] = {e["child"] for e in act.edges
+                                          if e["type"] in ("father", "mother")}
+                if c.mention.pid in parents_in[act.id]:
+                    cov.resolves.append((target.ref, match.explain()))
+                else:
+                    cov.mentions.append((target.ref, match.explain()))
+        return list(by_act.values())
+
+    index = build_index(targets)
     out: list[ActCoverage] = []
     for act in load_corpus():
         cov = ActCoverage(act=act)
-        # A parent edge exists for this mention, so the act states their parentage.
         has_parent = {e["child"] for e in act.edges if e["type"] in ("father", "mother")}
         for m in act.people:
             c = from_mention(m)
             for target in candidates_for(c, index):
                 match = compare(target, c)
-                # "rejected" is not a weak match, it is a vetoed one — a stated
-                # conflict. Letting it through here listed contradicted people as
-                # though the act would resolve them.
                 if match.band in ("noise", "rejected"):
                     continue
                 if m.pid in has_parent:
@@ -201,7 +234,6 @@ def missing_children(people: dict, children: dict | None = None) -> list[Missing
     if not corpus_exists():
         return []
     children = children if children is not None else children_index(people)
-    index = build_index([from_person(p, people, children) for p in people.values()])
 
     # Which pairs each recorded person already hangs off, so a child the tree has is not
     # offered as one it lacks.
@@ -209,17 +241,55 @@ def missing_children(people: dict, children: dict | None = None) -> list[Missing
         pid: (p.get("father"), p.get("mother")) for pid, p in people.items()
     }
 
-    def identify(mention) -> str | None:
-        """Which tree person this mention is, or None. The project's own floor applies."""
-        best = None
-        for other in candidates_for(from_mention(mention), index):
-            m = compare(from_mention(mention), other)
-            if m.graftable and (best is None or m.bits > best[1]):
-                best = (other.person_id, m.bits)
-        return best[0] if best else None
+    if store.is_current():
+        # Asked from the tree side, for the reason act_coverage explains: blocking is
+        # symmetric, so 434 indexed lookups reach the same pairs as a walk over 1.7 million
+        # acts, which took 375 seconds. And it narrows the acts worth examining at all —
+        # a parent here must identify to somebody in the tree, identification requires a
+        # shared blocking key, so an act naming no candidate for anybody cannot qualify and
+        # is never read.
+        resolved: dict[str, tuple[str, float]] = {}
+        acts: dict[str, Act] = {}
+        for p in people.values():
+            me = from_person(p, people, children)
+            # Compared in the same order the scan below uses — mention first — so the two
+            # routes cannot disagree about a pair's score. Only what is graftable earns the
+            # cost of reading its act.
+            kept = []
+            for c in store.candidates_for(me):
+                m = compare(c, me)
+                if not m.graftable:
+                    continue
+                held = resolved.get(c.ref)
+                if held is None or m.bits > held[1]:
+                    resolved[c.ref] = (p["id"], m.bits)
+                kept.append(c)
+            for c in store.attach(kept):
+                if c.mention is not None:
+                    acts[c.mention.act.id] = c.mention.act
+
+        def identify(mention) -> str | None:
+            act = mention.act
+            found = resolved.get(f"{act.id}#{mention.pid}" if act else mention.pid)
+            return found[0] if found else None
+
+        source = list(acts.values())
+    else:
+        index = build_index([from_person(p, people, children) for p in people.values()])
+
+        def identify(mention) -> str | None:
+            """Which tree person this mention is, or None. The project's own floor applies."""
+            best = None
+            for other in candidates_for(from_mention(mention), index):
+                m = compare(from_mention(mention), other)
+                if m.graftable and (best is None or m.bits > best[1]):
+                    best = (other.person_id, m.bits)
+            return best[0] if best else None
+
+        source = load_corpus()
 
     out: list[MissingChild] = []
-    for act in load_corpus():
+    for act in source:
         by_pid = {p.pid: p for p in act.people}
         # Group the act's parent edges by the child they attach to, so a birth act with a
         # father and a mother yields one candidate couple rather than two halves.

@@ -597,6 +597,37 @@ def test_the_index_finds_the_same_candidates_as_a_scan(indexed_corpus):
     assert scan
 
 
+def test_the_stored_candidate_is_the_whole_comparable_candidate():
+    """The index stores each mention as the Candidate the scorer compares, so that scoring
+    never has to rebuild the act it came from. That only holds while the stored fields are
+    ALL the compared fields — a field added to `Candidate` and forgotten in `_CAND_FIELDS`
+    would come back absent, which reads as a weaker match rather than as a bug.
+
+    So this asserts the two lists agree, and that a Candidate survives the round trip.
+    """
+    from dataclasses import fields
+    from familytree import store
+    from familytree.match import Candidate
+
+    compared = {f.name for f in fields(Candidate)} - {"mention", "person_id"}
+    stored = set(store._CAND_FIELDS) | {"kin"}
+    assert compared == stored, (
+        f"stored but not compared: {stored - compared}; "
+        f"compared but not stored: {compared - stored}")
+
+    original = Candidate(
+        ref="t:1#P1", name="Petrus Bundervoet", surname="Bundervoet", given="Petrus",
+        sex="m", birth_year=1879, birth_date="1879-03-19", birth_place="Evergem",
+        death_year=1950, places=["Evergem", "Gent"], context_places=["Aalst"],
+        event_year=1901, occupation="landbouwer", stated_birth_year=True,
+        kin=[("mother", "stockman", frozenset({"livina", "maria"}))],
+    )
+    back = store._load(store._dump(original))
+    for f in store._CAND_FIELDS:
+        assert getattr(back, f) == getattr(original, f), f
+    assert back.kin == original.kin, "a frozenset of forenames must survive JSON"
+
+
 def test_coverage_counts_what_is_HELD_not_what_was_asked_for(indexed_corpus, monkeypatch):
     """A surname's coverage is a fact about the corpus, not about the query log.
 
