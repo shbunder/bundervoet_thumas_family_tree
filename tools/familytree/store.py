@@ -84,7 +84,7 @@ CREATE INDEX freq_lookup ON freq (kind, value);
 _CAND_FIELDS = (
     "ref", "name", "surname", "given", "sex", "birth_year", "birth_date", "birth_place",
     "death_year", "death_date", "places", "context_places", "event_year", "occupation",
-    "stated_birth_year",
+    "stated_birth_year", "birth_before",
 )
 
 
@@ -115,7 +115,9 @@ def _load(blob: str) -> Candidate:
 #
 #   1  the original: blocking keys + candidate fields as of the first index
 #   2  particle-stripped adaptive prefix key; `death_date` on the stored Candidate
-FORMAT = 2
+#   3  `birth_before` on the stored Candidate — the parent-predates-child bound, which is
+#      derived from the act's edges at index time and cannot be recovered from the row later
+FORMAT = 3
 
 
 def signature() -> str:

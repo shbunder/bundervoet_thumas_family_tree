@@ -119,6 +119,13 @@ def point_year(date: str | None) -> int | None:
     return None
 
 
+# The youngest anyone in this material becomes a parent. Deliberately below what is
+# plausible rather than at it: the point is to catch a graft that is off by a GENERATION,
+# never to adjudicate an unusual but real life. `check_data._check_plausibility` had this
+# inline and `match.py` needed the same number, and two copies of a bound is how they drift.
+MIN_PARENT_AGE = 13
+
+
 # How far an "about" year may be out, either way.
 #
 # REASONED, NOT MEASURED, and it should say so. The obvious instrument — compare a stated
@@ -265,6 +272,15 @@ def load_config() -> dict:
         "site": site,
         "groups": site["groups"],
     }
+
+
+def load_forenames() -> dict[str, list[list[str]]]:
+    """Forenames that are one name in another language, split by sex. See the file's own note.
+
+    Returned without the `_comment` key so callers iterate groups and never a paragraph.
+    """
+    raw = _read_json(DATA / "forenames.json")
+    return {k: v for k, v in raw.items() if not k.startswith("_")}
 
 
 def load_person(person_id: str) -> dict:

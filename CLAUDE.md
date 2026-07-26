@@ -230,6 +230,15 @@ person; a *birth* act is indexed under the child, so a sibling is reachable only
 the commune or the parents. `harvest.py place <commune>` is the harvest objective 2
 needs, and the one that points at a whole parish.
 
+**A name in another language was a different name.** Flanders wrote its registers in Latin,
+then French, then Dutch, so one man is Joannes at his baptism, Jean at his marriage and Jan at
+his death — 353,553 mentions, 8% of the corpus, that the scorer read as three unrelated names.
+`data/forenames.json` folds them, and it is **data because it is names**, split by sex so a
+fold can never cross from Ludovicus to Ludovica. It is curated and not learned: the
+masculine/feminine pairs that must never fold are *more* similar than the Latin/vernacular
+pairs that should, so any similarity threshold merges a brother with his sister first. The
+split does not license reading sex off a forename — that stays forbidden.
+
 **Agreement was unweighted.** "Never match on name alone" is right, but it treats
 Janssens and Schalandrijn as the same evidence. `familytree/match.py` scores each
 agreement in **bits of surprise** — `log2(1/frequency)`, counted from the harvested
@@ -387,6 +396,7 @@ data/artifacts/<id>.*   a saved primary document + a record describing it
 data/meta.json          roots, confidence codes
 data/branches.json      surname branch -> its default source id
 data/lineages.json      the surname chains
+data/forenames.json     forenames that are one name in another language, split by sex
 site/labels.json        presentation only, in every language: UI strings, Index
                         headings, footer, and the relation vocabulary. No word the
                         page shows is written anywhere else — see assets/js/i18n.js

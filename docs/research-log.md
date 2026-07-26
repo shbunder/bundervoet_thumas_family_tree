@@ -2530,3 +2530,147 @@ acts they point at; this one asks about everybody. Worth timing again if
 labels, 33 re-scored, 14 unresolved, and one that simply evaporated from every total. That is
 the same failure as a list truncating without saying it truncated, which §60 fixed in four
 reports and then reintroduced here. It is yielded as unresolved now, and 33 + 15 = 48.
+
+## 62. The same name in another language, and a parent born after his own son
+
+The forename vocabulary §61 said was the prerequisite for the last false positive. It is, but
+not for the reason §61 gave — and the table disproved that reason within a minute of existing.
+
+### What the fold is worth
+
+Flanders wrote its registers in Latin, then in French, then in Dutch. One man is **Joannes** at
+his baptism, **Jean** at his marriage and **Jan** at his death, and to `match.py` those were
+three unrelated names. Counted in the corpus:
+
+| | mentions |
+|---|---|
+| maria + marie | 449,453 |
+| joannes + jan + jean | **353,553** — 8% of every person the corpus names |
+| franciscus + frans + francois | 278,947 |
+| petrus + pieter + pierre | 232,893 |
+| josephus + joseph + jozef | 197,992 |
+
+`data/forenames.json` folds 223 tokens into 84 groups. It is **data because it is names** — the
+surname phonetic rules are regex patterns containing none — which also makes it greppable,
+diffable, correctable one line at a time, and a score explainable by citing a line.
+
+It is **split by sex, and that is the safety rail**, not a nicety. A fold can never cross from
+Ludovicus to Ludovica *by construction*, because it only ever looks inside one block. And the
+split does not license reading sex off a forename: the data model forbids that and it stays
+forbidden. Nothing consults these blocks to answer "was this person a woman".
+
+### Why it cannot be built heuristically
+
+The question was whether to learn the table as occurrences turn up. No, and the measurement is
+unusually clean:
+
+| fold these | | never fold these | |
+|---|---|---|---|
+| Henricus / Hendrik | 0.67 | Ludovicus / **Ludovica** | 0.82 |
+| Gustavus / Gustaaf | 0.67 | Franciscus / **Francisca** | 0.84 |
+| Joannes / Jan | 0.60 | Augustinus / **Augustina** | 0.84 |
+| Ludovicus / Lodewijk | 0.35 | Josephus / **Josepha** | 0.80 |
+| Theodorus / Dirk | 0.31 | Henricus / **Henrica** | 0.80 |
+
+The distributions are **inverted**. Every pair that must never fold is more similar than every
+pair that should, so no threshold separates them — and what a threshold reaches for first is a
+brother and his sister, in a tree that leans on a sex veto. The other reading of "learn it" —
+record the pair when a match confirms it — is the circularity this project is built against:
+that equivalence would not be independent of the match that taught it, so it manufactures a
+second identifier out of the first, and it does so on exactly the borderline pairs.
+
+The corpus's job here is to say **which pairs are worth writing down**, never to decide them.
+Every group above was checked against the harvest before being written, and the ones with no
+attestation (`agnetha`, `cathelijne`) were dropped.
+
+The first draft contained exactly the mistake the design exists to prevent: `corneille`, the
+French masculine Cornelius, was also placed in the feminine `cornelia` group. `check_data` now
+rejects a token appearing on both sides of the partition, and that is an **error** rather than a
+warning — a bad entry silently changes what the scorer believes agrees, across the whole corpus
+at once, and there is no judgement to be made about a duplicate.
+
+### The fold immediately disproved §61's plan
+
+§61 predicted the last false positive would fall to a forename-*disagreement* veto: `joannes_vi2`
+was graftable while the forenames "actively disagree", Joannes against *Charles Thomas Jean*.
+With the table in place, **Jean folds to Joannes** — they agree, the pair's score went *up* from
+27.0 to 29.7 bits, and the veto §61 proposed would never have fired. The label's own reasoning,
+"different given name entirely", was wrong as stated even though its verdict was right.
+
+What actually distinguishes them was in the act all along. It states that Charles Thomas Jean
+Van Iseghem is **father of** Alphonse, **born 1856**; our Joannes was born **1852**. A man born
+in 1852 is not the father of a man born in 1856, the act asserts both halves, and nothing read
+it. So a mention named as a parent in a record that dates the child now carries an upper bound
+on its own birth — `MIN_PARENT_AGE` below the child's year, one definition now shared with
+`check_data`, which had it inline.
+
+It vetoes **without** `stated_birth_year`, deliberately. That flag exists to stop a year computed
+from a claimed age from vetoing; this is the record asserting a relationship, which is stronger.
+And the mentions it catches carry no date of their own at all, which is precisely why nothing
+else could reach them.
+
+### The result
+
+**Precision 100%, recall 100%, on 33 re-scored pairs** — 24 confirmed matches grafted, 9
+refutations correctly rejected, no false positive and no false negative. The number is the same
+as the one this project reported for months; the instrument behind it is not. That figure was
+computed over 8 easy pairs and excluded every rival-candidate rejection in the file. It now
+includes all of them.
+
+Still 25 scoreable pairs, so it is not a precision estimate to quote with a decimal point.
+
+### And the validator was broken for the length of this section
+
+`_check_forenames` imported `normalise_key` from `people`, where it lives in `corpus`, so
+`check_data.py` crashed on every invocation — and the suite stayed green, because nothing called
+the validator's own functions. The crash was invisible for a second reason worth recording: the
+run that should have caught it was piped through `grep -E "^warn|^error|OK —"`, which matches no
+line of a traceback. Silence is not success. There is a smoke test now that calls each check
+against the real tree.
+
+One more self-inflicted wound, kept here because the shape recurs. Verifying the new
+cross-partition check was done by editing `data/forenames.json` in place and restoring it
+afterwards — and the validator outran the 120-second timeout, so the restore never ran and left
+the table minified with a deliberately corrupt group still in it. The file is new and untracked,
+so git could not restore it either. Test a validator against a temp copy; never against the
+data.
+
+## 63. Repointing the retracted ruling, and a rival it exposed
+
+§54 retracted the `appolonia_vandenbemd77` record after reading the act; the ruling that
+justified the retraction was left naming a person who no longer existed, so it has been
+uncountable ever since. Its evidence was never in doubt — the act was read directly — and what
+it denies is that this act's parents are `hendrik_vdb` × `coekelberghs`. That is two pairwise
+rulings, so it is now recorded as two, with the evidence intact and the stale trailing sentence
+about a record that "needs correcting or removing" updated, because it has since been removed.
+49 labels, 35 re-scored, and no orphan.
+
+One half is the pair the shadowing veto let through while `same_surname` was being rebound by
+the kin loop (§60) — `coekelberghs` against Maria Anna Vandenhoven — and it now scores
+REJECTED, which pins that regression in the gold standard rather than only in a unit test.
+
+**The other half is a false positive, and it is not obviously a defect.** `hendrik_vdb` against
+Willem Edouard Vandenbemden reaches graftable on surname plus **Everberg as birthplace** — two
+independent classes, which is exactly what rule 1 of the charter asks for. The parent bound from
+§62 does not help: Willem Edouard is father of a child born 1877, so he must be born by 1864,
+and our Henricus Augustinus born 1849 satisfies that comfortably. Nor is the spouse a safe
+veto — the act's mother is Vandenhoven where ours is Coekelberghs, but a remarriage is one
+man's two marriages, which is why `_KIN_BUCKET` deliberately puts spouse and former spouse
+together.
+
+What refuted it was **external**: Willem Edouard died at Sint-Stevens-Woluwe in 1891 and had a
+son Frans born at Kraainem in 1872, a separate documented life across two further acts. Nothing
+in this act says so.
+
+So this is the hardest class of case — a rival of the same surname in the same commune — and
+the scorer surfacing it is the system working, not failing. Which exposes a tension in the
+measurement rather than in the scorer: `evaluate.py` counts `graftable` as "would graft", while
+`docs/method/linkage.md` says the scorer "does not decide. It ranks, and it vetoes. Everything
+surviving is a candidate for the verifier to try to refute." Under that reading a refuted-but-
+graftable pair is a shortlist entry that did its job, and counting it as a false graft
+understates precision by conflating the two.
+
+Left as it is, deliberately. Redefining the metric so the number improves is the same move as
+excluding the hard rejections was in §61, and that is how this project got a 100% it had not
+earned. **Precision 96.0%, recall 100%, over 35 pairs** — and the one disagreement is a
+documented rival, not a wrong graft waiting to happen.

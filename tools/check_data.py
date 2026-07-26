@@ -18,9 +18,9 @@ from familytree.frontmatter import FrontmatterError  # noqa: E402
 from familytree.landing import stale_reason  # noqa: E402
 from familytree.match import build_index, candidates_for, compare, from_person  # noqa: E402
 from familytree.people import (  # noqa: E402
-    ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, ROOT, SPOUSE_FIELDS, SPOUSE_KINDS,
-    given_names, is_approximate, is_valid_date, load_artifacts, load_config, load_person,
-    point_year, sort_key,
+    ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, MIN_PARENT_AGE, ROOT, SPOUSE_FIELDS,
+    SPOUSE_KINDS, given_names, is_approximate, is_valid_date, load_artifacts, load_config,
+    load_person, point_year, sort_key,
 )
 
 # A marriage detail may no longer carry a date or say which marriage in a sequence it
@@ -292,6 +292,7 @@ def main() -> int:
     _check_duplicates(people, children_of)
     _check_plausibility(people, children_of)
     _check_search_log(people, sites, pages)
+    _check_forenames()
     _check_labels(people)
     _check_artifacts(people, source_ids)
 
@@ -410,7 +411,7 @@ def _check_plausibility(people, children_of):
             # A father can father a child until he dies; a mother cannot. Split, because
             # a single bound wide enough for both catches neither.
             upper = 50 if is_mother else 75
-            if age < 13 - give or age > upper + give:
+            if age < MIN_PARENT_AGE - give or age > upper + give:
                 role = "mother" if is_mother else "father"
                 warnings.append(
                     f"{pid}.md: is {role} of {cid} at age {age} — a generation may be missing")
@@ -478,6 +479,42 @@ def _check_search_log(people, sites, pages):
         return
     for problem in reg.registry_problems(sites, pages, log, people, load_artifacts()):
         fail(problem)
+
+
+def _check_forenames():
+    """`data/forenames.json` — the names that are one name in another language.
+
+    Errors, not warnings, unlike the label checks: a bad entry here silently changes what the
+    scorer believes agrees, across the whole corpus at once, and there is no judgement to be
+    made about a duplicate. The cross-block check earned its place immediately — it catches
+    `corneille`, the French masculine Cornelius, which the first draft of the table also put
+    into the feminine `cornelia` group.
+    """
+    from familytree.corpus import normalise_key  # noqa: PLC0415
+    from familytree.match import _NOT_A_FORENAME  # noqa: PLC0415
+    from familytree.people import load_forenames  # noqa: PLC0415
+    try:
+        blocks = load_forenames()
+    except FileNotFoundError:
+        return fail("data/forenames.json is missing")
+    if set(blocks) != {"m", "f"}:
+        fail(f'data/forenames.json: blocks must be exactly "m" and "f", not {sorted(blocks)}')
+    where: dict[str, str] = {}
+    for sex, groups in blocks.items():
+        for group in groups:
+            if len(group) < 2:
+                fail(f"data/forenames.json: {sex} group {group} has nothing to fold to")
+            for token in group:
+                if normalise_key(token) != token:
+                    fail(f'data/forenames.json: "{token}" is not normalised — '
+                         f'write it as "{normalise_key(token)}"')
+                if token in _NOT_A_FORENAME:
+                    fail(f'data/forenames.json: "{token}" is a particle, not a forename')
+                if token in where:
+                    fail(f'data/forenames.json: "{token}" appears in {where[token]} and in '
+                         f"{sex} {group[0]} — a name folds one way or it folds ambiguously, "
+                         "and across the sexes it merges a brother with his sister")
+                where[token] = f"{sex} {group[0]}"
 
 
 def _check_labels(people):

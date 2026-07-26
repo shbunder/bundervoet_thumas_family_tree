@@ -609,6 +609,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#the-same-name-in-another-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The same name in another language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#every-veto-reads-what-a-date-rules-out-never-what-it-says" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1098,6 +1109,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#the-same-name-in-another-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The same name in another language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#every-veto-reads-what-a-date-rules-out-never-what-it-says" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1273,7 +1295,61 @@ new information every time — which is why it is the classic second identifier.
   orders and a possibility test that is not symmetric is not a possibility test.</li>
 <li><strong>Implied lifespan over 110 years.</strong> Kills the grandfather-grafted-onto-grandson case,
   which recurs because the forename returns every second generation.</li>
+<li><strong>A parent born after their own child.</strong> An act that says "X is the father of Y" and dates
+  Y has bounded X's birth, and reading that bound is free. It vetoes even where the parent
+  mention carries no date at all — which is the case it exists for, and the case nothing else
+  can reach. A Brussels marriage of 1888 naming Charles Thomas Jean Van Iseghem as father of a
+  groom born 1856 scored 29.7 bits against a Joannes Van Iseghem born 1852, on surname,
+  forename and commune, with no veto able to fire. The act states both halves.</li>
 </ul>
+<h3 id="the-same-name-in-another-language">The same name in another language<a class="headerlink" href="#the-same-name-in-another-language" title="Permanent link">&para;</a></h3>
+<p>Flanders wrote its registers in Latin, then in French, then in Dutch. So one man is <strong>Joannes</strong>
+at his baptism, <strong>Jean</strong> at his marriage and <strong>Jan</strong> at his death, and until
+<a href="../data-model.html"><code>data/forenames.json</code></a> existed those were three unrelated names. It is not a
+small effect: <code>joannes</code> + <code>jan</code> + <code>jean</code> is 353,553 mentions, <strong>8% of every person the corpus
+names</strong>; <code>petrus</code> + <code>pieter</code> + <code>pierre</code> is 232,893; <code>maria</code> + <code>marie</code> is 449,453.</p>
+<p>The table is <strong>data, not code</strong> — the surname phonetic rules are regex patterns containing no
+names, and these are names. It is also <strong>curated, not learned</strong>, and that is the interesting
+part. Measured over the obvious candidates:</p>
+<table>
+<thead>
+<tr>
+<th>fold these</th>
+<th></th>
+<th>never fold these</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Henricus / Hendrik</td>
+<td>0.67</td>
+<td>Ludovicus / <strong>Ludovica</strong></td>
+<td>0.82</td>
+</tr>
+<tr>
+<td>Joannes / Jan</td>
+<td>0.60</td>
+<td>Franciscus / <strong>Francisca</strong></td>
+<td>0.84</td>
+</tr>
+<tr>
+<td>Ludovicus / Lodewijk</td>
+<td>0.35</td>
+<td>Augustinus / <strong>Augustina</strong></td>
+<td>0.84</td>
+</tr>
+</tbody>
+</table>
+<p>The distributions are <strong>inverted</strong>, so no similarity threshold separates them — and the first
+thing a threshold reaches for is a brother and his sister, in a tree that leans on a sex veto.
+Learning the pairs from confirmed matches is the other trap: that equivalence would not be
+independent of the match that taught it, which manufactures a second identifier out of the
+first and inflates confidence on exactly the borderline pairs.</p>
+<p>So the table is split by sex, and a fold can never cross the partition <strong>by construction</strong>
+rather than by a check. The split does not license reading sex off a forename — the data model
+forbids that and it stays forbidden. A folded agreement is scored below an exact one, the same
+way a phonetic surname variant is, because a fold is a claim that could be wrong.</p>
 <h3 id="every-veto-reads-what-a-date-rules-out-never-what-it-says">Every veto reads what a date <em>rules out</em>, never what it says<a class="headerlink" href="#every-veto-reads-what-a-date-rules-out-never-what-it-says" title="Permanent link">&para;</a></h3>
 <p>The <a href="../data-model.html">date grammar</a> has forms for a year, an <em>about</em>, a <em>before</em>, an
 <em>after</em> and a <em>between</em>, and each answers two different questions:</p>

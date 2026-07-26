@@ -18,6 +18,7 @@ data/artifacts/<id>.*   a saved primary document + a record describing it
 data/meta.json          roots, confidence codes
 data/branches.json      surname branch → its default source id
 data/lineages.json      the surname chains
+data/forenames.json     forenames that are one name in another language, split by sex
 ```
 
 Nothing in `data/` is executable. It is JSON and Markdown, readable by any tool without a

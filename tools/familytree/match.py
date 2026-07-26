@@ -31,7 +31,9 @@ from .corpus import (
     Frequencies, Mention, frequencies, normalise_key, population, stated_kin,
     surname_population_count,
 )
-from .people import DAY, family_key, given_names, point_year, year_of, year_span
+from .people import (
+    DAY, MIN_PARENT_AGE, family_key, given_names, point_year, year_of, year_span,
+)
 
 # ---------- phonetics ----------
 # Flemish orthography drifted for centuries and the same family is spelled several ways
@@ -97,6 +99,11 @@ class Candidate:
     # Stated, so it can be told apart from a year implied by an age in an act. Only a
     # stated year is strong enough to veto on.
     stated_birth_year: bool = False
+    # The latest year this person can have been born, when the ACT ITSELF makes them the
+    # parent of a child whose birth year it also gives. Structural rather than arithmetic on
+    # a claimed age, which is why it may veto where an implied year may not: the act asserts
+    # the edge, so the bound is as strong as the record.
+    birth_before: int | None = None
     # The relatives each side names, as (bucket, surname key, forename keys). Two people
     # who agree on a mother's maiden name are not two people who happen to share a
     # surname; this is what lets the scorer tell those apart.
@@ -135,6 +142,78 @@ def given_keys(text: str | None) -> frozenset[str]:
     slipping through here is indistinguishable from evidence downstream."""
     return frozenset(g for g in (normalise_key(x) for x in (text or "").split())
                      if g and g not in _NOT_A_FORENAME)
+
+
+# ---------- the same name in another language ----------
+# Flanders wrote its registers in Latin, then French, then Dutch, so one man is Joannes at his
+# baptism, Jean at his marriage and Jan at his death. Those were three unrelated names here.
+#
+# The table is `data/forenames.json`, and it is data rather than code for the reason the whole
+# project keeps names out of the tooling: these are names. It is curated rather than learned
+# because no similarity measure can do it — the Latin masculine/feminine pairs that must never
+# fold are MORE similar than the Latin/vernacular pairs that should, so any threshold merges a
+# brother with his sister first. See that file's own note.
+
+
+@lru_cache(maxsize=1)
+def _forename_groups() -> dict[str, str]:
+    """token -> the canonical token of its group. Loaded once; the file cannot change mid-run.
+
+    Sex-partitioned in the file, and flattened here WITHOUT the sex, because nothing may read
+    this to decide whether someone was a woman — the data model forbids taking sex from a
+    forename and that stays forbidden. The partition exists so a fold cannot cross it; the
+    canonical form is prefixed by block so that two same-spelled names in different blocks
+    still never unify.
+    """
+    from .people import load_forenames
+    out: dict[str, str] = {}
+    for sex, groups in load_forenames().items():
+        for group in groups:
+            canon = f"{sex}:{group[0]}"
+            for token in group:
+                out[token] = canon
+    return out
+
+
+def canonical_given(token: str) -> str:
+    """The token's group, or the token itself when it belongs to none."""
+    return _forename_groups().get(token, token)
+
+
+# A folded agreement is real evidence and weaker than an exact one, exactly as a phonetic
+# surname variant is — and for the same reason: the fold is a claim that could be wrong.
+FOLD_FACTOR = 0.6
+
+
+def given_overlap(a: frozenset[str], b: frozenset[str]) -> tuple[frozenset[str], frozenset[str]]:
+    """(agreeing exactly, agreeing only after folding). Kept apart so the second can be
+    priced below the first instead of being waved through as though it were the same.
+
+    The second set holds CANONICAL tokens, which is why pricing goes through
+    `_folded_bits` — a canonical form like "m:joannes" is not a spelling anybody wrote and
+    is not in the corpus frequency table, so looking it up there scores a silent zero.
+    """
+    exact = a & b
+    canon_a = {canonical_given(g) for g in a - exact}
+    canon_b = {canonical_given(g) for g in b - exact}
+    return exact, frozenset(canon_a & canon_b)
+
+
+def _folded_bits(folded: frozenset[str], a: frozenset[str], b: frozenset[str],
+                 freq: Frequencies) -> float:
+    """What a folded forename agreement is worth.
+
+    Priced off the COMMONEST spelling in the group either side actually used, because a fold
+    cannot be worth more than the least surprising form it unifies — Joannes/Jan should earn
+    what Jan earns, not what a rare Latin spelling would. Then discounted again for being a
+    fold rather than an agreement.
+    """
+    total = 0.0
+    for canon in folded:
+        counts = [freq.givens.get(g, 0) for g in (a | b) if canonical_given(g) == canon]
+        w = _bits(max(counts), freq.n, 8.0) if freq.n and counts else _NO_CORPUS["given"]
+        total += w * FOLD_FACTOR
+    return total
 
 
 def _kin_entry(bucket: str, name: str, surname: str) -> tuple[str, str, frozenset[str]] | None:
@@ -202,6 +281,30 @@ def from_person(p: dict, people: dict | None = None, children: dict | None = Non
     )
 
 
+def _parent_bound(m: Mention, act) -> int | None:
+    """The latest year a mention can have been born, from the act's own parent edges.
+
+    An act that says "X is the father of Y" and gives Y's birth year has bounded X's, and
+    nothing was reading it. That is what let a Brussels 1888 marriage — where Charles Thomas
+    Jean Van Iseghem is father of a groom born 1856 — reach `graftable` against a Joannes Van
+    Iseghem born 1852. A man born in 1852 is not the father of a man born in 1856, the act
+    states both halves, and the pair still scored 29.7 bits on surname, forename and commune.
+    """
+    if act is None:
+        return None
+    bound = None
+    for e in act.edges:
+        if e.get("type") not in ("father", "mother") or e.get("parent") != m.pid:
+            continue
+        child = next((o for o in act.people if o.pid == e.get("child")), None)
+        year = child.birth_year or (child.implied_birth_year if child else None) if child else None
+        if not year:
+            continue
+        latest = year - MIN_PARENT_AGE
+        bound = latest if bound is None else min(bound, latest)
+    return bound
+
+
 def from_mention(m: Mention) -> Candidate:
     act = m.act
     kin = [_kin_entry(_KIN_BUCKET[rel], other.name, other.surname)
@@ -229,6 +332,7 @@ def from_mention(m: Mention) -> Candidate:
         event_year=act.year if act else None,
         occupation=m.occupation,
         stated_birth_year=bool(m.birth_year),
+        birth_before=_parent_bound(m, act),
         kin=[k for k in kin if k],
         mention=m,
     )
@@ -430,11 +534,19 @@ def _asserts(date: str | None, year: int | None) -> int | None:
     return point_year(date) if date else year
 
 
-def _permits(date: str | None, year: int | None) -> tuple[int | None, int | None]:
-    """The years to VETO on: everything the date leaves open, inclusive both ends."""
+def _permits(date: str | None, year: int | None,
+             before: int | None = None) -> tuple[int | None, int | None]:
+    """The years to VETO on: everything the date leaves open, inclusive both ends.
+
+    `before` narrows the top end from what the record structurally implies — being named as
+    the parent of a child the same act dates. It applies even where no date was given at all,
+    which is the case it exists for.
+    """
     lo, hi = year_span(date)
     if lo is None and hi is None and year:
-        return (year, year)
+        lo = hi = year
+    if before is not None:
+        hi = before if hi is None else min(hi, before)
     return (lo, hi)
 
 
@@ -463,7 +575,8 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     # record saying "some year in the 1920s" be REJECTED for disagreeing with 1925.
     a_born, b_born = _asserts(a.birth_date, a.birth_year), _asserts(b.birth_date, b.birth_year)
     a_died, b_died = _asserts(a.death_date, a.death_year), _asserts(b.death_date, b.death_year)
-    a_birth, b_birth = _permits(a.birth_date, a.birth_year), _permits(b.birth_date, b.birth_year)
+    a_birth = _permits(a.birth_date, a.birth_year, a.birth_before)
+    b_birth = _permits(b.birth_date, b.birth_year, b.birth_before)
     a_death, b_death = _permits(a.death_date, a.death_year), _permits(b.death_date, b.death_year)
     agree: list[tuple[str, str, float]] = []
     conflict: list[str] = []
@@ -488,9 +601,11 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
         add("name", label, w if same_surname else w * 0.6)
 
     ga, gb = given_keys(a.given), given_keys(b.given)
+    exact_given, folded_given = given_overlap(ga, gb)
     given_bits = 0.0
-    for g in ga & gb:
+    for g in exact_given:
         given_bits += _bits(freq.givens.get(g, 0), freq.n, 8.0) if freq.n else _NO_CORPUS["given"]
+    given_bits += _folded_bits(folded_given, ga, gb, freq)
     if given_bits:
         # A forename is only half a name. On its own it matched Henricus Josephus BOSTYN
         # to Henricus Amandus MOMBAERTS, Joanna KEIRSEBILCK to Joanna Maria GOORIS and
@@ -499,7 +614,9 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
         # forename plus a shared year is worth noticing; it cannot be one of the two
         # independent identifiers unless the surname agrees too.
         cls = "name" if (same_surname or same_phonetic) else "name-forename"
-        add(cls, f"forename{'s' if len(ga & gb) > 1 else ''}", min(given_bits, 10.0))
+        n = len(exact_given) + len(folded_given)
+        how = "" if not folded_given else "~" if not exact_given else " (one folded)"
+        add(cls, f"forename{'s' if n > 1 else ''}{how}", min(given_bits, 10.0))
 
     # --- date ---
     # A day-level agreement between two independently written records is close to
@@ -577,12 +694,16 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
         for o_bucket, o_surname, o_givens in b.kin:
             if bucket != o_bucket:
                 continue
-            shared_givens = givens & o_givens
+            # Folded here too. A mother recorded as Joanna in the tree and Jeanne in a French
+            # act is the same woman, and she is the classic second identifier.
+            exact_kin, folded_kin = given_overlap(givens, o_givens)
+            shared_givens = exact_kin | folded_kin
             kin_surname_agrees = bool(surname_key) and surname_key == o_surname
             if not shared_givens and not kin_surname_agrees:
                 continue
             bits = sum(_bits(freq.givens.get(g, 0), freq.n, 8.0) if freq.n else _NO_CORPUS["given"]
-                       for g in shared_givens)
+                       for g in exact_kin)
+            bits += _folded_bits(folded_kin, givens, o_givens, freq)
             # A father shares his son's surname, so counting it again would be counting
             # the principal's own name twice. A mother's maiden name is new information
             # every time, which is why it is the classic second identifier.
@@ -616,6 +737,17 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     # is the range saying it does not know, which is the opposite of disagreeing.
     if a.stated_birth_year and b.stated_birth_year and _cannot_meet(a_birth, b_birth, slack=2):
         conflict.append(f"stated birth years {_show(a_birth)} vs {_show(b_birth)}")
+    # A PARENT MUST PREDATE THEIR CHILD, and where an act states the edge and dates the child
+    # it has said so. Applies without `stated_birth_year` on purpose: that flag exists to stop
+    # a year computed from a claimed age from vetoing, and this is not that — it is the record
+    # asserting a relationship. Only one side needs the bound, which is the whole point, since
+    # the mentions this catches carry no date of their own at all.
+    elif ((a.birth_before is not None or b.birth_before is not None)
+            and _cannot_meet(a_birth, b_birth, slack=2)):
+        who = a if a.birth_before is not None else b
+        conflict.append(
+            f"named as a parent in a record that dates the child, so born by "
+            f"{who.birth_before}; the other is born {_show(b_birth if who is a else a_birth)}")
     if (a.birth_date and b.birth_date and DAY.match(a.birth_date) and DAY.match(b.birth_date)
             and a.birth_date != b.birth_date):
         conflict.append(f"birth dates {a.birth_date} vs {b.birth_date}")

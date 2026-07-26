@@ -138,6 +138,41 @@ Scoring ranks; vetoes reject. Defaulting to rejection is the whole posture.
   orders and a possibility test that is not symmetric is not a possibility test.
 - **Implied lifespan over 110 years.** Kills the grandfather-grafted-onto-grandson case,
   which recurs because the forename returns every second generation.
+- **A parent born after their own child.** An act that says "X is the father of Y" and dates
+  Y has bounded X's birth, and reading that bound is free. It vetoes even where the parent
+  mention carries no date at all — which is the case it exists for, and the case nothing else
+  can reach. A Brussels marriage of 1888 naming Charles Thomas Jean Van Iseghem as father of a
+  groom born 1856 scored 29.7 bits against a Joannes Van Iseghem born 1852, on surname,
+  forename and commune, with no veto able to fire. The act states both halves.
+
+### The same name in another language
+
+Flanders wrote its registers in Latin, then in French, then in Dutch. So one man is **Joannes**
+at his baptism, **Jean** at his marriage and **Jan** at his death, and until
+[`data/forenames.json`](../data-model.md) existed those were three unrelated names. It is not a
+small effect: `joannes` + `jan` + `jean` is 353,553 mentions, **8% of every person the corpus
+names**; `petrus` + `pieter` + `pierre` is 232,893; `maria` + `marie` is 449,453.
+
+The table is **data, not code** — the surname phonetic rules are regex patterns containing no
+names, and these are names. It is also **curated, not learned**, and that is the interesting
+part. Measured over the obvious candidates:
+
+| fold these | | never fold these | |
+|---|---|---|---|
+| Henricus / Hendrik | 0.67 | Ludovicus / **Ludovica** | 0.82 |
+| Joannes / Jan | 0.60 | Franciscus / **Francisca** | 0.84 |
+| Ludovicus / Lodewijk | 0.35 | Augustinus / **Augustina** | 0.84 |
+
+The distributions are **inverted**, so no similarity threshold separates them — and the first
+thing a threshold reaches for is a brother and his sister, in a tree that leans on a sex veto.
+Learning the pairs from confirmed matches is the other trap: that equivalence would not be
+independent of the match that taught it, which manufactures a second identifier out of the
+first and inflates confidence on exactly the borderline pairs.
+
+So the table is split by sex, and a fold can never cross the partition **by construction**
+rather than by a check. The split does not license reading sex off a forename — the data model
+forbids that and it stays forbidden. A folded agreement is scored below an exact one, the same
+way a phonetic surname variant is, because a fold is a claim that could be wrong.
 
 ### Every veto reads what a date *rules out*, never what it says
 

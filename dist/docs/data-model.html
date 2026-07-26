@@ -1101,6 +1101,7 @@ data/artifacts/&lt;id&gt;.*   a saved primary document + a record describing it
 data/meta.json          roots, confidence codes
 data/branches.json      surname branch → its default source id
 data/lineages.json      the surname chains
+data/forenames.json     forenames that are one name in another language, split by sex
 </code></pre></div>
 <p>Nothing in <code>data/</code> is executable. It is JSON and Markdown, readable by any tool without a
 JavaScript engine — <code>jq '.branches' data/branches.json</code> works, and so does <code>grep</code> over the

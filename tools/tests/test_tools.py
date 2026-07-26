@@ -1089,6 +1089,147 @@ def test_the_commune_an_act_was_drawn_up_in_cannot_anchor_a_graft():
     assert m.independent < 2, "the act's commune must not supply a second identifier"
 
 
+def test_the_same_name_in_another_language_still_agrees():
+    """Flanders wrote its registers in Latin, then French, then Dutch, so one man is Joannes
+    at his baptism, Jean at his marriage and Jan at his death — three unrelated names until
+    `data/forenames.json` existed. It is not a small effect: joannes + jan + jean is 353,553
+    mentions, 8% of every person the corpus names.
+
+    The tree records him as Henricus Augustinus Vandenbemden and every act calls him Hendrik
+    August, which is why three of his labels had to be resolved on a stated role instead.
+    """
+    from familytree.match import canonical_given, given_keys, given_overlap
+    for latin, vernacular in [("Henricus", "Hendrik"), ("Joannes", "Jan"), ("Joannes", "Jean"),
+                              ("Ludovicus", "Lodewijk"), ("Guilielmus", "Willem"),
+                              ("Joanna", "Jeanne"), ("Maria", "Marie")]:
+        exact, folded = given_overlap(given_keys(latin), given_keys(vernacular))
+        assert folded and not exact, f"{latin} should fold to {vernacular}, not match exactly"
+
+    # A name in no group is its own canonical form, so nothing unrelated is unified.
+    assert canonical_given("schalandrijn") == "schalandrijn"
+    assert not any(given_overlap(given_keys("Judocus"), given_keys("Petrus")))
+
+
+def test_every_validator_check_at_least_runs():
+    """A smoke test, and it exists because one was needed. `_check_forenames` imported
+    `normalise_key` from `people` where it lives in `corpus`, so `check_data.py` crashed on
+    every invocation — and the suite stayed green, because nothing here calls the validator's
+    own functions. Worse, the crash was invisible: the run that should have caught it was
+    piped through `grep -E "^warn|^error|OK"`, which matches no line of a traceback. Silence is
+    not success.
+
+    This asserts only that each check is callable against the real tree, not what it concludes;
+    the conclusions have their own tests. An ImportError or a signature change fails here.
+    """
+    import check_data
+    from familytree.people import load_config, load_people
+    people = load_people(load_config()["roster"])
+    children: dict[str, list[str]] = {}
+    for pid, p in people.items():
+        for parent in (p.get("father"), p.get("mother")):
+            if parent:
+                children.setdefault(parent, []).append(pid)
+    check_data._check_forenames()
+    check_data._check_plausibility(people, children)
+    check_data._check_labels(people)
+    assert not check_data.errors, check_data.errors
+
+
+def test_the_table_is_checked_for_the_mistake_that_was_actually_made(tmp_path, monkeypatch):
+    """A cross-block token is the one error that matters, and the first draft of the table
+    contained it: `corneille` is the French masculine Cornelius and it had been put into the
+    feminine `cornelia` group as well. The sex partition makes a fold safe only if nothing
+    appears on both sides of it.
+
+    Checked here against a temp file rather than by editing the real one — the first attempt to
+    verify this mutated `data/forenames.json` in place, and when the validator outran its
+    timeout the restore never ran and left the table minified with the bad group still in it.
+    """
+    import json
+    from familytree import people as ppl
+    bad = {"m": [["cornelius", "corneille"]], "f": [["cornelia", "corneille"]]}
+    path = tmp_path / "forenames.json"
+    path.write_text(json.dumps(bad), encoding="utf-8")
+    monkeypatch.setattr(ppl, "DATA", tmp_path)
+    blocks = ppl.load_forenames()
+    seen: dict[str, str] = {}
+    clashes = [t for sex, gs in blocks.items() for g in gs for t in g
+               if t in seen or seen.setdefault(t, sex) is None]
+    assert "corneille" in clashes, "a token on both sides of the partition must be caught"
+
+
+def test_the_fold_can_never_cross_the_sexes():
+    """The whole reason the table is split by sex, and the reason it cannot be learned.
+    Measured over the obvious candidates, the Latin masculine/feminine pairs that must NEVER
+    fold are MORE similar than the Latin/vernacular pairs that should — Ludovicus~Ludovica
+    0.82 against Ludovicus~Lodewijk 0.35 — so any similarity threshold merges a brother with
+    his sister first, in a tree that leans on a sex veto. The partition makes that impossible
+    by construction rather than by a check."""
+    from familytree.match import given_keys, given_overlap
+    for m, f in [("Ludovicus", "Ludovica"), ("Franciscus", "Francisca"),
+                 ("Henricus", "Henrica"), ("Josephus", "Josepha"),
+                 ("Joannes", "Joanna"), ("Jean", "Jeanne"), ("Augustinus", "Augustina")]:
+        exact, folded = given_overlap(given_keys(m), given_keys(f))
+        assert not exact and not folded, f"{m} must never fold to {f}"
+
+
+def test_a_folded_forename_is_worth_less_than_an_exact_one():
+    """A fold is a claim that could be wrong, so it is discounted exactly as a phonetic
+    surname variant is."""
+    from familytree.match import compare
+    exact = compare(_cand(surname="Bostyn", given="Joannes"),
+                    _cand(ref="y", surname="Bostyn", given="Joannes"))
+    folded = compare(_cand(surname="Bostyn", given="Joannes"),
+                     _cand(ref="y", surname="Bostyn", given="Jan"))
+    assert folded.bits < exact.bits
+    assert folded.bits > compare(_cand(surname="Bostyn", given="Joannes"),
+                                 _cand(ref="y", surname="Bostyn", given="Petrus")).bits
+
+
+def test_a_parent_cannot_be_born_after_their_own_child():
+    """An act that says "X is the father of Y" and dates Y has bounded X's birth, and nothing
+    read it. That let a Brussels 1888 marriage — Charles Thomas Jean Van Iseghem, father of a
+    groom born 1856 — reach graftable against a Joannes Van Iseghem born 1852, at 29.7 bits on
+    surname, forename and commune. The act states both halves.
+
+    It vetoes without `stated_birth_year`, and that is deliberate: the flag exists to stop a
+    year computed from a claimed age from vetoing, and this is the record asserting a
+    relationship instead. The mentions it catches carry no date of their own at all.
+    """
+    from familytree.corpus import normalise_act
+    from familytree.match import compare, from_mention, from_person
+    act = normalise_act({
+        "id": "t:1", "archive": "t", "archive_org": "T",
+        "record": {
+            "Event": {"EventType": "Huwelijk", "EventDate": {"Year": "1888"},
+                      "EventPlace": {"Place": "Brussel"}},
+            "Person": [
+                {"@pid": "P1", "PersonName": {"PersonNameFirstName": "Alphonse",
+                                              "PersonNameLastName": "Van Iseghem"},
+                 "BirthDate": {"Year": "1856"}},
+                {"@pid": "P2", "PersonName": {"PersonNameFirstName": "Charles Thomas Jean",
+                                              "PersonNameLastName": "Van Iseghem"}},
+            ],
+            "RelationEP": [
+                {"PersonKeyRef": "P1", "EventKeyRef": "E1", "RelationType": "Bruidegom"},
+                {"PersonKeyRef": "P2", "EventKeyRef": "E1",
+                 "RelationType": "Vader van de bruidegom"},
+            ],
+        },
+    })
+    dad = from_mention(next(m for m in act.people if m.pid == "P2"))
+    assert dad.birth_before == 1856 - 13, "the bound comes off the child the act dates"
+
+    ours = from_person({"id": "x", "name": "Joannes Van Iseghem", "surname": "Van Iseghem",
+                        "birth": {"date": "1852", "place": "Oostende"}})
+    assert compare(ours, dad).conflict, "born 1852 is not the father of a man born 1856"
+
+    # The half that must not break: a father comfortably older than the child he is named for.
+    older = from_person({"id": "y", "name": "Joannes Van Iseghem", "surname": "Van Iseghem",
+                         "birth": {"date": "1820", "place": "Oostende"}})
+    assert not compare(older, dad).conflict
+
+
 def test_a_relatives_forename_alone_cannot_anchor_a_graft():
     """Gustaaf Dekeyser's wife was a Simonne; so was Andre Dekeyser's, seventy years later.
     A shared forename among relatives is a coincidence in this material — Simonne, Maria
