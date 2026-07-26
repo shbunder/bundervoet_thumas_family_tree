@@ -230,3 +230,5 @@ Joanna Catharina Jacoba Peremans, with a husband and his parents.
 
 - FV-Oostende marriage annexes (O-1013MM) — on-site only.
 - Oostende civil registration after 1900 — Stadsarchief, offline.
+| 36 | 2026-07-26 | jathanasius_peremans | LEAD | **ANCHORED → NEW** | The last of the three sibling rows. Born ~1822, married Maria Elisabeth Cuypers at **Zaventem, 28 Nov 1844** (S31). This entry **labels the roles** — Vader, Moeder, spouse, spouse's parents — so nothing is inferred. Four people. | — |
+| 36 | 2026-07-26 | peremans | — | PATTERN | All three sibling leads now closed. Their father died Mar 1837, mother Dec 1843 — and **three weddings followed in 26 months**, all at Zaventem: Apr 1844, Nov 1844, Feb 1846. Pattern recorded; cause not claimed. | — |

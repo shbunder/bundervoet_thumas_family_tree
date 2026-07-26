@@ -19,6 +19,7 @@ spouses:
     married: 1846-02-24
     place: Zaventem
 sources:
+  - S31
   - S30
   - S29
   - S19
@@ -78,7 +79,18 @@ died and seven years after his father — with the parent pair given in the shor
 Peremans × Theresia Verelst*. His bride is deliberately not recorded: the index lists three
 more people in that document and states the role of none of them.
 
-*Joannes Athanasius* is the one row still unopened. The same move should settle him.
+**[[jathanasius_peremans]]** is now open too, and his entry is the best of the three: it
+labels the roles outright — *Vader* Egidius Peremans, *Moeder* Joanna Theresia ver Elst — so
+nothing is inferred. Born about 1822, he married *Maria Elisabeth Cuypers* at **Zaventem**,
+banns on 17 and 24 November 1844, registered on the 28th (S31). Her parents come with her.
+
+**All three siblings are now in, and together they say something.** Their father died in March
+1837 and their mother on 19 December 1843. Cornelius's banns went up in April 1844, Joannes
+Athanasius's in November 1844, and this record's own marriage followed in February 1846 —
+three weddings in the twenty-six months after their mother's death, all in the same commune.
+Whether that is grief, or the family council an orphaned minor needed under the Code, or simply
+three young people who had been waiting, the acts do not say. The pattern is recorded; the
+cause is not.
 
 **And the 1840 act points at what §47 could not reach.** [[egidius_peremans]] was already dead
 in November 1840, so marrying his daughter required an extract of his death act, bound into

@@ -1116,6 +1116,19 @@
       "confidence": "sup",
       "accessed": "2026-07-26",
       "note": "Banns, not the marriage act. The act itself would name the bride and both sets of parents."
+    },
+    {
+      "id": "S31",
+      "site": "familysearch",
+      "kind": "record",
+      "title": "Marriage of Joannes Athanasius Peremans x Maria Elisabeth Cuypers, Zaventem, November 1844",
+      "url": "https://www.familysearch.org/ark:/61903/1:1:X98K-63N2?lang=nl",
+      "collection": "Belgium, Brabant, Civil Registration and Church Records, 1704-1916 — volume 'Zaventem. Kerkelijke huwelijksafkondigingen 1844'",
+      "covers": "Indexed banns (17 and 24 Nov) and marriage registration (28 Nov 1844). The record carries no place; the volume title supplies Zaventem, as with S29 and S30.",
+      "yielded": "A third sibling for Joanna Catharina Jacoba Peremans — Joannes Athanasius, b. about 1822, with his parents EXPLICITLY labelled Vader Egidius Peremans and Moeder Joanna Theresia ver Elst, married Maria Elisabeth Cuypers, daughter of Antonius Cuypers x Anna Maria de Hose. Four people.",
+      "confidence": "sup",
+      "accessed": "2026-07-26",
+      "note": "Unlike S30 this entry LABELS the roles — Vader, Moeder, spouse, and the spouse's parents as 'overige personen' — so the family shape is stated rather than inferred."
     }
   ]
 }

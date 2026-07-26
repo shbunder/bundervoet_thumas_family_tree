@@ -19,7 +19,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 |---|---|---|---|---|---|
 | `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 29 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 17 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 18 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 16 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -292,6 +292,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
 - **Note:** Banns, not the marriage act. The act itself would name the bride and both sets of parents.
+
+#### `S31` — Marriage of Joannes Athanasius Peremans x Maria Elisabeth Cuypers, Zaventem, November 1844
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:X98K-63N2?lang=nl>
+- **Collection:** Belgium, Brabant, Civil Registration and Church Records, 1704-1916 — volume 'Zaventem. Kerkelijke huwelijksafkondigingen 1844'
+- **Covers:** Indexed banns (17 and 24 Nov) and marriage registration (28 Nov 1844). The record carries no place; the volume title supplies Zaventem, as with S29 and S30.
+- **Yielded:** A third sibling for Joanna Catharina Jacoba Peremans — Joannes Athanasius, b. about 1822, with his parents EXPLICITLY labelled Vader Egidius Peremans and Moeder Joanna Theresia ver Elst, married Maria Elisabeth Cuypers, daughter of Antonius Cuypers x Anna Maria de Hose. Four people.
+- **Confidence:** sup
+- **Accessed:** 2026-07-26
+- **Note:** Unlike S30 this entry LABELS the roles — Vader, Moeder, spouse, and the spouse's parents as 'overige personen' — so the family shape is stated rather than inferred.
 
 ### Geneanet
 

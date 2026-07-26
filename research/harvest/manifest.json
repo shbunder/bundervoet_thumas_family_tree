@@ -99,14 +99,14 @@
     {
       "id": "cappaert",
       "query": {
-        "name": "Cappaert",
+        "name": "cappaert",
         "country_code": "be"
       },
       "date": "2026-07-26",
       "found": 1803,
-      "mentions": 600,
-      "complete": false,
-      "acts": 600
+      "mentions": 1803,
+      "complete": true,
+      "acts": 1803
     },
     {
       "id": "casiers",
