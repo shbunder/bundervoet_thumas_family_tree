@@ -8,7 +8,7 @@ birth:
 death:
   date: 1974-10-06
   place: Oostende
-confidence: sup
+confidence: doc
 line: van-iseghem
 father: lucien_vincke
 mother: ludovica_vanald
@@ -23,6 +23,8 @@ sources:
   - agatha-diksmuide-1880-birth-emma-vincke
   - rab-bs-geboorten
   - rab-bs-huwelijken
+  - fs-diksmuide-civil-registers-film-004833210
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 Lived to 94 — the longest-lived in this cluster — outliving her husband by nearly 30 years. Daughter of Lucien Vincke & Ludovica Vanalderweireldt.
@@ -32,33 +34,62 @@ her birth at Diksmuide on 23 January 1880, her death at Oostende on 6 October 19
 her partner as Eduard Van Iseghem — every field as held here, and the marriage to
 [[eduardus_vi]] with it. She had rested on the gverdievel tree alone.
 
-Her birth act is indexed, not read as an image. AGATHA holds it as Diksmuide **akte nr.
-14, act date 24 January 1880** ([[agatha-diksmuide-1880-birth-emma-vincke]]), child *Emma
-Celesta Vincke*, born Diksmuide 23 January 1880 — one day before the act date, the
-ordinary gap between a birth and its declaration — naming her parents [[lucien_vincke]] ×
-[[ludovica_vanald]]. The act id, GEWVL_GEBWVL_01583386, is now recorded and its full index
-transcription is held as `data/artifacts/emma-vincke-1880-birth-diksmuide.md`; this record
-previously said the id "was never recorded" and that the act "has been seen, but not
-read" — both corrected here (2026-07-27).
+Her birth act is Diksmuide **akte nr. 14, act date 24 January 1880**, child *Emma Celesta
+Vincke*, born Diksmuide 23 January 1880 — one day before the act date, the ordinary gap
+between a birth and its declaration — naming her parents [[lucien_vincke]] ×
+[[ludovica_vanald]]. The act id is GEWVL_GEBWVL_01583386. Its AGATHA index transcription
+is held as `data/artifacts/emma-vincke-1880-birth-diksmuide.md`
+([[agatha-diksmuide-1880-birth-emma-vincke]]) and **stays `sup`** — see below for why.
 
-STAYS `sup`, not `doc` — checked and negative. AGATHA's GEWVL birth project publishes the
-volunteer analysis only: the act page's one reference to an image is the bare text "SCAN
-392 GSU", with no IIIF manifest, no Mirador viewer and no image link anywhere in the
-page's DOM — a structural limit of this project, not a login wall. A FamilySearch route to
-the same image, via an ark the vrijwilligersrab Geboorten index supplies for this row, was
-also tried: the FamilySearch session had expired, confirmed by a control navigation to a
-plain catalog page (also redirected to login) and a 401 from `platform/users/current`. No
-register image was read by anyone this pass, so `doc` is not earned.
+**THE REGISTER IMAGE READ (2026-07-27) — UPGRADES THIS RECORD `sup` → `doc`.** FamilySearch
+image group **004833210**, image **392 of 1269**, ark `3:1:33SQ-GPD9-32V`
+([[fs-diksmuide-civil-registers-film-004833210]]) is the register page itself, held as
+`data/artifacts/emma-vincke-1880-birth-act-image.md`. It supersedes the AGATHA index
+transcription above, which is kept alongside it rather than discarded — one is the primary
+act, the other its independent index precursor, and both remain useful. Two identifiers
+are now read directly off the image: birth date + place (23 January 1880, Diksmuide) and
+both parents' full names, Lucien Julianus Vincke × Ludovica Maria Vanalderweireldt.
 
-CORROBORATED INDEPENDENTLY (2026-07-27) by her own marriage act — Oostende, 28 September
-1907, act nr. 212 (vrijwilligersrab Huwelijken index, `rab-bs-huwelijken`; RAB ID 668717,
-FamilySearch film 004166052 image i=138) — which names her parents the same way, Vincke
-Lucien Julianus × Vanalderweireldt Ludovica Maria. This is real corroboration: a different
-commune, register and volunteer batch from the birth-act transcription. **The
-vrijwilligersrab BIRTH row for this same act is NOT independent of AGATHA**, though: its
-hidden ID, 1583386, is AGATHA's own act id (GEWVL_GEBWVL_01583386) — the same Rijksarchief
-volunteer transcription seen twice, not a second source. Its only added value is the
-FamilySearch image ark that AGATHA itself does not expose.
+**New facts the image gives that no index held:** the birth hour, **3 a.m.**; the
+address — the father's own dwelling on the **Kleinendyk**, Diksmuide; the father's trade
+in the register's own hand, ***metsersdiender*** (the tree held "metserdiener" from a
+member tree — the act writes it with the linking -s-; see [[lucien_vincke]]); and
+[[ludovica_vanald]]'s occupation, ***kantwerkster*** (lacemaker), not previously held
+anywhere. The declaring officer was **Edmond Paret**, schepen.
+
+**Two objections were raised against the match, and both are defeated — recorded, not
+smoothed over.** First: both parents' stated ages are one year high — 40 and 35, where
+they were 39y10m and 34y2m by this tree's held birth dates. The identical +1 offset
+recurs on [[ludovica_vanald]] alone in a wholly separate document, her 1888 Alfons Vincke
+marriage act (43 stated vs 42 completed, where Lucien's own age there is uninformative
+because his birthday had already passed) — one person showing the same offset twice, in
+two acts eight years and one register apart, is a birth-year-subtraction convention (the
+age reached *during* that year, not the age completed at declaration), not two independent
+errors, and it does not unseat either held birth date. Second: the mother's surname was
+flagged as not letter-by-letter certain on first read. Re-cropped at 6× zoom in three
+passes: the **R after `-ALD-`** is clearly present — ruling out the `VANDERWEIRELT`
+no-R variant that hid records elsewhere in this family — and the final cluster reads
+**`-eldt`**, tighter than the artifact's own original caveat (corrected there too).
+
+**The venue fact, now confirmed logged in, not merely index-derived.** AGATHA (as user
+`shbunder`) publishes **no scan link at all** for its West-Vlaanderen birth project — every
+`<a>` on act GEWVL_GEBWVL_01583386 was tested for image/scan/mirador/iiif, zero matches —
+so the earlier finding that the act's own page carries no route to the image is structural,
+not a session artifact. And AGATHA's own remark on the act, **"SCAN 392 GSU"**, is exactly
+FamilySearch's frame 392 on film 004833210 — the bridge AGATHA itself does not publish.
+
+CORROBORATED INDEPENDENTLY by her own marriage act — Oostende, 28 September 1907, act nr.
+212 (RAB ID 668717, FamilySearch film 004166052 image i=138) — which names her parents the
+same way, Vincke Lucien Julianus × Vanalderweireldt Ludovica Maria. First read from the
+vrijwilligersrab Huwelijken index (`rab-bs-huwelijken`), where it was real corroboration —
+a different commune, register and volunteer batch from the birth-act transcription — but
+**not independent of AGATHA in its birth-side pairing**: the vrijwilligersrab BIRTH row for
+this same act shares AGATHA's own hidden act id, 1583386 (GEWVL_GEBWVL_01583386), the same
+Rijksarchief volunteer transcription seen twice, not a second source. **Now also read as
+the register image itself** ([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`), doc-grade and genuinely
+independent of the birth-act image — different register, date and clerk — confirming the
+same parent names and her birth date and place to the day.
 
 FOUR MORE CHILDREN GRAFTED (research-log §64), from the same Huwelijken sweep:
 [[flavie_vi]] (m. Stene 1920), [[eduardus_vi2]] (m. Oostende 1927), [[valentina_vi]]
@@ -71,17 +102,21 @@ record as mother turned up two more Oostende children of [[eduardus_vi]] × this
 [[camillusgustavus_vi05]] (b. 25 April 1905, act nr. 501) and [[camillushenricus_vi11]]
 (b. 6 January 1911, act nr. 14) — and birth dates for three already-held children,
 [[eduardus_vi2]] (2 November 1901), [[valentina_vi]] (23 March 1909) and [[maria_vi]]
-(22 January 1913), none independently re-checked against a second act; see each record.
+(22 January 1913). [[eduardus_vi2]]'s date is no longer uncorroborated: the 1907 marriage
+act's own legitimation clause, below, independently confirms it. [[valentina_vi]] and
+[[maria_vi]]'s dates remain not independently re-checked against a second act.
 
-FRONTIER — two births before this marriage, NOT PROVEN, not grafted. The same sweep also
-found "VINCKE Flavie Eulalie" (b. Diksmuide 26 March 1898, act nr. 21) and "VINCKE Albert
-Joseph" (b. 9 December 1899 act nr. 84, d. 26 March 1900), both registered father NN NN,
-mother VINCKE Emma Celesta — nine and eight years respectively before this record's 1907
-marriage. The first shares a rare forename pair with [[flavie_vi]], already held as this
-couple's daughter from her own 1920 marriage act. Legitimation by the 1907 marriage would
-reconcile both, and would also explain [[joannes_vi]]'s birth at Lens 1903, four years
-before this same marriage. **NOT ASSERTED.** It needs the marriage act's own legitimation
-field read — see [[flavie_vi]]'s record for the exact query handle
-(`rab-bs-huwelijken`, Oostende 4166052 / 28/09/1907 / 668717) — which this pass could not
-reach. No record is created for Albert Joseph, or for a second Flavie Eulalie distinct
-from [[flavie_vi]].
+THE LEGITIMATION CLAUSE READ (2026-07-27) — RESOLVES THE TWO-BIRTHS-BEFORE-MARRIAGE
+FRONTIER, IN PART. The 1907
+marriage act's own legitimation clause ([[fs-oostende-1907-marriage-vaniseghem-vincke]])
+names exactly three children as this couple's legitimate issue: [[flavie_vi]] (b.
+Diksmuide 26 March 1898), [[eduardus_vi2]] (b. Oostende 2 November 1901) and [[joannes_vi]]
+(b. Lens, France, 11 May 1903) — see each record. "VINCKE Flavie Eulalie" of 26 March 1898
+is [[flavie_vi]] herself, tied by forename pair, day, month, year and commune, not by act
+reference (the 1907 act cites no birth act number). "VINCKE Albert Joseph" (b. 9 December
+1899, d. 26 March 1900) is **named by neither the legitimation clause nor any other act**:
+the clause names three children and no others, and both his death and
+[[camillusgustavus_vi05]]'s (d. 1905) predate the 1907 wedding, the ordinary reason a
+legitimation passes over an already-dead infant. The act is silent on him, not contrary —
+his paternity **stays unproven and unlinked**; see [[romanie_vincke]] for a separate,
+explicitly-speculative lead this same act raised and did not settle.

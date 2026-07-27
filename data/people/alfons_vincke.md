@@ -5,7 +5,7 @@ surname: Vincke
 birth:
   date: 1865-09-13
   place: Diksmuide
-confidence: sup
+confidence: doc
 occupation: ijzersmit (blacksmith)
 line: van-iseghem
 father: lucien_vincke
@@ -19,6 +19,7 @@ sources:
   - rab-bs-huwelijken
   - rab-bs-geboorten
   - fwk-alfons-vincke
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 Son of [[lucien_vincke]] and [[ludovica_vanald]], and [[emma_vincke]]'s brother — found
@@ -41,4 +42,19 @@ the same spouse, Eugenia Vandecappelle.
 sometimes the reason for the marriage rather than a contradiction of it. Neither date is
 adjusted.
 
-Index only, not the register image, hence `sup`.
+His own birth act and 1888 marriage act remain index only, not the register image.
+
+**THE SIBLING LINK ITSELF UPGRADED TO `doc` (2026-07-27).** His sister [[emma_vincke]]'s
+own 1907 marriage act, read as a register image
+([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`), carries him as a witness,
+in the register's own words: *"Alphonsus Vincke, oud twee en veertig jaren, stoofmaker,
+broeder der echtgenoote"* — 42 years old, stoofmaker, **brother of the bride**. Two
+identifiers agree in this one primary image: his stated age matches his held birth date
+to the exact day (he turned 42 fifteen days before the 28 September 1907 act), and the act
+**states the sibling relationship directly**, rather than it being inferred only from the
+separately-held parent records that grafted him here at `sup` (research-log §67). His
+occupation there, *stoofmaker*, differs from *ijzersmit* on his own 1888 marriage act — a
+plausible 19-year career change, flagged rather than treated as a contradiction. His own
+birth act is still unread as an image, so only the sibling identification itself carries
+`doc`.

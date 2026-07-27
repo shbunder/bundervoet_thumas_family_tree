@@ -9,6 +9,7 @@ death:
   date: 1945-06-27
   place: Oostende
 confidence: sup
+occupation: werkman (labourer)
 line: van-iseghem
 father: joannes_vi2
 mother: hermanie_janssen
@@ -22,6 +23,7 @@ sources:
   - tree-gverdievel
   - rab-bs-huwelijken
   - rab-bs-geboorten
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 Around 1903 the family was living in Lens, northern France (son Joannes was born there); father of at least seven children.
@@ -51,3 +53,22 @@ the parent-pair identifier that grounds all eight, six new siblings ([[arthur_vi
 
 **[[camillusgustavus_vi05]], already held as a child of this marriage — not a new find —
 now also has a death act on his own record (2026-07-27); see that record.**
+
+**HIS OWN MARRIAGE ACT READ AS A REGISTER IMAGE (2026-07-27), DOC-GRADE.** The 1907
+Oostende act itself ([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`) confirms his birth to the
+day (Oostende, 29 November 1880), gives his occupation for the first time as ***werkman***
+(labourer, the new occupation field above), and states he produced his militia
+certificate. His parents [[joannes_vi2]] and [[hermanie_janssen]] are both present and
+consenting and both signed. Banns were published at Oostende on Sunday 8 September 1907;
+the officer was Ernestus Van Glabbeke, schepen gedelegeerden; and the act carries **no
+marginal annotation of any kind** — no divorce note, no later correction. This is an
+independent primary source, 26 years apart from his father's 1933 death act, for the same
+[[joannes_vi2]] × [[hermanie_janssen]] parent link.
+
+NEW FRONTIER, NOT LINKED (2026-07-27). The same act names a witness, **Eugenius De Roo**,
+40, *kleermaker*, of Oostende, stated as *"oom van den echtgenoot"* — an uncle of the
+groom — implying a sibling of one of his parents, [[joannes_vi2]] or [[hermanie_janssen]],
+married a De Roo, or a De Roo/Deroo married into one of those families directly. No
+person record, label or prior search anywhere in this tree mentions "De Roo". Not linked;
+recorded as a named frontier only.

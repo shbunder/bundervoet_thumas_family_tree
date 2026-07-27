@@ -17,9 +17,9 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 47 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
-| `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 39 | Belgian civil and church registration, with act images. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 51 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 3 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 58 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 17 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
@@ -289,6 +289,22 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Accessed:** 2026-07-26
 - **Note:** AGATHA 'analyse van akte' — index transcription, not the register image. Same NAME=Bocklandt ALL_PLACES=Hamme result set as agatha-oostende-1888-marriage-bocklandt-ketels.
 
+#### `agatha-genealogie-registers` — AGATHA 'Genealogische bronnen' — the Rijksarchief's own scanned registers: 28,000+ parish registers (to 1796) and 36,000+ civil registration registers (1796-1920)
+- **Kind:** collection · <https://agatha.arch.be/nl/search/genealogie/>
+- **Covers:** ['Vanalderweireldt', 'Wyllie', 'Verhaeghe', 'Deman', 'Vincke']
+- **Yielded:** Identified, not yet worked: this is the Rijksarchief's own register-scan viewer, and it is a different robot from the act-analysis index that every earlier pass in this repository has used. It is the natural venue for the pre-1796 Diksmuide parish registers and, potentially, for the Diksmuide civil registers of 1803 and 1808 whose scans AGATHA's act pages do not link.
+- **Confidence:** unk
+- **Accessed:** 2026-07
+- **Note:** One of AGATHA's four robots (the others: /nl/search/analyses/ for indexed acts, /nl/search/ead/ for inventories, /nl/search/persons/). Two tabs: Parochieregisters (before 1796, fields PLACE_PR, TYPEACTES_PR[], exactYear) and Burgerlijke stand (from 1796, fields PLACE_CS, TYPEACTES_CS[], exactYear). A bare GET to /nl/search/genealogie/results/ with PLACE_CS set returns an EMPTY page: the form also posts PLACEPOINT_ID_CS, a place identifier chosen from the commune autocomplete, so the search must be driven through the form rather than by a constructed URL. Register images are served through AGATHA's Mirador viewer at /nl/data/images/<repo>/<item>/<page>, e.g. 513/513_9000_000_00774_000/0_0001 where 513 = Rijksarchief Brugge and series 9000 = parish registers of West-Vlaanderen, arrondissementen Brugge, Ieper, Veurne (EAD BE-A0513_109981_108806_DUT). Free, but needs the AGATHA login.
+
+#### `agatha-kraainem-1884-marriage-swaelens-bossin` — Kraainem marriage act nr. 3, 25 February 1884 — Swaelens × Bossin (AGATHA act analysis HUVLB_HUBRA_00197982_0)
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00197982_0>
+- **Covers:** ['Swaelens', 'Bossin', 'Ackermans', 'Peremans', 'Vanhoudenhoven']
+- **Yielded:** The volunteer transcription only — bride, groom, both sets of parents and four witnesses with ages, residences and trades, which is what Open Archives serves as abl:52c530f8-d6df-89a9-31ab-f9cb0ca019fc (S35). It states NO relationship for any witness; the register image does.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** NO SCAN, logged in or not. The act page's Link row (#modal_URL) is empty and hidden and there is no img, Mirador or IIIF reference anywhere in its DOM; the Open Archives copy's SourceDigitalOriginal points back to search.arch.be's person view, not to an image. This is a structural limit of AGATHA's HUVLB project, not a login wall — research-log §72's 'AGATHA holds a scan but is logged out' is wrong. The image is on the FamilySearch Kraainem film: see fs-kraainem-1884-marriage-swaelens-bossin.
+
 ### FamilySearch
 
 #### `S1` — Édouard Dekeyser's 1946 Oostende remarriage act (akte nr. 81)
@@ -490,6 +506,74 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** doc
 - **Accessed:** 2026-07-26
 - **Note:** INDEX ENTRY ONLY — the FamilySearch name index over Hamme film #004833291, image 331ff. The register image was not read, and the index gives no place field for the birth years. The 1865 death act of Ida Vermandel spells the husband's surname VAN BERGEN, so the two spellings are the same family or two families sharing a rare wife's name; the register image of this 1882 act would settle it.
+
+#### `fs-diksmuide-civil-registers-film-004833210` — Diksmuide (West-Vlaanderen) civil registers on FamilySearch — image group #004833210: marriages, births, deaths and certificates 1876-1890, 1269 browsable images
+- **Kind:** collection · <https://www.familysearch.org/ark:/61903/3:1:33SQ-GPD9-32V?cc=2139860&view=explore&lang=nl>
+- **Covers:** ['Vincke', 'Vanalderweireldt']
+- **Yielded:** The register IMAGE of Emma Celesta Vincke's birth act nr. 14, Diksmuide 24 January 1880, at image 392 of 1269 - the frame AGATHA names as 'SCAN 392 GSU' but does not link. Gave the birth hour (3 a.m.), the address (Kleinendyk), the mother's occupation (kantwerkster) and both parents' stated ages, none of which are in the AGATHA index.
+- **Confidence:** doc
+- **Accessed:** 2026-07
+- **Note:** Browsable images, no name index on the film itself. AGATHA's 'SCAN <n> GSU' remark on a West-Vlaanderen act is the image number within the matching FamilySearch image group, so the two can be joined by hand even though AGATHA publishes no scan link for this project. Requires a signed-in FamilySearch session; the deepest published zoom level for this group is DeepZoom level 12 (a 16x13 tile grid).
+
+#### `fs-diksmuide-civil-registers-film-004794754` — Diksmuide (West-Vlaanderen) civil registers on FamilySearch — image group #004794754: births, marriages, deaths and certificates 1798, 1799-1800, 1801-1806, 1020 browsable images
+- **Kind:** collection · <https://www.familysearch.org/ark:/61903/3:1:33SQ-GGKY-9C7D?view=explore&lang=nl>
+- **Covers:** ['Vanalderweireldt', 'Wyllie', 'Verhaeghe', 'Deman']
+- **Yielded:** Proof that the Diksmuide 1798-1806 registers are browsable while signed in, and a correction: the ark recorded in research-log 70 for the 1803 Vanalderweireldt x Wyllie marriage (3:1:33SQ-GGKY-9C7D, 'SCAN 962 GSU') resolves to image 962 of this group, which is a marriage act of 6 April 1806, not the act of 8 June 1803.
+- **Confidence:** doc
+- **Accessed:** 2026-07
+- **Note:** Browsable images, no name index on the film. The register is broadly CHRONOLOGICAL across record types rather than split into birth/marriage/death sections: image 947 is birth acts of 14 February 1806, image 962 marriage acts of 6 and 16 April 1806. Linear interpolation from those two frames puts 8 June 1803 at roughly image 600-660, which is where the Vanalderweireldt x Wyllie marriage act nr. 14 should be looked for. Frames are reached by typing the number into the viewer's 'Afbeeldingnummer invoeren' box and pressing Enter (a real key event; the ?i= URL parameter is ignored on this ark). Requires a signed-in FamilySearch session.
+
+#### `fs-oostende-civil-registers-film-004166052` — Oostende (West-Vlaanderen) civil registers on FamilySearch — image group (DGS) 004166052, marriages 1907
+- **Kind:** collection · <https://www.familysearch.org/ark:/61903/3:1:S3HT-6SKS-SZ1?lang=nl&i=138>
+- **Covers:** ['Van Iseghem', 'Vincke', 'Janssen', 'Vanalderweireldt']
+- **Yielded:** The register image of Oostende marriage act nr. 212, 28 September 1907, Eduardus Ludovicus Rudolphus Vanyseghem x Emma Celesta Vincke, including the legitimation clause naming three children by name and birth date.
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** The number the vrijwilligersrab Huwelijken index carries in its hidden Gemeente field IS the FamilySearch DGS number, and its image index i is zero-based against the film's frames (i=138 is frame 004166052_00139). The route from a DGS to a viewable ark, when the Images search will not take a bare film number: GET /das/v2/dgs:<film>.<film>_<frame>/name?namespace=apid to get the APID, then open https://www.familysearch.org/pal:/MM9.3.1/<APID>, which redirects to the ark viewer. The full-resolution JPEG is https://sg30p0.familysearch.org/service/records/storage/dascloud/das/v2/<APID>/dist.jpg, which 302s to a one-hour pre-signed S3 URL. Requires a signed-in session.
+
+#### `fs-oostende-1907-marriage-vaniseghem-vincke` — Marriage act nr. 212 — Eduardus Ludovicus Rudolphus Vanyseghem x Emma Celesta Vincke, Oostende, 28 September 1907 (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:S3HT-6SKS-SZ1?lang=nl&i=138>
+- **Covers:** ['Van Iseghem', 'Vincke', 'Janssen', 'Vanalderweireldt', 'De Roo', 'Regoudt', 'Degraeve']
+- **Yielded:** The act image, read. The legitimation clause names exactly three children the couple recognise as theirs at the marriage: Flavie-Eulalie VINCKE b. Diksmuide 26 March 1898; Eduardus Vanyseghem b. Oostende 2 November 1901; Joannes Van Yseghem b. Lens, IN FRANCE, 11 May 1903. Also the groom b. Oostende 29 Nov 1880, werkman, son of Joannes Van Yseghem (herbergier) x Hermania Ludovica Janssen, both present and consenting; the bride b. Diksmuide 23 Jan 1880, werkmeid, daughter of Lucien Julianus Vincke (werkman) x Ludovica Maria Vanalderweireldt of Diksmuide, father present, mother consenting by act at Diksmuide 8 September 1907; banns at Oostende Sunday 8 September 1907; and four witnesses with stated relationships, including Alphonsus Vincke, 42, stoofmaker, brother of the bride, and Constantinus Degraeve, 36, brother-in-law of the bride.
+- **Saved artifact:** `data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** The REGISTER IMAGE was read, not the vrijwilligersrab index row. Answers the legitimation frontier left open at research-log §67 and §71.
+
+#### `fs-kraainem-civil-registers` — Kraainem (Vlaams-Brabant) civil registers on FamilySearch — catalog koha:204220, Registers van de Burgerlijke Stand 1794-1910
+- **Kind:** collection · <https://www.familysearch.org/service/search/catalog/item/koha:204220>
+- **Covers:** ['Bossin', 'Peremans', 'Swaelens', 'Thumas', 'Vandenbemden', 'Coenraets', 'Vanhoudenhoven', 'De Hondt']
+- **Yielded:** The two films that cover this family's Kraainem acts, with the frames located by hand: DGS 004716364 (film 1733000, 1877-1885, 692 frames) — the 1884 marriage register begins at frame 00532; DGS 004716365 (film 1733081, 1886-1890, 721 frames) — the 1887 marriage register is at frame 00094. Both films are browsable images with no name index.
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** The register order inside a Kraainem year block is not constant: in 1884 the marriage acts come before the huwelijksafkondigingen (532 then 536-540), in 1887 the births run to 87, the banns register opens at 88, and the marriage acts sit at 94 with the deaths from 100. Marriage supplements (huwelijksbijlagen) fill long stretches and are the easiest way to overshoot a year. The FamilySearch catalog API — /service/search/catalog/search?q.keywords=<commune> then /service/search/catalog/item/<id> — lists every film with its DGS number and its contents, and is far cheaper than browsing.
+
+#### `fs-kraainem-1884-marriage-swaelens-bossin` — Marriage act nr. 3 — Joannes Baptista Julianus Swaelens x Ludovica Bossin, Kraainem, 25 February 1884 (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:9392-C8SW-B>
+- **Covers:** ['Swaelens', 'Bossin', 'Ackermans', 'Peremans', 'Vanhoudenhoven']
+- **Yielded:** The act image, read — the same act AGATHA holds as HUVLB_HUBRA_00197982_0 and Open Archives as abl:52c530f8 (S35), which publish the volunteer analysis only. Confirms the groom's parents Egidius Swaelens (hovenier, Braine-l'Alleud, PRESENT and consenting, illiterate) x Joanna Ackermans (d. Alsemberg 27 December 1877). States that the banns were published at Kraainem and Alsemberg on Sundays 10 and 17 February 1884, which resolves the 17-vs-25 February conflict recorded at research-log §72. States FRANCISCUS SWAELENS, 24, of Sint-Genesius-Rode, to be the GROOM'S BROTHER; Joannes Baptista Bossin (32) and Henricus Bossin (21) to be the BRIDE'S BROTHERS; and Petrus Vanhoudenhoven (30) to be the bride's BROTHER-IN-LAW.
+- **Saved artifact:** `data/artifacts/swaelens-bossin-1884-marriage-kraainem.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** AGATHA publishes NO scan for this act even when logged in — modal_URL is empty and hidden and no Mirador link exists in the DOM. The image had to come from the FamilySearch Kraainem film.
+
+#### `fs-kraainem-1887-marriage-bossin-guns` — Marriage act nr. 6 — Henricus Bossin x Maria Catharina Guns, Kraainem, 23 November 1887 (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:9392-C8SW-B>
+- **Covers:** ['Bossin', 'Guns', 'Peremans', 'Vogels', 'Swaelens', 'De Hondt', 'Vanhoudenhoven']
+- **Yielded:** The act image, read. Henricus Bossin born AT KRAAINEM 1 January 1863, schaliedekker; his parents Guillelmus Bossin x Joanna Catharina Peremans, married farmers of Kraainem, BOTH PRESENT AND CONSENTING on 23 November 1887; bride Maria Catharina Guns, dienstmeid of Sterrebeek, b. 23 December 1864, daughter of Joannes Franciscus Guns x Amelia Vogels, both present. Three witnesses are stated to be the groom's brothers-in-law: Petrus Vanhoudenhoven (34), Joannes Baptista Julianus Swaelens (29, now living at Kraainem) and Egidius Franciscus De Hondt (26).
+- **Saved artifact:** `data/artifacts/bossin-guns-1887-marriage-kraainem.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** The REGISTER IMAGE was read. Puts research-log §72's graft of henricus_bossin on a read document, and puts a hard floor of 23 November 1887 under guilielmus_bossin's death.
+
+#### `fs-alsemberg-1884-banns-swaelens-bossin` — Marriage banns nrs. 7 and 8 — Joannes Baptista Julianus Swaelens x Ludovica Bossin, Alsemberg, 10 and 17 February 1884 (register image)
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/3:1:9392-CSTK-B>
+- **Covers:** ['Swaelens', 'Bossin', 'Ackermans', 'Peremans']
+- **Yielded:** The page image, read. Both FamilySearch index rows for this couple in 1884 (1:1:6TRK-Q4PF, 10 February; 1:1:6TRK-HCJS, 17 February) sit on this one image, and every box on it is printed AKTE VAN HUWELIJKSAFKONDIGING — a banns publication, not a marriage. Act 7 is the FIRST publication, act 8 the SECOND. This is the record that research-log §72 carried as a rival marriage date of 17 February 1884 at Alsemberg.
+- **Saved artifact:** `data/artifacts/swaelens-bossin-1884-banns-alsemberg.md`
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** Alsemberg film 1688399, DGS 004714966, frame 00489. The bride's mother is written Joanna Maria Peremans here, against Anna Catharina on the Kraainem act eight days later.
 
 ### Geneanet
 

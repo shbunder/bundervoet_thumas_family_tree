@@ -3971,3 +3971,139 @@ Gent cluster is closed as a bridge candidate on current evidence, the clustering
 and archive-range corrections are recorded so they are not re-derived wrongly again, and
 the Guillaume-has-no-record gap is left as a named frontier rather than silently graftable
 material.
+
+## 74. The sessions came back — this run's first `doc` work: an image read, a legitimation clause, and four upgrades
+
+Every fact this run had added before now — 102 people across §64–§73 — was `sup`. Two
+archive sessions came back logged in this pass and two register **images** were read
+directly, not index rows, which is the first time that has happened today. This section is
+about being precise on the boundary: which facts are now image-borne (`doc`) and which
+still rest on an index (`sup`), even within the same person's record.
+
+### `emma_vincke` — the birth act image, and two objections defeated
+
+FamilySearch image group 004833210, image 392 of 1269 (`fs-diksmuide-civil-registers-film-004833210`,
+held as `data/artifacts/emma-vincke-1880-birth-act-image.md`) is the Diksmuide birth
+register page itself, act nr. 14, 24 January 1880 — not the AGATHA index analysis this
+record rested on before. That AGATHA transcription (`data/artifacts/emma-vincke-1880-birth-diksmuide.md`)
+**stays `sup`** and is kept alongside it, not discarded: two identifiers agree on the
+image — birth date + place, and both parents' full names — so [[emma_vincke]]'s own
+record is upgraded `sup` → `doc`. New facts the image gives that no index held: the birth
+hour (3 a.m.), the address (the father's own house on the Kleinendyk, Diksmuide), the
+father's trade written with the linking -s- as *metsersdiender* (the tree held
+"metserdiener" from a member tree), and [[ludovica_vanald]]'s occupation, *kantwerkster*
+(lacemaker) — held nowhere before. The declaring officer was Edmond Paret, schepen.
+
+Two objections were tested against the match, and both are defeated — recorded because
+they are the interesting part, not smoothed away. **The age offset:** both parents are
+stated one year older than their completed age (40 vs 39y10m for [[lucien_vincke]], 35 vs
+34y2m for [[ludovica_vanald]]). The identical +1 offset recurs, independently, on
+[[ludovica_vanald]] alone in a wholly separate document eight years and one register
+later — her son [[alfons_vincke]]'s 1888 marriage act (43 stated vs 42 completed, where
+Lucien's own age there is uninformative because his birthday had already passed). One
+person showing the same offset twice is a birth-year-subtraction convention, not two
+independent errors, and it unseats neither held birth date. **The surname reading:** an
+earlier pass flagged the mother's surname as "not letter-by-letter certain" in its last
+four characters. Re-cropped at 6× zoom in three passes, the R after `-ALD-` is clearly
+present — ruling out the `VANDERWEIRELT` no-R variant that has hidden records elsewhere in
+this family — and the final cluster reads `-eldt`, tighter than the artifact's own
+original caveat, which is corrected there too (`data/artifacts/emma-vincke-1880-birth-act-image.md`).
+
+**The venue fact, now confirmed logged in rather than merely inferred from a session
+error.** AGATHA (as user `shbunder`) publishes **no scan link at all** for its
+West-Vlaanderen birth project: every `<a>` on act GEWVL_GEBWVL_01583386 was tested for
+image/scan/mirador/iiif, zero matches. §64's structural finding was right, and it was not
+an artifact of a dropped session. And AGATHA's own remark on the act, "SCAN 392 GSU", is
+exactly FamilySearch's frame 392 on film 004833210 — the bridge AGATHA itself does not
+publish, recorded in `research/sources.json`'s note on `fs-diksmuide-civil-registers-film-004833210`
+so a later pass does not have to re-derive it.
+
+### The 1907 legitimation act closes three frontiers at once
+
+Marriage act nr. 212, Oostende, 28 September 1907 (film 004166052 frame `_00139`, ark
+`3:1:S3HT-6SKS-SZ1`, `fs-oostende-1907-marriage-vaniseghem-vincke`, held as
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`) is [[eduardus_vi]] ×
+[[emma_vincke]]'s own marriage act, read as a register image. Its legitimation clause
+names exactly three children as the couple's legitimate issue, by day, month, year and
+commune, and no others:
+
+> voor hunne wettige dochter: Flavie-Eulalie Vincke, geboren te Dixmude den zes en
+> twintigsten Maart achttien honderd acht en negentig; en voor hunne wettige zoons:
+> Eduardus Vanyseghem, geboren te Oostende den tweeden November negentien honderd en een;
+> en Joannes Van Yseghem, geboren te Lens, in Frankrijk, den elfden Mei negentien honderd
+> en drie.
+
+**[[flavie_vi]]** — this ties the Diksmuide 1898 birth-index row "VINCKE Flavie Eulalie"
+(father NN NN, mother VINCKE Emma Celesta) to her directly, by forename pair + day + month
++ year + commune, **not** by act reference — the 1907 act cites no birth act number. Her
+birth date and place are recorded for the first time. Record upgraded `sup` → `doc`.
+**[[eduardus_vi2]]** — his birth date (2 Nov 1901) carried an explicit "NOT INDEPENDENTLY
+RE-CHECKED" caveat since §67; a wholly independent doc-grade source, a different register
+and clerk, now confirms the identical date, and the caveat is retracted. Record upgraded
+`sup` → `doc`. **[[joannes_vi]]** — this resolves both of his open questions at once:
+which Lens (the act states "in Frankrijk" in its own words), and the four-year gap before
+his parents' marriage, which is a legitimation of a child already born, the same mechanism
+already documented in this tree at [[edouard_dk]], not an unrecorded earlier union. Record
+upgraded `sup` → `doc`.
+
+**The absence argument, sound and changing nothing.** No fourth child is named, and the
+verifier confirmed by direct crop that exactly three are. [[camillusgustavus_vi05]] (d. 29
+Nov 1905) and the unattached "VINCKE Albert Joseph" (b. 9 Dec 1899, d. 26 Mar 1900) were
+both already dead by the wedding, and legitimating a deceased infant with no descendants
+carries no practical legal weight — omission is the ordinary case here, not a gap. The act
+is silent, not contrary; Albert Joseph's paternity **stays unproven and unlinked**.
+
+**[[alfons_vincke]] — the sibling link itself upgraded to `doc`.** The act's own witness
+line states it directly: *"Alphonsus Vincke, oud twee en veertig jaren, stoofmaker,
+broeder der echtgenoote"* — 42, matching his held birth to the exact day, and naming the
+sibling relationship in the register's own words rather than it being inferred only from
+separately-held parent records (as it was when grafted at §67). His occupation there,
+*stoofmaker*, differs from *ijzersmit* on his 1888 marriage act — a plausible 19-year
+career change, flagged rather than treated as a contradiction. His own birth act remains
+unread as an image, so only this specific identification carries `doc`.
+
+**Corroborations, not resolutions — recorded without moving any of these five records off
+`sup`.** [[joannes_vi2]] (occupation herbergier, new) × [[hermanie_janssen]], both present,
+consenting and signed for their son; [[lucien_vincke]] (occupation *werkman* here, a later
+change from *metsersdiender*/*metser*) present and consenting for his daughter;
+[[ludovica_vanald]] (*zonder beroep* here, a later change from *kantwerkster*) consenting
+by a separate act at Diksmuide, 8 September 1907, confirming her alive that month,
+consistent with her held 1914 death; [[eduardus_vi]] himself, occupation *werkman* (new),
+militia certificate produced. Banns at Oostende, Sunday 8 September 1907; officer
+Ernestus Van Glabbeke, schepen gedelegeerden; no marginal annotation of any kind. Each of
+these doc-grade facts is recorded in the relevant person's own prose, with the record's
+overall confidence left at `sup` where its core vital dates are still index-only —
+precision about the boundary is the point of this pass.
+
+### Two new frontiers, neither linked
+
+The same act's witness lines name two relationships that reach outside this tree.
+**Constantinus Degraeve**, 36, *aardewerker*, of Diksmuide, is stated as *zwager der
+echtgenoote* — brother-in-law of the bride — implying an unrecorded Vincke sister married
+a Degraeve. No person record, label or prior search anywhere in this tree mentions
+"Degraeve." [[romanie_vincke]] is the only daughter of [[lucien_vincke]] ×
+[[ludovica_vanald]] known to have survived to adulthood with no further record of her
+own, which is **pure surname-coincidence speculation, not an identifier**, and is recorded
+on her own page as exactly that — not a link. What would settle it: Constantinus
+Degraeve's own marriage act, or a Vincke-bride/Degraeve-groom marriage pairing. **Eugenius
+De Roo**, 40, *kleermaker*, of Oostende, is stated as *oom van den echtgenoot* — an uncle
+of the groom [[eduardus_vi]] — likewise unrecorded anywhere in this tree, and likewise not
+linked.
+
+### Housekeeping
+
+`check_data.py` warned of an orphan artifact file, `thumas-1864-death-extract-image-grez-doiceau.png`,
+left by a searcher killed by a CAPTCHA wall mid-pass. Opened and compared: it is a raw,
+uncropped screenshot of the identical register page already fully described and evidenced
+as `data/artifacts/georges-thumas-1864-death-extract-grez-doiceau.md` (same act, same
+image, different capture — different byte size and hash, so not a literal duplicate file,
+but the identical evidence, already held). Writing a second describing record for the same
+fact would be the tree keeping one thing in two places, so it was moved to the session
+scratchpad instead of registered or deleted.
+
+Tree: 536 people, unchanged — this pass corroborates and resolves, it does not add.
+Sources touched: `emma_vincke`, `lucien_vincke`, `ludovica_vanald`, `flavie_vi`,
+`eduardus_vi2`, `joannes_vi`, `alfons_vincke`, `eduardus_vi`, `joannes_vi2`,
+`hermanie_janssen`, `romanie_vincke`. Confidence upgraded `sup` → `doc` on five records:
+[[emma_vincke]], [[flavie_vi]], [[eduardus_vi2]], [[joannes_vi]], [[alfons_vincke]]. Build
+green.

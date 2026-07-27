@@ -8,7 +8,7 @@ birth:
 death:
   date: 1969-05-05
   place: Oostende
-confidence: sup
+confidence: doc
 line: van-iseghem
 father: eduardus_vi
 mother: emma_vincke
@@ -22,6 +22,7 @@ sources:
   - tree-bartvanhooren
   - tree-gverdievel
   - rab-bs-huwelijken
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 Born in the French coal-mining town of Lens, where his Oostende family had emigrated for work; the family later returned to Belgium. Died six days short of his 66th birthday.
@@ -31,7 +32,8 @@ born **Lens** 11 May 1903, died Oostende 5 May 1969, partner Adrienne Devriendt.
 birthplace is the striking part — an Oostende family with a son born at Lens — and the
 card gives it independently of the trees, which is the strongest single reason to believe
 this is the same man. This record notes Lens as being in France; the card says only
-"Lens", so which Lens is not settled here.
+"Lens" — which Lens was not settled by the card, but is settled below by his parents' own
+1907 marriage act.
 
 MARRIAGE DATED (2026-07-27): his own marriage act — Stene nr. 6, 24 March 1928
 (vrijwilligersrab Huwelijken index, `rab-bs-huwelijken`) — names his parents in full as
@@ -66,6 +68,18 @@ relationship to at least 1905, sitting between the 1898/1899 Vincke-surnamed bir
 and this record's own 1903 Lens birth. It strengthens the pattern without proving the
 legitimation hypothesis: the marriage act's own legitimation field still has not been
 read.
+
+**RESOLVED (2026-07-27) — RECORD UPGRADED `sup` → `doc`.** The parents' own 1907 marriage
+act, read as a register image ([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`), carries a legitimation
+clause naming him directly: "en Joannes Van Yseghem, geboren te Lens, in Frankryk, den
+elfden Mei negentien honderd en drie" — 11 May 1903, **Lens, in France**, in the
+register's own words. This settles both open questions on this record at once: which Lens
+(the act states it explicitly), and the four-year gap before the parents' marriage — this
+is a **legitimation of a child already born**, the same mechanism as [[edouard_dk]]'s
+marriage elsewhere in this tree, not an unrecorded earlier union. His siblings
+[[flavie_vi]] and [[eduardus_vi2]] are named in the identical clause on the identical
+terms; see their records.
 
 **A CHILD NOT IN THE TREE, NOT GRAFTED (2026-07-27).** A death-index sweep turned up "VAN
 ISEGHEM Roger Bernard", Stene, 27/02/1929, act nr. 10, RAB ID 2148819 — father "VAN

@@ -6,7 +6,7 @@ birth:
   date: 1840-03-26
   place: Diksmuide
 confidence: sup
-occupation: metserdiener (mason's assistant)
+occupation: metsersdiender (mason's assistant)
 line: van-iseghem
 father: engel_antonius_vincke
 mother: virginia_leynseele
@@ -19,9 +19,35 @@ sources:
   - tree-bartvanhooren
   - rab-bs-geboorten
   - agatha-diksmuide-1893-marriage-bocklandt-vincke
+  - fs-diksmuide-civil-registers-film-004833210
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 A mason's assistant; son of Engel Antonius Vincke & Virginia Leynseele.
+
+**NAMED AS FATHER IN A REGISTER IMAGE FOR THE FIRST TIME (2026-07-27), DOC-GRADE.**
+[[emma_vincke]]'s own birth act, read as the register image itself
+([[fs-diksmuide-civil-registers-film-004833210]],
+`data/artifacts/emma-vincke-1880-birth-act-image.md`), names him father, occupation
+written in the register's own hand as ***metsersdiender*** — the linking -s- this record's
+occupation field now carries, corrected from "metserdiener" as held from a member tree.
+His stated age, "veertig" (40), is one year above the 39y10m he would have completed
+against this record's held birth of 26 March 1840 — **not treated as a contradiction**:
+the identical +1 offset recurs, independently, on his wife [[ludovica_vanald]] alone in a
+wholly separate 1888 document (43 stated vs 42 completed) — one person showing the same
+offset twice, in two acts eight years and one register apart, is a birth-year-subtraction
+convention, not two independent errors, and it unseats neither held birth date. This
+record's own confidence stays `sup`, since his own birth is still index-only — the `doc`
+grade attaches to this specific parent-naming, read off a primary image.
+
+**ALSO NAMED FATHER-OF-THE-BRIDE IN THE 1907 MARRIAGE ACT, DOC-GRADE.** Emma's own 1907
+Oostende marriage act ([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`) names him again, present and
+consenting: *"Lucien Julianus, werkman"* — a plain labourer, a further occupation change
+from *metsersdiender* (1880) and *metser* (Alfons's 1888 marriage act), flagged as a
+plausible career shift over 27 years rather than a contradiction. This is a second,
+independent primary-image corroboration of the parent link, in a different register from
+the birth act, 27 years apart.
 
 SEVEN MORE CHILDREN GRAFTED (research-log §64), from a province-wide sweep of the
 vrijwilligersrab Geboorten index (`rab-bs-geboorten`) for Diksmuide, each act naming both
@@ -90,7 +116,14 @@ records. Diksmuide itself carries 26 Vincke-touching marriages 1880-1910 and 124
 rows 1798-1910 — the commune **is** covered; these five are absent from it, not hidden
 behind it. What would settle them is the register image behind the `SCAN nnn GSU`
 reference on the AGATHA side, or a FamilySearch session on the vrijwilligersrab arks — not
-a further index sweep. Also ambiguous: a Nieuwkerke marriage of "VINCKE Cyrille Camille" ×
+a further index sweep. A NEW LEAD, NOT AN IDENTIFIER (2026-07-27): a witness at
+[[emma_vincke]]'s 1907 marriage, Constantinus Degraeve, is stated in the act as *"zwager
+der echtgenoote"* — brother-in-law of the bride — implying a Vincke sister of hers married
+a Degraeve, possibly one of the five above, possibly [[romanie_vincke]] (the one daughter
+of this couple with no further record of her own). See [[romanie_vincke]]'s record: this
+is recorded as pure surname-coincidence speculation, not linked to anyone.
+
+Also ambiguous: a Nieuwkerke marriage of "VINCKE Cyrille Camille" ×
 "REUBRECHT Valerie Eugenie" (act nr. 4) is blank in every Detail field and two corpus
 memorial cards confirm the couple existed (d. 22/05/1937) but name no parents — it neither
 confirms nor refutes a link to Cyrille Camil above.

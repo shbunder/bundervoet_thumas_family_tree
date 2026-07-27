@@ -8,6 +8,7 @@ birth:
 death:
   date: "1914"
 confidence: sup
+occupation: kantwerkster (lacemaker)
 line: van-iseghem
 father: carolus_vanald
 mother: eugenia_dutreeuw
@@ -20,10 +21,40 @@ sources:
   - tree-bartvanhooren
   - rab-bs-geboorten
   - agatha-diksmuide-1893-marriage-bocklandt-vincke
+  - fs-diksmuide-civil-registers-film-004833210
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 Daughter of Carolus Vanalderweireldt & Eugenia Dutreeuw; mother of Emma Celesta Vincke
 (1880–1974), and of at least seven more children.
+
+**NAMED AS MOTHER IN A REGISTER IMAGE FOR THE FIRST TIME (2026-07-27), DOC-GRADE.**
+[[emma_vincke]]'s own birth act, read as the register image itself
+([[fs-diksmuide-civil-registers-film-004833210]],
+`data/artifacts/emma-vincke-1880-birth-act-image.md`), names her mother and gives, **for
+the first time anywhere in this tree**, her occupation: ***kantwerkster*** (lacemaker).
+Her surname was re-cropped at 6× zoom in three passes to settle a prior "not
+letter-by-letter certain" caveat: the **R after `-ALD-`** is clearly present — ruling out
+the `VANDERWEIRELT` no-R variant that hid records elsewhere in this family — and the
+final cluster reads **`-eldt`**, tighter than the artifact's own original reading. Her
+stated age, "vyf en dertig" (35), is one year above the 34y2m she would have completed
+against this record's held birth of 23 November 1845 — **not treated as a contradiction**:
+the identical +1 offset recurs independently on her alone in a wholly separate 1888
+document, her son [[alfons_vincke]]'s marriage act (43 stated vs 42 completed) — the same
+person showing the same offset twice, in two acts eight years apart, is a
+birth-year-subtraction convention, not two independent errors. This record's own
+confidence stays `sup`, since her own birth is still index-only — the `doc` grade attaches
+to this specific parent-naming, read off a primary image.
+
+**ALSO NAMED MOTHER-OF-THE-BRIDE IN THE 1907 MARRIAGE ACT, DOC-GRADE.** Emma's own 1907
+Oostende marriage act ([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`) names her again, *"zonder
+beroep"* (no occupation stated there — a later-life change from *kantwerkster*, flagged
+rather than treated as a contradiction) — consenting not in person but by a separate act
+passed at Diksmuide on 8 September 1907, since she did not travel to Oostende. This
+confirms she was alive in September 1907, consistent with this record's held death year of
+1914, and is a second, independent primary-image corroboration of the parent link, in a
+different register from the birth act, 27 years apart.
 
 SEVEN MORE CHILDREN GRAFTED (research-log §64), from a province-wide sweep of the
 vrijwilligersrab Geboorten index (`rab-bs-geboorten`) for Diksmuide, each act naming both

@@ -9,6 +9,7 @@ death:
   date: 1933-11-13
   place: Stene
 confidence: sup
+occupation: herbergier (innkeeper)
 line: van-iseghem
 father: joannes_jos_vi
 mother: anna_gautiert
@@ -22,6 +23,7 @@ sources:
   - rab-bs-geboorten
   - rab-bs-huwelijken
   - rab-bs-overlijdens
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 Lived to 81; born in the city of Oostende but died in neighbouring rural Stene, where the family had settled.
@@ -62,6 +64,17 @@ a declarant's rounded age, flagged rather than smoothed over. Widowerhood is sta
 His own birth act (Oostende, act nr 763 — see [[eduardus_vi]]) is a fourth Van Iseghem
 sibling generation removed and is not this act; both remain index rows, not images, so
 confidence stays `sup`.
+
+**A THIRD, INDEPENDENT PRIMARY SOURCE FOR THE SAME LINK (2026-07-27), DOC-GRADE.** His son
+[[eduardus_vi]]'s own 1907 marriage act, read as a register image
+([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`), names him present and
+consenting, and gives his occupation for the first time as ***herbergier*** (innkeeper,
+the new occupation field above). This is 26 years earlier than his own 1933 death act
+above, and a different register from both it and his birth act — a third, wholly
+independent primary attestation of the same [[joannes_vi2]] × [[hermanie_janssen]] →
+[[eduardus_vi]] link. This record's own vital dates remain index-only, so confidence stays
+`sup`.
 
 **EIGHT CHILDREN with [[hermanie_janssen]], all from the RAB birth index and cross-filed
 from her own record too, so no ninth exists on either side:** [[arthur_vi]] (17/03/1874),

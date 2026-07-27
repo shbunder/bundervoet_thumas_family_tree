@@ -22,6 +22,7 @@ sources:
   - rab-bs-geboorten
   - rab-bs-huwelijken
   - rab-bs-overlijdens
+  - fs-oostende-1907-marriage-vaniseghem-vincke
 ---
 
 Married at 19; lived her whole life in Oostende, reaching 73.
@@ -36,6 +37,15 @@ civil-act index, independent of that member tree, now stands behind it.
 2201502 — gives Birth Date 05/07/1853, matching her held birth to the day, and names her
 partner "VANISEGHEM Joannes", matching [[joannes_vi2]] exactly. Both her parents are
 restated in full, agreeing with her own birth act above.
+
+**A THIRD, INDEPENDENT PRIMARY SOURCE FOR THE SAME LINK (2026-07-27), DOC-GRADE.** Her son
+[[eduardus_vi]]'s own 1907 marriage act, read as a register image
+([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`), names her present and
+consenting, *"zonder beroep"*. A different register from both her own birth and death
+acts, 26 years before the latter — a third, wholly independent primary attestation of the
+[[joannes_vi2]] × [[hermanie_janssen]] → [[eduardus_vi]] link. This record's own vital
+dates remain index-only, so confidence stays `sup`.
 
 **EIGHT CHILDREN with [[joannes_vi2]] — see his record for the full sibship, the
 identifier that grounds it (a province-wide sweep found nine different men recorded
