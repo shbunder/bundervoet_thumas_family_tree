@@ -17,6 +17,7 @@ spouses:
     place: Kraainem
 sources:
   - S28
+  - S33
 ---
 
 Daughter of [[georges_cj]] and [[bossin]], born at **Sint-Stevens-Woluwe on 18 August 1880**
@@ -27,7 +28,20 @@ At nineteen she was a *dienstmeid*, a housemaid, living at Kraainem. She married
 Bossin**, a polisher of Sint-Stevens-Woluwe, on **10 April 1900** (Kraainem act nr. 3, S28).
 Her mother had been dead five years by then; the act records it.
 
-**Her husband's surname is her mother's.** Whether the two Bossin families are one is not
-established here and is not assumed — see [[ludovicus_bossin79]].
+**RESOLVED — her husband's surname is not her mother's family.** [[ludovicus_bossin79]]'s
+own father's 1858 marriage act now names his parents as Judocus Bossin and Maria Desmedt,
+not [[guilielmus_bossin]] and [[peremans]] (her mother [[bossin]]'s parents). See his
+record for the finding.
+
+**CORROBORATED (2026-07-27) by her own birth act, held in the harvested corpus (S33).**
+It independently confirms both her parents by exact age and birthplace: her father,
+[[georges_cj]], aged 43, born Grez-Doiceau; her mother, [[bossin]], aged 31, born
+Sint-Stevens-Woluwe. The family is spelled **Thomas** on this act — both parents and her
+own entry — where her 1900 marriage act (S28) and her son's 1901 birth act both spell it
+**Thumas**. One family, an orthographic variant inside one transcription batch, not two.
+
+**A first known son (2026-07-27):** [[karel_bossin01]], born Sint-Stevens-Woluwe, 27
+February 1901, confirmed against her own held birth of 18 August 1880 (she is aged 20 on
+his birth act, her August birthday not yet due).
 
 `sup`: an act analysis, not the register image.

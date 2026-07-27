@@ -247,6 +247,18 @@
         "image-read"
       ],
       "note": "THE ROUTE TO THE PRE-1796 HALF OF THIS TREE. 158 of its people were born before civil registration and are unreachable by AGATHA, Open Archives or any name index, because the documents that name them were never indexed. This searches the manuscript itself. A first query for 'Bundervoet' returned 159 hits including a Bundervoet family holding fiefs at Saint-Pierre-Alost 1687-1701, with descent stated (Francois > Lievin; Lievin and Pasquier each holding in turn) and a Catherine Bundervoet acting as guardian for her son in 1687. NOTE: the snippets that surfaced those entries ran two adjacent surnames together and gave three wrong dates and one wrong place; the page itself had to be opened to get them right. Read the document, not the snippet. Search by surname alone and read the snippets; the place filter behaves like FamilySearch's others and should not be trusted to constrain. COVERAGE IS UNEVEN BY COLLECTION, NOT BY PROVINCE. A surname query alone looked thin for West-Vlaanderen — Wittenheyns returned a single 1657 Bruges notarial mention — while 'Sabbe Oostkamp' returned thousands, all in the court records. So the province is well covered and the rare surname simply is rare; do not read a thin surname result as thin coverage. Search surname + commune, and expect the yield to be staten van goed rather than registers. LIMITATION, FOUND THE HARD WAY: it is a discovery tool, not a lookup. Multi-word queries are ORed rather than phrased — 'sterfhuyse Sabbe Oostcamp' returned 101,134 hits — and the collection and year filters are a dynamic widget that resists scripting. So it will tell you a family is present in a body of records, and it will not hand you one named person's document. Reaching a specific act through it means filtering by hand in the browser, or paging. Budget for that; do not expect a targeted hit."
+    },
+    {
+      "id": "netradyle",
+      "kind": "index",
+      "title": "Netradyle — dépouillement d'actes d'état civil et de registres paroissiaux (Cercle Historique de Perwez)",
+      "url": "https://www.netradyle.be/actes/",
+      "access": "open",
+      "covers": "1,353,989 indexed acts for Namur, Liège, Hainaut, BRABANT WALLON, Luxembourg and Vlaams-Brabant: 721,862 births/baptisms, 181,589 marriages, 381,148 deaths/burials, 69,390 other. Mostly 1500-1912. Runs on ExpoActes 3.2.4. Free and completely unauthenticated for visitors — the login is for administrators only, so everything here is reproducible without a session.",
+      "capabilities": [
+        "name-index"
+      ],
+      "note": "FOUND by discovery (2026-07-27) after Open Archives was shown to hold ZERO marriage and ZERO birth acts for Grez-Doiceau — 17,086 of its 17,091 mentions there are death acts. Netradyle reaches the Brabant-wallon layer that Open Archives does not, which makes it the open counterpart to FamilySearch's Brabant films for the Thumas line. HOW TO QUERY WITHOUT A BROWSER, all plain GET: tables are /actes/tab_naiss.php, /actes/tab_mari.php and /actes/tab_deces.php with ?args=<Commune>,<SURNAME>; the commune string for Grez-Doiceau is 'Grez [Brabant Wallon]' — the modern hyphenated name returns nothing. Tables page at 100 rows with &pg=2, and there is NO 'next' link, so a 100-row table is a truncated one and must be paged or it silently reads as complete. Detail pages are /actes/acte_naiss.php?xid=&xct= etc. THE ASYMMETRY THAT MATTERS: birth detail pages carry the father's forename and the mother's full name; MARRIAGE detail pages carry only the two spouses' names and the date — no parents, no ages, no trades, no act number. So this venue can corroborate a parent link from a birth but can never substitute for reading a marriage act. It is a volunteer dépouillement deposited in 2006, index-level throughout, with visible transcription noise (Joustens/Jousten/Jostens, Kinart/Kinar, Derrider/Deridder, and one child's mother given as Marie Thérèse where every sibling has Marie Catherine) — sup, never doc."
     }
   ],
   "pages": [
@@ -1528,6 +1540,55 @@
       "confidence": "doc",
       "accessed": "2026-07-26",
       "note": "INDEX ENTRY ONLY — the FamilySearch name index over Hamme film #004833291, image 331ff. The register image was not read, and the index gives no place field for the birth years. The 1865 death act of Ida Vermandel spells the husband's surname VAN BERGEN, so the two spellings are the same family or two families sharing a rare wife's name; the register image of this 1882 act would settle it."
+    },
+    {
+      "id": "S33",
+      "site": "openarch",
+      "kind": "index",
+      "title": "Civil registration acts for the Bossin family of Sint-Stevens-Woluwe, Kraainem and Zaventem (harvested corpus, July 2026)",
+      "url": "https://www.openarchieven.nl/",
+      "collection": "Rijksarchief België, burgerlijke stand — Sint-Stevens-Woluwe, Kraainem and Zaventem birth and marriage registers, via Open Archives",
+      "covers": "A second pass over the already-harvested corpus, no new fetch: acts naming children, marriages and corroborating events for two Bossin couples already in the tree.",
+      "yielded": "Karel Joseph Bossin (SSW nr.7, 27 Feb 1901), son of ludovicus_bossin79 x misabella_t. A second, distinct Joannes Baptista Bossin (SSW nr.19, 15 Aug 1851), a fourth child of guilielmus_bossin x peremans. A day-level birth act for ludovica_bossin (SSW nr.18, 5 Oct 1853), superseding the declaration-date reading held from S24. The marriage act of jbbossin x maria_wolf (SSW nr.4, 17 June 1858) — the anchor that supplies both spouses' exact birthdates for the first time and names jbbossin's own parents, Judocus Bossin x Maria Desmedt, a generation this tree did not have. Five further children of jbbossin x maria_wolf: Joannes Philippus (1857, SSW nr.15), Philippus Amandus (1859, SSW nr.9), Jan Philip (1876, SSW nr.8), Frans (1882, SSW nr.36) and Guillielmus Josef (1869, Kraainem, known only from his own 1896 Zaventem marriage act). Three later marriage acts — Jan Philip's 1897 SSW marriage, Joannes Philippus's 1907 SSW marriage, and Guillielmus Josef's own 1896 marriage — each independently restate the father's death (Sint-Stevens-Woluwe, 19 March 1887) or the mother's exact age against her 1836 birthdate. Ludovicus Bossin's own 1879 SSW birth act (nr.40) corroborates both his parents' ages. Misabella_t's own 1880 SSW birth act corroborates georges_cj x bossin, with the family surname spelled 'Thomas' rather than 'Thumas'.",
+      "confidence": "sup",
+      "accessed": "2026-07-27",
+      "note": "Indexed acts (AGATHA/Demogen transcriptions via Open Archives), no register image read for any of them. Each person's own record carries the individual act URL; the identifier-by-identifier reasoning for every match is in research/labels.jsonl."
+    },
+    {
+      "id": "netradyle-grez-mariages",
+      "site": "netradyle",
+      "kind": "collection",
+      "title": "Netradyle — Grez-Doiceau, actes de mariage (tab_mari.php)",
+      "url": "http://www.netradyle.be/actes/tab_mari.php?args=Grez+[Brabant Wallon],THUMAS",
+      "covers": "The marriage table for Grez [Brabant Wallon], queried by surname. Detail pages give only the two spouses' names and the date — no parents, no ages, no act number.",
+      "yielded": "Independent, second-index corroboration of Georges Joseph Thumas x Sophie Miranda Deridder's marriage (row 50, '08/10/1868 THUMAS Georges & DERRIDER Sophie'), against a one-day date conflict with S25 (7 vs 8 October) left open. Also surfaced the 1771 and 1799 Thumas marriages a generation above the documented line, and the 1839 Deridder x Lacourt marriage a generation above Sophie Miranda Deridder's candidate parents.",
+      "confidence": "sup",
+      "accessed": "2026-07-27",
+      "note": "See the netradyle site entry for how to query it without a browser. Marriage detail pages are the weaker of netradyle's two tables for this project: no parents, no ages, no trades, no act number, so a hit here can corroborate an event date but never itself supply or refute a parent link."
+    },
+    {
+      "id": "netradyle-grez-naissances",
+      "site": "netradyle",
+      "kind": "collection",
+      "title": "Netradyle — Grez-Doiceau, actes de naissance (tab_naiss.php)",
+      "url": "http://www.netradyle.be/actes/tab_naiss.php?args=Grez+[Brabant Wallon],THUMAS",
+      "covers": "The complete Thumas birth table for Grez [Brabant Wallon], 134 rows spanning 1730 to the 1890s, paged at 100 rows with no 'next' link (a single-page read looks complete and is wrong). Detail pages carry the father's forename and the mother's full name, but never an act number, age or trade.",
+      "yielded": "A second reading of the Thumas generations around georges_cj, all index-level: Jean Baptiste Zenon Thumas's birth (19 Aug 1845, one day off S25's 20 August) with parents Georges x 'Jostens Marie Catherine', corroborating georges2_t x joostens; Georges Thumas's own 1804 birth (25 Jan, agreeing with the record) with a NEGATIVE finding that no Thumas birth is indexed at Grez 1783-1797 at all, weakening but not closing the 1793/94-vs-1804 age conflict from georges2_t's wife's 1857 death act; an unrecorded elder brother, Georges Etienne Thumas (b. 1802); Georges Carolus Josephus Thumas's own 1836 birth, matching date and both parents but indexed under the forename 'Gregoire' rather than 'Georges' — left ambiguous, not merged; Georges Lambert Thumas's 1772 birth, a new parent couple one generation above georgeslambert_t (Georges Thumas x Marie Catherine Noel, married 1771), with his own 1799 marriage conflicting by two years with the 1801 this tree holds from Geneanet; three disagreeing spellings of Marie Catherine Quinart's forename across three rows; Georges Joseph Thumas's OWN birth absent from the table despite four siblings being present, read as a coverage gap rather than a birthplace refutation; and a candidate, not a link, for Sophie Miranda Deridder (b. 1844, parents Isidore Deridder x Cordelie Victorine Lacourt) — one identifier only, her MIRANDA absent, and no way to tie her to the 1868 groom because netradyle's marriage pages carry no parents at all.",
+      "confidence": "sup",
+      "accessed": "2026-07-27",
+      "note": "See the netradyle site entry for how to query it without a browser. A 2006 volunteer deposit with visible transcription noise (Joustens/Jousten/Jostens, Kinart/Kinar, Derrider/Deridder) — sup throughout, never doc, and several rows here are recorded as AMBIGUOUS or CANDIDATE rather than grafted."
+    },
+    {
+      "id": "rab-bs-overlijdens",
+      "site": "vrijwilligersrab",
+      "kind": "collection",
+      "title": "West-Vlaamse Burgerlijke Stand — Overlijdens (death index), Rijksarchief Brugge/Kortrijk volunteers",
+      "url": "https://www.vrijwilligersrab.be/en/Civil_Status_Deceased_Index",
+      "covers": "The same volunteers' index of West-Flemish civil DEATH acts, searchable by the deceased's surname, and carrying both parents' names — which reaches children who died before ever marrying and so never appear in a marriage-act route at all.",
+      "yielded": "Six Diksmuide death acts naming Lucien Julianus Vincke x Ludovica Maria Vanalderweireldt as parents: two resolve blind-window births (Carolus Ludovicus, d. 1871; Bellarmin Eugenius, d. 1872) and four give death dates for children the tree already held without one (Irma Maria, Camilla Celina, Jerome Maurice, Eugeen Lucien). A second, independent corroboration of Theophile Henri Vincke (d. Oostende 1922). One name EXCLUDED outright: Medardus Edmondus Vincke (d. 1866) is an illegitimate child of a different Vincke woman, not this couple's. A separate sweep for the five remaining blind-window forenames (Emil/Fidel, Gustav/Gustaaf, Florida, Arthur, Cyriel) returned nothing tying to this couple.",
+      "confidence": "sup",
+      "accessed": "2026-07-27",
+      "note": "Query shape as the other two vrijwilligersrab indexes: POST /en/node/164 with 'naam'. The Diksmuide subset runs continuously 1798-1910, so a name absent from it there is absent from the transcription, not necessarily from life — death after 1910, elsewhere in the province, or under an unmatched name-form are the three untested alternatives, all stated as such rather than as a closed wall."
     }
   ]
 }

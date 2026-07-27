@@ -24,6 +24,7 @@ sources:
   - S19
   - S11
   - S8
+  - S33
 ---
 
 CORROBORATED (July 2026) as a mother, by her daughter's Kraainem marriage act of
@@ -102,3 +103,23 @@ Nothing here was refuted and no fact changed. What changed is the honest name fo
 evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 its image was actually read. None was. The register images are the named next step.
+
+A FOURTH CHILD (2026-07-27): [[joannes_bossin51]], born Sint-Stevens-Woluwe 15 August
+1851, between [[bossin]] (1849) and [[ludovica_bossin]] (1853) — she is aged 27 on that
+act, born Zaventem, matching this record's 1824 birth year and birthplace exactly. The
+act calls her *Anna Catharina Peremans*, the shortened form already reconciled above: her
+own 1846 marriage act gives the full *Joanna Catharina Jacoba* this record holds, so a
+later act repeating the shorter form is a clerk's memory of that document, not a rival
+name needing its own resolution. **That is the precedent this project needs stated
+plainly, because it recurs**: a shortened form is a settled variant, not an open question,
+whenever an *independent* document already in hand — not the disputed act itself — gives
+the full form. It is exactly what distinguishes this case from
+[[anna_haesaerts]]'s: her own record is called plain "Anna" on the act that anchors her in
+this tree, and "Anna Catharina" appears only inside the disputed acts themselves — so no
+document independent of the dispute has ever settled it, and grafting on the strength of
+the disputed act would use it to settle its own admissibility. Here the anchor (S19) and
+the dispute are different documents; there, they are the same one.
+
+She appears again, aged 29, at [[ludovica_bossin]]'s own birth act (Sint-Stevens-Woluwe
+nr. 18, 5 October 1853, S33) — again *Anna Catharina Peremans*, born Zaventem, matching
+her 1824 birth year exactly.

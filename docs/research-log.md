@@ -2774,3 +2774,110 @@ birth index, but each child's own later act.
 Twelve new records this pass: `charles_vincke`, `romanie_vincke`, `irma_vincke`,
 `camilla_vincke`, `eugene_vincke`, `jerome_vincke`, `florence_vincke`, `flavie_vi`,
 `eduardus_vi2`, `valentina_vi`, `maria_vi`, `angela_gunst`.
+
+## 65. Autopilot pass 2 (down) — a namesake ruled out, a fourth Bossin sibling, and five
+more children anchored by their parents' own marriage act
+
+Entirely an act-analysis pass over acts already sitting in `research/harvest/acts/abl.jsonl`
+— nothing was fetched over the network. Every ruling below is `sup`, never `doc`. Three
+items sat on the downward queue for this family; one of them was a repeat proposal, already
+refused once, and stays refused.
+
+**The queue re-proposed a graft this tree already retracted, and it is refused again.**
+`research.py children` surfaces [[joannes_coekelberg58]] as an unlinked child of
+[[jb_coekelberghs]] with no mother. It has no mother because §54 removed one by hand: the
+1858 Bertem birth act names the mother *Anna **Catharina** Haesaerts*, the forename variant
+§51/§53/§54 deliberately left unmerged with the plain *Anna Haesaerts* this tree holds. That
+retraction is not re-litigated here — grafting on the strength of the very act in dispute
+would settle the forename question by side effect, which is what CLAUDE.md rule 4 exists to
+prevent — but until this pass it had never been written to `research/labels.jsonl`, so
+nothing stopped a future queue from proposing it a third time. It now has a `--nonmatch`
+label against the mention itself (`abl:a0b8c9a0…#Person20705606`), so the refusal has a
+record a tool can read back, not only a note a human has to.
+
+**The Peremans/Haesaerts distinction, stated in full, because it is this pass's real
+contribution.** Two new acts name [[peremans]] as a mother — [[joannes_bossin51]]'s 1851
+birth and [[ludovica_bossin]]'s 1853 birth — and both write her *Anna Catharina Peremans*,
+shorter than this tree's *Joanna Catharina Jacoba*. That looks, on its face, like exactly the
+Haesaerts problem just above: a shortened forename on a disputed act. It is not, and the
+reason is the one CLAUDE.md rule 4 is built on. [[anna_haesaerts]]'s own anchor act — the
+1838 Bertem marriage that put her in this tree, read as a register image — calls her plain
+*Anna* three times, with no second forename anywhere; *Anna Catharina* appears only inside
+acts that are themselves in dispute, so no document independent of the dispute has ever
+settled it. [[peremans]]'s anchor act is different: her own 1846 Zaventem marriage (S19,
+read as an image) already gives her the full *Joanna Catharina Jacoba Peremans*, and her
+record already reasons — from that same anchor — that shorter forms elsewhere are a clerk's
+memory of it. The two 1851 and 1853 acts repeat an *already-reconciled* shortening; they do
+not have to do the reconciling. One case has an independent document that settles the
+variant; the other has only the disputed act calling itself as a witness. That is the
+precedent a future pass will need, so it is written on [[peremans]], [[joannes_bossin51]]
+and [[ludovica_bossin]] rather than left to be re-derived.
+
+**A fourth Bossin sibling, [[joannes_bossin51]]**, born Sint-Stevens-Woluwe 15 August 1851 —
+a second, unrelated *Joannes Baptista Bossin*, four years before the [[bossin]] this tree
+already held. **Do not confuse the two**: this pass's other finding, below, independently
+settles that this family — [[guilielmus_bossin]] × [[peremans]] — is not [[jbbossin]]'s
+family, so the shared full name is coincidence twice over: same forename set, same surname,
+same small commune, two unconnected men a generation apart. [[guilielmus_bossin]]'s own
+birth window narrows again on the strength of this act — 25 February–1 December 1824 to 25
+February–15 August 1824 — recorded in prose rather than the field, because the date grammar's
+only span form is year-to-year and a plain `"1824"` already asserts no more than both windows
+agree on.
+
+**[[ludovica_bossin]]'s birth moves from a year to a day**, 1853-10-05, on a second,
+independent act (S33) that states an hour of birth and — uniquely in this family's acts —
+has its EventDate and SourceDate coincide. Across this corpus the two normally differ by a
+day or two, which is what made the FamilySearch declaration date (S24) read as "probably a
+day late," the same reasoning already applied to her sister [[bossin]]'s birth. Same-day
+EventDate/SourceDate plus a stated hour is different evidence, and it is why that precedent
+does not carry over here.
+
+**Five more children of [[jbbossin]] × [[maria_wolf]], anchored by the couple's own marriage
+act.** [[jbbossin]] was, until this pass, a name with a death date and no birth, no parents
+and one child. His own marriage act — Sint-Stevens-Woluwe nr. 4, 17 June 1858 — supplies all
+three at once: his birth (2 January 1834, Sint-Stevens-Woluwe), his bride's birth (4 April
+1836, Brussel — she is recorded as a *verlaten kind*, an abandoned child who swore she never
+knew her own mother, though the act nonetheless names her, [[petronella_wolf]], formally),
+and — the finding that answers a question this tree had carried since [[ludovicus_bossin79]]
+and [[misabella_t]] married — his own parents, **Judocus Bossin × Maria Desmedt**, a couple
+with no connection at all to [[guilielmus_bossin]] × [[peremans]]. The shared-surname
+question on [[ludovicus_bossin79]]'s and [[jbbossin]]'s records is now resolved rather than
+merely flagged, in the negative: two Bossin families in one small commune, not one.
+
+Against that anchor birthdate, [[maria_wolf]]'s stated age is an *exact* match in five
+separate acts spanning 1857-1882 — 21, 22, 39, 46, and 43 on [[ludovicus_bossin79]]'s own
+1879 birth act — five for five, which is what defeats the "two couples" reading the
+seventeen-year gap between the 1859 and 1876 births might otherwise invite. [[jbbossin]]'s
+own age matches exactly in two of those acts and is a year short in two others — ordinary
+rounding on the same documents where the mother is precise. Two of the five children are
+double-attested by their own later marriages, one of which (1897) independently restates
+[[jbbossin]]'s death — Sint-Stevens-Woluwe, 19 March 1887 — exactly, and a sixth child,
+[[gjosef_bossin69]] (b. Kraainem 1869), known only from his own 1896 marriage act, restates it
+a second time. [[jbbossin]]'s trade moves across seven documents: *papiermaekersgast* →
+*daglooner* → *landbouwer* → *herbergier*, the trade he still holds at death and the one
+[[maria_wolf]] keeps alone afterward. The mother's surname is spelled five ways across the
+same forty years of acts — *Dewolf*, *Wolf*, *De Wolf*, *Anna Maria Dewolf*, *Maria Anna
+Dewolf* — one woman, several clerks.
+
+**FLAG, not resolved: [[jphilippus_bossin57]] was born 28 June 1857, about eleven months
+before [[jbbossin]] × [[maria_wolf]]'s marriage on 17 June 1858.** Neither date is altered to
+make the other agree. Legitimation by a marriage following the birth is the obvious reading,
+and this tree already documents the same shape on [[joannes_vi]] (§64) — recorded as an open
+question on both records, not resolved by this pass.
+
+**Corroboration only, no new person:** [[misabella_t]]'s own 1880 Sint-Stevens-Woluwe birth
+act independently confirms both her parents, [[georges_cj]] and [[bossin]], by exact age and
+birthplace, with the family spelled *Thomas* there against *Thumas* on her son
+[[karel_bossin01]]'s 1901 birth act — one family, an orthographic variant inside one
+transcription batch, ruled on and labelled in an earlier pass, written up here.
+
+**Ten new records this pass:** `karel_bossin01`, `joannes_bossin51`, `jphilippus_bossin57`,
+`pamandus_bossin59`, `janphilip_bossin76`, `frans_bossin82`, `gjosef_bossin69`,
+`judocus_bossin`, `maria_desmedt`, `petronella_wolf`. Tree: 446 → 456 people.
+
+**Everything above came from the corpus already on disk.** No harvest, no login, no browser
+session — every identifier check in this section reads an act `research/harvest/acts/abl.jsonl`
+already held, most of them already scored and labelled in `research/labels.jsonl` before this
+narrative was written. Three labels were added this pass: the repeat Coekelberghs refusal
+above, and two confirming [[jbbossin]] and [[maria_wolf]] against [[ludovicus_bossin79]]'s own
+1879 birth act, which the "five for five" mother's-age argument above depends on.
