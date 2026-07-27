@@ -4859,3 +4859,56 @@ carrying Egidius's own signature. That is where the next attempt should start, a
 genuinely different search problem from anything this project has run.
 
 Nothing entered the tree this pass. Two searches logged, one `ambiguous` and one `blocked`.
+
+## 85. The captcha was cleared, the image was read — a documented family, and §83 corrected by it
+
+Shaun cleared the challenge by hand. Everything below follows from that one act of access,
+which is worth stating plainly: **this is the pass that a human unblocked.**
+
+**The route, because it is reusable.** The image ark pages render once the challenge is
+passed, but the picture is not fetchable by any direct URL — the DAS endpoint answers 403,
+and the deep-zoom tiles sit on `sg30p0.familysearch.org`, which blocks cross-origin `fetch`
+and returns 429 to the shell. Tiles *do* load as `<img>`, and a tainted canvas cannot be
+exported, so the working method was: **read the tile grid out of the viewer's DOM, lay the
+tiles out as plain `<img>` elements in a page of their own, and screenshot that.** At level
+12 the page is 13 × 12 tiles, about 3300 px, which is enough to read a 1739 hand at 2×.
+
+**What the page says.** A transport of rents drawn by **Joannes Baptiste de Stobbeleere**,
+notary public at Gent, on a twelve-schelling stamp of **1739**:
+
+> in persoone **Frans Ceuterick** ende met hem bij sijnen consente ende authoritaetie
+> **Livine Bundervoet filia Lieven, verweckt bij Joanne de Smet syne huijsvrauwe** …
+> by transporte ghepasseert … van **Livinus Bundervoet filius Lieven voornoemt**, ende het
+> resterende derde competeert aen **Catharine Bundervoet dochter van voorseyden Lieven** …
+> debiteur **Paschier Bundervoet filius Lieven, opsetenen der heerlijckhede van Sint Pieters
+> Aelst**
+
+**Into the tree: six people, `doc`.** [[bundervoet_lieven_gent]] and [[desmet_joanna_gent]],
+and their four children [[bundervoet_livina_1739]], [[bundervoet_livinus_1739]],
+[[bundervoet_catharina_1739]] and [[bundervoet_paschier_1739]]. The parentage is *stated*
+four times over rather than inferred, which is what makes a `doc` grade honest here — and
+the records say plainly that the act gives no birth, no age, no death and no trade for any
+of them, because it does not.
+
+**The mother is the prize, and she is the argument for reading images.**
+FamilySearch's machine transcription of this exact page **never produced Joanna de Smet at
+all** — not garbled, absent. §83 mined that transcription hard and came away with four
+siblings and a father. One look at the picture added the fifth name, the one that makes them
+a family rather than a sibling list.
+
+**And §83 is corrected by the same look.** §83 read the family's residence off the
+transcription as Gent's **Sint-Pieters parish** and said so — which mattered, because that is
+[[bundervoet_egidius]]'s own birth parish, and it made this family look like a candidate for
+the generation above him. The page reads **`der heerlijckhede van Sint Pieters Aelst`** —
+the seigneury of **Sint-Pieters-Aalst**, some 30 km away. The act is merely *drawn* at Gent,
+before a Gent notary, as such transports routinely were. **The apparent link to Egidius's
+parish does not exist**, and the lesson is the plain one: a transcription that cannot spell a
+surname cannot be trusted with a place name either.
+
+**Egidius's parents remain unknown.** This pass added a documented family and removed a false
+lead, which is a good pass and not the one that was hoped for. The queue is unchanged: the
+1786 Vergult page carrying his signature, then the 1746–55 division; both are now reachable
+by the tile method above.
+
+Tree: 809 → 815 people. One artifact, one `--match` label, one search logged `hit` on
+`image-read`.

@@ -2170,6 +2170,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#85-the-captcha-was-cleared-the-image-was-read-a-documented-family-and-83-corrected-by-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        85. The captcha was cleared, the image was read — a documented family, and §83 corrected by it
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3655,6 +3666,17 @@
     <span class="md-ellipsis">
       
         84. The images behind the notarial series are captcha-gated — and what that does not mean
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-the-captcha-was-cleared-the-image-was-read-a-documented-family-and-83-corrected-by-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        85. The captcha was cleared, the image was read — a documented family, and §83 corrected by it
       
     </span>
   </a>
@@ -8209,6 +8231,51 @@ year. The full-text layer supplies exactly one: <strong>notary Vergult, Gent, 17
 carrying Egidius's own signature. That is where the next attempt should start, and it is a
 genuinely different search problem from anything this project has run.</p>
 <p>Nothing entered the tree this pass. Two searches logged, one <code>ambiguous</code> and one <code>blocked</code>.</p>
+<h2 id="85-the-captcha-was-cleared-the-image-was-read-a-documented-family-and-83-corrected-by-it">85. The captcha was cleared, the image was read — a documented family, and §83 corrected by it<a class="headerlink" href="#85-the-captcha-was-cleared-the-image-was-read-a-documented-family-and-83-corrected-by-it" title="Permanent link">&para;</a></h2>
+<p>Shaun cleared the challenge by hand. Everything below follows from that one act of access,
+which is worth stating plainly: <strong>this is the pass that a human unblocked.</strong></p>
+<p><strong>The route, because it is reusable.</strong> The image ark pages render once the challenge is
+passed, but the picture is not fetchable by any direct URL — the DAS endpoint answers 403,
+and the deep-zoom tiles sit on <code>sg30p0.familysearch.org</code>, which blocks cross-origin <code>fetch</code>
+and returns 429 to the shell. Tiles <em>do</em> load as <code>&lt;img&gt;</code>, and a tainted canvas cannot be
+exported, so the working method was: <strong>read the tile grid out of the viewer's DOM, lay the
+tiles out as plain <code>&lt;img&gt;</code> elements in a page of their own, and screenshot that.</strong> At level
+12 the page is 13 × 12 tiles, about 3300 px, which is enough to read a 1739 hand at 2×.</p>
+<p><strong>What the page says.</strong> A transport of rents drawn by <strong>Joannes Baptiste de Stobbeleere</strong>,
+notary public at Gent, on a twelve-schelling stamp of <strong>1739</strong>:</p>
+<blockquote>
+<p>in persoone <strong>Frans Ceuterick</strong> ende met hem bij sijnen consente ende authoritaetie
+<strong>Livine Bundervoet filia Lieven, verweckt bij Joanne de Smet syne huijsvrauwe</strong> …
+by transporte ghepasseert … van <strong>Livinus Bundervoet filius Lieven voornoemt</strong>, ende het
+resterende derde competeert aen <strong>Catharine Bundervoet dochter van voorseyden Lieven</strong> …
+debiteur <strong>Paschier Bundervoet filius Lieven, opsetenen der heerlijckhede van Sint Pieters
+Aelst</strong></p>
+</blockquote>
+<p><strong>Into the tree: six people, <code>doc</code>.</strong> [[bundervoet_lieven_gent]] and [[desmet_joanna_gent]],
+and their four children [[bundervoet_livina_1739]], [[bundervoet_livinus_1739]],
+[[bundervoet_catharina_1739]] and [[bundervoet_paschier_1739]]. The parentage is <em>stated</em>
+four times over rather than inferred, which is what makes a <code>doc</code> grade honest here — and
+the records say plainly that the act gives no birth, no age, no death and no trade for any
+of them, because it does not.</p>
+<p><strong>The mother is the prize, and she is the argument for reading images.</strong>
+FamilySearch's machine transcription of this exact page <strong>never produced Joanna de Smet at
+all</strong> — not garbled, absent. §83 mined that transcription hard and came away with four
+siblings and a father. One look at the picture added the fifth name, the one that makes them
+a family rather than a sibling list.</p>
+<p><strong>And §83 is corrected by the same look.</strong> §83 read the family's residence off the
+transcription as Gent's <strong>Sint-Pieters parish</strong> and said so — which mattered, because that is
+[[bundervoet_egidius]]'s own birth parish, and it made this family look like a candidate for
+the generation above him. The page reads <strong><code>der heerlijckhede van Sint Pieters Aelst</code></strong> —
+the seigneury of <strong>Sint-Pieters-Aalst</strong>, some 30 km away. The act is merely <em>drawn</em> at Gent,
+before a Gent notary, as such transports routinely were. <strong>The apparent link to Egidius's
+parish does not exist</strong>, and the lesson is the plain one: a transcription that cannot spell a
+surname cannot be trusted with a place name either.</p>
+<p><strong>Egidius's parents remain unknown.</strong> This pass added a documented family and removed a false
+lead, which is a good pass and not the one that was hoped for. The queue is unchanged: the
+1786 Vergult page carrying his signature, then the 1746–55 division; both are now reachable
+by the tile method above.</p>
+<p>Tree: 809 → 815 people. One artifact, one <code>--match</code> label, one search logged <code>hit</code> on
+<code>image-read</code>.</p>
 
 
 
