@@ -17,7 +17,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 52 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 53 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 3 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 60 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 21 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 4 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 65 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 67 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 6 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 | `netradyle` <https://www.netradyle.be/actes/> | index | open | name-index | 8 | 1,353,989 indexed acts for Namur, Liège, Hainaut, BRABANT WALLON, Luxembourg and Vlaams-Brabant: 721,862 births/baptisms, 181,589 marriages, 381,148 deaths/burials, 69,390 other. Mostly 1500-1912. Runs on ExpoActes 3.2.4. Free and completely unauthenticated for visitors — the login is for administrators only, so everything here is reproducible without a session. |
@@ -1097,6 +1097,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-27
 - **Note:** Scan available at the Stadsarchief Rotterdam proxy; not read this pass.
+
+#### `srt-rotterdam-1818-bijlagen-bundervoet` — Rotterdam huwelijksbijlagen 1818, folio B066v — the nine supplements to the Bundervoet × van Gerven marriage
+- **Kind:** record · <https://stadsarchief.rotterdam.nl/zoek-alles?mizig=236&miadt=184&miaet=54&micode=999-06.1818B&minr=8863060&miview=ldt>
+- **Collection:** Stadsarchief Rotterdam 999-75 inv. 104, huwelijksbijlagen 1818B, folio B066v, images 1-9
+- **Covers:** ['Bundervoet', 'Peeters', 'van Gerven']
+- **Yielded:** IMAGES READ. The groom's Gent baptism extract of 22 April 1788 (born 21 April, 11.15 pm), naming his father Aegidius Bundervoet of Sint-Pieters parish, his mother Anna Maria Elisabetha Peeters of Roermond, and the godfather Livinus Bundervoet who could not write; and a Gent notarial act of 21 October 1818 giving the father alive at Ackerstraat 22, trade stekwercker, the mother already dead, and the son a cooper at Rotterdam. Also the bride's Rotterdam baptism extract of 15 September 1790.
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** THE ROUTE WORTH REMEMBERING. A Dutch civil marriage required the groom's birth certificate, so when the groom was born abroad the foreign extract was physically filed with the act. For any Fleming who married in the Netherlands this puts a Belgian parish act inside an open Dutch archive, with no Belgian venue involved. Reached by resolving the Open Archives handle to stadsarchief.rotterdam.nl, then reading the huwelijksbijlagen viewer attached to the act page. Scans serve at 725x1024 with &format=large; that is the maximum, and the Latin needed upscaling to read.
 
 ### Familiekunde Vlaanderen — dataindexen (indices en klappers)
 

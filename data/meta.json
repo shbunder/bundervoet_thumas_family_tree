@@ -1,8 +1,9 @@
 {
-  "_comment": "Where the tree starts. `roots` is a list for the forest case; the first is where the explorer opens. Confidence codes are data; their human labels are in site/.",
+  "_comment": "Where the tree starts. `roots` is a list for the forest case; the first is where the explorer opens. Objective 3 builds a FOREST of Bundervoet families, so a root here need not connect to Renee and Leon — bundervoet_egidius is the documented head of the Gent family and is deliberately unlinked to them. Confidence codes are data; their human labels are in site/.",
   "roots": [
     "bundervoet_renee_2017",
-    "bundervoet_leon_2019"
+    "bundervoet_leon_2019",
+    "bundervoet_egidius"
   ],
   "defaultSource": "family",
   "confidence": [

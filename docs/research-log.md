@@ -4384,3 +4384,96 @@ two blocked with their reason. Two labels, both `--nonmatch`. One new site and t
 pages in `research/sources.json`. Full evidence, including the three raw venue captures, in
 `research/findings/`. Verdict: **NOT PROVEN for objective 3** — no Gent patriarch is
 grafted and none should be — **but no longer closed.**
+
+## 77. Gent, 22 April 1788 — the act was in a Dutch archive all along, and one of the six Gent patriarchs becomes a person
+
+§76 ended on a single named target: the Gent baptism of a Bundervoet born 22 May 1788,
+with the note that the cheapest route to it was not Gent at all but the **Rotterdam
+huwelijksbijlagen of 1818**, because a Dutch civil marriage required the groom's birth
+certificate and this groom was born abroad. That worked. Two Gent acts came out of a Dutch
+city archive with no Belgian venue involved, and both were read as images.
+
+**THE ROUTE, because it generalises.** Resolve the Open Archives handle for the Rotterdam
+marriage to `stadsarchief.rotterdam.nl`, and the act page carries a viewer of the
+*huwelijksbijlagen* — the supplements physically filed with it. Folio B066v holds nine
+images. Scans serve at 725×1024 with `&format=large`, which is the maximum; the Latin
+needed upscaling to 3× to read. **Any Fleming who married in the Netherlands leaves a
+Belgian parish act inside an open Dutch archive.** Registered as
+`srt-rotterdam-1818-bijlagen-bundervoet`.
+
+**THE BAPTISM ACT** (artifact `bundervoet-1788-baptism-extract-gent-sintmaarten`), a
+certified extract from the register of **Sint-Maarten, Gent**, issued by the Mairie de Gand:
+
+> *Vigesima secunda aprilis 1788 Baptizavi **Livinum Cornelium** filium **Ægidii
+> Bundervoet ex S[anc]ti Petri** et **annæ mariæ Elizabethæ Peeters ruremondensis**
+> conjugum, **natum heri vesperi quadrante post undecimam**. Susceperunt **Livinus
+> Bundervoet qui dixit se non posse scribere** et Angela Van der Schuren.*
+> — signed C.J.J. de Rousse, vice-pastor, and **Gillis Bundervoet**.
+
+**Four results, and one of them is a correction to §76.**
+
+1. **The date was wrong and is now right.** Baptised **22 April 1788**, born the evening
+   before, **21 April, at a quarter past eleven**. Four Rotterdam population-register
+   entries say *22 May 1788*, and §76 repeated them. The act says April, and the Rotterdam
+   death act agrees from a third direction: 83 years and 10 months on 28 February 1872
+   computes to April 1788. The registers are wrong by a month.
+2. **The Egidius/Petrus conflict is resolved, in favour of Egidius.** §76 recorded it
+   unresolved and refused to graft on it, which was right. Both Rotterdam civil records
+   name the father *Petrus*; the Gent parish register names him *Ægidius*, the Gent notary
+   who stood in his front room names him *Egidius*, and **he signs the baptism register
+   himself as Gillis Bundervoet**. It was a Rotterdam clerk's error.
+3. **Egidius was *ex Sancti Petri*** — of Gent's **Sint-Pieters parish**, which is exactly
+   where the Bundervoet surname is thickest in the Gent registers (46 marriages in the
+   Geneanet index).
+4. **The mother was from Roermond.** *Annæ Mariæ Elizabethæ Peeters **ruremondensis***. That
+   one word explains what the indexes could not: Peeters is not a Gent surname and her
+   four-part given name is not a Gent pattern. How a Roermond woman married into a
+   Sint-Pieters family is unanswered.
+
+**THE NOTARIAL ACT** (artifact `bundervoet-1818-notarial-consent-gent`), Gent, 21 October
+1818, notary **Charles Le Begue**: *ten verzoeke van Sieur Livinus Cornelis Bundervoet,
+sone van Egidius by wylent Anne Marie Elisabeth Peters, **Kuyper** van beroep, woonende tot
+Rotterdam … my begeven ten persoone van de genoemde Sieur **Egidius Bundervoet,
+stekwercker, woonende binnen deese stad in de Ackerstraete numero twee en twintig, vader
+van den voornoemden mynen requirant***. So Egidius was **alive in October 1818**, at a
+street address, with a trade; his first wife was **already dead** (*by wylent*), which
+bounds her death to 1788×1818 and makes room for the second marriage; and the son was a
+**cooper**. Witnesses were a Gent tailor and a button-maker, not kin.
+
+**WHAT WENT INTO THE TREE — a documented Gent family, disconnected on purpose.** Five
+records, none of them related to Renée and Léon, all of them objective 3, which expects
+disconnected Bundervoet roots and asks for the links between them:
+[[bundervoet_egidius]] (`doc`), [[peeters_annamaria]] (`doc`),
+[[bundervoet_livinus_1788]] (`doc`), [[vangerven_joanna_1790]] (`doc`) and
+[[ledent_mariafrancisca_1777]] (`sup`). **This is the first of §73's six Gent patriarchs to
+become a person rather than a name in a death index.**
+
+**The two marriages now sit in order.** §73 read Egidius as the husband of Maria Francisca
+Ledent, from her 1853 death act. She was born at Lokeren in 1777 and so was ten years old
+at his 1787 marriage to Anna Maria Elisabeth Peeters. Peeters is the first wife, Ledent the
+second, and that reconciles the death index with the marriage act rather than contradicting
+it.
+
+**Two dates are deliberately not what they look like.** The bride's 1790 date is a
+**baptism**, not a birth, and says so in `raw`; and Anna Maria Elisabeth Peeters has a
+death **bound** (`<1818`) rather than a year, because *wylent* gives an upper limit and
+nothing more.
+
+**THE FRONTIER, and it is the best one open on objective 3.** The godfather was **Livinus
+Bundervoet, who declared he could not write**. Godparents in a Flemish baptism register are
+almost always kin, so he is the nearest approach yet to the generation above the Gent
+patriarchs. The Gent Sint-Pieters register holds several candidate Livinus Bundervoets, of
+whom *Livinus Bundervoet × Petronilla De Smet, married Sint-Pieters 1757*, is the right
+generation to be his father. **Not grafted** — a forename plus a parish is one identifier.
+**Egidius's own marriage act of 1787, at Sint-Michiels Noord, would name his parents
+outright**, and that is the next act.
+
+**Blocked, unchanged.** AGATHA's `genealogie` tab renders results only from a submitted
+form, so a direct URL gives an empty shell, and the person-name tab that used to answer
+this is gone. Logged `blocked`, scope "not reached at all". FamilySearch full-text is still
+behind an hCaptcha, which this pass did not attempt to defeat and did not need.
+
+Tree: 545 → **550 people**. Two acts read as images and saved as artifacts. Three searches
+logged, two of them `image-read` hits. Two labels, both `--match`, both `act`-based — the
+first `doc` rulings this line has ever carried. One new source page. Verdict: **the Gent
+forest now has a documented root**, and it is one act away from a generation older.

@@ -2051,6 +2051,23 @@
    "confidence": "sup",
    "accessed": "2026-07-27",
    "note": "Scan available at the Stadsarchief Rotterdam proxy; not read this pass."
+  },
+  {
+   "id": "srt-rotterdam-1818-bijlagen-bundervoet",
+   "site": "openarch",
+   "kind": "record",
+   "title": "Rotterdam huwelijksbijlagen 1818, folio B066v — the nine supplements to the Bundervoet × van Gerven marriage",
+   "url": "https://stadsarchief.rotterdam.nl/zoek-alles?mizig=236&miadt=184&miaet=54&micode=999-06.1818B&minr=8863060&miview=ldt",
+   "collection": "Stadsarchief Rotterdam 999-75 inv. 104, huwelijksbijlagen 1818B, folio B066v, images 1-9",
+   "covers": [
+    "Bundervoet",
+    "Peeters",
+    "van Gerven"
+   ],
+   "yielded": "IMAGES READ. The groom's Gent baptism extract of 22 April 1788 (born 21 April, 11.15 pm), naming his father Aegidius Bundervoet of Sint-Pieters parish, his mother Anna Maria Elisabetha Peeters of Roermond, and the godfather Livinus Bundervoet who could not write; and a Gent notarial act of 21 October 1818 giving the father alive at Ackerstraat 22, trade stekwercker, the mother already dead, and the son a cooper at Rotterdam. Also the bride's Rotterdam baptism extract of 15 September 1790.",
+   "confidence": "doc",
+   "accessed": "2026-07-27",
+   "note": "THE ROUTE WORTH REMEMBERING. A Dutch civil marriage required the groom's birth certificate, so when the groom was born abroad the foreign extract was physically filed with the act. For any Fleming who married in the Netherlands this puts a Belgian parish act inside an open Dutch archive, with no Belgian venue involved. Reached by resolving the Open Archives handle to stadsarchief.rotterdam.nl, then reading the huwelijksbijlagen viewer attached to the act page. Scans serve at 725x1024 with &format=large; that is the maximum, and the Latin needed upscaling to read."
   }
  ]
 }
