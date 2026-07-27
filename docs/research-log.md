@@ -4768,3 +4768,58 @@ by how much they would settle: any naming Egidius or a Livinus Bundervoet first,
 reach the generation above the patriarch this project has been chasing all day. Then the
 Kortrijk rolls, which are a new and much older component. Then Francijntje's 1717 will,
 which will name her heirs and therefore the surviving Rotterdam family.
+
+## 83. Mining the Gent notarial series — a Sint-Pieters sibling group, and why none of it is grafted
+
+Unattended pass, working §82's queue. **Verdict: NOT PROVEN.** Egidius Bundervoet's parents
+are still unknown, and nothing entered the tree. What changed is that the Gent families now
+have a shape, and the next step is a specific image rather than a direction.
+
+**The method that made this worth doing.** The full-text API returns more than the raw
+transcription: each document also carries an `entities` array of extracted NAMEs and a
+`sourceUrl` that is the image ark. The entity layer is markedly cleaner than the text —
+where the raw OCR gives *"catjaine bunderboet"* and *"patschier bundelvoet"*, the extractor
+gives `Catharina Bundervoet` and `Pasquier Bundervoet`. Mining both across all 237 documents
+yields **109 Bundervoet name entities in 68 distinct spellings** and **119 snippets pairing a
+Bundervoet with a kinship word**, each carrying the ark of the page it came from. Kept in
+`research/findings/bundervoet-fulltext-entities-2026-07-27.json`.
+
+**A Gent Sint-Pieters family, assembled from an estate partition of 1738–43:**
+
+> *"Livinus Bundervoet **filius Lieven**"* · *"Catharine Bundervoet **dochter van voorseyden
+> Lieven**"* · *"Passchier Bundervoet **f.s. Lieven**, opsetenen der heerlijckhede van **Sint
+> Pieters**"* · *"[Livi]ne Bundervoet **getrauwt met** [Fran]s Ceutericx **ende** Catharine
+> Bundervoet **sijne susters**"* · *"pieternelle bundervoet **sijne suster**"*
+
+Five children of one Lieven Bundervoet: **Livinus, Catharina, Passchier, Livina and
+Petronella**. The Geneanet index held four of those as unrelated marriage entries — including
+*"BUNDERVOET Livina × CEUTERICX Franciscus (1737), Gent Sint-Pieters"*, which matches exactly.
+**A parish index lists people; a notarial act says how they are related**, and that is the
+whole reason this series matters for objective 3.
+
+Three more structures came out of the same layer. A 1744–52 act names *"Catharine Bundervoet
+**dochter van Daniel**"* with *"Daniel Bundervoet ende Lieven Verbare **hunne respective
+vaders**"*, matching Geneanet's *"BUNDERVOET Daniel × VERDONCK Egidia (1681)"*. A 1746–55
+estate division sets three sibling groups beside each other and calls **Joanna Bundervoet**
+(m. Frans de Moerloose, three children) and **Livina Bundervoet** (four children) *"suster van
+vollen bedde"* — full sisters. And a 1671–72 partition puts **Passchier and Geert Bundervoet**
+on one farmstead.
+
+**And the near-miss worth recording.** The entity layer put `gillis bundervoet` — the Flemish
+Egidius, spelled as he signs it — on a **Gent notarial page of 1786, notary Vergult**, one
+year before his marriage. A marriage contract of that date would name his parents outright.
+It is not one: the whole transcription is about 180 characters, *"…7 gillis bundervoet Vergult
+nots pub"*, which is a signature or an index line. Recorded as a lead against the ark, not as
+a finding.
+
+**Why nothing is grafted, stated plainly.** Every name above is handwriting-recognition
+output. The same page renders the surname as *Bundervoet*, *bunderboet*, *bundelvoet*,
+*Bundervoch* and *Van Bundervoet*; one guardianship line says *Hendrik* where its parallel
+says *Gerrit*. Two independent identifiers cannot be assembled out of a source that cannot
+spell the identifier. **This layer says which image to open. It is not evidence.** The pass
+logged `ambiguous` rather than `hit` for that reason.
+
+**Next, unchanged in direction and sharper in target:** read the images, in this order — the
+1738–43 Sint-Pieters partition (five siblings and their father, in Egidius's own parish); the
+1786 Vergult page (Egidius by name, a year before his marriage); then the 1746–55 division
+(three sibling groups at once). Each is one ark and one page.

@@ -1,0 +1,1720 @@
+{
+ "generated": "2026-07-27",
+ "what": "Structured mining of the 237 FamilySearch full-text documents: extracted NAME entities matching Bundervoet, and every snippet pairing a Bundervoet with a kinship word.",
+ "warning": "EVIDENCE ONLY. Both layers derive from handwriting recognition. The entity extractor is markedly cleaner than the raw text but still yields 'Bundervoch', 'Bundervoor', 'Van Bundervoet'. NOTHING here is graftable without reading the image the ark points to.",
+ "totals": {
+  "documents": 237,
+  "name_entities": 109,
+  "distinct_name_forms": 69,
+  "kinship_snippets": 119
+ },
+ "name_entities": [
+  {
+   "name": "Catherine Bundervoet",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "title": "Flanders, Belgium Nobility 1863-1864",
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M"
+  },
+  {
+   "name": "Lievin Bundervoet",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "title": "Flanders, Belgium Nobility 1863-1864",
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M"
+  },
+  {
+   "name": "Lievin Bundervoet",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "title": "Flanders, Belgium Nobility 1863-1864",
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M"
+  },
+  {
+   "name": "Pasquier Bundervoet",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "title": "Flanders, Belgium Nobility 1863-1864",
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M"
+  },
+  {
+   "name": "Pieter Bundervoet",
+   "date": "1753-1757",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1753-1757",
+   "ark": "3:1:3QHV-13P5-KJ68",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-KJ68"
+  },
+  {
+   "name": "Pieter Bundervoet",
+   "date": "1753-1757",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1753-1757",
+   "ark": "3:1:3QHV-13P5-KJ68",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-KJ68"
+  },
+  {
+   "name": "Geert Bundervoet",
+   "date": "1671-1672",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1671-1672",
+   "ark": "3:1:3QHK-93P5-VCMX",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-VCMX"
+  },
+  {
+   "name": "gerritse bundervoet",
+   "date": "1657-1658",
+   "type": "Miscellaneous",
+   "title": "Rotterdam, South Holland, Netherlands Miscellaneous 1657-1658",
+   "ark": "3:1:3QHV-P3VW-SZJS",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-P3VW-SZJS"
+  },
+  {
+   "name": "marie bundervoet",
+   "date": "",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial",
+   "ark": "3:1:3QHK-9359-1GNM",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-1GNM"
+  },
+  {
+   "name": "catharine bundervoet",
+   "date": "1748-1751",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1748-1751",
+   "ark": "3:1:3QHV-B359-549W",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-549W"
+  },
+  {
+   "name": "Daniel Bundervoet",
+   "date": "1744-1752",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1744-1752",
+   "ark": "3:1:3QHV-B3P5-DQQT",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-DQQT"
+  },
+  {
+   "name": "Josse Bundervoet",
+   "date": "1540-1549",
+   "type": "Citizenship",
+   "title": "Kortrijk, West Flanders, Belgium Citizenship 1540-1549",
+   "ark": "3:1:3Q9M-CSYT-D9L4-L",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSYT-D9L4-L"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1540-1549",
+   "type": "Citizenship",
+   "title": "Kortrijk, West Flanders, Belgium Citizenship 1540-1549",
+   "ark": "3:1:3Q9M-CSYT-D9L4-L",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSYT-D9L4-L"
+  },
+  {
+   "name": "Joanne Bundervoet",
+   "date": "1712-1713",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1712-1713",
+   "ark": "3:1:3QHK-93P5-G9YK",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-G9YK"
+  },
+  {
+   "name": "Catharina Bundervoet Luytsa",
+   "date": "1750-1761",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1750-1761",
+   "ark": "3:1:3QHV-13P5-V4HT",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-V4HT"
+  },
+  {
+   "name": "anne marie bundervoet",
+   "date": "1722-1729",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1722-1729",
+   "ark": "3:1:3QHV-13P5-LNWD",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-LNWD"
+  },
+  {
+   "name": "Gerrits Bundervoet",
+   "date": "1663-1664",
+   "type": "Guardianship",
+   "title": "Rotterdam, South Holland, Netherlands Guardianship 1663-1664",
+   "ark": "3:1:3QHV-53K4-VP58",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-53K4-VP58"
+  },
+  {
+   "name": "Van Bundervoet",
+   "date": "1697-1704",
+   "type": "Guardianship",
+   "title": "Rotterdam, South Holland, Netherlands Guardianship 1697-1704",
+   "ark": "3:1:3QHV-R3KC-L6P2",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-R3KC-L6P2"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1849",
+   "type": "Tax",
+   "title": "Zuidhorn, Groningen, Netherlands Tax 1849",
+   "ark": "3:1:3QHV-13RN-GQ6T",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13RN-GQ6T"
+  },
+  {
+   "name": "petronelle bundervoet",
+   "date": "1765-1767",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1765-1767",
+   "ark": "3:1:3QHV-B3P5-1V35",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-1V35"
+  },
+  {
+   "name": "pieter bundervoet van Cune",
+   "date": "1729-1732",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1729-1732",
+   "ark": "3:1:3QHK-9359-BJFB",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-BJFB"
+  },
+  {
+   "name": "Michiel Bundervoet",
+   "date": "1659",
+   "type": "Miscellaneous",
+   "title": "Rotterdam, South Holland, Netherlands Miscellaneous 1659",
+   "ark": "3:1:3QHV-P3VW-SZKQ",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-P3VW-SZKQ"
+  },
+  {
+   "name": "Louis - Joseph BUNDERVOET",
+   "date": "1897",
+   "type": "Public",
+   "title": "France Public 1897",
+   "ark": "3:1:3QSQ-G9DR-C8FS",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9DR-C8FS"
+  },
+  {
+   "name": "marie bundervoet",
+   "date": "",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial",
+   "ark": "3:1:3QHK-Q359-1P54",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q359-1P54"
+  },
+  {
+   "name": "Colete BUNDERVOET",
+   "date": "",
+   "type": "Tax",
+   "title": "Zeeland, North Brabant, Netherlands Tax",
+   "ark": "3:1:3QHK-M3PW-YJ3V",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-M3PW-YJ3V"
+  },
+  {
+   "name": "henricus Marian bundervoet",
+   "date": "",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial",
+   "ark": "3:1:3QHV-B3P5-VFXS",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-VFXS"
+  },
+  {
+   "name": "henricus Marian bundervoet",
+   "date": "",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial",
+   "ark": "3:1:3QHV-B3P5-VFXS",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-VFXS"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1657-1658",
+   "type": "Miscellaneous",
+   "title": "Rotterdam, South Holland, Netherlands Miscellaneous 1657-1658",
+   "ark": "3:1:3QHV-L3VW-SZ84",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-L3VW-SZ84"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Genealogy",
+   "title": "Brabant, Belgium Genealogy",
+   "ark": "3:1:3QHK-935B-48H4",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-935B-48H4"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1712-1713",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1712-1713",
+   "ark": "3:1:3QHK-93P5-G9BV",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-G9BV"
+  },
+  {
+   "name": "M. BUNDERVOET",
+   "date": "1897",
+   "type": "Public",
+   "title": "France Public 1897",
+   "ark": "3:1:3QS7-89DR-CHCY",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QS7-89DR-CHCY"
+  },
+  {
+   "name": "Marianna Bundervoet",
+   "date": "1815-1818",
+   "type": "Military",
+   "title": "Netherlands Military 1815-1818",
+   "ark": "3:1:33S7-9Y1N-9WPT",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9Y1N-9WPT"
+  },
+  {
+   "name": "Mèr Bundervoet",
+   "date": "1839-1844",
+   "type": "Military",
+   "title": "Belgium Military 1839-1844",
+   "ark": "3:1:3QHN-T3YJ-4WNG",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHN-T3YJ-4WNG"
+  },
+  {
+   "name": "Jo . Cathaine bundervoet",
+   "date": "1730-1734",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1730-1734",
+   "ark": "3:1:3QHK-93P5-4DYD",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-4DYD"
+  },
+  {
+   "name": "gillis bundervoet",
+   "date": "1786",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1786",
+   "ark": "3:1:3QHV-B359-5XKM",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-5XKM"
+  },
+  {
+   "name": "Maria Bundervoet",
+   "date": "1761-1766",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1761-1766",
+   "ark": "3:1:3QHV-135S-SS9K",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-135S-SS9K"
+  },
+  {
+   "name": "Pierre BUNDERVOET",
+   "date": "",
+   "type": "Tax",
+   "title": "Zeeland, North Brabant, Netherlands Tax",
+   "ark": "3:1:3QHV-B3PW-YNNV",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3PW-YNNV"
+  },
+  {
+   "name": "F. PETRUS BUNDERVOET",
+   "date": "",
+   "type": "Genealogy",
+   "title": "Brabant, Belgium Genealogy",
+   "ark": "3:1:3QHK-Q351-FXL8",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q351-FXL8"
+  },
+  {
+   "name": "Gerrit Bundervoet",
+   "date": "1659-1669",
+   "type": "Attestation",
+   "title": "Rotterdam, South Holland, Netherlands Attestation 1659-1669",
+   "ark": "3:1:3QHV-P3V7-P9W9-T",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-P3V7-P9W9-T"
+  },
+  {
+   "name": "Marianna Bundervoet",
+   "date": "1815-1818",
+   "type": "Military",
+   "title": "Netherlands Military 1815-1818",
+   "ark": "3:1:3Q9M-CSTL-JJ4T",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-JJ4T"
+  },
+  {
+   "name": "Goetaale  de Buck Bundervoet",
+   "date": "1815-1818",
+   "type": "Military",
+   "title": "Netherlands Military 1815-1818",
+   "ark": "3:1:3Q9M-CSTL-JJW5",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-JJW5"
+  },
+  {
+   "name": "Pieter Bundervoet",
+   "date": "",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial",
+   "ark": "3:1:3QHV-1359-RP68",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-RP68"
+  },
+  {
+   "name": "Pieter Bundervoet",
+   "date": "",
+   "type": "Court",
+   "title": "Oost- en West-Souburg, Zeeland, Netherlands Court",
+   "ark": "3:1:3QHK-Q3PX-7ST5",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3PX-7ST5"
+  },
+  {
+   "name": "Maria Bundervoet ",
+   "date": "1891-1892",
+   "type": "Military",
+   "title": "Netherlands Military 1891-1892",
+   "ark": "3:1:3Q9M-CSTT-C7ST-5",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTT-C7ST-5"
+  },
+  {
+   "name": "joana therese Bundervoet",
+   "date": "1768-1777",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1768-1777",
+   "ark": "3:1:3QHK-935Q-DV9R",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-935Q-DV9R"
+  },
+  {
+   "name": "Coleta Bundervoet",
+   "date": "1823-1824",
+   "type": "Military",
+   "title": "Netherlands Military 1823-1824",
+   "ark": "3:1:3Q9M-CSTL-VHRW",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-VHRW"
+  },
+  {
+   "name": "Bundervoet Stevens",
+   "date": "1814-1817",
+   "type": "Military",
+   "title": "Netherlands Military 1814-1817",
+   "ark": "3:1:33S7-9Y1N-94NL",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9Y1N-94NL"
+  },
+  {
+   "name": "Igtje Bundervoet",
+   "date": "",
+   "type": "Ecclesiastical Membership",
+   "title": "Haarlem, North Holland, Netherlands Ecclesiastical Membership",
+   "ark": "3:1:3QSQ-G9QK-X4M",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9QK-X4M"
+  },
+  {
+   "name": "pierre bundervoet",
+   "date": "1725-1732",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1725-1732",
+   "ark": "3:1:3QHV-B3P5-CX9",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-CX9"
+  },
+  {
+   "name": "Sartel Bundervoet",
+   "date": "1771-1774",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1771-1774",
+   "ark": "3:1:3QHK-Q359-BKK6",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q359-BKK6"
+  },
+  {
+   "name": "joannes bundervoet",
+   "date": "1739-1758",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1739-1758",
+   "ark": "3:1:3QHV-13P5-NNZZ",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-NNZZ"
+  },
+  {
+   "name": "F. PETRUS BUNDERVOET",
+   "date": "",
+   "type": "Genealogy",
+   "title": "Brabant, Belgium Genealogy",
+   "ark": "3:1:3QHK-Q351-FXX5",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q351-FXX5"
+  },
+  {
+   "name": "Marie Catherine Bundervoor",
+   "date": "1771-1774",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1771-1774",
+   "ark": "3:1:3QHV-1359-BJJ3",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-BJJ3"
+  },
+  {
+   "name": "Marie Catherine Bundervoet",
+   "date": "1771-1774",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1771-1774",
+   "ark": "3:1:3QHV-1359-BJJ3",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-BJJ3"
+  },
+  {
+   "name": "pieter bundervoet",
+   "date": "1746-1755",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1746-1755",
+   "ark": "3:1:3QHK-9359-1TJ7",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-1TJ7"
+  },
+  {
+   "name": "Louis - Joseph BUNDERVOET",
+   "date": "1910",
+   "type": "Public",
+   "title": "France Public 1910",
+   "ark": "3:1:3QS7-L9DR-CV83",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QS7-L9DR-CV83"
+  },
+  {
+   "name": "Coleta Bundervoet",
+   "date": "1823-1824",
+   "type": "Military",
+   "title": "Netherlands Military 1823-1824",
+   "ark": "3:1:33S7-9Y1X-THB",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9Y1X-THB"
+  },
+  {
+   "name": "Maria Anna Bundervoet",
+   "date": "1825-1826",
+   "type": "Military",
+   "title": "Netherlands Military 1825-1826",
+   "ark": "3:1:3Q9M-CSTL-NR6W",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-NR6W"
+  },
+  {
+   "name": "BUNDERVOET DAUTECOURT",
+   "date": "1953",
+   "type": "Passenger List",
+   "title": "New York, United States Passenger List 1953",
+   "ark": "3:1:3QSQ-G94G-5XRS",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QSQ-G94G-5XRS"
+  },
+  {
+   "name": "Louis - Joseph BUNDERVOET",
+   "date": "1897",
+   "type": "Public",
+   "title": "France Public 1897",
+   "ark": "3:1:3QSQ-G9DR-CCND",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9DR-CCND"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1763-1765",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1763-1765",
+   "ark": "3:1:3QHK-935S-97TR",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-935S-97TR"
+  },
+  {
+   "name": "pieter Bundervoet getrout",
+   "date": "1669-1671",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1669-1671",
+   "ark": "3:1:3QHV-B35S-3LDH",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B35S-3LDH"
+  },
+  {
+   "name": "Bundervoet Allain",
+   "date": "1944-1948",
+   "type": "Immigration",
+   "title": "New York City, New York, United States Immigration 1944-1948",
+   "ark": "3:1:3Q9M-C9BZ-QSDH-Y",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-C9BZ-QSDH-Y"
+  },
+  {
+   "name": "Jo . anna Catharina Bundervoet",
+   "date": "1770-1776",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1770-1776",
+   "ark": "3:1:3QHV-B359-5Z1J",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-5Z1J"
+  },
+  {
+   "name": "Pieter Bundervoet",
+   "date": "",
+   "type": "Genealogy",
+   "title": "Netherlands Genealogy",
+   "ark": "3:1:3QHV-13PF-9DD9",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13PF-9DD9"
+  },
+  {
+   "name": "peter bundervoet",
+   "date": "1765-1767",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1765-1767",
+   "ark": "3:1:3QHV-B3P5-1JK7",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-1JK7"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1775-1777",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1775-1777",
+   "ark": "3:1:3QHV-B359-1YXT",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-1YXT"
+  },
+  {
+   "name": "Pieter Bundervoet",
+   "date": "1895",
+   "type": "Tax",
+   "title": "Zuidhorn, Groningen, Netherlands Tax 1895",
+   "ark": "3:1:3QHV-B3RN-SFR2",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3RN-SFR2"
+  },
+  {
+   "name": "E. B. Bindervoet",
+   "date": "1895",
+   "type": "Tax",
+   "title": "Zuidhorn, Groningen, Netherlands Tax 1895",
+   "ark": "3:1:3QHV-B3RN-SFR2",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3RN-SFR2"
+  },
+  {
+   "name": "Jannetje Bundervoet",
+   "date": "",
+   "type": "Genealogy",
+   "title": "Netherlands Genealogy",
+   "ark": "3:1:3QHV-13PF-CJXJ",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13PF-CJXJ"
+  },
+  {
+   "name": "Johanna Lowina Maria Bundervoet",
+   "date": "1891-1892",
+   "type": "Military",
+   "title": "Netherlands Military 1891-1892",
+   "ark": "3:1:3Q9M-C39V-FQQF-C",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-C39V-FQQF-C"
+  },
+  {
+   "name": "Pieter Bundervoet",
+   "date": "",
+   "type": "Court",
+   "title": "Oost- en West-Souburg, Zeeland, Netherlands Court",
+   "ark": "3:1:3QHV-13RY-3KBX",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13RY-3KBX"
+  },
+  {
+   "name": "Jan Michiel Bundervoet",
+   "date": "1673-1676",
+   "type": "Guardianship",
+   "title": "Rotterdam, South Holland, Netherlands Guardianship 1673-1676",
+   "ark": "3:1:3QHV-53KC-9LK8",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-53KC-9LK8"
+  },
+  {
+   "name": "Michiel Bundervoet",
+   "date": "1664-1667",
+   "type": "Guardianship",
+   "title": "Rotterdam, South Holland, Netherlands Guardianship 1664-1667",
+   "ark": "3:1:3QHV-R3KZ-FC1",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-R3KZ-FC1"
+  },
+  {
+   "name": "Joseph Bundervoët",
+   "date": "",
+   "type": "Military",
+   "title": "Dahomey Military",
+   "ark": "3:1:3QSQ-G9XY-CF58",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9XY-CF58"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1815-1818",
+   "type": "Military",
+   "title": "Netherlands Military 1815-1818",
+   "ark": "3:1:33SQ-GY1N-9H5K",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GY1N-9H5K"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1814-1829",
+   "type": "Military",
+   "title": "Netherlands Military 1814-1829",
+   "ark": "3:1:3Q9M-CSTL-J9RX",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-J9RX"
+  },
+  {
+   "name": "Livine Bundervoet",
+   "date": "1774-1777",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1774-1777",
+   "ark": "3:1:3QHV-13P5-R77N",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-R77N"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1748-1755",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1748-1755",
+   "ark": "3:1:3QHV-B359-TN9B",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-TN9B"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "1748-1755",
+   "type": "Notarial",
+   "title": "Ghent, East Flanders, Belgium Notarial 1748-1755",
+   "ark": "3:1:3QHV-B359-TN9B",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-TN9B"
+  },
+  {
+   "name": "Petronella Bundervoet",
+   "date": "1814-1817",
+   "type": "Military",
+   "title": "Netherlands Military 1814-1817",
+   "ark": "3:1:33SQ-GY1N-9CLH",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GY1N-9CLH"
+  },
+  {
+   "name": "pieter Bundervoet de voors .",
+   "date": "1712-1713",
+   "type": "Notarial",
+   "title": "Gent, East Flanders, Belgium Notarial 1712-1713",
+   "ark": "3:1:3QHV-B3P5-G9TK",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-G9TK"
+  },
+  {
+   "name": "BUNDERVOET d' HAUTECOURT",
+   "date": "1945",
+   "type": "Passenger List",
+   "title": "New York, United States Passenger List 1945",
+   "ark": "3:1:3QS7-894P-C3GQ",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QS7-894P-C3GQ"
+  },
+  {
+   "name": "Andre BUNDERVOET",
+   "date": "1953",
+   "type": "Passenger List",
+   "title": "New York, United States Passenger List 1953",
+   "ark": "3:1:3QS7-894G-56LZ",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QS7-894G-56LZ"
+  },
+  {
+   "name": "Pierre Bundervoet",
+   "date": "",
+   "type": "Tax",
+   "title": "Zeeland, North Brabant, Netherlands Tax",
+   "ark": "3:1:3QHV-13PW-Y428",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13PW-Y428"
+  },
+  {
+   "name": "Hautecourt Bundervoet D' Allain",
+   "date": "1944-1948",
+   "type": "Immigration",
+   "title": "New York City, New York, United States Immigration 1944-1948",
+   "ark": "3:1:3Q9M-C9BZ-XWVY-J",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-C9BZ-XWVY-J"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMJ-49Q",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMJ-49Q"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMJ-49Q",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMJ-49Q"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMJ-4KL",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMJ-4KL"
+  },
+  {
+   "name": "Scholastica Bundervoet Brael",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMJ-4KL",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMJ-4KL"
+  },
+  {
+   "name": "L. Bundervoet",
+   "date": "",
+   "type": "Court Record Index",
+   "title": "Netherlands Court Record Index",
+   "ark": "3:1:3Q9M-CSLZ-R9L1-G",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLZ-R9L1-G"
+  },
+  {
+   "name": "F. Bundervoet",
+   "date": "",
+   "type": "Court Record Index",
+   "title": "Netherlands Court Record Index",
+   "ark": "3:1:3Q9M-CSLZ-R9L1-G",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLZ-R9L1-G"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Assenede, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMG-GPK",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMG-GPK"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Assenede, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMG-GPK",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMG-GPK"
+  },
+  {
+   "name": "Eugêne Henri Bundervoët",
+   "date": "1860-1869",
+   "type": "Ten Year Index",
+   "title": "Saint-Joseph, Réunion, France Ten Year Index 1860-1869",
+   "ark": "3:1:3QHJ-27Z9-S9BY-V",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHJ-27Z9-S9BY-V"
+  },
+  {
+   "name": "Joseph Bundervoët",
+   "date": "1860-1869",
+   "type": "Ten Year Index",
+   "title": "Saint-Denis, Réunion, France Ten Year Index 1860-1869",
+   "ark": "3:1:3QHJ-G7Z9-Q9P7-C",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHJ-G7Z9-Q9P7-C"
+  },
+  {
+   "name": "Louis Gustave Bundervoët",
+   "date": "1871-1879",
+   "type": "Ten Year Index",
+   "title": "Saint-Benoît, Réunion, France Ten Year Index 1871-1879",
+   "ark": "3:1:3QHJ-Y7Z9-C9R8-S",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHJ-Y7Z9-C9R8-S"
+  },
+  {
+   "name": "Marie Julie Bundervoet",
+   "date": "1890-1900",
+   "type": "Ten Year Index",
+   "title": "Saint-Denis, Réunion, France Ten Year Index 1890-1900",
+   "ark": "3:1:3QHJ-27Z9-SSDG-M",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHJ-27Z9-SSDG-M"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Assenede, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMG-G51",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMG-G51"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Assenede, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMG-G1X",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMG-G1X"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33SQ-GYMJ-W8F",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GYMJ-W8F"
+  },
+  {
+   "name": "Bundervoch",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33SQ-GYMJ-W8F",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GYMJ-W8F"
+  },
+  {
+   "name": "Bundervoch",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33SQ-GYMJ-W8F",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GYMJ-W8F"
+  },
+  {
+   "name": "Joseph Bundervoët",
+   "date": "1860-1869",
+   "type": "Ten Year Index",
+   "title": "Saint-Joseph, Réunion, France Ten Year Index 1860-1869",
+   "ark": "3:1:3QHJ-G7Z9-Q958-F",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHJ-G7Z9-Q958-F"
+  },
+  {
+   "name": "Louis Joseph Bundervoët Bellier",
+   "date": "1860-1869",
+   "type": "Ten Year Index",
+   "title": "Saint-Denis, Réunion, France Ten Year Index 1860-1869",
+   "ark": "3:1:3QHJ-Y7Z9-C9L7-P",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHJ-Y7Z9-C9L7-P"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Zelzate, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMJ-4SF",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMJ-4SF"
+  },
+  {
+   "name": "Eugêne Henri Bundervoët",
+   "date": "1860-1869",
+   "type": "Ten Year Index",
+   "title": "Saint-Denis, Réunion, France Ten Year Index 1860-1869",
+   "ark": "3:1:3QHV-M7Z9-D96K-R",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-M7Z9-D96K-R"
+  },
+  {
+   "name": "Louis Joseph Bundervoët Bellier",
+   "date": "1860-1869",
+   "type": "Ten Year Index",
+   "title": "Saint-Joseph, Réunion, France Ten Year Index 1860-1869",
+   "ark": "3:1:3QHJ-G7Z9-Q95D-L",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHJ-G7Z9-Q95D-L"
+  },
+  {
+   "name": "Bundervoet",
+   "date": "",
+   "type": "Ten Year Index",
+   "title": "Assenede, East Flanders, Belgium Ten Year Index",
+   "ark": "3:1:33S7-9YMG-GFV",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9YMG-GFV"
+  }
+ ],
+ "kinship_snippets": [
+  {
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M",
+   "snippet": "bre 1493 . Le scel manque . BUNDERE ( VAN DEN ) . — Nicolas Van den Bundere, tuteur de Jeanne Ser Lambrechts, fille d' Olivier, tient un fief situe a Meirelbeke . Le 1er avril 1587 . Le scel manque . BUNDERVOET . Catherine Bundervoet, veuve de Jean De Smet, fils de Balthazar, mère et tutrice de Balthazar De Smet, son fils, tient un fief situé à Saint - Pierre - Alost . Le 3 mars 1687 . Le scel manque . Lievin Bundervoet, fils de François, tient un fief sit"
+  },
+  {
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M",
+   "snippet": "ue . BUNDERE ( VAN DEN ) . — Nicolas Van den Bundere, tuteur de Jeanne Ser Lambrechts, fille d' Olivier, tient un fief situe a Meirelbeke . Le 1er avril 1587 . Le scel manque . BUNDERVOET . Catherine Bundervoet, veuve de Jean De Smet, fils de Balthazar, mère et tutrice de Balthazar De Smet, son fils, tient un fief situé à Saint - Pierre - Alost . Le 3 mars 1687 . Le scel manque . Lievin Bundervoet, fils de François, tient un fief situe à Saint - Pierre - A"
+  },
+  {
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M",
+   "snippet": "Catherine Bundervoet, veuve de Jean De Smet, fils de Balthazar, mère et tutrice de Balthazar De Smet, son fils, tient un fief situé à Saint - Pierre - Alost . Le 3 mars 1687 . Le scel manque . Lievin Bundervoet, fils de François, tient un fief situe à Saint - Pierre - Alost . Le 16 février 1700 . Le scel manque . Lievin Bundervoet, fils de Pasquier, tient un fief situe à Saint - Pierre - Alost . Le 16 février 1700 . Le scel manque . Pasquier Bundervoet, fi"
+  },
+  {
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M",
+   "snippet": "ief situé à Saint - Pierre - Alost . Le 3 mars 1687 . Le scel manque . Lievin Bundervoet, fils de François, tient un fief situe à Saint - Pierre - Alost . Le 16 février 1700 . Le scel manque . Lievin Bundervoet, fils de Pasquier, tient un fief situe à Saint - Pierre - Alost . Le 16 février 1700 . Le scel manque . Pasquier Bundervoet, fils de Lievin, tient un fief situé à Saint - Pierre - Alost, Le 4 fevrier 1701 . Le scel manque . BURCHGRAVE ( DE ) . Jean"
+  },
+  {
+   "ark": "3:1:3Q9M-CSLS-5SDH-M",
+   "date": "1863-1864",
+   "type": "Nobility",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSLS-5SDH-M",
+   "snippet": "tue à Saint - Pierre - Alost . Le 16 février 1700 . Le scel manque . Lievin Bundervoet, fils de Pasquier, tient un fief situe à Saint - Pierre - Alost . Le 16 février 1700 . Le scel manque . Pasquier Bundervoet, fils de Lievin, tient un fief situé à Saint - Pierre - Alost, Le 4 fevrier 1701 . Le scel manque . BURCHGRAVE ( DE ) . Jean De Burchgrave tient un fief situé à Seeverghem . Le 3 juin 1650 . Le scel manque . BURCHT ( VAN DER ) . François Van der Bur"
+  },
+  {
+   "ark": "3:1:3QHV-B359-1RBD",
+   "date": "1746-1755",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-1RBD",
+   "snippet": "belast met ses schillijngen den ter die gereputeert wert voor ontesselijck ende beta moet worden aen d' hier g : incos mallang de comecomparende totter heeft als in het be hooren tinge van verdreven bundervoet spomp = hants vader met Elisabeth van peulen noch ende de wederhelft bij compe gedaen door selve van gedeele deser stadt ten versoecke van paschien leven bunder voet cornelis kels met kan consent ende authorisatie haerder dan acceptatie slange bunde"
+  },
+  {
+   "ark": "3:1:3QHV-B359-1RBD",
+   "date": "1746-1755",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-1RBD",
+   "snippet": "inderen van wijlent seven banden van gewonnen in sijn in huwelijk bij soo sijn ten de poorter Jtem p : r Leven en Jans de moerloose als drij kinderen van Frans de moerloose gewonnen be wijlent Joanne bundervoet sustek van hollen en was van de vooren gedenomen de Flem frand ende p = r van den pruijssen soo over hun selven als geauthoriseert door joannes van der waijlle hunnen broeder bij bescheet onder handteeke van den 17 . en 8bre alle vier kinderen van n"
+  },
+  {
+   "ark": "3:1:3QHV-B359-1RBD",
+   "date": "1746-1755",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-1RBD",
+   "snippet": "over hun selven als geauthoriseert door joannes van der waijlle hunnen broeder bij bescheet onder handteeke van den 17 . en 8bre alle vier kinderen van nus van der Craissen verweckt bij wijlen Leven bundervoet suster van vollen bedde was als voor Item ten van pr de smet als vader ende van en Maria joanne geboren den 19 febrie, en — lius de stadt geboren den 30 madditionnes bij wijlen passen ten binderwet van gelijcken in do wettelijcke blijven dannos ruij"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-KJ68",
+   "date": "1753-1757",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-KJ68",
+   "snippet": "meersch groot 100 roeden, gelegen op het voord : e doghem onder de gemelde heerlijckhede in de Dourgoijen in eene meerdere partije van 100 roeden liggende gemeene ende onverdeelt met d' toirs Pieter Bundervoet ende Lieven verbaere cansa uxoris, respective in pachte gebruijckt bij lieven d' hofsche ende Anthone de maerteleeren ter Z3 „ 10nog 7 jaers, niet anders belast dan met de onlossel lasten van antsteijde daer ruijt gegaen hebbende, soo de Comparante"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-B4Y8",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-B4Y8",
+   "snippet": "rgaende, dies gelijck derde deel . Competeert aende voornoemde Vrouw - Douariere van den Horn heere Raedt dulautij by tanspotte ghepatsecht voor mij nots voornoemt den vierden deser macis van Livinus bundervoet filius Lieven voornoemt ende het resterende derde Competeert aen Catharine bundervoet dochter van voorseyden Lieven eerst van eene obligatie van twee hondert vijftigh ponden grooten sterck wisselghett — Capitael debitter patschier Bundervoet filius"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-B4Y8",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-B4Y8",
+   "snippet": "en Horn heere Raedt dulautij by tanspotte ghepatsecht voor mij nots voornoemt den vierden deser macis van Livinus bundervoet filius Lieven voornoemt ende het resterende derde Competeert aen Catharine bundervoet dochter van voorseyden Lieven eerst van eene obligatie van twee hondert vijftigh ponden grooten sterck wisselghett — Capitael debitter patschier Bundervoet filius Lieven de setenen der heeblijckhede van Sint pietersaetst vooschende den penninck twin"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-B4Y8",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-B4Y8",
+   "snippet": "t resterende derde Competeert aen Catharine bundervoet dochter van voorseyden Lieven eerst van eene obligatie van twee hondert vijftigh ponden grooten sterck wisselghett — Capitael debitter patschier Bundervoet filius Lieven de setenen der heeblijckhede van Sint pietersaetst vooschende den penninck twintigh Synde also twaalf ponden thien Schellinghen grooten te nanaer de Betaelinghe doende alle jderen precies uytterlyck binnen de Ses maenden naer valdagh t"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-VCMX",
+   "date": "1671-1672",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-VCMX",
+   "snippet": "of de cauw st : met warachtighde penalle an voor ieter de notere die vet — crachte van dien hebben ende brunck sal de naerschenen partijk te wetene deelst deuren daer d' ander heeft toecompt zienen — Bundervoet geene behuisde hofstei mette schaere stallen boomen ende catheijlhand : den lande dan de gaende groot een te niet in teheel roeijen buiten de agter ofte daer ontrent voort west de Pastoors eys : e Michiels keerde oost disserrewech, suut west — Passc"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-VCMX",
+   "date": "1671-1672",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-VCMX",
+   "snippet": "jlhand : den lande dan de gaende groot een te niet in teheel roeijen buiten de agter ofte daer ontrent voort west de Pastoors eys : e Michiels keerde oost disserrewech, suut west — Passchier en Geert Bundervoet gebruyckt bijden voorzienen Bundervoet, sijnde deelt van de voorn 5 D hofstede gaarne bij gemeenen consente van voornondehoirs op de — somme van hondert vijffig ponde vraems gelijk hij hebben moet omme nette naervolgen cauels gelijck te staen, Den c"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-VCMX",
+   "date": "1671-1672",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-VCMX",
+   "snippet": "een te niet in teheel roeijen buiten de agter ofte daer ontrent voort west de Pastoors eys : e Michiels keerde oost disserrewech, suut west — Passchier en Geert Bundervoet gebruyckt bijden voorzienen Bundervoet, sijnde deelt van de voorn 5 D hofstede gaarne bij gemeenen consente van voornondehoirs op de — somme van hondert vijffig ponde vraems gelijk hij hebben moet omme nette naervolgen cauels gelijck te staen, Den cauel B : getrocken sijnde resuooren is"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-LFV2",
+   "date": "1722-1729",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-LFV2",
+   "snippet": "ende de regten deelen sesthiene vande Catheijlen dies het vestat soo jn selven gront als catheijlen competeert de voorseijd Catharine bunder voet soo vuijtten hoofde van han vader als van onne marie bundervoet halve Co van vollen bedde in volle proprieteijt sal vali aende voorseijde halve hous met de venten soo losals oulosselijck daar mede die is belast ende bij de overleden ten huwelijck gebracht, sonder bij de eersten comparant daer aen eenich recht te"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-LFV2",
+   "date": "1722-1729",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-LFV2",
+   "snippet": "de partijen hiermede steden ende schanderen quijt te schelden van alle verdere acte en recompense comparant remitteren alle het ghonne hij hadde connen pretenderen ten laste van de voorseide catharin bundervoet ter causen van haer secht dat dese saak cleeden vreden ende soo voorts, alle deselve Catharine verclaert daerjegens te competerende danten die sedert haeren deederjarich al overledene haere moeder, ende naer haere doodt aenden eersten Comparant haer"
+  },
+  {
+   "ark": "3:1:3QHV-1359-5VJD",
+   "date": "1731-1747",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-5VJD",
+   "snippet": "van gtabelle de Smidt futuren bruydegom ter andere zyde — ende livyne moerloose Ja Franchois versouckt by zoonen — last Jonghe Dochter ende mits haeren gecomparente anderdom geassisteert met civinus Bundervoet haeren Som ende vooght materneel mitsgaders pr de moerlooze vooght paterneel future Cruydt te andere te kennen gevende dat tusseren hun principale contractanten apparent huwelyck staet te geschieden gedient onse Moederde Z : roomsche kercke sulcke t"
+  },
+  {
+   "ark": "3:1:3QHK-Q3P5-B4YK",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3P5-B4YK",
+   "snippet": "X — 1 — x — — 27 Compareerde voor mij Joan bapte de stobbelder notaris publicq tot gendt residerende present de naerscheven getuijgen in persoone libius bundervoet believen — geprocheert bij Joanne de smet udt 22 Jaeren drijen bierwerder binnen dese stadt ende niet min ten effecte naerscheven, geantjorisecht bij mijn Ed : e deeren sevenen van gedeele deser stadt zijne oppervoogden per acte van daeten 3 . deser"
+  },
+  {
+   "ark": "3:1:3QHK-Q3P5-B4YK",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3P5-B4YK",
+   "snippet": "proffijte van vrouwe susame mahie desmet douariere van een reis dulang in syn leven raedt van sijn adajts grooten roede ret derde deel deurgaende dies d’ andere twee derde deelen competeren aen line bundervoet getrauwt met Chans centericx ende aen catjaine bunderboet sijne susters eerst van eene obligatie van twee hondert vijftig ponden grooten sterck wisselgelt capitaels debiteur passchier bundelvoet f. s — lieven opsetenen der eerelijckhede van sint pie"
+  },
+  {
+   "ark": "3:1:3QHK-9359-RPZT",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-RPZT",
+   "snippet": "seert ter patie van Zillis serlippers fg hendrix . en Jan vander meere f. o Niclais als getuijgen hier over geroupen desen xpim . en 7bre 1657, en waeren breit Cornelis Lambregt ƒ . 9 Jans, theeraert Bundervoet, p. s beslippers, Jan vander meere, en ƒ . 2 . - deraere Nots publicus, 885 ta Compareerde voor mij Jan Bap . deraere notaris publicq tot herdt resideren put de getuijgen onderschreven ten versoonen J. Barbara voet fa Jans woonende binnen deser sted"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-BHWN",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-BHWN",
+   "snippet": "4 : e eij lestleden tot den daege vanwiet Ende ten tweeden van eene andere obligatie van vijftig ponden grooten wisselgelt capitaels chooft den penninck alsvooren loopende ten laste van voo passchier bundervoet verkent in proffijte van pieternelle bundervoet sijne suster gepasseer 5 voor den voorn notaris Jacques guulle terrang op den 28 : e Junij 1728 sijnde delft van een ponden ponden grooten, dies de wederhelft met den berlijk van selve sijne suster ges"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-BHWN",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-BHWN",
+   "snippet": "en tweeden van eene andere obligatie van vijftig ponden grooten wisselgelt capitaels chooft den penninck alsvooren loopende ten laste van voo passchier bundervoet verkent in proffijte van pieternelle bundervoet sijne suster gepasseer 5 voor den voorn notaris Jacques guulle terrang op den 28 : e Junij 1728 sijnde delft van een ponden ponden grooten, dies de wederhelft met den berlijk van selve sijne suster gesmolten is inden boesem van debiteur als hem aeng"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-F4RV",
+   "date": "1679-1682",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-F4RV",
+   "snippet": "e bast — Pieter van geheleke 168 : 5 2 1 6 dadel nots pul en — en 6 2 en C GG 1 te 1 10 1 1 een — en Compareerde voor mij Pieterde Hadeleere Nots Koijalen : zout de gesien ondersten in persoone eenen Bundervoet Lierens verwerkt tesierijne — hermite hij competente ande fijnsten vijfenteomtine Jaaren sijns selfs man soo hij verclaerde ter derderende martia bundervoet leeraerts Jonggedochter nemaer haer selfs geassisteert met Jarquemijne de hoekere wee, van v"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-F4RV",
+   "date": "1679-1682",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-F4RV",
+   "snippet": "zout de gesien ondersten in persoone eenen Bundervoet Lierens verwerkt tesierijne — hermite hij competente ande fijnsten vijfenteomtine Jaaren sijns selfs man soo hij verclaerde ter derderende martia bundervoet leeraerts Jonggedochter nemaer haer selfs geassisteert met Jarquemijne de hoekere wee, van voorn veert Bunderoethaere moeder ter andere te kennen gevende dat tusschende pupaele Compten apparent 1 was huwelijk te geschieden indent naer het te geevene"
+  },
+  {
+   "ark": "3:1:3QHK-9359-1GNM",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-1GNM",
+   "snippet": "eert ter presentie van Jommes Frans van hulle sone van mij nots ende gillis brant Hoonen de gebeden inpele getuijgen hier over geropen 6 . 7bre 1753 endocus verheijt F : Van Zullen 8 meregt van marie bundervoet v : Jan plovijt bij laste 2 Jan Hull kott te brand 1 1"
+  },
+  {
+   "ark": "3:1:3QHV-1359-TFC6",
+   "date": "1659-1674",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-TFC6",
+   "snippet": "vander meeren nots publijk Compareerde voor en ter putie van onderlijn getuijghen in persoone s. rs Abraham de poorteze, martus vierkens, Eheert de nochere, Jan de nothere, daneel van Hulst, liminus bundervoet, gheert van schaffte gheert verhulst, geeert verdonckt, soo over hussels als over de gemeene Jnsetene van Roijshem de wel hebben verlaert soo sij doen bij desen Naspelleren in sijne mats grooten Raede tot metjelen soo vande sentie hier hone gherbees"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-DQQT",
+   "date": "1744-1752",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-DQQT",
+   "snippet": "desen 2 bij hem haerder Danckelijcke acceptatie geautoriseert dochter van Lieven Verbaare f. s pieters ende van — 1 — gilline verdonchs thairen melden Singwelijcke ter cendere, ende Jontrus Catharine bundervoet dochter van Daniel ende van de voors gedane Verdonk in haer eerste huwelijck competente andde - 1 haer selfs vande ter andere te kennen gevende dert tusschen hem soo willen hoofde van de gemelde kielind Verdonk hunne gemeene moeder, als van 2 den Vo"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-DQQT",
+   "date": "1744-1752",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-DQQT",
+   "snippet": "eerste huwelijck competente andde - 1 haer selfs vande ter andere te kennen gevende dert tusschen hem soo willen hoofde van de gemelde kielind Verdonk hunne gemeene moeder, als van 2 den Voorn Daniel Bundervoet ende Lieven Verbare hunne respective vaders hebben geesteert diversche openstaende affarkens Soo van gemeensaemheijt 5 — den twee hofsteden ende ander daer mede gaende gestaen ende gelegen binnen royghem Vrije van geredt aen den meersele punt oock m"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-B45K",
+   "date": "1738-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-B45K",
+   "snippet": "e verschenaetsedert den vierden febru lestleden, ende ten tweeden eene andere obligacte van vijf ponden grooten wissel ghett Capitael Eisschende de penninck als vooren Loopende ten laste van voorn pa bundervoet verkent in proffijte van pieternelle bun syne Suster gepasseert voor den voorn nots Jacques ge Herrancx op den 28 Junij 1728 Synde helft van een ponden grooten die de wederhelft met den overlijden van selve Vyne Suster gesmolten is inden bosch van d"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-G9YK",
+   "date": "1712-1713",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-G9YK",
+   "snippet": "een bulck binnen de prochie van wendely hem onder vrije van de aboiteren, uit en oost de weren : hoors van lieven de rockere alsnu martijne — Bundervoet en Jan farasijn t ' zutegelijck hebben, Joanne Bundervoet met den voorn : grooten bulck / noort het straetken loopen, van . canter naer wondelijhem, west s ' heerenstra leedende naerghende, sijn vrij eigen godt, den eersten comparant toecommen : als hoor unicq van Jacques vorschaffelt sijnen broeder overle"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-DW8D",
+   "date": "1722-1724",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-DW8D",
+   "snippet": "n den voorsz verbatie met hun partijken met groot ontrent hondert vijftig roeden, aldaar gelegen wel de liene, huijt deses van maltijnen bundtovert ende allen lucas de met de huwelich hebbende linine bundervoet dogter van t ' voors martijntien bundervoet of de herte van rondleggen, ende dat — 1 den voors frans Bart aldaer oock lan is met sijn partijen medisch schroot ontrent hondert vijftigh roeden liggende heffens de voorg : partijs ; alfucoren van canten"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-DW8D",
+   "date": "1722-1724",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-DW8D",
+   "snippet": "groot ontrent hondert vijftig roeden, aldaar gelegen wel de liene, huijt deses van maltijnen bundtovert ende allen lucas de met de huwelich hebbende linine bundervoet dogter van t ' voors martijntien bundervoet of de herte van rondleggen, ende dat — 1 den voors frans Bart aldaer oock lan is met sijn partijen medisch schroot ontrent hondert vijftigh roeden liggende heffens de voorg : partijs ; alfucoren van canten ende Gabouten, ende dat den folien lininus"
+  },
+  {
+   "ark": "3:1:3QHV-1359-54NR",
+   "date": "1748-1751",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-54NR",
+   "snippet": "s bundervoet f : s Zieren eerder de principaele ende solidaere boryptoepto van ju Leliard f : sjan, t vande constituanten in hunnen priveer, naeme, mitsgaders versekert op het geene den selven livins bundervoet ofte sijne haer gewoone sijn te genieten vande suppester vande bier voeders ten afsenden van een sijn bier voedersexap ofte t sijn overleijden breeder volgens et jnstrument gepasseert voor den notaris Jan van mal = = degam den jnbre 1737 doende het"
+  },
+  {
+   "ark": "3:1:3QHK-Q3P5-VN3D",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3P5-VN3D",
+   "snippet": "voor mij notaris voornt binnen dese gemelde stadt geandt te prestatie en alveremanuel vanderende ende Ioannes baeckis als getuijgen hier toe versogt desen 18 . decembre 1747 en waren ond : t florene bundervoet ende p : r ingels als put A : E : van den heude ende Joannes baecke moreene nots, Sc . aarde Voor mij E. e in persoonen 1 : e Paterine en d : o geres op — van schepenen van gedeelte van het geene den onder de elke eene derde strecke, welcke comparan"
+  },
+  {
+   "ark": "3:1:3QHK-9359-YR54",
+   "date": "1744-1746",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-YR54",
+   "snippet": "acques quelle terorania den 28 Juny 179 1 zynde helft van een hondert ponden waeren lemsche storen wisselgheldt dies de wederhelft met den, over van voors personeele bunders Suster van voorn patchier bundervoed gesmolten, en den bodem, van 'S debiteur in hem angleret ont bij staet ' t haren is gemaeckt want den debiteur bij posterieur met het daer achter staende van daten Febr 1736 de deughdeliet heyt hergen P = r de weer jeschelijen gewesen sijnde weld en"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-LNWD",
+   "date": "1722-1729",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-LNWD",
+   "snippet": "nde de regten deelen 2 sesthiene vande Catheijlen dies het vestat soo je selven gront als catheijlen competeert de voorseijd Catharine bunder voet soo uijtten hoofde van hare vader als van anne marie bundervoet halve hun van vollen bedde in volle proprieteijt sal volgh aende voorseijde haere hous met de venten soo losse als onlosselijck daer mede die is belast ende bij de overleden ten huwelijck gebracht, sonder bij de eersten comparant daer aen eenich rec"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-1V35",
+   "date": "1765-1767",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-1V35",
+   "snippet": "van haer vaderland Sijk de Descendenten van Frans Rochren 32 Vincenties daniel met, angelen van breede dochter van Lee ende de den 6 daten van adriaen de bosscherf . 1 abraham In huid met petronelle bundervoet dochter van Leonardus D den ten 1 Jtem dat den gouwen die van Coort . borst Sal voortien wesen 10 dat hy gedrevende den tijdt van zijne Cleijne scholen de fondatd sal genieten tot negentig guldens z ende goed getuloophed voor twee Jaeren — ende gund"
+  },
+  {
+   "ark": "3:1:3QHK-9359-BJFB",
+   "date": "1729-1732",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-BJFB",
+   "snippet": "te dat de last van en raet totte det als onder voor eslote med staat als naast Contra aldien de debiteur voor van vader inde per den gelds tot aandelen als de Brenger dese per jurg — wij desen pieter bundervoet van Cune — ditil et te min recordo niet lanzen vagabonderen sny tien goublanco Bogaert fail double Ameye C 1 . — 30 . — de Crane 494 C 16 : Junij 1730 Compareerde voor mij Carel C Amhonevanden Bogaert notaris publicq tot Ghend residerende 1 d geadmi"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-2FGF",
+   "date": "1753-1756",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-2FGF",
+   "snippet": "is van het silver — werck bevonden ten sterfhuijse Jan d’ heer ende meester quieliame = Ignale Veltganck in sijn leven advocaet vanden raede in Vlaenderen overleden ten huijse van souffrauw de weduwe bundervoet op den twintigsten april Seventhien hondert drijenvijftigh gedaen ten versoucke van d’ heer bernardi Antonius van den Dender inde qualiteijt van staenden pater = = hebu Vooght over Jnfauw Maria Jacoba Veltganck hoir tot eenen tweeden staecke ten voo"
+  },
+  {
+   "ark": "3:1:3QHV-1359-YZ1K",
+   "date": "1763-1771",
+   "type": "Will",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-YZ1K",
+   "snippet": "r stadt presentelijk woonende binnen dese voor stadt jongman bij Competente ande van Beth — van vijfen twintig Jaeren sijn selfs ter eendere sijde en Catharine Centriex fa 1 Frans gewonnen Bij livine Bundervoet — geboortig ende woonachtig Binnen dese Stad jonge Dochter ook van de andde Van beth dan vijf en twintig Jaeren haer selfs ter andere welke Comparanten te kennen waaren gevende dat tusschen hun apparent huwelijk stuit te geschieden indien onse moede"
+  },
+  {
+   "ark": "3:1:3QHK-Q35S-9S3J",
+   "date": "1720-1723",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q35S-9S3J",
+   "snippet": "7 2 W la in Marten Registre 26 Juny — 1723 . 1723 es 2 G Per 39 329 . Compareerden voor my Jan Van Maldegem notarispublicq tot Chend residerende, present de naerschenen getuijghen in persoone Lieven Bundervoet . 2 Lieven gewonnen bij dosintien De partere, ander ten Sterff van Joanne De Smet, en Lieven ter cendere, ende Marie De Man Fia Jan gewonnen bij adviane Eggernout handerighe ten Sterfh van Geevaert Egtermont ter andere, te kennen gevende dat tussche"
+  },
+  {
+   "ark": "3:1:3QHK-9359-1RNZ",
+   "date": "1750-1759",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-1RNZ",
+   "snippet": "en derthien ponden grootten legers boven aldhuijsgel den de voorseide hooftsede ende partije t land voor recommende bij nagtigh onder landstreeken van daetten 21 January 1754 ten Aerfer . van Ledenes bundervoet Leesen talchen panna moeten weduwe van Gerrit de Moerloote Somme van Soo over haer alt over thomas inottier hierde blad mitsgaders over joanne ende marie anna de Merlagte beide minderjarige kinderen van geraer die hy verwekt aut by annemarie mortier"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-63LP",
+   "date": "1662-1673",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-63LP",
+   "snippet": "hen lieden uit dien hoofde competeert het derde deel in dese dan eene rente van vijf ponden grooten sados den gelijck des beschade laste van kleen ponden grooten tiaers vertent in proffict van Lunes Bundervoet ende consorten by Gillis de Croock te = Hans, behedt op seker behuyshofstede ende houden van erfen daermede gaende gelegen buyten de brugh — 6 voor te op Royhem den selven zullen hebbelinck toecommende by transport van den selven bunder voet ende co"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-P68P",
+   "date": "1768-1771",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-P68P",
+   "snippet": "nen rond op twee huysen ofte woonsteden nevens elcanderen gestaan en gelegen, binnen des stadt Jnt ' swaere straetjen bij de auburg aen d' een syde gehuyst wylent den doctor van hon en het andere N : bundervoet sorterende ten lantsoeche van heere marquis van Deijnse for 4988 den Comparant tolommen bij Hope gedaen jegens bernardus bendiet Wittock breeder volgens den Coopcontracte dan of Synde gepofft voor den nots Louis norbert de Schuijter Jn daten 30 . S."
+  },
+  {
+   "ark": "3:1:3Q9M-C3MK-54N2-8",
+   "date": "",
+   "type": "Deed",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-C3MK-54N2-8",
+   "snippet": "ende goedingsen present ende toecommend Ende voorts bedeijsen one hem gekes ende boegsen onder de Clausule van elf voor andere ende in voor al, de voornomde puillame de ker Chanderegise vader en Jan bundervoet, te desen beede put, en meten overbry nysch van al welyken, hem heden, de voornoemde deelnocht, mast ende vrienden, Inden naeme vande voorseide weesen, de handerighe haer heeder moeder, al wel verpart, egter verscheeden ende verdeelt synde, behelden"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-KFCZ",
+   "date": "1764-1767",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-KFCZ",
+   "snippet": "binnen het voorse vrijd van gent genaemt den hofmeersch groot 628 roen gelegen niet verre van voors hofstede . aboutterende oost d' arme Scholen uyt de bilocque west de merre Straete en wort indetine Bundervoet ofte lucas de Smet gepresen ter Somme van ƒ944, 97 dus L 9 „ 40 Jtem eeneptie eersch gelegen binnen het Selde vrye genaemt den langen bilck aboutterende oosten uit de hercke van wondelgem west en noort het paradijs sorterende onder heereijck van wis"
+  },
+  {
+   "ark": "3:1:3QHK-Q35S-9KWH",
+   "date": "1714-1725",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q35S-9KWH",
+   "snippet": "dochter van aan verwecht bij Anne de en keijsere weij onderen ticoro waeren van s ' weders moederlij sijde ten sterfh . van Josijntien wille ouerlij kijndt van compt gewonnen bij wijlent passchijnen bundervoet Sijne 2 . ouerlij huijs die dooften was van Jan Ondertoet gewonnen bijde voors : e Anne de keijsere in haer leste huuwel soo dat dese sal dienen voor al solute quitan souden van andere te moeten dateren voor wel somme den compt ten proff . e van voo"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-BKL3",
+   "date": "1737-1743",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-BKL3",
+   "snippet": "eg ten vollen Contentement van rentheffrigge of tactie hebbende na overleveringe van brieven in forn sonder haren ost, synde alhier voorders present en mede gecompt Marie de Man lest wed : van lieven bundervoet eersten comparants m de welcke haer mits desen in proffij van voorn jo . renthefftrigge over de inhanden van het gene voor schoenen over den voorn : heeren soo veele te stellen in en Hiteren als Sch borghe, en selfs als principale debitrice ten wel"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-VFHX",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-VFHX",
+   "snippet": "moreene J : P : Morsenden, inventaris vande contante permijnen bevonden Susters van d' eene quilliam Druare Letganchoi leven ad = t vanden raede in slaenderen overleden ten huijse van 10 . de wed . e Bundervoet op den 20 : april 1753, gedaen ten verso van d' ger Bernardus Antonius vanden Dender inde qualiteit staenden paternelen vooget onse marie : jacoba volgende tot eenen tweeden staecke ten voorscheven Adifc . e dies den staecke gerepresenteert woort bi"
+  },
+  {
+   "ark": "3:1:3QHV-1359-Y271",
+   "date": "1781-1788",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-Y271",
+   "snippet": "Hetgendt resede ren geadmitteert bij hooghe mele mogende heeren — — mynheeren van 1 den raede invloenderen te pretentie van de voorschreven getuygen in — c persoonen Frans Bunderraet, quilliel = nes Bundervoet"
+  },
+  {
+   "ark": "3:1:3QHV-B359-1Y8G",
+   "date": "1746-1755",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-1Y8G",
+   "snippet": "sentie vande naerse heven ghetin hen in persoonen quilliam Briel S. Louisals vader ende voorts over Livinis ende pieternelle Brieel syne weese kinderen die hij behanden heeft van Sabelle binden : ver bundervoet voorts marie, joannes, ende Pieter Bruijneel sonen ende dochters vanden voorn quielamme ende jabelle bundervoer voor joannes ende geraert de moerloose stond van te verwekt bij — geene andere midtsgs . Jans . bestier inde munt Seven consente meriteri"
+  },
+  {
+   "ark": "3:1:3QHV-B359-1Y8G",
+   "date": "1746-1755",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-1Y8G",
+   "snippet": "pieternelle Brieel syne weese kinderen die hij behanden heeft van Sabelle binden : ver bundervoet voorts marie, joannes, ende Pieter Bruijneel sonen ende dochters vanden voorn quielamme ende jabelle bundervoer voor joannes ende geraert de moerloose stond van te verwekt bij — geene andere midtsgs . Jans . bestier inde munt Seven consente meriterisatie mitsgrs . Saterdanckel acceptatie maria de westerse echter niet by de versende jare bunders syne hy strame"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-LFD9",
+   "date": "1741-1749",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-LFD9",
+   "snippet": "nden grooten die daer aen noch huere heeft tot en met kerssavont 1741 . de vercoperigge toecommende, voor dien heeft van wylen jo Elisabeth van hulse haere moeder dander helft by Coope van fr Livinus Bundervoet ende suste Civine Claij huijsvrouwe te vooren wede van sr van hulse par contract gepasteert mij nots voornt den sevensten maer 1727 : ende acte van erfenisse van de 21 . e april vanden selven jaere niet anders belast wesende als met de om lycke rent"
+  },
+  {
+   "ark": "3:1:33S7-9Y1N-9WPT",
+   "date": "1815-1818",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9Y1N-9WPT",
+   "snippet": "er Johanna Maria Crisman geboren te Everghem, dep Schelde den 20 January 1792 laatst gewoond te Evergem Bij zijne aankomst bij het Corps, lang 5 voeten 4 duim 3 streek . Vader Jacobus Moeder Marianna Bundervoet Geboren te Brergem, de schelde den 22 maart 1796 laatstgewoond te Everyhem Bij zijne aankomst bij het Corps, lang voeten 2 duim 2 streek . Vader Livinus Moeder Joanna Andenaerde, Geboren te Everghem dep Schelsden 1 februaij 1796 laatst gewoon te eve"
+  },
+  {
+   "ark": "3:1:3QHK-Q3P5-FX2Q",
+   "date": "1681-1682",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3P5-FX2Q",
+   "snippet": "tot eren gedaen ende gepasseert ten,, van Jacobus Geraen L. Het de Charles van damme 2 als getuijgen hiertoe ver ende gebeden desen twintich deby 1682 devaert bunervoet hier ondervol mij en 23 damel bundervoet C. van damme 1 — : ad intentig — Frebr 162 C — den tebry 1682 Compareerde voor my aan Randuijns notaris — publicq residerende binnen der stede van hendt present de onderschienen ghetuijghen, in — persoone Jaars van zoo Certulas brij — beschamen ende"
+  },
+  {
+   "ark": "3:1:3QHK-93GY-2XYN",
+   "date": "",
+   "type": "Guardianship",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93GY-2XYN",
+   "snippet": "oogden over de goederen aen Catharina de Buck minderjarige dogter minderjarige dogter van wijse hendrick de Buck als mede erff genaem van Wijle Maria barents de buik, wed = e van wijle Hendrik gerrit Bundervoet in die qualiteijt, — op den thienden deser loopende maent door haer Ed : Agtb = en als oppervoogden tot het voortsetten ende aentenemen de arrementen van het nae gem : proces 5 voor ende van wegen de voorsz : minderjarige geauthoriseert, ende bekend"
+  },
+  {
+   "ark": "3:1:3QHV-135S-MD1Q",
+   "date": "1747-1750",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-135S-MD1Q",
+   "snippet": "A ende en geauthoriseert voor soomes een ruijten men weder bij bescheet onder geteecken den 11e 8bre is alle vier kinderen van marine en ruin venet 6 bij Eijlat liegje Bundervoet suster van volle bedde dan als vooren, te te resol van queterdesmet als vader voogt van Marie Soome gevon den 19 . feb 1712 . slividus demet gevorn den 30 maerte is gesonnebij wyl — nalatig bundervolt van telijcken gisteren vollen mede van alsvooren"
+  },
+  {
+   "ark": "3:1:3QHV-135S-MD1Q",
+   "date": "1747-1750",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-135S-MD1Q",
+   "snippet": "undervoet suster van volle bedde dan als vooren, te te resol van queterdesmet als vader voogt van Marie Soome gevon den 19 . feb 1712 . slividus demet gevorn den 30 maerte is gesonnebij wyl — nalatig bundervolt van telijcken gisteren vollen mede van alsvooren, te te weten eersten comparan mitie hebbelijn met ten vijfijnen consent, ende authorisatie haerder danckelijcke acceptatie Marie Mindelvoet sijn huijse vande runderen van wijlen tes voglique in sijn t"
+  },
+  {
+   "ark": "3:1:3QHK-9359-BL4X",
+   "date": "1760-1767",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-BL4X",
+   "snippet": "ede gaende 26 : — roeden ende bovendien eenen Cheyns ondestracte groot 38 roede comende ten voorhoofde oost aenden atterschen ottergenischen driesch gebruyckt by Lieven Claerman geblauwt met Cathanne bundervoet s Comparants susten oock en den overlijden van de voorn . e sijne moeder ende voorts by den overlyden van Lieven bundewaet zynen vader gerecht tot een seven vande wederhelft bestaet de gemeente te Haar inde selve nog, mitsgrs een veerkende in de Cat"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-4DYD",
+   "date": "1730-1734",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-4DYD",
+   "snippet": "en 1732 gende Ameye — 6 S 29 1 C 3 Twaelf 3 GG 22 5 de Crane 1 245 Compareerde voor mij martinus Debbant nots proch tot gheedt residerende present de getuigen naerse in persoone Jo . Cathaine bundervoet dochter van daniel ende van geene verdonckt in haar eerste huwelijk bij competente andde van betldan 25 Jaeren haer selfs vrauwe dewelcke verclaerde ter goeder trauwe stocht overgelaete ende gecordeert hebben soo sydoet bijdesten aen tot besonne end"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-5S2N",
+   "date": "1715-1719",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-5S2N",
+   "snippet": "1 wisselgelt, inden tweeden Compt, toegecomen, bij successie van fol . Judeca - Bundervoet teijkent sijnen schoon moeder, en dat dese twee some van open gecom waeren Jnde nasse in een Compt, mits gegeemploij Jnt doen van voorse sijn negotie, en mits den selfs Compt hadde gesustineert dat hij jn societeiten, off gemeensaemhede, met een eer"
+  },
+  {
+   "ark": "3:1:3QHV-135S-SS9K",
+   "date": "1761-1766",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-135S-SS9K",
+   "snippet": "chreven getuygen inpersoones bo Michel 1 hebbelinck f Peter ende van anne de Meyer en der heringe van de Sackers binnen den Door Stadt, 2 ~ Weduwaer ende onder bleventen Sterfhuyse van Jousse R Maria Bundervoet Syn overleden huffvrouwe Percender en de jonge Anne Marie Bartel Diep en Van anne Marie Meyera wed ende handeuggebleventen terfhuyse van Martinus Leino Mandertekennen"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-RV6J",
+   "date": "1757-1761",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-RV6J",
+   "snippet": "ck 1 wij van huijsghelden den voorschreven huijse ende eijse deerste comparanten vercoopers taghecommen bij successie 1 213 als hoirs ten sterfhuijsen van voor nomde cus Lucas de Smet ende off Livine Bundervoet hunnen respectiven vader ende moeder schoonvader ende schoonmoeder, sijnde dese vercoopinghe ende Coop geleurt met den last van alsulcke sunelijcke ende onsiene servituten als waeranne den voorschreven huijse 6 ende erfde soude mogen onderworpen wes"
+  },
+  {
+   "ark": "3:1:3QHK-Q359-T3CY",
+   "date": "1685-1690",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q359-T3CY",
+   "snippet": "n de bonds vader daer in dien hebben — — geboren in een — den teke & guldens voor de ergens de missive oock alsbovenvoorde dalen Aldus gedaen gezien van der voor steede van het per reste van — Limmes bundervoet de Leeniger gegaan tot dogters ongete — Corne sachameth Joannes de 60 - — ge 1690 5 Jan phara in de Jonghe Eloctalo 1020 fro 160 22 — de Compas voor mij Cornelis Zoomers . goesant by Jan Openbare notaris te doen nopens de naer te Jan gem persoon bog"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-P8DQ",
+   "date": "1735-1740",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-P8DQ",
+   "snippet": "us — lieven Jong man vande andde van ontrent de drieentwintig Jaren, ende ten effectenaerschreven geassisteert met S. r Joachim cuterick synen meerder verigen broeder — ter eender, ende hoff lievijne bundervoet minder jverigge dochter van selven geassisteert met Joss . marie de man wed = e ende beede Cusbram vanden voorn s. r lieven bunder : voor haere schoonmoeder ter andere te kunnen gevende dat er tusschen de sparte Comparanten apparent staet huwelyk te"
+  },
+  {
+   "ark": "3:1:3Q9M-CSTL-JJ4T",
+   "date": "1815-1818",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-JJ4T",
+   "snippet": "r Johanna Maria Crilman Geboren te Everghem, dept Schilde den 20 January 1792 laatst gewoond te Evergem Bij zijne aankomst bij het Corps, lang 5 voeten 4 duim 3 streek . Vader Jacobus Moeder Marianna Bundervoet geboren te Overgem, dept schelde den 22 maart 1796 laatst gewoond te Everghem Bij zijne aankomst bij het Corps, lang ¶ voeten 2 duim 2 streek . Vader Livinus Moeder Joanna Audenaerde, geboren te Everghem sep Schelve den 1 february 1796 laatst gewoon"
+  },
+  {
+   "ark": "3:1:3QHK-Q3P5-NJ79",
+   "date": "1739-1758",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3P5-NJ79",
+   "snippet": "t 140 . Compareerde voor mij Joseph florus mussche notaris publig tot ghendt residerende ter presentie vande noech getuijghen, in persoone sr Livinus deschet sone van pieter ghephooreert bij pastasia bundervoet jonghman nemaerbij competente oude vanbeth dan vijf entwintigh Jaeren ter, eendere ende toe Joanne de zuijver, dochter van joseph . verwerkt bij anne = marie grootaert jonghe dochter, maer oock bij competente ande als vooren haer selfs, ter andere,"
+  },
+  {
+   "ark": "3:1:3Q9M-CSY1-S31P-7",
+   "date": "1785-1788",
+   "type": "Court",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSY1-S31P-7",
+   "snippet": "n Carpet Nathan Moes Een bed en peuluw 30 H. Leenderts een peuluw kussensdeselve Een bed, peuluw en kussens Lichas Roelofs Een bed en peuluw — J. v Loo drie kussens Hael een bed, peuluw en een hun en Bundervoet een bed, peuluw een 92004 en 2 Reque kussen — Haer Een matras H. Swarts Een stroomatras en twee stukken J vander Loo - Een dito Bender voet 135 een 51200 Sak — praterman 136 een dito — Wed . letter 37 een wolle spreij gezet munts 138 een wolle deken"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-BS43",
+   "date": "1731-1737",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-BS43",
+   "snippet": ". r joachim Centerick sijnen meerder caerighen broeder tereender, ende vloeijne Andervoet monder carige dochter van sr lieven geassisteert met 10 Marie de Man rede en tweede huijsvrouwe vanvoorastian Bundervoet haere schoonmoeder tevander te kennen gevende datter tusschen"
+  },
+  {
+   "ark": "3:1:3Q9M-CSTL-JJW5",
+   "date": "1815-1818",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-JJW5",
+   "snippet": "Doorlopende NUMMERS . 3405 91 3406 92 3407 93 340 94 3409 95 3410 96 Moeraert Van Laere Bundervoet Goetaale de Buck NAMEN EN TOENAMEN . Louis Jacobus Franciscus Bernard Jan Van de Sompele Baptiste Franciscus NAMEN DER OUDERS, DATUM VAN GEBOORTE, GEBOORTEPLAATS, LAATSTE VOONPLAATS EN SIGNALEMENT . Vader Pieter Moeder Petronella Pauwels Geboren te"
+  },
+  {
+   "ark": "3:1:3QHV-1359-RP68",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-1359-RP68",
+   "snippet": "de prochie van wondelhem, onder het vrije van ghendt groot Jnt geheele twee gemeten onbegrepen aboutterende oest d’ arme — spele deser stadt, uijt de Bylocke, weest de nederstraete ende noort Pieter Bundervoet Jegenwoordich In vachte gebruijckt by Adriaen vanhulle Dese buijt grootinghe, ende verseirsaettinge is gedaen voor des eersten comparants heeft te advenante van vyf shillin grij de roede teijnden maete eijnden gelde 43 34 . 2"
+  },
+  {
+   "ark": "3:1:3Q9M-CSTT-C7ST-5",
+   "date": "1891-1892",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTT-C7ST-5",
+   "snippet": "Hasselinghuis Geboren te Rotterdam 122, den 12 November 1872 Laatst gewoond te Rotterdam Sid ) Bij zijn aankomst bij het korps lang 1500 meter Vader Theodorus, Laurentius Moeder Johanna Louina, Maria Bundervoet . Geboren te Rotterdam 127 den 19 Maart 1872 C laatst gewoond Portugaal id Bij zijne aankomst bij het korps lang 1.58 Meler Aangezicht Voorhoofd Oogen Neus Mond Hin Haar Wenkbrauwen Ovaal gewoon bruin breed gewoon spits blond d Merkbare teekenen Gee"
+  },
+  {
+   "ark": "3:1:3QHV-P3V7-J37Y",
+   "date": "",
+   "type": "Genealogy",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-P3V7-J37Y",
+   "snippet": ". 1655, Cornelis van der kemp, ged . B dam 5. 2 . 1636, begr . R. 24 / 30 9.1673 . to . 2 = o 30. 1 . 1667 Trijntje van andel Jacobs . — 1 mutoenmaakster wonende in ’ t tang t weduwe S. Jan Michielsz Bundervoet uit dit huwelijk : 1 . 2 . Joannes Valk — Jacobus vak volgt III A volgt III bis B — 3 Adrianus vak . ged . B. 20. 12 . 1668, 4 — — Adrianus sdk . ged R 28. 4 . 1671, III D 17 Johannis van deskemp, pred . Dirksland 1691 Ged . R. 20. 3 . 16, Dirksland"
+  },
+  {
+   "ark": "3:1:3QHK-935Q-DV9R",
+   "date": "1768-1777",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-935Q-DV9R",
+   "snippet": "lyke verhoorsatense overjelooten geledeert ende geabandonneert hebben soo voorsoo veele noodt andermael doen bij deze een ende inpraffytte van Sour van anton gullaire als in huwelyk met joana therese Bundervoet filia pater voornoemt den welken alhier mede comparerende van de Eerste Comparanten syne respect wonende te 6 1 bekende ende versleerde by uyt greetinge als vooren in cessie ende Hansporten van Hebben Soo hy, ook voor soo veele madt andermael, dat b"
+  },
+  {
+   "ark": "3:1:3Q9M-CSTL-VHRW",
+   "date": "1823-1824",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-VHRW",
+   "snippet": "ocus Moeder Coleta Besmel Geboren te as Jone den 24 february 1802 Laatst gewoond te Benede Bij zijne aankomst bij het korpe, lange ellen 7 palmen 2 duimen 4 strepen . Vader Constantinus Moeder Coleta Bundervoet Geboren te senede den 20 maart 1802 Laatst gewoond te as Jenie Bij zijne aankomst bij het korps, lang ellen 6 palmen 5 duimen 3 strepen . Vader Jacobus Moeder Petronella Huysman Seboren to Westdorpeteeland den 23 8ber 1802 Laatst gewoond te Westdorp"
+  },
+  {
+   "ark": "3:1:33S7-9Y1N-94NL",
+   "date": "1814-1817",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9Y1N-94NL",
+   "snippet": "Doorlopende NUMMERS . 5687 781 . 5688 782 . 5689 783 5690 784 . 5691 785 . NAMEN EN TOENAMEN . Hack . 5692 786 . Bundervoet Stevens Hillaert Syssens De Jan Babtist Clercq . Jan Louis . Josse . Arnold NAMEN DER OUDERS, DATUM VAN GEBOORTE, GEBOORTEPLAATS, LAATSTE WOONPLAATS EN SIGNALEMENT . Vader Bonaventura Moeder Jeannette Maria de Hutter . Geboren Soomergem . den 3 July"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-TL2D",
+   "date": "1728-1736",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-TL2D",
+   "snippet": "r hout alheneen atta, vijftien ponden kroon ten eene maeijneesch geseijt de venteneeren 222 roeden, west de calene, noort mijn heer dan vinderhante, oost het leengoet van desen sterfhuijt suijt leven bundervoet prijs de gront denheert sattheijl, negen ponden vijf schellij noote, Jtem een parlijken maeimeersch Inde seijne sach groot 2123 Roeder, oost Jarme Camer huys de den temeerst, west naart de reeden hoers van hertel negt prijs den stont, als getee Catt"
+  },
+  {
+   "ark": "3:1:3QSQ-G9QK-X4M",
+   "date": "",
+   "type": "Ecclesiastical Membership",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QSQ-G9QK-X4M",
+   "snippet": "hen 2 Novemb : r 1739 . Joost van Oost wal . E : H : in den Roosen Laan . G. Isak . van Theen 1 Ida Kemp . E. v. in den wapens Laam . G. Wynand ' van wijngaarden Garytje Kats E. V. van de kaart Igtje Bundervoet de dogter Lopen hernor G. Matheus La Dou „ Anthonij van Zanten Z. M. in de lange 1 1 ½ — molensteeg . G. Willem van Zanten de vader Hendrikje Dobbele W : m den Zylstraat 7 G. Lysbeth de Nijs Mei attestaten — Harmina Deuring I D. op den Janswegh van"
+  },
+  {
+   "ark": "3:1:3QHK-Q353-8Z9S",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q353-8Z9S",
+   "snippet": "advenant op te legen contant ten daege van d’ eerstenisse de door bestede ende landt de vercoopers toecommende als boirs en van Elisabeth van gullebroeck S. Jan — bleven Een stel van den door Lieden bundervoet H : o Passchier teelieden dader ende schoonvader volgens dercadelinghe queeren soo belegene van gedeele deser stadt den 25 = en maerte ins waer toe gerepareert wort . maeckende achter volgende dien de verders hun van Vercoelte hofstede ende lande ga"
+  },
+  {
+   "ark": "3:1:3QHV-13PF-9Q3K",
+   "date": "1698-1710",
+   "type": "Guardianship",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13PF-9Q3K",
+   "snippet": "Tiel — Coopman alhier als geordonneerde voogden over deaen Catharina de Buik minder Jarige dogter van Wijle Hendrik de Bruck als mede Erfgenaam van wyle Maria - Parents de Buck vee van Roijde gerrit Bundervoet, in die qualiteit op den 10 deser lopende Maent door haar Ed Agtb : r als oppervoogden tot het voort te setten en — arrementen van het naegen den te nemen d’ hoedt voor ende van wegen de voors : mind geauthoriseert, ende bekenden inde Voor J = t by"
+  },
+  {
+   "ark": "3:1:3QHV-B359-BG9V",
+   "date": "1789-1793",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B359-BG9V",
+   "snippet": "edaen iegens den voor Sieur Renneris Nieuwlandt per Coop Contract Gepasseert voor my notaris voornoemt den 13 deser maand Julij 1791 . Synde tentesen present ende mede gecompareert J. Marie Cathative Bundervoet Jonge besadde dochter binnen dese Stadt ende tante Verten eersten Comparant, de welcke tot voordere Northeele van de voorschreven op gelichte Capitale somme van drij hondert pondingh wisselgelt met den onsen vandie voorstaenden ende hilen Scherverde"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-NNZZ",
+   "date": "1739-1758",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-NNZZ",
+   "snippet": "persoone Jor Leonard franis . verbreik hiere van handelghem eta, den welken bekent wel ende deugdolgik ontfangen te hebben soo hij daat hij desen uijt handen van joorijntjen verbiest wede van joannes bundervoet tot somerghem, de somme — van een hondert thien ponden grooten vlame sterk wisselgelt, over het Capitaal van eene rente, originelijck op geligt bij pieterbundervoet van affrauw Marie = francois ter Schup, die moeder was van scomparants prauw geselde"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-NNZZ",
+   "date": "1739-1758",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-NNZZ",
+   "snippet": "rijntjen verbiest wede van joannes bundervoet tot somerghem, de somme — van een hondert thien ponden grooten vlame sterk wisselgelt, over het Capitaal van eene rente, originelijck op geligt bij pieterbundervoet van affrauw Marie = francois ter Schup, die moeder was van scomparants prauw geselde, ende beset eene behuijsde hofstede met diverse partijlen landt gelighen binnen het selve souwighem onder dheertigde van den lande vande worstijnen voorts nog ontfa"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-19KH",
+   "date": "1689-1690",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-19KH",
+   "snippet": "ijk uijt dien hoofde competeert het derde deel in heeft van eene rente van vijf ponden grooten Iaers den gelijck dese resiende reste van schen ponden grooten thiaers 25 verkent in proffijte van eenen Bundervoet ende consorten bij Sillis de Croock fy Jans, besedt op sekel behuisde hofstede ende houden van erfen daermede gaende gelegen buyten de brughsche poorte op Rithem den selven siende Hebbelinck toecommende by transporte vanden selven bunder voet ende c"
+  },
+  {
+   "ark": "3:1:3QHK-Q3PT-NWDZ",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3PT-NWDZ",
+   "snippet": "ens hemeij meede Verdeel het einde van alle costen schaden en Intressen geleden ende v te lijden en dat alsonen ondt Ian dengkoe daar de noker, lieven andere heeren scheiden met Beset matroos danneel bundervoet van bengale adriaen de leger, savonds wavereet ende sande wedere fossielens Jngevolge van het bovenstaende oock hebbe ick Judiens notaire notaris Publies resterende binnen deele van den present twee getuigen genarsolte en geene andere perken ende te"
+  },
+  {
+   "ark": "3:1:3QHK-9359-1TJ7",
+   "date": "1746-1755",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-1TJ7",
+   "snippet": "ndos kindt van wylen den vorm vester vereecken marie de riddere te mosten Joannes vercecheete kout met Jans quaert Bragie of quillinne achtergelaten bij notabele verster petiquelle ver den met pieter bundervoet namen hier met jan inderloose S civine vercelen ahebranto met Jacobus — die de selve hofstede landen te vooren met andere belast dan met d' eerliet — de aije gehad hebbende boven de lasten presente van een honderd vijfen twintig ponden grooten weste"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-5WSL",
+   "date": "1758-1759",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-5WSL",
+   "snippet": "bundervoet het nederhof ofte hofstede van het Casteel Goet met eenighe Soeij landen ende meerschen ten ƒ 700 nog sjaers vrije suijver Gelds wiens voor Expireert Kerstavont 1758 tecommende ten tweeden bij bavo Pieters fs adam voor drije ales Jaeren Jngegaen Ker"
+  },
+  {
+   "ark": "3:1:3QHK-Q3P5-NJ76",
+   "date": "1739-1758",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q3P5-NJ76",
+   "snippet": ". Compareerde voor mij Joseph florus mussche notaris publig tot ghendt residerende ter presentie vande naar 1 getuijchen, in persoone sr Livinus de schelvis sone van pieter gheptorreert bij pasrasia bundervoet jonghun nemaerbij competente re oude aanbeth dan vijf entwintigh Jaeren ter eendere ende ige Joanne de zuijver grootaert jonge dochter, maer oock 5 dochter van joseph . verwekt bij anne = mane bij competente ande als vooren haer selfs, ter andere, t"
+  },
+  {
+   "ark": "3:1:33S7-9Y1X-THB",
+   "date": "1823-1824",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33S7-9Y1X-THB",
+   "snippet": "Judocus Moeder Coleta Besmel geboren te assonde den 24 February 1802 Laatst gewoond te ende Bij zijn aankomst bij het korps, lang ellen 7 palmen 2 duimen 4 strepen . Vader Constantinus Moeder Coleta Bundervoet Geboren te Assende den 20 maart 1802 Laatst gewoond te assende Bij zijn aankomst bij het korps, lang ellen 6 palmen 5 duimen 3 strepen . Vader Jacobus der Petronella Huysman Geboren te Westdorpe reeland den 23 8 = ber 1802 . Laatst gewoond te Westdo"
+  },
+  {
+   "ark": "3:1:3Q9M-CSTL-NR6W",
+   "date": "1825-1826",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-NR6W",
+   "snippet": "us Moeder Dorothea Chienpont geboren te Gend 6 den 10 Iulij 1807 . Laatst gewoond te Gend Bij zijn aankomst bij het korps, lang ellen palmen duimen \" strepen . Vader Jacobus Francis Moeder Maria Anna Bundervoet geboren te Evergem den 10 Maart 1807 Laatst gewoond te Gend . Bij zijn aankomst bij het korps, lang 1 . ellen 6 palmen 5 . duimen \" strepen . Vader Petrus Francies Moeder Brigitta Adams . Geboren te Astene den 18 februarij 1807 . Laatst gewoond te G"
+  },
+  {
+   "ark": "3:1:3QHK-Q35S-7812",
+   "date": "1727-1732",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q35S-7812",
+   "snippet": "ier Bundervel gelieven op setenesser heerelichede van Stepaelst sen welcken konde, lynde, verclaerde wel deugte = lijk midtsgt ter goeder trouwe opgeligt, en de ontfangen hebben uijt van Petronelle — Bundervoet sijne suster de soe van hondert pon audt ( terd disselstelt te weten deschelinatwaels aft, de melacons â adenveertig stuivers te andere specien al naer verant ofte hondert ponge gecompete = rende aen de comparants deese er bij gereet te setten huide"
+  },
+  {
+   "ark": "3:1:3QHV-B3GY-2XGZ",
+   "date": "",
+   "type": "Guardianship",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3GY-2XGZ",
+   "snippet": "ijwelijck hebbende Juff = r Catharma de Buck, en uijt dien hooffde erffgenaam abintestato voor een geregt derde part in de nalatenschap van wijle Maria Barents de Buck in haar leven weduwe van gerrit Bundervoet op den 8 = en februarij 1709 alhier overleeden welke Catharijna de Buck op huijden uijt hare voogdije is ontslagen —, en vrijgestelt, ende verclaarde hij Comp : s mits desen tot sijnen prive laste te liemen te sullen dragen, en betalen alle soodanig"
+  },
+  {
+   "ark": "3:1:3QHK-935S-39DF",
+   "date": "1689-1699",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-935S-39DF",
+   "snippet": "epenseert binnen de voor stede van geerde trente van Primandus a Hommeshonelick desch pijt gb 1689 6 „ — dit is marcq van t adriaene heggimon huypij van lemt demonloosen 1 — dit is hercq van asschier bundervoet fo valsche my put Doustinck met de Hoelickserrancop 5 6089 not Roijat 6 — 1 2 1 = d No 2 xb 1689 Compareerde voor mij vereven ondersypen nol tot pond resident d' onderhope gelegen persoone ver : t Joan maerhant sij all den welcke verclaerdeweler de"
+  },
+  {
+   "ark": "3:1:3QHK-935S-97TR",
+   "date": "1763-1765",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-935S-97TR",
+   "snippet": "in de Schepenen den prochie heerlijkhede inde gemeene vierschare Van overmarsch voorsigt den Walesten april, 1743 Jn pachte gebruijckt bij Jan de Radder fi nicolaes Joannes Vereeke puter ende pieter Bundervoet p : s passchier ten derthien vonden grooten te Gaers voor drij achtereenvolgende 1 Jare Jnganck genomen hebbende kerpavont 1762 volgens de voorwaerde dan of sijnde niet anders belast als met doncosselijcke Lasten daeruijt van ouden tijde gegaen hebb"
+  },
+  {
+   "ark": "3:1:3QHV-J38K-89Q2-Z",
+   "date": "1680-1686",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-J38K-89Q2-Z",
+   "snippet": "ande 25 ' haeren sijn selfs van soo hij verclaerde tereenderende martina bunder voet f. a Heert Jonge dog het nemaer haer selfs geallisteert met Jaquemijne denockere wed . e van den voornoemden Heer Bundervoet haer moeders ter andere te kennen gevende dat daer — willen oppaele compten apparent was huwelijk te geschieden in de naer rechte gebeuren mach onse moeder de roomsige Catholicque kercke het selve toelaet ende permitteert verhopende datoe, soo ist d"
+  },
+  {
+   "ark": "3:1:3QHK-Q35S-7DMK",
+   "date": "1727-1732",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q35S-7DMK",
+   "snippet": "7 8 18 Wossier Reg G binnen der stadt van kendt ter presentie van facques anthone perurancx sone mij notaris, en Joachim de stoppeleene getuijgen hier over geroupen actum desen 28 Juny 1798 rasschier Bundervoet mij present J : R : Gruranck mij pit J : D : stoppelaer ver 5 — James S 8 500"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-R7NJ",
+   "date": "1774-1777",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-R7NJ",
+   "snippet": "iderende present 1 d' onderschres en getuigen — in persoone Sieur puter — Joannes ende Livinus wille midtsgaeders marce anne wille 1 weduwe van jooris deuninck alle vere kinderen van puter bij divine bundervoet welcke Comparanten bekenden Lijdden ende verclaerden wel ende ter goeder trouwen vercocht hebben aen ten behoeve inde proffijtte van suur Livinus van Speij broeck filius Lieven den gunt immers soo en gelt Selve lugt"
+  },
+  {
+   "ark": "3:1:3QHV-B35S-3LDH",
+   "date": "1669-1671",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B35S-3LDH",
+   "snippet": "hter van ten dande, tien machtich by provisie van Marie Pakers overjarige dochter, teriaen sakers, et pieter de vos en souwelijk hebben marie Willems te vooren wed : van Willebord sakers, ende pieter Bundervoet getrout met Pauline ges te vooren wed : van de desode dorster van Willemina sakers, vannen kinderen ende erfgenamen, beneffens de voorstekende Compten abintestato van voor Adria Sakers Sande in conformite vande prenira gepass : t voor sancobiassen n"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-1JK7",
+   "date": "1765-1767",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-1JK7",
+   "snippet": "licq tot gund residerende tot exereit van dien geadmitteert bij hooghe — ende mogende heren mijne heeren vanden raede Ju Vlaenderen ter presente van de getuijghen ander genoemt 1 1 Jul persoone peter bundervoet filius passchier woonachtigh op sinte pieters alst buijten de petercelle poorte deser Stadt Welke Comparant bekende ende verdaerde ' t zijnen ppaisemente deughdelijcke — — opgelicht ende ontfangen t hebben uijt handen van d' hus Bernard François ham"
+  },
+  {
+   "ark": "3:1:3QHN-13YK-86X8",
+   "date": "",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHN-13YK-86X8",
+   "snippet": "bewijs en relicque aldus gedaen ende gepasseert 165 D Sommen 1 16 . binnen gose op den tweeden onst xb : teventes present Jan de Coninck en Jan bunder toeschijnen gebeden Manor 3 M Carolina dorso Jan bundervoet E per wet de . en dan wel sprons half Jongenen Sijtelfsbi competente oude wel comp . a heeft opgeheden ghecedeert ende ghetransporteert soo hij doet mits desen teijnotte van der Jan Bande Walle conijs barde maelderie int heid van Runogse present en"
+  },
+  {
+   "ark": "3:1:3QHK-Q35S-WQQ",
+   "date": "1740-1745",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-Q35S-WQQ",
+   "snippet": "t de helft van een party lant, groot twee hondert heden voor de dersephan pas of de leverse Hofstede en west Jactie van St. Stem d' acten den onder partje lants groot vier hondert weder, naert en tot bundervoet, ooft de voors : e hofstede, sugt de voorge te stemmen het derde van den portie hart, genaemt sat platte binder groot de gemeten, west de afsondert hoeder, oost pieter Eygchmout en Jan de smet, synde voor alde, en met soo de gelyck den voorn : e luc"
+  },
+  {
+   "ark": "3:1:3QHV-B3RN-SFR2",
+   "date": "1895",
+   "type": "Tax",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3RN-SFR2",
+   "snippet": "65 27 — 60 30 173 — 75 10 20 9 ƒ46895,, 30 10 ƒ104503 89 1 ƒ104503 8 ten 94 223 25 gevloeide - niet weder te haren name beleg . de koopprijzen der uit de nalatenschap van haren vader, den Heer Pieter Bundervoet, bij akte van scheiding de dato 2 februari 1800, verle den voor notaris de Muind te Grijphert verbregen a. Eigendom van 3. 56 . 20 hectari land te ulrum, onder beklemming in gebruik bij A. Voo, voor een jaarlijke verschijnende huur van ƒ32 . 50 verk"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-VZH5",
+   "date": "1746-1761",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-VZH5",
+   "snippet": "de naers henen getuijgen in persoone philippe van 5 voorse rijs niet Condenie binnen devoors :, stadt met hem bij synen Consent ende authorisatie mitsgrs te haerde danckelijke acceptatie p : s Livine bundervoet fia lieven te vooren kele van Frans Centerich welke Comparant bekeuren Lijden ende verclaeren soo sy dog bij — desen wel ende deugdelijk opgeligt ende ontfangen te hebben uit handen van Jo, Jan baptiste de Carion voorende binnen de heew . lijkhede v"
+  },
+  {
+   "ark": "3:1:3Q9M-C39V-FQQF-C",
+   "date": "1891-1892",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-C39V-FQQF-C",
+   "snippet": "helmus Josephus Adriaan Pieter Klaas Cornelis Cornelis Vader namen der ouders, geboorteplaats, datum van geboorte, laatste woonplaats en signalement . Theodorus Laurentius Moeder Johanna Lowina Maria Bundervoet geboren te Rotterdam ( H ) den 19 Maart 1872 Last gewoond te Poortregaal ( ) Bij zijn aankomst bij het korps lang 1.56 Meter . Vader Jacobus Moeder Marina Koorman geboren te Krunningen ( zee den 21 Maart 1872 Laatst gewoond te Charlois ( ) Bij zijne"
+  },
+  {
+   "ark": "3:1:33SQ-GY1F-SQTZ",
+   "date": "1818-1820",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GY1F-SQTZ",
+   "snippet": "Doorloopende NUMMERS . 7298 7299 73:00 7301 7302 NAMEN EN TOENAMEN . van soo Bundervoet de Vol — S C als Staelens 73:03 C zyn Jan te Livin Bernard Frans te Jan NAMEN DER OUDERS, DATUM VAN GEBOORTE, GEBOORTEPLAATS LAATSTE WOONPLAATS EN SIGNALEMENT . Vader Lieven Moeder Isabelle Versluis Geboren Oostacker den 1 Juny 1800 lat en te Everge"
+  },
+  {
+   "ark": "3:1:3QHV-V3D4-Q8VQ",
+   "date": "1650-1653",
+   "type": "Miscellaneous",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-V3D4-Q8VQ",
+   "snippet": "25 3 5 1 bert ge dat sijn 42 Op huijden den tijd maert a : o 1650, om pareerden voor mij M = e van — leeuw, openbare nots, Cornelis gerritsslebbe out Leen 1 gerrits bundervoet ont „ michiel — wert michiels 5 Cochen, Bastiaenstondt C. alle ter deser stede out hij Johen Cofselcx daer ontrent : ) 1 — - 55 weeten versoucke van dirck hoe — podt bosch maker voor ende tot bergen opden zoon geattesteert — — getuijcht e waer is, d"
+  },
+  {
+   "ark": "3:1:3QHV-53KC-9LK8",
+   "date": "1673-1676",
+   "type": "Guardianship",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-53KC-9LK8",
+   "snippet": "agende de summa van een hondert en veertien gb : sesstz en tien pot — P = r puij Lys Ex : t Lijntgen Jans, minderjarige voor dochter van de voorn : Trijntgen Jacobs = d daer vader aff was Jan Michiel Bundervoet, comt als erffgenaem Abin „ testato, vande selve haere moeder voor een gerecht vierde part in d’ een helffte, sijnde een gerecht achtste poort uijt de bovenstaende Massa, Bedragende de summa van een hondert veertien go : ses st : en tien penn : d ="
+  },
+  {
+   "ark": "3:1:3Q9M-CSTL-FSNN-S",
+   "date": "1818-1820",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3Q9M-CSTL-FSNN-S",
+   "snippet": "Doorloopende NUMMERS . 7298 7299 73 ' 00 7301 7302 NAMEN EN TOENAMEN . van 200 Bundervoet de C Vol 2 als Staelens 73.03 Cozyn — en Be Livin Bernard Frans Jan B : te te NAMEN DER OUDERS, DATUM VAN GEBOORTE, GEBOORTEPLAATS LAATSTE WOONPLAATS EN SIGNALEMENT . Vader Lieven Moeder Isabelle Versluis Geboren : Oostacker den 1 Juny 1800 laatst g"
+  },
+  {
+   "ark": "3:1:33SQ-GY1N-9H5K",
+   "date": "1815-1818",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GY1N-9H5K",
+   "snippet": "Doorlopende NUMMERS . 3405 91 3406 92 3407 93 3408 94 3109 95 3410 . 96 NAMEN EN TOENAMEN . Moeraert Van Laeze Bundervoet Goetaals de Buck Van de Sompele Louis Jacobus Franciscus Bernard Jan Baptie Franciscus NAMEN DER OUDERS, DATUM VAN GEBOORTE, GEBOOI LAATSTE WOONPLAATS EN SIGNALEMENT . Vader Pieter Moeder Petronella Paurels Geboren te Vorlacker dept Schilde den 15 F"
+  },
+  {
+   "ark": "3:1:3QHV-13P5-R77N",
+   "date": "1774-1777",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13P5-R77N",
+   "snippet": "Mussche nots publ tot gend residerende present d’ ondersche getuygen in persoone Spieter, Jannes en 1 Linne wille midtsgs marie anne ville wed . van Jooris Deuntok alle Kinderen van pieter by Livine Bundervoet welcke compt bekenden lyden en verclaerden wel en ter goeder tramoen vercocht hebben aen ten behoeve en pross van Livinus van Speijbroeck J. Lieven den welcken alhn present en oock mede gecompar reert sijnde bekende gecocht hebben eerst een huys ste"
+  },
+  {
+   "ark": "3:1:3QHK-9359-RBJL",
+   "date": "1692-1699",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-9359-RBJL",
+   "snippet": "de ten derden te ponden over gestierde deel van t capita van eene rente van ses ponden of 1 tiaers den pennijn xvj . ken gecompeteert hebbende als hoort zijne moedere ten laste vande wed . e geevaert bundervoet en naer de doot van sijnen vader geloft dies de pennijns gecomm ende geemploijeert zijde na hem eene huijshouden mette tweede comparante des uijt hier over helft haren satti — - 6 8452 . 261 . tot Alle welke dog sommen gemengevaert verschaffel ' en"
+  },
+  {
+   "ark": "3:1:33SQ-GY1N-9CLH",
+   "date": "1814-1817",
+   "type": "Military",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:33SQ-GY1N-9CLH",
+   "snippet": ". Vader Jacob Moeder Maria Theresiadewent, Geboren Evergem . den 23 Aug. 1790 laatst gewoond te Evergem . Bij zijn aankomst bij het Corps, lang 5 voeten duim streek . Vader Andre . Moeder Petronella Bundervoet . Geboren te Evergem : 1 den 1794 . laatst gewoond te Everghem . Bij zijn aankomst bij het Corps, lang 5 voeten 1 duim 8 streck . Vader Sanfrans . Moeder Adriana Maria Raman, Geboren te Henden den 4 Julij 1784 laatst gewoond te Oostacker . Bij zijn"
+  },
+  {
+   "ark": "3:1:3QHK-93P5-HW4Y",
+   "date": "1718-1724",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-93P5-HW4Y",
+   "snippet": "adien in ste Jacobs Burcke oock binnen deser stadt, In welcke teken rent kens dese ende volgende partije jaerlijcx moeten draagen tot Rottd : rs salvo Justo, sijnde d' andere contribuanneurne, luluen bundervoet, ende s ' Comparanten gemeene moeder, stum noch een partije marsch gelegen nevens de voorgaende groot thien hondert negen roeden salvo Justo, west de selve voorgaende partijn, noort den heere van expluntere, oost de schelde, ende suijt dies vande ni"
+  },
+  {
+   "ark": "3:1:3QHV-B3P5-LF2C",
+   "date": "1722-1729",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B3P5-LF2C",
+   "snippet": "end residerende put de getuijgen naar even in persoonen Livinus bare is pieters houder ten sterf van gilline verdonckt sijn huijsvrouw te vooren wed . e van Daniel Cundervoet ter eender mitsg 70 Cath bundervoet tin daniel voorseijt geprocreert bij dese overledene jer haer eerste huwelijck, mitsgar \" van Damme met hem bij sijnen consente ende autorisatie die sij over vanckelijck accepteerde joanne there xbare sijn huijsvrouw oock dochter vande selve gilline"
+  },
+  {
+   "ark": "3:1:3QHV-B35S-M6SY",
+   "date": "1747-1750",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-B35S-M6SY",
+   "snippet": "eren van dog lieuen bunder volt gewoonen in sijn eerste huwelijck bij profijntien depoorter sten p = r lieus Westfannen demoeloose alle drije kinderen van francies demoerloose genomen bij eijlat fame Bundervoet suster en volle bedde en ten drije vooren gedenoneerde, ten brand, lien, queten Gerrits Soo vier Per"
+  },
+  {
+   "ark": "3:1:3QHV-13PW-Y428",
+   "date": "",
+   "type": "Tax",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-13PW-Y428",
+   "snippet": "DECKER, Marie Anne de weduwe van Pierre Bundervoet overleden te Assenede ( B ) 24 - 5 - 1809 kant . Hulst no. 3719 1809"
+  },
+  {
+   "ark": "3:1:3QHV-L3VW-S8XS",
+   "date": "1657-1658",
+   "type": "Miscellaneous",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHV-L3VW-S8XS",
+   "snippet": "procuratie hem verleent bij Sijmon Dijblant — 26 31 Gerrit pieters als vader van Pieter gerrits, obligatie, zoo ten laste van ' somas morten : Goversotteij en Albert Pieterson, Coopedul, met Michiel bundervoet, nevens een partije potloot : — 38 Grietgeen helberts, procuratie, haer verleent bij hendrick Adriaensen haren man Govert de Bloot, procuratie hem verleent bij pieter de Bloot Gerrit dicks als voort van maerten de indricx obligatie, ( 200 - oco ten"
+  },
+  {
+   "ark": "3:1:3QHK-935S-QHJ8",
+   "date": "1713-1716",
+   "type": "Notarial",
+   "url": "https://www.familysearch.org/ark:/61903/3:1:3QHK-935S-QHJ8",
+   "snippet": "of een hunne partije landts gelegen binnen de pro van wondelyken in het vreije dese te poot 392 reden, wesende vrij eijgen goet nooit den aennen van wandelen den retsheve stalens, met de wed . e per bundervoet bruijckt bij Jaerques van ook f hun tesommende kotterselt zij prauw 3 De — 677 . hebberen voor sien en gedere opden — dog t pees van van ses maes — lieijnd gantorens hunne veele moeder, vander helft bij wijsertijn thin ruyste gedaen bij Jan maes hun"
+  }
+ ]
+}
