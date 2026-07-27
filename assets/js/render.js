@@ -224,23 +224,24 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
         `<div class="vline tall${shaky ? ' weak' : ''}"></div>`;
     }
 
-    // The whole sibship on one line, in birth order, with the person in focus in
-    // their own place in it rather than pulled out of it — the drop line above
-    // belongs to all of them equally. Their spouses travel with them.
-    const siblings = kin.siblingsOf(focus);
-    const sibship = [focus, ...siblings].sort(byBirth);
+    // The whole sibship on one line — the drop line above belongs to all of them
+    // equally. The order is fixed rather than by birth: brothers and sisters to the
+    // left, in birth order among themselves, then the person in focus, then whoever
+    // they married to the right. So the eye always finds the focus at the same
+    // place — the join between the family they were born into and the one they made.
+    const siblings = kin.siblingsOf(focus).slice().sort(byBirth);
     const married = (p.spouses || [])
       .map(sp => `<span class="xmark">×</span>${spouseNode(sp, focus)}`)
       .join('');
-    const row = sibship
-      .map(id =>
-        id === focus
-          ? `<div class="fcell">${node(focus, { focus: true })}${married}</div>`
-          : node(id, { role: relTo(id, focus), arrow: '', cls: 'sib',
-                       weak: kin.isWeakSibling(focus, id),
-                       weakNote: kin.siblingNote(focus, id) })
-      )
-      .join('');
+    const row =
+      siblings
+        .map(id =>
+          node(id, { role: relTo(id, focus), arrow: '', cls: 'sib',
+                     weak: kin.isWeakSibling(focus, id),
+                     weakNote: kin.siblingNote(focus, id) })
+        )
+        .join('') +
+      `<div class="fcell">${node(focus, { focus: true })}${married}</div>`;
 
     if (siblings.length) {
       html += `<div class="rowlab">${esc(t('siblingRow'))}</div>`;
