@@ -2191,6 +2191,26 @@
 1 FAMS @F75@
 1 FAMC @F98@
 1 NOTE Born 1709, Evergem. Son of Joannes Bundervoet's FIRST marriage, to Livina Stockman (not his second wife De Wilde). Children with Petronilla Bogaert: Guillaume (1731), Joanna Maria (1741), Maria Anna (1746), Philippus Jacobus (1756).
+2 CONT
+2 CONT **NOT PROVEN, refused — the Gent "Oost-Vlaanderen, Gent" cluster (objective 3, 2026-07-27).**
+2 CONT The harvested corpus's own clustering (`coverage.surname_clusters()`) offers this record as
+2 CONT the `best_link` for a 16-mention Gent sub-cluster, on the strength of a 1904 Gent marriage
+2 CONT act naming Emilius Bundervoet's own parents as "Joannes Bundervoet" × "Sophia Livina De
+2 CONT Moerloose" — a kin-forename echo of Christoffel's own parents Joannes × Livina Stockman.
+2 CONT 26.5 bits, 1 independent identifier, NOT GRAFTABLE, labelled in `research/labels.jsonl`.
+2 CONT `link.py` already auto-vetoes this identical act one generation down, against
+2 CONT [[joannes_b]] directly, as 144 years too late; the same impossibility applies here, 118
+2 CONT years up through Christoffel (b. 1709, d. 1786). This is an independently attested,
+2 CONT unrelated 20th-century Gent line (Emilius 1872–1943 × Sylvia Nathalia Maria De Rudder, m.
+2 CONT Gent 1904). See research-log §73 for the full six-family breakdown this cluster resolves
+2 CONT into; none connects to this record.
+2 CONT
+2 CONT **A second frontier, left open rather than graftable.** Christoffel's own son "Guillaume
+2 CONT (1731)" and the same cluster's separate patriarch "Guillielmus Bundervoet" share only a
+2 CONT common forename, with no place, spouse or further detail to compare — flagged, not
+2 CONT upgraded. Guillaume has no person file of his own yet; he exists only as this string, a
+2 CONT gap the tree still owes him under objective b (every person referenced anywhere gets a
+2 CONT record).
 1 SOUR @S49@
 2 QUAY 2
 0 @I101@ INDI
@@ -10816,6 +10836,19 @@
 2 CONT
 2 CONT A second document sits on his paulderidder profile, captioned "Petrus Bundervoet Akte
 2 CONT van teraardebestelling" — a burial act. Not yet retrieved.
+2 CONT
+2 CONT **NOT PROVEN, refused — the Gent cluster (objective 3, 2026-07-27).** The harvested
+2 CONT corpus's own clustering (`coverage.surname_clusters()`) offers this record as the
+2 CONT `best_link` for the biggest Gent-city cluster (153 mentions, 131 acts), on the strength of
+2 CONT a 30.7-bit, 1-independent-identifier score (name + kin-forename echo) against a "Petrus
+2 CONT Bundervoet × Isabella De Coster" whose son Joannes Baptista was born 1836 in Gent. NOT
+2 CONT GRAFTABLE, labelled in `research/labels.jsonl`. Two independent grounds refuse it: the
+2 CONT spouse named is Livina Quackebeke, not Marie Anna de Deckere; and the chronology is
+2 CONT impossible outright — that Petrus fathered sons in ~1790 and 1803, decades after this
+2 CONT record's own attested 1777 death (buried Assenede). The Gent surname cluster in fact
+2 CONT resolves into **six distinct, unrelated patriarch families** plus a 20th-century line
+2 CONT already independently attested — see research-log §73 for the full breakdown. None
+2 CONT connects here.
 1 SOUR @S46@
 2 QUAY 2
 0 @I444@ INDI

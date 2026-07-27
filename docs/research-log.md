@@ -3835,3 +3835,139 @@ Tree: 523 → 536 people. Build green. Verdict ACCEPTED for [[henricus_bossin]] 
 1884/1887/1901 facts; ACCEPTED but PROBABLE for [[joannes_franciscus_bossin]]; NOT PROVEN
 for Franciscus Swaelens; the 17-vs-25 February marriage date and the Franciscus Swaelens
 lead both stay open frontiers.
+
+## 73. Autopilot pass 10 (obj3, the last) — the Gent Bundervoet cluster closes as six unrelated families, and three claims about it get corrected
+
+Passes 1–9 of this run went entirely to objectives 1 and 2. Objective 3 — connecting the
+Bundervoet forest — had had zero attention. `research.py components` (already run this run)
+shows the tree is **one connected component of 536 people**, so objective 3's internal
+forest problem is already solved; the only open question is whether a large corpus cluster
+attaches. Gent is the biggest, at 153 mentions / 131 acts. This pass took it, found nothing
+graftable, and is written up as the closed door it is — a pass that concludes nothing is a
+successful pass when the alternative is leaving the door open for the next run to walk
+through again.
+
+**THE VERDICT.** The Gent Bundervoet material resolves into **at least six distinct
+Gent-city families plus a misclustered Evergem-area population, and none connects to the
+tree on present evidence.** The six patriarch couples, read off the `abt` death index
+(Belgian death acts name the deceased's own parents):
+
+- Petrus Bundervoet × **Maria Wille** → Petrus Franciscus (~1790–1857) × Joanna De Vreese
+- Petrus Bundervoet × **Isabella De Coster** → Isabella (~1791–1859) × Theodor Van Wemmel;
+  Petrus (1803–1877) × Livina Quackebeke → Rosalia Joanna (1831–70), Joannes Baptista
+  (1836–81)
+- Felicianus Bundervoet × **Maria De Coster** → Petronilla (~1786–1855) × Jacobus Van
+  Bambrugge
+- Guillielmus Bundervoet × **Joanna Catharina Smet** → Maria Judoca (~1799–1863) × Petrus
+  Trossaert
+- Adrianus Bundervoet × **Francisca Neukens** → Maria Joanna (1820–1876), Josephus
+  (~1827–1854), Francisca Antonia (~1829–1861)
+- Egidius Bundervoet × Maria Francisca Ledent
+
+Plus a 20th-century family cross-confirmed in three independent sources: Joannes
+Bundervoet × Sophia Livina De Moerloose → **Emilius** (1872–1943) × Sylvia Nathalia Maria
+De Rudder (m. Gent 1904) → Andreas 1905, Renatus Isidorus 1906, Gustavus Josephus 1908,
+Franciscus 1912. None matches any spouse in the tree ([[joannes_b]] × Livina Stockman /
+Livina De Wilde; [[christoffel]] × Petronilla Bogaert; [[petrus_b1727]] × Marie Anna de
+Deckere).
+
+**A chronological exclusion independent of the spouse-name argument.** Two of the six
+patriarchs are excludable from being [[petrus_b1727]] by arithmetic alone: "Petrus ×
+Isabella De Coster" fathered a son in **1803** and "Petrus × Maria Wille" one ~**1790**,
+both well after our petrus_b1727's attested **1777** death (buried Assenede).
+
+**The one name echo stays flagged, not upgraded.** [[christoffel]]'s son "Guillaume (1731)"
+against Gent's "Guillielmus Bundervoet" is a common forename with no place, spouse or
+detail to compare. Worth recording plainly: `data/people/` has no file for Guillaume at
+all — he exists only as a string inside `christoffel.md`, so there is no rostered person to
+graft onto. That is itself a rule-2b gap (every person referenced anywhere gets their own
+record), left open rather than fixed here, since fixing it is not what this pass's evidence
+supports doing.
+
+**Both candidate pairings were scored, refused, and labelled** (`research/labels.jsonl`):
+[[petrus_b1727]] against the Gent cluster's `best_link` (30.7 bits, 1 independent
+identifier — name+kin-forename — NOT GRAFTABLE), and [[christoffel]] against the
+"Oost-Vlaanderen, Gent" sub-cluster's `best_link` (26.5 bits, 1 independent identifier,
+NOT GRAFTABLE). Neither label duplicates the other; both were already recorded before this
+section was written.
+
+**STRUCTURAL FINDING 1 — a clustering artifact, with corrected counts.**
+`surname_clusters()` in `tools/familytree/coverage.py` groups by `by_place[normalise_key(
+act.place)]`, and `Act.place` comes from the record's `EventPlace` — a **different field**
+from each mention's own `BirthPlace`. For an `Overlijden` record that is the place of
+**death**. So memorial cards for people who died in a Gent hospital but were born in the
+Evergem area get clustered as "Gent". The memorial-card files (`dbe`/`fwk`/`fvm`/`fde`/
+`ind`/`jac`/`haa`) hold **39** Bundervoet mentions at event-place "Gent" (not ~36 as an
+earlier pass had it). Of those, **14** carry an explicit non-Gent birthplace (11 Evergem, 2
+Zaffelare, 1 Sleidinge), 3 explicitly say Gent, and **22 carry no `BirthPlace` field at
+all** — real conflation, but its true extent is unprovable from what is held. The civil
+files hold **114** mentions at the strict "Gent" key (58 `abt` + 56 `gnt`), or 132
+including `abt`'s "Oost-Vlaanderen, Gent" and "Gentbrugge" variants. An earlier pass's
+"143 / 36 / 107" does not reproduce under any counting convention tried here; the figures
+above replace it.
+
+**STRUCTURAL FINDING 2 — the archives are wider than an earlier pass claimed, and the
+"1882–1900 gap" is illusory.** `abt` is **not** "Rijksarchief Gent BS Overlijden
+1804–1881" — its actual mix is **3177 BS Overlijden, 1656 BS Geboorte, 693 BS Huwelijk, 59
+Gevangenisregister** (prison register), spanning **1796–1929**. `gnt` is **not**
+"1901–1955" — it spans **1791–1970s** and already holds roughly 4,700 pre-1901 hits (a
+stray `EventDate.Year` value of "5687" is a data-quality footnote, not a real date). As
+originally worded, the scope would have misled a future pass into treating 1882–1900 as an
+untried gap between the two archives, when the held data already covers it. Six further
+archive files (`aal`, `abb`, `abg`, `cfg`, `fvl`, `spa`) hold scattered Bundervoet mentions
+missing from an earlier file list; none adds a new Gent-death/Evergem-birth case, so the
+substance is unchanged, but the scope is stated here as **civil-registration archives
+`abt`/`gnt` only**, not corpus-wide. Both archives are now registered as covered pages in
+`research/sources.json`.
+
+**REJECTED — the proposed "bridge", and the sharpest result of this pass.** An earlier
+hypothesis proposed Adrianus Bundervoet × Francisca Neukens's marriage act (c. 1815–19) as
+the most likely bridge, on the theory it might name Adrianus's parents as Joannes
+Bundervoet × Livina De Wilde — [[joannes_b]]'s own second, currently childless marriage.
+**Refuted on chronology, not on the act's content** (unpulled): Adrianus's attested
+fertility window runs to **1829** (children b. 1820, ~1827, ~1829). [[joannes_b]] died in
+**1760**, and that second marriage is ~**1745**. For Adrianus to be its son he would have to
+be **60–83 years old** across the births of those three children — not improbable,
+essentially impossible. So even if the act does say "father: Joannes Bundervoet, mother:
+Livina De Wilde", it cannot be *our* joannes_b — it would be one of the many other men with
+that very common name-pair the corpus has already proven exist (the 17-parish finding,
+§64/2026-07-26, plus the separately attested 20th-century Joannes Bundervoet × Sophia
+Livina De Moerloose line above). **Why the score was tempting, diagnosed rather than
+fixed:** `link.py joannes_b --all` shows the matcher itself auto-vetoes a 1904 "Joannes
+Bundervoet" as father — *"REJECTED — record of 1904 is 144 years after they died"* — the
+identical logic, just not applied one hop up through kin-name scoring in
+`surname_clusters()`. That is exactly why the cluster's `best_link` score survives when it
+should not. A `tools/` finding, not fixed here. Pulling the Adrianus act remains a
+legitimate next step under objective 3 — it would document or rule out a distinct Gent root
+— but it must not be logged as "the promising bridge": it is a plain, hedged next step.
+
+**Why even "plausible" was never available.** A search already logged (`research/
+searches.jsonl` line 64, verified verbatim this pass) found the Bundervoet surname sits
+natively in **seventeen** separate old-regime parishes across arrondissement Gent —
+Balegem, Desteldonk, Drongen, Evergem, Gentbrugge, Hansbeke, Lovendegem, Mariakerke,
+Merelbeke, Merendree, Oostakker, Semmerzake, Sleidinge, Vinderhoute, Wachtebeke, Wondelgem,
+Zomergem — logged as "a finding aid… never a person, a date or a parent — so nothing from
+it is graftable." Reproducing `coverage.surname_clusters()` this pass gives the identical
+score cited there: the Gent cluster's best link is [[petrus_b1727]] at 30.7 bits, 1
+independent identifier; `link.py --all` puts the same pairing at band `[weak]` / NOT
+GRAFTABLE, and `link.py`'s stricter default shows **0 candidates** for [[joannes_b]],
+[[christoffel]] and [[petrus_b1727]]. Surname + Gent is one fact, and the 17-parish finding
+shows it does not even narrow to one family.
+
+**The "zero migration trace" claim is weakened, not confirmed.** Across the abt+gnt corpus,
+only **18 of 92** `abt` Bundervoet mentions and **0 of 56** `gnt` mentions carry any
+`BirthPlace` field at all — 18 say Gent, 2 Zwijnaarde, none Evergem. That is a genuine
+zero, but it is mostly an absence of the field, not a checked-and-excluded absence, and is
+recorded that way here rather than as a clean negative.
+
+Three searches logged (`research/searches.jsonl`): [[petrus_b1727]] and [[christoffel]]
+against the `abt` archive, [[joannes_b]] against `gnt`, all `miss` / `name-index`, each
+scoped to what was actually covered rather than left to read as "everywhere." No labels
+written here beyond the two the verifier had already recorded on [[petrus_b1727]] and
+[[christoffel]]. No person files added or changed; no source yielded a fact for the tree.
+
+Tree: 536 people, unchanged. Build green. Verdict for the whole pass: **NOT PROVEN** — the
+Gent cluster is closed as a bridge candidate on current evidence, the clustering-artifact
+and archive-range corrections are recorded so they are not re-derived wrongly again, and
+the Guillaume-has-no-record gap is left as a named frontier rather than silently graftable
+material.

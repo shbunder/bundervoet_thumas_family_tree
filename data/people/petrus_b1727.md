@@ -41,3 +41,16 @@ the direct ancestors first, as the charter's priority requires.
 
 A second document sits on his paulderidder profile, captioned "Petrus Bundervoet Akte
 van teraardebestelling" — a burial act. Not yet retrieved.
+
+**NOT PROVEN, refused — the Gent cluster (objective 3, 2026-07-27).** The harvested
+corpus's own clustering (`coverage.surname_clusters()`) offers this record as the
+`best_link` for the biggest Gent-city cluster (153 mentions, 131 acts), on the strength of
+a 30.7-bit, 1-independent-identifier score (name + kin-forename echo) against a "Petrus
+Bundervoet × Isabella De Coster" whose son Joannes Baptista was born 1836 in Gent. NOT
+GRAFTABLE, labelled in `research/labels.jsonl`. Two independent grounds refuse it: the
+spouse named is Livina Quackebeke, not Marie Anna de Deckere; and the chronology is
+impossible outright — that Petrus fathered sons in ~1790 and 1803, decades after this
+record's own attested 1777 death (buried Assenede). The Gent surname cluster in fact
+resolves into **six distinct, unrelated patriarch families** plus a 20th-century line
+already independently attested — see research-log §73 for the full breakdown. None
+connects here.

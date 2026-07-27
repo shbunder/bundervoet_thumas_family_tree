@@ -33,7 +33,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 4 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 60 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 63 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
 | `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 5 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 | `netradyle` <https://www.netradyle.be/actes/> | index | open | name-index | 8 | 1,353,989 indexed acts for Namur, Liège, Hainaut, BRABANT WALLON, Luxembourg and Vlaams-Brabant: 721,862 births/baptisms, 181,589 marriages, 381,148 deaths/burials, 69,390 other. Mostly 1500-1912. Runs on ExpoActes 3.2.4. Free and completely unauthenticated for visitors — the login is for administrators only, so everything here is reproducible without a session. |
@@ -895,6 +895,24 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Yielded:** Eugenia Maria Vandecappelle, partner Alfons Luciaan Vincke — the same couple as fwk-alfons-vincke, a second card rather than the same one counted twice.
 - **Confidence:** sup
 - **Accessed:** 2026-07-27
+
+#### `abt` — Rijksarchief Gent civil-registration archive — Open Archives archive code "abt"
+- **Kind:** index · <https://www.openarchieven.nl/>
+- **Collection:** 3177 BS Overlijden, 1656 BS Geboorte, 693 BS Huwelijk, 59 Gevangenisregister (prison register) — Rijksarchief België (Gent), 1796–1929 — harvested corpus, research/harvest/acts/abt.jsonl
+- **Covers:** The whole archive as held, every record type, not filtered to one surname. Searched this pass (research-log §73) for a parent-name bridge from any Gent-city Bundervoet death-index patriarch to joannes_b/christoffel/petrus_b1727 — none found; the two candidate pairings the corpus's own clustering offered are scored and labelled NOT GRAFTABLE in research/labels.jsonl.
+- **Yielded:** *nothing yet*
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Corrects an earlier characterisation as 'BS Overlijden 1804–1881' only — it is a mixed record-type collection spanning 1796–1929, so this range already covers what would otherwise look like an untried 1882–1900 gap against `gnt`.
+
+#### `gnt` — Gent-area civil-registration archive — Open Archives archive code "gnt"
+- **Kind:** index · <https://www.openarchieven.nl/>
+- **Collection:** 361,158 mentions, harvested in full by `harvest.py bulk` (manifest id archive-gnt) — research/harvest/acts/gnt.jsonl
+- **Covers:** The whole archive as held. Searched this pass (research-log §73) for the same Gent-Bundervoet-patriarch bridge as `abt` — none found beyond what the `abt` search already surfaced.
+- **Yielded:** *nothing yet*
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Corrects an earlier characterisation as spanning only 1901–1955 — it actually runs 1791–1970s and already holds roughly 4,700 pre-1901 mentions, so the 1882–1900 window between it and `abt` is not an untried gap. One stray EventDate.Year value of "5687" is a data-quality outlier worth a footnote, not a real date.
 
 ### Familiekunde Vlaanderen — dataindexen (indices en klappers)
 

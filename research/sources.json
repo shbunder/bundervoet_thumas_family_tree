@@ -1635,6 +1635,30 @@
       "yielded": "Eugenia Maria Vandecappelle, partner Alfons Luciaan Vincke — the same couple as fwk-alfons-vincke, a second card rather than the same one counted twice.",
       "confidence": "sup",
       "accessed": "2026-07-27"
+    },
+    {
+      "id": "abt",
+      "site": "openarch",
+      "kind": "index",
+      "title": "Rijksarchief Gent civil-registration archive — Open Archives archive code \"abt\"",
+      "url": "https://www.openarchieven.nl/",
+      "collection": "3177 BS Overlijden, 1656 BS Geboorte, 693 BS Huwelijk, 59 Gevangenisregister (prison register) — Rijksarchief België (Gent), 1796–1929 — harvested corpus, research/harvest/acts/abt.jsonl",
+      "covers": "The whole archive as held, every record type, not filtered to one surname. Searched this pass (research-log §73) for a parent-name bridge from any Gent-city Bundervoet death-index patriarch to joannes_b/christoffel/petrus_b1727 — none found; the two candidate pairings the corpus's own clustering offered are scored and labelled NOT GRAFTABLE in research/labels.jsonl.",
+      "confidence": "sup",
+      "accessed": "2026-07-27",
+      "note": "Corrects an earlier characterisation as 'BS Overlijden 1804–1881' only — it is a mixed record-type collection spanning 1796–1929, so this range already covers what would otherwise look like an untried 1882–1900 gap against `gnt`."
+    },
+    {
+      "id": "gnt",
+      "site": "openarch",
+      "kind": "index",
+      "title": "Gent-area civil-registration archive — Open Archives archive code \"gnt\"",
+      "url": "https://www.openarchieven.nl/",
+      "collection": "361,158 mentions, harvested in full by `harvest.py bulk` (manifest id archive-gnt) — research/harvest/acts/gnt.jsonl",
+      "covers": "The whole archive as held. Searched this pass (research-log §73) for the same Gent-Bundervoet-patriarch bridge as `abt` — none found beyond what the `abt` search already surfaced.",
+      "confidence": "sup",
+      "accessed": "2026-07-27",
+      "note": "Corrects an earlier characterisation as spanning only 1901–1955 — it actually runs 1791–1970s and already holds roughly 4,700 pre-1901 mentions, so the 1882–1900 window between it and `abt` is not an untried gap. One stray EventDate.Year value of \"5687\" is a data-quality outlier worth a footnote, not a real date."
     }
   ]
 }
