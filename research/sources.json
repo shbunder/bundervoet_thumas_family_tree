@@ -2085,6 +2085,20 @@
    "confidence": "doc",
    "accessed": "2026-07-27",
    "note": "THE ROUTE, since AGATHA's person-name search no longer exists. Its genealogie tab is a place-and-parish browser that must be driven through its form, not by URL; that gives the register, and the register page embeds `var manifest_path` pointing at a IIIF manifest under agatha.arch.be/nl//data/json/. The manifest lists every canvas with a direct i3f.arch.be image URL, so pages can be fetched at full size without the Mirador viewer. Scanning is cheap because each act carries a marginal surname pair: cropping just the margin columns from a run of pages and stitching them into one sheet located this act in a single look. THE ACT DOES NOT NAME PARENTS - this older Flemish form gives origins and witnesses only, and adds a consent clause naming a father only when a party is a minor."
+  },
+  {
+   "id": "fs-fulltext-bundervoet",
+   "site": "fs-fulltext",
+   "kind": "index",
+   "title": "FamilySearch full-text search - Bundervoet, worldwide, exhaustive",
+   "url": "https://www.familysearch.org/nl/search/full-text/results?q.text=Bundervoet",
+   "covers": [
+    "Bundervoet"
+   ],
+   "yielded": "237 documents, paged to exhaustion. 135 are GENT NOTARIAL records 1659-1757 - a class of act no other venue in this registry indexes, and the one that names family relationships outright. Also 9 Rotterdam guardianship accounts that confirm the 17th-century Michiel Geertssen family from primary sources, and Kortrijk citizenship rolls of the 1540s naming Bundervoets with patronymics, the earliest occurrence of the surname yet found anywhere.",
+   "confidence": "sup",
+   "accessed": "2026-07-27",
+   "note": "NOT blocked, and research-log SS76 was wrong to record it so. The failure is a bug in FamilySearch's own UI: it sends q.textCountry, the API answers 400 'Unable to map supplied value=text_country to query term', and the page renders 'Er is iets misgegaan'. Drop the country filter and it works - so any country-filtered full-text search appears broken to every user. Query the service endpoint directly and page with count/offset. The text is handwriting-recognition output and garbles names badly; treat it as a FINDING AID saying which image to read, never as a transcription."
   }
  ]
 }

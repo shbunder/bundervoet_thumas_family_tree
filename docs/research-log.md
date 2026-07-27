@@ -4700,3 +4700,71 @@ of records that have nothing to do with it. Two cheap defences, neither made her
 `on_disk()` ignore filenames that cannot be ids — a stem with a space is never a valid id —
 and write edges only after validation passes. The first alone would have made this incident
 nothing at all.
+
+## 82. FamilySearch full-text was never blocked — and it holds 135 Gent notarial records
+
+**A retraction first.** §76 recorded FamilySearch full-text as `blocked` by an hCaptcha
+challenge and §79 repeated it. **That was wrong, and it cost this project a venue for two
+passes.** There was a captcha on the page at one point, but it is not what produced the
+error. The failure is a bug in FamilySearch's own front end:
+
+> `GET /service/search/fulltext/search?…&q.text=Bundervoet&q.textCountry=Belgium` → **400**
+> `{"message":"Validation failed.","errors":["Unable to map supplied value=text_country to query term"]}`
+
+The UI sends a country parameter its own API rejects, and renders the rejection as *"Er is
+iets misgegaan."* **Drop the country filter and the identical query returns 200.** So the
+venue works, and it looks broken to anyone who filters by country — which is exactly what a
+researcher looking for Belgian records does first. The lesson is the one §76 already
+half-learned about `tail`: an error message is not a diagnosis, and the network request
+would have said so in one look.
+
+**Paged to exhaustion: 237 documents.** What is in them changes what is reachable:
+
+| | |
+|---|---|
+| **135** | **Gent NOTARIAL records, 1659–1757** |
+| 15 | Netherlands, military |
+| 11 + 9 | Rotterdam, miscellaneous and **guardianship** |
+| 4 each | Zelzate, Assenede and Saint-Denis (Réunion) ten-year indexes |
+| 3 | **Kortrijk citizenship rolls, 1540s** |
+
+**The Gent notarial series is the find.** No other venue in this registry indexes notarial
+acts at all, and they are the class of record that states relationships outright — estates,
+marriage contracts, guardianships, transfers between kin. 135 of them, covering exactly the
+century in which the Gent Bundervoets are otherwise only names in a parish index.
+
+**The Kortrijk rolls push the surname back two centuries and sideways to West Flanders.**
+The 1540–1549 citizenship list names *"Jan Bundervoet fs Yweins"*, *"Josse Bundervoet fs
+Jan"*, *"Gheeraert Bundervoet"* and *"Jehan Bundervoet"* — with patronymics, so a father
+and son are on one page. A second roll adds *"Goesen bundervoert"* and *"Aernoud
+bundervoet"*. The tree's earliest person is [[bundervoet_petrus_1560]], undocumented and
+conventional; these are a documented generation older, in a city 45 km from Gent that no
+pass has ever looked at.
+
+**And the Rotterdam guardianships confirm §76's reconstruction from primary sources.** That
+family was assembled from baptism and burial entries; the guardianship accounts state the
+relationships:
+
+- *"Lijntgen Jans, minderjarige dochter van … Trijntgen Jacobs, daer vader aff was **Jan
+  Michiel Bundervoet**"* — the exact parentage §76 inferred from a baptism and a burial.
+- *"**Maria Barents de Buck**, in haar leven weduwe van **Gerrit Bundervoet**, op den 8
+  februarij 1709 alhier overleeden"* — a death date for the wife Gerret married in 1656.
+- *"testamente van wijle **Francijntje Michiels Bundervoet**, in haer leven laest weduwe van
+  **Cornelis Jacobse van Alblasserdam**, gepasseert op den 20 december 1717 voor den
+  Notaris Jacobus de Bergh"* — her will, its date, its notary, and that she outlived her
+  third husband.
+- *"wed. van **Michiel Bundervoet**"* (1664–67) — the patriarch's widow, still being
+  accounted for.
+
+**Nothing from this is in the tree, deliberately.** The text is handwriting-recognition
+output and it garbles the surname freely — `Bunder voet`, `bundervoert`, `Van Bundervoet`,
+and in one line a `Hendrik Bundervoet` where the parallel document says `Gerrit`. It is a
+**finding aid that says which image to read**, never a transcription to graft from. All 237
+are in `research/findings/bundervoet-fulltext-2026-07-27.json` with their snippets and image
+arks.
+
+**Next, and it is now a queue rather than a question.** The Gent notarial acts are ordered
+by how much they would settle: any naming Egidius or a Livinus Bundervoet first, since those
+reach the generation above the patriarch this project has been chasing all day. Then the
+Kortrijk rolls, which are a new and much older component. Then Francijntje's 1717 will,
+which will name her heirs and therefore the surviving Rotterdam family.

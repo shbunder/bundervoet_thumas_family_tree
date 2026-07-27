@@ -112,8 +112,6 @@
     "siblingRow": { "en": "brothers & sisters, in birth order · click to open one", "nl": "broers & zussen, op geboortevolgorde · klik om er een te openen" },
     "childrenRow": { "en": "children · click to climb down ↓", "nl": "kinderen · klik om af te dalen ↓" },
     "inFocus": { "en": "in focus", "nl": "in beeld" },
-    "climb": { "en": "climb {arrow}", "nl": "ga {arrow}" },
-    "openCard": { "en": "open", "nl": "open" },
     "unknownCard": { "en": "Unknown", "nl": "Onbekend" },
     "toResearch": { "en": "to research", "nl": "te onderzoeken" },
     "withWhom": { "en": "with {name}", "nl": "met {name}" },

@@ -65,8 +65,6 @@ h1{font-size:1.9rem;margin:.1em 0 .1em;font-weight:600}
 .node.doc{border-left:4px solid var(--doc)} .node.fam{border-left:4px solid var(--fam)}
 .node.sup{border-left:4px solid var(--sup)} .node.unk{border-style:dashed;background:var(--unk-bg);cursor:default;color:#8a8172}
 .node.unk:hover{transform:none;box-shadow:var(--shadow)}
-.node .climb{position:absolute;top:-8px;right:-8px;background:var(--accent);color:#fff;font-size:.62rem;border-radius:10px;padding:1px 6px;opacity:0;transition:opacity .12s}
-.node:not(.unk):not(.focus):hover .climb{opacity:1}
 .gplab{display:none}
 .childlab,.rowlab{text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin:2px auto 6px}
 .rowlab{margin-top:6px}
@@ -321,11 +319,12 @@ body.dark mark{background:#6b5520;color:#f7ecd0}
 .uconn.marr span{position:relative;background:var(--panel);color:var(--muted);font-size:.58rem;
   padding:0 5px;line-height:1;text-transform:uppercase;letter-spacing:.05em}
 @media(max-width:720px){
-  /* Side by side again here. Stacked, the lower of the two lands on the title —
-     which wraps to two lines at this width and reaches the left edge — so the
-     column that keeps them out of the way on a wide screen is what puts them in
-     it on a narrow one. Across, they stay on the crest's line. */
-  .chrome{flex-direction:row}
+  /* Stacked here too, so the corner is one switch wide at every width and the two
+     controls read as one stack rather than as a row that changes direction. Two
+     switches deep reaches into the title, which wraps to two lines at this width,
+     so the header keeps a gutter on both sides — both, because the crest and the
+     title are centred and a one-sided inset would lean them off centre. */
+  header{padding-left:46px;padding-right:46px}
   .searchbox{flex-basis:100%;width:auto;margin-left:0;margin-top:4px}
   /* A phone gets one scrolling row per generation rather than one scrolling
      pedigree: the four rows stay stacked and readable, and swiping the row of
@@ -340,6 +339,8 @@ body.dark mark{background:#6b5520;color:#f7ecd0}
   .relpick select{flex-basis:100%}
   #q{font-size:16px}
   #linepanel{width:100%}
-  #lineBtn{writing-mode:horizontal-tb;top:auto;bottom:16px;right:16px;
-    border-radius:22px;border-right:1px solid var(--line);padding:11px 17px;font-size:.82rem}
+  /* Still the sideways tab on the right edge, moved down out of the way of the
+     first row of cards — a phone scrolls the pedigree, and a tab at eye level
+     sits over the thing being read. */
+  #lineBtn{top:auto;bottom:24px}
 }

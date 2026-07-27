@@ -58,6 +58,27 @@ research/harvest/*
 # keep the record and its transcription and leave the image out — the record still
 # carries the URL, the digest and what was read.
 
+# "Keep both" copies: `labels 3.jsonl`, `images 4/`, `build-signature 2`. Written by a
+# folder sync that reconciles with macOS FileManager semantics — Claude Desktop's
+# remote-session folder grants, in the case that produced 705 of them on 27 July 2026 —
+# and recognisable because the sync is sandboxed, so every copy lands 600 against the
+# tree's 644. A build rewrites ~800 person files at once, which the sync reads as ~800
+# conflicts, so they arrive a whole generation per build: ` 2` through ` 6` in one day.
+# The repository was moved out of ~/Documents to ~/Developer/projects the same day, which
+# stops the existing grants matching — they are absolute paths — but does not revoke them.
+#
+# Ignored for the same reason as the autopilot scratch above: an unattended `git add -A`
+# would commit them. But the sharper danger is that they are not inert. people.py loads
+# the roster as PEOPLE_DIR.glob("*.md"), which does not exclude them — 539 copies read as
+# 539 phantom people, each a stale duplicate of a real one, with an id containing a space
+# that rename_ids.py would then queue for renaming. Ignoring them keeps them out of
+# history; it does not keep them out of the glob, so a tree that grows them still needs
+# them deleted before the next build.
+* [0-9]
+* [0-9].*
+* [0-9][0-9]
+* [0-9][0-9].*
+
 # uv's virtualenv. pyproject.toml and uv.lock are committed.
 .venv/
 __pycache__/

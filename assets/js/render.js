@@ -62,7 +62,7 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
       ? t('withWhom', { name: esc(people[other].name) })
       : t('otherParentUnknown');
 
-  function node(id, { role, arrow = '↑', focus = false, cls = '', weak = false, weakNote = '' } = {}) {
+  function node(id, { role, focus = false, cls = '', weak = false, weakNote = '' } = {}) {
     if (!id) {
       return `<div class="node unk"><div class="nm">${esc(t('unknownCard'))}</div>` +
         `<div class="dt">${esc(t('toResearch'))}</div></div>`;
@@ -74,16 +74,12 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
     // being mistaken for each other. What they are to the root is stated once,
     // with room to name the root, in the detail card below.
     const label = focus ? t('inFocus') : role || kin.relationship(id) || p.occupation || '';
-    const climb = !focus && c !== 'unk'
-      ? `<span class="climb">${esc(arrow ? t('climb', { arrow }) : t('openCard'))}</span>`
-      : '';
     // On the role label where there is one, because the role IS the claim in doubt —
     // "father", marked, reads as "we are not sure he is the father". On the name only
     // when there is no label to carry it.
     const mark = weak ? weakMark(weakNote) : '';
     return (
       `<div class="node ${focus ? 'focus ' : ''}${weak ? 'weak ' : ''}${cls ? cls + ' ' : ''}${c}" data-id="${esc(id)}">` +
-      climb +
       (label ? `<div class="rl">${esc(label)}${mark}</div>` : '') +
       `<div class="nm">${esc(p.name)}${label ? '' : mark}</div>` +
       (p.dates ? `<div class="dt">${esc(p.dates)}</div>` : '') +
@@ -105,7 +101,7 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
   // open them and go on into their family. One who is only a name stays flat.
   const spouseNode = (sp, of) =>
     sp.id && people[sp.id]
-      ? node(sp.id, { role: kin.spouseLabel(sp, of), arrow: '' })
+      ? node(sp.id, { role: kin.spouseLabel(sp, of) })
       : `<div class="node fam spouse"><div class="rl">${esc(kin.spouseLabel(sp))}</div>` +
         `<div class="nm">${esc(sp.name)}</div>` +
         (sp.detail ? `<div class="dt">${esc(sp.detail)}</div>` : '') +
@@ -236,7 +232,7 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
     const row =
       siblings
         .map(id =>
-          node(id, { role: relTo(id, focus), arrow: '', cls: 'sib',
+          node(id, { role: relTo(id, focus), cls: 'sib',
                      weak: kin.isWeakSibling(focus, id),
                      weakNote: kin.siblingNote(focus, id) })
         )
@@ -263,7 +259,7 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
           const row = g.children
             .slice()
             .sort(byBirth)
-            .map(k => node(k, { role: relTo(k, focus), arrow: '↓' }))
+            .map(k => node(k, { role: relTo(k, focus) }))
             .join('');
           const cap = groups.length > 1 ? `<div class="bywhom">${withWhom(g.other)}</div>` : '';
           return cap + `<div class="srow crow"><div class="rowin">${row}</div></div>`;
