@@ -12,6 +12,7 @@ father: guilielmus_bossin
 mother: peremans
 sources:
   - S33
+  - S35
 ---
 
 Named as the child in a civil birth act at **Sint-Stevens-Woluwe nr. 19, 15 Aug 1851**.
@@ -44,5 +45,10 @@ elsewhere are a clerk's quotation from memory of that document. This 1851 act re
 already-reconciled shortening; it does not itself have to do the reconciling, which is
 exactly what distinguishes it from the Haesaerts case, where no document ever settled the
 variant independently of the disputed act.
+
+**CORROBORATED (2026-07-27), independently of his own birth act for the first time.** He
+stands witness at his sister [[ludovica_bossin]]'s wedding — Kraainem, 25 February 1884 —
+given as 32, *pleisteraar*. Age 32 on that date is an exact arithmetic match to the
+1851-08-15 birth this record already holds.
 
 `sup`: an act analysis, not the register image.

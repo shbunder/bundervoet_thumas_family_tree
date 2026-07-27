@@ -26,6 +26,7 @@ sources:
   - S8
   - S33
   - S34
+  - S35
 ---
 
 CORROBORATED (July 2026) as a mother, by her daughter's Kraainem marriage act of
@@ -133,3 +134,15 @@ register, not merely the parent-name pair with a place borrowed from a volume ti
 same act also surfaces a one-year conflict on their father's own death date — 1836 here
 against 1837 in this record's own S19 — left open, and recorded in full on
 [[egidius_peremans]] rather than picked here.
+
+A FIFTH AND SIXTH CHILD (2026-07-27): [[henricus_bossin]] (b. Kraainem, 1 January 1863)
+and [[joannes_franciscus_bossin]] (b. Kraainem, 17 March 1866), from their own 1887
+Kraainem and 1896 Werchter marriage acts. Both name this record as *Joanna Catharina
+Peremans*, landbouwster of Kraainem — the fuller form, closer to the S19 anchor's *Joanna
+Catharina Jacoba* than the *Anna Catharina* several other acts in this family use — again
+the already-reconciled variant, not a new dispute.
+
+Two of her daughter [[ludovica_bossin]]'s acts corroborate this record twice more: her own
+1884 marriage act (*Anna Catharina Peremans*) and her 1901 remarriage act (*Anna Catharina
+Peremans*, again zonder beroep) — the shortened form, matching the pattern already
+documented above.

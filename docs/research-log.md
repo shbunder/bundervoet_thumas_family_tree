@@ -3723,3 +3723,115 @@ acts, following the standing convention. No labels recorded (see above).
 Tree: 516 → 523 people. Build green. Verdict ACCEPTED for the sibship (on the parent-pair
 identifier), NOT PROVEN for [[leontius_vi]] and [[gustavus_vi]]'s own fates, and for the
 Roger Bernard frontier.
+
+## 72. Autopilot pass 9 (by act) — a fifth and sixth Bossin child, a near-empty record filled in, and a precedent corrected
+
+Four marriage acts already in the held corpus (`research/harvest/acts/abl.jsonl`),
+covering **guilielmus_bossin × peremans**'s children across Kraainem and one out-of-region
+Werchter wedding — registered together as **S35**. Index-level AGATHA/Demogen act
+analyses throughout, `sup` never `doc`; AGATHA holds a scan for the main act
+(`HUBRA_00197982_0`) but is logged out — confirmed `blocked`, not a scoped miss.
+
+**A FIFTH CHILD — [[henricus_bossin]], and which act actually carries him.** He first
+appears as an unlabelled witness, aged 21, at his sister [[ludovica_bossin]]'s own 1884
+Kraainem wedding — an act that names no parents for its witnesses. It is his **own**
+marriage act, Kraainem, 23 November 1887 (also the act that brings [[guns_mc]] and her
+parents [[guns_jf]]/[[vogels_a]] into the tree), that states his parents directly:
+Guillelmus Bossin × Joanna Catharina Peremans. **Two identifiers carry the link**: the
+parent names on that 1887 act, and — independent of it — [[guilielmus_bossin]]'s death,
+Kraainem 10 October 1888, recurring identically to the day in two further, unconnected
+acts for two *different* children five years apart (his sister's 1901 remarriage, his
+brother's 1896 Werchter marriage). Two documents agreeing to the day on a death rules out
+a namesake Kraainem Bossin family — a real risk here, since [[jbbossin]] already turned
+out to be an entirely unconnected Joannes Baptista Bossin two generations earlier (§65).
+
+**AGE CONSISTENCY IS A DERIVED CHECK, NOT AN INDEPENDENT IDENTIFIER.** Across five
+appearances (1884, 1896, 1900, 1901, 1902) against his 1863-01-01 birth, his stated age
+runs 21 (exact), 32 (one year short of 33), 36 (one year short of 37), 38 (exact), 39
+(exact). That pattern shows one continuous man — which the parent-name-plus-death-date
+pair already established — and adds no identifying weight beyond that; two years short
+out of five is ordinary rounding, the same pattern already accepted on [[jbbossin]]'s own
+record. It is recorded plainly here because it would be easy to mistake "the ages all fit"
+for a second identifier when it is really a consistency check on the first.
+
+**A PROBABLE SIXTH CHILD — [[joannes_franciscus_bossin]], found by the verifier from the
+1896 Werchter act**, which also restates the father's death 1888-10-10 Kraainem — the same
+exact date given independently on the 1901 act above, five years apart. Two family members
+([[henricus_bossin]], [[swaelens]]) stand witness at his wedding, the same pattern that
+corroborates other siblings in this family. Recorded as probable, not certain: the
+evidence is the same class as Henricus's, but no third, independent appearance of this
+specific son has yet turned up. His wife [[verstraeten_mc]] and her parents
+[[verstraeten_l]]/[[torfs_r]] are entered from the same act.
+
+**[[swaelens]], filled in from a bare marriage-index row.** The record held only a
+marriage date, place and the bride's parents from S24. His own 1884 act now gives his
+birth (Alsemberg, 11 May 1858), trade (*schrijnwerker*) and parents — [[egidius_swaelens]]
+× [[joanna_ackermans]], her death dated Alsemberg, 27 December 1877. His own witness
+appearance at [[henricus_bossin]]'s 1887 wedding, aged 29, is an exact arithmetic match to
+that birth. His death — Kraainem, 7 October 1898 — comes from [[ludovica_bossin]]'s 1901
+remarriage act, naming him as her deceased "vorige partner"; the rare triple forename plus
+the bride's own independently-confirmed identity make this unambiguous.
+
+**A DISCREPANCY, recorded on both records and overwritten on neither.** S24 gives the
+Swaelens × Bossin marriage as 17 February 1884, Alsemberg; this civil act gives 25
+February 1884, Kraainem — eight days and one commune apart. Banns at Alsemberg then the
+act at Kraainem is plausible but is inference, not proof, and nothing this pass found
+settles it. Following the same handling already given to [[guilielmus_bossin]] and
+[[egidius_peremans]]'s one-year death conflict (§69), the frontmatter `married`/`place`
+fields on both [[swaelens]] and [[ludovica_bossin]] stay at the earlier-held S24 values;
+the civil act's fuller date and place stand in prose alongside them, not in place of them.
+
+**NOT PROVEN, refused — Franciscus Swaelens.** A second witness at the 1884 wedding, 24,
+of Sint-Genesius-Rode, and — like the groom — a *schrijnwerker*. No act states a
+relationship and he appears exactly once in the held corpus. **The point worth keeping**:
+same surname, same trade and a plausible age together are ONE correlated signal, not two
+independent ones — a trade runs in families and apprenticeships, so it is exactly the kind
+of correlated pair rule 1 is written to catch. No person file is made for him; the lead is
+recorded in [[swaelens]]'s own prose as a frontier, settled only by the register image or
+an act naming his own parents.
+
+**NEW FACTS for [[ludovica_bossin]] and [[guilielmus_bossin]].** Her 1901 Kraainem
+remarriage to **[[petrus_vrebos]]** (widower, himself not previously in the tree, with his
+parents [[vrebos_hf]]/[[schoolmeesters_j]] and a first wife, Elisabeth Theresia Geuffens,
+named but given no record of her own for want of any further fact) was entirely unknown
+before this pass. [[guilielmus_bossin]]'s death is sharpened from a bare year to a day,
+1888-10-10 Kraainem, corroborated **twice independently** rather than once, as detailed
+above. And [[joannes_bossin51]] — added only in §65 — gets his first corroboration beyond
+his own birth act: his stated age (32) as a witness at the 1884 wedding is an exact
+arithmetic match to his held 1851-08-15 birth.
+
+**A PRECEDENT CORRECTED.** The lead into this pass justified accepting
+[[egidius_swaelens]] × [[joanna_ackermans]] at `sup` from a single act by citing
+[[carolus_vb]] × [[martinet]] as having been single-source before their own 1909 act. That
+citation is wrong: `martinet.md` and `carolus_vb.md` show `carolus_vb` already carried
+**two** sources before S18 — `tree-stefpaelinck` and S18 itself do not predate one
+another as claimed; rather, the couple was never single-source to begin with. **The
+correct precedent is inside this same family**: [[cornelius_bossin]], [[joannes_bossin51]]
+and [[bossin]] (Antonia) were each accepted at `sup` from one civil act's purpose-built
+parentage statement, no second source, no register image. That is the actual standard
+this record meets, and it is the one now written onto [[egidius_swaelens]]'s own page. A
+precedent cited wrongly is exactly how a standard drifts, which is why this is corrected
+here rather than quietly used.
+
+**A THIRD instance of the cover re-offering finished work.** Cover entry 6,
+`abt:78f3eb53-a706-9e24-4a46-4203498072a3` (Sint-Niklaas, 1909), is already fully grafted:
+[[carolus_vb]], [[martinet]], [[alphonsus_vb]] and [[rosalia_moerloos]] already quote every
+field of it verbatim, citing S18 (the same GUID) — including the "Vitalis Moerloos ×
+Nathalia Van Acker" parent names the cover credits as a fresh `RESOLVES`. This is the
+**third** cover entry this run has found already finished (after entries 3 and 5, §69,
+which this pass could not re-confirm directly — only entry 6 was independently checked
+here). **The pattern, not the slip**: the greedy act cover does not know what the tree
+already holds. `tools/` is out of scope for this pass; this is a finding for the report.
+
+Thirteen new person files: [[henricus_bossin]], [[guns_mc]], [[guns_jf]], [[vogels_a]],
+[[joannes_franciscus_bossin]], [[verstraeten_mc]], [[verstraeten_l]], [[torfs_r]],
+[[egidius_swaelens]], [[joanna_ackermans]], [[petrus_vrebos]], [[vrebos_hf]],
+[[schoolmeesters_j]]. New source **S35**. Four labels recorded for identities the
+verifier's own ten did not cover (`henricus_bossin` × his 1887 act and his 1884 witness
+line, `joannes_franciscus_bossin` × his 1896 act, `petrus_vrebos` × his 1901 act) — the
+verifier's ten are not duplicated.
+
+Tree: 523 → 536 people. Build green. Verdict ACCEPTED for [[henricus_bossin]] and the
+1884/1887/1901 facts; ACCEPTED but PROBABLE for [[joannes_franciscus_bossin]]; NOT PROVEN
+for Franciscus Swaelens; the 17-vs-25 February marriage date and the Franciscus Swaelens
+lead both stay open frontiers.

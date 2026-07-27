@@ -6,7 +6,8 @@ birth:
   date: "1824"
   place: Sint-Stevens-Woluwe
 death:
-  date: "1888"
+  date: 1888-10-10
+  place: Kraainem
 confidence: sup
 occupation: landbouwer (farmer)
 line: thumas
@@ -23,6 +24,7 @@ sources:
   - S11
   - S8
   - S33
+  - S35
 ---
 
 CORROBORATED (July 2026) as a father, by his daughter's Kraainem marriage act of
@@ -82,3 +84,15 @@ He also appears again as father, self-declaring, aged 29, at [[ludovica_bossin]]
 birth act (Sint-Stevens-Woluwe nr. 18, 5 October 1853, S33) — a *steenslager* there, same
 trade as his sister's 1853 witness appearance already gave him. That age falls inside the
 narrowed window with no conflict.
+
+A FIFTH AND SIXTH CHILD (2026-07-27): [[henricus_bossin]] (b. Kraainem, 1 January 1863)
+and [[joannes_franciscus_bossin]] (b. Kraainem, 17 March 1866), found from Henricus's own
+1887 Kraainem marriage act and Joannes Franciscus's own 1896 Werchter marriage act
+respectively — both name this couple as parents directly.
+
+**DEATH DATED TO THE DAY, and corroborated twice independently.** This record held only
+the year 1888. His daughter [[ludovica_bossin]]'s 1901 Kraainem remarriage act and his
+son [[joannes_franciscus_bossin]]'s 1896 Werchter marriage act — two different children,
+two different registers, five years apart — both give his death as **Kraainem, 10
+October 1888**, agreeing to the day. That is what makes the day-level date safe to hold
+rather than a single-source guess, and it now supersedes the bare year.

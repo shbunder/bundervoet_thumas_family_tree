@@ -36,6 +36,7 @@ the misses and the labels are the accumulating asset.
 | 6 | 2026-07-27 | act | zaventem 1848 peremans | GRAFTED | jbaptista_peremans, vangindertaelen_jc, vangindertaelen_jf, huenaerts_ac | — |
 | 7 | 2026-07-27 | up | antoine_vanald + brigitte_wyllie | NOT PROVEN | francois_looten, petrus_vanald, jean_vanald, marietheresia_bouckaert, catharina_looten, renatus_looten, ludovica_looten, maria_looten | — |
 | 8 | 2026-07-27 | down | joannes_vi2 sibship | GRAFTED | arthur_vi, augustus_vi, leontius_vi, gustavus_vi, joannes_vi83, ludovicus_vi, joannes_vi91 | — |
+| 9 | 2026-07-27 | act | kraainem 1884 swaelens×bossin | GRAFTED | henricus_bossin, guns_mc, guns_jf, vogels_a, joannes_franciscus_bossin, verstraeten_mc, verstraeten_l, torfs_r, egidius_swaelens, joanna_ackermans, petrus_vrebos, vrebos_hf, schoolmeesters_j | — |
 
 ---
 
