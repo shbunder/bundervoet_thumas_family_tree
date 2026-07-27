@@ -25,6 +25,7 @@ sources:
   - S11
   - S8
   - S33
+  - S34
 ---
 
 CORROBORATED (July 2026) as a mother, by her daughter's Kraainem marriage act of
@@ -123,3 +124,12 @@ the dispute are different documents; there, they are the same one.
 She appears again, aged 29, at [[ludovica_bossin]]'s own birth act (Sint-Stevens-Woluwe
 nr. 18, 5 October 1853, S33) — again *Anna Catharina Peremans*, born Zaventem, matching
 her 1824 birth year exactly.
+
+A FIFTH SIBLING (2026-07-27): [[jbaptista_peremans]] married **Joanna Catharina Van
+Gindertaelen** at Zaventem on **21 August 1848** (S34). This one clears a higher bar than
+the three found in 2026-07-26: it carries an exact day-level match to their mother's
+already-held death date (19 December 1843, Zaventem) from a *separately transcribed*
+register, not merely the parent-name pair with a place borrowed from a volume title. The
+same act also surfaces a one-year conflict on their father's own death date — 1836 here
+against 1837 in this record's own S19 — left open, and recorded in full on
+[[egidius_peremans]] rather than picked here.

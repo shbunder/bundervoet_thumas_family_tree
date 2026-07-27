@@ -406,7 +406,7 @@
 1 SEX M
 1 DEAT
 2 DATE 1657
-1 FAMS @F207@
+1 FAMS @F209@
 1 NOTE Spouse (no record of their own): (wife unrecorded, d. ~1649)
 1 NOTE FRONTIER above — father of Michael Rups, grandfather of Maria Rups (1642). Family of Zwevezele. His own father is recorded only as NN Rups.
 1 SOUR @S14@
@@ -1670,7 +1670,7 @@
 2 GIVN Carolus
 2 SURN Vandenberghe
 1 SEX M
-1 FAMS @F202@
+1 FAMS @F204@
 1 NOTE Spouse (no record of their own): (wife uncertain)
 1 NOTE FRONTIER above — father of Judoca Vandenberghe (~1594). Also written Vanberghe / Saerles. Born ~1560s; dates and his wife's identity not recorded.
 1 SOUR @S4@
@@ -2357,6 +2357,13 @@
 2 CONT
 2 CONT FRONTIER: the marriage act itself, which would name the bride and both sets of parents; and his
 2 CONT own birth act at Zaventem, probably in the 1810s or 1820s.
+2 CONT
+2 CONT WITNESS LINE, NOT A DATE (2026-07-27): he stands witness, aged 33, at his brother
+2 CONT [[jbaptista_peremans]]'s Zaventem marriage on 21 August 1848 (S34), which would imply a
+2 CONT birth around 1814–1815. Not written as a birth date here: a witness line carries only a
+2 CONT name and a commune, with no parent names restated, which is *weaker* evidence than the
+2 CONT parent-name pair that grafted him into this family in the first place. If this is ever
+2 CONT recorded, the only honest form is a `year_span` (`1814..1815`), never a point date.
 1 SOUR @S52@
 2 QUAY 2
 0 @I117@ INDI
@@ -2850,6 +2857,22 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
+2 CONT
+2 CONT A FIFTH CHILD's marriage act names him again (2026-07-27): [[jbaptista_peremans]]
+2 CONT married at Zaventem on 21 August 1848 (S34), and that act gives his own death as
+2 CONT **1836-03-06** — the same day and month as the 1837-03-06 held above from S19, one year
+2 CONT apart. **Both dates are recorded here, and neither is picked.** 1837-03-06 comes from
+2 CONT S19 (his daughter [[peremans]]'s 1846 marriage act); 1836-03-06 comes from S34 (his son
+2 CONT [[jbaptista_peremans]]'s 1848 marriage act). Both are AGATHA/Demogen index
+2 CONT transcriptions of the civil registration — neither is a register image. Positing two
+2 CONT separate Egidius Peremans × Joanna Theresia Verelst couples in Zaventem, whose wives
+2 CONT happen to share an identical day-level death date (see [[joanna_verelst]]), is a far
+2 CONT larger coincidence than a single-digit transcription slip in one of the two independent
+2 CONT Demogen batches — so this is read as one man, not two. But which digit slipped is not
+2 CONT decided by that reasoning, and the frontmatter `death.date` field is left at 1837-03-06,
+2 CONT the earlier-held value, rather than silently overwritten by the later one. Only the
+2 CONT Zaventem 1836/1837 death register image — or the act itself — settles which year is
+2 CONT correct.
 1 SOUR @S62@
 2 QUAY 2
 0 @I142@ INDI
@@ -4130,7 +4153,7 @@
 2 DATE ABT 1440
 1 DEAT
 2 DATE BEF 1520
-1 FAMS @F203@
+1 FAMS @F205@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE FURTHEST CONFIRMED ANCESTOR of Renee & Leon — born ~1440, in the Burgundian Low Countries (era of Philip the Good / Charles the Bold, before the Habsburgs and before Columbus). Father of Judocus 'Joos' Sabbe (~1475). Top of the documented line; no parents recorded.
 1 SOUR @S4@
@@ -4418,7 +4441,7 @@
 1 DEAT
 2 DATE BET 1575 AND 1587
 1 FAMS @F67@
-1 FAMC @F198@
+1 FAMC @F200@
 1 NOTE Father of Judocus Van Renterghem (~1575). Married Barbara Wittenheyns.
 1 SOUR @S4@
 2 QUAY 2
@@ -4982,6 +5005,23 @@
 1 SOUR @S18@
 2 QUAY 2
 0 @I216@ INDI
+1 REFN huenaerts_ac
+2 TYPE project-id
+1 NAME Anna Catharina /Huenaerts/
+2 GIVN Anna Catharina
+2 SURN Huenaerts
+1 SEX F
+1 OCCU arbeidster (labourer)
+1 FAMS @F163@
+1 NOTE Named in her daughter [[vangindertaelen_jc]]'s marriage act — Zaventem, 21 August 1848
+2 CONT (S34) — as *arbeidster* of Zaventem, present and consenting. The act gives her no age and
+2 CONT no dates, so this record has none.
+2 CONT
+2 CONT FRONTIER: her marriage to [[vangindertaelen_jf]], which the Zaventem registers should
+2 CONT hold for roughly 1815–1825.
+1 SOUR @S91@
+2 QUAY 2
+0 @I217@ INDI
 1 REFN huguette
 2 TYPE project-id
 1 NAME Hugette /Devriendt/
@@ -4992,11 +5032,11 @@
 2 DATE 17 FEB 1943
 2 PLAC living
 1 FAMS @F113@
-1 FAMC @F163@
+1 FAMC @F164@
 1 NOTE Siblings: René and Sonja Devriendt.
 1 SOUR @S22@
 2 QUAY 1
-0 @I217@ INDI
+0 @I218@ INDI
 1 REFN ida_vermandel
 2 TYPE project-id
 1 NAME Ida /Vermandel/
@@ -5010,7 +5050,7 @@
 2 DATE 21 JUN 1865
 2 PLAC Hamme (Oost-Vlaanderen)
 1 OCCU arbeidster (labourer)
-1 FAMS @F164@
+1 FAMS @F165@
 1 NOTE Maternal grandmother of Louise Bocklandt; wife of Joannes Franciscus Van Bergen.
 2 CONT
 2 CONT ACT READ (2026-07-26) — **Hamme death act nr. 123, 1865**, read as the register image. She
@@ -5054,9 +5094,9 @@
 2 CONT (b. 1861, d. Hamme 2 May 1919), both indexed with this mother and a father *Franciscus*.
 2 CONT Their own acts have not been read. [[paulina_vdberghe]] stood in exactly that position until
 2 CONT her 1882 act was opened, which is the argument for opening theirs.
-1 SOUR @S91@
+1 SOUR @S92@
 2 QUAY 3
-0 @I218@ INDI
+0 @I219@ INDI
 1 REFN irma_vincke
 2 TYPE project-id
 1 NAME Irma Maria /Vincke/
@@ -5087,7 +5127,7 @@
 2 CONT here, not 26.
 1 SOUR @S39@
 2 QUAY 2
-0 @I219@ INDI
+0 @I220@ INDI
 1 REFN isabella_demuynck
 2 TYPE project-id
 1 NAME Isabella /De Muynck/
@@ -5098,7 +5138,7 @@
 2 DATE 1782
 1 DEAT
 2 DATE 1809
-1 FAMS @F165@
+1 FAMS @F166@
 1 NOTE First wife of [[jacobus_stroobandt]]. isavdw gives her years as 1782–1809 and
 2 CONT nothing more — no day, no place, no parents, and no children.
 2 CONT
@@ -5107,7 +5147,7 @@
 2 CONT through that second marriage, not this one.
 1 SOUR @S4@
 2 QUAY 2
-0 @I220@ INDI
+0 @I221@ INDI
 1 REFN isabella_ichau
 2 TYPE project-id
 1 NAME Isabella Livia /Ichau/
@@ -5127,7 +5167,7 @@
 2 CONT project's evidence to collide with.
 1 SOUR @S54@
 2 QUAY 2
-0 @I221@ INDI
+0 @I222@ INDI
 1 REFN jacob_deblaere
 2 TYPE project-id
 1 NAME Jacob Donaas /De Blaere/
@@ -5144,9 +5184,9 @@
 1 NOTE Source detail: Index op de huwelijken Wingene 1603–1796 (J. Patteeuw, VVF Brugge); Geneanet kathrynann / isavdw
 2 CONT
 2 CONT FRONTIER above — born Wingene 1695. Top of the De Blaere line in this source.
-1 SOUR @S92@
+1 SOUR @S93@
 2 QUAY 2
-0 @I222@ INDI
+0 @I223@ INDI
 1 REFN jacoba_monballiu
 2 TYPE project-id
 1 NAME Jacoba /Monballiu/
@@ -5161,7 +5201,7 @@
 1 NOTE FRONTIER above — mother of Anna Van Nieuwenhuyse (1676).
 1 SOUR @S4@
 2 QUAY 2
-0 @I223@ INDI
+0 @I224@ INDI
 1 REFN jacoba_ossaert
 2 TYPE project-id
 1 NAME Jacoba Josepha /Ossaert/
@@ -5178,7 +5218,7 @@
 1 NOTE Daughter of Josephus Ossaert & Cornelia Rivier; ten children (surname also spelled Housaer).
 1 SOUR @S22@
 2 QUAY 2
-0 @I224@ INDI
+0 @I225@ INDI
 1 REFN jacoba_vanalledewerelt
 2 TYPE project-id
 1 NAME Jacoba /Van Alledewerelt/
@@ -5193,7 +5233,7 @@
 1 NOTE FRONTIER above — grandmother of Francisca Van Maele.
 1 SOUR @S4@
 2 QUAY 2
-0 @I225@ INDI
+0 @I226@ INDI
 1 REFN jacobus_stroobandt
 2 TYPE project-id
 1 NAME Jacobus /Stroobandt/
@@ -5208,12 +5248,12 @@
 2 PLAC Oostkamp
 1 OCCU schoenmaker (shoemaker)
 1 FAMS @F142@
-1 FAMS @F165@
+1 FAMS @F166@
 1 FAMC @F12@
 1 NOTE Grandfather of Juliana Stroobandt, shoemaker. Married Isabella De Muynck (1782-1809), then Joanna Keirsebilck 24 Jul 1810. Parents Adrianus Stroobandt x Anna Maria Van Acker.
 1 SOUR @S4@
 2 QUAY 2
-0 @I226@ INDI
+0 @I227@ INDI
 1 REFN jan_bemden80
 2 TYPE project-id
 1 NAME Jan /Van den Bemden/
@@ -5242,9 +5282,9 @@
 2 CONT `sup`: indexed acts, not the register images. **No `sex` is recorded on the birth act**, because
 2 CONT the harvested mention carries only the relation role and never a sex, and this project does not
 2 CONT read a sex off a forename.
-1 SOUR @S93@
+1 SOUR @S94@
 2 QUAY 2
-0 @I227@ INDI
+0 @I228@ INDI
 1 REFN jan_coenraets06
 2 TYPE project-id
 1 NAME Jan Baptist Joris /Coenraets/
@@ -5267,7 +5307,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I228@ INDI
+0 @I229@ INDI
 1 REFN jan_coppens05
 2 TYPE project-id
 1 NAME Jan Baptist /Coppens/
@@ -5290,7 +5330,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I229@ INDI
+0 @I230@ INDI
 1 REFN jan_van_bergen
 2 TYPE project-id
 1 NAME Joannes Franciscus /Van Bergen/
@@ -5302,7 +5342,7 @@
 1 DEAT
 2 DATE 1898
 1 OCCU metser (mason)
-1 FAMS @F164@
+1 FAMS @F165@
 1 NOTE Maternal grandfather of Louise Bocklandt — father of Maria Louisa Van Bergen (1842). Of Hamme (Oost-Vlaanderen).
 2 CONT
 2 CONT CORROBORATED (2026-07-26) by two register images and one index, none of which derive from
@@ -5327,9 +5367,9 @@
 2 CONT DGS **004835775**. His marriage to Ida is the higher-value act, since it would name all
 2 CONT four of their parents; on her birthplace it should be sought at **Zelzate** (Huwelijken
 2 CONT 1821–1860, DGS 004670484) before Waasmunster or Hamme.
-1 SOUR @S94@
+1 SOUR @S95@
 2 QUAY 2
-0 @I230@ INDI
+0 @I231@ INDI
 1 REFN janbaptist_p
 2 TYPE project-id
 1 NAME Jan Baptist /Paelinck/
@@ -5343,12 +5383,12 @@
 2 DATE 29 MAY 1843
 2 PLAC Lokeren
 1 OCCU dagloner (day labourer)
-1 FAMS @F166@
+1 FAMS @F167@
 1 FAMC @F60@
 1 NOTE A day labourer; the family moved from Destelbergen to Lokeren, where he died. His wife was Joanna Coleta Van Acker.
 1 SOUR @S5@
 2 QUAY 2
-0 @I231@ INDI
+0 @I232@ INDI
 1 REFN janphilip_bossin76
 2 TYPE project-id
 1 NAME Jan Philip /Bossin/
@@ -5381,7 +5421,7 @@
 2 CONT `sup`: an act analysis, not the register image.
 1 SOUR @S78@
 2 QUAY 2
-0 @I232@ INDI
+0 @I233@ INDI
 1 REFN jathanasius_peremans
 2 TYPE project-id
 1 NAME Joannes Athanasius /Peremans/
@@ -5409,9 +5449,13 @@
 2 CONT
 2 CONT FRONTIER: his own birth act at Zaventem around 1822, and the marriage act itself, which would
 2 CONT give both trades and his exact age.
+2 CONT
+2 CONT He stands witness, aged 26, at his brother [[jbaptista_peremans]]'s Zaventem marriage on
+2 CONT 21 August 1848 (S34) — consistent with the ~1822 already held here, but adding no
+2 CONT precision of its own. Recorded for completeness; nothing here changes.
 1 SOUR @S53@
 2 QUAY 2
-0 @I233@ INDI
+0 @I234@ INDI
 1 REFN jb_coekelberghs
 2 TYPE project-id
 1 NAME Joannes Baptista /Coekelberghs/
@@ -5426,7 +5470,7 @@
 2 PLAC Bertem
 1 OCCU landbouwer (farmer)
 1 FAMS @F41@
-1 FAMS @F201@
+1 FAMS @F203@
 1 FAMC @F159@
 1 NOTE Father of the bride in his daughter [[coekelberghs]]'s marriage act — Sint-Stevens-Woluwe
 2 CONT nr. 6, 24 April 1873. A *landbouwer* of Bertem, present at the wedding and consenting to
@@ -5478,7 +5522,7 @@
 2 CONT off the transcriptions.
 1 SOUR @S20@
 2 QUAY 2
-0 @I234@ INDI
+0 @I235@ INDI
 1 REFN jb_haesaerts
 2 TYPE project-id
 1 NAME Joannes Baptista /Haesaerts/
@@ -5508,7 +5552,7 @@
 2 CONT unindexed and bound in blocks by record type.
 1 SOUR @S65@
 2 QUAY 2
-0 @I235@ INDI
+0 @I236@ INDI
 1 REFN jb_vandenbemden
 2 TYPE project-id
 1 NAME Jan Baptist /Van den Bemden/
@@ -5556,7 +5600,80 @@
 2 CONT to test the "brother" reading directly.
 1 SOUR @S64@
 2 QUAY 2
-0 @I236@ INDI
+0 @I237@ INDI
+1 REFN jbaptista_peremans
+2 TYPE project-id
+1 NAME Joannes Baptista /Peremans/
+2 GIVN Joannes Baptista
+2 SURN Peremans
+1 SEX M
+1 BIRT
+2 DATE ABT 1820
+1 OCCU arbeider (labourer)
+1 FAMS @F168@
+1 FAMC @F111@
+1 NOTE A fifth sibling for [[peremans]]. He married **Joanna Catharina Van Gindertaelen** at
+2 CONT **Zaventem on 21 August 1848** (S34), banns published on 6 and 13 August. He was **28**,
+2 CONT an *arbeider*, and the act states he could not write and had already completed his
+2 CONT militia obligations; she was **23**, an *arbeidster*, also unable to write. Twenty-eight
+2 CONT in August 1848 gives the *about 1820* birth year here — an age converted to a year and
+2 CONT marked approximate, not a date the act itself gives.
+2 CONT
+2 CONT **Two independent identifiers anchor the parent link**, not one. First: the act names his
+2 CONT mother as *Joanna Theresia Peremans* — read [[joanna_verelst]] — already dead, at
+2 CONT **Zaventem, 19 December 1843**, an exact day-level match to the death date this tree
+2 CONT already holds for her, drawn from a *separately transcribed* Demogen batch (S19, his
+2 CONT sister's 1846 marriage act, a different register entirely). Second: his father is named
+2 CONT as *Egidius Peremans*, matching [[egidius_peremans]] by name and commune. A day-level
+2 CONT death date repeated identically across two independent transcriptions of two different
+2 CONT registers is not the kind of thing two unrelated Egidius Peremans × Joanna Theresia
+2 CONT Verelst couples would coincidentally share.
+2 CONT
+2 CONT **This clears a higher bar than the three siblings already in the tree.**
+2 CONT [[cornelius_peremans]], [[jathanasius_peremans]] and [[mjosephina_peremans]] were each
+2 CONT grafted on the parent-name pair alone, with the commune supplied only by the title of the
+2 CONT volume the indexed page sat in, and with no exact date anywhere in the record. This act
+2 CONT gives an exact day-level date on one of the two parents, independently corroborating a
+2 CONT fact already held rather than merely repeating an unanchored name.
+2 CONT
+2 CONT Her parents are named directly in the act, with their roles labelled, so there is no
+2 CONT identity question to resolve: **Joannes Franciscus Van Gindertaelen** (present and
+2 CONT consenting) × **Anna Catharina Huenaerts** (present and consenting), both *arbeider(ster)*
+2 CONT of Zaventem — see [[vangindertaelen_jf]] and [[huenaerts_ac]].
+2 CONT
+2 CONT **Four witnesses stood at the wedding.** Two are already-held siblings and add little:
+2 CONT [[cornelius_peremans]], 33 (implying a birth around 1814–1815, recorded on his own record
+2 CONT as a witness-line lead, not a date), and [[jathanasius_peremans]], 26 (consistent with
+2 CONT his already-held ~1822, adding no precision). A third, **Petrus Van Der Varen**, 35, is a
+2 CONT plausible but unconfirmed match for [[mjosephina_peremans]]'s husband
+2 CONT [[vandervarent_p]] — the surname is spelled differently here, the act states no relation,
+2 CONT and the reasoning is recorded on his own record as a frontier, not a link. The fourth,
+2 CONT **Franciscus Engels**, 38, *veldwachter* (rural constable), is not a family lead at all: he
+2 CONT is a recurring professional witness, not kin — see the note on that below.
+2 CONT
+2 CONT **A conflict, not smoothed over.** This act gives Egidius Peremans's own death as
+2 CONT **1836-03-06** — one year off the **1837-03-06** already held from S19. Both dates and
+2 CONT the reasoning for leaving the question open are recorded on [[egidius_peremans]] itself,
+2 CONT not resolved here.
+2 CONT
+2 CONT **A recurring non-candidate.** *Franciscus Engels, veldwachter*, also witnesses
+2 CONT [[peremans]]'s own 1846 marriage act at Zaventem, aged 35 there and 38 here — the two ages
+2 CONT intersect cleanly at a birth in Feb–Aug 1810, consistent with one man holding a single
+2 CONT per-commune post across both weddings. No person file is warranted for a recurring
+2 CONT professional witness.
+2 CONT
+2 CONT FRONTIER — his own birth act at Zaventem around 1820, and any children of this marriage.
+2 CONT No search has been made for a rival Egidius Peremans × Joanna Theresia Verelst couple
+2 CONT elsewhere in Vlaams-Brabant: the identical day-level death date made it seem unnecessary,
+2 CONT but that is a judgement, not a search, and it is recorded here as unchecked rather than
+2 CONT as checked.
+2 CONT
+2 CONT `sup`: an index-level AGATHA/Demogen act analysis, no register image read. A FamilySearch
+2 CONT scan exists (`ark:/61903/3:1:S3HY-6423-8F1?i=24`) but is behind a login wall — confirmed
+2 CONT `blocked` this pass, a one-request retry, not yet a scoped miss.
+1 SOUR @S91@
+2 QUAY 2
+0 @I238@ INDI
 1 REFN jbbossin
 2 TYPE project-id
 1 NAME Joannes Baptista /Bossin/
@@ -5571,7 +5688,7 @@
 2 PLAC Sint-Stevens-Woluwe
 1 OCCU herbergier (innkeeper)
 1 FAMS @F147@
-1 FAMC @F167@
+1 FAMC @F169@
 1 NOTE Father of the groom in his son [[ludovicus_bossin79]]'s marriage act — Kraainem nr. 3, 10
 2 CONT April 1900 (S28), which gives his death as **Sint-Stevens-Woluwe, 19 March 1887**. His son was
 2 CONT seven.
@@ -5626,9 +5743,9 @@
 2 CONT Maria*/*Maria Anna Dewolf* — one woman, several clerks; see [[maria_wolf]].
 2 CONT
 2 CONT FRONTIER: [[judocus_bossin]]'s own marriage and death, neither yet searched for.
-1 SOUR @S95@
+1 SOUR @S96@
 2 QUAY 2
-0 @I237@ INDI
+0 @I239@ INDI
 1 REFN jbcoppens
 2 TYPE project-id
 1 NAME Jan Baptist /Coppens/
@@ -5651,7 +5768,7 @@
 2 CONT `sup`: an act analysis, not the register image.
 1 SOUR @S42@
 2 QUAY 2
-0 @I238@ INDI
+0 @I240@ INDI
 1 REFN jbgeorgius
 2 TYPE project-id
 1 NAME Joannes Baptista Georgius /Thumas/
@@ -5665,7 +5782,7 @@
 2 DATE 23 MAR 1944
 2 PLAC Brussel
 1 OCCU fabriekwerker & gemeenteschepen (factory worker & alderman)
-1 FAMS @F168@
+1 FAMS @F170@
 1 FAMC @F76@
 1 NOTE Son of Georges Carolus Josephus and Antoina Bossin. A factory worker who also served as a schepen (municipal alderman) in Kraainem. Married Joanna Vandenbemden in Kraainem on 3 Feb 1902.
 2 CONT
@@ -5680,9 +5797,9 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
-1 SOUR @S96@
+1 SOUR @S97@
 2 QUAY 2
-0 @I239@ INDI
+0 @I241@ INDI
 1 REFN jbzenon_t
 2 TYPE project-id
 1 NAME Jean Baptiste Zénon /Thumas/
@@ -5712,9 +5829,9 @@
 2 CONT forename and both parents. The same row gives her origin commune as Woluwe-Saint-Pierre,
 2 CONT which conflicts with the Woluwe-Saint-Lambert on [[joostens]]'s own death act; the
 2 CONT disagreement is recorded there, not resolved here.
-1 SOUR @S97@
+1 SOUR @S98@
 2 QUAY 2
-0 @I240@ INDI
+0 @I242@ INDI
 1 REFN jcseraphina_t
 2 TYPE project-id
 1 NAME Joanna Catharina Seraphina /Thumas/
@@ -5740,7 +5857,7 @@
 2 CONT been pulled.
 1 SOUR @S42@
 2 QUAY 2
-0 @I241@ INDI
+0 @I243@ INDI
 1 REFN jean_t
 2 TYPE project-id
 1 NAME Jean /Thumas/
@@ -5754,11 +5871,11 @@
 2 DATE 22 MAR 1995
 2 PLAC Kraainem
 1 FAMS @F114@
-1 FAMC @F168@
+1 FAMC @F170@
 1 NOTE DOCUMENTED (b. 23 Oct 1907, d. 22 Mar 1995, both in Kraainem; Geneanet, marcelcroon). He lived his whole life in Kraainem and is the strongly-supported grandfather of Thiery. The ONE remaining sealed link is Jean → François (Thiery’s father), whose 20th-century birth is behind the 100-year civil-registration privacy wall.
 1 SOUR @S45@
 2 QUAY 2
-0 @I242@ INDI
+0 @I244@ INDI
 1 REFN jeanlambert_t
 2 TYPE project-id
 1 NAME Jean Lambert /Thumas/
@@ -5790,9 +5907,9 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
-1 SOUR @S98@
+1 SOUR @S99@
 2 QUAY 2
-0 @I243@ INDI
+0 @I245@ INDI
 1 REFN jeanne_deconninck
 2 TYPE project-id
 1 NAME Jeanne Marie /Deconninck/
@@ -5823,7 +5940,7 @@
 2 CONT its image was actually read. None was. The register images are the named next step.
 1 SOUR @S85@
 2 QUAY 2
-0 @I244@ INDI
+0 @I246@ INDI
 1 REFN jerome_dk
 2 TYPE project-id
 1 NAME Jerome Joseph /Dekeyser/
@@ -5847,9 +5964,9 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
-1 SOUR @S99@
+1 SOUR @S100@
 2 QUAY 2
-0 @I245@ INDI
+0 @I247@ INDI
 1 REFN jerome_vincke
 2 TYPE project-id
 1 NAME Jerome Maurice /Vincke/
@@ -5882,7 +5999,7 @@
 2 CONT recorded here, not 14.
 1 SOUR @S39@
 2 QUAY 2
-0 @I246@ INDI
+0 @I248@ INDI
 1 REFN joanna_b1761
 2 TYPE project-id
 1 NAME Joanna /Bundervoet/
@@ -5904,7 +6021,7 @@
 2 CONT or Assenede would give the day and the parents in the register's own words.
 1 SOUR @S43@
 2 QUAY 2
-0 @I247@ INDI
+0 @I249@ INDI
 1 REFN joanna_daneel
 2 TYPE project-id
 1 NAME Joanna Theresia /Daneel/
@@ -5923,18 +6040,18 @@
 1 NOTE A maidservant; daughter of Philippus Daneel & Anna Theresia Senesael; first wife of Pierre Ramon.
 1 SOUR @S22@
 2 QUAY 2
-0 @I248@ INDI
+0 @I250@ INDI
 1 REFN joanna_defoort
 2 TYPE project-id
 1 NAME Joanna /De Foort/
 2 GIVN Joanna
 2 SURN De Foort
 1 SEX F
-1 FAMS @F169@
+1 FAMS @F171@
 1 NOTE FRONTIER above — mother of Josephus Van Sieleghem (1638).
 1 SOUR @S4@
 2 QUAY 2
-0 @I249@ INDI
+0 @I251@ INDI
 1 REFN joanna_derudder
 2 TYPE project-id
 1 NAME Joanna Theresia /Derudder/
@@ -5963,7 +6080,7 @@
 2 CONT record, no rival-community check has yet been run against it either. Left unlinked.
 1 SOUR @S18@
 2 QUAY 2
-0 @I250@ INDI
+0 @I252@ INDI
 1 REFN joanna_keirsebilck
 2 TYPE project-id
 1 NAME Joanna /Keirsebilck/
@@ -5981,7 +6098,7 @@
 1 NOTE Grandmother of Juliana Stroobandt. Outlived her husband by 45 years. Parents Petrus Josephus Keirsebilck × Anna Francisca De Grande.
 1 SOUR @S19@
 2 QUAY 2
-0 @I251@ INDI
+0 @I253@ INDI
 1 REFN joanna_leenaert
 2 TYPE project-id
 1 NAME Joanna /Leenaert/
@@ -5996,20 +6113,20 @@
 1 NOTE FRONTIER above — grandmother of Francisca Van Maele.
 1 SOUR @S4@
 2 QUAY 2
-0 @I252@ INDI
+0 @I254@ INDI
 1 REFN joanna_loontjens
 2 TYPE project-id
 1 NAME Joanna /Loontjens/
 2 GIVN Joanna
 2 SURN Loontjens
 1 SEX F
-1 FAMS @F170@
+1 FAMS @F172@
 1 NOTE Second wife of [[judocus_devriese]]. Our line runs through his first,
 2 CONT [[esther_vanderbeken]], who was the mother of [[hubert_devriese]] — so no descent
 2 CONT here passes through Joanna. No dates, parents or children are recorded for her.
 1 SOUR @S19@
 2 QUAY 2
-0 @I253@ INDI
+0 @I255@ INDI
 1 REFN joanna_pardon56
 2 TYPE project-id
 1 NAME Joanna Coleta /Pardon/
@@ -6032,7 +6149,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I254@ INDI
+0 @I256@ INDI
 1 REFN joanna_rotsaert_sabbe
 2 TYPE project-id
 1 NAME Joanna /Rotsaert/
@@ -6043,11 +6160,11 @@
 2 DATE ABT 1630
 1 DEAT
 2 DATE 1697
-1 FAMS @F171@
+1 FAMS @F173@
 1 NOTE FRONTIER above — mother of Judocus Sabbe (~1667).
 1 SOUR @S4@
 2 QUAY 2
-0 @I255@ INDI
+0 @I257@ INDI
 1 REFN joanna_truant
 2 TYPE project-id
 1 NAME Joanna /Truant/
@@ -6057,11 +6174,11 @@
 1 DEAT
 2 DATE 8 APR 1773
 2 PLAC Zande
-1 FAMS @F172@
+1 FAMS @F174@
 1 NOTE From Koekelare; mother of Mattheus Ramon (surname also recorded as 'Terwan').
 1 SOUR @S22@
 2 QUAY 2
-0 @I256@ INDI
+0 @I258@ INDI
 1 REFN joanna_va
 2 TYPE project-id
 1 NAME Joanna Coleta /Van Acker/
@@ -6074,11 +6191,11 @@
 1 DEAT
 2 DATE 12 JUL 1821
 2 PLAC Lokeren
-1 FAMS @F166@
+1 FAMS @F167@
 1 NOTE From Lokeren; her marriage (1795) brought the line into the Lokeren/Waasland area. Confirmed mother of Joannes Franciscus (1809). Her own parents are not in the stefpaelinck tree — a frontier.
 1 SOUR @S5@
 2 QUAY 2
-0 @I257@ INDI
+0 @I259@ INDI
 1 REFN joanna_vanhecke
 2 TYPE project-id
 1 NAME Joanna (Janneken) /van Hecke/
@@ -6089,8 +6206,8 @@
 2 DATE ABT 1610
 1 DEAT
 2 DATE 1678
-1 FAMS @F173@
-1 FAMC @F199@
+1 FAMS @F175@
+1 FAMC @F201@
 1 NOTE Wife of Segerius Bundervoet and mother of Joannes Bundervoet (~1637).
 2 CONT
 2 CONT CORRECTED (July 2026): this record said "her own parents not recorded here". The
@@ -6098,7 +6215,7 @@
 2 CONT appears there only as "?", so that side stays open.
 1 SOUR @S46@
 2 QUAY 2
-0 @I258@ INDI
+0 @I260@ INDI
 1 REFN joanna_vdoughstraete
 2 TYPE project-id
 1 NAME Joanna /Van Der Oughstraete/
@@ -6113,7 +6230,7 @@
 1 NOTE FRONTIER — wife of Hubert De Vriese; her own parents not yet recovered.
 1 SOUR @S19@
 2 QUAY 2
-0 @I259@ INDI
+0 @I261@ INDI
 1 REFN joanna_verbrugghe
 2 TYPE project-id
 1 NAME Joanna (Janneken) /Verbrugghe/
@@ -6124,8 +6241,8 @@
 2 DATE ABT 1655
 1 DEAT
 2 DATE 1704
-1 FAMS @F174@
-1 FAMC @F200@
+1 FAMS @F176@
+1 FAMC @F202@
 1 NOTE Mother of Joannes Bundervoet (~1682).
 2 CONT
 2 CONT CORRECTED (July 2026): this record said "her own parents not recorded here". They are —
@@ -6139,7 +6256,7 @@
 2 CONT profile rather than searching the name.
 1 SOUR @S46@
 2 QUAY 2
-0 @I260@ INDI
+0 @I262@ INDI
 1 REFN joanna_verelst
 2 TYPE project-id
 1 NAME Joanna Theresia /Ver Elst/
@@ -6170,9 +6287,16 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
+2 CONT
+2 CONT CORROBORATED (2026-07-27): a fifth child, [[jbaptista_peremans]], names her again as his
+2 CONT mother in his own 1848 Zaventem marriage act (S34) — dead, at Zaventem, on **19 December
+2 CONT 1843**, an exact day-level match to the date held here since S19. The two transcriptions
+2 CONT are of two different registers, drawn 2.5 years apart, so an identical day-level date
+2 CONT repeated across both is strong corroboration rather than coincidence. This is also what
+2 CONT anchors [[jbaptista_peremans]] as her son: see his own record for the reasoning.
 1 SOUR @S62@
 2 QUAY 2
-0 @I261@ INDI
+0 @I263@ INDI
 1 REFN joanna_wallays
 2 TYPE project-id
 1 NAME Joanna /Wallays/
@@ -6187,7 +6311,7 @@
 1 NOTE FRONTIER above — grandmother of Michael De Grande.
 1 SOUR @S4@
 2 QUAY 2
-0 @I262@ INDI
+0 @I264@ INDI
 1 REFN joanna_willaert
 2 TYPE project-id
 1 NAME Joanna /Willaert/
@@ -6205,7 +6329,7 @@
 1 NOTE Third wife of Hercules Stroobandt, mother of Guillielmus (1659). Later remarried Franciscus De Lycke. Parents Nicolas Willaert x Catharina Van Massenhove.
 1 SOUR @S4@
 2 QUAY 2
-0 @I263@ INDI
+0 @I265@ INDI
 1 REFN joanna_wittenheyns
 2 TYPE project-id
 1 NAME Joanna /Wittenheyns/
@@ -6214,12 +6338,12 @@
 1 SEX F
 1 BIRT
 2 DATE ABT 1530
-1 FAMS @F176@
-1 FAMC @F175@
+1 FAMS @F178@
+1 FAMC @F177@
 1 NOTE Her marriage to Simon Vandewalle is named in a 1573 Oostkamp act ('Janneken Wittenheyns fa Matheus x Simon Vande Walle').
 1 SOUR @S4@
 2 QUAY 2
-0 @I264@ INDI
+0 @I266@ INDI
 1 REFN joannes_b
 2 TYPE project-id
 1 NAME Joannes /Bundervoet/
@@ -6233,14 +6357,14 @@
 2 DATE 7 NOV 1760
 2 PLAC Evergem
 1 FAMS @F96@
-1 FAMS @F177@
-1 FAMC @F174@
+1 FAMS @F179@
+1 FAMC @F176@
 1 NOTE Source detail: Geneanet trees paulderidder (Sosa 644), glorieuxp, dvandurme1, mjovdl (8+ Evergem trees agree)
 2 CONT
 2 CONT Married twice — Livina Stockman (mother of Christoffel 1709 and of Pieter, who now has his own record as [[petrus_b1727]]), then Livina De Wilde ~1745. That remarriage is what identifies him as the documented Joannes b.1682 and bridges our line into the deep Evergem Bundervoet trunk. Parents Joannes Bundervoet (1637-1707) x Joanna Verbrugghe.
-1 SOUR @S100@
+1 SOUR @S101@
 2 QUAY 2
-0 @I265@ INDI
+0 @I267@ INDI
 1 REFN joannes_b1637
 2 TYPE project-id
 1 NAME Joannes /Bundervoet/
@@ -6252,12 +6376,12 @@
 1 DEAT
 2 DATE 1 DEC 1707
 2 PLAC Evergem
-1 FAMS @F174@
-1 FAMC @F173@
+1 FAMS @F176@
+1 FAMC @F175@
 1 NOTE Father of Joannes Bundervoet (1682). Parents Segerius Bundervoet x Joanna van Hecke.
-1 SOUR @S101@
+1 SOUR @S102@
 2 QUAY 2
-0 @I266@ INDI
+0 @I268@ INDI
 1 REFN joannes_bapt_b1757
 2 TYPE project-id
 1 NAME Joannis Baptista /Bundervoet/
@@ -6277,7 +6401,7 @@
 2 CONT or Assenede would give the day and the parents in the register's own words.
 1 SOUR @S43@
 2 QUAY 2
-0 @I267@ INDI
+0 @I269@ INDI
 1 REFN joannes_bossin51
 2 TYPE project-id
 1 NAME Joannes Baptista /Bossin/
@@ -6322,7 +6446,7 @@
 2 CONT `sup`: an act analysis, not the register image.
 1 SOUR @S78@
 2 QUAY 2
-0 @I268@ INDI
+0 @I270@ INDI
 1 REFN joannes_coekelberg58
 2 TYPE project-id
 1 NAME Joannes Josephus /Coekelberghs/
@@ -6332,7 +6456,7 @@
 1 BIRT
 2 DATE 15 JAN 1858
 2 PLAC Bertem
-1 FAMC @F201@
+1 FAMC @F203@
 1 NOTE Named as the child in a civil birth act at **Bertem, 1858-01-15**, which names his father
 2 CONT as *Joannes Baptista Coekelberghs* — [[jb_coekelberghs]], who declared the birth in person,
 2 CONT aged 48, born at Bertem — and so places this person in the tree by the act rather than by a
@@ -6361,7 +6485,7 @@
 2 CONT has a father and no mother, and that is the honest shape of what is known.
 1 SOUR @S1@
 2 QUAY 2
-0 @I269@ INDI
+0 @I271@ INDI
 1 REFN joannes_declerck
 2 TYPE project-id
 1 NAME Joannes /De Clerck/
@@ -6372,11 +6496,11 @@
 2 DATE 1696
 1 DEAT
 2 DATE 1727
-1 FAMS @F178@
+1 FAMS @F180@
 1 NOTE FRONTIER above — father of Maria Catharina De Clerck (1727).
 1 SOUR @S4@
 2 QUAY 2
-0 @I270@ INDI
+0 @I272@ INDI
 1 REFN joannes_janssen
 2 TYPE project-id
 1 NAME Joannes /Janssen/
@@ -6409,7 +6533,7 @@
 2 CONT unlinked.
 1 SOUR @S18@
 2 QUAY 2
-0 @I271@ INDI
+0 @I273@ INDI
 1 REFN joannes_jos_vi
 2 TYPE project-id
 1 NAME Joannes Josephus /Van Iseghem/
@@ -6423,11 +6547,11 @@
 2 DATE 6 NOV 1861
 2 PLAC Oostende
 1 FAMS @F44@
-1 FAMC @F179@
+1 FAMC @F181@
 1 NOTE Died young at 42, a year after his wife Anna Maria Gautiert — their son Joannes (1852) was orphaned in childhood.
 1 SOUR @S9@
 2 QUAY 2
-0 @I272@ INDI
+0 @I274@ INDI
 1 REFN joannes_keirsebilck_1697
 2 TYPE project-id
 1 NAME Joannes /Keirsebilck/
@@ -6442,7 +6566,7 @@
 1 NOTE FRONTIER above — grandfather of Petrus Josephus Keirsebilck.
 1 SOUR @S4@
 2 QUAY 2
-0 @I273@ INDI
+0 @I275@ INDI
 1 REFN joannes_keirsebilck_1728
 2 TYPE project-id
 1 NAME Joannes /Keirsebilck/
@@ -6454,12 +6578,12 @@
 1 DEAT
 2 DATE 1781
 2 PLAC Oostkamp
-1 FAMS @F180@
+1 FAMS @F182@
 1 FAMC @F4@
 1 NOTE Father of Petrus Josephus Keirsebilck (1764). Married twice (2nd: Maria Francisca Slabbinck).
 1 SOUR @S4@
 2 QUAY 2
-0 @I274@ INDI
+0 @I276@ INDI
 1 REFN joannes_perquy
 2 TYPE project-id
 1 NAME Joannes /Perquy/
@@ -6470,7 +6594,7 @@
 1 NOTE FRONTIER — grandparents of Henricus Josephus Bostyn on the Perquy side. Dates not yet recovered; their acts (early 1800s, Varsenare/Sint-Andries area) would extend this line.
 1 SOUR @S88@
 2 QUAY 2
-0 @I275@ INDI
+0 @I277@ INDI
 1 REFN joannes_stockman
 2 TYPE project-id
 1 NAME Joannes /Stockman/
@@ -6493,7 +6617,7 @@
 2 CONT around 1670.
 1 SOUR @S43@
 2 QUAY 2
-0 @I276@ INDI
+0 @I278@ INDI
 1 REFN joannes_vanmaele
 2 TYPE project-id
 1 NAME Joannes /Van Maele/
@@ -6510,18 +6634,18 @@
 2 CONT Grandfather of Francisca Van Maele (1710). Parents Andreas Van Maele (d.1669) x Catharina Willems (1619-1666).
 1 SOUR @S4@
 2 QUAY 2
-0 @I277@ INDI
+0 @I279@ INDI
 1 REFN joannes_vansieleghem
 2 TYPE project-id
 1 NAME Joannes /Van Sieleghem/
 2 GIVN Joannes
 2 SURN Van Sieleghem
 1 SEX M
-1 FAMS @F169@
+1 FAMS @F171@
 1 NOTE FRONTIER above — father of Josephus Van Sieleghem (1638 Lichtervelde). Dates not recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I278@ INDI
+0 @I280@ INDI
 1 REFN joannes_vi
 2 TYPE project-id
 1 NAME Joannes /Van Iseghem/
@@ -6570,9 +6694,9 @@
 2 CONT not grafted** — it needs the marriage act's own legitimation field read (see
 2 CONT [[flavie_vi]]'s record for the exact query handle). Recorded here as the same open
 2 CONT question, not resolved by it.
-1 SOUR @S102@
+1 SOUR @S103@
 2 QUAY 2
-0 @I279@ INDI
+0 @I281@ INDI
 1 REFN joannes_vi2
 2 TYPE project-id
 1 NAME Joannes /Van Iseghem/
@@ -6590,7 +6714,7 @@
 1 NOTE Lived to 81; born in the city of Oostende but died in neighbouring rural Stene, where the family had settled.
 1 SOUR @S9@
 2 QUAY 2
-0 @I280@ INDI
+0 @I282@ INDI
 1 REFN joannes_vs
 2 TYPE project-id
 1 NAME Joannes /Vanstechele/
@@ -6603,7 +6727,7 @@
 1 NOTE Earliest documented Vanstechele(man) ancestor; father of Andreas (b. 1667 Woumen).
 1 SOUR @S16@
 2 QUAY 2
-0 @I281@ INDI
+0 @I283@ INDI
 1 REFN joannesf_p
 2 TYPE project-id
 1 NAME Joannes Franciscus /Paelinck/
@@ -6615,11 +6739,11 @@
 2 PLAC Lokeren
 1 OCCU arbeider (labourer)
 1 FAMS @F123@
-1 FAMC @F166@
+1 FAMC @F167@
 1 NOTE A labourer, born in Lokeren; son of Jan Baptist Paelinck & Joanna Coleta Van Acker. Father of Eduardus (1858).
 1 SOUR @S5@
 2 QUAY 2
-0 @I282@ INDI
+0 @I284@ INDI
 1 REFN joannesf_s
 2 TYPE project-id
 1 NAME Joannes Franciscus /Smessaert/
@@ -6638,7 +6762,7 @@
 1 NOTE A labourer; son of Franciscus Leopoldus Smessaert & Anna Francisca Morree; 13+ children, many dying in infancy.
 1 SOUR @S22@
 2 QUAY 2
-0 @I283@ INDI
+0 @I285@ INDI
 1 REFN joannis_b1751
 2 TYPE project-id
 1 NAME Joannis /Bundervoet/
@@ -6658,7 +6782,7 @@
 2 CONT or Assenede would give the day and the parents in the register's own words.
 1 SOUR @S43@
 2 QUAY 2
-0 @I284@ INDI
+0 @I286@ INDI
 1 REFN joostens
 2 TYPE project-id
 1 NAME Marie Catharina /Joostens/
@@ -6702,9 +6826,9 @@
 2 CONT two distinct, adjacent communes, not a spelling variant of one place, and one
 2 CONT unauthenticated 2006 volunteer index row does not outweigh her own act. Nothing changed;
 2 CONT recorded so a later pass does not silently pick one without knowing there was a choice.
-1 SOUR @S103@
+1 SOUR @S104@
 2 QUAY 2
-0 @I285@ INDI
+0 @I287@ INDI
 1 REFN joris_coppens94
 2 TYPE project-id
 1 NAME Joris Karel Joseph /Coppens/
@@ -6727,7 +6851,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I286@ INDI
+0 @I288@ INDI
 1 REFN joris_coppens99
 2 TYPE project-id
 1 NAME Joris /Coppens/
@@ -6750,7 +6874,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I287@ INDI
+0 @I289@ INDI
 1 REFN joseph_coppens95
 2 TYPE project-id
 1 NAME Joseph /Coppens/
@@ -6773,21 +6897,21 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I288@ INDI
+0 @I290@ INDI
 1 REFN josephus_blomme
 2 TYPE project-id
 1 NAME Josephus /Blomme/
 2 GIVN Josephus
 2 SURN Blomme
 1 SEX M
-1 FAMS @F181@
+1 FAMS @F183@
 1 NOTE Father of [[petrus_blomme]]. Named in his son's Stene marriage act of 1 March 1924 —
 2 CONT register image read directly — as *zonder beroep* (no occupation), living at Oostende,
 2 CONT present in person and consenting to the marriage. The act gives no birth or death date
 2 CONT for him.
-1 SOUR @S104@
+1 SOUR @S105@
 2 QUAY 3
-0 @I289@ INDI
+0 @I291@ INDI
 1 REFN josephus_caeckaert
 2 TYPE project-id
 1 NAME Josephus /Caeckaert/
@@ -6798,7 +6922,7 @@
 1 NOTE FRONTIER above — father of Rosalia Caeckaert (1815, Brugge/Assebroek). Dates not yet recovered.
 1 SOUR @S4@
 2 QUAY 2
-0 @I290@ INDI
+0 @I292@ INDI
 1 REFN josephus_janssen
 2 TYPE project-id
 1 NAME Josephus Joannes /Janssen/
@@ -6849,7 +6973,7 @@
 2 CONT material was never reached).
 1 SOUR @S28@
 2 QUAY 2
-0 @I291@ INDI
+0 @I293@ INDI
 1 REFN josephus_vansieleghem
 2 TYPE project-id
 1 NAME Josephus /Van Sieleghem/
@@ -6862,11 +6986,11 @@
 1 DEAT
 2 DATE 14 MAY 1692
 1 FAMS @F101@
-1 FAMC @F169@
+1 FAMC @F171@
 1 NOTE Father of Clara Van Sieleghem (1666). Parents Joannes Van Sieleghem x Joanna De Foort.
 1 SOUR @S4@
 2 QUAY 2
-0 @I292@ INDI
+0 @I294@ INDI
 1 REFN jphilippus_bossin57
 2 TYPE project-id
 1 NAME Joannes Philippus /Bossin/
@@ -6906,7 +7030,7 @@
 2 CONT `sup`: an act analysis, not the register image.
 1 SOUR @S78@
 2 QUAY 2
-0 @I293@ INDI
+0 @I295@ INDI
 1 REFN judith_cappaert
 2 TYPE project-id
 1 NAME Judith Marie /Cappaert/
@@ -6921,7 +7045,7 @@
 1 FAMC @F80@
 1 SOUR @S40@
 2 QUAY 2
-0 @I294@ INDI
+0 @I296@ INDI
 1 REFN judoca_maertens
 2 TYPE project-id
 1 NAME Judoca /Maertens/
@@ -6937,7 +7061,7 @@
 1 NOTE Mother of Francisca Van Maele (1710).
 1 SOUR @S4@
 2 QUAY 2
-0 @I295@ INDI
+0 @I297@ INDI
 1 REFN judoca_scherrens
 2 TYPE project-id
 1 NAME Judoca /Scherrens/
@@ -6948,11 +7072,11 @@
 2 DATE 1617
 1 DEAT
 2 DATE 1683
-1 FAMS @F182@
+1 FAMS @F184@
 1 NOTE FRONTIER — wife of Michaël De Vriese (b. ~1615). Among the deepest roots in the tree; her parents not yet recovered.
 1 SOUR @S19@
 2 QUAY 2
-0 @I296@ INDI
+0 @I298@ INDI
 1 REFN judoca_tjonck
 2 TYPE project-id
 1 NAME Judoca /'t Jonck/
@@ -6967,7 +7091,7 @@
 1 NOTE DEEPEST-TIER ANCESTOR — born ~1510. Mother of Barbara Wittenheyns. No parents recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I297@ INDI
+0 @I299@ INDI
 1 REFN judoca_vandekeere
 2 TYPE project-id
 1 NAME Judoca /Vande Keere/
@@ -6978,11 +7102,11 @@
 2 DATE 1698
 1 DEAT
 2 DATE 1771
-1 FAMS @F178@
+1 FAMS @F180@
 1 NOTE FRONTIER above — mother of Maria Catharina De Clerck (1727).
 1 SOUR @S4@
 2 QUAY 2
-0 @I298@ INDI
+0 @I300@ INDI
 1 REFN judoca_vandenberghe
 2 TYPE project-id
 1 NAME Judoca /Vandenberghe/
@@ -6994,12 +7118,12 @@
 1 DEAT
 2 DATE 2 SEP 1664
 2 PLAC Brugge (Lissewege)
-1 FAMS @F183@
-1 FAMC @F202@
+1 FAMS @F185@
+1 FAMC @F204@
 1 NOTE Mother of Simon Sabbe (1627). From Ruddervoorde. Her father Carolus Vandenberghe; her mother's identity is uncertain in the records.
 1 SOUR @S4@
 2 QUAY 2
-0 @I299@ INDI
+0 @I301@ INDI
 1 REFN judoca_vanhecke
 2 TYPE project-id
 1 NAME Judoca /Van Hecke/
@@ -7012,7 +7136,7 @@
 1 NOTE FRONTIER — wife of Oliverius Stroobandt, mother of Hercules (1625).
 1 SOUR @S4@
 2 QUAY 2
-0 @I300@ INDI
+0 @I302@ INDI
 1 REFN judocus
 2 TYPE project-id
 1 NAME Judocus /Bundervoet/
@@ -7029,14 +7153,14 @@
 1 NOTE Married twice — first to Livina Segers (1831), then to Francisca Roegiers (1834), who was Bernardus's mother.
 1 SOUR @S35@
 2 QUAY 2
-0 @I301@ INDI
+0 @I303@ INDI
 1 REFN judocus_bossin
 2 TYPE project-id
 1 NAME Judocus /Bossin/
 2 GIVN Judocus
 2 SURN Bossin
 1 SEX M
-1 FAMS @F167@
+1 FAMS @F169@
 1 NOTE Named as father of the groom in his son [[jbbossin]]'s marriage act — Sint-Stevens-Woluwe
 2 CONT nr. 4, 17 June 1858 (S33). The act gives him no age, no residence and no trade, and no
 2 CONT remark of him being present — where his wife [[maria_desmedt]] is recorded as present and
@@ -7049,7 +7173,7 @@
 2 CONT FRONTIER: his own marriage to [[maria_desmedt]], and his death, neither yet searched for.
 1 SOUR @S78@
 2 QUAY 2
-0 @I302@ INDI
+0 @I304@ INDI
 1 REFN judocus_devriese
 2 TYPE project-id
 1 NAME Judocus /De Vriese/
@@ -7061,12 +7185,12 @@
 1 DEAT
 2 DATE 1684
 1 FAMS @F137@
-1 FAMS @F170@
-1 FAMC @F182@
+1 FAMS @F172@
+1 FAMC @F184@
 1 NOTE Father of Hubert De Vriese. Married twice — Esther Vanderbeken (Hubert's mother), then Joanna Loontjens.
 1 SOUR @S19@
 2 QUAY 2
-0 @I303@ INDI
+0 @I305@ INDI
 1 REFN judocus_sabbe
 2 TYPE project-id
 1 NAME Judocus /Sabbe/
@@ -7079,7 +7203,7 @@
 2 DATE 5 FEB 1737
 2 PLAC Oostkamp
 1 FAMS @F5@
-1 FAMC @F171@
+1 FAMC @F173@
 1 NOTE Father of Adriana Theresia Sabbe (1703). Married four times; farmer at Stuyvenberghe, Oostkamp. Parents Simon Sabbe (1627-1711) x Joanna Rotsaert.
 2 CONT
 2 CONT FRONTIER — three of the four marriages are unrecorded here. The one held is the **third**;
@@ -7088,7 +7212,7 @@
 2 CONT one entry of four, and any child found for him may belong to a wife this tree does not hold.
 1 SOUR @S4@
 2 QUAY 2
-0 @I304@ INDI
+0 @I306@ INDI
 1 REFN judocus_sabbe_1475
 2 TYPE project-id
 1 NAME Judocus (Joos) /Sabbe/
@@ -7099,13 +7223,13 @@
 2 DATE ABT 1475
 1 DEAT
 2 DATE 1534
-1 FAMS @F184@
-1 FAMS @F208@
-1 FAMC @F203@
+1 FAMS @F186@
+1 FAMS @F210@
+1 FAMC @F205@
 1 NOTE Born ~1475. Father of Petrus Sabbe (1504, Zwevegem). His own father is Gillis Sabbe (~1440), the deepest confirmed ancestor. Married an unnamed Vandenberghe.
 1 SOUR @S4@
 2 QUAY 2
-0 @I305@ INDI
+0 @I307@ INDI
 1 REFN judocus_vanrenterghem
 2 TYPE project-id
 1 NAME Judocus /Van Renterghem/
@@ -7125,7 +7249,7 @@
 2 CONT Great-grandfather of Maria Rups (1642). Churchwarden and poor-relief master (dischmeester) of Oostkamp, buried in the church, a Bruges citizen who bought the Lettenburgh farmstead (Moerbrugge). Rich property records 1612-1632. Parents Guillielmus Van Renterghem (~1530) x Barbara Wittenheyns (~1535).
 1 SOUR @S4@
 2 QUAY 2
-0 @I306@ INDI
+0 @I308@ INDI
 1 REFN judocus_vi
 2 TYPE project-id
 1 NAME Judocus Franciscus /Van Iseghem/
@@ -7138,7 +7262,7 @@
 1 DEAT
 2 DATE 19 APR 1832
 2 PLAC Oostende
-1 FAMS @F179@
+1 FAMS @F181@
 1 NOTE Married during the French Imperial period, when Oostende was annexed to France; died at 44.
 2 CONT
 2 CONT CHECKED AND REJECTED (July 2026). The corpus's best candidate for this record scores 33
@@ -7155,7 +7279,7 @@
 2 CONT and uncited.
 1 SOUR @S9@
 2 QUAY 2
-0 @I307@ INDI
+0 @I309@ INDI
 1 REFN juliana_stroobandt
 2 TYPE project-id
 1 NAME Juliana /Stroobandt/
@@ -7171,9 +7295,9 @@
 1 FAMS @F80@
 1 FAMC @F143@
 1 NOTE Married Carel Cappaert 1863 Oostkamp. Birth given as 13 Sep 1839 Beernem (kathrynann) or 12 Sep 1839 Oedelem (1960dirk) — adjacent villages. One of eleven Stroobandt children.
-1 SOUR @S105@
+1 SOUR @S106@
 2 QUAY 2
-0 @I308@ INDI
+0 @I310@ INDI
 1 REFN juliette
 2 TYPE project-id
 1 NAME Juliette /Vandenhoeck/
@@ -7182,10 +7306,10 @@
 1 SEX F
 1 BIRT
 2 DATE 4 JAN 1937
-1 FAMS @F185@
+1 FAMS @F187@
 1 SOUR @S45@
 2 QUAY 1
-0 @I309@ INDI
+0 @I311@ INDI
 1 REFN juliettegabrielle_vincke
 2 TYPE project-id
 1 NAME Juliette Gabrielle Camilla /Vincke/
@@ -7202,7 +7326,7 @@
 2 CONT pages. Index only, not the register image, hence `sup`.
 1 SOUR @S2@
 2 QUAY 2
-0 @I310@ INDI
+0 @I312@ INDI
 1 REFN julius_vandenbemd86
 2 TYPE project-id
 1 NAME Julius /Vandenbemden/
@@ -7225,7 +7349,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I311@ INDI
+0 @I313@ INDI
 1 REFN karel_bossin01
 2 TYPE project-id
 1 NAME Karel Joseph /Bossin/
@@ -7235,7 +7359,7 @@
 1 BIRT
 2 DATE 27 FEB 1901
 2 PLAC Sint-Stevens-Woluwe
-1 FAMC @F186@
+1 FAMC @F188@
 1 NOTE Named as the child in a civil birth act at **Sint-Stevens-Woluwe nr. 7, 27 Feb 1901**,
 2 CONT 08:00, born at home. **Sex is stated in the act** ("Man"), not read off the forename.
 2 CONT
@@ -7255,7 +7379,7 @@
 2 CONT `sup`: an act analysis, not the register image.
 1 SOUR @S78@
 2 QUAY 2
-0 @I312@ INDI
+0 @I314@ INDI
 1 REFN karel_vandenbemd78
 2 TYPE project-id
 1 NAME Karel Borromeus /Vandenbemden/
@@ -7278,7 +7402,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I313@ INDI
+0 @I315@ INDI
 1 REFN karel_vincke
 2 TYPE project-id
 1 NAME Karel Joseph /Vincke/
@@ -7295,17 +7419,17 @@
 2 CONT not the register image, hence `sup`.
 1 SOUR @S2@
 2 QUAY 2
-0 @I314@ INDI
+0 @I316@ INDI
 1 REFN karine
 2 TYPE project-id
 1 NAME Karine /Bundervoet/
 2 GIVN Karine
 2 SURN Bundervoet
 1 SEX F
-1 FAMC @F187@
+1 FAMC @F189@
 1 SOUR @S32@
 2 QUAY 1
-0 @I315@ INDI
+0 @I317@ INDI
 1 REFN karolus_vincke
 2 TYPE project-id
 1 NAME Karolus Louis /Vincke/
@@ -7333,7 +7457,7 @@
 2 CONT a new child after an infant of the same name had died.
 1 SOUR @S33@
 2 QUAY 2
-0 @I316@ INDI
+0 @I318@ INDI
 1 REFN laurentius_willems
 2 TYPE project-id
 1 NAME Laurentius /Willems/
@@ -7349,7 +7473,7 @@
 2 CONT FRONTIER above — father of Catharina Willems (1619), grandfather of Joannes Van Maele (1641). His own parents not recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I317@ INDI
+0 @I319@ INDI
 1 REFN leclercq_t
 2 TYPE project-id
 1 NAME Marie Jacqueline /Leclercq/
@@ -7377,9 +7501,9 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
-1 SOUR @S98@
+1 SOUR @S99@
 2 QUAY 2
-0 @I318@ INDI
+0 @I320@ INDI
 1 REFN leon
 2 TYPE project-id
 1 NAME Léon /Bundervoet/
@@ -7393,7 +7517,7 @@
 1 NOTE Born in Leuven, 9 August 2019 — the younger of the two youngest, and Renée's brother. He and Renée are what this tree was built for. The two of them were previously held in a single entry, "Renée & Léon Bundervoet"; split apart so each has their own dates.
 1 SOUR @S32@
 2 QUAY 1
-0 @I319@ INDI
+0 @I321@ INDI
 1 REFN leonie_p
 2 TYPE project-id
 1 NAME Léonie (Philomena Leonia) /Paelinck/
@@ -7432,7 +7556,7 @@
 2 CONT mother named in the body. Confidence raised to `doc` on that reading.
 1 SOUR @S59@
 2 QUAY 3
-0 @I320@ INDI
+0 @I322@ INDI
 1 REFN leontine_schreel
 2 TYPE project-id
 1 NAME Leontine /Schreel/
@@ -7457,14 +7581,14 @@
 2 CONT She is a step-relation, not blood: no line of descent here runs through her.
 1 SOUR @S34@
 2 QUAY 3
-0 @I321@ INDI
+0 @I323@ INDI
 1 REFN leontius_v
 2 TYPE project-id
 1 NAME Leontius Ivo /Vanstechelman/
 2 GIVN Leontius Ivo
 2 SURN Vanstechelman
 1 SEX M
-1 FAMS @F188@
+1 FAMS @F190@
 1 FAMC @F63@
 1 NOTE Brother of [[augusta]], named in his own Oostende marriage registration of 20 August 1922,
 2 CONT which gives his parents as Petrus Jacobus and Clementia Sophia Wagebaert and his bride as
@@ -7476,7 +7600,7 @@
 2 CONT and his wife's parents.
 1 SOUR @S8@
 2 QUAY 2
-0 @I322@ INDI
+0 @I324@ INDI
 1 REFN leopoldmaurice_vincke00
 2 TYPE project-id
 1 NAME Leopold Maurice /Vincke/
@@ -7502,7 +7626,7 @@
 2 CONT transcription artefact of one child counted twice.
 1 SOUR @S39@
 2 QUAY 2
-0 @I323@ INDI
+0 @I325@ INDI
 1 REFN leopoldmaurice_vincke95
 2 TYPE project-id
 1 NAME Leopold Maurice /Vincke/
@@ -7526,7 +7650,7 @@
 2 CONT duplicate; see his record.
 1 SOUR @S39@
 2 QUAY 2
-0 @I324@ INDI
+0 @I326@ INDI
 1 REFN leopoldus_pieren
 2 TYPE project-id
 1 NAME Leopoldus Franciscus /Pieren/
@@ -7548,7 +7672,7 @@
 2 CONT detail with no further trail this pass.
 1 SOUR @S18@
 2 QUAY 2
-0 @I325@ INDI
+0 @I327@ INDI
 1 REFN livina_dewilde
 2 TYPE project-id
 1 NAME Livina /De Wilde/
@@ -7558,7 +7682,7 @@
 1 DEAT
 2 DATE 1750
 2 PLAC Evergem
-1 FAMS @F177@
+1 FAMS @F179@
 1 NOTE Joannes Bundervoet's SECOND wife (married ~1745, died 1750) — NOT the mother of
 2 CONT Christoffel or Pieter; both were by his first wife, Livina Stockman. Several trees
 2 CONT confuse the two wives.
@@ -7572,7 +7696,7 @@
 2 CONT settle it.
 1 SOUR @S46@
 2 QUAY 2
-0 @I326@ INDI
+0 @I328@ INDI
 1 REFN livina_maria_b1760
 2 TYPE project-id
 1 NAME Livina Maria /Bundervoet/
@@ -7594,7 +7718,7 @@
 2 CONT or Assenede would give the day and the parents in the register's own words.
 1 SOUR @S43@
 2 QUAY 2
-0 @I327@ INDI
+0 @I329@ INDI
 1 REFN livina_pickaut
 2 TYPE project-id
 1 NAME Livina /Pickaut/
@@ -7611,7 +7735,7 @@
 1 NOTE Died in 1726, the same year as her husband Adrianus; mother of Livinus (1718).
 1 SOUR @S5@
 2 QUAY 2
-0 @I328@ INDI
+0 @I330@ INDI
 1 REFN livina_stockman
 2 TYPE project-id
 1 NAME Livina /Stockman/
@@ -7630,7 +7754,7 @@
 2 CONT Joannes Bundervoet's FIRST wife and mother of Christoffel (1709) and Pieter (1727). She died in 1744; Joannes then remarried Livina (Joanna) De Wilde ~1745 — the remarriage confirmed independently by the glorieuxp and paulderidder trees, and consistent with the chronology (Christoffel's 1709 birth predates the De Wilde marriage). Several other trees wrongly list Christoffel's mother as De Wilde.
 1 SOUR @S46@
 2 QUAY 2
-0 @I329@ INDI
+0 @I331@ INDI
 1 REFN livinus1_p
 2 TYPE project-id
 1 NAME Livinus /Paelinck/
@@ -7644,7 +7768,7 @@
 1 NOTE Earliest documented Paelinck ancestor; the family was rooted in Lochristi (Oost-Vlaanderen). Married Elisabeth Temmerman at Gent in 1645 (the old '1645' was his marriage year, not a death date).
 1 SOUR @S5@
 2 QUAY 2
-0 @I330@ INDI
+0 @I332@ INDI
 1 REFN livinus2_p
 2 TYPE project-id
 1 NAME Livinus /Paelinck/
@@ -7662,7 +7786,7 @@
 1 NOTE Married in Kalken, his wife's home village; lived in Destelbergen.
 1 SOUR @S5@
 2 QUAY 2
-0 @I331@ INDI
+0 @I333@ INDI
 1 REFN livinus_b1615
 2 TYPE project-id
 1 NAME Livinus /Bundervoet/
@@ -7682,7 +7806,7 @@
 2 CONT (~1600-~1651) or this son (~1615-~1670).
 1 SOUR @S43@
 2 QUAY 2
-0 @I332@ INDI
+0 @I334@ INDI
 1 REFN livinus_b1752
 2 TYPE project-id
 1 NAME Livinus /Bundervoet/
@@ -7702,7 +7826,7 @@
 2 CONT or Assenede would give the day and the parents in the register's own words.
 1 SOUR @S43@
 2 QUAY 2
-0 @I333@ INDI
+0 @I335@ INDI
 1 REFN livinus_bundervoet
 2 TYPE project-id
 1 NAME Livinus /Bundervoet/
@@ -7715,7 +7839,7 @@
 2 DATE ABT 1651
 1 FAMS @F90@
 1 FAMS @F131@
-1 FAMC @F204@
+1 FAMC @F206@
 1 NOTE Of Evergem; married twice. His son Segerius (~1615), through whom our line descends,
 2 CONT was by his first wife.
 2 CONT
@@ -7739,7 +7863,7 @@
 2 CONT about two van Hecke women marrying into consecutive generations of this family.
 1 SOUR @S46@
 2 QUAY 2
-0 @I334@ INDI
+0 @I336@ INDI
 1 REFN livinus_verkouille
 2 TYPE project-id
 1 NAME Livinus Hermanus /Verkouille/
@@ -7749,7 +7873,7 @@
 1 FAMS @F110@
 1 SOUR @S22@
 2 QUAY 2
-0 @I335@ INDI
+0 @I337@ INDI
 1 REFN lodewijk_bemden73
 2 TYPE project-id
 1 NAME Lodewijk /Vandenbemden/
@@ -7778,7 +7902,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I336@ INDI
+0 @I338@ INDI
 1 REFN loncke
 2 TYPE project-id
 1 NAME Charlotte Maria /Loncke/
@@ -7788,18 +7912,18 @@
 1 FAMS @F119@
 1 SOUR @S22@
 2 QUAY 2
-0 @I337@ INDI
+0 @I339@ INDI
 1 REFN louis_steenkiste
 2 TYPE project-id
 1 NAME Louis /Steenkiste/
 2 GIVN Louis
 2 SURN Steenkiste
 1 SEX M
-1 FAMS @F189@
+1 FAMS @F191@
 1 NOTE FRONTIER above — father of Lucia Theresia Steenkiste (1767). Dates not recovered.
 1 SOUR @S22@
 2 QUAY 2
-0 @I338@ INDI
+0 @I340@ INDI
 1 REFN louisacamilla_vincke
 2 TYPE project-id
 1 NAME Louisa Camilla /Vincke/
@@ -7820,7 +7944,7 @@
 2 CONT `sup`.
 1 SOUR @S39@
 2 QUAY 2
-0 @I339@ INDI
+0 @I341@ INDI
 1 REFN louise_bocklandt
 2 TYPE project-id
 1 NAME Louise Marie /Bocklandt/
@@ -7834,7 +7958,7 @@
 2 DATE 15 JUL 1946
 2 PLAC Oostende
 1 FAMS @F36@
-1 FAMS @F190@
+1 FAMS @F192@
 1 FAMC @F25@
 1 NOTE Source detail: Stene marriage act nr. 9, 1 March 1924 (FamilySearch register image, read
 2 CONT directly — [[fs-stene-1924-marriage-blomme-bocklandt]]); Familiekunde Westkust memorial
@@ -7884,23 +8008,23 @@
 2 CONT supplied her parents — her birth exact to the day and commune, and the De Keyser
 2 CONT marriage-and-divorce, itself independently corroborated by [[edouard_dk]]'s own 1946
 2 CONT remarriage act, read 22 years later.
-1 SOUR @S106@
+1 SOUR @S107@
 2 QUAY 3
-0 @I340@ INDI
+0 @I342@ INDI
 1 REFN lucia_maene
 2 TYPE project-id
 1 NAME Lucia Amelia /Maene/
 2 GIVN Lucia Amelia
 2 SURN Maene
 1 SEX F
-1 FAMS @F188@
+1 FAMS @F190@
 1 NOTE Bride of [[leontius_v]] in his Oostende marriage registration of 20 August 1922.
 2 CONT
 2 CONT No dates of her own: the act is indexed under the event, not read as an image.
 2 CONT FRONTIER — reading it would give her age and her parents.
 1 SOUR @S8@
 2 QUAY 2
-0 @I341@ INDI
+0 @I343@ INDI
 1 REFN lucia_steenkiste
 2 TYPE project-id
 1 NAME Lucia Theresia /Steenkiste/
@@ -7911,11 +8035,11 @@
 2 DATE 28 OCT 1767
 2 PLAC Oudenburg
 1 FAMS @F161@
-1 FAMC @F189@
+1 FAMC @F191@
 1 NOTE Daughter of Louis Steenkiste & Reine Storms; mother of Pierre Ramon.
 1 SOUR @S22@
 2 QUAY 2
-0 @I342@ INDI
+0 @I344@ INDI
 1 REFN lucien_vincke
 2 TYPE project-id
 1 NAME Lucien Julianus /Vincke/
@@ -8014,9 +8138,9 @@
 2 CONT which his own death act already settles), and it does **not** close the excluded Elodie
 2 CONT above (~282 days, borderline) — that case is settled by her own marriage act, a document,
 2 CONT not by this arithmetic.
-1 SOUR @S107@
+1 SOUR @S108@
 2 QUAY 2
-0 @I343@ INDI
+0 @I345@ INDI
 1 REFN ludovica_bossin
 2 TYPE project-id
 1 NAME Ludovica /Bossin/
@@ -8026,7 +8150,7 @@
 1 BIRT
 2 DATE 5 OCT 1853
 2 PLAC Sint-Stevens-Woluwe
-1 FAMS @F191@
+1 FAMS @F193@
 1 FAMC @F75@
 1 NOTE Younger sister of [[bossin]], and one of four known children of [[guilielmus_bossin]] and
 2 CONT [[peremans]] — a fourth, [[joannes_bossin51]] (b. 1851), was found in the same pass that
@@ -8058,9 +8182,9 @@
 2 CONT bride are the same Ludovica.
 2 CONT
 2 CONT FRONTIER: both register images, and any children of the Swaelens marriage.
-1 SOUR @S108@
+1 SOUR @S109@
 2 QUAY 2
-0 @I344@ INDI
+0 @I346@ INDI
 1 REFN ludovica_ellebout
 2 TYPE project-id
 1 NAME Ludovica Prudentia /Ellebout/
@@ -8074,7 +8198,7 @@
 1 NOTE Daughter of Ferdinand Ellebout & Catherine Millecam; married at 42 a husband about sixteen years younger.
 1 SOUR @S25@
 2 QUAY 2
-0 @I345@ INDI
+0 @I347@ INDI
 1 REFN ludovica_vanald
 2 TYPE project-id
 1 NAME Ludovica Maria /Vanalderweireldt/
@@ -8121,9 +8245,9 @@
 2 CONT remain a named frontier, not a link; see [[lucien_vincke]]'s record for the scope of what
 2 CONT was searched and came back negative, and for the act-spacing argument used only to
 2 CONT exclude, never to include.
-1 SOUR @S107@
+1 SOUR @S108@
 2 QUAY 2
-0 @I346@ INDI
+0 @I348@ INDI
 1 REFN ludovicus_bocklandt
 2 TYPE project-id
 1 NAME Ludovicus /Bocklandt/
@@ -8146,9 +8270,9 @@
 2 CONT `doc`, because the register image itself was read and saved as an artifact
 2 CONT (`data/artifacts/bocklandt-ludovicus-1880-death-hamme.md`), not an index transcription of
 2 CONT it.
-1 SOUR @S109@
+1 SOUR @S110@
 2 QUAY 3
-0 @I347@ INDI
+0 @I349@ INDI
 1 REFN ludovicus_bossin79
 2 TYPE project-id
 1 NAME Ludovicus /Bossin/
@@ -8159,7 +8283,7 @@
 2 DATE 5 DEC 1879
 2 PLAC Sint-Stevens-Woluwe
 1 OCCU polijster (polisher)
-1 FAMS @F186@
+1 FAMS @F188@
 1 FAMC @F147@
 1 NOTE Married [[misabella_t]] at Kraainem on **10 April 1900** (act nr. 3, S28). Born at
 2 CONT **Sint-Stevens-Woluwe on 5 December 1879**, a *polijster*, son of [[jbbossin]] — dead since
@@ -8188,9 +8312,9 @@
 2 CONT register entry his parents' ages are checked against on [[jbbossin]] and [[maria_wolf]]'s
 2 CONT records (S33): his father aged 45, *landbouwer*, and his mother aged 43, both matching
 2 CONT their marriage-act birthdates exactly.
-1 SOUR @S95@
+1 SOUR @S96@
 2 QUAY 2
-0 @I348@ INDI
+0 @I350@ INDI
 1 REFN ludovicus_dutreeuw
 2 TYPE project-id
 1 NAME Ludovicus Emanuel /Dutreeuw/
@@ -8204,7 +8328,7 @@
 1 NOTE Son of Nicolas Dutreeuw & Therese Desramont; his wife was about sixteen years his senior.
 1 SOUR @S25@
 2 QUAY 2
-0 @I349@ INDI
+0 @I351@ INDI
 1 REFN ludovicus_dv
 2 TYPE project-id
 1 NAME Ludovicus Josephus /Devriendt/
@@ -8225,9 +8349,9 @@
 2 CONT February 1876, act 12; his own parents, Ludovicus Devriendt x Joanna Theresia Trogh.
 2 CONT Each needs the underlying act image read before it becomes a fact (verification pass,
 2 CONT 2026-07-26).
-1 SOUR @S110@
+1 SOUR @S111@
 2 QUAY 3
-0 @I350@ INDI
+0 @I352@ INDI
 1 REFN ludovicus_p
 2 TYPE project-id
 1 NAME Ludovicus /Paelinck/
@@ -8245,7 +8369,7 @@
 1 NOTE Born in Lochristi (son of Livinus Paelinck & Elisabeth Temmerman); settled in Destelbergen, where he died.
 1 SOUR @S5@
 2 QUAY 2
-0 @I351@ INDI
+0 @I353@ INDI
 1 REFN ludovicus_schal
 2 TYPE project-id
 1 NAME Ludovicus Franciscus /Schalandryn/
@@ -8253,7 +8377,7 @@
 2 SURN Schalandryn
 1 SEX M
 1 OCCU werkman (labourer)
-1 FAMS @F192@
+1 FAMS @F194@
 1 NOTE Named in his daughter Octavia's 1906 Oostende marriage act (nr. 258, S20), read as an
 2 CONT image, as father of the bride: "Ludovicus Schalandrijn", werkman, resident at Oostende
 2 CONT ("alhier wonende"), present and consenting. The act signs him "L. Schalandryn"; his
@@ -8276,9 +8400,9 @@
 2 CONT
 2 CONT Each needs the underlying act image read before it becomes a fact; none is graftable
 2 CONT on the index alone (verification pass, 2026-07-26).
-1 SOUR @S111@
+1 SOUR @S112@
 2 QUAY 3
-0 @I352@ INDI
+0 @I354@ INDI
 1 REFN madeleinemarie_vincke
 2 TYPE project-id
 1 NAME Madeleine Marie /Vincke/
@@ -8298,7 +8422,7 @@
 2 CONT nr. 47, `rab-bs-overlijdens`). Index only, not the register image, hence `sup`.
 1 SOUR @S39@
 2 QUAY 2
-0 @I353@ INDI
+0 @I355@ INDI
 1 REFN magdalena_demeulemeester
 2 TYPE project-id
 1 NAME Magdalena /Demeulemeester/
@@ -8307,14 +8431,14 @@
 1 SEX F
 1 BIRT
 2 DATE BET 1530 AND 1539
-1 FAMS @F193@
-1 FAMC @F205@
+1 FAMS @F195@
+1 FAMC @F207@
 1 NOTE Source detail: Geneanet isavdw (Sosa 27041; OSAK contracts 1560-1600)
 2 CONT
 2 CONT Wife of Willem Sabbe (~1530). Her father is Michiel Demeulemeester.
 1 SOUR @S4@
 2 QUAY 2
-0 @I354@ INDI
+0 @I356@ INDI
 1 REFN magdalena_huyghebaert34
 2 TYPE project-id
 1 NAME Magdalena Ludovica /Huyghebaert/
@@ -8328,7 +8452,7 @@
 1 NOTE Oudenburg birth index, act nr. 57, 21 June 1834.
 1 SOUR @S2@
 2 QUAY 2
-0 @I355@ INDI
+0 @I357@ INDI
 1 REFN magdalena_vb
 2 TYPE project-id
 1 NAME Maria Magdalena /Van Bogaert/
@@ -8356,7 +8480,7 @@
 2 CONT *Maria Magdalena Van Bogaert*, **huishoudster** — an occupation this record did not carry.
 1 SOUR @S59@
 2 QUAY 3
-0 @I356@ INDI
+0 @I358@ INDI
 1 REFN marcel_b
 2 TYPE project-id
 1 NAME Marcel Henri /Bundervoet/
@@ -8370,7 +8494,7 @@
 2 DATE 20 NOV 2015
 2 PLAC Oostende
 1 FAMS @F144@
-1 FAMS @F187@
+1 FAMS @F189@
 1 FAMC @F24@
 1 NOTE Full name Marcel Henri Bundervoet. Confirmed by his memorial card, which named the Bostyn family — pointing to his mother Elodia Bostyn and father Alphonsus.
 2 CONT
@@ -8383,9 +8507,9 @@
 2 CONT
 2 CONT Still `sup`: the index is a transcription of the card, and nobody here has read the card
 2 CONT itself. Francine Bisschop still has no record of her own.
-1 SOUR @S112@
+1 SOUR @S113@
 2 QUAY 2
-0 @I357@ INDI
+0 @I359@ INDI
 1 REFN marcel_d
 2 TYPE project-id
 1 NAME Marcel Désiré /Devriendt/
@@ -8399,11 +8523,11 @@
 2 DATE 2000
 2 PLAC Oostende
 1 OCCU smid (blacksmith)
-1 FAMS @F163@
+1 FAMS @F164@
 1 FAMC @F78@
 1 SOUR @S22@
 2 QUAY 2
-0 @I358@ INDI
+0 @I360@ INDI
 1 REFN margaretha_vermeersch
 2 TYPE project-id
 1 NAME Margaretha /Vermeersch/
@@ -8416,7 +8540,7 @@
 1 NOTE FRONTIER above — grandmother of Joannes Van Maele.
 1 SOUR @S4@
 2 QUAY 2
-0 @I359@ INDI
+0 @I361@ INDI
 1 REFN margaretha_wybau
 2 TYPE project-id
 1 NAME Margaretha /Wybau/
@@ -8429,7 +8553,7 @@
 1 NOTE FRONTIER above — mother of Adrianus De Baecke (1630).
 1 SOUR @S4@
 2 QUAY 2
-0 @I360@ INDI
+0 @I362@ INDI
 1 REFN maria_anna_pergijsels
 2 TYPE project-id
 1 NAME Maria Anna /Pergijsels/
@@ -8454,7 +8578,7 @@
 2 CONT on its own, where Bossin and Pardon cannot.
 1 SOUR @S21@
 2 QUAY 2
-0 @I361@ INDI
+0 @I363@ INDI
 1 REFN maria_b1623
 2 TYPE project-id
 1 NAME Maria /Bundervoet/
@@ -8471,7 +8595,7 @@
 2 CONT for her there, and no act has been read.
 1 SOUR @S43@
 2 QUAY 2
-0 @I362@ INDI
+0 @I364@ INDI
 1 REFN maria_c_declerck
 2 TYPE project-id
 1 NAME Maria Catharina /De Clerck/
@@ -8482,12 +8606,12 @@
 2 DATE 1727
 1 DEAT
 2 DATE 1768
-1 FAMS @F180@
-1 FAMC @F178@
+1 FAMS @F182@
+1 FAMC @F180@
 1 NOTE Mother of Petrus Josephus Keirsebilck (1764).
 1 SOUR @S4@
 2 QUAY 2
-0 @I363@ INDI
+0 @I365@ INDI
 1 REFN maria_deruwe
 2 TYPE project-id
 1 NAME Maria /De Ruwe/
@@ -8498,11 +8622,11 @@
 2 DATE ABT 1500
 1 DEAT
 2 DATE ABT 1547
-1 FAMS @F175@
+1 FAMS @F177@
 1 NOTE DEEPEST CONFIRMED ANCESTOR (with her husband). Named in the 1547 Bruges orphan register. Later remarried Cornelis Immezeune. Born ~1500. No parents recorded. (Note: a different, later Maria De Ruwe exists in the same tree — not to be confused.)
 1 SOUR @S4@
 2 QUAY 2
-0 @I364@ INDI
+0 @I366@ INDI
 1 REFN maria_desmedt
 2 TYPE project-id
 1 NAME Maria /Desmedt/
@@ -8510,7 +8634,7 @@
 2 SURN Desmedt
 1 SEX F
 1 OCCU dagloonster (day labourer)
-1 FAMS @F167@
+1 FAMS @F169@
 1 NOTE Named as mother of the groom in her son [[jbbossin]]'s marriage act — Sint-Stevens-Woluwe
 2 CONT nr. 4, 17 June 1858 (S33). Present and consenting, a *dagloonster*, and the act notes she
 2 CONT could not write.
@@ -8521,7 +8645,7 @@
 2 CONT for.
 1 SOUR @S78@
 2 QUAY 2
-0 @I365@ INDI
+0 @I367@ INDI
 1 REFN maria_dk
 2 TYPE project-id
 1 NAME Maria /Dekeyser/
@@ -8537,7 +8661,7 @@
 1 NOTE Source detail: Stef Paelinck (stefpaelinck) tree; Oostende, 1902–2002
 1 SOUR @S5@
 2 QUAY 2
-0 @I366@ INDI
+0 @I368@ INDI
 1 REFN maria_lampsins
 2 TYPE project-id
 1 NAME Maria /Lampsins/
@@ -8556,7 +8680,7 @@
 2 CONT Mother of Clara Van Sieleghem (1666); ten children born in Lichtervelde. Parents Paulus Lampsins (~1600-1659) x Clara Lampsins (1605-1683). The ordinary Lichtervelde Lampsins family — NOT the noble Zwevezele Lampsins namesake avoided earlier.
 1 SOUR @S4@
 2 QUAY 2
-0 @I367@ INDI
+0 @I369@ INDI
 1 REFN maria_m_vandewalle
 2 TYPE project-id
 1 NAME Maria Magdalena /Vandewalle/
@@ -8572,7 +8696,7 @@
 1 NOTE Mother of Barbara Theresia De Baecke (1709).
 1 SOUR @S4@
 2 QUAY 2
-0 @I368@ INDI
+0 @I370@ INDI
 1 REFN maria_malfait
 2 TYPE project-id
 1 NAME Maria Lodewijka /Malfait/
@@ -8582,7 +8706,7 @@
 1 FAMS @F110@
 1 SOUR @S22@
 2 QUAY 2
-0 @I369@ INDI
+0 @I371@ INDI
 1 REFN maria_pardon63
 2 TYPE project-id
 1 NAME Maria Thérèsia /Pardon/
@@ -8605,7 +8729,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I370@ INDI
+0 @I372@ INDI
 1 REFN maria_rups
 2 TYPE project-id
 1 NAME Maria /Rups/
@@ -8616,13 +8740,13 @@
 2 DATE 29 JAN 1642
 2 PLAC Oostkamp
 1 FAMS @F87@
-1 FAMC @F194@
+1 FAMC @F196@
 1 NOTE Source detail: Geneanet isavdw (Rijksarchief scans; Sosa 1671)
 2 CONT
 2 CONT Wife of Carolus Vandewalle, mother of Maria Magdalena Vandewalle (1674). Also written Reeps. Parents Michael Rups x Maria Van Renterghem (~1610).
 1 SOUR @S4@
 2 QUAY 2
-0 @I371@ INDI
+0 @I373@ INDI
 1 REFN maria_vandenbussche
 2 TYPE project-id
 1 NAME Maria /Vandenbussche/
@@ -8633,7 +8757,7 @@
 1 NOTE FRONTIER above — grandmother of Petrus Van Nieuwenhuyse.
 1 SOUR @S4@
 2 QUAY 2
-0 @I372@ INDI
+0 @I374@ INDI
 1 REFN maria_vanrenterghem
 2 TYPE project-id
 1 NAME Maria /Van Renterghem/
@@ -8643,12 +8767,12 @@
 1 BIRT
 2 DATE ABT 1610
 1 FAMS @F112@
-1 FAMS @F194@
+1 FAMS @F196@
 1 FAMC @F62@
 1 NOTE Mother of Maria Rups (1642). Earlier married Cornelius Vandewalle — a Vandewalle intermarriage.
 1 SOUR @S4@
 2 QUAY 2
-0 @I373@ INDI
+0 @I375@ INDI
 1 REFN maria_vi
 2 TYPE project-id
 1 NAME Maria Florentina Herminia /Van Iseghem/
@@ -8680,7 +8804,7 @@
 2 CONT than entered now.
 1 SOUR @S61@
 2 QUAY 2
-0 @I374@ INDI
+0 @I376@ INDI
 1 REFN maria_wolf
 2 TYPE project-id
 1 NAME Maria /Wolf/
@@ -8692,7 +8816,7 @@
 2 PLAC Brussel
 1 OCCU herbergierster (innkeeper)
 1 FAMS @F147@
-1 FAMC @F206@
+1 FAMC @F208@
 1 NOTE Mother of the groom in her son [[ludovicus_bossin79]]'s marriage act — Kraainem nr. 3, 10
 2 CONT April 1900 (S28). A *herbergierster* of Sint-Stevens-Woluwe: she kept an inn, as her son's
 2 CONT new father-in-law [[georges_cj]] did at Kraainem.
@@ -8730,9 +8854,9 @@
 2 CONT *Wolf* is rare enough in this corner of Brabant to be searchable on its own, which is the
 2 CONT cheap next move — as is [[petronella_wolf]]'s own record, which names no known husband at
 2 CONT all.
-1 SOUR @S95@
+1 SOUR @S96@
 2 QUAY 2
-0 @I375@ INDI
+0 @I377@ INDI
 1 REFN marialudovica_janssen58
 2 TYPE project-id
 1 NAME Maria Ludovica Leonarda /Janssen/
@@ -8746,7 +8870,7 @@
 1 NOTE Oostende birth index, act nr. 531, 26 December 1858 (RAB ID 1458587).
 1 SOUR @S2@
 2 QUAY 2
-0 @I376@ INDI
+0 @I378@ INDI
 1 REFN marie_anna_dedeckere
 2 TYPE project-id
 1 NAME Marie Anna /de Deckere/
@@ -8766,7 +8890,7 @@
 2 CONT read for her.
 1 SOUR @S43@
 2 QUAY 2
-0 @I377@ INDI
+0 @I379@ INDI
 1 REFN marie_vanbergen
 2 TYPE project-id
 1 NAME Marie-Louise /Van Bergen/
@@ -8781,7 +8905,7 @@
 2 PLAC Oostende
 1 OCCU werkvrouw
 1 FAMS @F25@
-1 FAMC @F164@
+1 FAMC @F165@
 1 NOTE Mother of Louise Marie Bocklandt (1877, Hamme O-Vl). Full name Maria Louisa Van Bergen,
 2 CONT 1842-1888. Her parents were Joannes Franciscus Van Bergen (1815-1898) × Ida Vermandel
 2 CONT (1825-1865).
@@ -8811,9 +8935,9 @@
 2 CONT [[ida_vermandel]]'s own death act gives independently. Two more probable siblings, Josephus
 2 CONT (b. 1852) and Henricus (b. 1861), are named as frontiers on their mother's record and are
 2 CONT not grafted: they rest on a name index and their acts have not been read.
-1 SOUR @S113@
+1 SOUR @S114@
 2 QUAY 2
-0 @I378@ INDI
+0 @I380@ INDI
 1 REFN marielouise_huyghebaert32
 2 TYPE project-id
 1 NAME Marie Louise /Huyghebaert/
@@ -8828,7 +8952,7 @@
 2 CONT [[appolonia_huyghebaert]]'s own missing birth act, eighteen months after her.
 1 SOUR @S2@
 2 QUAY 2
-0 @I379@ INDI
+0 @I381@ INDI
 1 REFN marielouise_vincke
 2 TYPE project-id
 1 NAME Marie Louise /Vincke/
@@ -8845,7 +8969,7 @@
 2 CONT not the register image, hence `sup`.
 1 SOUR @S2@
 2 QUAY 2
-0 @I380@ INDI
+0 @I382@ INDI
 1 REFN mariesophie_vincke
 2 TYPE project-id
 1 NAME Marie Sophie /Vincke/
@@ -8865,7 +8989,7 @@
 2 CONT act nr. 96, `rab-bs-overlijdens`). Index only, not the register image, hence `sup`.
 1 SOUR @S39@
 2 QUAY 2
-0 @I381@ INDI
+0 @I383@ INDI
 1 REFN marinus_vannieuwenhuyse
 2 TYPE project-id
 1 NAME Marinus /Van Nieuwenhuyse/
@@ -8880,7 +9004,7 @@
 1 NOTE FRONTIER above — father of Petrus Van Nieuwenhuyse (1649, alderman of Oostkamp). His own father is unrecorded (NN Van Nieuwenhuyse).
 1 SOUR @S4@
 2 QUAY 2
-0 @I382@ INDI
+0 @I384@ INDI
 1 REFN martinet
 2 TYPE project-id
 1 NAME Maria Ludovica /Martinet/
@@ -8897,7 +9021,7 @@
 2 CONT [[carolus_vb]].
 1 SOUR @S13@
 2 QUAY 2
-0 @I383@ INDI
+0 @I385@ INDI
 1 REFN martinus_degrande
 2 TYPE project-id
 1 NAME Martinus /De Grande/
@@ -8912,7 +9036,7 @@
 1 NOTE FRONTIER above — father of Egidius De Grande (1670 Dentergem). Married twice.
 1 SOUR @S4@
 2 QUAY 2
-0 @I384@ INDI
+0 @I386@ INDI
 1 REFN mathilde_desmet
 2 TYPE project-id
 1 NAME Mathilde /Desmet/
@@ -8926,7 +9050,7 @@
 1 NOTE Married 1867 Sint-Andries. Born 21 Feb 1841 Sint-Andries. Her parents are the frontier (her 1841 Sint-Andries birth act).
 1 SOUR @S3@
 2 QUAY 2
-0 @I385@ INDI
+0 @I387@ INDI
 1 REFN mathilde_meseure
 2 TYPE project-id
 1 NAME Mathilde Sophia /Meseure/
@@ -8936,13 +9060,13 @@
 1 DEAT
 2 DATE 21 JUL 1922
 2 PLAC Oostende
-1 FAMS @F181@
+1 FAMS @F183@
 1 NOTE Mother of [[petrus_blomme]]. Named in his son's Stene marriage act of 1 March 1924 —
 2 CONT register image read directly — as dead at Oostende on 21 July 1922. The act gives no
 2 CONT birth date or other detail for her.
-1 SOUR @S104@
+1 SOUR @S105@
 2 QUAY 3
-0 @I386@ INDI
+0 @I388@ INDI
 1 REFN mathilde_standaert
 2 TYPE project-id
 1 NAME Mathilde /Standaert/
@@ -8950,7 +9074,7 @@
 2 SURN Standaert
 1 SEX F
 1 OCCU huishoudster (housekeeper)
-1 FAMS @F192@
+1 FAMS @F194@
 1 NOTE Named as mother of the bride in her daughter Octavia's 1906 Oostende marriage act (nr.
 2 CONT 258, S20), read as an image — "overleden" (deceased) by that date, no date given there.
 2 CONT The Bredene birth act (nr. 116, 1886, S21), also read as an image, names her as the
@@ -8966,9 +9090,9 @@
 2 CONT
 2 CONT Each needs the underlying act image read before it becomes a fact (verification pass,
 2 CONT 2026-07-26).
-1 SOUR @S114@
+1 SOUR @S115@
 2 QUAY 3
-0 @I387@ INDI
+0 @I389@ INDI
 1 REFN mathildis_bocklandt
 2 TYPE project-id
 1 NAME Maria Mathildis /Bocklandt/
@@ -8993,9 +9117,9 @@
 2 CONT The act itself misdates her mother's death "22/11/1858", against every other act's
 2 CONT "22 Nov 1888" — a clerical slip in this one register entry, not a rival date;
 2 CONT [[marie_vanbergen]]'s own record keeps 1888.
-1 SOUR @S115@
+1 SOUR @S116@
 2 QUAY 2
-0 @I388@ INDI
+0 @I390@ INDI
 1 REFN mattheus_ramon
 2 TYPE project-id
 1 NAME Mattheus /Ramon/
@@ -9010,11 +9134,11 @@
 2 PLAC Handzame
 1 FAMS @F49@
 1 FAMS @F160@
-1 FAMC @F172@
+1 FAMC @F174@
 1 NOTE Son of Stephanus Ramon & Joanna Truant; married twice — our line is via his 2nd wife Jacoba Ossaert (Zande, 1772), with whom he had ten children.
 1 SOUR @S22@
 2 QUAY 2
-0 @I389@ INDI
+0 @I391@ INDI
 1 REFN mattheus_wittenheyns
 2 TYPE project-id
 1 NAME Mattheus /Wittenheyns/
@@ -9026,11 +9150,11 @@
 1 DEAT
 2 DATE ABT 1546
 2 PLAC Oostkamp
-1 FAMS @F175@
+1 FAMS @F177@
 1 NOTE DEEPEST CONFIRMED ANCESTOR (with his wife). Called 'gheseyt Maraels'. Named with wife and children in the 1547 Bruges orphan register (weesregister St.-Jan). Born ~1500 — the reign of Charles V. No parents recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I390@ INDI
+0 @I392@ INDI
 1 REFN mauritius_stroobandt
 2 TYPE project-id
 1 NAME Mauritius /Stroobandt/
@@ -9049,7 +9173,7 @@
 1 NOTE Kept the 'Sint-Hubrecht' tavern north of Oostkamp church (deeds 1749-1753). Married Barbara De Baecke 1732.
 1 SOUR @S4@
 2 QUAY 2
-0 @I391@ INDI
+0 @I393@ INDI
 1 REFN michael_degrande
 2 TYPE project-id
 1 NAME Michael /De Grande/
@@ -9067,7 +9191,7 @@
 1 NOTE Parents Petrus De Grande (1697-1765) x Adriana Theresia Sabbe (1703-1768). One of twelve children.
 1 SOUR @S4@
 2 QUAY 2
-0 @I392@ INDI
+0 @I394@ INDI
 1 REFN michael_devriese_o
 2 TYPE project-id
 1 NAME Michaël /De Vriese/
@@ -9078,23 +9202,23 @@
 2 DATE 1615
 1 DEAT
 2 DATE 1681
-1 FAMS @F182@
+1 FAMS @F184@
 1 NOTE FRONTIER above — born ~1615, one of the deepest documented ancestors in the tree. Parents not verified (a 1674 namesake Michaël De Vriese exists in the same source — not to be confused).
 1 SOUR @S19@
 2 QUAY 2
-0 @I393@ INDI
+0 @I395@ INDI
 1 REFN michael_rups
 2 TYPE project-id
 1 NAME Michael /Rups/
 2 GIVN Michael
 2 SURN Rups
 1 SEX M
-1 FAMS @F194@
-1 FAMC @F207@
+1 FAMS @F196@
+1 FAMC @F209@
 1 NOTE FRONTIER above — father of Maria Rups (1642). His father Amandus Rups (d.1657); his mother is unrecorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I394@ INDI
+0 @I396@ INDI
 1 REFN michiel_demeulemeester
 2 TYPE project-id
 1 NAME Michiel /Demeulemeester/
@@ -9103,14 +9227,14 @@
 1 SEX M
 1 BIRT
 2 DATE BET 1500 AND 1509
-1 FAMS @F205@
+1 FAMS @F207@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE Source detail: Geneanet isavdw (OSAK Akten & Contracten 1560-1600; Sosa 54082)
 2 CONT
 2 CONT FRONTIER above — father of Magdalena Demeulemeester (~1530s), on the deep Sabbe/Harelbeke line. Dates and parents not recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I395@ INDI
+0 @I397@ INDI
 1 REFN misabella_t
 2 TYPE project-id
 1 NAME Maria Isabella Helena /Thumas/
@@ -9120,7 +9244,7 @@
 1 BIRT
 2 DATE 18 AUG 1880
 2 PLAC Sint-Stevens-Woluwe
-1 FAMS @F186@
+1 FAMS @F188@
 1 FAMC @F76@
 1 NOTE Daughter of [[georges_cj]] and [[bossin]], born at **Sint-Stevens-Woluwe on 18 August 1880**
 2 CONT — the family had moved on from Kraainem, where her sisters were born, and her birth was
@@ -9147,16 +9271,16 @@
 2 CONT his birth act, her August birthday not yet due).
 2 CONT
 2 CONT `sup`: an act analysis, not the register image.
-1 SOUR @S95@
+1 SOUR @S96@
 2 QUAY 2
-0 @I396@ INDI
+0 @I398@ INDI
 1 REFN mjosephina_peremans
 2 TYPE project-id
 1 NAME Maria Josephina /Peremans/
 2 GIVN Maria Josephina
 2 SURN Peremans
 1 SEX F
-1 FAMS @F195@
+1 FAMS @F197@
 1 FAMC @F111@
 1 NOTE The first sibling this tree has for [[peremans]]. She married **Petrús van der Varent** at
 2 CONT **Zaventem on 5 November 1840** (S29), her parents given as [[egidius_peremans]] and
@@ -9174,7 +9298,7 @@
 2 CONT FRONTIER: her own birth act, and any children of the van der Varent marriage.
 1 SOUR @S83@
 2 QUAY 2
-0 @I397@ INDI
+0 @I399@ INDI
 1 REFN morree
 2 TYPE project-id
 1 NAME Anna Francisca /Morree/
@@ -9194,7 +9318,7 @@
 2 CONT would settle which spelling the registrar used.
 1 SOUR @S77@
 2 QUAY 2
-0 @I398@ INDI
+0 @I400@ INDI
 1 REFN mtheresia_vandenbroeck
 2 TYPE project-id
 1 NAME Maria Theresia /Van den Broeck/
@@ -9210,7 +9334,7 @@
 2 CONT MOTHER of Édouard Dekeyser. Named in Édouard's 1946 remarriage act as his mother, 'overleden' (deceased) by then. Van den Broeck is a Waasland / Hamme (Oost-Vlaanderen) name, consistent with the family's Hamme origin. Frontier: her dates/parents, in the Hamme (O.-Vl.) registers.
 1 SOUR @S56@
 2 QUAY 3
-0 @I399@ INDI
+0 @I401@ INDI
 1 REFN mtstephanie_t
 2 TYPE project-id
 1 NAME Marie Thérèse Stéphanie /Thumas/
@@ -9235,24 +9359,24 @@
 2 CONT FRONTIER: her birth act, and whether she lived to marry. Nothing is known of her after 1835.
 1 SOUR @S44@
 2 QUAY 2
-0 @I400@ INDI
+0 @I402@ INDI
 1 REFN nadia
 2 TYPE project-id
 1 NAME Nadia /Bundervoet/
 2 GIVN Nadia
 2 SURN Bundervoet
 1 SEX F
-1 FAMC @F187@
+1 FAMC @F189@
 1 SOUR @S32@
 2 QUAY 1
-0 @I401@ INDI
+0 @I403@ INDI
 1 REFN nicolas_verbrugghe
 2 TYPE project-id
 1 NAME Nicolas /Verbrugghe/
 2 GIVN Nicolas
 2 SURN Verbrugghe
 1 SEX M
-1 FAMS @F200@
+1 FAMS @F202@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE Father of Joanna (Janneken) Verbrugghe (~1655–1704), and so a direct ancestor through
 2 CONT her son Joannes Bundervoet (~1682).
@@ -9267,7 +9391,7 @@
 2 CONT the marriage a little before it.
 1 SOUR @S43@
 2 QUAY 2
-0 @I402@ INDI
+0 @I404@ INDI
 1 REFN nicolas_willaert
 2 TYPE project-id
 1 NAME Nicolas /Willaert/
@@ -9282,7 +9406,7 @@
 1 NOTE FRONTIER above — father of Joanna Willaert (1631 Torhout). Born ~1595.
 1 SOUR @S4@
 2 QUAY 2
-0 @I403@ INDI
+0 @I405@ INDI
 1 REFN nn_goes
 2 TYPE project-id
 1 NAME NN /Goes/
@@ -9295,14 +9419,14 @@
 2 CONT [[nn_vandenberghe]] — a name half known is recorded half, never completed.
 1 SOUR @S18@
 2 QUAY 2
-0 @I404@ INDI
+0 @I406@ INDI
 1 REFN nn_vandenberghe
 2 TYPE project-id
 1 NAME NN /Vandenberghe/
 2 GIVN NN
 2 SURN Vandenberghe
 1 SEX F
-1 FAMS @F184@
+1 FAMS @F186@
 1 NOTE Wife of [[judocus_sabbe_1475]] (~1475–1534) and, on that reading, the mother of
 2 CONT [[petrus_sabbe_1504]] — though isavdw states the marriage and not the maternity, so
 2 CONT the parent link is deliberately not made here.
@@ -9315,7 +9439,7 @@
 2 CONT Vandenberghe, a century later and in a different parish. Same surname is not a link.
 1 SOUR @S4@
 2 QUAY 2
-0 @I405@ INDI
+0 @I407@ INDI
 1 REFN nn_vantyghem
 2 TYPE project-id
 1 NAME NN /Vantyghem/
@@ -9327,14 +9451,14 @@
 2 CONT (RAB 361339). Only her family name is recorded in the index.
 1 SOUR @S18@
 2 QUAY 2
-0 @I406@ INDI
+0 @I408@ INDI
 1 REFN nn_vyveraert
 2 TYPE project-id
 1 NAME NN /Vyveraert/
 2 GIVN NN
 2 SURN Vyveraert
 1 SEX F
-1 FAMS @F196@
+1 FAMS @F198@
 1 NOTE Wife of [[petrus_bundervoet1560]], the earliest recorded ancestor of the Bundervoet
 2 CONT line. Her given name is not recorded — only the family name — so she is written the
 2 CONT way [[nn_vandenberghe]] is, and for the same reason.
@@ -9345,7 +9469,7 @@
 2 CONT recorded. FRONTIER — an Evergem marriage act naming her.
 1 SOUR @S46@
 2 QUAY 2
-0 @I407@ INDI
+0 @I409@ INDI
 1 REFN noel_t
 2 TYPE project-id
 1 NAME Marie Catherine /Noël/
@@ -9376,9 +9500,9 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
-1 SOUR @S116@
+1 SOUR @S117@
 2 QUAY 2
-0 @I408@ INDI
+0 @I410@ INDI
 1 REFN octavia_schal
 2 TYPE project-id
 1 NAME Octavia Maria /Schalandrijn/
@@ -9389,7 +9513,7 @@
 2 DATE 30 APR 1886
 2 PLAC Bredene
 1 FAMS @F13@
-1 FAMC @F192@
+1 FAMC @F194@
 1 NOTE Born in the coastal village of Bredene; mother of Adrienne Devriendt.
 2 CONT
 2 CONT CORRECTED (2026-07-26): birth date corrected from 1886-05-02 to 1886-04-30. The date
@@ -9404,9 +9528,9 @@
 2 CONT read as an image — father Ludovicus Schalandryn (werkman, resident at Oostende), mother
 2 CONT Mathilde Standaert (already deceased by 1906). See [[ludovicus_schal]] and
 2 CONT [[mathilde_standaert]] for what the acts do and do not support about them beyond this.
-1 SOUR @S117@
+1 SOUR @S118@
 2 QUAY 3
-0 @I409@ INDI
+0 @I411@ INDI
 1 REFN oliverius_stroobandt
 2 TYPE project-id
 1 NAME Oliverius /Stroobandt/
@@ -9419,7 +9543,7 @@
 1 NOTE FRONTIER above — top of the documented Stroobandt surname line (born ~1590s). His own parents not recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I410@ INDI
+0 @I412@ INDI
 1 REFN pamandus_bossin59
 2 TYPE project-id
 1 NAME Philippus Amandus /Bossin/
@@ -9453,7 +9577,7 @@
 2 CONT `sup`: an act analysis, not the register image.
 1 SOUR @S78@
 2 QUAY 2
-0 @I411@ INDI
+0 @I413@ INDI
 1 REFN paula_v
 2 TYPE project-id
 1 NAME Paula Mathilde /Vanstechelman/
@@ -9470,7 +9594,7 @@
 2 CONT the marriage act read rather than indexed.
 1 SOUR @S8@
 2 QUAY 2
-0 @I412@ INDI
+0 @I414@ INDI
 1 REFN paulina_bocklandt
 2 TYPE project-id
 1 NAME Paulina /Bocklandt/
@@ -9497,9 +9621,9 @@
 2 CONT OVWVL_00329163) — so she and Petrus Ketels had at least one more child than this record
 2 CONT shows. Neither act is registered as a source and neither child has a record here: objective
 2 CONT 2 reaches this generation, but it is not this pass's work.
-1 SOUR @S118@
+1 SOUR @S119@
 2 QUAY 2
-0 @I413@ INDI
+0 @I415@ INDI
 1 REFN paulina_vdberghe
 2 TYPE project-id
 1 NAME Paulina /Van Den Berghe/
@@ -9509,8 +9633,8 @@
 1 BIRT
 2 DATE 1849
 2 PLAC Hamme (Oost-Vlaanderen)
-1 FAMS @F197@
-1 FAMC @F164@
+1 FAMS @F199@
+1 FAMC @F165@
 1 NOTE An elder sister of [[marie_vanbergen]], and the first of that generation this tree has
 2 CONT besides her. Her marriage act — **Hamme, 18 May 1882**, read as the register image — names
 2 CONT her as *meerderjarige dochter van* **Joannes Franciscus Van Den Berghe**, *metser*, sixty-five
@@ -9541,9 +9665,9 @@
 2 CONT
 2 CONT FRONTIER — her own Hamme birth act of about 1849, which would give her birth to the day;
 2 CONT and her first marriage, which the Hamme registers should hold before May 1882.
-1 SOUR @S119@
+1 SOUR @S120@
 2 QUAY 3
-0 @I414@ INDI
+0 @I416@ INDI
 1 REFN paulus_janssen57
 2 TYPE project-id
 1 NAME Paulus Josephus /Janssen/
@@ -9557,7 +9681,7 @@
 1 NOTE Oostende birth index, act nr. 417, 17 September 1857 (RAB ID 1458589).
 1 SOUR @S2@
 2 QUAY 2
-0 @I415@ INDI
+0 @I417@ INDI
 1 REFN paulus_lampsins
 2 TYPE project-id
 1 NAME Paulus /Lampsins/
@@ -9572,7 +9696,7 @@
 1 NOTE FRONTIER above — father of Maria Lampsins (1637 Lichtervelde). NOTE: this is the ordinary Lichtervelde Lampsins family, distinct from the noble 'Dame van Zwevezele' Lampsins line (a namesake earlier avoided).
 1 SOUR @S4@
 2 QUAY 2
-0 @I416@ INDI
+0 @I418@ INDI
 1 REFN peremans
 2 TYPE project-id
 1 NAME Joanna Catharina Jacoba /Peremans/
@@ -9683,9 +9807,18 @@
 2 CONT She appears again, aged 29, at [[ludovica_bossin]]'s own birth act (Sint-Stevens-Woluwe
 2 CONT nr. 18, 5 October 1853, S33) — again *Anna Catharina Peremans*, born Zaventem, matching
 2 CONT her 1824 birth year exactly.
-1 SOUR @S120@
+2 CONT
+2 CONT A FIFTH SIBLING (2026-07-27): [[jbaptista_peremans]] married **Joanna Catharina Van
+2 CONT Gindertaelen** at Zaventem on **21 August 1848** (S34). This one clears a higher bar than
+2 CONT the three found in 2026-07-26: it carries an exact day-level match to their mother's
+2 CONT already-held death date (19 December 1843, Zaventem) from a *separately transcribed*
+2 CONT register, not merely the parent-name pair with a place borrowed from a volume title. The
+2 CONT same act also surfaces a one-year conflict on their father's own death date — 1836 here
+2 CONT against 1837 in this record's own S19 — left open, and recorded in full on
+2 CONT [[egidius_peremans]] rather than picked here.
+1 SOUR @S121@
 2 QUAY 2
-0 @I417@ INDI
+0 @I419@ INDI
 1 REFN petronella_b1754
 2 TYPE project-id
 1 NAME Petronella /Bundervoet/
@@ -9707,7 +9840,7 @@
 2 CONT or Assenede would give the day and the parents in the register's own words.
 1 SOUR @S43@
 2 QUAY 2
-0 @I418@ INDI
+0 @I420@ INDI
 1 REFN petronella_elseviers
 2 TYPE project-id
 1 NAME Petronella /Elseviers/
@@ -9735,7 +9868,7 @@
 2 CONT would settle which this family used.
 1 SOUR @S65@
 2 QUAY 2
-0 @I419@ INDI
+0 @I421@ INDI
 1 REFN petronella_v
 2 TYPE project-id
 1 NAME Petronella /Verniers/
@@ -9752,7 +9885,7 @@
 1 NOTE Lived her whole documented life in Destelbergen; wife of Ludovicus Paelinck and mother of Adrianus (1690).
 1 SOUR @S5@
 2 QUAY 2
-0 @I420@ INDI
+0 @I422@ INDI
 1 REFN petronella_wolf
 2 TYPE project-id
 1 NAME Petronella /Wolf/
@@ -9760,7 +9893,7 @@
 2 SURN Wolf
 1 SEX F
 1 OCCU dagloonster (day labourer)
-1 FAMS @F206@
+1 FAMS @F208@
 1 NOTE Named as mother of the bride in her daughter [[maria_wolf]]'s marriage act —
 2 CONT Sint-Stevens-Woluwe nr. 4, 17 June 1858 (S33), a *dagloonster*. No father is named for
 2 CONT the bride at all — the act records her as a *verlaten kind*, an abandoned child.
@@ -9777,7 +9910,7 @@
 2 CONT register or [[maria_wolf]]'s own birth act — neither yet searched for.
 1 SOUR @S78@
 2 QUAY 2
-0 @I421@ INDI
+0 @I423@ INDI
 1 REFN petronilla_vk
 2 TYPE project-id
 1 NAME Petronilla Carolina /Van Kerckhove/
@@ -9794,7 +9927,7 @@
 1 NOTE From Kalken; married there in 1739 and later died in Destelbergen. Mother of Apolonius (1748).
 1 SOUR @S5@
 2 QUAY 2
-0 @I422@ INDI
+0 @I424@ INDI
 1 REFN petrus_b1727
 2 TYPE project-id
 1 NAME Petrus (Pieter) /Bundervoet/
@@ -9832,7 +9965,7 @@
 2 CONT van teraardebestelling" — a burial act. Not yet retrieved.
 1 SOUR @S43@
 2 QUAY 2
-0 @I423@ INDI
+0 @I425@ INDI
 1 REFN petrus_blomme
 2 TYPE project-id
 1 NAME Petrus Augustus /Blomme/
@@ -9843,8 +9976,8 @@
 2 DATE 23 JAN 1884
 2 PLAC Stene
 1 OCCU werkman
-1 FAMS @F190@
-1 FAMC @F181@
+1 FAMS @F192@
+1 FAMC @F183@
 1 NOTE Second husband of [[louise_bocklandt]], who had divorced [[edouard_dk]] on 14 November
 2 CONT 1922. The Familiekunde Westkust memorial-card record ([[S17]]) first named him as her
 2 CONT partner, at her death on 15 July 1946 — she died a Blomme.
@@ -9858,9 +9991,9 @@
 2 CONT for the first time: [[josephus_blomme]] and [[mathilde_meseure]].
 2 CONT
 2 CONT He is a step-relation, not blood: no line of descent in this tree runs through him.
-1 SOUR @S121@
+1 SOUR @S122@
 2 QUAY 3
-0 @I424@ INDI
+0 @I426@ INDI
 1 REFN petrus_bundervoet1560
 2 TYPE project-id
 1 NAME Petrus /Bundervoet/
@@ -9871,8 +10004,8 @@
 2 DATE 1560
 1 DEAT
 2 DATE ABT 1605
-1 FAMS @F196@
-1 FAMS @F204@
+1 FAMS @F198@
+1 FAMS @F206@
 1 NOTE The earliest documented ancestor of the Bundervoet line (Evergem, ~1560); married twice and was the father of Livinus.
 2 CONT
 2 CONT CORRECTION (July 2026) to the note recorded a pass earlier. The full-text find was written
@@ -9887,7 +10020,7 @@
 2 CONT right century, some 30 km from Evergem. A lead for objective 3, and still not a link.
 1 SOUR @S46@
 2 QUAY 2
-0 @I425@ INDI
+0 @I427@ INDI
 1 REFN petrus_debaecke
 2 TYPE project-id
 1 NAME Petrus /De Baecke/
@@ -9900,7 +10033,7 @@
 1 NOTE FRONTIER above — father of Adrianus De Baecke (1630). Dates and parents not recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I426@ INDI
+0 @I428@ INDI
 1 REFN petrus_degrande
 2 TYPE project-id
 1 NAME Petrus /De Grande/
@@ -9916,7 +10049,7 @@
 1 NOTE Father of Michael De Grande (1726).
 1 SOUR @S4@
 2 QUAY 2
-0 @I427@ INDI
+0 @I429@ INDI
 1 REFN petrus_devos
 2 TYPE project-id
 1 NAME Petrus Jacobus Franciscus /Devos/
@@ -9926,7 +10059,7 @@
 1 FAMS @F119@
 1 SOUR @S22@
 2 QUAY 2
-0 @I428@ INDI
+0 @I430@ INDI
 1 REFN petrus_f
 2 TYPE project-id
 1 NAME Petrus Franciscus /Bundervoet/
@@ -9954,9 +10087,9 @@
 2 CONT cards. The Doodsprentjes scan is behind a session — the record's image URL returns the
 2 CONT site's search page, not the card — so no image has been read here. Reading it, or the
 2 CONT Oostende 1943 civil death act, is what would make this `doc`.
-1 SOUR @S122@
+1 SOUR @S123@
 2 QUAY 2
-0 @I429@ INDI
+0 @I431@ INDI
 1 REFN petrus_huyghebaert27
 2 TYPE project-id
 1 NAME Petrus Ferdinandus /Huyghebaert/
@@ -9970,7 +10103,7 @@
 1 NOTE Oudenburg birth index, act nr. 63, 5 August 1827.
 1 SOUR @S2@
 2 QUAY 2
-0 @I430@ INDI
+0 @I432@ INDI
 1 REFN petrus_janssen22
 2 TYPE project-id
 1 NAME Petrus Jacobus /Janssen/
@@ -9984,7 +10117,7 @@
 1 NOTE Oostende birth index, act nr. 392, 24 November 1822 (RAB ID 624473).
 1 SOUR @S2@
 2 QUAY 2
-0 @I431@ INDI
+0 @I433@ INDI
 1 REFN petrus_jos_keirsebilck
 2 TYPE project-id
 1 NAME Petrus Josephus /Keirsebilck/
@@ -9998,11 +10131,11 @@
 2 DATE 20 MAY 1817
 2 PLAC Oostkamp
 1 FAMS @F43@
-1 FAMC @F180@
+1 FAMC @F182@
 1 NOTE Father of Joanna Keirsebilck (1791). Parents Joannes Keirsebilck (1728-1781) x Maria Catharina De Clerck (1727-1768).
 1 SOUR @S4@
 2 QUAY 2
-0 @I432@ INDI
+0 @I434@ INDI
 1 REFN petrus_sabbe
 2 TYPE project-id
 1 NAME Petrus /Sabbe/
@@ -10012,14 +10145,14 @@
 1 DEAT
 2 DATE 31 DEC 1652
 2 PLAC Oostkamp (Ruddervoorde)
-1 FAMS @F183@
+1 FAMS @F185@
 1 FAMC @F100@
 1 NOTE Source detail: Geneanet isavdw (Rijksarchief aktes; Sosa 6760)
 2 CONT
 2 CONT Also 'Schabbe'. Married Judoca Vandenberghe 1616; nine children incl. Simon Sabbe (1627). Witness at the wedding was his uncle Michiel Sabbe (b.1557). Parents Willem Sabbe x Clara Vande Putte. The Sabbe line runs back to Judocus 'Joos' Sabbe (~1475) around Harelbeke.
 1 SOUR @S4@
 2 QUAY 2
-0 @I433@ INDI
+0 @I435@ INDI
 1 REFN petrus_sabbe_1504
 2 TYPE project-id
 1 NAME Petrus /Sabbe/
@@ -10032,13 +10165,13 @@
 1 DEAT
 2 DATE 1557
 1 OCCU landbouwer (farmer)
-1 FAMS @F209@
-1 FAMC @F208@
+1 FAMS @F211@
+1 FAMC @F210@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE Born 1504 in Zwevegem (reign of Charles V), a farmer. Father of Willem Sabbe (~1530). Son of Judocus 'Joos' Sabbe (~1475), grandson of Gillis Sabbe (~1440).
 1 SOUR @S4@
 2 QUAY 2
-0 @I434@ INDI
+0 @I436@ INDI
 1 REFN petrus_vandewalle
 2 TYPE project-id
 1 NAME Petrus /Vandewalle/
@@ -10052,7 +10185,7 @@
 1 NOTE Father of Carolus Vandewalle (1638, born out of wedlock to Francisca Van Houtte). Son of Simon Vandewalle, the sexton of Oostkamp.
 1 SOUR @S4@
 2 QUAY 2
-0 @I435@ INDI
+0 @I437@ INDI
 1 REFN petrus_vannieuwenhuyse
 2 TYPE project-id
 1 NAME Petrus /Van Nieuwenhuyse/
@@ -10095,9 +10228,9 @@
 2 CONT [[cornelia_govaert]], his mother. No act id has been read for that entry, so it stays a
 2 CONT frontier rather than a correction: it may be a second Marinus, a mis-transcribed date, or a
 2 CONT real conflict with her death year.
-1 SOUR @S123@
+1 SOUR @S124@
 2 QUAY 2
-0 @I436@ INDI
+0 @I438@ INDI
 1 REFN petrus_vanrenterghem
 2 TYPE project-id
 1 NAME Petrus /Van Renterghem/
@@ -10108,19 +10241,19 @@
 2 DATE ABT 1500
 1 DEAT
 2 DATE BEF 1530
-1 FAMS @F198@
+1 FAMS @F200@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE DEEPEST-TIER ANCESTOR — born ~1500, Oostkamp area. Father of Guillielmus Van Renterghem (~1530). Top of this line; no parents recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I437@ INDI
+0 @I439@ INDI
 1 REFN petrus_vermorgen
 2 TYPE project-id
 1 NAME Petrus /Vermorgen/
 2 GIVN Petrus
 2 SURN Vermorgen
 1 SEX U
-1 FAMS @F197@
+1 FAMS @F199@
 1 NOTE Married [[paulina_vdberghe]] at Hamme on 18 May 1882. He is here because she is: the act
 2 CONT that made her a graftable daughter of [[jan_van_bergen]] and [[ida_vermandel]] is his
 2 CONT marriage act too, and a person named in this tree gets a record rather than living as a
@@ -10133,9 +10266,9 @@
 2 CONT FRONTIER — the rest of this act. It is `fs-hamme-1882-marriage-vermorgen-vandenberghe`,
 2 CONT FamilySearch film 004833291 item 1, image 249, and re-reading the groom's half would fill
 2 CONT this record in one visit and probably add his parents as well.
-1 SOUR @S119@
+1 SOUR @S120@
 2 QUAY 3
-0 @I438@ INDI
+0 @I440@ INDI
 1 REFN petrus_wittenheyns
 2 TYPE project-id
 1 NAME Petrus /Wittenheyns/
@@ -10166,7 +10299,7 @@
 2 CONT it is derived from surname and year alone; this note is the answer to it.
 1 SOUR @S4@
 2 QUAY 2
-0 @I439@ INDI
+0 @I441@ INDI
 1 REFN petrusjacobus_v
 2 TYPE project-id
 1 NAME Petrus Jacobus /Vanstechelman/
@@ -10189,7 +10322,7 @@
 2 CONT Wagebaert ([[fs-wvl-bs]]).
 1 SOUR @S47@
 2 QUAY 2
-0 @I440@ INDI
+0 @I442@ INDI
 1 REFN petruspaulus_huyghebaert37
 2 TYPE project-id
 1 NAME Petrus Paulus /Huyghebaert/
@@ -10204,7 +10337,7 @@
 2 CONT [[hubertus_huyghebaert]] × [[joanna_derudder]].
 1 SOUR @S2@
 2 QUAY 2
-0 @I441@ INDI
+0 @I443@ INDI
 1 REFN pharaildis_janssen52
 2 TYPE project-id
 1 NAME Pharaildis Maria /Janssen/
@@ -10218,7 +10351,7 @@
 1 NOTE Oostende birth index, act nr. 127, 6 April 1852 (RAB ID 1458590). Eldest of ten children.
 1 SOUR @S2@
 2 QUAY 2
-0 @I442@ INDI
+0 @I444@ INDI
 1 REFN philemondus_bocklandt
 2 TYPE project-id
 1 NAME Philemondus /Bocklandt/
@@ -10243,9 +10376,9 @@
 2 CONT same town — 10 June against 8 June 1880. That is close enough to read the marriage act's
 2 CONT birthdate with some caution: it is a date recalled twenty years later, not a contemporary
 2 CONT record, and the true gap between the two events may not be quite this narrow.
-1 SOUR @S124@
+1 SOUR @S125@
 2 QUAY 2
-0 @I443@ INDI
+0 @I445@ INDI
 1 REFN philippa_vanpuyenbroeck
 2 TYPE project-id
 1 NAME Philippa /Van Puyenbroeck/
@@ -10260,7 +10393,7 @@
 1 NOTE Paternal great-grandmother of Louise Bocklandt; wife of Daniel Bocklandt. Of Hamme (Oost-Vlaanderen).
 1 SOUR @S54@
 2 QUAY 2
-0 @I444@ INDI
+0 @I446@ INDI
 1 REFN philippus
 2 TYPE project-id
 1 NAME Philippus Jacobus /Bundervoet/
@@ -10278,7 +10411,7 @@
 1 NOTE Of Evergem; married Joanna Adriaenssens in 1784, with many children including Judocus, Livinus and Peter Frans.
 1 SOUR @S43@
 2 QUAY 2
-0 @I445@ INDI
+0 @I447@ INDI
 1 REFN philippus_daneel
 2 TYPE project-id
 1 NAME Philippus /Daneel/
@@ -10289,7 +10422,7 @@
 1 NOTE FRONTIER above — father of Joanna Theresia Daneel (1808 Keiem). Dates not recovered.
 1 SOUR @S22@
 2 QUAY 2
-0 @I446@ INDI
+0 @I448@ INDI
 1 REFN pierre_ramon
 2 TYPE project-id
 1 NAME Pierre Francois /Ramon/
@@ -10308,7 +10441,7 @@
 1 NOTE A gardener and seaman who DROWNED AT SEA in October 1858. First wife Joanna Daneel (our line); he had remarried Anna Degroo in 1857.
 1 SOUR @S22@
 2 QUAY 2
-0 @I447@ INDI
+0 @I449@ INDI
 1 REFN pieter_coenraets04
 2 TYPE project-id
 1 NAME Pieter Joseph /Coenraets/
@@ -10331,7 +10464,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I448@ INDI
+0 @I450@ INDI
 1 REFN pieter_coppens00
 2 TYPE project-id
 1 NAME Pieter /Coppens/
@@ -10354,7 +10487,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I449@ INDI
+0 @I451@ INDI
 1 REFN pieter_stekelorum
 2 TYPE project-id
 1 NAME Pieter /Stekelorum/
@@ -10382,7 +10515,7 @@
 2 CONT her own. Neither touches the Roksem 1855 identification.
 1 SOUR @S7@
 2 QUAY 2
-0 @I450@ INDI
+0 @I452@ INDI
 1 REFN pieterjacobus_v
 2 TYPE project-id
 1 NAME Pieter Jacobus /Vanstechelman/
@@ -10400,7 +10533,7 @@
 1 NOTE Of Zevekote; first wife Carolina Van Hille (our line, eight children incl. Felix); remarried Anna Osaer in 1810.
 1 SOUR @S16@
 2 QUAY 2
-0 @I451@ INDI
+0 @I453@ INDI
 1 REFN pluvier
 2 TYPE project-id
 1 NAME Elisabeth /Pluvier/
@@ -10410,7 +10543,7 @@
 1 FAMS @F32@
 1 SOUR @S16@
 2 QUAY 2
-0 @I452@ INDI
+0 @I454@ INDI
 1 REFN quinart
 2 TYPE project-id
 1 NAME Marie Anne Catherine (Kinart) /Quinart/
@@ -10461,9 +10594,9 @@
 2 CONT FRONTIER: the KINART/QUINART surname tables at netradyle were never searched directly —
 2 CONT she was only ever reached through her husband's and children's Thumas rows — and her own
 2 CONT birth or baptismal record has not been sought at all.
-1 SOUR @S125@
+1 SOUR @S126@
 2 QUAY 2
-0 @I453@ INDI
+0 @I455@ INDI
 1 REFN ramon
 2 TYPE project-id
 1 NAME Eugenia Mathildis /Ramon/
@@ -10479,28 +10612,28 @@
 1 NOTE Daughter of Carolus Ludovicus Ramon & Cornelia Verkouille; bore fourteen children with J.F. Smessaert.
 1 SOUR @S22@
 2 QUAY 2
-0 @I454@ INDI
+0 @I456@ INDI
 1 REFN reine_storms
 2 TYPE project-id
 1 NAME Reine /Storms/
 2 GIVN Reine
 2 SURN Storms
 1 SEX F
-1 FAMS @F189@
+1 FAMS @F191@
 1 NOTE FRONTIER above — mother of Lucia Theresia Steenkiste (1767).
 1 SOUR @S22@
 2 QUAY 2
-0 @I455@ INDI
+0 @I457@ INDI
 1 REFN rene_dv
 2 TYPE project-id
 1 NAME René /Devriendt/
 2 GIVN René
 2 SURN Devriendt
 1 SEX M
-1 FAMC @F163@
+1 FAMC @F164@
 1 SOUR @S22@
 2 QUAY 1
-0 @I456@ INDI
+0 @I458@ INDI
 1 REFN rene_j
 2 TYPE project-id
 1 NAME René /Janssens/
@@ -10514,7 +10647,7 @@
 1 NOTE A witloof (Belgian-endive / “wit goud”) farmer — the family grew the famous chicory around Zaventem (Vlaams-Brabant). René and Anna later moved to the coast (Middelkerke), and René died in Oostende (after 2000). His Janssens ancestry is not yet cracked — but NOT because of any hard privacy barrier. Belgium's civil-record publicity rule is graduated (births open at 100 yrs, marriages 75, deaths 50) AND, crucially, a direct descendant may obtain a relative's birth/marriage/death act at any age, so the documents that name René's parents ARE obtainable by the family. The reason online searching hasn't found him is mundane: (a) 'Janssens' is one of Belgium's commonest surnames, so with no anchor (his birth village or year, or a parent's name) his records can't be told apart from thousands of others; and (b) no descendant has published him in an online tree, and his post-2000 coast death notice isn't in the digitised obituary aggregators (inmemoriam, ingedachten, DELA all checked, July 2026). CONTRAST with his wife's side: Anna Van Craenenbroeck's Zaventem family WAS located (see anna_vc) because that surname is rare and village-specific. UNLOCKS for René: his birth village + approx year (enough to request the birth act and pull his parents), a bidprentje, or a relative's memory of his parents' names.
 1 SOUR @S45@
 2 QUAY 1
-0 @I457@ INDI
+0 @I459@ INDI
 1 REFN renee
 2 TYPE project-id
 1 NAME Renée /Bundervoet/
@@ -10528,7 +10661,7 @@
 1 NOTE Born in Leuven, 21 June 2017 — the elder of the two youngest, and Léon's sister. She and Léon are what this tree was built for. The two of them were previously held in a single entry, "Renée & Léon Bundervoet"; split apart so each has their own dates.
 1 SOUR @S32@
 2 QUAY 1
-0 @I458@ INDI
+0 @I460@ INDI
 1 REFN rita_dk
 2 TYPE project-id
 1 NAME Rita /De Keyser/
@@ -10566,7 +10699,7 @@
 2 CONT registrar did to the surname, and it would tie Simonne to this family at the same time.
 1 SOUR @S32@
 2 QUAY 1
-0 @I459@ INDI
+0 @I461@ INDI
 1 REFN roegiers
 2 TYPE project-id
 1 NAME Francisca /Roegiers/
@@ -10583,7 +10716,7 @@
 1 NOTE Second wife of Judocus Bundervoet (m. 1834); mother of Bernardus.
 1 SOUR @S35@
 2 QUAY 2
-0 @I460@ INDI
+0 @I462@ INDI
 1 REFN rogerius_debaecke
 2 TYPE project-id
 1 NAME Rogerius /De Baecke/
@@ -10599,7 +10732,7 @@
 1 NOTE Father of Barbara Theresia De Baecke (1709).
 1 SOUR @S4@
 2 QUAY 2
-0 @I461@ INDI
+0 @I463@ INDI
 1 REFN roland
 2 TYPE project-id
 1 NAME Roland /De Keyser/
@@ -10622,9 +10755,9 @@
 2 CONT
 2 CONT His 1943 birth certificate (England & Wales GRO, Edmonton district) remains the record that
 2 CONT would confirm both his parents.
-1 SOUR @S126@
+1 SOUR @S127@
 2 QUAY 1
-0 @I462@ INDI
+0 @I464@ INDI
 1 REFN rolandus_govaert
 2 TYPE project-id
 1 NAME Rolandus /Govaert/
@@ -10635,7 +10768,7 @@
 1 NOTE FRONTIER above — grandfather of Petrus Van Nieuwenhuyse (Govaert side). Dates not recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I463@ INDI
+0 @I465@ INDI
 1 REFN romanie_vincke
 2 TYPE project-id
 1 NAME Romanie Elodie /Vincke/
@@ -10664,7 +10797,7 @@
 2 CONT grafted"); resolved here (research-log §64).
 1 SOUR @S2@
 2 QUAY 2
-0 @I464@ INDI
+0 @I466@ INDI
 1 REFN ronny
 2 TYPE project-id
 1 NAME Ronny /Bundervoet/
@@ -10674,10 +10807,10 @@
 1 BIRT
 2 DATE 20 JAN 1964
 1 FAMS @F107@
-1 FAMC @F187@
+1 FAMC @F189@
 1 SOUR @S3@
 2 QUAY 1
-0 @I465@ INDI
+0 @I467@ INDI
 1 REFN rosalia_caeckaert
 2 TYPE project-id
 1 NAME Rosalia /Caeckaert/
@@ -10693,9 +10826,9 @@
 2 CONT
 2 CONT CORROBORATED (July 2026) as a wife: named alongside her husband in his Oostkamp death act
 2 CONT of 4 March 1876, which puts the marriage on a civil act.
-1 SOUR @S127@
+1 SOUR @S128@
 2 QUAY 2
-0 @I466@ INDI
+0 @I468@ INDI
 1 REFN rosalia_dhooge
 2 TYPE project-id
 1 NAME Rosalia /Dhooge/
@@ -10708,7 +10841,7 @@
 2 CONT children. FRONTIER — the 1881 Evergem marriage act would give all three.
 1 SOUR @S35@
 2 QUAY 2
-0 @I467@ INDI
+0 @I469@ INDI
 1 REFN rosalia_moerloos
 2 TYPE project-id
 1 NAME Rosalia /Moerloos/
@@ -10724,7 +10857,7 @@
 2 CONT reading it would give her age and so her birth year.
 1 SOUR @S13@
 2 QUAY 2
-0 @I468@ INDI
+0 @I470@ INDI
 1 REFN rosalia_w
 2 TYPE project-id
 1 NAME Rosalia /Wittock/
@@ -10739,19 +10872,19 @@
 1 NOTE Housewife; mother of six recorded children including Eduardus (1858).
 1 SOUR @S5@
 2 QUAY 2
-0 @I469@ INDI
+0 @I471@ INDI
 1 REFN rosette
 2 TYPE project-id
 1 NAME Rosette /Van Iseghem/
 2 GIVN Rosette
 2 SURN Van Iseghem
 1 SEX F
-1 FAMS @F187@
+1 FAMS @F189@
 1 FAMC @F14@
 1 NOTE Ronny’s mother; predeceased Marcel. Her Van Iseghem line traces back through Oostende to the 1780s — see her father Joannes and beyond.
-1 SOUR @S128@
+1 SOUR @S129@
 2 QUAY 1
-0 @I470@ INDI
+0 @I472@ INDI
 1 REFN sancha
 2 TYPE project-id
 1 NAME Sancha /De Keyser/
@@ -10764,7 +10897,7 @@
 1 FAMC @F113@
 1 SOUR @S5@
 2 QUAY 1
-0 @I471@ INDI
+0 @I473@ INDI
 1 REFN segerius_bundervoet
 2 TYPE project-id
 1 NAME Segerius /Bundervoet/
@@ -10776,14 +10909,14 @@
 1 DEAT
 2 DATE 16 JUN 1669
 2 PLAC Evergem
-1 FAMS @F173@
+1 FAMS @F175@
 1 FAMC @F131@
 1 NOTE Source detail: Geneanet glorieuxp/paulderidder; death act: Registre des décès d'Evergem 1668-1716 (search.arch.be)
 2 CONT
 2 CONT Father of Joannes Bundervoet (~1637). His death is in the Evergem death register (1669). Father Livinus Bundervoet.
 1 SOUR @S46@
 2 QUAY 2
-0 @I472@ INDI
+0 @I474@ INDI
 1 REFN seraphina_coenraets02
 2 TYPE project-id
 1 NAME Seraphina /Coenraets/
@@ -10806,7 +10939,7 @@
 2 CONT off a forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I473@ INDI
+0 @I475@ INDI
 1 REFN seraphinus_janssen64
 2 TYPE project-id
 1 NAME Seraphinus Augustus /Janssen/
@@ -10820,7 +10953,7 @@
 1 NOTE Oostende birth index, act nr. 394, 14 September 1864 (RAB ID 1458592).
 1 SOUR @S2@
 2 QUAY 2
-0 @I474@ INDI
+0 @I476@ INDI
 1 REFN shaun
 2 TYPE project-id
 1 NAME Shaun /Bundervoet/
@@ -10834,7 +10967,7 @@
 1 NOTE MSc VUB (ETRO); works at KBC. Born 19 January 1988.
 1 SOUR @S32@
 2 QUAY 2
-0 @I475@ INDI
+0 @I477@ INDI
 1 REFN silvester_v
 2 TYPE project-id
 1 NAME Silvester Engelbertus /Vanstechelman/
@@ -10852,7 +10985,7 @@
 1 NOTE Married three times and fathered about fourteen children; the generation that settled the family in Zevekote. Our line runs through his 2nd wife, Angela Casteleyn.
 1 SOUR @S16@
 2 QUAY 2
-0 @I476@ INDI
+0 @I478@ INDI
 1 REFN silvia_brissinck
 2 TYPE project-id
 1 NAME Silvia Rosalia /Brissinck/
@@ -10869,9 +11002,9 @@
 2 CONT image level: Joannes Franciskus Brissinck x Theresia Francisca Levecke. No specific
 2 CONT act reference is held for this pass; it needs the underlying act image read before it
 2 CONT becomes a fact (verification pass, 2026-07-26).
-1 SOUR @S110@
+1 SOUR @S111@
 2 QUAY 3
-0 @I477@ INDI
+0 @I479@ INDI
 1 REFN simon_sabbe
 2 TYPE project-id
 1 NAME Simon /Sabbe/
@@ -10883,12 +11016,12 @@
 1 DEAT
 2 DATE 1711
 2 PLAC Oostkamp
-1 FAMS @F171@
-1 FAMC @F183@
+1 FAMS @F173@
+1 FAMC @F185@
 1 NOTE Father of Judocus Sabbe (~1667). Parents Petrus Sabbe (d.~1652) x Judoca Vandenberghe (~1594); his wife was Joanna Rotsaert.
 1 SOUR @S4@
 2 QUAY 2
-0 @I478@ INDI
+0 @I480@ INDI
 1 REFN simon_vandewalle_1530
 2 TYPE project-id
 1 NAME Simon /Vandewalle/
@@ -10897,11 +11030,11 @@
 1 SEX M
 1 BIRT
 2 DATE ABT 1530
-1 FAMS @F176@
+1 FAMS @F178@
 1 NOTE FRONTIER above — father of Simon Vandewalle the Oostkamp sexton. His own parents are not recorded.
 1 SOUR @S4@
 2 QUAY 2
-0 @I479@ INDI
+0 @I481@ INDI
 1 REFN simon_vandewalle_1565
 2 TYPE project-id
 1 NAME Simon /Vandewalle/
@@ -10916,11 +11049,11 @@
 2 PLAC Oostkamp
 1 OCCU koster / landman (church sexton / farmer)
 1 FAMS @F95@
-1 FAMC @F176@
+1 FAMC @F178@
 1 NOTE Sexton (koster) of Oostkamp church and a Bruges citizen; grave inscription survives in the church. In a 1635 deed he swore he was born in Oostkamp and was then 70 (=> b. ~1565). Extensive property records 1597-1621.
 1 SOUR @S4@
 2 QUAY 2
-0 @I480@ INDI
+0 @I482@ INDI
 1 REFN simonne
 2 TYPE project-id
 1 NAME Simonne /Vandewalle/
@@ -10948,19 +11081,19 @@
 2 CONT
 2 CONT Her identity still turns on the record her own note names: the Gustaaf x Simonne marriage,
 2 CONT or Roland's 1943 English birth certificate with the mother's maiden name.
-1 SOUR @S126@
+1 SOUR @S127@
 2 QUAY 1
-0 @I481@ INDI
+0 @I483@ INDI
 1 REFN sonja_dv
 2 TYPE project-id
 1 NAME Sonja /Devriendt/
 2 GIVN Sonja
 2 SURN Devriendt
 1 SEX F
-1 FAMC @F163@
+1 FAMC @F164@
 1 SOUR @S22@
 2 QUAY 1
-0 @I482@ INDI
+0 @I484@ INDI
 1 REFN sophia_vh
 2 TYPE project-id
 1 NAME Sophia /Vanhoucke/
@@ -10971,7 +11104,7 @@
 1 NOTE Carel Cappaert’s mother (isavdw tree, Rijksarchief).
 1 SOUR @S3@
 2 QUAY 2
-0 @I483@ INDI
+0 @I485@ INDI
 1 REFN sophiavdb
 2 TYPE project-id
 1 NAME Sophia /Van den Broucke/
@@ -10989,7 +11122,7 @@
 1 NOTE Second wife of the innkeeper Felix Vanstechelman; mother of the mason Petrus Jacobus (1854).
 1 SOUR @S16@
 2 QUAY 2
-0 @I484@ INDI
+0 @I486@ INDI
 1 REFN stephanus_ramon
 2 TYPE project-id
 1 NAME Stephanus /Ramon/
@@ -10999,18 +11132,18 @@
 1 DEAT
 2 DATE 29 MAR 1776
 2 PLAC Zande
-1 FAMS @F172@
+1 FAMS @F174@
 1 NOTE Originated in Kortemark; died at Zande. Father of Mattheus Ramon; married Joanna Truant.
 1 SOUR @S22@
 2 QUAY 2
-0 @I485@ INDI
+0 @I487@ INDI
 1 REFN swaelens
 2 TYPE project-id
 1 NAME Joannes Baptista Julianus /Swaelens/
 2 GIVN Joannes Baptista Julianus
 2 SURN Swaelens
 1 SEX U
-1 FAMS @F191@
+1 FAMS @F193@
 1 NOTE Married [[ludovica_bossin]] at **Alsemberg on 17 February 1884**, which makes him
 2 CONT [[bossin]]'s brother-in-law.
 2 CONT
@@ -11022,7 +11155,7 @@
 2 CONT parents in one page.
 1 SOUR @S50@
 2 QUAY 2
-0 @I486@ INDI
+0 @I488@ INDI
 1 REFN theophil_vincke
 2 TYPE project-id
 1 NAME Theophil Henri /Vincke/
@@ -11072,9 +11205,9 @@
 2 CONT have been dangerous here.
 2 CONT
 2 CONT Index only, not the register image, hence `sup`.
-1 SOUR @S129@
+1 SOUR @S130@
 2 QUAY 2
-0 @I487@ INDI
+0 @I489@ INDI
 1 REFN theresia_robbe
 2 TYPE project-id
 1 NAME Theresia Joanna Monica /Robbe/
@@ -11091,7 +11224,7 @@
 1 NOTE Long-lived, reaching 85; her life spanned from the Austrian Netherlands to the Kingdom of Belgium.
 1 SOUR @S9@
 2 QUAY 2
-0 @I488@ INDI
+0 @I490@ INDI
 1 REFN thiery
 2 TYPE project-id
 1 NAME Thiery /Thumas/
@@ -11101,10 +11234,10 @@
 1 BIRT
 2 DATE 29 MAR 1960
 1 FAMS @F68@
-1 FAMC @F185@
+1 FAMC @F187@
 1 SOUR @S45@
 2 QUAY 1
-0 @I489@ INDI
+0 @I491@ INDI
 1 REFN thiery_f
 2 TYPE project-id
 1 NAME François /Thumas/
@@ -11113,12 +11246,12 @@
 1 SEX M
 1 BIRT
 2 DATE BET 1930 AND 1939
-1 FAMS @F185@
+1 FAMS @F187@
 1 FAMC @F114@
 1 NOTE Named by the family. His father is almost certainly Jean Thumas (1907–1995), who stayed in Kraainem — and Jean’s wife was Marie Louise Crabbé, so she is François’s mother. This father-link falls inside the 100-year privacy window and is the only remaining inference. Everything above it is documented: Jean → J.B. Georgius (1876) → Georges Carolus Josephus (1836) → the Grez-Doiceau Thumas trunk back to 1656.
 1 SOUR @S32@
 2 QUAY 1
-0 @I490@ INDI
+0 @I492@ INDI
 1 REFN valentina_vi
 2 TYPE project-id
 1 NAME Valentina Juliette /Van Iseghem/
@@ -11150,7 +11283,7 @@
 2 CONT than entered now.
 1 SOUR @S61@
 2 QUAY 2
-0 @I491@ INDI
+0 @I493@ INDI
 1 REFN valerie_bolle
 2 TYPE project-id
 1 NAME Valerie Marie Pharaïlde /Bolle/
@@ -11163,9 +11296,9 @@
 2 CONT act — Oostende, 22 April 1922, act nr. 280 (`rab-bs-overlijdens`), where she is written
 2 CONT Bolle Valerie Maria. Index only, not the register image, hence `sup`. Her own birth,
 2 CONT death and parents are not in the reachable pages.
-1 SOUR @S129@
+1 SOUR @S130@
 2 QUAY 2
-0 @I492@ INDI
+0 @I494@ INDI
 1 REFN vandenbemden
 2 TYPE project-id
 1 NAME Joanna /Vandenbemden/
@@ -11179,7 +11312,7 @@
 2 DATE 29 APR 1948
 2 PLAC Kraainem
 1 OCCU naaister (seamstress)
-1 FAMS @F168@
+1 FAMS @F170@
 1 FAMC @F1@
 1 NOTE Source detail: Geneanet (jswaelens); her 1902 Kraainem marriage act
 2 CONT
@@ -11195,9 +11328,9 @@
 2 CONT evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 2 CONT Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 2 CONT its image was actually read. None was. The register images are the named next step.
-1 SOUR @S130@
+1 SOUR @S131@
 2 QUAY 2
-0 @I493@ INDI
+0 @I495@ INDI
 1 REFN vandervarent_j
 2 TYPE project-id
 1 NAME Joannes /van der Varent/
@@ -11213,7 +11346,7 @@
 2 CONT 1805–1813.
 1 SOUR @S83@
 2 QUAY 2
-0 @I494@ INDI
+0 @I496@ INDI
 1 REFN vandervarent_p
 2 TYPE project-id
 1 NAME Petrús /van der Varent/
@@ -11222,7 +11355,7 @@
 1 SEX M
 1 BIRT
 2 DATE ABT 1813
-1 FAMS @F195@
+1 FAMS @F197@
 1 FAMC @F153@
 1 NOTE Married [[mjosephina_peremans]] at Zaventem on **5 November 1840** (S29), which makes him
 2 CONT [[peremans]]'s brother-in-law and [[guilielmus_bossin]]'s, six years before that wedding.
@@ -11235,9 +11368,61 @@
 2 CONT The record gives no place of birth, no trade and no residence, so this record has none.
 2 CONT
 2 CONT `sup`: an indexed registration, the act itself unread.
+2 CONT
+2 CONT NOT PROVEN, a frontier only (2026-07-27): a **Petrus Van Der Varen**, 35, stands witness
+2 CONT at [[jbaptista_peremans]]'s Zaventem marriage on 21 August 1848 (S34) — plausibly this
+2 CONT man, since 35 in 1848 implies ~1813, matching the ~1813 already held here, but adding no
+2 CONT more precision than that. The act states no relation, and the surname is spelled
+2 CONT differently (*Van Der Varen* against this record's *van der Varent*). Surname, place and
+2 CONT a plausible age are exactly the pattern that produced false positives elsewhere this
+2 CONT run — one identifier's worth, not two, so this is recorded as a lead and not linked.
 1 SOUR @S83@
 2 QUAY 2
-0 @I495@ INDI
+0 @I497@ INDI
+1 REFN vangindertaelen_jc
+2 TYPE project-id
+1 NAME Joanna Catharina /Van Gindertaelen/
+2 GIVN Joanna Catharina
+2 SURN Van Gindertaelen
+1 SEX F
+1 BIRT
+2 DATE ABT 1825
+1 OCCU arbeidster (labourer)
+1 FAMS @F168@
+1 FAMC @F163@
+1 NOTE Married [[jbaptista_peremans]] at **Zaventem on 21 August 1848** (S34), which makes her
+2 CONT [[peremans]]'s sister-in-law. She was **23**, an *arbeidster*, and the act states she
+2 CONT could not write — twenty-three in August 1848 gives the *about 1825* birth year here, an
+2 CONT age converted to a year and marked approximate, not a date the act itself gives.
+2 CONT
+2 CONT Daughter of [[vangindertaelen_jf]] and [[huenaerts_ac]], both named in the act with their
+2 CONT roles labelled — present and consenting — so there is no identity question here, only the
+2 CONT ordinary absence of a birth date, birthplace or trade for the parents beyond what the act
+2 CONT gives.
+2 CONT
+2 CONT `sup`: an index-level AGATHA/Demogen act analysis, the register image unread.
+2 CONT
+2 CONT FRONTIER: her own birth act at Zaventem around 1825, and any children of this marriage.
+1 SOUR @S91@
+2 QUAY 2
+0 @I498@ INDI
+1 REFN vangindertaelen_jf
+2 TYPE project-id
+1 NAME Joannes Franciscus /Van Gindertaelen/
+2 GIVN Joannes Franciscus
+2 SURN Van Gindertaelen
+1 SEX M
+1 OCCU arbeider (labourer)
+1 FAMS @F163@
+1 NOTE Named in his daughter [[vangindertaelen_jc]]'s marriage act — Zaventem, 21 August 1848
+2 CONT (S34) — as *arbeider* of Zaventem, present and consenting. The act gives him no age and
+2 CONT no dates, so this record has none.
+2 CONT
+2 CONT FRONTIER: his marriage to [[huenaerts_ac]], which the Zaventem registers should hold for
+2 CONT roughly 1815–1825.
+1 SOUR @S91@
+2 QUAY 2
+0 @I499@ INDI
 1 REFN victor_bemden74
 2 TYPE project-id
 1 NAME Victor /Van den Bemden/
@@ -11265,7 +11450,7 @@
 2 CONT forename.
 1 SOUR @S1@
 2 QUAY 2
-0 @I496@ INDI
+0 @I500@ INDI
 1 REFN victoria_declerck
 2 TYPE project-id
 1 NAME Victoria /Declerck/
@@ -11297,7 +11482,7 @@
 2 CONT single index row alone, with no independent document. Left unlinked.
 1 SOUR @S18@
 2 QUAY 2
-0 @I497@ INDI
+0 @I501@ INDI
 1 REFN victoria_engelsen
 2 TYPE project-id
 1 NAME Victoria Eugenia /Engelsen/
@@ -11310,11 +11495,11 @@
 1 DEAT
 2 DATE 8 SEP 1849
 2 PLAC Oostende
-1 FAMS @F179@
+1 FAMS @F181@
 1 NOTE Widowed in 1832 at 41; she lived another 17 years.
 1 SOUR @S9@
 2 QUAY 2
-0 @I498@ INDI
+0 @I502@ INDI
 1 REFN victorina_janssen60
 2 TYPE project-id
 1 NAME Victorina Francisca /Janssen/
@@ -11329,7 +11514,7 @@
 2 CONT is spelled "Joana" on this row — the same couple, a transcription variant.
 1 SOUR @S2@
 2 QUAY 2
-0 @I499@ INDI
+0 @I503@ INDI
 1 REFN virginia_leynseele
 2 TYPE project-id
 1 NAME Virginia Coleta /Leynseele/
@@ -11342,7 +11527,7 @@
 1 NOTE Second wife of Engel Antonius Vincke; mother of Lucien Vincke (1840).
 1 SOUR @S25@
 2 QUAY 2
-0 @I500@ INDI
+0 @I504@ INDI
 1 REFN wilhelmina_b1650
 2 TYPE project-id
 1 NAME Wilhelmina /Bundervoet/
@@ -11360,7 +11545,7 @@
 2 CONT nothing else. No act read.
 1 SOUR @S43@
 2 QUAY 2
-0 @I501@ INDI
+0 @I505@ INDI
 1 REFN willem_sabbe_o
 2 TYPE project-id
 1 NAME Willem /Sabbe/
@@ -11374,14 +11559,14 @@
 2 DATE 1581
 2 PLAC Wielsbeke (Ooigem)
 1 OCCU landbouwer (farmer)
-1 FAMS @F193@
-1 FAMC @F209@
+1 FAMS @F195@
+1 FAMC @F211@
 1 NOTE Source detail: Geneanet isavdw (Sosa 27040)
 2 CONT
 2 CONT Grandfather of Petrus Sabbe (d.1652); farmer around Harelbeke/Wielsbeke (the Sabbe family's cradle, before the line moved to Oostkamp). Father Petrus Sabbe (1504-1557).
 1 SOUR @S4@
 2 QUAY 2
-0 @I502@ INDI
+0 @I506@ INDI
 1 REFN willem_sabbe_y
 2 TYPE project-id
 1 NAME Willem /Sabbe/
@@ -11391,11 +11576,11 @@
 1 BIRT
 2 DATE BET 1560 AND 1569
 1 FAMS @F100@
-1 FAMC @F193@
+1 FAMC @F195@
 1 NOTE Father of Petrus Sabbe (d.1652). Son of Willem Sabbe (~1530-1581); brother of Michiel Sabbe (b.1557), who witnessed Petrus's 1616 marriage.
 1 SOUR @S4@
 2 QUAY 2
-0 @I503@ INDI
+0 @I507@ INDI
 1 REFN willem_vanhecke
 2 TYPE project-id
 1 NAME Willem /van Hecke/
@@ -11404,7 +11589,7 @@
 1 SEX M
 1 BIRT
 2 DATE ABT 1580
-1 FAMS @F199@
+1 FAMS @F201@
 1 NOTE Spouse (no record of their own): (wife unrecorded)
 1 NOTE Father of Joanna (Janneken) van Hecke (~1610–1678), who married Segerius Bundervoet —
 2 CONT so a direct ancestor, and with a birth about 1580 one of the earliest people in the
@@ -11421,7 +11606,7 @@
 2 CONT none is recorded here.
 1 SOUR @S43@
 2 QUAY 2
-0 @I504@ INDI
+0 @I508@ INDI
 1 REFN yvonne
 2 TYPE project-id
 1 NAME Yvonne /Smessaert/
@@ -11431,7 +11616,7 @@
 1 BIRT
 2 DATE 11 OCT 1914
 2 PLAC Oostende
-1 FAMS @F163@
+1 FAMS @F164@
 1 FAMC @F120@
 1 NOTE Born before her parents wed and legitimized by their 1919 marriage; married Marcel Devriendt in 1937. Born 11 October — the same day-and-month as her father's birthday.
 1 SOUR @S22@
@@ -11441,76 +11626,76 @@
 1 WIFE @I107@
 1 CHIL @I1@
 1 CHIL @I160@
-1 CHIL @I226@
-1 CHIL @I310@
+1 CHIL @I227@
 1 CHIL @I312@
-1 CHIL @I335@
-1 CHIL @I492@
-1 CHIL @I495@
+1 CHIL @I314@
+1 CHIL @I337@
+1 CHIL @I494@
+1 CHIL @I499@
 1 MARR
 2 DATE 24 APR 1873
 2 PLAC Sint-Stevens-Woluwe
 0 @F2@ FAM
 1 HUSB @I215@
-1 WIFE @I249@
+1 WIFE @I251@
 1 CHIL @I2@
 1 CHIL @I3@
 1 CHIL @I51@
 1 CHIL @I55@
 1 CHIL @I78@
 1 CHIL @I79@
-1 CHIL @I354@
-1 CHIL @I378@
-1 CHIL @I429@
-1 CHIL @I440@
+1 CHIL @I356@
+1 CHIL @I380@
+1 CHIL @I431@
+1 CHIL @I442@
 1 MARR
 2 DATE 29 APR 1821
 2 PLAC Oudenburg
 0 @F3@ FAM
-1 HUSB @I444@
+1 HUSB @I446@
 1 WIFE @I4@
-1 CHIL @I300@
+1 CHIL @I302@
 1 MARR
 2 DATE 1784
 0 @F4@ FAM
-1 HUSB @I272@
+1 HUSB @I274@
 1 WIFE @I5@
-1 CHIL @I273@
+1 CHIL @I275@
 0 @F5@ FAM
-1 HUSB @I303@
+1 HUSB @I305@
 1 WIFE @I43@
 1 CHIL @I6@
 1 MARR
 2 DATE 4 AUG 1700
 2 PLAC Oostkamp
 0 @F6@ FAM
-1 HUSB @I426@
+1 HUSB @I428@
 1 WIFE @I6@
-1 CHIL @I391@
+1 CHIL @I393@
 0 @F7@ FAM
-1 HUSB @I425@
-1 WIFE @I359@
+1 HUSB @I427@
+1 WIFE @I361@
 1 CHIL @I7@
 0 @F8@ FAM
 1 HUSB @I7@
 1 WIFE @I37@
-1 CHIL @I460@
+1 CHIL @I462@
 0 @F9@ FAM
-1 HUSB @I350@
-1 WIFE @I419@
+1 HUSB @I352@
+1 WIFE @I421@
 1 CHIL @I8@
 1 MARR
 2 DATE FEB 1681
 2 PLAC Lochristi
 0 @F10@ FAM
 1 HUSB @I8@
-1 WIFE @I327@
-1 CHIL @I330@
+1 WIFE @I329@
+1 CHIL @I332@
 1 MARR
 2 DATE 17 JAN 1711
 2 PLAC Lochristi
 0 @F11@ FAM
-1 HUSB @I390@
+1 HUSB @I392@
 1 WIFE @I57@
 1 CHIL @I9@
 1 MARR
@@ -11519,43 +11704,43 @@
 0 @F12@ FAM
 1 HUSB @I9@
 1 WIFE @I38@
-1 CHIL @I225@
+1 CHIL @I226@
 1 MARR
 2 DATE 1768
 2 PLAC Oostkamp
 0 @F13@ FAM
 1 HUSB @I159@
-1 WIFE @I408@
+1 WIFE @I410@
 1 CHIL @I10@
 1 MARR
 2 DATE 10 NOV 1906
 2 PLAC Oostende
 0 @F14@ FAM
-1 HUSB @I278@
+1 HUSB @I280@
 1 WIFE @I10@
 1 CHIL @I130@
 1 CHIL @I132@
-1 CHIL @I469@
+1 CHIL @I471@
 1 MARR
 2 DATE 24 MAR 1928
 2 PLAC Stene
 0 @F15@ FAM
-1 HUSB @I449@
+1 HUSB @I451@
 1 WIFE @I195@
 1 CHIL @I11@
 0 @F16@ FAM
-1 HUSB @I274@
+1 HUSB @I276@
 1 WIFE @I11@
 1 CHIL @I41@
 0 @F17@ FAM
 1 HUSB @I12@
-1 WIFE @I411@
+1 WIFE @I413@
 1 MARR
 2 DATE 11 MAY 1924
 2 PLAC Oostende
 0 @F18@ FAM
-1 HUSB @I244@
-1 WIFE @I319@
+1 HUSB @I246@
+1 WIFE @I321@
 1 CHIL @I13@
 1 CHIL @I193@
 1 MARR
@@ -11563,14 +11748,14 @@
 2 PLAC Sint-Niklaas
 0 @F19@ FAM
 1 HUSB @I14@
-1 WIFE @I487@
+1 WIFE @I489@
 1 CHIL @I35@
 1 MARR
 2 DATE 5 MAY 1813
 2 PLAC Oostende
 0 @F20@ FAM
-1 HUSB @I342@
-1 WIFE @I345@
+1 HUSB @I344@
+1 WIFE @I347@
 1 CHIL @I15@
 1 CHIL @I60@
 1 CHIL @I72@
@@ -11578,11 +11763,11 @@
 1 CHIL @I150@
 1 CHIL @I156@
 1 CHIL @I163@
-1 CHIL @I218@
-1 CHIL @I245@
-1 CHIL @I315@
-1 CHIL @I463@
-1 CHIL @I486@
+1 CHIL @I219@
+1 CHIL @I247@
+1 CHIL @I317@
+1 CHIL @I465@
+1 CHIL @I488@
 1 MARR
 2 DATE 24 MAY 1865
 2 PLAC Diksmuide
@@ -11592,9 +11777,9 @@
 1 CHIL @I27@
 1 CHIL @I73@
 1 CHIL @I178@
-1 CHIL @I309@
-1 CHIL @I313@
-1 CHIL @I338@
+1 CHIL @I311@
+1 CHIL @I315@
+1 CHIL @I340@
 1 MARR
 2 DATE 19 SEP 1888
 2 PLAC Diksmuide
@@ -11602,51 +11787,51 @@
 1 HUSB @I204@
 1 WIFE @I16@
 0 @F23@ FAM
-1 HUSB @I428@
+1 HUSB @I430@
 1 WIFE @I54@
 1 CHIL @I17@
 0 @F24@ FAM
 1 HUSB @I17@
 1 WIFE @I148@
-1 CHIL @I356@
+1 CHIL @I358@
 0 @F25@ FAM
 1 HUSB @I133@
-1 WIFE @I377@
+1 WIFE @I379@
 1 CHIL @I18@
 1 CHIL @I70@
 1 CHIL @I149@
-1 CHIL @I339@
-1 CHIL @I346@
-1 CHIL @I387@
-1 CHIL @I412@
-1 CHIL @I442@
+1 CHIL @I341@
+1 CHIL @I348@
+1 CHIL @I389@
+1 CHIL @I414@
+1 CHIL @I444@
 0 @F26@ FAM
 1 HUSB @I85@
-1 WIFE @I382@
+1 WIFE @I384@
 1 CHIL @I19@
-1 CHIL @I355@
+1 CHIL @I357@
 1 MARR
 2 DATE 1 FEB 1860
 2 PLAC Nieuwkerken-Waas
 0 @F27@ FAM
 1 HUSB @I19@
-1 WIFE @I467@
+1 WIFE @I469@
 1 MARR
 2 DATE 7 APR 1909
 2 PLAC Sint-Niklaas
 0 @F28@ FAM
-1 HUSB @I290@
+1 HUSB @I292@
 1 WIFE @I51@
 1 CHIL @I20@
 1 CHIL @I56@
 1 CHIL @I80@
 1 CHIL @I164@
 1 CHIL @I212@
-1 CHIL @I375@
-1 CHIL @I414@
-1 CHIL @I441@
-1 CHIL @I473@
-1 CHIL @I498@
+1 CHIL @I377@
+1 CHIL @I416@
+1 CHIL @I443@
+1 CHIL @I475@
+1 CHIL @I502@
 1 MARR
 2 DATE 28 AUG 1851
 2 PLAC Oostende
@@ -11654,9 +11839,9 @@
 1 HUSB @I108@
 1 WIFE @I201@
 1 CHIL @I22@
-1 CHIL @I227@
-1 CHIL @I447@
-1 CHIL @I472@
+1 CHIL @I228@
+1 CHIL @I449@
+1 CHIL @I474@
 1 MARR
 2 DATE 15 APR 1899
 2 PLAC Kraainem
@@ -11667,35 +11852,35 @@
 2 DATE 8 FEB 1897
 2 PLAC Kraainem
 0 @F31@ FAM
-1 HUSB @I280@
+1 HUSB @I282@
 1 WIFE @I167@
 1 CHIL @I24@
 1 MARR
 2 DATE ABT 1673
 0 @F32@ FAM
 1 HUSB @I24@
-1 WIFE @I451@
+1 WIFE @I453@
 1 CHIL @I26@
 0 @F33@ FAM
 1 HUSB @I25@
 1 WIFE @I90@
-1 CHIL @I276@
+1 CHIL @I278@
 0 @F34@ FAM
 1 HUSB @I26@
 1 WIFE @I67@
-1 CHIL @I475@
+1 CHIL @I477@
 0 @F35@ FAM
-1 HUSB @I475@
+1 HUSB @I477@
 1 WIFE @I28@
-1 CHIL @I450@
+1 CHIL @I452@
 0 @F36@ FAM
 1 HUSB @I134@
-1 WIFE @I339@
+1 WIFE @I341@
 1 CHIL @I29@
 1 CHIL @I64@
 1 CHIL @I194@
-1 CHIL @I244@
-1 CHIL @I365@
+1 CHIL @I246@
+1 CHIL @I367@
 1 MARR
 2 DATE 4 MAY 1901
 1 DIV
@@ -11713,46 +11898,46 @@
 1 CHIL @I105@
 0 @F39@ FAM
 1 HUSB @I214@
-1 WIFE @I258@
+1 WIFE @I260@
 1 CHIL @I32@
 1 MARR
 2 DATE 23 NOV 1687
 2 PLAC Tielt
 0 @F40@ FAM
-1 HUSB @I221@
+1 HUSB @I222@
 1 WIFE @I32@
 1 CHIL @I68@
 1 MARR
 2 DATE 31 MAY 1719
 2 PLAC Wingene
 0 @F41@ FAM
-1 HUSB @I233@
+1 HUSB @I234@
 1 WIFE @I36@
 1 CHIL @I33@
 1 CHIL @I107@
 0 @F42@ FAM
-1 HUSB @I391@
+1 HUSB @I393@
 1 WIFE @I68@
 1 CHIL @I34@
 1 MARR
 2 DATE 4 MAY 1755
 2 PLAC Ruiselede
 0 @F43@ FAM
-1 HUSB @I431@
+1 HUSB @I433@
 1 WIFE @I34@
-1 CHIL @I250@
+1 CHIL @I252@
 1 MARR
 2 DATE 4 OCT 1785
 2 PLAC Oostkamp
 0 @F44@ FAM
-1 HUSB @I271@
+1 HUSB @I273@
 1 WIFE @I35@
-1 CHIL @I279@
+1 CHIL @I281@
 1 MARR
 2 DATE 24 MAR 1847
 2 PLAC Oostende
 0 @F45@ FAM
-1 HUSB @I234@
+1 HUSB @I235@
 1 WIFE @I147@
 1 CHIL @I36@
 0 @F46@ FAM
@@ -11772,13 +11957,13 @@
 1 WIFE @I39@
 1 CHIL @I115@
 1 CHIL @I207@
-1 CHIL @I253@
-1 CHIL @I369@
+1 CHIL @I255@
+1 CHIL @I371@
 1 MARR
 2 DATE 1 DEC 1853
 2 PLAC Sint-Stevens-Woluwe
 0 @F49@ FAM
-1 HUSB @I388@
+1 HUSB @I390@
 1 WIFE @I40@
 0 @F50@ FAM
 1 HUSB @I200@
@@ -11788,18 +11973,18 @@
 2 DATE 9 MAY 1833
 2 PLAC Westkerke
 0 @F51@ FAM
-1 HUSB @I445@
+1 HUSB @I447@
 1 WIFE @I42@
-1 CHIL @I247@
+1 CHIL @I249@
 0 @F52@ FAM
-1 HUSB @I435@
-1 WIFE @I222@
+1 HUSB @I437@
+1 WIFE @I223@
 1 CHIL @I43@
 1 MARR
 2 DATE 23 JUL 1673
 2 PLAC Oostkamp
 0 @F53@ FAM
-1 HUSB @I456@
+1 HUSB @I458@
 1 WIFE @I44@
 1 CHIL @I93@
 1 CHIL @I153@
@@ -11813,7 +11998,7 @@
 0 @F55@ FAM
 1 HUSB @I46@
 1 WIFE @I122@
-1 CHIL @I242@
+1 CHIL @I244@
 1 MARR
 2 DATE 30 NOV 1687
 0 @F56@ FAM
@@ -11825,19 +12010,19 @@
 2 PLAC Diksmuide
 0 @F57@ FAM
 1 HUSB @I123@
-1 WIFE @I443@
+1 WIFE @I445@
 1 CHIL @I48@
 1 MARR
 2 DATE 1801
 0 @F58@ FAM
 1 HUSB @I48@
-1 WIFE @I220@
+1 WIFE @I221@
 1 CHIL @I133@
 1 MARR
 2 DATE 1838
 0 @F59@ FAM
-1 HUSB @I330@
-1 WIFE @I421@
+1 HUSB @I332@
+1 WIFE @I423@
 1 CHIL @I50@
 1 MARR
 2 DATE 7 NOV 1739
@@ -11845,91 +12030,91 @@
 0 @F60@ FAM
 1 HUSB @I50@
 1 WIFE @I96@
-1 CHIL @I230@
+1 CHIL @I231@
 1 MARR
 2 DATE 4 SEP 1770
 2 PLAC Destelbergen
 0 @F61@ FAM
-1 HUSB @I324@
+1 HUSB @I326@
 1 WIFE @I51@
 1 MARR
 2 DATE 27 OCT 1868
 2 PLAC Oostende
 0 @F62@ FAM
-1 HUSB @I305@
+1 HUSB @I307@
 1 WIFE @I52@
-1 CHIL @I372@
+1 CHIL @I374@
 1 MARR
 2 DATE 20 JAN 1602
 2 PLAC Brugge (St-Catharina)
 0 @F63@ FAM
-1 HUSB @I439@
+1 HUSB @I441@
 1 WIFE @I105@
 1 CHIL @I54@
 1 CHIL @I204@
-1 CHIL @I321@
-1 CHIL @I411@
+1 CHIL @I323@
+1 CHIL @I413@
 1 MARR
 2 DATE 21 JAN 1875
 2 PLAC Mariakerke
 0 @F64@ FAM
 1 HUSB @I55@
-1 WIFE @I405@
+1 WIFE @I407@
 1 MARR
 2 DATE 23 NOV 1859
 2 PLAC Zandvoorde
 0 @F65@ FAM
-1 HUSB @I460@
-1 WIFE @I367@
+1 HUSB @I462@
+1 WIFE @I369@
 1 CHIL @I57@
 0 @F66@ FAM
-1 HUSB @I438@
-1 WIFE @I296@
+1 HUSB @I440@
+1 WIFE @I298@
 1 CHIL @I58@
 0 @F67@ FAM
 1 HUSB @I192@
 1 WIFE @I58@
-1 CHIL @I305@
+1 CHIL @I307@
 0 @F68@ FAM
-1 HUSB @I488@
+1 HUSB @I490@
 1 WIFE @I93@
 1 CHIL @I59@
 1 CHIL @I131@
 0 @F69@ FAM
 1 HUSB @I61@
-1 WIFE @I320@
+1 WIFE @I322@
 0 @F70@ FAM
-1 HUSB @I300@
-1 WIFE @I459@
+1 HUSB @I302@
+1 WIFE @I461@
 1 CHIL @I62@
 1 MARR
 2 DATE 1834
 0 @F71@ FAM
 1 HUSB @I62@
 1 WIFE @I185@
-1 CHIL @I428@
+1 CHIL @I430@
 1 MARR
 2 DATE 1875
 0 @F72@ FAM
 1 HUSB @I62@
-1 WIFE @I466@
+1 WIFE @I468@
 1 MARR
 2 DATE 1881
 0 @F73@ FAM
 1 HUSB @I63@
-1 WIFE @I482@
+1 WIFE @I484@
 1 CHIL @I76@
 0 @F74@ FAM
 1 HUSB @I97@
 1 WIFE @I65@
-1 CHIL @I444@
+1 CHIL @I446@
 0 @F75@ FAM
 1 HUSB @I187@
-1 WIFE @I416@
+1 WIFE @I418@
 1 CHIL @I66@
 1 CHIL @I114@
-1 CHIL @I267@
-1 CHIL @I343@
+1 CHIL @I269@
+1 CHIL @I345@
 1 MARR
 2 DATE 24 FEB 1846
 2 PLAC Zaventem
@@ -11937,9 +12122,9 @@
 1 HUSB @I175@
 1 WIFE @I66@
 1 CHIL @I201@
-1 CHIL @I238@
 1 CHIL @I240@
-1 CHIL @I395@
+1 CHIL @I242@
+1 CHIL @I397@
 1 MARR
 2 DATE 20 JUN 1872
 2 PLAC Kraainem
@@ -11952,7 +12137,7 @@
 0 @F78@ FAM
 1 HUSB @I71@
 1 WIFE @I124@
-1 CHIL @I357@
+1 CHIL @I359@
 0 @F79@ FAM
 1 HUSB @I136@
 1 WIFE @I150@
@@ -11960,32 +12145,32 @@
 1 CHIL @I75@
 1 CHIL @I137@
 1 CHIL @I162@
-1 CHIL @I278@
-1 CHIL @I373@
-1 CHIL @I490@
+1 CHIL @I280@
+1 CHIL @I375@
+1 CHIL @I492@
 1 MARR
 2 DATE 28 SEP 1907
 2 PLAC Oostende
 0 @F80@ FAM
 1 HUSB @I76@
-1 WIFE @I307@
-1 CHIL @I293@
+1 WIFE @I309@
+1 CHIL @I295@
 1 MARR
 2 DATE 30 SEP 1863
 2 PLAC Oostkamp
 0 @F81@ FAM
-1 HUSB @I450@
+1 HUSB @I452@
 1 WIFE @I77@
 1 CHIL @I161@
 0 @F82@ FAM
 1 HUSB @I79@
-1 WIFE @I403@
+1 WIFE @I405@
 1 MARR
 2 DATE 8 JUN 1846
 2 PLAC Oudenburg
 0 @F83@ FAM
-1 HUSB @I446@
-1 WIFE @I247@
+1 HUSB @I448@
+1 WIFE @I249@
 1 CHIL @I81@
 1 MARR
 2 DATE 28 JAN 1835
@@ -11993,114 +12178,114 @@
 0 @F84@ FAM
 1 HUSB @I81@
 1 WIFE @I113@
-1 CHIL @I453@
+1 CHIL @I455@
 1 MARR
 2 DATE 14 SEP 1859
 2 PLAC Oostende
 0 @F85@ FAM
 1 HUSB @I82@
 1 WIFE @I157@
-1 CHIL @I345@
+1 CHIL @I347@
 1 MARR
 2 DATE 4 JUN 1828
 2 PLAC Diksmuide
 0 @F86@ FAM
-1 HUSB @I434@
+1 HUSB @I436@
 1 WIFE @I168@
 1 CHIL @I84@
 1 NOTE Partners; no marriage is recorded for this couple.
 0 @F87@ FAM
 1 HUSB @I84@
-1 WIFE @I370@
-1 CHIL @I367@
+1 WIFE @I372@
+1 CHIL @I369@
 1 MARR
 2 DATE 17 MAY 1662
 2 PLAC Oostkamp
 0 @F88@ FAM
 1 HUSB @I196@
 1 WIFE @I86@
-1 CHIL @I237@
+1 CHIL @I239@
 0 @F89@ FAM
-1 HUSB @I237@
-1 WIFE @I240@
+1 HUSB @I239@
+1 WIFE @I242@
 1 CHIL @I87@
 1 CHIL @I103@
 1 CHIL @I197@
 1 CHIL @I199@
-1 CHIL @I228@
-1 CHIL @I285@
-1 CHIL @I286@
+1 CHIL @I229@
 1 CHIL @I287@
-1 CHIL @I448@
+1 CHIL @I288@
+1 CHIL @I289@
+1 CHIL @I450@
 1 MARR
 2 DATE 27 JUL 1892
 2 PLAC Kraainem
 0 @F90@ FAM
-1 HUSB @I333@
+1 HUSB @I335@
 1 WIFE @I88@
-1 CHIL @I500@
+1 CHIL @I504@
 0 @F91@ FAM
-1 HUSB @I402@
+1 HUSB @I404@
 1 WIFE @I89@
-1 CHIL @I262@
+1 CHIL @I264@
 0 @F92@ FAM
-1 HUSB @I316@
-1 WIFE @I358@
+1 HUSB @I318@
+1 WIFE @I360@
 1 CHIL @I90@
 1 MARR
 2 DATE 18 OCT 1612
 2 PLAC Wingene
 0 @F93@ FAM
 1 HUSB @I174@
-1 WIFE @I284@
+1 WIFE @I286@
 1 CHIL @I92@
 1 CHIL @I175@
 1 CHIL @I176@
-1 CHIL @I239@
-1 CHIL @I399@
+1 CHIL @I241@
+1 CHIL @I401@
 1 MARR
 2 DATE 17 FEB 1835
 2 PLAC Grez-Doiceau
 0 @F94@ FAM
 1 HUSB @I94@
 1 WIFE @I126@
-1 CHIL @I483@
+1 CHIL @I485@
 0 @F95@ FAM
-1 HUSB @I479@
+1 HUSB @I481@
 1 WIFE @I95@
-1 CHIL @I434@
+1 CHIL @I436@
 0 @F96@ FAM
-1 HUSB @I264@
-1 WIFE @I328@
+1 HUSB @I266@
+1 WIFE @I330@
 1 CHIL @I97@
-1 CHIL @I422@
+1 CHIL @I424@
 0 @F97@ FAM
 1 HUSB @I98@
-1 WIFE @I470@
+1 WIFE @I472@
 0 @F98@ FAM
-1 HUSB @I422@
-1 WIFE @I376@
+1 HUSB @I424@
+1 WIFE @I378@
 1 CHIL @I99@
 1 CHIL @I110@
-1 CHIL @I246@
-1 CHIL @I266@
-1 CHIL @I283@
-1 CHIL @I326@
-1 CHIL @I332@
-1 CHIL @I417@
+1 CHIL @I248@
+1 CHIL @I268@
+1 CHIL @I285@
+1 CHIL @I328@
+1 CHIL @I334@
+1 CHIL @I419@
 1 MARR
 2 DATE ABT 1750
 0 @F99@ FAM
-1 HUSB @I415@
+1 HUSB @I417@
 1 WIFE @I100@
-1 CHIL @I366@
+1 CHIL @I368@
 0 @F100@ FAM
-1 HUSB @I502@
+1 HUSB @I506@
 1 WIFE @I101@
-1 CHIL @I432@
+1 CHIL @I434@
 0 @F101@ FAM
-1 HUSB @I291@
-1 WIFE @I366@
+1 HUSB @I293@
+1 WIFE @I368@
 1 CHIL @I102@
 1 MARR
 2 DATE 12 AUG 1657
@@ -12108,14 +12293,14 @@
 0 @F102@ FAM
 1 HUSB @I191@
 1 WIFE @I102@
-1 CHIL @I390@
+1 CHIL @I392@
 0 @F103@ FAM
-1 HUSB @I270@
-1 WIFE @I496@
+1 HUSB @I272@
+1 WIFE @I500@
 1 CHIL @I104@
 1 CHIL @I213@
-1 CHIL @I290@
-1 CHIL @I430@
+1 CHIL @I292@
+1 CHIL @I432@
 1 MARR
 2 DATE 17 NOV 1819
 2 PLAC Oostende
@@ -12133,47 +12318,48 @@
 1 WIFE @I184@
 1 CHIL @I108@
 0 @F107@ FAM
-1 HUSB @I464@
+1 HUSB @I466@
 1 WIFE @I118@
 1 CHIL @I111@
-1 CHIL @I474@
+1 CHIL @I476@
 0 @F108@ FAM
-1 HUSB @I462@
-1 WIFE @I371@
+1 HUSB @I464@
+1 WIFE @I373@
 1 CHIL @I112@
 0 @F109@ FAM
-1 HUSB @I381@
+1 HUSB @I383@
 1 WIFE @I112@
-1 CHIL @I435@
+1 CHIL @I437@
 0 @F110@ FAM
-1 HUSB @I334@
-1 WIFE @I368@
+1 HUSB @I336@
+1 WIFE @I370@
 1 CHIL @I113@
 0 @F111@ FAM
 1 HUSB @I141@
-1 WIFE @I260@
+1 WIFE @I262@
 1 CHIL @I116@
-1 CHIL @I232@
-1 CHIL @I396@
-1 CHIL @I416@
+1 CHIL @I233@
+1 CHIL @I237@
+1 CHIL @I398@
+1 CHIL @I418@
 0 @F112@ FAM
 1 HUSB @I117@
-1 WIFE @I372@
+1 WIFE @I374@
 0 @F113@ FAM
-1 HUSB @I461@
-1 WIFE @I216@
+1 HUSB @I463@
+1 WIFE @I217@
 1 CHIL @I118@
-1 CHIL @I470@
+1 CHIL @I472@
 0 @F114@ FAM
-1 HUSB @I241@
+1 HUSB @I243@
 1 WIFE @I119@
-1 CHIL @I489@
+1 CHIL @I491@
 0 @F115@ FAM
 1 HUSB @I120@
 1 WIFE @I125@
 1 CHIL @I121@
 0 @F116@ FAM
-1 HUSB @I232@
+1 HUSB @I233@
 1 WIFE @I121@
 1 MARR
 2 DATE 28 NOV 1844
@@ -12186,469 +12372,479 @@
 2 PLAC Grez-Doiceau
 0 @F118@ FAM
 1 HUSB @I128@
-1 WIFE @I398@
+1 WIFE @I400@
 1 CHIL @I134@
 0 @F119@ FAM
-1 HUSB @I427@
-1 WIFE @I336@
+1 HUSB @I429@
+1 WIFE @I338@
 1 CHIL @I129@
 0 @F120@ FAM
 1 HUSB @I180@
 1 WIFE @I129@
-1 CHIL @I504@
+1 CHIL @I508@
 1 MARR
 2 DATE 26 APR 1919
 2 PLAC Oostende
 0 @F121@ FAM
-1 HUSB @I474@
+1 HUSB @I476@
 1 WIFE @I131@
-1 CHIL @I318@
-1 CHIL @I457@
+1 CHIL @I320@
+1 CHIL @I459@
 0 @F122@ FAM
 1 HUSB @I134@
-1 WIFE @I320@
+1 WIFE @I322@
 1 MARR
 2 DATE 9 MAY 1946
 2 PLAC Oostende
 0 @F123@ FAM
-1 HUSB @I281@
-1 WIFE @I468@
+1 HUSB @I283@
+1 WIFE @I470@
 1 CHIL @I135@
 0 @F124@ FAM
 1 HUSB @I135@
-1 WIFE @I355@
-1 CHIL @I319@
+1 WIFE @I357@
+1 CHIL @I321@
 1 MARR
 2 DATE 17 NOV 1888
 2 PLAC Sint-Niklaas
 0 @F125@ FAM
-1 HUSB @I279@
+1 HUSB @I281@
 1 WIFE @I212@
 1 CHIL @I136@
 1 MARR
 2 DATE 23 AUG 1872
 2 PLAC Oostende
 0 @F126@ FAM
-1 HUSB @I486@
-1 WIFE @I491@
+1 HUSB @I488@
+1 WIFE @I493@
 1 CHIL @I138@
-1 CHIL @I322@
-1 CHIL @I323@
-1 CHIL @I352@
-1 CHIL @I379@
-1 CHIL @I380@
+1 CHIL @I324@
+1 CHIL @I325@
+1 CHIL @I354@
+1 CHIL @I381@
+1 CHIL @I382@
 1 MARR
 2 DATE 13 DEC 1893
 2 PLAC Diksmuide
 0 @F127@ FAM
-1 HUSB @I383@
+1 HUSB @I385@
 1 WIFE @I139@
 1 CHIL @I140@
 0 @F128@ FAM
 1 HUSB @I140@
-1 WIFE @I261@
-1 CHIL @I426@
+1 WIFE @I263@
+1 CHIL @I428@
 0 @F129@ FAM
 1 HUSB @I143@
-1 WIFE @I226@
+1 WIFE @I227@
 1 MARR
 2 DATE 17 SEP 1900
 2 PLAC Kraainem
 0 @F130@ FAM
-1 HUSB @I235@
+1 HUSB @I236@
 1 WIFE @I144@
 1 CHIL @I198@
 0 @F131@ FAM
-1 HUSB @I333@
+1 HUSB @I335@
 1 WIFE @I145@
-1 CHIL @I331@
-1 CHIL @I361@
-1 CHIL @I471@
+1 CHIL @I333@
+1 CHIL @I363@
+1 CHIL @I473@
 0 @F132@ FAM
-1 HUSB @I329@
+1 HUSB @I331@
 1 WIFE @I146@
-1 CHIL @I350@
+1 CHIL @I352@
 1 MARR
 2 DATE 18 JAN 1645
 2 PLAC Gent
 0 @F133@ FAM
 1 HUSB @I202@
-1 WIFE @I293@
+1 WIFE @I295@
 1 CHIL @I148@
 1 MARR
 2 DATE 31 JUL 1900
 2 PLAC Oostkamp
 0 @F134@ FAM
 1 HUSB @I151@
-1 WIFE @I499@
-1 CHIL @I342@
+1 WIFE @I503@
+1 CHIL @I344@
 0 @F135@ FAM
-1 HUSB @I276@
-1 WIFE @I224@
+1 HUSB @I278@
+1 WIFE @I225@
 1 CHIL @I152@
 1 MARR
 2 DATE 19 JUL 1664
 2 PLAC Beernem
 0 @F136@ FAM
 1 HUSB @I152@
-1 WIFE @I294@
+1 WIFE @I296@
 1 CHIL @I169@
 0 @F137@ FAM
-1 HUSB @I302@
+1 HUSB @I304@
 1 WIFE @I154@
 1 CHIL @I214@
 0 @F138@ FAM
 1 HUSB @I177@
-1 WIFE @I452@
+1 WIFE @I454@
 1 CHIL @I155@
 1 CHIL @I174@
 1 MARR
 2 DATE 9 FEB 1801
 2 PLAC Grez-Doiceau
 0 @F139@ FAM
-1 HUSB @I348@
-1 WIFE @I344@
+1 HUSB @I350@
+1 WIFE @I346@
 1 CHIL @I157@
 1 MARR
 2 DATE 27 MAY 1807
 2 PLAC Diksmuide
 0 @F140@ FAM
-1 HUSB @I349@
-1 WIFE @I476@
+1 HUSB @I351@
+1 WIFE @I478@
 1 CHIL @I159@
 0 @F141@ FAM
 1 HUSB @I161@
-1 WIFE @I483@
-1 CHIL @I439@
+1 WIFE @I485@
+1 CHIL @I441@
 1 MARR
 2 DATE 19 DEC 1844
 2 PLAC Mariakerke
 0 @F142@ FAM
-1 HUSB @I225@
-1 WIFE @I250@
+1 HUSB @I226@
+1 WIFE @I252@
 1 CHIL @I165@
 1 MARR
 2 DATE 24 JUL 1810
 2 PLAC Oostkamp
 0 @F143@ FAM
 1 HUSB @I165@
-1 WIFE @I465@
-1 CHIL @I307@
+1 WIFE @I467@
+1 CHIL @I309@
 1 MARR
 2 DATE 29 SEP 1836
 2 PLAC Beernem
 0 @F144@ FAM
-1 HUSB @I356@
+1 HUSB @I358@
 1 WIFE @I166@
 0 @F145@ FAM
 1 HUSB @I188@
-1 WIFE @I360@
+1 WIFE @I362@
 1 CHIL @I170@
 0 @F146@ FAM
 1 HUSB @I171@
-1 WIFE @I397@
-1 CHIL @I282@
+1 WIFE @I399@
+1 CHIL @I284@
 0 @F147@ FAM
-1 HUSB @I236@
-1 WIFE @I374@
+1 HUSB @I238@
+1 WIFE @I376@
 1 CHIL @I172@
 1 CHIL @I182@
-1 CHIL @I231@
-1 CHIL @I292@
-1 CHIL @I347@
-1 CHIL @I410@
+1 CHIL @I232@
+1 CHIL @I294@
+1 CHIL @I349@
+1 CHIL @I412@
 1 MARR
 2 DATE 17 JUN 1858
 2 PLAC Sint-Stevens-Woluwe
 0 @F148@ FAM
-1 HUSB @I242@
-1 WIFE @I317@
+1 HUSB @I244@
+1 WIFE @I319@
 1 CHIL @I173@
 1 MARR
 2 DATE 23 FEB 1743
 2 PLAC Wavre
 0 @F149@ FAM
 1 HUSB @I173@
-1 WIFE @I407@
+1 WIFE @I409@
 1 CHIL @I177@
 1 MARR
 2 DATE 3 JAN 1771
 2 PLAC Grez-Doiceau
 0 @F150@ FAM
 1 HUSB @I179@
-1 WIFE @I251@
-1 CHIL @I294@
+1 WIFE @I253@
+1 CHIL @I296@
 0 @F151@ FAM
-1 HUSB @I282@
-1 WIFE @I453@
+1 HUSB @I284@
+1 WIFE @I455@
 1 CHIL @I180@
 1 MARR
 2 DATE 4 JAN 1882
 2 PLAC Oostende
 0 @F152@ FAM
-1 HUSB @I289@
+1 HUSB @I291@
 1 WIFE @I183@
-1 CHIL @I465@
+1 CHIL @I467@
 0 @F153@ FAM
-1 HUSB @I493@
+1 HUSB @I495@
 1 WIFE @I186@
-1 CHIL @I494@
+1 CHIL @I496@
 0 @F154@ FAM
 1 HUSB @I189@
-1 WIFE @I243@
-1 CHIL @I284@
+1 WIFE @I245@
+1 CHIL @I286@
 0 @F155@ FAM
-1 HUSB @I275@
+1 HUSB @I277@
 1 WIFE @I190@
-1 CHIL @I328@
+1 CHIL @I330@
 0 @F156@ FAM
 1 HUSB @I211@
-1 WIFE @I262@
+1 WIFE @I264@
 1 CHIL @I191@
 1 MARR
 2 DATE 14 JUN 1659
 2 PLAC Torhout
 0 @F157@ FAM
 1 HUSB @I193@
-1 WIFE @I480@
-1 CHIL @I458@
-1 CHIL @I461@
+1 WIFE @I482@
+1 CHIL @I460@
+1 CHIL @I463@
 0 @F158@ FAM
 1 HUSB @I205@
-1 WIFE @I384@
+1 WIFE @I386@
 1 CHIL @I202@
 1 MARR
 2 DATE 11 SEP 1867
 2 PLAC Sint-Andries
 0 @F159@ FAM
 1 HUSB @I203@
-1 WIFE @I418@
-1 CHIL @I233@
+1 WIFE @I420@
+1 CHIL @I234@
 0 @F160@ FAM
-1 HUSB @I388@
-1 WIFE @I223@
+1 HUSB @I390@
+1 WIFE @I224@
 1 CHIL @I206@
 1 MARR
 2 DATE 31 MAY 1772
 2 PLAC Zande
 0 @F161@ FAM
 1 HUSB @I206@
-1 WIFE @I341@
-1 CHIL @I446@
+1 WIFE @I343@
+1 CHIL @I448@
 1 MARR
 2 DATE 18 NOV 1806
 2 PLAC Mariakerke
 0 @F162@ FAM
-1 HUSB @I409@
-1 WIFE @I299@
+1 HUSB @I411@
+1 WIFE @I301@
 1 CHIL @I211@
 0 @F163@ FAM
-1 HUSB @I357@
-1 WIFE @I504@
-1 CHIL @I216@
-1 CHIL @I455@
-1 CHIL @I481@
+1 HUSB @I498@
+1 WIFE @I216@
+1 CHIL @I497@
+0 @F164@ FAM
+1 HUSB @I359@
+1 WIFE @I508@
+1 CHIL @I217@
+1 CHIL @I457@
+1 CHIL @I483@
 1 MARR
 2 DATE 16 OCT 1937
 2 PLAC Stene
-0 @F164@ FAM
-1 HUSB @I229@
-1 WIFE @I217@
-1 CHIL @I377@
-1 CHIL @I413@
 0 @F165@ FAM
-1 HUSB @I225@
-1 WIFE @I219@
-0 @F166@ FAM
 1 HUSB @I230@
-1 WIFE @I256@
-1 CHIL @I281@
+1 WIFE @I218@
+1 CHIL @I379@
+1 CHIL @I415@
+0 @F166@ FAM
+1 HUSB @I226@
+1 WIFE @I220@
+0 @F167@ FAM
+1 HUSB @I231@
+1 WIFE @I258@
+1 CHIL @I283@
 1 MARR
 2 DATE 1795
-0 @F167@ FAM
-1 HUSB @I301@
-1 WIFE @I364@
-1 CHIL @I236@
 0 @F168@ FAM
-1 HUSB @I238@
-1 WIFE @I492@
-1 CHIL @I241@
+1 HUSB @I237@
+1 WIFE @I497@
+1 MARR
+2 DATE 21 AUG 1848
+2 PLAC Zaventem
+0 @F169@ FAM
+1 HUSB @I303@
+1 WIFE @I366@
+1 CHIL @I238@
+0 @F170@ FAM
+1 HUSB @I240@
+1 WIFE @I494@
+1 CHIL @I243@
 1 MARR
 2 DATE 3 FEB 1902
 2 PLAC Kraainem
-0 @F169@ FAM
-1 HUSB @I277@
-1 WIFE @I248@
-1 CHIL @I291@
-0 @F170@ FAM
-1 HUSB @I302@
-1 WIFE @I252@
 0 @F171@ FAM
-1 HUSB @I477@
-1 WIFE @I254@
-1 CHIL @I303@
+1 HUSB @I279@
+1 WIFE @I250@
+1 CHIL @I293@
 0 @F172@ FAM
-1 HUSB @I484@
-1 WIFE @I255@
-1 CHIL @I388@
+1 HUSB @I304@
+1 WIFE @I254@
 0 @F173@ FAM
-1 HUSB @I471@
-1 WIFE @I257@
-1 CHIL @I265@
+1 HUSB @I479@
+1 WIFE @I256@
+1 CHIL @I305@
 0 @F174@ FAM
-1 HUSB @I265@
-1 WIFE @I259@
-1 CHIL @I264@
+1 HUSB @I486@
+1 WIFE @I257@
+1 CHIL @I390@
 0 @F175@ FAM
-1 HUSB @I389@
-1 WIFE @I363@
-1 CHIL @I263@
+1 HUSB @I473@
+1 WIFE @I259@
+1 CHIL @I267@
 0 @F176@ FAM
-1 HUSB @I478@
-1 WIFE @I263@
-1 CHIL @I479@
+1 HUSB @I267@
+1 WIFE @I261@
+1 CHIL @I266@
 0 @F177@ FAM
-1 HUSB @I264@
-1 WIFE @I325@
+1 HUSB @I391@
+1 WIFE @I365@
+1 CHIL @I265@
+0 @F178@ FAM
+1 HUSB @I480@
+1 WIFE @I265@
+1 CHIL @I481@
+0 @F179@ FAM
+1 HUSB @I266@
+1 WIFE @I327@
 1 MARR
 2 DATE ABT 1745
-0 @F178@ FAM
-1 HUSB @I269@
-1 WIFE @I297@
-1 CHIL @I362@
-0 @F179@ FAM
-1 HUSB @I306@
-1 WIFE @I497@
-1 CHIL @I271@
+0 @F180@ FAM
+1 HUSB @I271@
+1 WIFE @I299@
+1 CHIL @I364@
+0 @F181@ FAM
+1 HUSB @I308@
+1 WIFE @I501@
+1 CHIL @I273@
 1 MARR
 2 DATE 25 MAR 1810
 2 PLAC Oostende
-0 @F180@ FAM
-1 HUSB @I273@
-1 WIFE @I362@
-1 CHIL @I431@
-0 @F181@ FAM
-1 HUSB @I288@
-1 WIFE @I385@
-1 CHIL @I423@
 0 @F182@ FAM
-1 HUSB @I392@
-1 WIFE @I295@
-1 CHIL @I302@
+1 HUSB @I275@
+1 WIFE @I364@
+1 CHIL @I433@
 0 @F183@ FAM
-1 HUSB @I432@
-1 WIFE @I298@
-1 CHIL @I477@
+1 HUSB @I290@
+1 WIFE @I387@
+1 CHIL @I425@
+0 @F184@ FAM
+1 HUSB @I394@
+1 WIFE @I297@
+1 CHIL @I304@
+0 @F185@ FAM
+1 HUSB @I434@
+1 WIFE @I300@
+1 CHIL @I479@
 1 MARR
 2 DATE 11 JUN 1616
 2 PLAC Oostkamp (Ruddervoorde)
-0 @F184@ FAM
-1 HUSB @I304@
-1 WIFE @I404@
-0 @F185@ FAM
-1 HUSB @I489@
-1 WIFE @I308@
-1 CHIL @I488@
 0 @F186@ FAM
-1 HUSB @I347@
-1 WIFE @I395@
-1 CHIL @I311@
+1 HUSB @I306@
+1 WIFE @I406@
+0 @F187@ FAM
+1 HUSB @I491@
+1 WIFE @I310@
+1 CHIL @I490@
+0 @F188@ FAM
+1 HUSB @I349@
+1 WIFE @I397@
+1 CHIL @I313@
 1 MARR
 2 DATE 10 APR 1900
 2 PLAC Kraainem
-0 @F187@ FAM
-1 HUSB @I356@
-1 WIFE @I469@
-1 CHIL @I314@
-1 CHIL @I400@
-1 CHIL @I464@
-0 @F188@ FAM
-1 HUSB @I321@
-1 WIFE @I340@
+0 @F189@ FAM
+1 HUSB @I358@
+1 WIFE @I471@
+1 CHIL @I316@
+1 CHIL @I402@
+1 CHIL @I466@
+0 @F190@ FAM
+1 HUSB @I323@
+1 WIFE @I342@
 1 MARR
 2 DATE 20 AUG 1922
 2 PLAC Oostende
-0 @F189@ FAM
-1 HUSB @I337@
-1 WIFE @I454@
-1 CHIL @I341@
-0 @F190@ FAM
-1 HUSB @I423@
-1 WIFE @I339@
+0 @F191@ FAM
+1 HUSB @I339@
+1 WIFE @I456@
+1 CHIL @I343@
+0 @F192@ FAM
+1 HUSB @I425@
+1 WIFE @I341@
 1 MARR
 2 DATE 1 MAR 1924
 2 PLAC Stene
-0 @F191@ FAM
-1 HUSB @I343@
-1 WIFE @I485@
+0 @F193@ FAM
+1 HUSB @I345@
+1 WIFE @I487@
 1 MARR
 2 DATE 17 FEB 1884
 2 PLAC Alsemberg
-0 @F192@ FAM
-1 HUSB @I351@
-1 WIFE @I386@
-1 CHIL @I408@
-0 @F193@ FAM
-1 HUSB @I501@
-1 WIFE @I353@
-1 CHIL @I502@
+0 @F194@ FAM
+1 HUSB @I353@
+1 WIFE @I388@
+1 CHIL @I410@
+0 @F195@ FAM
+1 HUSB @I505@
+1 WIFE @I355@
+1 CHIL @I506@
 1 MARR
 2 DATE ABT 1555
-0 @F194@ FAM
-1 HUSB @I393@
-1 WIFE @I372@
-1 CHIL @I370@
-0 @F195@ FAM
-1 HUSB @I494@
-1 WIFE @I396@
+0 @F196@ FAM
+1 HUSB @I395@
+1 WIFE @I374@
+1 CHIL @I372@
+0 @F197@ FAM
+1 HUSB @I496@
+1 WIFE @I398@
 1 MARR
 2 DATE 5 NOV 1840
 2 PLAC Zaventem
-0 @F196@ FAM
-1 HUSB @I424@
-1 WIFE @I406@
-0 @F197@ FAM
-1 HUSB @I413@
-1 WIFE @I437@
+0 @F198@ FAM
+1 HUSB @I426@
+1 WIFE @I408@
+0 @F199@ FAM
+1 HUSB @I415@
+1 WIFE @I439@
 1 MARR
 2 DATE 18 MAY 1882
 2 PLAC Hamme (Oost-Vlaanderen)
-0 @F198@ FAM
-1 HUSB @I436@
-1 CHIL @I192@
-0 @F199@ FAM
-1 HUSB @I503@
-1 CHIL @I257@
 0 @F200@ FAM
-1 HUSB @I401@
-1 CHIL @I259@
+1 HUSB @I438@
+1 CHIL @I192@
 0 @F201@ FAM
-1 HUSB @I233@
-1 CHIL @I268@
+1 HUSB @I507@
+1 CHIL @I259@
 0 @F202@ FAM
-1 HUSB @I83@
-1 CHIL @I298@
+1 HUSB @I403@
+1 CHIL @I261@
 0 @F203@ FAM
-1 HUSB @I181@
-1 CHIL @I304@
+1 HUSB @I234@
+1 CHIL @I270@
 0 @F204@ FAM
-1 HUSB @I424@
-1 CHIL @I333@
+1 HUSB @I83@
+1 CHIL @I300@
 0 @F205@ FAM
-1 HUSB @I394@
-1 CHIL @I353@
+1 HUSB @I181@
+1 CHIL @I306@
 0 @F206@ FAM
-1 WIFE @I420@
-1 CHIL @I374@
+1 HUSB @I426@
+1 CHIL @I335@
 0 @F207@ FAM
-1 HUSB @I21@
-1 CHIL @I393@
+1 HUSB @I396@
+1 CHIL @I355@
 0 @F208@ FAM
-1 HUSB @I304@
-1 CHIL @I433@
+1 WIFE @I422@
+1 CHIL @I376@
 0 @F209@ FAM
-1 HUSB @I433@
-1 CHIL @I501@
+1 HUSB @I21@
+1 CHIL @I395@
+0 @F210@ FAM
+1 HUSB @I306@
+1 CHIL @I435@
+0 @F211@ FAM
+1 HUSB @I435@
+1 CHIL @I505@
 0 @S1@ SOUR
 1 TITL Civil birth acts naming both parents, for couples already in the tree (harvested corpus, July 2026)
 0 @S2@ SOUR
@@ -12772,7 +12968,7 @@
 0 @S61@ SOUR
 1 TITL West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S62@ SOUR
-1 TITL Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans
+1 TITL Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans; Marriage act — Joannes Baptista Peremans x Joanna Catharina Van Gindertaelen, Zaventem, 21 August 1848
 0 @S63@ SOUR
 1 TITL Marriage act — Joannes (Jan) Vandenbemden × Elisabeth Leonia Feyaerts, Kraainem, 17 September 1900
 0 @S64@ SOUR
@@ -12830,83 +13026,85 @@
 0 @S90@ SOUR
 1 TITL gverdievel (Guy Verdievel); West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S91@ SOUR
-1 TITL Death act nr. 123 — Ida Vermandel, Hamme (Oost-Vlaanderen), died 21 June 1865 (register image); Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image); wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Death act nr. 721 — Maria Louisa Vanbergen, Oostende, 23 November 1888
+1 TITL Marriage act — Joannes Baptista Peremans x Joanna Catharina Van Gindertaelen, Zaventem, 21 August 1848
 0 @S92@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; Familiekunde Vlaanderen (VVF)
+1 TITL Death act nr. 123 — Ida Vermandel, Hamme (Oost-Vlaanderen), died 21 June 1865 (register image); Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image); wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Death act nr. 721 — Maria Louisa Vanbergen, Oostende, 23 November 1888
 0 @S93@ SOUR
-1 TITL Civil birth acts naming both parents, for couples already in the tree (harvested corpus, July 2026); Marriage act — Joannes (Jan) Vandenbemden × Elisabeth Leonia Feyaerts, Kraainem, 17 September 1900
+1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; Familiekunde Vlaanderen (VVF)
 0 @S94@ SOUR
-1 TITL Death act nr. 123 — Ida Vermandel, Hamme (Oost-Vlaanderen), died 21 June 1865 (register image); Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image); Death act nr. 721 — Maria Louisa Vanbergen, Oostende, 23 November 1888; wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist
+1 TITL Civil birth acts naming both parents, for couples already in the tree (harvested corpus, July 2026); Marriage act — Joannes (Jan) Vandenbemden × Elisabeth Leonia Feyaerts, Kraainem, 17 September 1900
 0 @S95@ SOUR
-1 TITL Marriage act nr. 3 — Ludovicus Bossin × Maria Isabella Helena Thumas, Kraainem, 10 April 1900; Civil registration acts for the Bossin family of Sint-Stevens-Woluwe, Kraainem and Zaventem (harvested corpus, July 2026)
+1 TITL Death act nr. 123 — Ida Vermandel, Hamme (Oost-Vlaanderen), died 21 June 1865 (register image); Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image); Death act nr. 721 — Maria Louisa Vanbergen, Oostende, 23 November 1888; wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist
 0 @S96@ SOUR
-1 TITL Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; marcelcroon (Marcel Croon); jswaelens
+1 TITL Marriage act nr. 3 — Ludovicus Bossin × Maria Isabella Helena Thumas, Kraainem, 10 April 1900; Civil registration acts for the Bossin family of Sint-Stevens-Woluwe, Kraainem and Zaventem (harvested corpus, July 2026)
 0 @S97@ SOUR
-1 TITL The children of Georges Thumas x Marie Catherine Joostens at Grez-Doiceau, 1835-1868; Netradyle — Grez-Doiceau, actes de naissance (tab_naiss.php)
+1 TITL Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; marcelcroon (Marcel Croon); jswaelens
 0 @S98@ SOUR
-1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
+1 TITL The children of Georges Thumas x Marie Catherine Joostens at Grez-Doiceau, 1835-1868; Netradyle — Grez-Doiceau, actes de naissance (tab_naiss.php)
 0 @S99@ SOUR
-1 TITL stefpaelinck (Stef Paelinck); Rijksarchief AGATHA — Belgian State Archives search robot
+1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; m2155
 0 @S100@ SOUR
-1 TITL paulderidder; glorieuxp; dvandurme1; mjovdl
+1 TITL stefpaelinck (Stef Paelinck); Rijksarchief AGATHA — Belgian State Archives search robot
 0 @S101@ SOUR
-1 TITL paulderidder; glorieuxp; mjovdl
+1 TITL paulderidder; glorieuxp; dvandurme1; mjovdl
 0 @S102@ SOUR
-1 TITL Memorial card — Joannes Vaniseghem, d. Oostende 5 May 1969; bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel); West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL paulderidder; glorieuxp; mjovdl
 0 @S103@ SOUR
-1 TITL Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Death act of Marie Catherine Joostens, Grez-Doiceau, 10 June 1857; Netradyle — Grez-Doiceau, actes de naissance (tab_naiss.php)
+1 TITL Memorial card — Joannes Vaniseghem, d. Oostende 5 May 1969; bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel); West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S104@ SOUR
-1 TITL Marriage act nr. 9 — Petrus Augustus Blomme x Louisa Maria Bocklandt, Stene, 1 March 1924 (register image)
+1 TITL Death act nr. 35 — Marie Catherine Joostens, Grez-Doiceau, 10 June 1857 (read on AGATHA); Death act of Marie Catherine Joostens, Grez-Doiceau, 10 June 1857; Netradyle — Grez-Doiceau, actes de naissance (tab_naiss.php)
 0 @S105@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; 1960dirk (Dirk Teerlinck)
+1 TITL Marriage act nr. 9 — Petrus Augustus Blomme x Louisa Maria Bocklandt, Stene, 1 March 1924 (register image)
 0 @S106@ SOUR
-1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946; wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Marriage act nr. 9 — Petrus Augustus Blomme x Louisa Maria Bocklandt, Stene, 1 March 1924 (register image)
+1 TITL isavdw — Rijksarchief-sourced, with scan links; kathrynann; 1960dirk (Dirk Teerlinck)
 0 @S107@ SOUR
-1 TITL bartvanhooren (Bart Vanhooren); West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers; Marriage act nr. 40 — Caesar Antonius Bocklandt x Florence Amelie Vincke, Diksmuide, 11 February 1893
+1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946; wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Marriage act nr. 9 — Petrus Augustus Blomme x Louisa Maria Bocklandt, Stene, 1 March 1924 (register image)
 0 @S108@ SOUR
-1 TITL Birth declarations at Sint-Stevens-Woluwe for three children of Guilielmus Bossin x Peremans, 1847-1853; Civil registration acts for the Bossin family of Sint-Stevens-Woluwe, Kraainem and Zaventem (harvested corpus, July 2026)
+1 TITL bartvanhooren (Bart Vanhooren); West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers; Marriage act nr. 40 — Caesar Antonius Bocklandt x Florence Amelie Vincke, Diksmuide, 11 February 1893
 0 @S109@ SOUR
-1 TITL Death act nr. 126 — Ludovicus Bocklandt, Hamme (O-Vl), 9 June 1880 (register image)
+1 TITL Birth declarations at Sint-Stevens-Woluwe for three children of Guilielmus Bossin x Peremans, 1847-1853; Civil registration acts for the Bossin family of Sint-Stevens-Woluwe, Kraainem and Zaventem (harvested corpus, July 2026)
 0 @S110@ SOUR
-1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL Death act nr. 126 — Ludovicus Bocklandt, Hamme (O-Vl), 9 June 1880 (register image)
 0 @S111@ SOUR
-1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S112@ SOUR
-1 TITL Familiekunde Vlaanderen Westkust memorial card — Marcel Bundervoet, d. Oostende 20 November 2015; The family itself
+1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S113@ SOUR
-1 TITL wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Death act nr. 721 — Maria Louisa Vanbergen, Oostende, 23 November 1888
+1 TITL Familiekunde Vlaanderen Westkust memorial card — Marcel Bundervoet, d. Oostende 20 November 2015; The family itself
 0 @S114@ SOUR
-1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL wete1998 (Erik Bekaert) — Hamme (O-Vl) specialist; Death act nr. 721 — Maria Louisa Vanbergen, Oostende, 23 November 1888
 0 @S115@ SOUR
-1 TITL Marriage act nr. 11 — Justinus Vincentius Dubuy x Maria Mathildis Bocklandt, Oostende, 21 January 1893
+1 TITL Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886; West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Geboorten (birth index), Rijksarchief Brugge/Kortrijk volunteers
 0 @S116@ SOUR
-1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; Geneanet
+1 TITL Marriage act nr. 11 — Justinus Vincentius Dubuy x Maria Mathildis Bocklandt, Oostende, 21 January 1893
 0 @S117@ SOUR
-1 TITL gverdievel (Guy Verdievel); Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886
+1 TITL Death act nr. 58 — George Thumas, Grez-Doiceau, 20 November 1808 (read on AGATHA); Death act of George Thumas, Grez-Doiceau, 20 November 1808; Geneanet
 0 @S118@ SOUR
-1 TITL Marriage act nr. 80 — Petrus Dominicus Ketels x Paulina Bocklandt, Oostende, 26 May 1888
+1 TITL gverdievel (Guy Verdievel); Marriage act nr. 258 — Eugenius Alphonsius Devriendt × Octavia Maria Schalandrijn, Oostende, 10 November 1906; Birth act nr. 116 — Octavia Maria Schalandrijn, Bredene, certificate dated 2 May 1886
 0 @S119@ SOUR
-1 TITL Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image)
+1 TITL Marriage act nr. 80 — Petrus Dominicus Ketels x Paulina Bocklandt, Oostende, 26 May 1888
 0 @S120@ SOUR
-1 TITL Marriage of Joannes Athanasius Peremans x Maria Elisabeth Cuypers, Zaventem, November 1844; Marriage banns of Cornelius Peremans, Zaventem, 21 April 1844; Marriage of Petrus van der Varent x Maria Josephina Peremans, Zaventem, 5 November 1840; Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans; Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Civil registration acts for the Bossin family of Sint-Stevens-Woluwe, Kraainem and Zaventem (harvested corpus, July 2026)
+1 TITL Marriage act, 18 May 1882, Hamme (Oost-Vlaanderen) — Petrus Vermorgen × Paulina Van Den Berghe (register image)
 0 @S121@ SOUR
-1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946; Marriage act nr. 9 — Petrus Augustus Blomme x Louisa Maria Bocklandt, Stene, 1 March 1924 (register image)
+1 TITL Marriage of Joannes Athanasius Peremans x Maria Elisabeth Cuypers, Zaventem, November 1844; Marriage banns of Cornelius Peremans, Zaventem, 21 April 1844; Marriage of Petrus van der Varent x Maria Josephina Peremans, Zaventem, 5 November 1840; Zaventem marriage act nr. 1, 24 February 1846 — Bossin × Peremans; Kraainem marriage act nr. 2, 20 June 1872 — Thumas × Bossin (read on AGATHA); Marriage act — Georges Carolus Josephus Thumas × Antonia Bossin, Kraainem, 20 June 1872; Civil registration acts for the Bossin family of Sint-Stevens-Woluwe, Kraainem and Zaventem (harvested corpus, July 2026); Marriage act — Joannes Baptista Peremans x Joanna Catharina Van Gindertaelen, Zaventem, 21 August 1848
 0 @S122@ SOUR
-1 TITL Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943; Familiekunde Vlaanderen Westkust memorial card — Pieter-Franciscus Bundervoet, d. Oostende 21 July 1943; Geneanet
+1 TITL Memorial-card record — Louisa-Maria Bocklandt, d. Oostende 15 July 1946; Marriage act nr. 9 — Petrus Augustus Blomme x Louisa Maria Bocklandt, Stene, 1 March 1924 (register image)
 0 @S123@ SOUR
-1 TITL isavdw — Rijksarchief-sourced, with scan links; Oostkamp Sint-Pietersbanden parish register: baptisms 26 Jun 1630 - 14 Apr 1652 (and marriages 9 Aug 1631 - 14 Apr 1652), AGATHA digitised item 513_9000_000_00774
+1 TITL Doodsprentjes.be memorial card — Pieter Franciscus Bundervoet, d. Oostende 21 July 1943; Familiekunde Vlaanderen Westkust memorial card — Pieter-Franciscus Bundervoet, d. Oostende 21 July 1943; Geneanet
 0 @S124@ SOUR
-1 TITL Marriage act nr. 100 — Philemondus Bocklandt x Rosalia Cecilia Mewis, Oostende, 12 May 1900
+1 TITL isavdw — Rijksarchief-sourced, with scan links; Oostkamp Sint-Pietersbanden parish register: baptisms 26 Jun 1630 - 14 Apr 1652 (and marriages 9 Aug 1631 - 14 Apr 1652), AGATHA digitised item 513_9000_000_00774
 0 @S125@ SOUR
-1 TITL Extract from the Grez-Doiceau death register — Georges Thumas, d. 12 January 1864 (issued 28 September 1868 as a marriage annex); België, Brabant, burgerlijke stand, 1582-1950; Death act of Etienne Thumas, Grez-Doiceau, 18 October 1812; Geneanet; Netradyle — Grez-Doiceau, actes de naissance (tab_naiss.php)
+1 TITL Marriage act nr. 100 — Philemondus Bocklandt x Rosalia Cecilia Mewis, Oostende, 12 May 1900
 0 @S126@ SOUR
-1 TITL Geneanet; The family itself
+1 TITL Extract from the Grez-Doiceau death register — Georges Thumas, d. 12 January 1864 (issued 28 September 1868 as a marriage annex); België, Brabant, burgerlijke stand, 1582-1950; Death act of Etienne Thumas, Grez-Doiceau, 18 October 1812; Geneanet; Netradyle — Grez-Doiceau, actes de naissance (tab_naiss.php)
 0 @S127@ SOUR
-1 TITL Death act of Florentinus Stroobandt, Oostkamp, 4 March 1876; isavdw — Rijksarchief-sourced, with scan links
+1 TITL Geneanet; The family itself
 0 @S128@ SOUR
-1 TITL bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
+1 TITL Death act of Florentinus Stroobandt, Oostkamp, 4 March 1876; isavdw — Rijksarchief-sourced, with scan links
 0 @S129@ SOUR
-1 TITL West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Overlijdens (death index), Rijksarchief Brugge/Kortrijk volunteers
+1 TITL bartvanhooren (Bart Vanhooren); gverdievel (Guy Verdievel)
 0 @S130@ SOUR
+1 TITL West-Vlaamse Burgerlijke Stand — Huwelijken (marriage index), Rijksarchief Brugge/Kortrijk volunteers; West-Vlaamse Burgerlijke Stand — Overlijdens (death index), Rijksarchief Brugge/Kortrijk volunteers
+0 @S131@ SOUR
 1 TITL Kraainem marriage act nr. 2, 3 February 1902 — Thumas × Vandenbemden; jswaelens
 0 TRLR

@@ -33,3 +33,10 @@ forbids.
 
 FRONTIER: the marriage act itself, which would name the bride and both sets of parents; and his
 own birth act at Zaventem, probably in the 1810s or 1820s.
+
+WITNESS LINE, NOT A DATE (2026-07-27): he stands witness, aged 33, at his brother
+[[jbaptista_peremans]]'s Zaventem marriage on 21 August 1848 (S34), which would imply a
+birth around 1814–1815. Not written as a birth date here: a witness line carries only a
+name and a commune, with no parent names restated, which is *weaker* evidence than the
+parent-name pair that grafted him into this family in the first place. If this is ever
+recorded, the only honest form is a `year_span` (`1814..1815`), never a point date.

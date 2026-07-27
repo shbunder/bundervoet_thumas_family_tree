@@ -12,6 +12,7 @@ spouses:
     name: Joanna Theresia Ver Elst
 sources:
   - S19
+  - S34
 ---
 
 Father of the bride in his daughter [[peremans]]'s marriage act — Zaventem, act nr. 1,
@@ -33,3 +34,19 @@ Nothing here was refuted and no fact changed. What changed is the honest name fo
 evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 its image was actually read. None was. The register images are the named next step.
+
+A FIFTH CHILD's marriage act names him again (2026-07-27): [[jbaptista_peremans]]
+married at Zaventem on 21 August 1848 (S34), and that act gives his own death as
+**1836-03-06** — the same day and month as the 1837-03-06 held above from S19, one year
+apart. **Both dates are recorded here, and neither is picked.** 1837-03-06 comes from
+S19 (his daughter [[peremans]]'s 1846 marriage act); 1836-03-06 comes from S34 (his son
+[[jbaptista_peremans]]'s 1848 marriage act). Both are AGATHA/Demogen index
+transcriptions of the civil registration — neither is a register image. Positing two
+separate Egidius Peremans × Joanna Theresia Verelst couples in Zaventem, whose wives
+happen to share an identical day-level death date (see [[joanna_verelst]]), is a far
+larger coincidence than a single-digit transcription slip in one of the two independent
+Demogen batches — so this is read as one man, not two. But which digit slipped is not
+decided by that reasoning, and the frontmatter `death.date` field is left at 1837-03-06,
+the earlier-held value, rather than silently overwritten by the later one. Only the
+Zaventem 1836/1837 death register image — or the act itself — settles which year is
+correct.

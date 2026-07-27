@@ -19,11 +19,11 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 |---|---|---|---|---|---|
 | `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 47 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 2 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 37 | Belgian civil and church registration, with act images. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 39 | Belgian civil and church registration, with act images. |
 | `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 17 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
-| `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 21 | Volunteer transcriptions of West-Flemish marriage and death records. |
+| `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 28 | Volunteer transcriptions of West-Flemish marriage and death records. |
 | `vvf` | index | mixed | name-index | 0 | Flemish marriage indexes; the layer beneath several Geneanet trees. |
 | `stadsarchief-oostende` | archive | offline | image-read | 0 | Oostende civil registers after 1900 — not in AGATHA, not digitised. |
 | `inmemoriam` <https://www.inmemoriam.be/> | obituary | open | name-index | 1 | Digitised Belgian obituary notices. |
@@ -865,6 +865,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-27
 - **Note:** Indexed acts (AGATHA/Demogen transcriptions via Open Archives), no register image read for any of them. Each person's own record carries the individual act URL; the identifier-by-identifier reasoning for every match is in research/labels.jsonl.
+
+#### `S34` — Marriage act — Joannes Baptista Peremans x Joanna Catharina Van Gindertaelen, Zaventem, 21 August 1848
+- **Kind:** record · <https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00011074_0>
+- **Collection:** Burgerlijke stand — Huwelijksakten — Provincie Vlaams-Brabant en Brussels Hoofdstedelijk Gewest, Zaventem 1848, akte nr. 7 (harvested corpus, abl:22d86c23-2e3f-64fe-ca52-272ae9a71c04)
+- **Covers:** Indexed marriage registration (Demogen project huvlb19a), no register image read. A FamilySearch scan exists (ark:/61903/3:1:S3HY-6423-8F1?i=24) but is behind a login wall — confirmed blocked, a one-request retry, not a scoped miss.
+- **Yielded:** A fifth sibling for Joanna Catharina Jacoba Peremans — Joannes Baptista, 28, arbeider, married Joanna Catharina Van Gindertaelen, 23, arbeidster, both of Zaventem, neither able to write. Her parents Joannes Franciscus Van Gindertaelen x Anna Catharina Huenaerts, both arbeider(ster) of Zaventem, present and consenting. Also gives Egidius Peremans's own death as 1836-03-06, one year off the 1837-03-06 already held from S19 — left open, not resolved. Four witnesses: Cornelius Peremans (33) and Athanasius Peremans (26), both already-held siblings; Petrus Van Der Varen (35), a plausible but unconfirmed match for mjosephina_peremans's husband Petrus van der Varent; Franciscus Engels (38), veldwachter, a recurring professional witness and not kin.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Index-level AGATHA/Demogen act analysis, no register image read — sup throughout, never doc. The exact day-level match this act gives on Joanna Theresia Verelst's already-held death date (1843-12-19 Zaventem, from the separately transcribed S19) is what anchors the parent link; it is a stronger identifier than the parent-name-plus-volume-title anchoring used for cornelius_peremans, jathanasius_peremans and mjosephina_peremans.
 
 #### `fwk-alfons-vincke` — Memorial card — Alfons Luciaan Vincke, partner Eugenia Maria Vandecappelle
 - **Kind:** record · <https://www.openarchieven.nl/fwk:bb261d5b-e241-84c8-0c3c-860a943cca23>

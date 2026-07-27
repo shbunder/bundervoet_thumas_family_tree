@@ -3312,3 +3312,93 @@ new ([[etienne_thumas]] against S13); four false-positive labels on the greedy-c
 were already on disk and are not duplicated. Tree: 504 people, unchanged — this pass is
 corroboration, conflict and frontier work, not growth, and that is the result the target
 act being genuinely unreachable predicts.
+
+## 69. Autopilot pass 6 (by act) — a fifth Peremans sibling, a death date left in dispute, and two more scorer misses
+
+The act: **Zaventem marriage nr. 7, 21 August 1848 — Joannes Baptista Peremans ×
+Joanna Catharina Van Gindertaelen** (`abl:22d86c23-2e3f-64fe-ca52-272ae9a71c04`,
+`HUBRA_00011074_0`), read from the held corpus (`research/harvest/acts/abl.jsonl`).
+Index-level AGATHA/Demogen act analysis throughout — `sup`, never `doc`. A FamilySearch
+scan (`ark:/61903/3:1:S3HY-6423-8F1?i=24`) is behind a login wall, confirmed `blocked`
+this pass and logged as a one-request retry, not a scoped miss.
+
+**GRAFTED — [[jbaptista_peremans]], a fifth child of [[egidius_peremans]] ×
+[[joanna_verelst]].** He was 28, an *arbeider*, unable to write, his militia obligations
+already met; he married **Joanna Catharina Van Gindertaelen**, 23, *arbeidster*, also
+unable to write. Two independent identifiers anchor the parent link: (1) his mother
+named as dead, **Zaventem, 19 December 1843** — an exact day-level match to
+[[joanna_verelst]]'s already-held death date, drawn from a *separately transcribed*
+Demogen batch (S19, his sister [[peremans]]'s 1846 marriage act, a different register
+entirely); (2) his father named as Egidius Peremans, matching [[egidius_peremans]] by
+name and commune. **This clears a higher bar than the three siblings already in this
+family** — [[cornelius_peremans]], [[jathanasius_peremans]] and [[mjosephina_peremans]]
+were each grafted on the parent-name pair alone, with the commune supplied only by a
+volume title and no exact date anywhere in the act. Here, an independent transcription
+of a different register reproduces a day-level date already held, which is not the kind
+of thing two unrelated couples of the same two names would coincidentally share. Her
+parents, **Joannes Franciscus Van Gindertaelen** × **Anna Catharina Huenaerts**, are
+named directly in the act with their roles labelled (present and consenting), so there
+is no identity-matching question for them — rule 2b, not rule 1 — and both are entered
+as [[vangindertaelen_jf]] and [[huenaerts_ac]]. New source **S34**, registered in
+`research/sources.json` (the next free numbered id after S33; checked directly against
+the registry to avoid repeating §46's S19/S20 collision). Four new person files:
+[[jbaptista_peremans]], [[vangindertaelen_jc]], [[vangindertaelen_jf]],
+[[huenaerts_ac]]. One label recorded — `jbaptista_peremans` against
+`abl:22d86c23…#Person1605011`, MATCH — the one the verifier could not record, since
+`evaluate.py label` refuses a person not yet in the roster.
+
+**A CONFLICT, left open on purpose.** The same act gives Egidius Peremans's own death as
+**1836-03-06**, against the **1837-03-06** this tree already holds from S19 — same day
+and month, one year apart. Both are AGATHA/Demogen index transcriptions; neither is a
+register image. Positing two separate Egidius Peremans × Joanna Theresia Verelst couples
+in one small commune, whose wives happen to share an identical day-level death date, is a
+far larger coincidence than a single-digit transcription slip in one of the two
+independent Demogen batches — so this is read as one man, not two. **But which digit
+slipped is not decided here.** Both dates are recorded on [[egidius_peremans]], each
+tagged to the source that gives it, and the frontmatter field is left at the
+earlier-held 1837-03-06 rather than silently overwritten. Only the Zaventem death
+register image settles it, and that image was the same one confirmed `blocked` above.
+Also recorded, honestly, as unchecked rather than checked: no search was made this pass
+for a rival Egidius Peremans × Joanna Theresia Verelst couple elsewhere in
+Vlaams-Brabant. The identical day-level death date made that search seem unnecessary,
+but a judgement is not a search.
+
+**Three witness-line leads, refused, and why a witness line is structurally weak
+evidence.** [[cornelius_peremans]] and [[jathanasius_peremans]] both stand witness, aged
+33 and 26 — the first would imply a birth around 1814–1815, narrower than anything
+currently held for him, but **no birth date is written**: a witness line carries only a
+name and a commune, with no parent names restated, which is *weaker* than the
+parent-name pair that grafted him into this family to begin with. Recorded as a
+frontier on his own record, with the explicit rule that if it is ever accepted the only
+honest form is a `year_span`, never a point date. Jathanasius's age is merely consistent
+with his already-held ~1822 and adds nothing; noted, nothing changed. A third witness,
+**Petrus Van Der Varen**, 35, is a plausible but unconfirmed match for
+[[mjosephina_peremans]]'s husband [[vandervarent_p]] (age implies ~1813, matching the
+held ~1813) — but the surname is spelled differently, the act states no relation, and
+surname + place + a plausible age is exactly the pattern that produced five false
+positives elsewhere this run. Recorded as a frontier on [[vandervarent_p]]; not linked.
+A fourth witness, **Franciscus Engels**, 38, *veldwachter*, is a confirmed non-candidate:
+he also witnesses [[peremans]]'s own 1846 act at 35, the two ages intersecting cleanly
+at a birth in Feb–Aug 1810, consistent with one man holding a single per-commune
+constable's post across both weddings. No person file — a recurring professional
+witness is not a family lead, and this is worth saying so a later pass does not read him
+as one.
+
+**Two findings about the tools, not the tree.** First, `research.py acts`' greedy cover
+claims `RESOLVES mjosephina_peremans` for `abl:fa0664d5-a6ee-b84b-6d7d-d377d3152e45`
+(= S19) — but the act's own participant list (checked directly in
+`research/harvest/acts/abl.jsonl`) names exactly one Peremans, `Person1716021` "Joanna
+Catharina Jacoba Peremans", the bride, already anchored as [[peremans]]. No Maria
+Josephina is in this act at all; her real source is S29, an entirely different
+FamilySearch record. All four Peremans siblings share the identical held father+mother
+identifiers, and the cover appears to credit any of them once that pair matches, without
+checking that the act's own participant forename resembles the target person — a
+nonmatch label for this was already on disk before this pass and is not duplicated.
+Second, the cover re-offers work already finished: both `abl:fa0664d5…` (S19 verbatim,
+`RecordIdentifier HUBRA_00011036_0`, already cited by three records) and
+`abl:c22fd42f…` (already transcribed field-for-field into `coekelberghs.md` and
+`henricus_vanesch.md`, and already labelled) still surface as high-value entries. The
+cover does not know what the tree already holds. Neither finding is fixed here —
+`tools/` is out of scope for this pass — but both are worth a future review.
+
+Tree: 504 → 508 people. Build green.

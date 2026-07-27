@@ -29,3 +29,11 @@ Son of [[vandervarent_j]] and [[goossens]].
 The record gives no place of birth, no trade and no residence, so this record has none.
 
 `sup`: an indexed registration, the act itself unread.
+
+NOT PROVEN, a frontier only (2026-07-27): a **Petrus Van Der Varen**, 35, stands witness
+at [[jbaptista_peremans]]'s Zaventem marriage on 21 August 1848 (S34) — plausibly this
+man, since 35 in 1848 implies ~1813, matching the ~1813 already held here, but adding no
+more precision than that. The act states no relation, and the surname is spelled
+differently (*Van Der Varen* against this record's *van der Varent*). Surname, place and
+a plausible age are exactly the pattern that produced false positives elsewhere this
+run — one identifier's worth, not two, so this is recorded as a lead and not linked.

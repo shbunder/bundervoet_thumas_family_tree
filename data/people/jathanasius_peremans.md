@@ -35,3 +35,7 @@ follow than his brother.
 
 FRONTIER: his own birth act at Zaventem around 1822, and the marriage act itself, which would
 give both trades and his exact age.
+
+He stands witness, aged 26, at his brother [[jbaptista_peremans]]'s Zaventem marriage on
+21 August 1848 (S34) — consistent with the ~1822 already held here, but adding no
+precision of its own. Recorded for completeness; nothing here changes.

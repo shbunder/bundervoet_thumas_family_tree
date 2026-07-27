@@ -12,6 +12,7 @@ spouses:
     name: Egidius Peremans
 sources:
   - S19
+  - S34
 ---
 
 Mother of the bride in her daughter [[peremans]]'s marriage act — Zaventem, act nr. 1,
@@ -34,3 +35,10 @@ Nothing here was refuted and no fact changed. What changed is the honest name fo
 evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 its image was actually read. None was. The register images are the named next step.
+
+CORROBORATED (2026-07-27): a fifth child, [[jbaptista_peremans]], names her again as his
+mother in his own 1848 Zaventem marriage act (S34) — dead, at Zaventem, on **19 December
+1843**, an exact day-level match to the date held here since S19. The two transcriptions
+are of two different registers, drawn 2.5 years apart, so an identical day-level date
+repeated across both is strong corroboration rather than coincidence. This is also what
+anchors [[jbaptista_peremans]] as her son: see his own record for the reasoning.
