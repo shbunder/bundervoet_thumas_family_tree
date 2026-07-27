@@ -19,6 +19,13 @@ spouses:
     place: Oostende
 sources:
   - tree-gverdievel
+  - rab-bs-geboorten
 ---
 
 Married at 19; lived her whole life in Oostende, reaching 73.
+
+Her own birth act — Oostende, 5 July 1853, act nr. 238, RAB ID 1458582 — confirms her
+father/mother links, until now sourced from a single Geneanet tree (tree-gverdievel)
+alone: both parents are named in full, "JANSSEN Josephus Joannes x HUYGHEBAERT Appolonia
+Joanna", matching this record exactly. What changed is not the fact but its basis: a
+civil-act index, independent of that member tree, now stands behind it.
