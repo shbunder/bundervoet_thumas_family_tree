@@ -10,6 +10,7 @@ spouses:
   - id: francisca_casiers
     name: Francisca Casiers
     married: ~1673
+    confidence: sup
 sources:
   - tree-stechec
 ---

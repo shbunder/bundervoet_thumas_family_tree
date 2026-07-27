@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: helena_denijs
     name: Helena Denijs
+    confidence: sup
 sources:
   - tree-stefanieschil
   - agatha-roksem-1855-death-agatha-stekelorum

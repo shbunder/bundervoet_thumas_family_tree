@@ -9,7 +9,11 @@ const esc = s =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 
-const spouseText = sp => '❦ ' + (sp.detail ? `${sp.name} — ${sp.detail}` : sp.name);
+// A marriage is a link like any other, so an assumed one is marked like any other. The
+// glyph rather than a word: this runs above the renderer, where no translation is in
+// scope, and the legend already says what it means.
+const spouseText = sp => '❦ ' + (sp.detail ? `${sp.name} — ${sp.detail}` : sp.name)
+  + (sp.weak ? ' ?' : '');
 // Someone can have married more than once; the list is chronological.
 const spousesText = p => (p.spouses || []).map(spouseText).join('   ');
 
@@ -37,6 +41,19 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
     return r && r.kind === 'blood' ? r.label : '';
   };
 
+  // The mark on a link the tree draws but has not verified. It goes on the JOIN and never
+  // on the person: a parent documented to the day can still be the wrong parent, and a
+  // red card would say the opposite of what is meant. Every one of these carries the
+  // reason in its title, so the claim and its warrant are never more than a hover apart —
+  // a red edge whose reason lives somewhere else is just an unexplained doubt.
+  const weakMark = why =>
+    `<span class="wmark" title="${esc(t('lblWeakLink'))}${why ? ' — ' + esc(why) : ''}" ` +
+    `aria-label="${esc(t('lblWeakLink'))}">?</span>`;
+
+  const weakOn = (childId, role) => Boolean(childId) && kin.isWeakLink(childId, role);
+  const markIf = (childId, role) =>
+    weakOn(childId, role) ? weakMark(kin.linkNote(childId, role)) : '';
+
   // Whose children a group is. Named, because with more than one group an unlabelled
   // row of children is the half-sibling ambiguity itself: it shows four children and
   // says nothing about the two mothers they had.
@@ -45,7 +62,7 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
       ? t('withWhom', { name: esc(people[other].name) })
       : t('otherParentUnknown');
 
-  function node(id, { role, arrow = '↑', focus = false, cls = '' } = {}) {
+  function node(id, { role, arrow = '↑', focus = false, cls = '', weak = false, weakNote = '' } = {}) {
     if (!id) {
       return `<div class="node unk"><div class="nm">${esc(t('unknownCard'))}</div>` +
         `<div class="dt">${esc(t('toResearch'))}</div></div>`;
@@ -60,15 +77,29 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
     const climb = !focus && c !== 'unk'
       ? `<span class="climb">${esc(arrow ? t('climb', { arrow }) : t('openCard'))}</span>`
       : '';
+    // On the role label where there is one, because the role IS the claim in doubt —
+    // "father", marked, reads as "we are not sure he is the father". On the name only
+    // when there is no label to carry it.
+    const mark = weak ? weakMark(weakNote) : '';
     return (
-      `<div class="node ${focus ? 'focus ' : ''}${cls ? cls + ' ' : ''}${c}" data-id="${esc(id)}">` +
+      `<div class="node ${focus ? 'focus ' : ''}${weak ? 'weak ' : ''}${cls ? cls + ' ' : ''}${c}" data-id="${esc(id)}">` +
       climb +
-      (label ? `<div class="rl">${esc(label)}</div>` : '') +
-      `<div class="nm">${esc(p.name)}</div>` +
+      (label ? `<div class="rl">${esc(label)}${mark}</div>` : '') +
+      `<div class="nm">${esc(p.name)}${label ? '' : mark}</div>` +
       (p.dates ? `<div class="dt">${esc(p.dates)}</div>` : '') +
       '</div>'
     );
   }
+
+  // A parent card, drawn with the edge it hangs from. `parentCard(child, 'father')` is
+  // the father, marked when it is the CHILD's climb to him that is the guess — which is
+  // where the fact lives, and where retracting it puts it back.
+  const parentCard = (childId, role, opts = {}) =>
+    node(people[childId] && people[childId][role], {
+      ...opts,
+      weak: weakOn(childId, role),
+      weakNote: kin.linkNote(childId, role),
+    });
 
   // A spouse who is a record of their own is rendered as a real node, so you can
   // open them and go on into their family. One who is only a name stays flat.
@@ -87,11 +118,16 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
   function grandparentCouple(parentId, focus) {
     const p = parentId && people[parentId];
     if (!p || (!p.father && !p.mother)) return '';
+    // The drop line beneath the couple IS this parent's climb to them, so an unverified
+    // climb turns it red. That is the connection drawn in red rather than described in
+    // red, which is the only form of it that survives being glanced at.
+    const shaky = weakOn(parentId, 'father') || weakOn(parentId, 'mother');
     return (
       `<div class="gplab">${esc(t('parentsOf', { name: p.name }))}</div>` +
-      `<div class="couple">${node(p.father, { role: relTo(p.father, focus) })}<span class="xmark">×</span>` +
-      `${node(p.mother, { role: relTo(p.mother, focus) })}</div>` +
-      '<div class="vline"></div>'
+      `<div class="couple">${parentCard(parentId, 'father', { role: relTo(p.father, focus) })}` +
+      '<span class="xmark">×</span>' +
+      `${parentCard(parentId, 'mother', { role: relTo(p.mother, focus) })}</div>` +
+      `<div class="vline${shaky ? ' weak' : ''}"></div>`
     );
   }
 
@@ -102,12 +138,15 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
     `<a class="ref ${conf(id)}" data-id="${esc(id)}" role="button" tabindex="0">${esc(people[id].name)}</a>` +
     (people[id].dates ? ` <span class="d">${esc(people[id].dates)}</span>` : '');
 
-  const parentLine = (label, id) =>
-    id && people[id]
+  const parentLine = (label, childId, role) => {
+    const id = people[childId] && people[childId][role];
+    return id && people[id]
       ? `<div class="kv"><b>${label}:</b> ${esc(people[id].name)}` +
         (people[id].dates ? ` (${esc(people[id].dates)})` : '') +
+        markIf(childId, role) +
         '</div>'
       : '';
+  };
 
   // "Renée's great-grandmother", not "Great-grandmother" — a relation is a fact about
   // a pair, so the other half of the pair has to be in it. Everywhere else on the page
@@ -150,8 +189,8 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
       (p.spouses?.length
         ? `<div class="kv"><b>${esc(t('lblSpouse'))}:</b> ${esc(spousesText(p))}</div>`
         : '') +
-      parentLine(esc(t('lblFather')), p.father) +
-      parentLine(esc(t('lblMother')), p.mother) +
+      parentLine(esc(t('lblFather')), id, 'father') +
+      parentLine(esc(t('lblMother')), id, 'mother') +
       kidLines +
       (p.note ? `<div class="nt">${esc(p.note)}</div>` : '') +
       `<div class="sr"><b>${esc(t('lblSource'))}:</b> ${esc(kin.sourceFor(id))}</div>`
@@ -176,12 +215,13 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
       html += `<div class="pgrid gp"><div class="pcol">${fatherGP}</div><div class="pcol"></div><div class="pcol">${motherGP}</div></div>`;
     }
     if (p.father || p.mother) {
+      const shaky = weakOn(focus, 'father') || weakOn(focus, 'mother');
       html +=
         `<div class="gplab">${esc(t('parentsOf', { name: p.name }))}</div>` +
-        `<div class="pgrid parents"><div class="pcol">${node(p.father, { role: relTo(p.father, focus) })}</div>` +
+        `<div class="pgrid parents"><div class="pcol">${parentCard(focus, 'father', { role: relTo(p.father, focus) })}</div>` +
         '<div class="pcol xcol"><span class="xmark">×</span></div>' +
-        `<div class="pcol">${node(p.mother, { role: relTo(p.mother, focus) })}</div></div>` +
-        '<div class="vline tall"></div>';
+        `<div class="pcol">${parentCard(focus, 'mother', { role: relTo(p.mother, focus) })}</div></div>` +
+        `<div class="vline tall${shaky ? ' weak' : ''}"></div>`;
     }
 
     // The whole sibship on one line, in birth order, with the person in focus in
@@ -196,7 +236,9 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
       .map(id =>
         id === focus
           ? `<div class="fcell">${node(focus, { focus: true })}${married}</div>`
-          : node(id, { role: relTo(id, focus), arrow: '', cls: 'sib' })
+          : node(id, { role: relTo(id, focus), arrow: '', cls: 'sib',
+                       weak: kin.isWeakSibling(focus, id),
+                       weakNote: kin.siblingNote(focus, id) })
       )
       .join('');
 
@@ -238,7 +280,8 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
     const c = conf(focus);
     const rows = [];
     const push = (label, value) => value && rows.push(`<div class="kv"><b>${label}:</b> ${value}</div>`);
-    const list = ids => ids.map(id => refLink(id)).join('<span class="sep">·</span>');
+    const list = (ids, mark) =>
+      ids.map(id => refLink(id) + (mark ? mark(id) : '')).join('<span class="sep">·</span>');
 
     push(esc(t('lblBorn')), esc(p.born));
     push(esc(t('lblDied')), esc(p.died));
@@ -251,12 +294,16 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
           .join('<span class="sep">·</span>')
       );
     }
-    push(esc(t('lblFather')), p.father && people[p.father] ? refLink(p.father) : '');
-    push(esc(t('lblMother')), p.mother && people[p.mother] ? refLink(p.mother) : '');
+    const parentCell = role =>
+      p[role] && people[p[role]] ? refLink(p[role]) + markIf(focus, role) : '';
+    push(esc(t('lblFather')), parentCell('father'));
+    push(esc(t('lblMother')), parentCell('mother'));
 
     const siblings = kin.siblingsOf(focus).slice().sort(byBirth);
     if (siblings.length) {
-      push(esc(t(siblings.length === 1 ? 'lblSibling' : 'lblSiblings')), list(siblings));
+      push(esc(t(siblings.length === 1 ? 'lblSibling' : 'lblSiblings')),
+           list(siblings, id => (kin.isWeakSibling(focus, id)
+             ? weakMark(kin.siblingNote(focus, id)) : '')));
     }
     // Same reason as the rows above: with two marriages, one "Children:" line reads as
     // one family. The label carries the other parent so it cannot.
@@ -296,6 +343,17 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
   const MARRIED = () => `<div class="uconn marr"><span>${esc(t('marriedConn'))}</span></div>`;
 
   function ucard(id, label, cls = '') {
+    // The apex of an arch can be the parent a stated sibship implies and nobody has
+    // identified. It is a real position in the graph with no record behind it, so it is
+    // drawn as the unnamed card it is rather than given a name the tree does not have —
+    // and it carries no `data-id`, because there is nothing to open.
+    if (kin.isAnon(id)) {
+      return (
+        `<div class="ucard unk anon${cls}">` +
+        (label ? `<div class="urel">${esc(label)}</div>` : '') +
+        `<div class="uname">${esc(t('unnamedShared'))}</div></div>`
+      );
+    }
     const p = people[id];
     return (
       `<div class="ucard ${conf(id)}${cls}" data-id="${esc(id)}">` +
@@ -483,10 +541,16 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
     return `<div class="lhead">${relationText(id, kin.ROOT)}</div>` + linkGraph(id, kin.ROOT);
   }
 
+  // The confidence codes, and then — separated, deliberately — the one mark that is not a
+  // confidence at all. It qualifies an edge rather than a person, so putting it in the
+  // same run of swatches would read as a fifth grade of certainty and undo the whole
+  // distinction: these four say how well someone is known, that one says whether they
+  // belong where the tree has put them.
   const legend = () =>
     i18n.confCodes
       .map(key => `<span><i class="swatch sw-${key}"></i>${esc(i18n.conf(key))}</span>`)
-      .join('');
+      .join('') +
+    `<span class="lgsep"><span class="wmark">?</span>${esc(t('legendWeakLink'))}</span>`;
 
   // ---------- index ----------
 
@@ -683,7 +747,7 @@ FamilyTree.createRenderer = function ({ people, lineages, groups }, kin, i18n) {
       line +
       '<div class="via">' +
       t('commonAncestorLine', {
-        via: `<b>${esc(people[r.via].name)}</b>`,
+        via: `<b>${esc(kin.isAnon(r.via) ? t('unnamedShared') : people[r.via].name)}</b>`,
         ga: esc(t('genUp', { n: r.da })),
         gb: esc(t('genUp', { n: r.db })),
         a: esc(people[a].name),

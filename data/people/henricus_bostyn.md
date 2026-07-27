@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: metser (mason)
 line: bostyn-cappaert
-father: henricus_j_bostyn
-mother: mathilde_desmet
+father:
+  id: henricus_j_bostyn
+  confidence: sup
+mother:
+  id: mathilde_desmet
+  confidence: sup
 spouses:
   - id: judith_cappaert
     name: Judith Marie Cappaert
     married: 1900-07-31
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-1960dirk
 ---

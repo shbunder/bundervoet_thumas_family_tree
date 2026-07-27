@@ -8,11 +8,16 @@ death:
   date: "1743"
 confidence: sup
 line: bostyn-cappaert
-father: georgius_maertens
-mother: joanna_leenaert
+father:
+  id: georgius_maertens
+  confidence: sup
+mother:
+  id: joanna_leenaert
+  confidence: sup
 spouses:
   - id: engelbertus_vanmaele
     name: Engelbertus Van Maele
+    confidence: sup
 sources:
   - tree-isavdw
 ---

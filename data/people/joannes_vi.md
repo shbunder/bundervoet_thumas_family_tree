@@ -10,13 +10,31 @@ death:
   place: Oostende
 confidence: doc
 line: van-iseghem
-father: eduardus_vi
-mother: emma_vincke
+father:
+  id: eduardus_vi
+  confidence: sup
+mother:
+  id: emma_vincke
+  confidence: doc
+siblings:
+  - id: camillusgustavus_vi05
+    confidence: sup
+  - id: camillushenricus_vi11
+    confidence: sup
+  - id: eduardus_vi2
+    confidence: doc
+  - id: flavie_vi
+    confidence: doc
+  - id: maria_vi
+    confidence: sup
+  - id: valentina_vi
+    confidence: sup
 spouses:
   - id: adrienne_dv
     name: Adrienne Margaretha Devriendt
     married: 1928-03-24
     place: Stene
+    confidence: sup
 sources:
   - fwk-joannes-vi-1969
   - tree-bartvanhooren

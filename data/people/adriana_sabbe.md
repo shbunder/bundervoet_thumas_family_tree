@@ -8,11 +8,16 @@ death:
   date: "1768"
 confidence: sup
 line: bostyn-cappaert
-father: judocus_sabbe
-mother: anna_vannieuwenhuyse
+father:
+  id: judocus_sabbe
+  confidence: sup
+mother:
+  id: anna_vannieuwenhuyse
+  confidence: sup
 spouses:
   - id: petrus_degrande
     name: Petrus De Grande
+    confidence: sup
 sources:
   - tree-isavdw
 ---

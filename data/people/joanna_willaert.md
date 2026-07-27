@@ -10,13 +10,18 @@ death:
   place: Torhout
 confidence: sup
 line: bostyn-cappaert
-father: nicolas_willaert
-mother: catharina_vanmassenhove
+father:
+  id: nicolas_willaert
+  confidence: sup
+mother:
+  id: catharina_vanmassenhove
+  confidence: sup
 spouses:
   - id: hercules_stroobandt
     name: Hercules Stroobandt
     married: 1659-06-14
     place: Torhout
+    confidence: sup
 sources:
   - tree-isavdw
 ---

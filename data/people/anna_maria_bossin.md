@@ -8,13 +8,21 @@ birth:
 confidence: sup
 occupation: dagloonster (day labourer)
 line: thumas
-father: arnoldus_bossin
-mother: elisabeth_deyn
+father:
+  id: arnoldus_bossin
+  confidence: sup
+mother:
+  id: elisabeth_deyn
+  confidence: sup
+siblings:
+  - id: guilielmus_bossin
+    confidence: sup
 spouses:
   - id: franciscus_pardon
     name: Françiscus Pardon
     married: 1853-12-01
     place: Sint-Stevens-Woluwe
+    confidence: sup
 sources:
   - S22
 ---

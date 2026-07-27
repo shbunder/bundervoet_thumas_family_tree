@@ -15,6 +15,7 @@ spouses:
     name: Livinus Paelinck
     married: 1739-11-07
     place: Kalken
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

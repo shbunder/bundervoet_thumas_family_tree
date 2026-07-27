@@ -2,19 +2,33 @@
 id: jbaptista_peremans
 name: Joannes Baptista Peremans
 surname: Peremans
+sex: m
 birth:
   date: ~1820
-sex: m
 confidence: sup
 occupation: arbeider (labourer)
 line: thumas
-father: egidius_peremans
-mother: joanna_verelst
+father:
+  id: egidius_peremans
+  confidence: sup
+mother:
+  id: joanna_verelst
+  confidence: sup
+siblings:
+  - id: cornelius_peremans
+    confidence: sup
+  - id: jathanasius_peremans
+    confidence: sup
+  - id: mjosephina_peremans
+    confidence: sup
+  - id: peremans
+    confidence: sup
 spouses:
   - id: vangindertaelen_jc
     name: Joanna Catharina Van Gindertaelen
     married: 1848-08-21
     place: Zaventem
+    confidence: sup
 sources:
   - S34
 ---

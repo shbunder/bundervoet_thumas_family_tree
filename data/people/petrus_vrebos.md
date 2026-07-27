@@ -9,14 +9,20 @@ birth:
 confidence: sup
 occupation: pleisteraar (plasterer)
 line: thumas
-father: vrebos_hf
-mother: schoolmeesters_j
+father:
+  id: vrebos_hf
+  confidence: sup
+mother:
+  id: schoolmeesters_j
+  confidence: sup
 spouses:
   - name: Elisabeth Theresia Geuffens
+    confidence: sup
   - id: ludovica_bossin
     name: Ludovica Bossin
     married: 1901-05-30
     place: Kraainem
+    confidence: sup
 sources:
   - S35
 ---

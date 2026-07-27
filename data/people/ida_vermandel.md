@@ -14,6 +14,7 @@ line: de-keyser
 spouses:
   - id: jan_van_bergen
     name: Joannes Franciscus Van Bergen
+    confidence: sup
 sources:
   - fs-hamme-1865-death-ida-vermandel
   - fs-hamme-1882-marriage-vermorgen-vandenberghe

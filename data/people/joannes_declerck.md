@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: judoca_vandekeere
     name: Judoca Vande Keere
+    confidence: sup
 sources:
   - tree-isavdw
 ---

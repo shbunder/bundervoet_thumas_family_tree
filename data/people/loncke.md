@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: petrus_devos
     name: Petrus Jacobus Franciscus Devos
+    confidence: sup
 sources:
   - tree-wernero
 ---

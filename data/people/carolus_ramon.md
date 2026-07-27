@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: visser (fisherman)
 line: devriendt
-father: pierre_ramon
-mother: joanna_daneel
+father:
+  id: pierre_ramon
+  confidence: sup
+mother:
+  id: joanna_daneel
+  confidence: sup
 spouses:
   - id: cornelia_verkouille
     name: Cornelia Coleta Verkouille
     married: 1859-09-14
     place: Oostende
+    confidence: sup
 sources:
   - geneanet
 ---

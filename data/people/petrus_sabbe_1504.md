@@ -10,9 +10,12 @@ death:
 confidence: sup
 occupation: landbouwer (farmer)
 line: bostyn-cappaert
-father: judocus_sabbe_1475
+father:
+  id: judocus_sabbe_1475
+  confidence: sup
 spouses:
   - name: (wife unrecorded)
+    confidence: sup
 sources:
   - tree-isavdw
 ---

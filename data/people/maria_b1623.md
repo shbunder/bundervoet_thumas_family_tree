@@ -9,8 +9,19 @@ death:
   date: "1676"
 confidence: sup
 line: bundervoet
-father: livinus_bundervoet
-mother: elisabeth_nn
+father:
+  id: livinus_bundervoet
+  confidence: sup
+mother:
+  id: elisabeth_nn
+  confidence: sup
+siblings:
+  - id: livinus_b1615
+    confidence: sup
+  - id: segerius_bundervoet
+    confidence: sup
+  - id: wilhelmina_b1650
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

@@ -10,6 +10,7 @@ line: vanstechelman
 spouses:
   - id: andreasandries_v
     name: Andreas Andries Vanstechelman
+    confidence: sup
 sources:
   - tree-stechec
 ---

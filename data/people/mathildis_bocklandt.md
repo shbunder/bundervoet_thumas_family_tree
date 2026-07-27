@@ -9,8 +9,27 @@ birth:
 confidence: sup
 occupation: werkmeid (housemaid)
 line: de-keyser
-father: edouard_bocklandt
-mother: marie_vanbergen
+father:
+  id: edouard_bocklandt
+  confidence: sup
+mother:
+  id: marie_vanbergen
+  confidence: sup
+siblings:
+  - id: alphonsus_bocklandt
+    confidence: sup
+  - id: caesar_bocklandt
+    confidence: sup
+  - id: elodia_bocklandt
+    confidence: sup
+  - id: louise_bocklandt
+    confidence: sup
+  - id: ludovicus_bocklandt
+    confidence: sup
+  - id: paulina_bocklandt
+    confidence: sup
+  - id: philemondus_bocklandt
+    confidence: sup
 sources:
   - agatha-oostende-1893-marriage-bocklandt-dubuy
 ---

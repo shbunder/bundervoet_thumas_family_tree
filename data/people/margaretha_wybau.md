@@ -9,6 +9,7 @@ line: bostyn-cappaert
 spouses:
   - id: petrus_debaecke
     name: Petrus De Baecke
+    confidence: sup
 sources:
   - tree-isavdw
 ---

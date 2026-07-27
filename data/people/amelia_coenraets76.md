@@ -13,6 +13,7 @@ spouses:
     name: Felix Van den Bemden
     married: 1897-02-08
     place: Kraainem
+    confidence: sup
 sources:
   - kraainem-1897-marriage-vandenbemden-coenraets
 ---

@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: morree
     name: Anna Francisca Morree
+    confidence: sup
 sources:
   - S12
 ---

@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: vandervarent_j
     name: Joannes van der Varent
+    confidence: sup
 sources:
   - S29
 ---

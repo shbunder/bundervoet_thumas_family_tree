@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: anna_senesael
     name: Anna Theresia Senesael
+    confidence: sup
 sources:
   - tree-wernero
 ---

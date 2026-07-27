@@ -13,6 +13,7 @@ spouses:
     name: Francisca Van Maele
     married: 1730-10-17
     place: Beernem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

@@ -8,6 +8,7 @@ line: thumas
 spouses:
   - id: godts
     name: Anna Amelia Godts
+    confidence: sup
 sources:
   - S27
 ---

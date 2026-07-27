@@ -11,6 +11,7 @@ records themselves, what to search next.
     uv run tools/research.py stale              misses a venue has since outgrown
     uv run tools/research.py components         disconnected families — objective 3
     uv run tools/research.py collapse           where the tree folds back on itself
+    uv run tools/research.py weak               links the tree draws but has not verified
     uv run tools/research.py report             where the effort has gone
     uv run tools/research.py log …              record a search
     uv run tools/research.py check              validate log + registry
@@ -21,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
 import sys
 
 from familytree import sources as reg
@@ -32,7 +34,7 @@ from familytree.coverage import (
 )
 from familytree.frontier import frontier_rows
 from familytree.people import (
-    ROOT, load_artifacts, load_config, load_people, surname_counts,
+    ROOT, load_artifacts, load_config, load_people, surname_counts, weak_edges,
 )
 
 LOG_FIELDS = ("found", "why", "scope", "url", "artifact", "note")
@@ -389,6 +391,65 @@ def cmd_collapse(args):
         print(f"\n{len(multi)} person(s) reached by more than one line from a root.")
 
 
+def cmd_weak(args):
+    """The bill for building fast.
+
+    Every other queue here asks what to research next. This one asks what the tree is
+    already asserting on one identifier — the debt the red edges stand for — and orders it
+    by what being wrong would cost. `at stake` leads because it is the only number that
+    tells two identical-looking guesses apart: one carrying twenty descendants is
+    load-bearing and should be paid for with a document, one carrying nobody can wait for a
+    harvest to reach its commune.
+
+    There is deliberately no ageing here and no "assumed since" field to drive it. Git
+    already knows when a line was written, and a hand-kept date beside it is the second copy
+    the data model forbids. What keeps an assumption from becoming permanent is that this
+    queue is derived from the records on every run, so it cannot be forgotten and cannot go
+    stale — the same property every other queue in this file rests on.
+
+    Nothing here is a finding. Every row is a link this project chose to draw, and each poses
+    the ordinary question: can a second independent identifier be found, or must it come out?
+    """
+    config = load_config()
+    people = load_people(config["roster"])
+    edges = weak_edges(people, config["meta"]["roots"])
+    edges.sort(key=lambda e: (-len(e["at_stake"]), e["person"]))
+
+    if args.json:
+        print(json.dumps(edges, ensure_ascii=False, indent=2))
+        return
+
+    if not edges:
+        print("No assumed links — every parent link in the tree cleared two identifiers.")
+        print("\n  A link entered on one is recorded `confidence: asm` on the link itself")
+        print("  rather than withheld; see docs/method/evidence.md § 4a.")
+        return
+
+    carried = len({pid for e in edges for pid in e["at_stake"]})
+    stacked = [e for e in edges if e["stacked"]]
+    print(f"{len(edges)} assumed link(s) — drawn on one identifier, not yet verified.")
+    print(f"{carried} of {len(people)} people are in the tree only through one of them.\n")
+
+    for e in edges[: args.limit]:
+        print(f"  {len(e['at_stake']):>4} at stake  {e['name']}")
+        print(f"       {e['link']} → {e['parent_name']} ({e['parent']})"
+              + ("  STACKED" if e["stacked"] else ""))
+        print(f"       rests on: {e['note'] or '— nothing recorded'}")
+        if e["source"]:
+            print(f"       source:   {e['source']}")
+        print(f"       uv run tools/link.py {e['person']}")
+        print()
+    if len(edges) > args.limit:
+        print(f"  …and {len(edges) - args.limit} more — pass --limit {len(edges)} for all.\n")
+
+    if stacked:
+        print(f"{len(stacked)} rest on another assumed link. A guess reasoned about as if the")
+        print("guess below it were settled is the compounding the scorer is shielded from,")
+        print("showing up in the shape of the tree instead — resolve the lower one first.\n")
+    print("Every ruling, accepted or refuted:")
+    print("  uv run tools/evaluate.py label <person> <act-id>#<pid> --match|--nonmatch --why …")
+
+
 def cmd_report(args):
     log = reg.load_log()
     people = load_people()
@@ -541,6 +602,11 @@ def main() -> int:
         p = sub.add_parser(name, help=help_text)
         p.add_argument("--limit", type=int, default=limit)
         p.set_defaults(fn=fn)
+
+    p = sub.add_parser("weak", help="links the tree draws but has not verified")
+    p.add_argument("--limit", type=int, default=25)
+    p.add_argument("--json", action="store_true", help="the worklist, for a verify sweep")
+    p.set_defaults(fn=cmd_weak)
 
     p = sub.add_parser("components", help="disconnected families — objective 3")
     p.add_argument("--surname", help="which surname's corpus clusters to show")

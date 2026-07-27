@@ -11,8 +11,25 @@ death:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: eduardus_vi
-mother: emma_vincke
+father:
+  id: eduardus_vi
+  confidence: sup
+mother:
+  id: emma_vincke
+  confidence: sup
+siblings:
+  - id: camillushenricus_vi11
+    confidence: sup
+  - id: eduardus_vi2
+    confidence: sup
+  - id: flavie_vi
+    confidence: sup
+  - id: joannes_vi
+    confidence: sup
+  - id: maria_vi
+    confidence: sup
+  - id: valentina_vi
+    confidence: sup
 sources:
   - rab-bs-geboorten
   - rab-bs-overlijdens

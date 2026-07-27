@@ -7,11 +7,21 @@ birth:
   place: living
 confidence: fam
 line: devriendt
-father: marcel_d
-mother: yvonne
+father:
+  id: marcel_d
+  confidence: fam
+mother:
+  id: yvonne
+  confidence: fam
+siblings:
+  - id: rene_dv
+    confidence: fam
+  - id: sonja_dv
+    confidence: fam
 spouses:
   - id: roland
     name: Roland De Keyser
+    confidence: fam
 sources:
   - tree-wernero
 ---

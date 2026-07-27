@@ -10,17 +10,28 @@ death:
 confidence: sup
 occupation: herbergierster (innkeeper)
 line: thumas
-father: jb_coekelberghs
-mother: anna_haesaerts
+father:
+  id: jb_coekelberghs
+  confidence: sup
+mother:
+  id: anna_haesaerts
+  confidence: sup
+siblings:
+  - id: anna_coekelberg53
+    confidence: sup
+  - id: joannes_coekelberg58
+    confidence: sup
 spouses:
   - id: hendrik_vdb
     name: Henricus Augustinus Vandenbemden
     married: 1873-04-24
     place: Sint-Stevens-Woluwe
+    confidence: sup
   - id: henricus_vanesch
     name: Henricus Van Esch
     married: 1903-11-06
     place: Kraainem
+    confidence: sup
 sources:
   - S5
   - ssw-1873-marriage-vandenbemden-coekelberghs

@@ -7,8 +7,29 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: sup
 line: thumas
-father: jbcoppens
-mother: jcseraphina_t
+father:
+  id: jbcoppens
+  confidence: sup
+mother:
+  id: jcseraphina_t
+  confidence: sup
+siblings:
+  - id: catharina_coppens02
+    confidence: sup
+  - id: clemencia_coppens09
+    confidence: sup
+  - id: hendrik_coppens92
+    confidence: sup
+  - id: hendrika_coppens96
+    confidence: sup
+  - id: joris_coppens94
+    confidence: sup
+  - id: joris_coppens99
+    confidence: sup
+  - id: joseph_coppens95
+    confidence: sup
+  - id: pieter_coppens00
+    confidence: sup
 sources:
   - S32
 ---

@@ -9,6 +9,7 @@ line: vanstechelman
 spouses:
   - id: delphina_vdb
     name: Delphina Van den Berghe
+    confidence: sup
 sources:
   - tree-stechec
 ---

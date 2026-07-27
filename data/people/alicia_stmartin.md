@@ -8,6 +8,7 @@ line: vanstechelman
 spouses:
   - id: henricus_e_v
     name: Henricus Emilius Vanstechelman
+    confidence: sup
 sources:
   - fs-wvl-bs
 ---

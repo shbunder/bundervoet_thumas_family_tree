@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: joanna_ackermans
     name: Joanna Ackermans
+    confidence: doc
 sources:
   - S35
   - fs-kraainem-1884-marriage-swaelens-bossin

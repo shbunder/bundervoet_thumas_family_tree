@@ -10,8 +10,35 @@ death:
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: lucien_vincke
-mother: ludovica_vanald
+father:
+  id: lucien_vincke
+  confidence: sup
+mother:
+  id: ludovica_vanald
+  confidence: sup
+siblings:
+  - id: alfons_vincke
+    confidence: sup
+  - id: bellarmin_vincke
+    confidence: sup
+  - id: camilla_vincke
+    confidence: sup
+  - id: charles_vincke
+    confidence: sup
+  - id: emma_vincke
+    confidence: sup
+  - id: florence_vincke
+    confidence: sup
+  - id: irma_vincke
+    confidence: sup
+  - id: jerome_vincke
+    confidence: sup
+  - id: karolus_vincke
+    confidence: sup
+  - id: romanie_vincke
+    confidence: sup
+  - id: theophil_vincke
+    confidence: sup
 sources:
   - rab-bs-geboorten
   - rab-bs-overlijdens

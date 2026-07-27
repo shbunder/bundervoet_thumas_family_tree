@@ -8,13 +8,18 @@ death:
   date: "1821"
 confidence: sup
 line: bostyn-cappaert
-father: michael_degrande
-mother: brigitta_deblaere
+father:
+  id: michael_degrande
+  confidence: sup
+mother:
+  id: brigitta_deblaere
+  confidence: sup
 spouses:
   - id: petrus_jos_keirsebilck
     name: Petrus Josephus Keirsebilck
     married: 1785-10-04
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

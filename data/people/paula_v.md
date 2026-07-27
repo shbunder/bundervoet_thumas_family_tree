@@ -5,13 +5,25 @@ surname: Vanstechelman
 sex: f
 confidence: sup
 line: vanstechelman
-father: petrusjacobus_v
-mother: clementia_w
+father:
+  id: petrusjacobus_v
+  confidence: sup
+mother:
+  id: clementia_w
+  confidence: sup
+siblings:
+  - id: augusta
+    confidence: sup
+  - id: henricus_e_v
+    confidence: sup
+  - id: leontius_v
+    confidence: sup
 spouses:
   - name: Alberic Luciaan Delrue
     married: 1924-05-11
     place: Oostende
     id: alberic_delrue
+    confidence: sup
 sources:
   - fs-wvl-bs
 ---

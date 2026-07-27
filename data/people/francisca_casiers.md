@@ -10,6 +10,7 @@ spouses:
   - id: joannes_vs
     name: Joannes Vanstechele
     married: ~1673
+    confidence: sup
 sources:
   - tree-stechec
 ---

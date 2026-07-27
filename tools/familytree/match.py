@@ -32,8 +32,8 @@ from .corpus import (
     surname_population_count,
 )
 from .people import (
-    DAY, MAX_LIFESPAN, MIN_PARENT_AGE, family_key, given_names, load_forenames, point_year,
-    year_of, year_span,
+    DAY, MAX_LIFESPAN, MIN_PARENT_AGE, family_key, firm_parent, given_names, is_weak,
+    load_forenames, parent_id, point_year, year_of, year_span,
 )
 
 # ---------- phonetics ----------
@@ -218,25 +218,51 @@ def from_person(p: dict, people: dict | None = None, children: dict | None = Non
     `people` and `children` are optional because most callers only need the person's own
     fields; pass them and the relatives come too, which is what turns a name agreement
     into a second independent identifier.
+
+    LINKS THE TREE ONLY ASSUMES ARE INVISIBLE HERE, in both directions — an assumed parent,
+    and a child who reaches this person by an assumed link. That is the one rule that makes
+    drawing an unverified link survivable. A relative is *evidence* precisely because the
+    tree is sure of them; a guess offered as evidence is this project's own conclusion
+    handed back to it as an independent identifier, and the two-identifier floor stops being
+    a floor. It compounds: guess A licenses graft B, which licenses C, each scoring as
+    well-supported. So the exclusion lives here, in the one function every caller already
+    goes through, rather than at eight call sites that would drift apart.
+
+    Sex derived from a child's `father`/`mother` role goes the same way. It is the weakest
+    case for excluding — an act calling someone a father is right about the role even where
+    it is wrong about the man — but "the scorer cannot see an assumed link, full stop" is a
+    rule that can be checked, and one with an exception in it is not.
     """
     birth, death = p.get("birth") or {}, p.get("death") or {}
     kin: list[tuple[str, str, frozenset[str]]] = []
+
+    def firm_children(pid: str) -> list[str]:
+        return [
+            cid for cid in (children or {}).get(pid, [])
+            if not any(
+                parent_id((people or {}).get(cid) or {}, role) == pid
+                and is_weak((people or {}).get(cid) or {}, role)
+                for role in ("father", "mother")
+            )
+        ]
+
     # The data model says being a father or a mother already settles sex, so the record
     # is allowed to omit it — but the scorer was reading the omission as "unknown" and
     # declining to veto. Every parent in the tree was therefore comparable with every
     # candidate of the opposite sex, and the kin evidence pushed those to the top.
     sex = p.get("sex")
     if not sex and children:
-        for cid in children.get(p["id"], []):
+        for cid in firm_children(p["id"]):
             child = (people or {}).get(cid) or {}
-            if child.get("father") == p["id"]:
+            if parent_id(child, "father") == p["id"]:
                 sex = "m"
-            elif child.get("mother") == p["id"]:
+            elif parent_id(child, "mother") == p["id"]:
                 sex = "f"
             if sex:
                 break
     if people:
-        for role, pid in (("father", p.get("father")), ("mother", p.get("mother"))):
+        for role in ("father", "mother"):
+            pid = firm_parent(p, role)
             other = people.get(pid) if pid else None
             if other:
                 kin.append(_kin_entry(role, other["name"], other.get("surname") or ""))
@@ -246,7 +272,7 @@ def from_person(p: dict, people: dict | None = None, children: dict | None = Non
             surname = (spouse or {}).get("surname") or ""
             if name:
                 kin.append(_kin_entry("spouse", name, surname))
-        for cid in (children or {}).get(p["id"], []):
+        for cid in firm_children(p["id"]):
             child = people.get(cid)
             if child:
                 kin.append(_kin_entry("child", child["name"], child.get("surname") or ""))

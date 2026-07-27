@@ -7,13 +7,21 @@ birth:
   place: Hamme (Oost-Vlaanderen)
 confidence: doc
 line: de-keyser
-father: jan_van_bergen
-mother: ida_vermandel
+father:
+  id: jan_van_bergen
+  confidence: sup
+mother:
+  id: ida_vermandel
+  confidence: doc
+siblings:
+  - id: marie_vanbergen
+    confidence: sup
 spouses:
   - id: petrus_vermorgen
     name: Petrus Vermorgen
     married: 1882-05-18
     place: Hamme (Oost-Vlaanderen)
+    confidence: doc
 sources:
   - fs-hamme-1882-marriage-vermorgen-vandenberghe
 ---

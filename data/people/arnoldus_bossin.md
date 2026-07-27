@@ -3,7 +3,7 @@ id: arnoldus_bossin
 name: Arnoldus Bossin
 surname: Bossin
 death:
-  date: >1853
+  date: ">1853"
   raw: alive on 1 December 1853; death not known
 confidence: sup
 occupation: arbeider (labourer)
@@ -11,6 +11,7 @@ line: thumas
 spouses:
   - id: elisabeth_deyn
     name: Elisabeth Deyn
+    confidence: sup
 sources:
   - S19
   - S22

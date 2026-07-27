@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: joanna_defoort
     name: Joanna De Foort
+    confidence: sup
 sources:
   - tree-isavdw
 ---

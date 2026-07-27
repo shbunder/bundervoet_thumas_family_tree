@@ -8,11 +8,16 @@ death:
   date: "1768"
 confidence: sup
 line: bostyn-cappaert
-father: joannes_declerck
-mother: judoca_vandekeere
+father:
+  id: joannes_declerck
+  confidence: sup
+mother:
+  id: judoca_vandekeere
+  confidence: sup
 spouses:
   - id: joannes_keirsebilck_1728
     name: Joannes Keirsebilck
+    confidence: sup
 sources:
   - tree-isavdw
 ---

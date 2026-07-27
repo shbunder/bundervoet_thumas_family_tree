@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: adrianus_debaecke
     name: Adrianus De Baecke
+    confidence: sup
 sources:
   - tree-isavdw
 ---

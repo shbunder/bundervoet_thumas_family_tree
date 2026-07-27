@@ -8,6 +8,7 @@ line: thumas
 spouses:
   - id: hendrik_coppens
     name: Hendrik Coppens
+    confidence: sup
 sources:
   - S26
 ---

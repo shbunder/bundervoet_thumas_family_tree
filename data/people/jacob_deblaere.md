@@ -15,6 +15,7 @@ spouses:
     name: Anna Cornelia De Vriese
     married: 1719-05-31
     place: Wingene
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

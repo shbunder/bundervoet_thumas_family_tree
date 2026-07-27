@@ -2,19 +2,31 @@
 id: jcseraphina_t
 name: Joanna Catharina Seraphina Thumas
 surname: Thumas
+sex: f
 birth:
   date: 1873-03-21
   place: Kraainem
-sex: f
 confidence: sup
 line: thumas
-father: georges_cj
-mother: bossin
+father:
+  id: georges_cj
+  confidence: sup
+mother:
+  id: bossin
+  confidence: sup
+siblings:
+  - id: henrica_thumas
+    confidence: sup
+  - id: jbgeorgius
+    confidence: sup
+  - id: misabella_t
+    confidence: sup
 spouses:
   - id: jbcoppens
     name: Jan Baptist Coppens
     married: 1892-07-27
     place: Kraainem
+    confidence: sup
 sources:
   - S26
 ---

@@ -7,8 +7,25 @@ death:
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: antoine_vanald
-mother: brigitte_wyllie
+father:
+  id: antoine_vanald
+  confidence: sup
+mother:
+  id: brigitte_wyllie
+  confidence: sup
+siblings:
+  - id: carolus_vanald
+    confidence: sup
+  - id: petrus_vanald
+    confidence: sup
+  - id: catharina_looten
+    confidence: sup
+  - id: ludovica_looten
+    confidence: sup
+  - id: maria_looten
+    confidence: sup
+  - id: renatus_looten
+    confidence: sup
 sources:
   - rab-bs-overlijdens
 ---

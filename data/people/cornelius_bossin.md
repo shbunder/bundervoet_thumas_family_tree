@@ -3,13 +3,28 @@ id: cornelius_bossin
 name: Cornelius Bossin
 surname: Bossin
 birth:
-  date: 1847
+  date: "1847"
   raw: declared at Sint-Stevens-Woluwe on 13 September 1847
   place: Sint-Stevens-Woluwe
 confidence: sup
 line: thumas
-father: guilielmus_bossin
-mother: peremans
+father:
+  id: guilielmus_bossin
+  confidence: sup
+mother:
+  id: peremans
+  confidence: sup
+siblings:
+  - id: bossin
+    confidence: sup
+  - id: henricus_bossin
+    confidence: sup
+  - id: joannes_bossin51
+    confidence: sup
+  - id: joannes_franciscus_bossin
+    confidence: sup
+  - id: ludovica_bossin
+    confidence: sup
 sources:
   - S24
 ---

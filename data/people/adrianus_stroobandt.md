@@ -9,13 +9,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: mauritius_stroobandt
-mother: barbara_debaecke
+father:
+  id: mauritius_stroobandt
+  confidence: sup
+mother:
+  id: barbara_debaecke
+  confidence: sup
 spouses:
   - id: anna_m_vanacker
     name: Anna Maria Van Acker
     married: "1768"
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

@@ -8,10 +8,13 @@ death:
   date: 1575..1587
 confidence: sup
 line: bostyn-cappaert
-father: petrus_vanrenterghem
+father:
+  id: petrus_vanrenterghem
+  confidence: sup
 spouses:
   - id: barbara_wittenheyns
     name: Barbara Wittenheyns
+    confidence: sup
 sources:
   - tree-isavdw
 ---

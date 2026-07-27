@@ -11,6 +11,7 @@ line: thumas
 spouses:
   - id: egidius_swaelens
     name: Egidius Swaelens
+    confidence: doc
 sources:
   - S35
   - fs-kraainem-1884-marriage-swaelens-bossin

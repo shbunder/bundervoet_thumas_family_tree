@@ -5,8 +5,21 @@ surname: Peremans
 sex: m
 confidence: sup
 line: thumas
-father: egidius_peremans
-mother: joanna_verelst
+father:
+  id: egidius_peremans
+  confidence: sup
+mother:
+  id: joanna_verelst
+  confidence: sup
+siblings:
+  - id: jathanasius_peremans
+    confidence: sup
+  - id: jbaptista_peremans
+    confidence: sup
+  - id: mjosephina_peremans
+    confidence: sup
+  - id: peremans
+    confidence: sup
 sources:
   - S30
 ---

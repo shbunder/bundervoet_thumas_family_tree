@@ -7,6 +7,7 @@ line: de-keyser
 spouses:
   - id: mathilde_meseure
     name: Mathilde Sophia Meseure
+    confidence: doc
 sources:
   - fs-stene-1924-marriage-blomme-bocklandt
 ---

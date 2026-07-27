@@ -9,6 +9,7 @@ line: bostyn-cappaert
 spouses:
   - id: judoca_vanhecke
     name: Judoca Van Hecke
+    confidence: sup
 sources:
   - tree-isavdw
 ---

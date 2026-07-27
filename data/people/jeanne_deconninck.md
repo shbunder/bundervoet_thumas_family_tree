@@ -8,6 +8,7 @@ line: thumas
 spouses:
   - id: guillaume_joostens
     name: Guillaume Joostens
+    confidence: sup
 sources:
   - S15
   - S9

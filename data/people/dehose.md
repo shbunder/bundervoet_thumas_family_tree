@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: cuypers_ae
     name: Antonius Cuypers
+    confidence: sup
 sources:
   - S31
 ---

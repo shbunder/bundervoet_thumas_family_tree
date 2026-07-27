@@ -8,6 +8,7 @@ line: de-keyser
 spouses:
   - id: sancha
     name: Sancha De Keyser
+    confidence: fam
 sources:
   - tree-stefpaelinck
 ---

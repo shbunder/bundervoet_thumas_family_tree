@@ -16,6 +16,7 @@ spouses:
     name: Maria Ludovica Martinet
     married: 1860-02-01
     place: Nieuwkerken-Waas
+    confidence: sup
 sources:
   - S18
   - tree-stefpaelinck

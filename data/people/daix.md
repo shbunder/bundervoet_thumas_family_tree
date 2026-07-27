@@ -14,6 +14,7 @@ spouses:
   - id: antoine_t
     name: Antoine Thumas
     married: 1687-11-30
+    confidence: sup
 sources:
   - tree-m2155
 ---

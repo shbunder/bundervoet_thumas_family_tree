@@ -10,18 +10,39 @@ death:
   place: Oostende
 confidence: doc
 line: de-keyser
-father: edouard_bocklandt
-mother: marie_vanbergen
+father:
+  id: edouard_bocklandt
+  confidence: sup
+mother:
+  id: marie_vanbergen
+  confidence: sup
+siblings:
+  - id: alphonsus_bocklandt
+    confidence: sup
+  - id: caesar_bocklandt
+    confidence: sup
+  - id: elodia_bocklandt
+    confidence: sup
+  - id: ludovicus_bocklandt
+    confidence: sup
+  - id: mathildis_bocklandt
+    confidence: sup
+  - id: paulina_bocklandt
+    confidence: sup
+  - id: philemondus_bocklandt
+    confidence: sup
 spouses:
   - id: edouard_dk
     name: Édouard Dekeyser
     married: 1901-05-04
     divorced: 1922-11-14
     detail: legitimized their two eldest children
+    confidence: doc
   - id: petrus_blomme
     name: Petrus Blomme
     married: 1924-03-01
     place: Stene
+    confidence: doc
 sources:
   - S17
   - tree-wete1998

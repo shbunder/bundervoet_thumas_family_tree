@@ -11,11 +11,19 @@ death:
 confidence: sup
 occupation: werkvrouw
 line: de-keyser
-father: jan_van_bergen
-mother: ida_vermandel
+father:
+  id: jan_van_bergen
+  confidence: sup
+mother:
+  id: ida_vermandel
+  confidence: sup
+siblings:
+  - id: paulina_vdberghe
+    confidence: sup
 spouses:
   - id: edouard_bocklandt
     name: Édouard Bocklandt
+    confidence: sup
 sources:
   - tree-wete1998
   - agatha-oostende-1888-death-maria-louisa-vanbergen

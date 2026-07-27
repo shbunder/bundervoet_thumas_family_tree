@@ -7,8 +7,15 @@ birth:
   date: 1940..1949
 confidence: fam
 line: de-keyser
-father: gustaaf
-mother: simonne
+father:
+  id: gustaaf
+  confidence: fam
+mother:
+  id: simonne
+  confidence: fam
+siblings:
+  - id: roland
+    confidence: fam
 sources:
   - family
 ---

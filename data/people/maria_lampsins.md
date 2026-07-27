@@ -9,13 +9,18 @@ death:
   date: 1709-09-02
 confidence: sup
 line: bostyn-cappaert
-father: paulus_lampsins
-mother: clara_lampsins
+father:
+  id: paulus_lampsins
+  confidence: sup
+mother:
+  id: clara_lampsins
+  confidence: sup
 spouses:
   - id: josephus_vansieleghem
     name: Josephus Van Sieleghem
     married: 1657-08-12
     place: Lichtervelde
+    confidence: sup
 sources:
   - tree-isavdw
 ---

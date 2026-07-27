@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: michael_devriese_o
     name: Michaël De Vriese
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

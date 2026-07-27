@@ -2,12 +2,13 @@
 id: ludovicus_schal
 name: Ludovicus Franciscus Schalandryn
 surname: Schalandryn
-occupation: werkman (labourer)
 confidence: doc
+occupation: werkman (labourer)
 line: van-iseghem
 spouses:
   - id: mathilde_standaert
     name: Mathilde Standaert
+    confidence: doc
 sources:
   - S20
   - rab-bs-huwelijken

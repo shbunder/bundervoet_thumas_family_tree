@@ -8,13 +8,18 @@ death:
   date: "1722"
 confidence: sup
 line: bostyn-cappaert
-father: petrus_vannieuwenhuyse
-mother: jacoba_monballiu
+father:
+  id: petrus_vannieuwenhuyse
+  confidence: sup
+mother:
+  id: jacoba_monballiu
+  confidence: sup
 spouses:
   - id: judocus_sabbe
     name: Judocus Sabbe
     married: 1700-08-04
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

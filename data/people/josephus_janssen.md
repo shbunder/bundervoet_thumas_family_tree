@@ -10,13 +10,25 @@ death:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: joannes_janssen
-mother: victoria_declerck
+father:
+  id: joannes_janssen
+  confidence: sup
+mother:
+  id: victoria_declerck
+  confidence: sup
+siblings:
+  - id: clementia_janssen32
+    confidence: sup
+  - id: hermanus_janssen25
+    confidence: sup
+  - id: petrus_janssen22
+    confidence: sup
 spouses:
   - id: appolonia_huyghebaert
     name: Appolonia Joanna Huyghebaert
     married: 1851-08-28
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
   - rab-bs-huwelijken

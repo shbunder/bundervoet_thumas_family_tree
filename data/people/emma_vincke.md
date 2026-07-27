@@ -10,13 +10,41 @@ death:
   place: Oostende
 confidence: doc
 line: van-iseghem
-father: lucien_vincke
-mother: ludovica_vanald
+father:
+  id: lucien_vincke
+  confidence: sup
+mother:
+  id: ludovica_vanald
+  confidence: sup
+siblings:
+  - id: alfons_vincke
+    confidence: sup
+  - id: bellarmin_vincke
+    confidence: sup
+  - id: camilla_vincke
+    confidence: sup
+  - id: charles_vincke
+    confidence: sup
+  - id: eugene_vincke
+    confidence: sup
+  - id: florence_vincke
+    confidence: sup
+  - id: irma_vincke
+    confidence: sup
+  - id: jerome_vincke
+    confidence: sup
+  - id: karolus_vincke
+    confidence: sup
+  - id: romanie_vincke
+    confidence: sup
+  - id: theophil_vincke
+    confidence: sup
 spouses:
   - id: eduardus_vi
     name: Eduardus Van Iseghem
     married: 1907-09-28
     place: Oostende
+    confidence: sup
 sources:
   - fwk-emma-vincke-1974
   - tree-gverdievel

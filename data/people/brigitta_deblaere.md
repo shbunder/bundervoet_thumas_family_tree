@@ -10,13 +10,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: jacob_deblaere
-mother: anna_c_devriese
+father:
+  id: jacob_deblaere
+  confidence: sup
+mother:
+  id: anna_c_devriese
+  confidence: sup
 spouses:
   - id: michael_degrande
     name: Michael De Grande
     married: 1755-05-04
     place: Ruiselede
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

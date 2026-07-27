@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: philippus_daneel
     name: Philippus Daneel
+    confidence: sup
 sources:
   - tree-wernero
 ---

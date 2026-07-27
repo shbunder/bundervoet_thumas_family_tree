@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: loncke
     name: Charlotte Maria Loncke
+    confidence: sup
 sources:
   - tree-wernero
 ---

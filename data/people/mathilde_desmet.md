@@ -12,6 +12,7 @@ spouses:
     name: Henricus Josephus Bostyn
     married: 1867-09-11
     place: Sint-Andries
+    confidence: sup
 sources:
   - fauconier-parenteel
 ---

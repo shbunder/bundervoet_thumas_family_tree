@@ -7,6 +7,7 @@ line: vanstechelman
 spouses:
   - id: christianus_vdb
     name: Christianus Josephus Van den Broucke
+    confidence: sup
 sources:
   - tree-stechec
 ---

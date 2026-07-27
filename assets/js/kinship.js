@@ -36,18 +36,83 @@ FamilyTree.createKinship = function ({ meta, people }, i18n) {
       (children[p.mother] = children[p.mother] || []).push(id);
     }
   }
+
+  // ---------- the parent nobody could name ----------
+  //
+  // A stated sibling link says two people share a parent the tree cannot identify. That is
+  // a fact about an unnamed person, and the whole engine below runs on parent links — so
+  // the honest representation is to give the sibship exactly that: one anonymous shared
+  // parent, DERIVED here and never written anywhere. Nothing is invented on disk; what
+  // exists is a node in the graph the records already imply.
+  //
+  // Everything then falls out for free instead of being special-cased. Two stated siblings
+  // are one step from a common ancestor, so they read as siblings; their children are two
+  // steps, so they read as first cousins; the index counts them blood. Special-casing only
+  // the pair would have answered the easy question and left every relation past it null.
+  //
+  // Union-find over the stated links, so A–B and B–C are ONE sibship with one shared
+  // parent rather than two overlapping ones — which would have made A and C strangers.
+  const ANON = '~sib:';
+  const anonParent = {};
+  (() => {
+    const parentOf = {};
+    const find = x => (parentOf[x] === undefined || parentOf[x] === x ? x : (parentOf[x] = find(parentOf[x])));
+    const union = (x, y) => { const a = find(x), b = find(y); if (a !== b) parentOf[b] = a; };
+    // ONLY where the parent links cannot already reach. Almost every sibling edge in the
+    // records is the derived sibship written out — `edges.py` materialises those — and
+    // giving each of them an anonymous parent as well would hang a phantom ancestor off
+    // 188 records, inflate every generation count through them, and put a nameless card at
+    // the apex of arches that have a perfectly good grandparent to meet at.
+    const sharesRecordedParent = (a, b) => {
+      const x = people[a];
+      const y = people[b];
+      return [x.father, x.mother].some(p => p && (p === y.father || p === y.mother));
+    };
+    let any = false;
+    const needsAnon = new Set();
+    for (const id of ids) {
+      for (const s of people[id].siblings || []) {
+        if (!s.id || !people[s.id] || sharesRecordedParent(id, s.id)) continue;
+        union(id, s.id);
+        needsAnon.add(id).add(s.id);
+        any = true;
+      }
+    }
+    if (!any) return;
+    for (const id of needsAnon) {
+      const key = ANON + find(id);
+      anonParent[id] = key;
+      (children[key] = children[key] || []).push(id);
+    }
+  })();
+
+  // The parents the graph walks: the two on the record, plus the anonymous one a stated
+  // sibship implies. Every ancestor walk goes through here so none of them can disagree.
+  const parentsOf = id => {
+    const p = people[id];
+    if (!p) return [];
+    const out = [p.father, p.mother];
+    if (anonParent[id]) out.push(anonParent[id]);
+    return out;
+  };
+  // Whether an id is the derived stand-in above rather than somebody in the tree. Callers
+  // that draw a person must ask, because there is no record behind it to draw.
+  const isAnon = id => typeof id === 'string' && id.startsWith(ANON);
+
   const genderOf = id => gender[id] || null;
   const childrenOf = id => children[id] || [];
 
   // Everyone born of either of the same parents. Half-siblings are in, because they
   // are siblings; which kind they are is what `bloodRelation` is for, and the row
-  // that shows them says so on each card.
+  // that shows them says so on each card. A stated sibling arrives through the same
+  // door, via the anonymous parent above — the reader is not told which mechanism
+  // knew it, because the answer is the same fact either way.
   function siblingsOf(id) {
     const p = people[id];
     if (!p) return [];
     const seen = new Set([id]);
     const out = [];
-    for (const parent of [p.father, p.mother]) {
+    for (const parent of parentsOf(id)) {
       for (const kid of childrenOf(parent)) {
         if (!seen.has(kid)) {
           seen.add(kid);
@@ -74,8 +139,8 @@ FamilyTree.createKinship = function ({ meta, people }, i18n) {
       const p = people[at];
       if (!p) continue;
       const d = out.get(at);
-      for (const parent of [p.father, p.mother]) {
-        if (parent && people[parent] && !out.has(parent)) {
+      for (const parent of parentsOf(at)) {
+        if (parent && (people[parent] || isAnon(parent)) && !out.has(parent)) {
           out.set(parent, d + 1);
           queue.push(parent);
         }
@@ -89,7 +154,7 @@ FamilyTree.createKinship = function ({ meta, people }, i18n) {
   // is named from and the chain the page draws can never disagree. Null if `anc` is
   // not above `from` at all.
   function ancestorLine(from, anc) {
-    if (!people[from] || !people[anc]) return null;
+    if (!people[from] || !(people[anc] || isAnon(anc))) return null;
     if (from === anc) return [from];
     const cameFrom = new Map([[from, null]]);
     const queue = [from];
@@ -97,8 +162,8 @@ FamilyTree.createKinship = function ({ meta, people }, i18n) {
       const at = queue[i];
       const p = people[at];
       if (!p) continue;
-      for (const parent of [p.father, p.mother]) {
-        if (!parent || !people[parent] || cameFrom.has(parent)) continue;
+      for (const parent of parentsOf(at)) {
+        if (!parent || !(people[parent] || isAnon(parent)) || cameFrom.has(parent)) continue;
         cameFrom.set(parent, at);
         if (parent === anc) {
           const path = [];
@@ -120,8 +185,8 @@ FamilyTree.createKinship = function ({ meta, people }, i18n) {
     for (let i = 0; i < queue.length; i++) {
       const p = people[queue[i]];
       if (!p) continue;
-      for (const parent of [p.father, p.mother]) {
-        if (parent && people[parent] && !(parent in distance)) {
+      for (const parent of parentsOf(queue[i])) {
+        if (parent && (people[parent] || isAnon(parent)) && !(parent in distance)) {
           distance[parent] = distance[queue[i]] + 1;
           queue.push(parent);
         }
@@ -208,10 +273,15 @@ FamilyTree.createKinship = function ({ meta, people }, i18n) {
 
     // Siblings. Sharing both parents is a full sibling; sharing one is a half.
     if (da === 1 && db === 1) {
+      const w = word(a, 'sibling');
+      // Through the anonymous parent of a stated sibship, "half" would be a claim the
+      // evidence does not make. An act calling two people brother and sister says they
+      // share a parent; it says nothing about the other one, and "half-brother" asserts
+      // they do NOT share it. The plain word is the whole of what is known.
+      if (isAnon(lca.id)) return out(w);
       const pa = people[a];
       const pb = people[b];
       const shared = [pa.father, pa.mother].filter(x => x && (x === pb.father || x === pb.mother)).length;
-      const w = word(a, 'sibling');
       return out(shared >= 2 ? w : V().half.replace('{rel}', w));
     }
 
@@ -400,9 +470,35 @@ FamilyTree.createKinship = function ({ meta, people }, i18n) {
   const confidenceOf = id => people[id]?.confidence || 'doc';
   const isResearchable = id => Boolean(people[id]) && confidenceOf(id) !== 'unk';
 
+  // ---------- how well a link is known ----------
+
+  // Confidence grades two different objects on one scale. `confidenceOf` grades a person's
+  // own facts; this grades whether the two ends of a link really belong together — and a
+  // parent documented to the day can still be the wrong parent.
+  //
+  // Asked of the CHILD and the role, because that is where the link is stated and where it
+  // is retracted: `linkOf('x', 'father')` asks about x's climb to their father, never about
+  // the father as a person. The build sends `links` only for the ones a reader needs warning
+  // about; an ordinary well-founded link says nothing about itself and gets no mark.
+  const linkOf = (id, role) => people[id]?.links?.[role] || null;
+  // The stated link between two people, when that is HOW the tree knows they are siblings.
+  // Null where the relation is derived from shared parents, because then there is no link
+  // to qualify — the parent links carry the confidence and this would be a second copy.
+  const siblingLink = (a, b) => (people[a]?.siblings || []).find(s => s.id === b) || null;
+  const isWeakSibling = (a, b) => Boolean(siblingLink(a, b)?.weak);
+  const siblingNote = (a, b) => siblingLink(a, b)?.note || '';
+  const isWeakLink = (id, role) => Boolean(linkOf(id, role));
+  const linkNote = (id, role) => {
+    const link = linkOf(id, role);
+    if (!link) return '';
+    return [link.note, link.source && `(${link.source})`].filter(Boolean).join(' ');
+  };
+
   return {
     ROOT, ROOTS, relationship, relationBetween, bloodRelation, ancestorsOf, commonAncestor,
     childrenOf, childGroupsOf, siblingsOf, genderOf, spouseKind, spouseLabel, categoryOf,
-    sourceFor, confidenceOf, isResearchable, distance, ancestorLine, linkDiagram,
+    sourceFor, confidenceOf, isResearchable, linkOf, isWeakLink, linkNote, isAnon,
+    siblingLink, isWeakSibling, siblingNote,
+    distance, ancestorLine, linkDiagram,
   };
 };

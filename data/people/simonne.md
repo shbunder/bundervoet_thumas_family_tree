@@ -10,6 +10,7 @@ line: de-keyser
 spouses:
   - id: gustaaf
     name: Gustaaf Dekeyser
+    confidence: fam
 sources:
   - geneanet
   - family

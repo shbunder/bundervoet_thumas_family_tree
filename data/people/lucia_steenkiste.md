@@ -7,13 +7,18 @@ birth:
   place: Oudenburg
 confidence: sup
 line: devriendt
-father: louis_steenkiste
-mother: reine_storms
+father:
+  id: louis_steenkiste
+  confidence: sup
+mother:
+  id: reine_storms
+  confidence: sup
 spouses:
   - id: henricus_j_ramon
     name: Henricus Josephus Ramon
     married: 1806-11-18
     place: Mariakerke
+    confidence: sup
 sources:
   - tree-wernero
 ---

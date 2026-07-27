@@ -12,6 +12,7 @@ line: bundervoet
 spouses:
   - id: joannes_stockman
     name: Joannes Stockman
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

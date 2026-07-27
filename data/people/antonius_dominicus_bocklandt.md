@@ -8,12 +8,17 @@ death:
   date: "1883"
 confidence: sup
 line: de-keyser
-father: daniel_bocklandt
-mother: philippa_vanpuyenbroeck
+father:
+  id: daniel_bocklandt
+  confidence: sup
+mother:
+  id: philippa_vanpuyenbroeck
+  confidence: sup
 spouses:
   - id: isabella_ichau
     name: Isabella Livia Ichau
     married: "1838"
+    confidence: sup
 sources:
   - tree-wete1998
   - agatha

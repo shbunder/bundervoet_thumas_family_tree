@@ -7,8 +7,23 @@ birth:
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: theophil_vincke
-mother: valerie_bolle
+father:
+  id: theophil_vincke
+  confidence: sup
+mother:
+  id: valerie_bolle
+  confidence: sup
+siblings:
+  - id: eduardushieronymus_vincke
+    confidence: sup
+  - id: leopoldmaurice_vincke00
+    confidence: sup
+  - id: leopoldmaurice_vincke95
+    confidence: sup
+  - id: madeleinemarie_vincke
+    confidence: sup
+  - id: mariesophie_vincke
+    confidence: sup
 sources:
   - rab-bs-geboorten
 ---

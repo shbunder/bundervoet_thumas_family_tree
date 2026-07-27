@@ -10,13 +10,18 @@ death:
   place: Destelbergen
 confidence: sup
 line: paelinck
-father: adrianus_p
-mother: livina_pickaut
+father:
+  id: adrianus_p
+  confidence: sup
+mother:
+  id: livina_pickaut
+  confidence: sup
 spouses:
   - id: petronilla_vk
     name: Petronilla Carolina Van Kerckhove
     married: 1739-11-07
     place: Kalken
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

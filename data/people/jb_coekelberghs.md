@@ -11,11 +11,16 @@ death:
 confidence: sup
 occupation: landbouwer (farmer)
 line: thumas
-father: henricus_coekelberghs
-mother: petronella_elseviers
+father:
+  id: henricus_coekelberghs
+  confidence: sup
+mother:
+  id: petronella_elseviers
+  confidence: sup
 spouses:
   - id: anna_haesaerts
     name: Anna Haesaerts
+    confidence: sup
 sources:
   - fs-bertem-1838-marriage-register-nr8
   - bertem-1838-marriage-coeckelberghs-haesaerts

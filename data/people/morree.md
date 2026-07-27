@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: francl_s
     name: Franciscus Leopoldus Smessaert
+    confidence: sup
 sources:
   - S12
 ---

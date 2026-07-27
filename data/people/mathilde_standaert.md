@@ -2,12 +2,13 @@
 id: mathilde_standaert
 name: Mathilde Standaert
 surname: Standaert
-occupation: huishoudster (housekeeper)
 confidence: doc
+occupation: huishoudster (housekeeper)
 line: van-iseghem
 spouses:
   - id: ludovicus_schal
     name: Ludovicus Franciscus Schalandryn
+    confidence: doc
 sources:
   - S20
   - S21

@@ -8,6 +8,7 @@ line: bostyn-cappaert
 spouses:
   - id: judocus_devriese
     name: Judocus De Vriese
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

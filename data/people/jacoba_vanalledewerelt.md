@@ -13,6 +13,7 @@ spouses:
     name: Joannes Van Maele
     married: 1664-07-19
     place: Beernem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

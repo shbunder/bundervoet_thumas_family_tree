@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: simon_vandewalle_1565
     name: Simon Vandewalle
+    confidence: sup
 sources:
   - tree-isavdw
 ---

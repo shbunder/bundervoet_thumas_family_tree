@@ -10,11 +10,16 @@ death:
   place: Kraainem
 confidence: sup
 line: thumas
-father: jbgeorgius
-mother: vandenbemden
+father:
+  id: jbgeorgius
+  confidence: sup
+mother:
+  id: vandenbemden
+  confidence: sup
 spouses:
   - id: crabbe
     name: Marie Louise Crabbé
+    confidence: sup
 sources:
   - tree-jswaelens
 ---

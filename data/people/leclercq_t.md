@@ -15,6 +15,7 @@ spouses:
     name: Jean Lambert Thumas
     married: 1743-02-23
     place: Wavre
+    confidence: sup
 sources:
   - S14
   - S6

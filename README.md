@@ -82,11 +82,19 @@ death:
   place: Oostende
 confidence: doc
 occupation: werkman
-father: desiderius_dk
-mother: mtheresia_vandenbroeck
+father:
+  id: desiderius_dk
+  confidence: sup
+mother:
+  id: mtheresia_vandenbroeck
+  confidence: sup
+siblings:
+  - id: alois_dk
+    confidence: sup
 spouses:
   - id: louise_bocklandt
     name: Louise Marie Bocklandt
+    confidence: doc
     married: 1901-05-04
     divorced: ~1923
     detail: legitimized their two eldest children
@@ -134,6 +142,85 @@ generated from these, so there is no hand-written copy to fall out of step.
 `confidence` drives the colour coding: `doc` documented record · `fam` family knowledge ·
 `sup` strongly supported · `unk` unknown, still to research.
 
+### Links carry their own confidence
+
+`father`, `mother`, `siblings` and `spouses` are **links**, and a link is a fact in its own
+right. A bare id is accepted when you write one by hand:
+
+```yaml
+father: lucien_vincke
+```
+
+…but `uv run tools/build.py` writes it out in full, so records on disk always state what a
+link is worth. Anything you put there yourself is kept:
+
+```yaml
+mother:
+  id: ludovica_vanald
+  confidence: asm
+  source: agatha-diksmuide-1880-birth
+  note: birth act names a Ludovica Vanalderweireldt; commune and year agree, no second identifier
+```
+
+`confidence` here is the **same vocabulary as a person's**, because it is the same
+question asked of a different object: how well is this known. On a person it grades their
+own facts; on a link it grades whether the two ends really belong together — and a parent
+documented to the day can still be the wrong parent. One extra code, `asm` (assumed),
+for a link entered on a single identifier where the rules want two. `unk` is not valid on
+a link: a link whose existence is unknown is an absent link.
+
+The generated value is the **weaker of the link's two ends** — a link between a documented
+person and one known only from family testimony is not documented, because the weaker end
+is what a reader would have to accept in order to accept the join. It is symmetric, so a
+marriage written on two records gets the same answer from both. A sibling edge is graded on
+the two parent links it rests on, not on the two people, because that is what actually makes
+them siblings.
+
+`source` is an id from `research/sources.json`, exactly like `sources` on the person. It
+is what makes "every parent link cites a source" checkable at all: while the only citation
+was a person-level list, nothing could say *which* source established the mother.
+
+**An `asm` link is evidence for nothing.** The scorer cannot see it in either direction —
+not as a parent, and not as a child reaching back. That is what makes it safe to draw one:
+the tree's own guess can never come back as one of the two independent identifiers that
+licenses the next graft. `uv run tools/research.py weak` lists every one of them, ordered
+by how many people would leave the tree with it, and the page draws them red.
+
+### `siblings` — the one relationship that is stored
+
+Everything else about a relationship is derived; siblinghood usually is too, from shared
+parents. `siblings` exists for the case the parent links cannot state at all:
+
+```yaml
+siblings:
+  - id: maria_joanna_vanald
+    confidence: asm
+    source: rab-diksmuide-1857-death
+    note: same parent pair named in three acts; the father's forename disagrees in all three
+```
+
+**Sibling edges are generated, not hand-kept.** `uv run tools/edges.py sync` writes every
+derived sibship out as edges (994 of them) and `build.py` runs it; the validator then fails
+on any record that disagrees with what it would write. That is what makes the redundancy
+safe rather than reckless — the edges are a projection of the parent links, checked on every
+build, exactly like `dist/bundle.js`. Change a parent link and the sibling edges resting on
+it go stale loudly instead of quietly describing a family that changed.
+
+A stated sibship the parent links **contradict** — both pairs fully recorded, sharing
+nobody — is an error. Entries are mutual and agree field for field, like a marriage.
+
+The case is real: `antoine_vanald` records a probable elder sister named by a third act
+giving the same parent pair, and had to give the fact up — *"she cannot be linked as a
+sibling while the parents themselves are only a frontier"*, because the father's forename
+disagrees across all three acts.
+
+Downstream, a stated sibship behaves as a sibship: the page derives **one anonymous shared
+parent** for it — never written anywhere — so the two read as siblings, their children as
+first cousins, and the index counts them blood. The arch on the relations tab draws that
+apex as an unnamed dashed card, which is what it is: a position the records require and no
+record fills. A stated sibship never reads as "half-", because an act calling two people
+brother and sister says nothing about the *other* parent.
+
 `occupation` is what someone did ("metser (mason)"), kept in the language of the record
 with a gloss. `nickname` is what they were called. Neither ever holds a relationship.
 
@@ -158,8 +245,11 @@ Five rules the validator enforces:
 - **A shared child proves a couple.** If a record has `father: A` and `mother: B`, then
   A and B must each list the other.
 - **One marriage, one set of facts.** The two records must give the same `kind`,
-  `married`, `place` and `divorced`. Before this was checked, two records gave different
-  places for the same wedding and whichever was read first won.
+  `confidence`, `source`, `married`, `place` and `divorced`. Before this was checked, two
+  records gave different places for the same wedding and whichever was read first won.
+  `confidence` and `source` are in that list because a marriage is one link written on two
+  records: without them the same act could be `doc` on his and `asm` on hers, and whichever
+  the reader opened first would decide whether the page drew it red.
 - **Oldest first.** Where both entries are dated, the list order must match them — so
   the order carries the sequence and nothing has to write "his 2nd marriage" anywhere.
 - **A marriage never names a child.** Which children came from which marriage is already

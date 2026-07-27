@@ -5,13 +5,25 @@ surname: Vanstechelman
 sex: m
 confidence: sup
 line: vanstechelman
-father: petrusjacobus_v
-mother: clementia_w
+father:
+  id: petrusjacobus_v
+  confidence: sup
+mother:
+  id: clementia_w
+  confidence: sup
+siblings:
+  - id: augusta
+    confidence: sup
+  - id: henricus_e_v
+    confidence: sup
+  - id: paula_v
+    confidence: sup
 spouses:
   - name: Lucia Amelia Maene
     married: 1922-08-20
     place: Oostende
     id: lucia_maene
+    confidence: sup
 sources:
   - fs-wvl-bs
 ---

@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: paulus_lampsins
     name: Paulus Lampsins
+    confidence: sup
 sources:
   - tree-isavdw
 ---

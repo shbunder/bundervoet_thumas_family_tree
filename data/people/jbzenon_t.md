@@ -3,13 +3,26 @@ id: jbzenon_t
 name: Jean Baptiste Zénon Thumas
 surname: Thumas
 birth:
-  date: 1845
+  date: "1845"
   raw: declared at Grez-Doiceau on 20 August 1845
   place: Grez-Doiceau
 confidence: sup
 line: thumas
-father: georges2_t
-mother: joostens
+father:
+  id: georges2_t
+  confidence: sup
+mother:
+  id: joostens
+  confidence: sup
+siblings:
+  - id: charleseugene_t
+    confidence: sup
+  - id: georges_cj
+    confidence: sup
+  - id: georgesjoseph_t
+    confidence: sup
+  - id: mtstephanie_t
+    confidence: sup
 sources:
   - S25
   - netradyle-grez-naissances

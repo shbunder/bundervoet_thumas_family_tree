@@ -23,7 +23,7 @@ SITE = ROOT / "site"
 # The fields a person record may carry, in the order they are written.
 FIELDS = [
     "id", "name", "surname", "sex", "birth", "death", "confidence", "occupation",
-    "nickname", "line", "father", "mother", "spouses", "sources",
+    "nickname", "line", "father", "mother", "siblings", "spouses", "sources",
 ]
 EVENT_FIELDS = ["date", "place"]
 # A marriage is an event too, so it is stored like one: `married` and `divorced` are
@@ -33,8 +33,64 @@ EVENT_FIELDS = ["date", "place"]
 # is how "wife" ends up printed under someone who never was one. `detail` survives for
 # what no field can hold, but it may no longer carry a date, a place, or the position
 # of the marriage in a sequence: those are fields now, or derived from list order.
-SPOUSE_FIELDS = ["id", "name", "kind", "married", "place", "divorced", "detail"]
+# `confidence`, `source` and `note` are the same three a parent link carries — a marriage
+# is a link too, and the vocabulary should not change with the role. `detail` stays for
+# what the marriage fields cannot hold; `note` is why the LINK was drawn, which is a
+# different thing and is what the page shows beside a red mark.
+SPOUSE_FIELDS = ["id", "name", "kind", "confidence", "source", "note", "married", "place",
+                 "divorced", "detail"]
 SPOUSE_KINDS = ("marriage", "partnership")
+
+# ---------- links ----------
+# A link is a fact in its own right, so it carries its own confidence and its own
+# citation. `father`, `mother` and each entry in `spouses` are all links.
+#
+# This is the same vocabulary as a person's `confidence`, deliberately, because it is the
+# same question asked of a different object: how well is this KNOWN. On a person it grades
+# their own facts; on a link it grades whether the two ends really belong together — and a
+# parent documented to the day can still be the wrong parent. Two different objects, one
+# scale.
+#
+# It also makes rule 2 checkable for the first time. "Every new parent link cites a source"
+# was unenforceable while `sources` was a person-level list: the citation and the claim sat
+# in the same file without being attached to each other, so nothing could answer *which*
+# source established that this was the mother.
+LINK_FIELDS = ["id", "confidence", "source", "note"]
+# A sibling link, and the one relationship this project stores rather than derives.
+#
+# That is a real exception to "a relationship is never a field", and it is made safe by
+# being GENERATED rather than by being forbidden. `familytree/edges.py` writes every
+# derived sibship out as edges and the validator fails on a record that disagrees with what
+# it would write — so the 994 redundant entries are a projection of the parent links,
+# checked on every build, in the same way `dist/bundle.js` is. Correct a parent link and the
+# sibling edges resting on it go stale loudly instead of quietly describing a family that
+# changed. A copy nothing verifies is the failure the data model exists to prevent; a copy
+# something verifies is a view.
+#
+# It also holds what no parent link can reach: an act naming two people brother and sister
+# without naming a parent either can be grafted to. `antoine_vanald` states that case in its
+# own prose — "she cannot be linked as a sibling while the parents themselves are only a
+# frontier" — and until this field existed the answer was to lose the fact.
+SIBLING_FIELDS = LINK_FIELDS
+# `unk` is missing on purpose. On a person it means "we do not know their facts yet"; on a
+# link there is no such state — a link whose existence is unknown is an absent link, and
+# allowing the code would put a drawn edge and a nonexistent one in the same bucket.
+EDGE_CONFIDENCE = ("doc", "sup", "fam", "asm")
+# THE RULE THE WHOLE ARRANGEMENT RESTS ON: an assumed edge is evidence for nothing.
+# `from_person` hides it from the scorer, so it can never become one of the two independent
+# identifiers that licenses the next graft. Without that, a guess licenses a graft which
+# licenses another, every link in the chain scoring as well-supported, and the error rate
+# compounds down the line with nothing marking where it started.
+#
+# Only `asm`. Whether `fam` belongs here too is a real question — family testimony is one
+# identifier, not two — but it is a separate one, it changes how 26 existing records score,
+# and it should be settled by `evaluate.py report` rather than smuggled in with a storage
+# change. Kept as a set so that decision is a one-line edit here.
+NOT_EVIDENCE = ("asm",)
+# Above this many people hanging off a single unverified edge, the validator says so.
+# Sized at a couple of generations: below that a retraction is an afternoon's work, above
+# it the guess is load-bearing and should be paid for with a document.
+WEAK_EDGE_BLAST_RADIUS = 8
 # An artifact is a saved primary document — a scan or photograph of an act. It is
 # evidence, so it lives in data/ with the facts, not in docs/ with the writing about
 # them, and it carries its own record in the same frontmatter format.
@@ -293,12 +349,122 @@ def load_forenames() -> dict[str, list[list[str]]]:
     return {k: v for k, v in raw.items() if not k.startswith("_")}
 
 
+def normalise_links(data: dict) -> dict:
+    """`father: lucien_vincke` and the four-line block form become one shape in memory.
+
+    The scalar stays legal in the FILES, and that is not a concession — 646 of the tree's
+    parent links are simply known, and making each of them a three-line block to say so
+    would add two thousand lines of ceremony to 329 records for no fact gained. A block is
+    for a link that has something to declare.
+
+    But two shapes in memory is how this kind of change goes quietly wrong. `if
+    p.get("father")` is truthy for both, and `p["father"] == pid` silently goes False
+    against a dict — a missed reader would not raise, it would just stop finding parents,
+    which looks exactly like a tree with fewer links in it. So the shape is settled once,
+    here, at the door the records come through, and `link_of` tolerates the scalar anyway
+    for the dicts that never pass this way.
+
+    An unqualified link has NO confidence — not the person's, and not a default. The first
+    draft inherited from the record, which reads well and is wrong twice over. It invents a
+    grade no source stated, against rule 5. And a marriage is one link written on two
+    records: inheriting made his `doc` and her `sup` disagree about the same act, which the
+    validator caught as 22 errors on a tree that had nothing wrong with it.
+
+    So absent means "not yet distinguished from the record it sits on", which is exactly
+    what the tree meant before links could carry a confidence at all. The scorer reads it as
+    it always has, nothing is fabricated, and the 646 existing links migrate untouched.
+    """
+    for role in ("father", "mother"):
+        if data.get(role) and not isinstance(data[role], dict):
+            data[role] = {"id": data[role]}
+    return data
+
+
+def link_of(p: dict, role: str) -> dict:
+    """The link block for `role`, or an empty one. Never None, so callers can read a field
+    off it without first asking whether the link exists.
+
+    Tolerates the scalar form as well as the block, even though `load_person` has already
+    normalised everything it read. Belt and braces, and the braces earned their place
+    immediately: not every person dict comes through the loader — tests build them inline,
+    and so could any tool assembling a synthetic record — and a strict accessor answered
+    None for those, which is a parent link vanishing in silence. That is the same class of
+    bug the normalisation exists to prevent, so the accessor must not reintroduce it.
+    """
+    value = p.get(role)
+    if isinstance(value, dict):
+        return value
+    return {"id": value} if value else {}
+
+
+def parent_id(p: dict, role: str) -> str | None:
+    """The id at the far end of a parent link. What almost every reader wants."""
+    return link_of(p, role).get("id")
+
+
+def edge_confidence(p: dict, role: str) -> str | None:
+    return link_of(p, role).get("confidence")
+
+
+def is_weak(p: dict, role: str) -> bool:
+    """Whether this link is one the scorer must not read as evidence. See NOT_EVIDENCE."""
+    return edge_confidence(p, role) in NOT_EVIDENCE
+
+
+def stated_siblings(p: dict) -> list[dict]:
+    """The sibling links a record states outright. Malformed entries are dropped rather
+    than raised on — the renderer and the scorer read this too, and only the validator is
+    in a position to complain about them."""
+    return [s for s in (p.get("siblings") or []) if isinstance(s, dict) and s.get("id")]
+
+
+def derived_siblings(people: dict, pid: str, children: dict | None = None) -> list[str]:
+    """Everyone born of either of the same parents. Half-siblings are in — they are
+    siblings, and which kind is a question for the relation namer, not for membership."""
+    children = children if children is not None else children_index(people)
+    p = people.get(pid) or {}
+    out: list[str] = []
+    seen = {pid}
+    for role in ("father", "mother"):
+        for kid in children.get(parent_id(p, role) or "", []):
+            if kid not in seen:
+                seen.add(kid)
+                out.append(kid)
+    return out
+
+
+def siblings_of(people: dict, pid: str, children: dict | None = None) -> list[str]:
+    """Everyone recorded as this person's sibling, derived first and stated second.
+
+    One list, because a reader does not care which mechanism knew it, and because the two
+    cannot overlap: a stated link between two people who already share a parent fails the
+    build.
+    """
+    out = derived_siblings(people, pid, children)
+    seen = set(out) | {pid}
+    for s in stated_siblings(people.get(pid) or {}):
+        if s["id"] in people and s["id"] not in seen:
+            seen.add(s["id"])
+            out.append(s["id"])
+    return out
+
+
+def firm_parent(p: dict, role: str) -> str | None:
+    """The parent link, or None where the link itself is only assumed.
+
+    Everything that reads a link as EVIDENCE goes through here; everything that reads it to
+    draw or count the tree reads the id. That split is the safety property — see the note
+    on NOT_EVIDENCE.
+    """
+    return None if is_weak(p, role) else parent_id(p, role)
+
+
 def load_person(person_id: str) -> dict:
     text = (PEOPLE_DIR / f"{person_id}.md").read_text(encoding="utf-8")
     data, body = frontmatter.parse(text, f"{person_id}.md")
     if body:
         data["note"] = body
-    return data
+    return normalise_links(data)
 
 
 def load_people(roster: list[str] | None = None) -> dict[str, dict]:
@@ -376,7 +542,8 @@ def children_index(people: dict) -> dict[str, list[str]]:
     """
     children: dict[str, list[str]] = {}
     for pid, p in people.items():
-        for parent in (p.get("father"), p.get("mother")):
+        for role in ("father", "mother"):
+            parent = parent_id(p, role)
             if parent and parent in people:
                 children.setdefault(parent, []).append(pid)
     return children
@@ -397,17 +564,79 @@ def surname_counts(people: dict) -> dict[str, tuple[int, str]]:
     return counts
 
 
-def ancestors_of(people: dict, pid: str) -> set[str]:
-    """Everyone above someone in the tree. The person themselves is not in it."""
+def ancestors_of(people: dict, pid: str, skip: set[tuple[str, str]] | None = None) -> set[str]:
+    """Everyone above someone in the tree. The person themselves is not in it.
+
+    `skip` suppresses named `(person, role)` edges. That is how the cost of a weak link is
+    measured — walk the pedigree once as it stands and once with the edge cut, and the
+    difference is exactly who is in the tree only because of that guess.
+    """
     seen: set[str] = set()
     stack = [pid]
     while stack:
         cur = stack.pop()
-        for parent in (people[cur].get("father"), people[cur].get("mother")):
+        for role in ("father", "mother"):
+            if skip and (cur, role) in skip:
+                continue
+            parent = parent_id(people[cur], role)
             if parent in people and parent not in seen:
                 seen.add(parent)
                 stack.append(parent)
     return seen
+
+
+# ---------- weak edges ----------
+
+
+def weak_edges(people: dict, roots: list[str]) -> list[dict]:
+    """Every link the scorer will not read as evidence, with what it is carrying.
+
+    `at_stake` is the honest price of the guess: the people who are in the tree only
+    because of this edge and who would leave with it if it were retracted. It is measured
+    by walking from the roots with the edge cut, not counted from the parent's own
+    ancestors — that would double-count everyone the tree also reaches by another line, and
+    pedigree collapse means some of them genuinely are reached twice.
+
+    Derived on every call and never stored. What an edge costs to be wrong is a fact about
+    the tree around it, so it changes when a second route to the same ancestor is found
+    without the edge itself changing at all.
+    """
+    live = [r for r in roots if r in people]
+    full: set[str] = set()
+    for r in live:
+        full |= ancestors_of(people, r)
+
+    out: list[dict] = []
+    for pid, p in sorted(people.items()):
+        for role in ("father", "mother"):
+            if not (parent_id(p, role) and is_weak(p, role)):
+                continue
+            cut: set[str] = set()
+            for r in live:
+                cut |= ancestors_of(people, r, skip={(pid, role)})
+            parent = parent_id(p, role)
+            link = link_of(p, role)
+            out.append({
+                "person": pid,
+                "name": p.get("name", pid),
+                "link": role,
+                "parent": parent,
+                "parent_name": (people.get(parent) or {}).get("name", parent),
+                "confidence": link.get("confidence"),
+                "source": link.get("source") or "",
+                "note": link.get("note") or "",
+                # Everyone the edge is holding on. Empty when the person themselves is not
+                # reachable from a root — the edge is real, it just is not yet carrying any
+                # part of the answer.
+                "at_stake": sorted(full - cut),
+                # A guess resting on a guess. This is the compounding the scorer is
+                # protected from, surfacing in the shape of the tree instead: the upper link
+                # was reasoned about as if the lower one were settled, because on the page
+                # it looks exactly like a settled one.
+                "stacked": bool(parent and any(
+                    is_weak(people.get(parent) or {}, r) for r in ("father", "mother"))),
+            })
+    return out
 
 
 def census(people: dict, config: dict) -> dict:
@@ -440,13 +669,19 @@ def census(people: dict, config: dict) -> dict:
 
     # Blood is the roots, everyone above them, and everyone descended from any of
     # those — an ancestor's sibling's grandchild is a blood relative (objective 2).
+    #
+    # A STATED sibling is blood too, and their descendants with them. Reached through the
+    # same closure rather than a pass of its own: a stated sibling's child is as much a
+    # first cousin as a derived sibling's, and the tree only knows the two apart because
+    # one of them had a parent that could be grafted.
     blood = set(roots) | ancestors
     queue = list(blood)
     while queue:
-        for kid in children.get(queue.pop(), []):
-            if kid not in blood:
-                blood.add(kid)
-                queue.append(kid)
+        at = queue.pop()
+        for kin in children.get(at, []) + [s["id"] for s in stated_siblings(people.get(at) or {})]:
+            if kin in people and kin not in blood:
+                blood.add(kin)
+                queue.append(kin)
 
     def earliest_birth(pool: list[dict]) -> int | None:
         years = [year_of(p["birth"]["date"]) for p in pool if (p.get("birth") or {}).get("date")]
@@ -476,7 +711,11 @@ def set_source_titles(mapping: dict[str, str]) -> None:
     _source_titles = mapping
 
 
-def to_browser_record(p: dict) -> dict:
+def to_browser_record(p: dict, people: dict | None = None) -> dict:
+    """The record the browser reads. `people` is optional and only affects the sibling
+    links: deciding whether one is derivable needs the OTHER person's parents, and without
+    it every stated sibling ships — correct, just larger than it needs to be."""
+    people = people or {}
     out = {
         "id": p["id"],
         "name": p["name"],
@@ -498,9 +737,51 @@ def to_browser_record(p: dict) -> dict:
             out["order"] = sort_key(p["birth"].get("date"))
     if p.get("death"):
         out["died"] = event_text(p["death"])
-    for field in ("occupation", "nickname", "line", "father", "mother"):
+    for field in ("occupation", "nickname", "line"):
         if p.get(field):
             out[field] = p[field]
+    # `father` and `mother` stay plain ids across the wire. The page is a reader of the
+    # tree, not an editor of it, and flattening here means the renderer keeps asking the
+    # one question it has always asked. What a link declares about itself travels
+    # separately, below, and only when there is something to declare.
+    for role in ("father", "mother"):
+        if parent_id(p, role):
+            out[role] = parent_id(p, role)
+    # Only the links a reader needs warning about. `doc`/`sup`/`fam` edges are the ordinary
+    # case and shipping them would put a badge on almost every card, which is how a warning
+    # stops being read. The note comes too: a red edge whose reason lives in a research log
+    # nobody reading the tree will open is an unexplained doubt, and that is a worse artefact
+    # than either a firm link or no link at all.
+    weak = {
+        role: {k: v for k, v in (("confidence", edge_confidence(p, role)),
+                                 ("note", link_of(p, role).get("note")),
+                                 ("source", _source_titles.get(link_of(p, role).get("source"),
+                                                               link_of(p, role).get("source"))))
+               if v}
+        for role in ("father", "mother")
+        if parent_id(p, role) and is_weak(p, role)
+    }
+    if weak:
+        out["links"] = weak
+    # Only the sibling links the page cannot work out for itself: the assumed ones, which
+    # need marking, and the ones no shared parent reaches, which the browser has no other
+    # route to. The records carry all 994 edges — that is what makes a record readable on
+    # its own and checkable against the parent links — but shipping the derivable ones would
+    # put the same fact in the bundle twice and spend bytes on every page load telling the
+    # renderer something it already computes in a loop it already runs.
+    shipped = []
+    for s in stated_siblings(p):
+        assumed = s.get("confidence") in NOT_EVIDENCE
+        mine = {parent_id(p, r) for r in ("father", "mother")} - {None}
+        theirs = {parent_id(people.get(s["id"]) or {}, r) for r in ("father", "mother")} - {None}
+        if assumed or not (mine & theirs):
+            shipped.append({k: v for k, v in (
+                ("id", s["id"]),
+                ("weak", assumed or None),
+                ("note", s.get("note") if assumed else None),
+            ) if v})
+    if shipped:
+        out["siblings"] = shipped
     # The marriage fields are folded into one display line here, for the same reason
     # birth and death are. `kind` goes across as itself, because the page has to say
     # "partner" rather than "wife" and that is a fact, not a formatting choice.
@@ -511,6 +792,10 @@ def to_browser_record(p: dict) -> dict:
                 ("name", s.get("name")),
                 ("kind", s.get("kind")),
                 ("detail", marriage_text(s)),
+                # Same rule as the parent links: sent only when the marriage itself is the
+                # assumption, so the mark means one thing wherever it appears.
+                ("weak", s.get("confidence") in NOT_EVIDENCE or None),
+                ("note", s.get("note") if s.get("confidence") in NOT_EVIDENCE else None),
             ) if v}
             for s in p["spouses"]
         ]

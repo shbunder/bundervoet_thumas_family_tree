@@ -2,18 +2,32 @@
 id: jathanasius_peremans
 name: Joannes Athanasius Peremans
 surname: Peremans
+sex: m
 birth:
   date: ~1822
-sex: m
 confidence: sup
 line: thumas
-father: egidius_peremans
-mother: joanna_verelst
+father:
+  id: egidius_peremans
+  confidence: sup
+mother:
+  id: joanna_verelst
+  confidence: sup
+siblings:
+  - id: cornelius_peremans
+    confidence: sup
+  - id: jbaptista_peremans
+    confidence: sup
+  - id: mjosephina_peremans
+    confidence: sup
+  - id: peremans
+    confidence: sup
 spouses:
   - id: cuypers_me
     name: Maria Elisabeth Cuypers
     married: 1844-11-28
     place: Zaventem
+    confidence: sup
 sources:
   - S31
 ---

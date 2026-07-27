@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: joannes_declerck
     name: Joannes De Clerck
+    confidence: sup
 sources:
   - tree-isavdw
 ---

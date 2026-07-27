@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: vogels_a
     name: Amelia Vogels
+    confidence: doc
 sources:
   - S35
   - fs-kraainem-1887-marriage-bossin-guns

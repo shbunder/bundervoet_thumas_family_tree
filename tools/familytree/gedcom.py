@@ -13,7 +13,10 @@ from __future__ import annotations
 
 import re
 
-from .people import given_names, load_config, load_people, marriage_text  # noqa: F401
+from .people import (  # noqa: F401
+    NOT_EVIDENCE, given_names, is_weak, link_of, load_config, load_people, marriage_text,
+    parent_id,
+)
 from .sources import load_sources
 
 MONTH_NUM = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
@@ -81,10 +84,11 @@ def build():
     sex = {pid: people[pid]["sex"] for pid in ids if people[pid].get("sex") in ("f", "m")}
     for pid in ids:
         p = people[pid]
-        if p.get("father") and not sex.get(p["father"]):
-            sex[p["father"]] = "m"
-        if p.get("mother") and not sex.get(p["mother"]):
-            sex[p["mother"]] = "f"
+        father, mother = parent_id(p, "father"), parent_id(p, "mother")
+        if father and not sex.get(father):
+            sex[father] = "m"
+        if mother and not sex.get(mother):
+            sex[mother] = "f"
 
     # ---------- families ----------
     # A couple is either proven by a shared child or recorded as a marriage. Both
@@ -99,8 +103,9 @@ def build():
 
     for pid in ids:
         p = people[pid]
-        if p.get("father") and p.get("mother") and p["father"] in people and p["mother"] in people:
-            family_for(p["father"], p["mother"])["children"].append(pid)
+        father, mother = parent_id(p, "father"), parent_id(p, "mother")
+        if father in people and mother in people:
+            family_for(father, mother)["children"].append(pid)
         for s in p.get("spouses") or []:
             if s.get("id") and s["id"] in people:
                 fam = family_for(pid, s["id"])
@@ -111,7 +116,7 @@ def build():
     # children have no way to point back at them.
     for pid in ids:
         p = people[pid]
-        parents = [x for x in (p.get("father"), p.get("mother")) if x and x in people]
+        parents = [x for x in (parent_id(p, "father"), parent_id(p, "mother")) if x and x in people]
         if len(parents) == 1:
             fam = family_for(parents[0], parents[0])
             fam["solo"] = True
@@ -214,6 +219,20 @@ def build():
         for key, fam in families.items():
             if pid in fam["children"]:
                 put(1, "FAMC", fam_xref[key])
+                # GEDCOM has no per-link certainty: QUAY hangs off a source citation on
+                # the individual, so it says how well this PERSON is evidenced and nothing
+                # at all about whether they belong to this family. A note on the link is
+                # the only honest place left. Without it the export would launder a red
+                # edge into a black one the instant it left this repository — and an
+                # exported tree is exactly where a bad graft goes to become unfindable,
+                # copied into other people's trees and cited back at us as agreement.
+                unsure = [r for r in ("father", "mother")
+                          if parent_id(p, r) and is_weak(p, r)]
+                if unsure:
+                    put_text(2, "NOTE", "ASSUMED — this tree draws the link but has not "
+                             "verified it: " + "; ".join(
+                                 f"{role}: {link_of(p, role).get('note') or 'no reason recorded'}"
+                                 for role in unsure))
 
         # Spouses who have no record of their own would vanish entirely otherwise.
         for s in p.get("spouses") or []:
@@ -331,9 +350,9 @@ def _self_check(lines, ids, people) -> list[str]:
     for pid in ids:
         p = people[pid]
         got = parsed_parents.get(pid, {})
-        if p.get("father") and p["father"] in people and got.get("husb") != p["father"]:
+        if parent_id(p, "father") in people and got.get("husb") != parent_id(p, "father"):
             problems.append(f"round-trip: {pid}'s father reads back as {got.get('husb') or 'nobody'}, not {p['father']}")
-        if p.get("mother") and p["mother"] in people and got.get("wife") != p["mother"]:
+        if parent_id(p, "mother") in people and got.get("wife") != parent_id(p, "mother"):
             problems.append(f"round-trip: {pid}'s mother reads back as {got.get('wife') or 'nobody'}, not {p['mother']}")
         for s in p.get("spouses") or []:
             if s.get("id") and s["id"] in people and "|".join(sorted([pid, s["id"]])) not in parsed_couples:

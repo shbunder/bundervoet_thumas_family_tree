@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: egidia_damman
     name: Egidia Damman
+    confidence: sup
 sources:
   - tree-isavdw
 ---

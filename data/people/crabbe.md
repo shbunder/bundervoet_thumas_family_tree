@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: jean_t
     name: Jean Thumas
+    confidence: sup
 sources:
   - tree-jswaelens
 ---

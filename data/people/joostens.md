@@ -9,13 +9,18 @@ death:
   place: Grez-Doiceau
 confidence: sup
 line: thumas
-father: guillaume_joostens
-mother: jeanne_deconninck
+father:
+  id: guillaume_joostens
+  confidence: sup
+mother:
+  id: jeanne_deconninck
+  confidence: sup
 spouses:
   - id: georges2_t
     name: Georges Thumas
     married: 1835-02-17
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - S15
   - S9

@@ -10,14 +10,20 @@ death:
   place: Evergem
 confidence: sup
 line: bundervoet
-father: joannes_b1637
-mother: joanna_verbrugghe
+father:
+  id: joannes_b1637
+  confidence: sup
+mother:
+  id: joanna_verbrugghe
+  confidence: sup
 spouses:
   - id: livina_stockman
     name: Livina Stockman
+    confidence: sup
   - id: livina_dewilde
     name: Livina De Wilde
     married: ~1745
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

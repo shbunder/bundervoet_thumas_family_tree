@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: goossens
     name: Anna Catharina Goossens
+    confidence: sup
 sources:
   - S29
 ---

@@ -8,14 +8,15 @@ birth:
 death:
   date: 1857-03-15
   place: Oudenburg
-occupation: schoenmaker (shoemaker)
 confidence: sup
+occupation: schoenmaker (shoemaker)
 line: van-iseghem
 spouses:
   - id: joanna_derudder
     name: Joanna Theresia Derudder
     married: 1821-04-29
     place: Oudenburg
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

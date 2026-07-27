@@ -8,11 +8,16 @@ death:
   date: ~1653
 confidence: sup
 line: bostyn-cappaert
-father: rolandus_govaert
-mother: maria_vandenbussche
+father:
+  id: rolandus_govaert
+  confidence: sup
+mother:
+  id: maria_vandenbussche
+  confidence: sup
 spouses:
   - id: marinus_vannieuwenhuyse
     name: Marinus Van Nieuwenhuyse
+    confidence: sup
 sources:
   - tree-isavdw
 ---

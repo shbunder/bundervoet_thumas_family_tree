@@ -2,20 +2,25 @@
 id: jbcoppens
 name: Jan Baptist Coppens
 surname: Coppens
+sex: m
 birth:
   date: 1870-03-06
   place: Sint-Stevens-Woluwe
-sex: m
 confidence: sup
 occupation: metser (mason)
 line: thumas
-father: hendrik_coppens
-mother: catharina_bossin
+father:
+  id: hendrik_coppens
+  confidence: sup
+mother:
+  id: catharina_bossin
+  confidence: sup
 spouses:
   - id: jcseraphina_t
     name: Joanna Catharina Seraphina Thumas
     married: 1892-07-27
     place: Kraainem
+    confidence: sup
 sources:
   - S26
 ---

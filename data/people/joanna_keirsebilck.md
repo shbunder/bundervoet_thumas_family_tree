@@ -10,13 +10,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: petrus_jos_keirsebilck
-mother: anna_fr_degrande
+father:
+  id: petrus_jos_keirsebilck
+  confidence: sup
+mother:
+  id: anna_fr_degrande
+  confidence: sup
 spouses:
   - id: jacobus_stroobandt
     name: Jacobus Stroobandt
     married: 1810-07-24
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

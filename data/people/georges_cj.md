@@ -11,13 +11,27 @@ death:
 confidence: sup
 occupation: landbouwer & herbergier (farmer & innkeeper)
 line: thumas
-father: georges2_t
-mother: joostens
+father:
+  id: georges2_t
+  confidence: sup
+mother:
+  id: joostens
+  confidence: sup
+siblings:
+  - id: charleseugene_t
+    confidence: sup
+  - id: georgesjoseph_t
+    confidence: sup
+  - id: jbzenon_t
+    confidence: sup
+  - id: mtstephanie_t
+    confidence: sup
 spouses:
   - id: bossin
     name: Antoina Bossin
     married: 1872-06-20
     place: Kraainem
+    confidence: sup
 sources:
   - S26
   - S27

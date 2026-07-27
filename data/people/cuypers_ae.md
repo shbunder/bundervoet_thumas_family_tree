@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: dehose
     name: Anna Maria de Hose
+    confidence: sup
 sources:
   - S31
 ---

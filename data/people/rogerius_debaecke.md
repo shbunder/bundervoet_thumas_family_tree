@@ -8,11 +8,16 @@ death:
   date: "1727"
 confidence: sup
 line: bostyn-cappaert
-father: adrianus_debaecke
-mother: anna_lamsens
+father:
+  id: adrianus_debaecke
+  confidence: sup
+mother:
+  id: anna_lamsens
+  confidence: sup
 spouses:
   - id: maria_m_vandewalle
     name: Maria Magdalena Vandewalle
+    confidence: sup
 sources:
   - tree-isavdw
 ---

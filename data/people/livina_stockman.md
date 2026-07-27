@@ -9,11 +9,16 @@ death:
   place: Evergem
 confidence: sup
 line: bundervoet
-father: joannes_stockman
-mother: guillielma_dellaert
+father:
+  id: joannes_stockman
+  confidence: sup
+mother:
+  id: guillielma_dellaert
+  confidence: sup
 spouses:
   - id: joannes_b
     name: Joannes Bundervoet
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

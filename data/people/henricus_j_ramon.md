@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: hovenier (gardener)
 line: devriendt
-father: mattheus_ramon
-mother: jacoba_ossaert
+father:
+  id: mattheus_ramon
+  confidence: sup
+mother:
+  id: jacoba_ossaert
+  confidence: sup
 spouses:
   - id: lucia_steenkiste
     name: Lucia Theresia Steenkiste
     married: 1806-11-18
     place: Mariakerke
+    confidence: sup
 sources:
   - tree-wernero
 ---

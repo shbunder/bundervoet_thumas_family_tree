@@ -12,6 +12,7 @@ spouses:
   - id: joannes_b
     name: Joannes Bundervoet
     married: ~1745
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

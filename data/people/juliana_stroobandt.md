@@ -10,13 +10,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: florentinus_stroobandt
-mother: rosalia_caeckaert
+father:
+  id: florentinus_stroobandt
+  confidence: sup
+mother:
+  id: rosalia_caeckaert
+  confidence: sup
 spouses:
   - id: carel_cappaert
     name: Carel Louis Cappaert
     married: 1863-09-30
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

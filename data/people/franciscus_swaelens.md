@@ -5,11 +5,18 @@ surname: Swaelens
 sex: m
 birth:
   date: 1859..1860
-line: thumas
 confidence: doc
 occupation: schrijnwerker (carpenter)
-father: egidius_swaelens
-mother: joanna_ackermans
+line: thumas
+father:
+  id: egidius_swaelens
+  confidence: doc
+mother:
+  id: joanna_ackermans
+  confidence: doc
+siblings:
+  - id: swaelens
+    confidence: doc
 sources:
   - fs-kraainem-1884-marriage-swaelens-bossin
 ---

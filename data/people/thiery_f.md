@@ -6,11 +6,16 @@ birth:
   date: 1930..1939
 confidence: fam
 line: thumas
-father: jean_t
-mother: crabbe
+father:
+  id: jean_t
+  confidence: fam
+mother:
+  id: crabbe
+  confidence: fam
 spouses:
   - id: juliette
     name: Juliette Vandenhoeck
+    confidence: fam
 sources:
   - family
 ---

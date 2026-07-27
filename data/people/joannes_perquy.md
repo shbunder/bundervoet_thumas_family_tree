@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: agatha_stekelorum
     name: Agatha Stekelorum
+    confidence: sup
 sources:
   - tree-stefanieschil
 ---

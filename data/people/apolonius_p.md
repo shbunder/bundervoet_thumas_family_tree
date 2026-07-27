@@ -10,13 +10,18 @@ death:
   place: Laarne
 confidence: sup
 line: paelinck
-father: livinus2_p
-mother: petronilla_vk
+father:
+  id: livinus2_p
+  confidence: sup
+mother:
+  id: petronilla_vk
+  confidence: sup
 spouses:
   - id: christina_vm
     name: Christina Van Maele
     married: 1770-09-04
     place: Destelbergen
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

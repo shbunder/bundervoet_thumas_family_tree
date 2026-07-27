@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: petrus_wittenheyns
     name: Petrus Wittenheyns
+    confidence: sup
 sources:
   - tree-isavdw
 ---

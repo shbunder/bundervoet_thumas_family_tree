@@ -6,12 +6,17 @@ death:
   date: "1658"
 confidence: sup
 line: bostyn-cappaert
-father: simon_vandewalle_1565
-mother: christina_desangere
+father:
+  id: simon_vandewalle_1565
+  confidence: sup
+mother:
+  id: christina_desangere
+  confidence: sup
 spouses:
   - id: francisca_vanhoutte
     name: Francisca Van Houtte
     kind: partnership
+    confidence: sup
 sources:
   - tree-isavdw
 ---

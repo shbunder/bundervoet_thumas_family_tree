@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: herbergier (innkeeper)
 line: bostyn-cappaert
-father: guillielmus_stroobandt
-mother: clara_vansieleghem
+father:
+  id: guillielmus_stroobandt
+  confidence: sup
+mother:
+  id: clara_vansieleghem
+  confidence: sup
 spouses:
   - id: barbara_debaecke
     name: Barbara Theresia De Baecke
     married: 1732-04-30
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

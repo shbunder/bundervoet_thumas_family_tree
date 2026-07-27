@@ -5,6 +5,13 @@ surname: Thumas
 sex: m
 confidence: fam
 line: immediate
-father: thiery
-mother: christiane
+father:
+  id: thiery
+  confidence: fam
+mother:
+  id: christiane
+  confidence: fam
+siblings:
+  - id: dorien
+    confidence: fam
 ---

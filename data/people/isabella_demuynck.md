@@ -12,6 +12,7 @@ line: bostyn-cappaert
 spouses:
   - id: jacobus_stroobandt
     name: Jacobus Stroobandt
+    confidence: sup
 sources:
   - tree-isavdw
 ---

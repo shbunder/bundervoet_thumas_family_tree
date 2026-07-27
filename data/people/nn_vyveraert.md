@@ -8,6 +8,7 @@ line: bundervoet
 spouses:
   - id: petrus_bundervoet1560
     name: Petrus Bundervoet
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

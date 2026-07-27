@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: pieter_stekelorum
     name: Pieter Stekelorum
+    confidence: sup
 sources:
   - tree-stefanieschil
   - agatha-roksem-1855-death-agatha-stekelorum

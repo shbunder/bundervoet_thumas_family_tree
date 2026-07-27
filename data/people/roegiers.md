@@ -14,6 +14,7 @@ spouses:
   - id: judocus
     name: Judocus Bundervoet
     married: "1834"
+    confidence: sup
 sources:
   - geneanet
 ---

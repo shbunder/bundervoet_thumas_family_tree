@@ -14,6 +14,7 @@ spouses:
   - id: janbaptist_p
     name: Jan Baptist Paelinck
     married: "1795"
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

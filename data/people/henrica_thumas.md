@@ -3,18 +3,30 @@ id: henrica_thumas
 name: Henrica Thumas
 surname: Thumas
 sex: f
-confidence: sup
-line: thumas
-father: georges_cj
-mother: bossin
 birth:
   date: 1878-06-24
   place: Kraainem
+confidence: sup
+line: thumas
+father:
+  id: georges_cj
+  confidence: sup
+mother:
+  id: bossin
+  confidence: sup
+siblings:
+  - id: jbgeorgius
+    confidence: sup
+  - id: jcseraphina_t
+    confidence: sup
+  - id: misabella_t
+    confidence: sup
 spouses:
   - id: coenraets_f
     name: Franciscus Coenraets
     married: 1899-04-15
     place: Kraainem
+    confidence: sup
 sources:
   - S27
   - agatha

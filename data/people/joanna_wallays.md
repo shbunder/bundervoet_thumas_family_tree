@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: egidius_degrande
     name: Egidius De Grande
+    confidence: sup
 sources:
   - tree-isavdw
 ---

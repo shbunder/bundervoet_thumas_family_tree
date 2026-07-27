@@ -12,6 +12,7 @@ spouses:
     name: Ludovicus Emanuel Dutreeuw
     married: 1807-05-27
     place: Diksmuide
+    confidence: sup
 sources:
   - tree-bartvanhooren
 ---

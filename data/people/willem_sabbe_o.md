@@ -11,11 +11,14 @@ death:
 confidence: sup
 occupation: landbouwer (farmer)
 line: bostyn-cappaert
-father: petrus_sabbe_1504
+father:
+  id: petrus_sabbe_1504
+  confidence: sup
 spouses:
   - id: magdalena_demeulemeester
     name: Magdalena Demeulemeester
     married: ~1555
+    confidence: sup
 sources:
   - tree-isavdw
 ---

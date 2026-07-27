@@ -10,13 +10,27 @@ death:
 confidence: doc
 occupation: huishoudster (housekeeper)
 line: thumas
-father: egidius_peremans
-mother: joanna_verelst
+father:
+  id: egidius_peremans
+  confidence: sup
+mother:
+  id: joanna_verelst
+  confidence: sup
+siblings:
+  - id: cornelius_peremans
+    confidence: sup
+  - id: jathanasius_peremans
+    confidence: sup
+  - id: jbaptista_peremans
+    confidence: sup
+  - id: mjosephina_peremans
+    confidence: sup
 spouses:
   - id: guilielmus_bossin
     name: Guilielmus Bossin
     married: 1846-02-24
     place: Zaventem
+    confidence: doc
 sources:
   - S31
   - S30

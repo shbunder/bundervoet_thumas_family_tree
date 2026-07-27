@@ -10,6 +10,7 @@ spouses:
     name: Alphonsus Van Bogaert
     married: 1909-04-07
     place: Sint-Niklaas
+    confidence: sup
 sources:
   - S18
 ---

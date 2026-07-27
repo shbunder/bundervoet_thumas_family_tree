@@ -11,13 +11,33 @@ death:
 confidence: sup
 occupation: werkman (labourer)
 line: van-iseghem
-father: joannes_vi2
-mother: hermanie_janssen
+father:
+  id: joannes_vi2
+  confidence: sup
+mother:
+  id: hermanie_janssen
+  confidence: sup
+siblings:
+  - id: arthur_vi
+    confidence: sup
+  - id: augustus_vi
+    confidence: sup
+  - id: gustavus_vi
+    confidence: sup
+  - id: joannes_vi83
+    confidence: sup
+  - id: joannes_vi91
+    confidence: sup
+  - id: leontius_vi
+    confidence: sup
+  - id: ludovicus_vi
+    confidence: sup
 spouses:
   - id: emma_vincke
     name: Emma Celesta Vincke
     married: 1907-09-28
     place: Oostende
+    confidence: sup
 sources:
   - fwk-emma-vincke-1974
   - tree-gverdievel

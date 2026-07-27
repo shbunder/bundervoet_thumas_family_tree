@@ -7,11 +7,19 @@ birth:
   place: Oostende
 confidence: sup
 line: de-keyser
-father: jerome_dk
-mother: leonie_p
+father:
+  id: jerome_dk
+  confidence: sup
+mother:
+  id: leonie_p
+  confidence: sup
+siblings:
+  - id: albert_dk
+    confidence: sup
 spouses:
   - id: simonne
     name: Simonne Vandewalle
+    confidence: fam
 sources:
   - tree-stefpaelinck
   - family

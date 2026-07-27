@@ -2,20 +2,25 @@
 id: coenraets_f
 name: Franciscus Coenraets
 surname: Coenraets
+sex: m
 birth:
   date: 1872-06-13
   place: Sint-Stevens-Woluwe
-sex: m
 confidence: sup
 occupation: brouwersgast (brewer's man)
 line: thumas
-father: coenraets_sr
-mother: godts
+father:
+  id: coenraets_sr
+  confidence: sup
+mother:
+  id: godts
+  confidence: sup
 spouses:
   - id: henrica_thumas
     name: Henrica Thumas
     married: 1899-04-15
     place: Kraainem
+    confidence: sup
 sources:
   - S27
 ---

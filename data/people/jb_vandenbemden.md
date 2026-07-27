@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: elisabeth_langes
     name: Elisabeth Agatha Langes
+    confidence: sup
 sources:
   - ssw-1873-marriage-vandenbemden-coekelberghs
 ---

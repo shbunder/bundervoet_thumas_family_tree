@@ -13,6 +13,7 @@ spouses:
     name: Georges Lambert Thumas
     married: 1801-02-09
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - S23
   - fs-brabant-bs

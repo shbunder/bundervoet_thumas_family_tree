@@ -12,6 +12,7 @@ spouses:
     name: Petrus Antonius Vanalderweireldt
     married: 1828-04-20
     place: Diksmuide
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

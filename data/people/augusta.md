@@ -10,11 +10,23 @@ death:
   place: Mariakerke
 confidence: sup
 line: vanstechelman
-father: petrusjacobus_v
-mother: clementia_w
+father:
+  id: petrusjacobus_v
+  confidence: sup
+mother:
+  id: clementia_w
+  confidence: sup
+siblings:
+  - id: henricus_e_v
+    confidence: sup
+  - id: leontius_v
+    confidence: sup
+  - id: paula_v
+    confidence: sup
 spouses:
   - id: petrus_f
     name: Petrus Bundervoet
+    confidence: sup
 sources:
   - fs-wvl-bs
   - fwk-augusta-1922

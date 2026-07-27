@@ -16,6 +16,7 @@ spouses:
     name: Georges Thumas
     married: 1771-01-03
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - S14
   - S6

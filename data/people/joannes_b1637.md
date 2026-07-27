@@ -9,11 +9,16 @@ death:
   place: Evergem
 confidence: sup
 line: bundervoet
-father: segerius_bundervoet
-mother: joanna_vanhecke
+father:
+  id: segerius_bundervoet
+  confidence: sup
+mother:
+  id: joanna_vanhecke
+  confidence: sup
 spouses:
   - id: joanna_verbrugghe
     name: Joanna Verbrugghe
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

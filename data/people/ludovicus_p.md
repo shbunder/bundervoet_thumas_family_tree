@@ -10,13 +10,18 @@ death:
   place: Destelbergen
 confidence: sup
 line: paelinck
-father: livinus1_p
-mother: elisabeth_t
+father:
+  id: livinus1_p
+  confidence: sup
+mother:
+  id: elisabeth_t
+  confidence: sup
 spouses:
   - id: petronella_v
     name: Petronella Verniers
     married: 1681-02
     place: Lochristi
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

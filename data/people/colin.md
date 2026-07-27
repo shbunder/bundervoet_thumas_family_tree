@@ -7,6 +7,13 @@ birth:
   date: 1989-10-11
 confidence: fam
 line: immediate
-father: ronny
-mother: cosette
+father:
+  id: ronny
+  confidence: fam
+mother:
+  id: cosette
+  confidence: fam
+siblings:
+  - id: shaun
+    confidence: fam
 ---

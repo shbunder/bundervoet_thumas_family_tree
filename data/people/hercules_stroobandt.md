@@ -10,13 +10,18 @@ death:
   place: Torhout
 confidence: sup
 line: bostyn-cappaert
-father: oliverius_stroobandt
-mother: judoca_vanhecke
+father:
+  id: oliverius_stroobandt
+  confidence: sup
+mother:
+  id: judoca_vanhecke
+  confidence: sup
 spouses:
   - id: joanna_willaert
     name: Joanna Willaert
     married: 1659-06-14
     place: Torhout
+    confidence: sup
 sources:
   - tree-isavdw
 ---

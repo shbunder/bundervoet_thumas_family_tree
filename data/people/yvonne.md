@@ -7,13 +7,18 @@ birth:
   place: Oostende
 confidence: sup
 line: devriendt
-father: georgius_s
-mother: devos
+father:
+  id: georgius_s
+  confidence: sup
+mother:
+  id: devos
+  confidence: sup
 spouses:
   - id: marcel_d
     name: Marcel Devriendt
     married: 1937-10-16
     place: Stene
+    confidence: sup
 sources:
   - tree-wernero
 ---

@@ -7,11 +7,16 @@ birth:
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: antonius_vincke
-mother: anne_peperstraete
+father:
+  id: antonius_vincke
+  confidence: sup
+mother:
+  id: anne_peperstraete
+  confidence: sup
 spouses:
   - id: virginia_leynseele
     name: Virginia Coleta Leynseele
+    confidence: sup
 sources:
   - tree-bartvanhooren
 ---

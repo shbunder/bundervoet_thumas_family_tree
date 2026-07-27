@@ -12,6 +12,7 @@ spouses:
     name: Hubertus Franciscus Huyghebaert
     married: 1821-04-29
     place: Oudenburg
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

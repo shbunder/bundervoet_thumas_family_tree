@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: livinus_verkouille
     name: Livinus Hermanus Verkouille
+    confidence: sup
 sources:
   - tree-wernero
 ---

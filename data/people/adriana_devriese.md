@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: joannes_keirsebilck_1697
     name: Joannes Keirsebilck
+    confidence: sup
 sources:
   - tree-isavdw
 ---

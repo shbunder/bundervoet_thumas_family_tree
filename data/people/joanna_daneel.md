@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: dienstmeid (maidservant)
 line: devriendt
-father: philippus_daneel
-mother: anna_senesael
+father:
+  id: philippus_daneel
+  confidence: sup
+mother:
+  id: anna_senesael
+  confidence: sup
 spouses:
   - id: pierre_ramon
     name: Pierre Francois Ramon
     married: 1835-01-28
     place: Oostende
+    confidence: sup
 sources:
   - tree-wernero
 ---

@@ -8,11 +8,16 @@ death:
   date: "1666"
 confidence: sup
 line: bostyn-cappaert
-father: laurentius_willems
-mother: margaretha_vermeersch
+father:
+  id: laurentius_willems
+  confidence: sup
+mother:
+  id: margaretha_vermeersch
+  confidence: sup
 spouses:
   - id: andreas_vanmaele
     name: Andreas Van Maele
+    confidence: sup
 sources:
   - tree-isavdw
 ---

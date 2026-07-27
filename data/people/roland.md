@@ -9,11 +9,19 @@ death:
   date: "2003"
 confidence: fam
 line: de-keyser
-father: gustaaf
-mother: simonne
+father:
+  id: gustaaf
+  confidence: fam
+mother:
+  id: simonne
+  confidence: fam
+siblings:
+  - id: rita_dk
+    confidence: fam
 spouses:
   - id: huguette
     name: Hugette Devriendt
+    confidence: fam
 sources:
   - geneanet
   - family

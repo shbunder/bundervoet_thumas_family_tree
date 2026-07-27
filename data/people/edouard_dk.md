@@ -11,18 +11,24 @@ death:
 confidence: doc
 occupation: werkman
 line: de-keyser
-father: desiderius_dk
-mother: mtheresia_vandenbroeck
+father:
+  id: desiderius_dk
+  confidence: doc
+mother:
+  id: mtheresia_vandenbroeck
+  confidence: doc
 spouses:
   - id: louise_bocklandt
     name: Louise Marie Bocklandt
     married: 1901-05-04
     divorced: 1922-11-14
     detail: legitimized their two eldest children
+    confidence: doc
   - name: Leontine Schreel
     married: 1946-05-09
     place: Oostende
     id: leontine_schreel
+    confidence: doc
 sources:
   - agatha
   - familysearch

@@ -10,6 +10,7 @@ line: devriendt
 spouses:
   - id: joanna_truant
     name: Joanna Truant
+    confidence: sup
 sources:
   - tree-wernero
 ---

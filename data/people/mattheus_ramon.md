@@ -10,15 +10,21 @@ death:
   place: Handzame
 confidence: sup
 line: devriendt
-father: stephanus_ramon
-mother: joanna_truant
+father:
+  id: stephanus_ramon
+  confidence: sup
+mother:
+  id: joanna_truant
+  confidence: sup
 spouses:
   - name: Anna Anastasia Norysse
     id: anna_norysse
+    confidence: sup
   - id: jacoba_ossaert
     name: Jacoba Josepha Ossaert
     married: 1772-05-31
     place: Zande
+    confidence: sup
 sources:
   - tree-wernero
 ---

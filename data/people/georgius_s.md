@@ -7,13 +7,18 @@ birth:
   place: Oostende
 confidence: sup
 line: devriendt
-father: joannesf_s
-mother: ramon
+father:
+  id: joannesf_s
+  confidence: sup
+mother:
+  id: ramon
+  confidence: sup
 spouses:
   - id: devos
     name: Joanna Paula Devos
     married: 1919-04-26
     place: Oostende
+    confidence: sup
 sources:
   - tree-wernero
 ---

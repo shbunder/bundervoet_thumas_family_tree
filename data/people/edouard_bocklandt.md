@@ -11,11 +11,16 @@ death:
 confidence: sup
 occupation: zeeldraaier (ropemaker)
 line: de-keyser
-father: antonius_dominicus_bocklandt
-mother: isabella_ichau
+father:
+  id: antonius_dominicus_bocklandt
+  confidence: sup
+mother:
+  id: isabella_ichau
+  confidence: sup
 spouses:
   - id: marie_vanbergen
     name: Maria Louisa Van Bergen
+    confidence: sup
 sources:
   - tree-wete1998
   - agatha-oostende-1907-death-eduardus-bocklandt

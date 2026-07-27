@@ -8,13 +8,41 @@ birth:
 confidence: doc
 occupation: ijzersmit (blacksmith)
 line: van-iseghem
-father: lucien_vincke
-mother: ludovica_vanald
+father:
+  id: lucien_vincke
+  confidence: sup
+mother:
+  id: ludovica_vanald
+  confidence: sup
+siblings:
+  - id: bellarmin_vincke
+    confidence: sup
+  - id: camilla_vincke
+    confidence: sup
+  - id: charles_vincke
+    confidence: sup
+  - id: emma_vincke
+    confidence: sup
+  - id: eugene_vincke
+    confidence: sup
+  - id: florence_vincke
+    confidence: sup
+  - id: irma_vincke
+    confidence: sup
+  - id: jerome_vincke
+    confidence: sup
+  - id: karolus_vincke
+    confidence: sup
+  - id: romanie_vincke
+    confidence: sup
+  - id: theophil_vincke
+    confidence: sup
 spouses:
   - id: eugenia_vandecappelle
     name: Eugenia Maria Vandecappelle
     married: 1888-09-19
     place: Diksmuide
+    confidence: sup
 sources:
   - rab-bs-huwelijken
   - rab-bs-geboorten

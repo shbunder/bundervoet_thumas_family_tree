@@ -11,6 +11,7 @@ line: thumas
 spouses:
   - id: schoolmeesters_j
     name: Josina Schoolmeesters
+    confidence: sup
 sources:
   - S35
 ---

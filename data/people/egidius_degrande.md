@@ -7,11 +7,16 @@ birth:
   place: Dentergem (Wakken)
 confidence: sup
 line: bostyn-cappaert
-father: martinus_degrande
-mother: egidia_damman
+father:
+  id: martinus_degrande
+  confidence: sup
+mother:
+  id: egidia_damman
+  confidence: sup
 spouses:
   - id: joanna_wallays
     name: Joanna Wallays
+    confidence: sup
 sources:
   - tree-isavdw
 ---

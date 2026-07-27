@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: joanna_leenaert
     name: Joanna Leenaert
+    confidence: sup
 sources:
   - tree-isavdw
 ---

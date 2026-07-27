@@ -8,11 +8,16 @@ death:
   date: "1747"
 confidence: sup
 line: bostyn-cappaert
-father: josephus_vansieleghem
-mother: maria_lampsins
+father:
+  id: josephus_vansieleghem
+  confidence: sup
+mother:
+  id: maria_lampsins
+  confidence: sup
 spouses:
   - id: guillielmus_stroobandt
     name: Guillielmus Stroobandt
+    confidence: sup
 sources:
   - tree-isavdw
 ---

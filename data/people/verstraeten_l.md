@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: torfs_r
     name: Rosalia Torfs
+    confidence: sup
 sources:
   - S35
 ---

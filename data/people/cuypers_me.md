@@ -5,13 +5,18 @@ surname: Cuypers
 sex: f
 confidence: sup
 line: thumas
-father: cuypers_ae
-mother: dehose
+father:
+  id: cuypers_ae
+  confidence: sup
+mother:
+  id: dehose
+  confidence: sup
 spouses:
   - id: jathanasius_peremans
     name: Joannes Athanasius Peremans
     married: 1844-11-28
     place: Zaventem
+    confidence: sup
 sources:
   - S31
 ---

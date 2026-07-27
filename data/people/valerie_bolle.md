@@ -9,6 +9,7 @@ spouses:
     name: Theophil Henri Vincke
     married: 1893-12-13
     place: Diksmuide
+    confidence: sup
 sources:
   - rab-bs-huwelijken
   - rab-bs-overlijdens

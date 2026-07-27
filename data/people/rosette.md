@@ -4,11 +4,21 @@ name: Rosette Van Iseghem
 surname: Van Iseghem
 confidence: fam
 line: bundervoet
-father: joannes_vi
-mother: adrienne_dv
+father:
+  id: joannes_vi
+  confidence: fam
+mother:
+  id: adrienne_dv
+  confidence: fam
+siblings:
+  - id: diane_vi
+    confidence: fam
+  - id: edi_vi
+    confidence: fam
 spouses:
   - id: marcel_b
     name: Marcel Henri Bundervoet
+    confidence: fam
 sources:
   - tree-bartvanhooren
   - tree-gverdievel

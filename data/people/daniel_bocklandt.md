@@ -12,6 +12,7 @@ spouses:
   - id: philippa_vanpuyenbroeck
     name: Philippa Van Puyenbroeck
     married: "1801"
+    confidence: sup
 sources:
   - tree-wete1998
 ---

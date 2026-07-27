@@ -10,6 +10,7 @@ spouses:
     name: Eduardus Van Iseghem
     married: 1927-01-15
     place: Oostende
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

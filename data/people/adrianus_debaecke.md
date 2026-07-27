@@ -6,11 +6,16 @@ birth:
   date: "1630"
 confidence: sup
 line: bostyn-cappaert
-father: petrus_debaecke
-mother: margaretha_wybau
+father:
+  id: petrus_debaecke
+  confidence: sup
+mother:
+  id: margaretha_wybau
+  confidence: sup
 spouses:
   - id: anna_lamsens
     name: Anna Lamsens
+    confidence: sup
 sources:
   - tree-isavdw
 ---

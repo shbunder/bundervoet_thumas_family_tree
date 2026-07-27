@@ -1238,6 +1238,7 @@ def test_every_validator_check_at_least_runs():
     check_data._check_forenames(report)
     check_data._check_plausibility(report, people, children_index(people))
     check_data._check_labels(report, people)
+    check_data._check_links(report, people, load_config()["meta"], set())
     assert not report.errors, report.errors
 
 
@@ -1456,6 +1457,347 @@ def test_an_unparseable_date_part_is_dropped_not_guessed():
     assert _api_date({"Year": "ca", "Month": "8", "Day": "8"}) is None
     assert _api_date({"Year": "1902", "Month": "13", "Day": "8"}) == "1902"
     assert _api_date({"Year": " 1902 "}) == "1902"
+
+
+# ---------- links as facts: confidence and sources on edges ----------
+#
+# `father`, `mother` and each spouse carry their own confidence and citation, on the same
+# scale a person does, because it is the same question asked of a different object. The
+# whole arrangement rests on one property — the scorer cannot see an `asm` link — and that
+# property is invisible when it breaks: nothing raises, the graft simply scores as
+# well-supported because the tree's own guess came back to it as evidence.
+
+
+def _records(*records):
+    """Like `_tree` above, but taking whole records: these tests need `name` and nested link
+    blocks, which the keyword form cannot express. Records go through `normalise_links` so
+    they arrive in the shape every reader actually sees."""
+    from familytree.people import normalise_links
+    return {r["id"]: normalise_links(dict(r)) for r in records}
+
+
+def test_the_scalar_and_the_block_form_are_one_shape_in_memory():
+    """The scalar stays legal in the files — 646 links are simply known and a three-line
+    block to say so would add two thousand lines of ceremony for no fact gained. But two
+    shapes in memory is how this goes quietly wrong: `if p.get("father")` is truthy for
+    both, and `p["father"] == pid` silently goes False against a dict, so a missed reader
+    would not raise, it would just stop finding parents."""
+    from familytree.people import edge_confidence, normalise_links, parent_id
+    plain = normalise_links({"id": "a", "name": "A", "father": "dad", "confidence": "doc"})
+    block = normalise_links({"id": "b", "name": "B", "confidence": "doc",
+                             "father": {"id": "dad", "confidence": "asm", "note": "one id"}})
+    assert parent_id(plain, "father") == parent_id(block, "father") == "dad"
+    # An unqualified link states no confidence and does not borrow the person's. Inheriting
+    # would invent a grade no source gave, and on a marriage — one link written on two
+    # records — it made his `doc` and her `sup` disagree about the same act.
+    assert edge_confidence(plain, "father") is None
+    assert edge_confidence(block, "father") == "asm"
+
+
+def test_an_assumed_parent_is_not_evidence():
+    """The property the whole feature rests on.
+
+    A parent is an independent identifier *because* the tree is sure of them. Put a guess in
+    that slot and the two-identifier floor stops being a floor: this project's own unverified
+    conclusion comes back as corroboration, and the next graft is reasoned about as if the
+    first were settled. It compounds — every link in the chain scores well — which is why it
+    is pinned rather than left to the reading of one function.
+    """
+    from familytree.match import from_person
+    dad = {"id": "dad", "name": "Joannes Van Iseghem", "surname": "Van Iseghem"}
+    firm = {"id": "kid", "name": "Emma Van Iseghem", "surname": "Van Iseghem", "father": "dad"}
+    guess = dict(firm, father={"id": "dad", "confidence": "asm", "note": "commune only"})
+
+    assert any(k[0] == "father" for k in from_person(*_two(firm, dad)).kin)
+    assert not any(k[0] == "father" for k in from_person(*_two(guess, dad)).kin)
+
+
+def _two(subject, other):
+    people = _records(subject, other)
+    return people[subject["id"]], people
+
+
+def test_a_doc_link_to_a_sup_person_is_still_evidence():
+    """The two axes really are independent, in the direction that matters for recall.
+
+    Grading the LINK must not quietly re-grade the person or vice versa. A well-attested
+    marriage act can establish a parent link to somebody whose own dates are barely known,
+    and that link is still one of the two identifiers.
+    """
+    from familytree.match import from_person
+    dad = {"id": "dad", "name": "Joannes Van Iseghem", "surname": "Van Iseghem",
+           "confidence": "unk"}
+    kid = {"id": "kid", "name": "Emma Van Iseghem", "surname": "Van Iseghem",
+           "confidence": "doc", "father": {"id": "dad", "confidence": "doc",
+                                           "source": "oostende-1907"}}
+    assert any(k[0] == "father" for k in from_person(*_two(kid, dad)).kin)
+
+
+def test_a_child_attached_by_an_assumed_link_is_not_evidence_for_the_parent():
+    """The same link, read from the other end.
+
+    Excluding it upward only would have left the hole open: the child still names the parent,
+    so `children_index` still lists them, and the parent's candidate would quietly regain the
+    very kin evidence the child's own record declined to assert.
+    """
+    from familytree.match import from_person
+    people = _records(
+        {"id": "dad", "name": "Joannes Van Iseghem", "surname": "Van Iseghem"},
+        {"id": "kid", "name": "Emma Van Iseghem", "surname": "Van Iseghem",
+         "father": {"id": "dad", "confidence": "asm", "note": "commune only"}},
+    )
+    children = {"dad": ["kid"]}
+    assert not any(k[0] == "child" for k in from_person(people["dad"], people, children).kin)
+    # And the sex the role would have implied does not leak in either — one rule, no
+    # exceptions to remember.
+    assert from_person(people["dad"], people, children).sex is None
+
+
+def test_what_an_assumed_link_carries_is_measured_not_counted():
+    """`at_stake` is who would leave with the link, not who sits above it.
+
+    Counting the parent's own ancestors is the obvious implementation and it is wrong
+    wherever the tree folds back on itself: a shared ancestor reached by both of a couple's
+    lines is not at risk from either one, and reporting them inflates the price of every
+    guess in a collapsed pedigree — the tree this project is building.
+    """
+    from familytree.people import weak_edges
+    people = _records(
+        {"id": "kid", "name": "Kid", "mother": "mum",
+         "father": {"id": "dad", "confidence": "asm", "note": "one identifier"}},
+        {"id": "dad", "name": "Dad", "father": "shared"},
+        {"id": "mum", "name": "Mum", "father": "shared"},
+        {"id": "shared", "name": "Shared Ancestor"},
+    )
+    edge, = weak_edges(people, ["kid"])
+    assert edge["at_stake"] == ["dad"]   # not ["dad", "shared"] — mum still reaches shared
+
+    # Break the other route and the very same link is suddenly carrying the shared ancestor
+    # too. Same guess, same record, unchanged note: what it costs to be wrong is a fact about
+    # the tree around it, which is why it is derived on every run and never stored.
+    del people["mum"]["father"]
+    edge, = weak_edges(people, ["kid"])
+    assert edge["at_stake"] == ["dad", "shared"]
+
+
+def test_unk_is_refused_on_a_link():
+    """On a person `unk` means "not researched yet". A link has no such state — one whose
+    existence is unknown is an absent link — so allowing the code would put a drawn edge and
+    a nonexistent one in the same bucket."""
+    import check_data
+    people = _records({"id": "kid", "name": "Kid",
+                       "father": {"id": "dad", "confidence": "unk"}},
+                      {"id": "dad", "name": "Dad"})
+    report = check_data.Report()
+    check_data._check_links(report, people, {"roots": ["kid"]}, set())
+    assert any("not a link" in e for e in report.errors), report.errors
+
+
+def test_an_assumed_link_must_say_what_it_rests_on():
+    """An assumption nobody explained cannot be checked by anyone later, including whoever
+    made it. The note IS the finding; the link is only its consequence, and it is what the
+    page shows beside the red mark."""
+    import check_data
+    people = _records({"id": "kid", "name": "Kid",
+                       "father": {"id": "dad", "confidence": "asm"}},
+                      {"id": "dad", "name": "Dad"})
+    report = check_data.Report()
+    check_data._check_links(report, people, {"roots": ["kid"]}, set())
+    assert any("says nothing about why" in e for e in report.errors), report.errors
+
+
+def test_a_link_cites_a_registered_source_or_none_at_all():
+    """Rule 2 — "every new parent link cites a source" — made checkable for the first time.
+    While `sources` was a person-level list it could not be verified by anything: the
+    citation and the claim sat in the same file without being attached to each other."""
+    import check_data
+    people = _records({"id": "kid", "name": "Kid",
+                       "father": {"id": "dad", "source": "not-registered"}},
+                      {"id": "dad", "name": "Dad"})
+    report = check_data.Report()
+    check_data._check_links(report, people, {"roots": ["kid"]}, {"oostende-1907"})
+    assert any("not in research/sources.json" in e for e in report.errors), report.errors
+
+
+def test_the_cost_of_a_guess_warns_and_never_fails():
+    """Stacking and blast radius are warnings, and that is a deliberate line.
+
+    Each is repaired by research nobody can do on demand, and the project's rule is that the
+    validator is green before a commit. Failing on them would make the cheapest way back a
+    deletion of the record of the guess — the tree would get LESS honest under pressure,
+    which is exactly backwards.
+    """
+    import check_data
+    people = _records(
+        {"id": "kid", "name": "Kid",
+         "father": {"id": "dad", "confidence": "asm", "note": "one identifier"}},
+        {"id": "dad", "name": "Dad",
+         "father": {"id": "granddad", "confidence": "asm", "note": "one identifier"}},
+        {"id": "granddad", "name": "Granddad"},
+    )
+    report = check_data.Report()
+    check_data._check_links(report, people, {"roots": ["kid"]}, set())
+    assert not report.errors, report.errors
+    assert any("guess on a guess" in w for w in report.warnings), report.warnings
+
+
+def test_the_page_is_told_why_a_link_is_red_and_only_when_it_is():
+    """The reason travels with the mark, and ordinary links say nothing about themselves.
+
+    Shipping every link's confidence would put a badge on almost every card, which is how a
+    warning stops being read; shipping none would leave a red edge whose warrant lives in a
+    research log nobody reading the tree will open.
+    """
+    from familytree.people import to_browser_record
+    firm = to_browser_record(_records(
+        {"id": "kid", "name": "Kid", "confidence": "sup",
+         "father": {"id": "dad", "confidence": "doc", "source": "oostende-1907"}})["kid"])
+    assert firm["father"] == "dad" and "links" not in firm
+
+    weak = to_browser_record(_records(
+        {"id": "kid", "name": "Kid", "confidence": "sup",
+         "father": {"id": "dad", "confidence": "asm",
+                    "note": "1907 act, commune agrees; no birth act"}})["kid"])
+    assert weak["father"] == "dad"          # still a plain id — the renderer is unchanged
+    assert weak["links"]["father"]["confidence"] == "asm"
+    assert "commune agrees" in weak["links"]["father"]["note"]
+
+
+# ---------- siblings: the one relationship that is stored ----------
+#
+# `siblings` is a deliberate exception to "a relationship is never a field", and it is only
+# safe because it is fenced to the case where there is nothing to be a second copy OF. The
+# fence is the tests below; without them the field is just the duplication the data model
+# spent its whole design avoiding.
+
+
+def test_a_derivable_sibship_is_written_out_and_kept_in_step():
+    """Redundancy is the point, and it is safe because it is checked.
+
+    Sibling edges duplicate what the parent links already say — 994 of them across the tree.
+    A copy nothing verifies is exactly the failure the data model is built to avoid, so this
+    one is generated by `familytree.edges.planned` and the validator fails on any record that
+    disagrees with it. Correct a parent link and the sibling edges resting on it go stale
+    loudly, on the next build, rather than quietly describing a family that changed.
+    """
+    from familytree.edges import planned
+    people = _records(
+        {"id": "a", "name": "A", "father": "dad"},
+        {"id": "b", "name": "B", "father": "dad"},
+        {"id": "dad", "name": "Dad"},
+    )
+    plan = planned(people)
+    assert [s["id"] for s in plan["a"]["siblings"]] == ["b"]
+    assert [s["id"] for s in plan["b"]["siblings"]] == ["a"]
+
+    # Move B to another father and the plan changes with it — which is what "cannot drift"
+    # means in practice: the edge is never a second opinion about who B's father was.
+    people["b"]["father"] = {"id": "other"}
+    people["other"] = {"id": "other", "name": "Other"}
+    assert "siblings" not in planned(people)["a"]
+
+
+def test_a_stated_sibship_the_parent_links_contradict_is_refused():
+    """The one thing redundancy must not be allowed to hide. Two people whose parents are
+    both fully recorded and share nobody are not siblings, whatever an entry says — one of
+    the two facts is wrong and the build should say so. Only fully-known pairs are judged: a
+    missing parent is the ordinary case the field exists to serve."""
+    import check_data
+    people = _records(
+        {"id": "a", "name": "A", "father": "d1", "mother": "m1",
+         "siblings": [{"id": "b"}]},
+        {"id": "b", "name": "B", "father": "d2", "mother": "m2",
+         "siblings": [{"id": "a"}]},
+        *[{"id": x, "name": x.upper()} for x in ("d1", "m1", "d2", "m2")],
+    )
+    report = check_data.Report()
+    check_data._check_siblings(report, "a", people["a"], people, set())
+    assert any("cannot both be right" in e for e in report.errors), report.errors
+
+
+def test_a_sibship_the_parent_links_cannot_state_is_allowed():
+    """The case the field exists for, and it is a real one. `antoine_vanald` records a
+    probable elder sister named by a third act giving the same parent pair, and had to give
+    the fact up — "she cannot be linked as a sibling while the parents themselves are only a
+    frontier", because the father's forename disagrees across all three acts."""
+    import check_data
+    people = _records(
+        {"id": "a", "name": "A", "siblings": [
+            {"id": "b", "confidence": "asm", "note": "same parent pair in three acts; "
+             "neither parent graftable"}]},
+        {"id": "b", "name": "B", "siblings": [
+            {"id": "a", "confidence": "asm", "note": "same parent pair in three acts; "
+             "neither parent graftable"}]},
+    )
+    report = check_data.Report()
+    for pid in ("a", "b"):
+        check_data._check_siblings(report, pid, people[pid], people, set())
+    assert not report.errors, report.errors
+
+
+def test_a_sibling_link_is_mutual_and_agrees_with_itself():
+    """Siblinghood is symmetric, so a one-sided entry makes the tree answer differently
+    depending on whose record is read — the same failure the marriage invariant exists for,
+    and it is checked the same way: one relationship, one set of facts."""
+    import check_data
+    one_sided = _records({"id": "a", "name": "A", "siblings": [{"id": "b"}]},
+                         {"id": "b", "name": "B"})
+    report = check_data.Report()
+    check_data._check_siblings(report, "a", one_sided["a"], one_sided, set())
+    assert any("does not list" in e for e in report.errors), report.errors
+
+    disagree = _records(
+        {"id": "a", "name": "A", "siblings": [{"id": "b", "confidence": "doc"}]},
+        {"id": "b", "name": "B", "siblings": [{"id": "a", "confidence": "asm",
+                                              "note": "one identifier"}]},
+    )
+    report = check_data.Report()
+    check_data._check_siblings(report, "a", disagree["a"], disagree, set())
+    assert any("disagree about being siblings" in e for e in report.errors), report.errors
+
+
+def test_a_sibling_needs_a_record_not_a_name():
+    """Unlike a spouse. A spouse with no record still belongs on the card as a name; a
+    sibling with no record connects nothing in the graph, which is the only reason to state
+    one — and prose already holds an unlinked name better than a field can."""
+    import check_data
+    people = _records({"id": "a", "name": "A", "siblings": [{"note": "his brother Willem"}]})
+    report = check_data.Report()
+    check_data._check_siblings(report, "a", people["a"], people, set())
+    assert any('no "id"' in e for e in report.errors), report.errors
+
+
+def test_a_stated_sibling_of_a_blood_relative_is_blood():
+    """Objective 2, through the door the parent links could not open. An ancestor's sibling
+    and that sibling's descendants are in scope because they are blood — and the tree only
+    knows a stated sibling from a derived one because the derived one happened to have a
+    parent that could be grafted."""
+    from familytree.people import census
+    people = _records(
+        {"id": "kid", "name": "Kid", "father": "dad"},
+        {"id": "dad", "name": "Dad", "siblings": [{"id": "uncle", "confidence": "asm",
+                                                   "note": "same act"}]},
+        {"id": "uncle", "name": "Uncle", "siblings": [{"id": "dad", "confidence": "asm",
+                                                       "note": "same act"}]},
+        {"id": "cousin", "name": "Cousin", "father": "uncle"},
+    )
+    c = census(people, {"meta": {"roots": ["kid"]}, "root": "kid"})
+    # dad is the one ancestor; uncle and cousin are blood through the stated link.
+    assert (c["ancestors"], c["relatives"], c["others"]) == (1, 3, 0)
+
+
+def test_siblings_derived_and_stated_arrive_as_one_list():
+    """A reader does not care which mechanism knew it. The two cannot overlap — a stated
+    link between two people who already share a parent fails the build — so one list is
+    both simpler and unambiguous."""
+    from familytree.people import siblings_of
+    people = _records(
+        {"id": "a", "name": "A", "father": "dad", "siblings": [{"id": "c"}]},
+        {"id": "b", "name": "B", "father": "dad"},
+        {"id": "c", "name": "C", "siblings": [{"id": "a"}]},
+        {"id": "dad", "name": "Dad"},
+    )
+    assert sorted(siblings_of(people, "a")) == ["b", "c"]
 
 
 # ---------- the rendered docs, which nothing used to check ----------

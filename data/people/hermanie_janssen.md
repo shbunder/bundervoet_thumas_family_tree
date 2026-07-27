@@ -10,13 +10,37 @@ death:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: josephus_janssen
-mother: appolonia_huyghebaert
+father:
+  id: josephus_janssen
+  confidence: sup
+mother:
+  id: appolonia_huyghebaert
+  confidence: sup
+siblings:
+  - id: amandus_janssen66
+    confidence: sup
+  - id: augustus_janssen55
+    confidence: sup
+  - id: carolus_janssen62
+    confidence: sup
+  - id: florentina_janssen61
+    confidence: sup
+  - id: marialudovica_janssen58
+    confidence: sup
+  - id: paulus_janssen57
+    confidence: sup
+  - id: pharaildis_janssen52
+    confidence: sup
+  - id: seraphinus_janssen64
+    confidence: sup
+  - id: victorina_janssen60
+    confidence: sup
 spouses:
   - id: joannes_vi2
     name: Joannes Van Iseghem
     married: 1872-08-23
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
   - rab-bs-geboorten

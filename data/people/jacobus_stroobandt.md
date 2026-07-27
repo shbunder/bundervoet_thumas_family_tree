@@ -11,15 +11,21 @@ death:
 confidence: sup
 occupation: schoenmaker (shoemaker)
 line: bostyn-cappaert
-father: adrianus_stroobandt
-mother: anna_m_vanacker
+father:
+  id: adrianus_stroobandt
+  confidence: sup
+mother:
+  id: anna_m_vanacker
+  confidence: sup
 spouses:
   - name: Isabella De Muynck
     id: isabella_demuynck
+    confidence: sup
   - id: joanna_keirsebilck
     name: Joanna Keirsebilck
     married: 1810-07-24
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

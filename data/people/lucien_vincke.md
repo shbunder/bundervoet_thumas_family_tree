@@ -8,13 +8,18 @@ birth:
 confidence: sup
 occupation: metsersdiender (mason's assistant)
 line: van-iseghem
-father: engel_antonius_vincke
-mother: virginia_leynseele
+father:
+  id: engel_antonius_vincke
+  confidence: sup
+mother:
+  id: virginia_leynseele
+  confidence: sup
 spouses:
   - id: ludovica_vanald
     name: Ludovica Maria Vanalderweireldt
     married: 1865-05-24
     place: Diksmuide
+    confidence: sup
 sources:
   - tree-bartvanhooren
   - rab-bs-geboorten

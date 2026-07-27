@@ -2,20 +2,36 @@
 id: ludovicus_bossin79
 name: Ludovicus Bossin
 surname: Bossin
+sex: m
 birth:
   date: 1879-12-05
   place: Sint-Stevens-Woluwe
-sex: m
 confidence: sup
 occupation: polijster (polisher)
 line: thumas
-father: jbbossin
-mother: maria_wolf
+father:
+  id: jbbossin
+  confidence: sup
+mother:
+  id: maria_wolf
+  confidence: sup
+siblings:
+  - id: frans_bossin82
+    confidence: sup
+  - id: gjosef_bossin69
+    confidence: sup
+  - id: janphilip_bossin76
+    confidence: sup
+  - id: jphilippus_bossin57
+    confidence: sup
+  - id: pamandus_bossin59
+    confidence: sup
 spouses:
   - id: misabella_t
     name: Maria Isabella Helena Thumas
     married: 1900-04-10
     place: Kraainem
+    confidence: sup
 sources:
   - S28
   - S33

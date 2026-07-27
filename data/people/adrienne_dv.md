@@ -10,13 +10,18 @@ death:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: eugenius_dv
-mother: octavia_schal
+father:
+  id: eugenius_dv
+  confidence: sup
+mother:
+  id: octavia_schal
+  confidence: sup
 spouses:
   - id: joannes_vi
     name: Joannes Van Iseghem
     married: 1928-03-24
     place: Stene
+    confidence: sup
 sources:
   - dbe-adrienne-dv-1991
   - tree-gverdievel

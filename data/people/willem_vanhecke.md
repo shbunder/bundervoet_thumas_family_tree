@@ -8,6 +8,7 @@ confidence: sup
 line: bundervoet
 spouses:
   - name: (wife unrecorded)
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

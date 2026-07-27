@@ -15,6 +15,7 @@ spouses:
     name: Victoria Declerck
     married: 1819-11-17
     place: Oostende
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

@@ -8,6 +8,7 @@ confidence: sup
 line: bostyn-cappaert
 spouses:
   - name: (wife unrecorded)
+    confidence: sup
 sources:
   - tree-isavdw
 ---

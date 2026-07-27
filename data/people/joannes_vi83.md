@@ -11,8 +11,27 @@ death:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: joannes_vi2
-mother: hermanie_janssen
+father:
+  id: joannes_vi2
+  confidence: sup
+mother:
+  id: hermanie_janssen
+  confidence: sup
+siblings:
+  - id: arthur_vi
+    confidence: sup
+  - id: augustus_vi
+    confidence: sup
+  - id: eduardus_vi
+    confidence: sup
+  - id: gustavus_vi
+    confidence: sup
+  - id: joannes_vi91
+    confidence: sup
+  - id: leontius_vi
+    confidence: sup
+  - id: ludovicus_vi
+    confidence: sup
 sources:
   - rab-bs-geboorten
   - rab-bs-overlijdens

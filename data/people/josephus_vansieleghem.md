@@ -9,13 +9,18 @@ death:
   date: 1692-05-14
 confidence: sup
 line: bostyn-cappaert
-father: joannes_vansieleghem
-mother: joanna_defoort
+father:
+  id: joannes_vansieleghem
+  confidence: sup
+mother:
+  id: joanna_defoort
+  confidence: sup
 spouses:
   - id: maria_lampsins
     name: Maria Lampsins
     married: 1657-08-12
     place: Lichtervelde
+    confidence: sup
 sources:
   - tree-isavdw
 ---

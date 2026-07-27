@@ -9,13 +9,18 @@ death:
   date: 1702-01-19
 confidence: sup
 line: bostyn-cappaert
-father: petrus_vandewalle
-mother: francisca_vanhoutte
+father:
+  id: petrus_vandewalle
+  confidence: sup
+mother:
+  id: francisca_vanhoutte
+  confidence: sup
 spouses:
   - id: maria_rups
     name: Maria Rups
     married: 1662-05-17
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

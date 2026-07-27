@@ -10,13 +10,18 @@ death:
 confidence: sup
 occupation: kantwerkster (lacemaker)
 line: van-iseghem
-father: carolus_vanald
-mother: eugenia_dutreeuw
+father:
+  id: carolus_vanald
+  confidence: sup
+mother:
+  id: eugenia_dutreeuw
+  confidence: sup
 spouses:
   - id: lucien_vincke
     name: Lucien Julianus Vincke
     married: 1865-05-24
     place: Diksmuide
+    confidence: sup
 sources:
   - tree-bartvanhooren
   - rab-bs-geboorten

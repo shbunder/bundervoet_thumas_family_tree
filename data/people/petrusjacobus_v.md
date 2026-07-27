@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: metser (mason)
 line: vanstechelman
-father: felix_v
-mother: sophiavdb
+father:
+  id: felix_v
+  confidence: sup
+mother:
+  id: sophiavdb
+  confidence: sup
 spouses:
   - id: clementia_w
     name: Clementia Sophia Wagebaert
     married: 1875-01-21
     place: Mariakerke
+    confidence: sup
 sources:
   - fs-wvl-bs
   - tree-stechec

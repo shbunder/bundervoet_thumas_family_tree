@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: godeliva_rotsaert
     name: Godeliva Rotsaert
+    confidence: sup
 sources:
   - tree-isavdw
 ---

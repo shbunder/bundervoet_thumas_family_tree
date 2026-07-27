@@ -12,6 +12,7 @@ spouses:
   - id: antonius_dominicus_bocklandt
     name: Antonius Dominicus Bocklandt
     married: "1838"
+    confidence: sup
 sources:
   - tree-wete1998
 ---

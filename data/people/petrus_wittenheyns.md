@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: judoca_tjonck
     name: Judoca 't Jonck
+    confidence: sup
 sources:
   - tree-isavdw
 ---

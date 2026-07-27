@@ -8,8 +8,25 @@ birth:
   place: Diksmuide
 confidence: doc
 line: van-iseghem
-father: eduardus_vi
-mother: emma_vincke
+father:
+  id: eduardus_vi
+  confidence: sup
+mother:
+  id: emma_vincke
+  confidence: doc
+siblings:
+  - id: camillusgustavus_vi05
+    confidence: sup
+  - id: camillushenricus_vi11
+    confidence: sup
+  - id: eduardus_vi2
+    confidence: doc
+  - id: joannes_vi
+    confidence: doc
+  - id: maria_vi
+    confidence: sup
+  - id: valentina_vi
+    confidence: sup
 sources:
   - rab-bs-huwelijken
   - fs-oostende-1907-marriage-vaniseghem-vincke

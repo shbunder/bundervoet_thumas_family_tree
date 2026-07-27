@@ -10,13 +10,19 @@ death:
   place: Oostende
 confidence: sup
 line: bundervoet
-father: alphonsus
-mother: elodia
+father:
+  id: alphonsus
+  confidence: sup
+mother:
+  id: elodia
+  confidence: sup
 spouses:
   - id: rosette
     name: Rosette Van Iseghem
+    confidence: fam
   - name: Francine Bisschop
     id: francine_bisschop
+    confidence: sup
 sources:
   - fwk-marcel-b-2015
   - family

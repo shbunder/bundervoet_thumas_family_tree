@@ -10,6 +10,7 @@ line: de-keyser
 spouses:
   - id: josephus_blomme
     name: Josephus Blomme
+    confidence: doc
 sources:
   - fs-stene-1924-marriage-blomme-bocklandt
 ---

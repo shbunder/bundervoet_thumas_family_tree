@@ -9,6 +9,7 @@ line: van-iseghem
 spouses:
   - id: engel_antonius_vincke
     name: Engel Antonius Vincke
+    confidence: sup
 sources:
   - tree-bartvanhooren
 ---

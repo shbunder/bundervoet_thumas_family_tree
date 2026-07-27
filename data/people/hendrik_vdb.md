@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: dienstbode (servant)
 line: thumas
-father: jb_vandenbemden
-mother: elisabeth_langes
+father:
+  id: jb_vandenbemden
+  confidence: sup
+mother:
+  id: elisabeth_langes
+  confidence: sup
 spouses:
   - id: coekelberghs
     name: Maria Theresia Coekelberghs
     married: 1873-04-24
     place: Sint-Stevens-Woluwe
+    confidence: sup
 sources:
   - S5
   - ssw-1873-marriage-vandenbemden-coekelberghs

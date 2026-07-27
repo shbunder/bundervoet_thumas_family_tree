@@ -10,8 +10,21 @@ death:
   place: Grez-Doiceau
 confidence: sup
 line: thumas
-father: georges2_t
-mother: joostens
+father:
+  id: georges2_t
+  confidence: sup
+mother:
+  id: joostens
+  confidence: sup
+siblings:
+  - id: georges_cj
+    confidence: sup
+  - id: georgesjoseph_t
+    confidence: sup
+  - id: jbzenon_t
+    confidence: sup
+  - id: mtstephanie_t
+    confidence: sup
 sources:
   - S25
 ---

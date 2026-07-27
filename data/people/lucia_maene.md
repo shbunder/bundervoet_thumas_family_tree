@@ -10,6 +10,7 @@ spouses:
     name: Leontius Ivo Vanstechelman
     married: 1922-08-20
     place: Oostende
+    confidence: sup
 sources:
   - fs-wvl-bs
 ---

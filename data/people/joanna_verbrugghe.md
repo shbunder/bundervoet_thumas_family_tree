@@ -8,10 +8,13 @@ death:
   date: "1704"
 confidence: sup
 line: bundervoet
-father: nicolas_verbrugghe
+father:
+  id: nicolas_verbrugghe
+  confidence: sup
 spouses:
   - id: joannes_b1637
     name: Joannes Bundervoet
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

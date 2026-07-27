@@ -11,6 +11,7 @@ line: bundervoet
 spouses:
   - name: NN Vyveraert
     id: nn_vyveraert
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

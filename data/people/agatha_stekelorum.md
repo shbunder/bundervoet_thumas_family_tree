@@ -7,11 +7,16 @@ death:
   place: Roksem
 confidence: sup
 line: bostyn-cappaert
-father: pieter_stekelorum
-mother: helena_denijs
+father:
+  id: pieter_stekelorum
+  confidence: sup
+mother:
+  id: helena_denijs
+  confidence: sup
 spouses:
   - id: joannes_perquy
     name: Joannes Perquy
+    confidence: sup
 sources:
   - tree-stefanieschil
   - agatha-roksem-1855-death-agatha-stekelorum

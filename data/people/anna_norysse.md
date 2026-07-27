@@ -8,6 +8,7 @@ line: devriendt
 spouses:
   - id: mattheus_ramon
     name: Mattheus Ramon
+    confidence: sup
 sources:
   - tree-wernero
 ---

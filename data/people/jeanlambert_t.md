@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: marguillier & greffier (church warden / parish clerk)
 line: thumas
-father: antoine_t
-mother: daix
+father:
+  id: antoine_t
+  confidence: sup
+mother:
+  id: daix
+  confidence: sup
 spouses:
   - id: leclercq_t
     name: Marie Jacqueline Leclercq
     married: 1743-02-23
     place: Wavre
+    confidence: sup
 sources:
   - S14
   - S6

@@ -15,6 +15,7 @@ spouses:
     name: Apolonius Paelinck
     married: 1770-09-04
     place: Destelbergen
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

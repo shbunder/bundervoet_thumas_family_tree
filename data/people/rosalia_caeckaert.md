@@ -7,13 +7,18 @@ birth:
   place: Brugge (Assebroek)
 confidence: sup
 line: bostyn-cappaert
-father: josephus_caeckaert
-mother: godeliva_rotsaert
+father:
+  id: josephus_caeckaert
+  confidence: sup
+mother:
+  id: godeliva_rotsaert
+  confidence: sup
 spouses:
   - id: florentinus_stroobandt
     name: Florentinus Stroobandt
     married: 1836-09-29
     place: Beernem
+    confidence: sup
 sources:
   - S10
   - tree-isavdw

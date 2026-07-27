@@ -9,11 +9,16 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: joannes_keirsebilck_1697
-mother: adriana_devriese
+father:
+  id: joannes_keirsebilck_1697
+  confidence: sup
+mother:
+  id: adriana_devriese
+  confidence: sup
 spouses:
   - id: maria_c_declerck
     name: Maria Catharina De Clerck
+    confidence: sup
 sources:
   - tree-isavdw
 ---

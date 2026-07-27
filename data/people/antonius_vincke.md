@@ -11,6 +11,7 @@ spouses:
     name: Anne Therese Peperstraete
     married: 1797-05-09
     place: Westvleteren
+    confidence: sup
 sources:
   - tree-bartvanhooren
 ---

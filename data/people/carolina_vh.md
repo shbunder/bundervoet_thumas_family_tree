@@ -13,6 +13,7 @@ line: vanstechelman
 spouses:
   - id: pieterjacobus_v
     name: Pieter Jacobus Vanstechelman
+    confidence: sup
 sources:
   - tree-stechec
 ---

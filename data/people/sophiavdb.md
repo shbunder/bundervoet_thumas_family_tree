@@ -10,13 +10,18 @@ death:
   place: Oostende
 confidence: sup
 line: vanstechelman
-father: christianus_vdb
-mother: delphina_vdb
+father:
+  id: christianus_vdb
+  confidence: sup
+mother:
+  id: delphina_vdb
+  confidence: sup
 spouses:
   - id: felix_v
     name: Felix Vanstechelman
     married: 1844-12-19
     place: Mariakerke
+    confidence: sup
 sources:
   - tree-stechec
 ---

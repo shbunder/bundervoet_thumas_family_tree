@@ -10,6 +10,7 @@ spouses:
     name: Georges Joseph Thumas
     married: 1868-10-07
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - S25
   - netradyle-grez-mariages

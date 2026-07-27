@@ -10,13 +10,18 @@ death:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: judocus_vi
-mother: victoria_engelsen
+father:
+  id: judocus_vi
+  confidence: sup
+mother:
+  id: victoria_engelsen
+  confidence: sup
 spouses:
   - id: anna_gautiert
     name: Anna Maria Gautiert
     married: 1847-03-24
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
   - rab-bs-huwelijken

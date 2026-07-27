@@ -9,6 +9,7 @@ line: bostyn-cappaert
 spouses:
   - id: joanna_wittenheyns
     name: Joanna Wittenheyns
+    confidence: sup
 sources:
   - tree-isavdw
 ---

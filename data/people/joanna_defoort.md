@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: joannes_vansieleghem
     name: Joannes Van Sieleghem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

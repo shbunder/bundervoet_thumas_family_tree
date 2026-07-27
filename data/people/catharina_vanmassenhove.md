@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: nicolas_willaert
     name: Nicolas Willaert
+    confidence: sup
 sources:
   - tree-isavdw
 ---

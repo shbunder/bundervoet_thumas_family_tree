@@ -10,6 +10,7 @@ line: devriendt
 spouses:
   - id: stephanus_ramon
     name: Stephanus Ramon
+    confidence: sup
 sources:
   - tree-wernero
 ---

@@ -3,7 +3,7 @@ id: elisabeth_langes
 name: Elisabeth Agatha Langes
 surname: Langes
 death:
-  date: >1873
+  date: ">1873"
   raw: alive on 24 April 1873; death not known
 confidence: sup
 occupation: landbouwster (farmer)
@@ -11,6 +11,7 @@ line: thumas
 spouses:
   - id: jb_vandenbemden
     name: Jan Baptist Van den Bemden
+    confidence: sup
 sources:
   - ssw-1873-marriage-vandenbemden-coekelberghs
 ---

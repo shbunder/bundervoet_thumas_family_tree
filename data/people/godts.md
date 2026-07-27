@@ -10,6 +10,7 @@ line: thumas
 spouses:
   - id: coenraets_sr
     name: Franciscus Coenraets
+    confidence: sup
 sources:
   - S27
 ---

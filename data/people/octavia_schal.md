@@ -7,13 +7,18 @@ birth:
   place: Bredene
 confidence: doc
 line: van-iseghem
-father: ludovicus_schal
-mother: mathilde_standaert
+father:
+  id: ludovicus_schal
+  confidence: doc
+mother:
+  id: mathilde_standaert
+  confidence: doc
 spouses:
   - id: eugenius_dv
     name: Eugenius Alphonsius Devriendt
     married: 1906-11-10
     place: Oostende
+    confidence: doc
 sources:
   - tree-gverdievel
   - S20

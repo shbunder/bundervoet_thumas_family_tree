@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: herbergier (innkeeper)
 line: vanstechelman
-father: pieterjacobus_v
-mother: carolina_vh
+father:
+  id: pieterjacobus_v
+  confidence: sup
+mother:
+  id: carolina_vh
+  confidence: sup
 spouses:
   - id: sophiavdb
     name: Sophia Van den Broucke
     married: 1844-12-19
     place: Mariakerke
+    confidence: sup
 sources:
   - tree-stechec
 ---

@@ -8,13 +8,19 @@ death:
   date: "1684"
 confidence: sup
 line: bostyn-cappaert
-father: michael_devriese_o
-mother: judoca_scherrens
+father:
+  id: michael_devriese_o
+  confidence: sup
+mother:
+  id: judoca_scherrens
+  confidence: sup
 spouses:
   - id: esther_vanderbeken
     name: Esther Vanderbeken
+    confidence: sup
   - name: Joanna Loontjens
     id: joanna_loontjens
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

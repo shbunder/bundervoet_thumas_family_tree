@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: simon_sabbe
     name: Simon Sabbe
+    confidence: sup
 sources:
   - tree-isavdw
 ---

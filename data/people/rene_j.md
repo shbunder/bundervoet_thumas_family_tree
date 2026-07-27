@@ -10,6 +10,7 @@ line: janssens
 spouses:
   - id: anna_vc
     name: Anna Van Craenenbroeck
+    confidence: fam
 sources:
   - tree-jswaelens
 ---

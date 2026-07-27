@@ -7,11 +7,16 @@ birth:
   place: Woumen
 confidence: sup
 line: vanstechelman
-father: joannes_vs
-mother: francisca_casiers
+father:
+  id: joannes_vs
+  confidence: sup
+mother:
+  id: francisca_casiers
+  confidence: sup
 spouses:
   - id: pluvier
     name: Elisabeth Pluvier
+    confidence: sup
 sources:
   - tree-stechec
 ---

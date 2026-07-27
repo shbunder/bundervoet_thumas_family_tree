@@ -2,18 +2,23 @@
 id: vandervarent_p
 name: Petrús van der Varent
 surname: van der Varent
+sex: m
 birth:
   date: ~1813
-sex: m
 confidence: sup
 line: thumas
-father: vandervarent_j
-mother: goossens
+father:
+  id: vandervarent_j
+  confidence: sup
+mother:
+  id: goossens
+  confidence: sup
 spouses:
   - id: mjosephina_peremans
     name: Maria Josephina Peremans
     married: 1840-11-05
     place: Zaventem
+    confidence: sup
 sources:
   - S29
 ---

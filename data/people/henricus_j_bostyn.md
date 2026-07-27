@@ -8,13 +8,18 @@ birth:
 confidence: sup
 occupation: herbergier (innkeeper)
 line: bostyn-cappaert
-father: henr_jos_bostin
-mother: anna_perquy
+father:
+  id: henr_jos_bostin
+  confidence: sup
+mother:
+  id: anna_perquy
+  confidence: sup
 spouses:
   - id: mathilde_desmet
     name: Mathilde Desmet
     married: 1867-09-11
     place: Sint-Andries
+    confidence: sup
 sources:
   - tree-stefanieschil
 ---

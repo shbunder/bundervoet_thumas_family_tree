@@ -1,19 +1,20 @@
 ---
 id: leopoldus_pieren
 name: Leopoldus Franciscus Pieren
-sex: m
 surname: Pieren
+sex: m
 birth:
   date: 1839-11-26
   place: Oostende
-occupation: werkman (labourer)
 confidence: sup
+occupation: werkman (labourer)
 line: van-iseghem
 spouses:
   - id: appolonia_huyghebaert
     name: Appolonia Joanna Huyghebaert
     married: 1868-10-27
     place: Oostende
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

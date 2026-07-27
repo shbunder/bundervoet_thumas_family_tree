@@ -9,13 +9,18 @@ birth:
 confidence: doc
 occupation: dienstmeid (maidservant)
 line: thumas
-father: guns_jf
-mother: vogels_a
+father:
+  id: guns_jf
+  confidence: doc
+mother:
+  id: vogels_a
+  confidence: doc
 spouses:
   - id: henricus_bossin
     name: Henricus Bossin
     married: 1887-11-23
     place: Kraainem
+    confidence: doc
 sources:
   - S35
   - fs-kraainem-1887-marriage-bossin-guns

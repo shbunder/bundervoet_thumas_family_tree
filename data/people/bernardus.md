@@ -10,15 +10,21 @@ death:
 confidence: sup
 occupation: farmer, innkeeper, shopkeeper
 line: bundervoet
-father: judocus
-mother: roegiers
+father:
+  id: judocus
+  confidence: sup
+mother:
+  id: roegiers
+  confidence: sup
 spouses:
   - id: goethals
     name: Marie Eulalie Goethals
     married: "1875"
+    confidence: sup
   - name: Rosalia Dhooge
     married: "1881"
     id: rosalia_dhooge
+    confidence: sup
 sources:
   - geneanet
 ---

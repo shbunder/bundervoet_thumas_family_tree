@@ -6,11 +6,16 @@ birth:
   date: 1560..1569
 confidence: sup
 line: bostyn-cappaert
-father: willem_sabbe_o
-mother: magdalena_demeulemeester
+father:
+  id: willem_sabbe_o
+  confidence: sup
+mother:
+  id: magdalena_demeulemeester
+  confidence: sup
 spouses:
   - id: clara_vandeputte
     name: Clara Vande Putte
+    confidence: sup
 sources:
   - tree-isavdw
 ---

@@ -13,6 +13,7 @@ spouses:
     name: Maria Theresia Coekelberghs
     married: 1903-11-06
     place: Kraainem
+    confidence: sup
 sources:
   - kraainem-1903-marriage-vanesch-coekelberghs
 ---

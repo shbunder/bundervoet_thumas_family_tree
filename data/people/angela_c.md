@@ -13,6 +13,7 @@ line: vanstechelman
 spouses:
   - id: silvester_v
     name: Silvester Vanstechelman
+    confidence: sup
 sources:
   - tree-stechec
 ---

@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: werkman (labourer)
 line: devriendt
-father: francl_s
-mother: morree
+father:
+  id: francl_s
+  confidence: sup
+mother:
+  id: morree
+  confidence: sup
 spouses:
   - id: ramon
     name: Eugenia Mathildis Ramon (1882)
     married: 1882-01-04
     place: Oostende
+    confidence: sup
 sources:
   - tree-wernero
 ---

@@ -10,13 +10,18 @@ death:
   place: Zedelgem (Loppem)
 confidence: sup
 line: bostyn-cappaert
-father: engelbertus_vanmaele
-mother: judoca_maertens
+father:
+  id: engelbertus_vanmaele
+  confidence: sup
+mother:
+  id: judoca_maertens
+  confidence: sup
 spouses:
   - id: henricus_vanacker
     name: Henricus Josephus Van Acker
     married: 1730-10-17
     place: Beernem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

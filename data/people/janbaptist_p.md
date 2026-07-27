@@ -11,12 +11,17 @@ death:
 confidence: sup
 occupation: dagloner (day labourer)
 line: paelinck
-father: apolonius_p
-mother: christina_vm
+father:
+  id: apolonius_p
+  confidence: sup
+mother:
+  id: christina_vm
+  confidence: sup
 spouses:
   - id: joanna_va
     name: Joanna Coleta Van Acker
     married: "1795"
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

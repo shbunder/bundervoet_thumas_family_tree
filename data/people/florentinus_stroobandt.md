@@ -9,13 +9,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: jacobus_stroobandt
-mother: joanna_keirsebilck
+father:
+  id: jacobus_stroobandt
+  confidence: sup
+mother:
+  id: joanna_keirsebilck
+  confidence: sup
 spouses:
   - id: rosalia_caeckaert
     name: Rosalia Caeckaert
     married: 1836-09-29
     place: Beernem
+    confidence: sup
 sources:
   - S10
   - tree-kathrynann

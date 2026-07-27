@@ -8,6 +8,7 @@ line: bundervoet
 spouses:
   - id: marcel_b
     name: Marcel Henri Bundervoet
+    confidence: sup
 sources:
   - fwk-marcel-b-2015
 ---

@@ -9,6 +9,7 @@ line: bostyn-cappaert
 spouses:
   - id: margaretha_wybau
     name: Margaretha Wybau
+    confidence: sup
 sources:
   - tree-isavdw
 ---

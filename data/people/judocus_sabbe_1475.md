@@ -8,10 +8,13 @@ death:
   date: "1534"
 confidence: sup
 line: bostyn-cappaert
-father: gillis_sabbe
+father:
+  id: gillis_sabbe
+  confidence: sup
 spouses:
   - name: NN Vandenberghe
     id: nn_vandenberghe
+    confidence: sup
 sources:
   - tree-isavdw
 ---

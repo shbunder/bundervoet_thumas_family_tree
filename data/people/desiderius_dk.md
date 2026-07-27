@@ -10,6 +10,7 @@ line: de-keyser
 spouses:
   - id: mtheresia_vandenbroeck
     name: Maria Theresia Van den Broeck
+    confidence: doc
 sources:
   - S1
   - familysearch

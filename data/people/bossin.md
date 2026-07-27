@@ -10,13 +10,29 @@ death:
   place: Kraainem
 confidence: sup
 line: thumas
-father: guilielmus_bossin
-mother: peremans
+father:
+  id: guilielmus_bossin
+  confidence: sup
+mother:
+  id: peremans
+  confidence: sup
+siblings:
+  - id: cornelius_bossin
+    confidence: sup
+  - id: henricus_bossin
+    confidence: sup
+  - id: joannes_bossin51
+    confidence: sup
+  - id: joannes_franciscus_bossin
+    confidence: sup
+  - id: ludovica_bossin
+    confidence: sup
 spouses:
   - id: georges_cj
     name: Georges Carolus Josephus Thumas
     married: 1872-06-20
     place: Kraainem
+    confidence: sup
 sources:
   - S27
   - S28

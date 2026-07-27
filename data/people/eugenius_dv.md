@@ -7,13 +7,18 @@ birth:
   place: Stene
 confidence: doc
 line: van-iseghem
-father: ludovicus_dv
-mother: silvia_brissinck
+father:
+  id: ludovicus_dv
+  confidence: doc
+mother:
+  id: silvia_brissinck
+  confidence: doc
 spouses:
   - id: octavia_schal
     name: Octavia Maria Schalandrijn
     married: 1906-11-10
     place: Oostende
+    confidence: doc
 sources:
   - tree-gverdievel
   - S20

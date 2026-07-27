@@ -15,10 +15,12 @@ spouses:
     name: Antoine Vanalderweireldt
     married: 1803-06-08
     place: Diksmuide
+    confidence: sup
   - id: francois_looten
     name: François Joseph Looten
     married: 1818-06-25
     place: Diksmuide
+    confidence: sup
 sources:
   - tree-bartvanhooren
   - rab-bs-huwelijken

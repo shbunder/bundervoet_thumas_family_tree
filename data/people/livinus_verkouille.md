@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: maria_malfait
     name: Maria Lodewijka Malfait
+    confidence: sup
 sources:
   - tree-wernero
 ---

@@ -7,13 +7,18 @@ birth:
   place: Westkerke
 confidence: sup
 line: bostyn-cappaert
-father: joannes_perquy
-mother: agatha_stekelorum
+father:
+  id: joannes_perquy
+  confidence: sup
+mother:
+  id: agatha_stekelorum
+  confidence: sup
 spouses:
   - id: henr_jos_bostin
     name: Henricus Josephus Bostin
     married: 1833-05-09
     place: Westkerke
+    confidence: sup
 sources:
   - tree-stefanieschil
   - vrijwilligersrab

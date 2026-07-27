@@ -8,11 +8,16 @@ death:
   date: "1752"
 confidence: sup
 line: bostyn-cappaert
-father: joannes_vanmaele
-mother: jacoba_vanalledewerelt
+father:
+  id: joannes_vanmaele
+  confidence: sup
+mother:
+  id: jacoba_vanalledewerelt
+  confidence: sup
 spouses:
   - id: judoca_maertens
     name: Judoca Maertens
+    confidence: sup
 sources:
   - tree-isavdw
 ---

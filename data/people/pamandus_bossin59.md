@@ -9,8 +9,23 @@ birth:
 confidence: sup
 occupation: daglooner (day labourer)
 line: thumas
-father: jbbossin
-mother: maria_wolf
+father:
+  id: jbbossin
+  confidence: sup
+mother:
+  id: maria_wolf
+  confidence: sup
+siblings:
+  - id: frans_bossin82
+    confidence: sup
+  - id: gjosef_bossin69
+    confidence: sup
+  - id: janphilip_bossin76
+    confidence: sup
+  - id: jphilippus_bossin57
+    confidence: sup
+  - id: ludovicus_bossin79
+    confidence: sup
 sources:
   - S33
 ---

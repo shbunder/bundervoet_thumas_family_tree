@@ -8,13 +8,18 @@ birth:
 confidence: sup
 occupation: werkmeid & herbergierster (maid/innkeeper)
 line: devriendt
-father: carolus_ramon
-mother: cornelia_verkouille
+father:
+  id: carolus_ramon
+  confidence: sup
+mother:
+  id: cornelia_verkouille
+  confidence: sup
 spouses:
   - id: joannesf_s
     name: Joannes Franciscus Smessaert
     married: 1882-01-04
     place: Oostende
+    confidence: sup
 sources:
   - tree-wernero
 ---

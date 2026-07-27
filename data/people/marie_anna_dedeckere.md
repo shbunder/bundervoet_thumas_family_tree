@@ -13,6 +13,7 @@ spouses:
   - id: petrus_b1727
     name: Petrus (Pieter) Bundervoet
     married: ~1750
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

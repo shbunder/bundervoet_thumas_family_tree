@@ -8,13 +8,18 @@ death:
   date: "1729"
 confidence: sup
 line: bostyn-cappaert
-father: hubert_devriese
-mother: joanna_vdoughstraete
+father:
+  id: hubert_devriese
+  confidence: sup
+mother:
+  id: joanna_vdoughstraete
+  confidence: sup
 spouses:
   - id: jacob_deblaere
     name: Jacob Donaas De Blaere
     married: 1719-05-31
     place: Wingene
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

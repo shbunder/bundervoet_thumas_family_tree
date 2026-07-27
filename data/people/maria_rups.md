@@ -7,13 +7,18 @@ birth:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: michael_rups
-mother: maria_vanrenterghem
+father:
+  id: michael_rups
+  confidence: sup
+mother:
+  id: maria_vanrenterghem
+  confidence: sup
 spouses:
   - id: carolus_vandewalle
     name: Carolus Vandewalle
     married: 1662-05-17
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

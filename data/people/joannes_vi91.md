@@ -9,12 +9,32 @@ birth:
 confidence: sup
 occupation: barbier (barber)
 line: van-iseghem
-father: joannes_vi2
-mother: hermanie_janssen
+father:
+  id: joannes_vi2
+  confidence: sup
+mother:
+  id: hermanie_janssen
+  confidence: sup
+siblings:
+  - id: arthur_vi
+    confidence: sup
+  - id: augustus_vi
+    confidence: sup
+  - id: eduardus_vi
+    confidence: sup
+  - id: gustavus_vi
+    confidence: sup
+  - id: joannes_vi83
+    confidence: sup
+  - id: leontius_vi
+    confidence: sup
+  - id: ludovicus_vi
+    confidence: sup
 spouses:
   - name: Bertha Martha Coenye
     married: 1911-11-29
     place: Oostende
+    confidence: sup
 sources:
   - rab-bs-geboorten
   - rab-bs-huwelijken

@@ -9,6 +9,7 @@ spouses:
   - id: bernardus
     name: Bernardus Bundervoet
     married: "1881"
+    confidence: sup
 sources:
   - geneanet
 ---

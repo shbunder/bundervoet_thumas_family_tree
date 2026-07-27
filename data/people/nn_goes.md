@@ -10,6 +10,7 @@ spouses:
     name: Carolus Josephus Huyghebaert
     married: 1846-06-08
     place: Oudenburg
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

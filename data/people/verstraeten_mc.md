@@ -9,13 +9,18 @@ birth:
 confidence: sup
 occupation: naaister (seamstress)
 line: thumas
-father: verstraeten_l
-mother: torfs_r
+father:
+  id: verstraeten_l
+  confidence: sup
+mother:
+  id: torfs_r
+  confidence: sup
 spouses:
   - id: joannes_franciscus_bossin
     name: Joannes Franciscus Bossin
     married: 1896-01-18
     place: Werchter
+    confidence: sup
 sources:
   - S35
 ---

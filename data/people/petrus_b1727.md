@@ -10,12 +10,20 @@ death:
   raw: buried 13 December 1777 at Assenede, aged about 50
 confidence: sup
 line: bundervoet
-father: joannes_b
-mother: livina_stockman
+father:
+  id: joannes_b
+  confidence: sup
+mother:
+  id: livina_stockman
+  confidence: sup
+siblings:
+  - id: christoffel
+    confidence: sup
 spouses:
   - id: marie_anna_dedeckere
     name: Marie Anna de Deckere
     married: ~1750
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

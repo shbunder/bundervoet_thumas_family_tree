@@ -10,11 +10,19 @@ death:
   place: Evergem
 confidence: sup
 line: bundervoet
-father: joannes_b
-mother: livina_stockman
+father:
+  id: joannes_b
+  confidence: sup
+mother:
+  id: livina_stockman
+  confidence: sup
+siblings:
+  - id: petrus_b1727
+    confidence: sup
 spouses:
   - id: bogaert
     name: Petronilla Bogaert
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

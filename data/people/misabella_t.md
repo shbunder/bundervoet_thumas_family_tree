@@ -2,19 +2,31 @@
 id: misabella_t
 name: Maria Isabella Helena Thumas
 surname: Thumas
+sex: f
 birth:
   date: 1880-08-18
   place: Sint-Stevens-Woluwe
-sex: f
 confidence: sup
 line: thumas
-father: georges_cj
-mother: bossin
+father:
+  id: georges_cj
+  confidence: sup
+mother:
+  id: bossin
+  confidence: sup
+siblings:
+  - id: henrica_thumas
+    confidence: sup
+  - id: jbgeorgius
+    confidence: sup
+  - id: jcseraphina_t
+    confidence: sup
 spouses:
   - id: ludovicus_bossin79
     name: Ludovicus Bossin
     married: 1900-04-10
     place: Kraainem
+    confidence: sup
 sources:
   - S28
   - S33

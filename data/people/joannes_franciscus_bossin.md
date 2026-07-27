@@ -9,13 +9,29 @@ birth:
 confidence: sup
 occupation: kuiper (cooper)
 line: thumas
-father: guilielmus_bossin
-mother: peremans
+father:
+  id: guilielmus_bossin
+  confidence: sup
+mother:
+  id: peremans
+  confidence: sup
+siblings:
+  - id: bossin
+    confidence: sup
+  - id: cornelius_bossin
+    confidence: sup
+  - id: henricus_bossin
+    confidence: sup
+  - id: joannes_bossin51
+    confidence: sup
+  - id: ludovica_bossin
+    confidence: sup
 spouses:
   - id: verstraeten_mc
     name: Maria Catharina Verstraeten
     married: 1896-01-18
     place: Werchter
+    confidence: sup
 sources:
   - S35
 ---

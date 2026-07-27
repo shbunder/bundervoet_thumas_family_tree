@@ -46,7 +46,7 @@ from dataclasses import dataclass
 from . import store
 from .corpus import corpus_exists, corpus_mentions, frequencies, surname_coverage
 from .match import build_index, candidates_for, from_mention, from_person, surname_weight
-from .people import DAY, children_index, load_config, load_people, point_year
+from .people import DAY, children_index, load_config, load_people, parent_id, point_year
 from .sources import ACCESS_COST, load_log, load_sources
 
 
@@ -57,7 +57,7 @@ def generations(people: dict, meta: dict) -> dict[str, int]:
     queue = list(roots)
     while queue:
         pid = queue.pop(0)
-        for parent in (people[pid].get("father"), people[pid].get("mother")):
+        for parent in (parent_id(people[pid], "father"), parent_id(people[pid], "mother")):
             if parent and parent in people and parent not in depth:
                 depth[parent] = depth[pid] + 1
                 queue.append(parent)
@@ -153,7 +153,7 @@ def frontier_rows(people: dict | None = None) -> list[Frontier]:
 
     rows: list[Frontier] = []
     for pid, p in people.items():
-        missing_parents = not p.get("father") and not p.get("mother")
+        missing_parents = not parent_id(p, "father") and not parent_id(p, "mother")
         flagged = "FRONTIER" in (p.get("note") or "")
         if not missing_parents and not flagged:
             continue

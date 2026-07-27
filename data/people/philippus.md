@@ -10,12 +10,17 @@ death:
   place: Evergem
 confidence: sup
 line: bundervoet
-father: christoffel
-mother: bogaert
+father:
+  id: christoffel
+  confidence: sup
+mother:
+  id: bogaert
+  confidence: sup
 spouses:
   - id: adriaenssens
     name: Joanna Maria Adriaenssens
     married: "1784"
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

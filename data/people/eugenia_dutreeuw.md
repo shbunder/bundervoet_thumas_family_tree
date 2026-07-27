@@ -7,13 +7,18 @@ birth:
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: ludovicus_dutreeuw
-mother: ludovica_ellebout
+father:
+  id: ludovicus_dutreeuw
+  confidence: sup
+mother:
+  id: ludovica_ellebout
+  confidence: sup
 spouses:
   - id: carolus_vanald
     name: Carolus Ludovicus Vanalderweireldt
     married: 1828-06-04
     place: Diksmuide
+    confidence: sup
 sources:
   - tree-bartvanhooren
 ---

@@ -10,11 +10,16 @@ death:
   place: Zevekote
 confidence: sup
 line: vanstechelman
-father: silvester_v
-mother: angela_c
+father:
+  id: silvester_v
+  confidence: sup
+mother:
+  id: angela_c
+  confidence: sup
 spouses:
   - id: carolina_vh
     name: Carolina Van Hille
+    confidence: sup
 sources:
   - tree-stechec
 ---

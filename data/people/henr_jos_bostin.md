@@ -15,6 +15,7 @@ spouses:
     name: Anna Theresia Perquy
     married: 1833-05-09
     place: Westkerke
+    confidence: sup
 sources:
   - tree-stefanieschil
   - vrijwilligersrab

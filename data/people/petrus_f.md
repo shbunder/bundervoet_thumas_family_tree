@@ -11,11 +11,16 @@ death:
 confidence: sup
 occupation: werkman / meestergast
 line: bundervoet
-father: bernardus
-mother: goethals
+father:
+  id: bernardus
+  confidence: sup
+mother:
+  id: goethals
+  confidence: sup
 spouses:
   - id: augusta
     name: Augusta Vanstechelman
+    confidence: sup
 sources:
   - dbe-petrus-f-1943
   - fwk-petrus-f-1943

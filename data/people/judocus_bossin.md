@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: maria_desmedt
     name: Maria Desmedt
+    confidence: sup
 sources:
   - S33
 ---

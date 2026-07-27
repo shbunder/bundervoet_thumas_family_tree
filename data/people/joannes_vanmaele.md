@@ -7,13 +7,18 @@ birth:
   place: Wingene
 confidence: sup
 line: bostyn-cappaert
-father: andreas_vanmaele
-mother: catharina_willems
+father:
+  id: andreas_vanmaele
+  confidence: sup
+mother:
+  id: catharina_willems
+  confidence: sup
 spouses:
   - id: jacoba_vanalledewerelt
     name: Jacoba Van Alledewerelt
     married: 1664-07-19
     place: Beernem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

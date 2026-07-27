@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: sophia_vh
     name: Sophia Vanhoucke
+    confidence: sup
 sources:
   - fauconier-parenteel
 ---

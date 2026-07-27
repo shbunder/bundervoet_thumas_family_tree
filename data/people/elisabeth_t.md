@@ -11,6 +11,7 @@ spouses:
     name: Livinus Paelinck
     married: 1645-01-18
     place: Gent
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

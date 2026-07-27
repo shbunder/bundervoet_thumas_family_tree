@@ -7,8 +7,19 @@ birth:
   place: Zaventem
 confidence: sup
 line: thumas
-father: franciscus_pardon
-mother: anna_maria_bossin
+father:
+  id: franciscus_pardon
+  confidence: sup
+mother:
+  id: anna_maria_bossin
+  confidence: sup
+siblings:
+  - id: cornelius_pardon59
+    confidence: sup
+  - id: henricus_pardon54
+    confidence: sup
+  - id: joanna_pardon56
+    confidence: sup
 sources:
   - S32
 ---

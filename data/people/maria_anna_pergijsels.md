@@ -3,7 +3,7 @@ id: maria_anna_pergijsels
 name: Maria Anna Pergijsels
 surname: Pergijsels
 death:
-  date: >1853
+  date: ">1853"
   raw: alive on 1 December 1853; death not known
 confidence: sup
 occupation: dagloonster (day labourer)
@@ -11,6 +11,7 @@ line: thumas
 spouses:
   - id: guilielmus_pardon
     name: Guilielmus Pardon
+    confidence: sup
 sources:
   - S22
 ---

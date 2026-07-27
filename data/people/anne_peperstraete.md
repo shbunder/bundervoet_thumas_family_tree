@@ -9,6 +9,7 @@ spouses:
     name: Antonius Vincke
     married: 1797-05-09
     place: Westvleteren
+    confidence: sup
 sources:
   - tree-bartvanhooren
 ---

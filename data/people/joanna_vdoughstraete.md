@@ -13,6 +13,7 @@ spouses:
     name: Hubert De Vriese
     married: 1687-11-23
     place: Tielt
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

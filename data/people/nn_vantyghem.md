@@ -10,6 +10,7 @@ spouses:
     name: Augustinus Desiderius Huyghebaert
     married: 1859-11-23
     place: Zandvoorde
+    confidence: sup
 sources:
   - rab-bs-huwelijken
 ---

@@ -9,11 +9,16 @@ death:
   date: <1748
 confidence: sup
 line: vanstechelman
-father: andreas_v
-mother: pluvier
+father:
+  id: andreas_v
+  confidence: sup
+mother:
+  id: pluvier
+  confidence: sup
 spouses:
   - id: boxoens
     name: Maria Anna Theresia Boxoens
+    confidence: sup
 sources:
   - tree-stechec
 ---

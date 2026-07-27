@@ -11,11 +11,16 @@ death:
 confidence: sup
 occupation: labourer
 line: bundervoet
-father: petrus_f
-mother: augusta
+father:
+  id: petrus_f
+  confidence: sup
+mother:
+  id: augusta
+  confidence: sup
 spouses:
   - id: elodia
     name: Elodia Octavia Bostyn
+    confidence: sup
 sources:
   - fwk-alphonsus-1980
   - spa-alphonsus-1980

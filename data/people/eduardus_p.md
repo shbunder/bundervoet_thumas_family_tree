@@ -11,13 +11,18 @@ death:
 confidence: doc
 occupation: leurder (itinerant pedlar)
 line: paelinck
-father: joannesf_p
-mother: rosalia_w
+father:
+  id: joannesf_p
+  confidence: sup
+mother:
+  id: rosalia_w
+  confidence: sup
 spouses:
   - id: magdalena_vb
     name: Maria Magdalena Van Bogaert (1888)
     married: 1888-11-17
     place: Sint-Niklaas
+    confidence: doc
 sources:
   - S16
   - S7

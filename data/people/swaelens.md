@@ -12,13 +12,21 @@ death:
 confidence: doc
 occupation: schrijnwerker (carpenter)
 line: thumas
-father: egidius_swaelens
-mother: joanna_ackermans
+father:
+  id: egidius_swaelens
+  confidence: doc
+mother:
+  id: joanna_ackermans
+  confidence: doc
+siblings:
+  - id: franciscus_swaelens
+    confidence: doc
 spouses:
   - id: ludovica_bossin
     name: Ludovica Bossin
     married: 1884-02-25
     place: Kraainem
+    confidence: doc
 sources:
   - S24
   - S35

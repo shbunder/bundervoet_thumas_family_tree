@@ -7,8 +7,19 @@ birth:
   date: ~1650
 confidence: sup
 line: bundervoet
-father: livinus_bundervoet
-mother: catharina_vanhecke
+father:
+  id: livinus_bundervoet
+  confidence: sup
+mother:
+  id: catharina_vanhecke
+  confidence: sup
+siblings:
+  - id: livinus_b1615
+    confidence: sup
+  - id: maria_b1623
+    confidence: sup
+  - id: segerius_bundervoet
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

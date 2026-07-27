@@ -9,12 +9,17 @@ death:
   place: Evergem
 confidence: sup
 line: bundervoet
-father: philippus
-mother: adriaenssens
+father:
+  id: philippus
+  confidence: sup
+mother:
+  id: adriaenssens
+  confidence: sup
 spouses:
   - id: roegiers
     name: Francisca Roegiers
     married: "1834"
+    confidence: sup
 sources:
   - geneanet
 ---

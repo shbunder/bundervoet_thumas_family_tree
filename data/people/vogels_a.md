@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: guns_jf
     name: Joannes Franciscus Guns
+    confidence: doc
 sources:
   - S35
   - fs-kraainem-1887-marriage-bossin-guns

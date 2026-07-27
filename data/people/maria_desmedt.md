@@ -8,6 +8,7 @@ line: thumas
 spouses:
   - id: judocus_bossin
     name: Judocus Bossin
+    confidence: sup
 sources:
   - S33
 ---

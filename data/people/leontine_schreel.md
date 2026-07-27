@@ -11,10 +11,12 @@ line: de-keyser
 spouses:
   - id: benoni_rossel
     name: Benoni Joseph Rossel
+    confidence: doc
   - id: edouard_dk
     name: Édouard Dekeyser
     married: 1946-05-09
     place: Oostende
+    confidence: doc
 sources:
   - familysearch
 ---

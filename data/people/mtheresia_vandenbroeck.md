@@ -10,6 +10,7 @@ line: de-keyser
 spouses:
   - id: desiderius_dk
     name: Desiderius De Keyser
+    confidence: doc
 sources:
   - S1
   - familysearch

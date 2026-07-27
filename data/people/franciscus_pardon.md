@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: dienstbode (servant)
 line: thumas
-father: guilielmus_pardon
-mother: maria_anna_pergijsels
+father:
+  id: guilielmus_pardon
+  confidence: sup
+mother:
+  id: maria_anna_pergijsels
+  confidence: sup
 spouses:
   - id: anna_maria_bossin
     name: Anna Maria Bossin
     married: 1853-12-01
     place: Sint-Stevens-Woluwe
+    confidence: sup
 sources:
   - S22
   - zaventem-pardon-children-marriages-1877-1886

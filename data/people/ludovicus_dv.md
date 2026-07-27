@@ -10,6 +10,7 @@ line: van-iseghem
 spouses:
   - id: silvia_brissinck
     name: Silvia Rosalia Brissinck
+    confidence: doc
 sources:
   - S20
   - rab-bs-huwelijken

@@ -7,6 +7,7 @@ line: thumas
 spouses:
   - id: jeanne_deconninck
     name: Jeanne Marie Deconninck
+    confidence: sup
 sources:
   - S15
   - S9

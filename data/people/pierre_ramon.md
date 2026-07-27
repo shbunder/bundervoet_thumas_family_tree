@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: tuinier & zeeman (gardener/seaman)
 line: devriendt
-father: henricus_j_ramon
-mother: lucia_steenkiste
+father:
+  id: henricus_j_ramon
+  confidence: sup
+mother:
+  id: lucia_steenkiste
+  confidence: sup
 spouses:
   - id: joanna_daneel
     name: Joanna Theresia Daneel
     married: 1835-01-28
     place: Oostende
+    confidence: sup
 sources:
   - tree-wernero
 ---

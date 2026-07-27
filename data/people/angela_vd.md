@@ -7,6 +7,7 @@ line: vanstechelman
 spouses:
   - id: henricus_w
     name: Henricus Wagebaert
+    confidence: sup
 sources:
   - tree-stechec
 ---

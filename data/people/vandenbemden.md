@@ -11,13 +11,33 @@ death:
 confidence: sup
 occupation: naaister (seamstress)
 line: thumas
-father: hendrik_vdb
-mother: coekelberghs
+father:
+  id: hendrik_vdb
+  confidence: sup
+mother:
+  id: coekelberghs
+  confidence: sup
+siblings:
+  - id: adela_bemden84
+    confidence: sup
+  - id: felix_bemden76
+    confidence: sup
+  - id: jan_bemden80
+    confidence: sup
+  - id: julius_vandenbemd86
+    confidence: sup
+  - id: karel_vandenbemd78
+    confidence: sup
+  - id: lodewijk_bemden73
+    confidence: sup
+  - id: victor_bemden74
+    confidence: sup
 spouses:
   - id: jbgeorgius
     name: J.B. Georgius Thumas
     married: 1902-02-03
     place: Kraainem
+    confidence: sup
 sources:
   - S5
   - tree-jswaelens

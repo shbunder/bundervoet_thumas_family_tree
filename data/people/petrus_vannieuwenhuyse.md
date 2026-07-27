@@ -10,13 +10,18 @@ death:
 confidence: sup
 occupation: schepen van Oostkamp (alderman)
 line: bostyn-cappaert
-father: marinus_vannieuwenhuyse
-mother: cornelia_govaert
+father:
+  id: marinus_vannieuwenhuyse
+  confidence: sup
+mother:
+  id: cornelia_govaert
+  confidence: sup
 spouses:
   - id: jacoba_monballiu
     name: Jacoba Monballiu
     married: 1673-07-23
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
   - agatha-oostkamp-doopregister-1630-1652

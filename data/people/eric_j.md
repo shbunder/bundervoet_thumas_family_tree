@@ -7,6 +7,13 @@ birth:
   raw: 2 Jul
 confidence: fam
 line: janssens
-father: rene_j
-mother: anna_vc
+father:
+  id: rene_j
+  confidence: fam
+mother:
+  id: anna_vc
+  confidence: fam
+siblings:
+  - id: christiane
+    confidence: fam
 ---

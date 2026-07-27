@@ -15,6 +15,7 @@ spouses:
     name: Albertus Jacobus Gautiert
     married: 1813-05-05
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
 ---

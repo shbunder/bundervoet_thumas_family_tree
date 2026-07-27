@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: cornelia_govaert
     name: Cornelia Govaert
+    confidence: sup
 sources:
   - tree-isavdw
 ---

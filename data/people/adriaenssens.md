@@ -12,6 +12,7 @@ spouses:
   - id: philippus
     name: Philippus Jacobus Bundervoet
     married: "1784"
+    confidence: sup
 sources:
   - fauconier-parenteel
 ---

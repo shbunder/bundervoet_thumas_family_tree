@@ -9,8 +9,15 @@ death:
   date: "1972"
 confidence: sup
 line: de-keyser
-father: jerome_dk
-mother: leonie_p
+father:
+  id: jerome_dk
+  confidence: sup
+mother:
+  id: leonie_p
+  confidence: sup
+siblings:
+  - id: gustaaf
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

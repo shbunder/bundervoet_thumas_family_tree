@@ -10,6 +10,7 @@ line: thumas
 spouses:
   - id: egidius_peremans
     name: Egidius Peremans
+    confidence: sup
 sources:
   - S19
   - S34

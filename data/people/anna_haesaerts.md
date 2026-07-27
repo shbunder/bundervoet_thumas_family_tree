@@ -11,11 +11,16 @@ death:
 confidence: sup
 occupation: landbouwster (farmer)
 line: thumas
-father: jb_haesaerts
-mother: elisabeth_vdbroeck
+father:
+  id: jb_haesaerts
+  confidence: sup
+mother:
+  id: elisabeth_vdbroeck
+  confidence: sup
 spouses:
   - id: jb_coekelberghs
     name: Joannes Baptista Coekelberghs
+    confidence: sup
 sources:
   - fs-bertem-1838-marriage-register-nr8
   - bertem-1838-marriage-coeckelberghs-haesaerts

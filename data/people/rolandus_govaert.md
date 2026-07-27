@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: maria_vandenbussche
     name: Maria Vandenbussche
+    confidence: sup
 sources:
   - tree-isavdw
 ---

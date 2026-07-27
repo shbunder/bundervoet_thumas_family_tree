@@ -9,6 +9,7 @@ line: bundervoet
 spouses:
   - id: christoffel
     name: Christoffel Bundervoet
+    confidence: sup
 sources:
   - fauconier-parenteel
 ---

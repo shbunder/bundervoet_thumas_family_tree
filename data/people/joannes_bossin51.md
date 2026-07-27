@@ -8,8 +8,23 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: doc
 line: thumas
-father: guilielmus_bossin
-mother: peremans
+father:
+  id: guilielmus_bossin
+  confidence: doc
+mother:
+  id: peremans
+  confidence: doc
+siblings:
+  - id: bossin
+    confidence: sup
+  - id: cornelius_bossin
+    confidence: sup
+  - id: henricus_bossin
+    confidence: doc
+  - id: joannes_franciscus_bossin
+    confidence: sup
+  - id: ludovica_bossin
+    confidence: doc
 sources:
   - S33
   - S35

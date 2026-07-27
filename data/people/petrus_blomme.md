@@ -9,13 +9,18 @@ birth:
 confidence: doc
 occupation: werkman
 line: de-keyser
-father: josephus_blomme
-mother: mathilde_meseure
+father:
+  id: josephus_blomme
+  confidence: doc
+mother:
+  id: mathilde_meseure
+  confidence: doc
 spouses:
   - id: louise_bocklandt
     name: Louise Marie Bocklandt
     married: 1924-03-01
     place: Stene
+    confidence: doc
 sources:
   - S17
   - fs-stene-1924-marriage-blomme-bocklandt

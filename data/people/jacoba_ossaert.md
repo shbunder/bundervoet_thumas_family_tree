@@ -15,6 +15,7 @@ spouses:
     name: Mattheus Ramon
     married: 1772-05-31
     place: Zande
+    confidence: sup
 sources:
   - tree-wernero
 ---

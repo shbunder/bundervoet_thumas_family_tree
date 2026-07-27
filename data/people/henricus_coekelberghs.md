@@ -3,7 +3,7 @@ id: henricus_coekelberghs
 name: Henricus Coekelberghs
 surname: Coekelberghs
 death:
-  date: >1838
+  date: ">1838"
   raw: alive on 30 October 1838; death not known
 confidence: sup
 occupation: landbouwer (farmer)
@@ -11,6 +11,7 @@ line: thumas
 spouses:
   - id: petronella_elseviers
     name: Petronella Elseviers
+    confidence: sup
 sources:
   - fs-bertem-1838-marriage-register-nr8
   - bertem-1838-marriage-coeckelberghs-haesaerts

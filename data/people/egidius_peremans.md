@@ -10,6 +10,7 @@ line: thumas
 spouses:
   - id: joanna_verelst
     name: Joanna Theresia Ver Elst
+    confidence: sup
 sources:
   - S19
   - S34

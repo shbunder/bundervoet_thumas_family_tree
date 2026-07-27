@@ -10,13 +10,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: rogerius_debaecke
-mother: maria_m_vandewalle
+father:
+  id: rogerius_debaecke
+  confidence: sup
+mother:
+  id: maria_m_vandewalle
+  confidence: sup
 spouses:
   - id: mauritius_stroobandt
     name: Mauritius Stroobandt
     married: 1732-04-30
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

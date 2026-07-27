@@ -8,6 +8,7 @@ confidence: sup
 line: bostyn-cappaert
 spouses:
   - name: (wife unrecorded, d. ~1649)
+    confidence: sup
 sources:
   - tree-isavdw
   - family

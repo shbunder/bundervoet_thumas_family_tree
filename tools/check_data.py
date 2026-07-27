@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import re
 import sys
@@ -15,14 +16,17 @@ from familytree import store
 from familytree.bundle import build_bundle
 from familytree.corpus import NOT_A_FORENAME, normalise_key
 from familytree.docsite import stale_reason as docs_stale_reason
+from familytree.edges import planned, rewrite
 from familytree.frontmatter import FrontmatterError
 from familytree.landing import stale_reason
 from familytree.match import build_index, candidates_for, compare, from_person
 from familytree.people import (
-    ARTIFACT_FIELDS, ARTIFACTS_DIR, EVENT_FIELDS, FIELDS, MAX_FATHER_AGE, MAX_LIFESPAN,
-    MAX_MOTHER_AGE, MIN_PARENT_AGE, ROOT, SPOUSE_FIELDS, SPOUSE_KINDS, children_index,
-    given_names, is_approximate, is_valid_date, load_artifacts, load_config, load_forenames,
-    load_person, point_year, sort_key,
+    ARTIFACT_FIELDS, ARTIFACTS_DIR, EDGE_CONFIDENCE, EVENT_FIELDS, FIELDS, LINK_FIELDS,
+    MAX_FATHER_AGE, MAX_LIFESPAN, MAX_MOTHER_AGE, MIN_PARENT_AGE, NOT_EVIDENCE, ROOT,
+    SIBLING_FIELDS, SPOUSE_FIELDS, SPOUSE_KINDS, WEAK_EDGE_BLAST_RADIUS, children_index,
+    given_names,
+    is_approximate, is_valid_date, link_of, load_artifacts, load_config, load_forenames,
+    load_person, parent_id, point_year, sort_key, weak_edges,
 )
 
 # A marriage detail may no longer carry a date or say which marriage in a sequence it
@@ -166,8 +170,9 @@ def main(argv: list[str] | None = None) -> int:
     # Parent links point at people who exist, and nobody is their own ancestor.
     for pid, p in people.items():
         for rel in ("father", "mother"):
-            if p.get(rel) and p[rel] not in people:
-                report.fail(f"{pid}.md: {rel} \"{p[rel]}\" does not exist")
+            target = parent_id(p, rel)
+            if target and target not in people:
+                report.fail(f'{pid}.md: {rel} "{target}" does not exist')
 
     # Spouse links point at people who exist, and marriage is mutual: if A records B, B
     # records A. Without that, building the tree downwards silently loses branches — a
@@ -189,7 +194,11 @@ def main(argv: list[str] | None = None) -> int:
             # mutual; the facts were not, so the two records could — and did — give
             # different places and dates for the same act, with nothing to say which
             # was right. Whichever record is read first would have won.
-            for field in ("kind", "married", "place", "divorced"):
+            # `confidence` and `source` join the list because a marriage is a link and
+            # the two records describe ONE link. Without them, the same act could be `doc`
+            # on his record and `asm` on hers, and whichever the reader opened first would
+            # decide whether the page drew it red.
+            for field in ("kind", "confidence", "source", "married", "place", "divorced"):
                 mine, theirs = s.get(field), back.get(field)
                 if field == "kind":
                     mine, theirs = mine or "marriage", theirs or "marriage"
@@ -200,11 +209,10 @@ def main(argv: list[str] | None = None) -> int:
     # A shared child is proof of a couple, so both parents must record the marriage.
     # This is what keeps the upward tree and the downward tree describing one family.
     for pid, p in people.items():
-        if not (p.get("father") and p.get("mother")):
+        father, mother = parent_id(p, "father"), parent_id(p, "mother")
+        if father not in people or mother not in people:
             continue
-        if p["father"] not in people or p["mother"] not in people:
-            continue
-        for a, b in ((p["father"], p["mother"]), (p["mother"], p["father"])):
+        for a, b in ((father, mother), (mother, father)):
             if not any(s.get("id") == b for s in people[a].get("spouses") or []):
                 report.fail(f'{a}.md: has a child ({pid}) with "{b}" but does not list them as a spouse')
 
@@ -214,8 +222,9 @@ def main(argv: list[str] | None = None) -> int:
     # that grouping; a note asserting it can only ever go stale or contradict.
     kids_of_couple: dict[frozenset, list[str]] = {}
     for pid, p in people.items():
-        if p.get("father") and p.get("mother"):
-            kids_of_couple.setdefault(frozenset((p["father"], p["mother"])), []).append(pid)
+        father, mother = parent_id(p, "father"), parent_id(p, "mother")
+        if father and mother:
+            kids_of_couple.setdefault(frozenset((father, mother)), []).append(pid)
     for pid, p in people.items():
         for i, s in enumerate(p.get("spouses") or []):
             if not (s.get("id") and s.get("detail")):
@@ -238,11 +247,11 @@ def main(argv: list[str] | None = None) -> int:
                 report.fail(f"{start}.md: parent chain loops back to itself")
                 return
             seen.add(pid)
-            walk(people[pid].get("father"))
-            walk(people[pid].get("mother"))
+            walk(parent_id(people[pid], "father"))
+            walk(parent_id(people[pid], "mother"))
 
-        walk(people[start].get("father"))
-        walk(people[start].get("mother"))
+        walk(parent_id(people[start], "father"))
+        walk(parent_id(people[start], "mother"))
 
     # Config files only reference people who exist.
     if root not in people:
@@ -256,7 +265,7 @@ def main(argv: list[str] | None = None) -> int:
         while pid and pid in people and pid not in seen:
             seen.add(pid)
             out.append(pid)
-            pid = people[pid].get("father")
+            pid = parent_id(people[pid], "father")
         return list(reversed(out))
 
     for lineage in lineages:
@@ -283,7 +292,7 @@ def main(argv: list[str] | None = None) -> int:
 
     def neighbours(pid):
         p = people[pid]
-        out = [p.get("father"), p.get("mother")]
+        out = [parent_id(p, "father"), parent_id(p, "mother")]
         out += [s["id"] for s in p.get("spouses") or [] if s.get("id")]
         out += children_of.get(pid, [])
         return [x for x in out if x and x in people]
@@ -305,6 +314,8 @@ def main(argv: list[str] | None = None) -> int:
 
     _check_duplicates(report, people, children_of)
     _check_plausibility(report, people, children_of)
+    _check_links(report, people, meta, source_ids)
+    _check_edges_written(report, people)
     _check_search_log(report, sites, pages, people)
     _check_forenames(report)
     _check_labels(report, people)
@@ -429,7 +440,7 @@ def _check_plausibility(report, people, children_of):
                 continue
             age = child_born - born
             give = born_slack + child_slack
-            is_mother = people[cid].get("mother") == pid
+            is_mother = parent_id(people[cid], "mother") == pid
             upper = MAX_MOTHER_AGE if is_mother else MAX_FATHER_AGE
             if age < MIN_PARENT_AGE - give or age > upper + give:
                 role = "mother" if is_mother else "father"
@@ -457,8 +468,8 @@ def _check_duplicates(report, people, children_of):
     related: set[frozenset] = set()
     for pid, p in people.items():
         for rel in ("father", "mother"):
-            if p.get(rel) in people:
-                related.add(frozenset((pid, p[rel])))
+            if parent_id(p, rel) in people:
+                related.add(frozenset((pid, parent_id(p, rel))))
         for s in p.get("spouses") or []:
             if s.get("id") in people:
                 related.add(frozenset((pid, s["id"])))
@@ -532,6 +543,170 @@ def _check_forenames(report):
                          f"{sex} {group[0]} — a name folds one way or it folds ambiguously, "
                          "and across the sexes it merges a brother with his sister")
                 where[token] = f"{sex} {group[0]}"
+
+
+def _check_links(report, people, meta, source_ids):
+    """A link is a fact, so it is checked like one.
+
+    The SHAPE is an error. A link block with no `id`, a confidence outside the vocabulary,
+    or a citation to a source that is not registered — all mechanical, all unambiguous, and
+    every one of them makes the page assert something nobody can trace. `unk` is refused
+    here specifically: on a person it means "not researched yet", and on a link there is no
+    such state, so allowing it would put a drawn edge and an absent one in the same bucket.
+
+    The COST is a warning: how many people an assumed link is carrying, and whether it rests
+    on another assumption. Both are repaired by research nobody can do on demand, and the
+    project's rule is that the validator is green before a commit. Failing on them would
+    make the cheapest way back a deletion of the record of the guess — the tree would get
+    LESS honest under pressure, which is exactly backwards.
+    """
+    for pid, p in sorted(people.items()):
+        for role in ("father", "mother"):
+            link = link_of(p, role)
+            if not link:
+                continue
+            for k in link:
+                if k not in LINK_FIELDS:
+                    report.warn(f'{pid}.md: {role} link has unknown field "{k}"')
+            if not link.get("id"):
+                report.fail(f'{pid}.md: "{role}" is a block with no "id"')
+            _check_edge(report, f"{pid}.md: {role}", link, source_ids)
+        for i, s_ in enumerate(p.get("spouses") or []):
+            if isinstance(s_, dict):
+                _check_edge(report, f"{pid}.md: spouses[{i}]", s_, source_ids)
+        _check_siblings(report, pid, p, people, source_ids)
+
+    edges = weak_edges(people, meta.get("roots") or [])
+    if not edges:
+        return
+    for e in edges:
+        where = f"{e['person']}.md ({e['link']} → {e['parent']})"
+        # The compounding the scorer is protected from, surfacing in the shape of the tree
+        # instead. Two assumptions in a chain multiply: the upper one was reasoned about as
+        # if the lower were settled, because on the page it looks exactly like a settled one.
+        if e["stacked"]:
+            report.warn(f"{where}: rests on another assumed link — {e['parent']}.md is itself "
+                        "only assumed to be where it is, so this is a guess on a guess")
+        if len(e["at_stake"]) >= WEAK_EDGE_BLAST_RADIUS:
+            report.warn(f"{where}: {len(e['at_stake'])} people are in the tree only through "
+                        "this assumed link and would leave with it — worth a document")
+    print(f"note  {len(edges)} assumed link(s) drawn — uv run tools/research.py weak",
+          file=sys.stderr)
+
+
+def _check_edges_written(report, people):
+    """Every edge is written out in full, and still says what the links imply.
+
+    This is the check that makes materialising a derived relation safe rather than reckless.
+    Sibling edges duplicate what the parent links already state — 994 of them — and a copy
+    that nothing verifies is precisely the failure the data model is built to avoid. So it
+    is verified: `familytree.edges.planned` says what each record should say, and a record
+    that disagrees fails the build. Correct a parent link and the sibling edges resting on it
+    go stale loudly, on the next build, instead of quietly describing a family that changed.
+
+    Same pattern as the bundle and the rendered docs, pointed at `data/` instead of `dist/`:
+    generated by a command, checked by the validator, never kept in step by hand.
+    """
+    try:
+        stale = sorted(pid for pid, fields in planned(people).items()
+                       if rewrite(pid, fields) is not None)
+    except SystemExit as e:            # a record that would not survive the round trip
+        return report.fail(str(e))
+    if stale:
+        shown = ", ".join(stale[:5]) + (f" and {len(stale) - 5} more" if len(stale) > 5 else "")
+        report.fail(f"{len(stale)} record(s) have edges that are not written out or no longer "
+                    f"match the links they derive from ({shown}) — run: uv run tools/edges.py sync")
+
+
+def _check_siblings(report, pid, p, people, source_ids):
+    """The one relationship this project stores, and the fence that keeps it honest.
+
+    `siblings` exists for a case the parent links cannot express: an act naming two people
+    as brother and sister without naming a parent either can be grafted to. `antoine_vanald`
+    describes exactly that and had to give the fact up — "she cannot be linked as a sibling
+    while the parents themselves are only a frontier".
+
+    THE INVARIANT: a stated sibling link between two people who already share a recorded
+    parent is an ERROR, not a duplicate to tolerate. That is what stops this field becoming
+    the second, uncheckable copy of the tree that the data model forbids — the exception is
+    scoped to precisely the case where there is nothing to be a second copy OF. Get it wrong
+    and the two copies drift, which is how "Ronny's sister" written into prose survives a
+    correction to the links that made it false.
+    """
+    for i, s in enumerate(p.get("siblings") or []):
+        where = f"{pid}.md: siblings[{i}]"
+        if not isinstance(s, dict):
+            report.fail(f"{where}: must be a block with id/confidence/source/note")
+            continue
+        for k in s:
+            if k not in SIBLING_FIELDS:
+                report.warn(f'{where}: unknown field "{k}"')
+        other = s.get("id")
+        # No `name`-only form, unlike spouses. A spouse with no record still belongs on the
+        # card as a name; a sibling with no record connects nothing in the graph, which is
+        # the only reason to state one — and prose already holds an unlinked name better.
+        if not other:
+            report.fail(f'{where}: has no "id" — a sibling with no record connects nothing; '
+                        "put an unlinked name in the prose body instead")
+            continue
+        if other == pid:
+            report.fail(f"{where}: is listed as their own sibling")
+            continue
+        if other not in people:
+            report.fail(f'{where}: "{other}" does not exist')
+            continue
+        _check_edge(report, where, s, source_ids)
+
+        # Redundancy with the parent links is expected and fine — `edges.py` writes exactly
+        # those entries, and the sync check below is what stops them drifting. What is NOT
+        # fine is a stated sibship the parent links CONTRADICT: two people whose parents are
+        # both fully recorded and share nobody are not siblings, whatever an entry says, and
+        # one of the two facts is wrong. Only fully-known pairs are judged, because a missing
+        # parent is the ordinary case this field exists to serve.
+        mine = [parent_id(p, r) for r in ("father", "mother")]
+        theirs = [parent_id(people[other], r) for r in ("father", "mother")]
+        if all(mine) and all(theirs) and not set(mine) & set(theirs):
+            report.fail(
+                f"{where}: {pid} and {other} are stated siblings, but both have two recorded "
+                f"parents and share none of them ({'+'.join(mine)} against {'+'.join(theirs)}) "
+                "— the parent links and this entry cannot both be right")
+        # Mutual, exactly like marriage, and for the same reason: siblinghood is symmetric,
+        # so a one-sided entry means the tree answers differently depending on whose record
+        # is read. One relationship, one set of facts.
+        back = next((t for t in people[other].get("siblings") or []
+                     if isinstance(t, dict) and t.get("id") == pid), None)
+        if back is None:
+            report.fail(f'{where}: lists "{other}", but {other}.md does not list "{pid}" back')
+            continue
+        for field in ("confidence", "source", "note"):
+            if s.get(field) != back.get(field):
+                report.fail(f'{pid}.md and {other}.md disagree about being siblings: '
+                            f'{field} is "{s.get(field)}" here and "{back.get(field)}" there')
+
+
+def _check_edge(report, where, link, source_ids):
+    """The fields every link carries, wherever it appears. Shared so a parent link and a
+    marriage cannot end up held to different standards — a marriage grafted on one
+    identifier is the same claim on the same evidence as a parent grafted on one, and the
+    first draft of this checked the note on parents only."""
+    conf = link.get("confidence")
+    if conf is not None and conf not in EDGE_CONFIDENCE:
+        report.fail(f"{where}: confidence \"{conf}\" is not one of "
+                    f"{', '.join(EDGE_CONFIDENCE)}"
+                    + (' — "unk" is a state a person can be in, not a link'
+                       if conf == "unk" else ""))
+    # This is rule 2 finally made checkable. While `sources` was a person-level list, "every
+    # new parent link cites a source" could not be verified by anything: the citation and
+    # the claim sat in the same file without being attached to each other.
+    if link.get("source") and link["source"] not in source_ids:
+        report.fail(f'{where}: cites source "{link["source"]}", '
+                    "which is not in research/sources.json")
+    # An assumption nobody explained cannot be checked by anyone later, including whoever
+    # made it. The note IS the finding; the link is only its consequence, and it is what the
+    # page shows beside the red mark.
+    if conf in NOT_EVIDENCE and not (link.get("note") or "").strip():
+        report.fail(f"{where}: is assumed but says nothing about why — name the one "
+                    "identifier it rests on and the one still missing")
 
 
 def _check_labels(report, people):

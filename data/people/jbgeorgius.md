@@ -11,13 +11,25 @@ death:
 confidence: sup
 occupation: fabriekwerker & gemeenteschepen (factory worker & alderman)
 line: thumas
-father: georges_cj
-mother: bossin
+father:
+  id: georges_cj
+  confidence: sup
+mother:
+  id: bossin
+  confidence: sup
+siblings:
+  - id: henrica_thumas
+    confidence: sup
+  - id: jcseraphina_t
+    confidence: sup
+  - id: misabella_t
+    confidence: sup
 spouses:
   - id: vandenbemden
     name: Joanna Vandenbemden
     married: 1902-02-03
     place: Kraainem
+    confidence: sup
 sources:
   - S5
   - tree-marcelcroon

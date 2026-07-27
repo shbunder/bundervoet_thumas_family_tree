@@ -13,6 +13,7 @@ spouses:
     name: Jan Van den Bemden
     married: 1900-09-17
     place: Kraainem
+    confidence: sup
 sources:
   - kraainem-1900-marriage-vandenbemden-feyaerts
 ---

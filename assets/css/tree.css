@@ -4,6 +4,11 @@
   --bg:#e9f0e1; --panel:#fbfdf6; --ink:#243026; --muted:#5c6b56; --line:#c1d0b5;
   --doc:#2f7d54; --doc-bg:#e2f0e4; --fam:#2f5d8a; --fam-bg:#e6eef6;
   --sup:#6d4a9c; --sup-bg:#eee8f5; --unk:#8f958a; --unk-bg:#e5ebdf;
+  /* The colour of an assumed LINK. Not one of the confidence colours above even though it
+     is the same vocabulary, because those grade a person and this grades a join. It is the
+     only red on the page and it means one thing wherever it appears: this link is drawn but
+     unverified. Nothing about the person it points at. */
+  --prov:#b3392f; --prov-bg:#fbe9e7;
   --accent:#356b34; --shadow:0 2px 10px rgba(40,60,40,.13);
 }
 *{box-sizing:border-box}
@@ -191,7 +196,8 @@ footer .offsite a:hover,footer .offsite a:focus-visible{color:var(--accent);bord
 /* dark mode */
 body.dark{--bg:#151b13;--panel:#1e261c;--ink:#e6efdc;--muted:#9aa892;--line:#374332;--accent:#86c17c;
   --doc:#5cbe86;--doc-bg:#1a3125;--fam:#6aa6d8;--fam-bg:#18293a;--sup:#ab90d2;--sup-bg:#272134;
-  --unk:#8a917e;--unk-bg:#232b1f;--shadow:0 2px 12px rgba(0,0,0,.55)}
+  --unk:#8a917e;--unk-bg:#232b1f;--prov:#f08a7e;--prov-bg:#3a201d;
+  --shadow:0 2px 12px rgba(0,0,0,.55)}
 body.dark .tab{background:var(--panel)}
 body.dark .node.unk,body.dark .cnode.unk{color:#9a917e}
 body.dark .detail .disc{background:#2b2718;border-color:#4d4426;color:#ded2ae}
@@ -225,6 +231,23 @@ body.dark .detail .disc{background:#2b2718;border-color:#4d4426;color:#ded2ae}
 .conf{display:inline-block;font-size:.66rem;padding:1px 7px;border-radius:10px;margin-bottom:6px;border:1px solid}
 .conf-doc{color:var(--doc);border-color:var(--doc);background:var(--doc-bg)} .conf-fam{color:var(--fam);border-color:var(--fam);background:var(--fam-bg)}
 .conf-sup{color:var(--sup);border-color:var(--sup);background:var(--sup-bg)} .conf-unk{color:var(--unk);border-color:var(--line);background:var(--unk-bg)}
+
+/* A link the tree draws but has not verified. The card keeps its confidence colour on the
+   left edge — that is still true of the person — and the doubt is drawn on the join: a red
+   top edge where the climb enters the card, a red drop line, and a mark on the role label,
+   which is the claim actually in question. A red CARD would say the person is doubtful,
+   which is a different statement and usually a false one. */
+.node.weak{border-top:3px solid var(--prov)}
+.vline.weak{background:var(--prov)}
+.wmark{display:inline-block;margin-left:5px;padding:0 5px;border-radius:8px;font-size:.66rem;
+  font-weight:700;line-height:1.5;background:var(--prov-bg);color:var(--prov);
+  border:1px solid var(--prov);cursor:help;vertical-align:baseline}
+/* The apex of an arch that meets at a parent a stated sibship implies and nobody has
+   named. Dashed and unclickable, like the unknown card in the pedigree, because that is
+   exactly what it is: a position in the graph the records require and no record fills. */
+.ucard.anon{border-style:dashed;background:var(--unk-bg);color:var(--muted);cursor:default}
+.lgsep{margin-left:4px;padding-left:14px;border-left:1px solid var(--line)}
+.lgsep .wmark{margin-left:0;margin-right:6px;cursor:default}
 
 /* search */
 .searchbox{position:relative;width:320px;margin-left:6px}

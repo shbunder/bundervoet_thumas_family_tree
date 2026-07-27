@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: huenaerts_ac
     name: Anna Catharina Huenaerts
+    confidence: sup
 sources:
   - S34
 ---

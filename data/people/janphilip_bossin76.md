@@ -9,12 +9,28 @@ birth:
 confidence: sup
 occupation: landbouwer (farmer)
 line: thumas
-father: jbbossin
-mother: maria_wolf
+father:
+  id: jbbossin
+  confidence: sup
+mother:
+  id: maria_wolf
+  confidence: sup
+siblings:
+  - id: frans_bossin82
+    confidence: sup
+  - id: gjosef_bossin69
+    confidence: sup
+  - id: jphilippus_bossin57
+    confidence: sup
+  - id: ludovicus_bossin79
+    confidence: sup
+  - id: pamandus_bossin59
+    confidence: sup
 spouses:
   - name: Maria Florentia Verbist
     married: 1897-06-12
     place: Sint-Stevens-Woluwe
+    confidence: sup
 sources:
   - S33
 ---

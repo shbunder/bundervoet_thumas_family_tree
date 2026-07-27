@@ -10,13 +10,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: joannes_keirsebilck_1728
-mother: maria_c_declerck
+father:
+  id: joannes_keirsebilck_1728
+  confidence: sup
+mother:
+  id: maria_c_declerck
+  confidence: sup
 spouses:
   - id: anna_fr_degrande
     name: Anna Francisca De Grande
     married: 1785-10-04
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

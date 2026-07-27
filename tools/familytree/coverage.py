@@ -28,7 +28,7 @@ from .corpus import Act, corpus_exists, load_corpus, normalise_key
 from .labels import refutations
 from .match import build_index, candidates_for, compare, from_mention, from_person
 from .frontier import generations
-from .people import ancestors_of, children_index, family_key
+from .people import ancestors_of, children_index, family_key, parent_id
 
 # ---------- which act to fetch ----------
 
@@ -152,7 +152,7 @@ def tree_components(people: dict) -> list[list[str]]:
     adjacency: dict[str, set[str]] = defaultdict(set)
     for pid, p in people.items():
         adjacency[pid]
-        for parent in (p.get("father"), p.get("mother")):
+        for parent in (parent_id(p, "father"), parent_id(p, "mother")):
             if parent in people:
                 adjacency[pid].add(parent)
                 adjacency[parent].add(pid)
@@ -245,7 +245,7 @@ def missing_children(people: dict, children: dict | None = None,
     # Which pairs each recorded person already hangs off, so a child the tree has is not
     # offered as one it lacks.
     recorded: dict[str, tuple[str | None, str | None]] = {
-        pid: (p.get("father"), p.get("mother")) for pid, p in people.items()
+        pid: (parent_id(p, "father"), parent_id(p, "mother")) for pid, p in people.items()
     }
 
     # SCANNED, DELIBERATELY, unlike act_coverage — and measured rather than assumed, twice.
@@ -431,8 +431,9 @@ def pedigree_collapse(people: dict, meta: dict):
     # states, so it reports what is recorded rather than looking for something to find.
     couples: set[tuple[str, str]] = set()
     for pid, p in people.items():
-        if p.get("father") in people and p.get("mother") in people:
-            couples.add((p["father"], p["mother"]))
+        father, mother = parent_id(p, "father"), parent_id(p, "mother")
+        if father in people and mother in people:
+            couples.add((father, mother))
         for s in p.get("spouses") or []:
             if s.get("id") in people:
                 couples.add(tuple(sorted((pid, s["id"]))))

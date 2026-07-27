@@ -7,8 +7,19 @@ birth:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: joannes_janssen
-mother: victoria_declerck
+father:
+  id: joannes_janssen
+  confidence: sup
+mother:
+  id: victoria_declerck
+  confidence: sup
+siblings:
+  - id: clementia_janssen32
+    confidence: sup
+  - id: josephus_janssen
+    confidence: sup
+  - id: petrus_janssen22
+    confidence: sup
 sources:
   - rab-bs-geboorten
 ---

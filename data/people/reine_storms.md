@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: louis_steenkiste
     name: Louis Steenkiste
+    confidence: sup
 sources:
   - tree-wernero
 ---

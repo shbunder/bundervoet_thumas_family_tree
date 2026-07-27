@@ -8,12 +8,15 @@ birth:
 confidence: sup
 occupation: herbergierster (innkeeper)
 line: thumas
-mother: petronella_wolf
+mother:
+  id: petronella_wolf
+  confidence: sup
 spouses:
   - id: jbbossin
     name: Joannes Baptista Bossin
     married: 1858-06-17
     place: Sint-Stevens-Woluwe
+    confidence: sup
 sources:
   - S28
   - S33

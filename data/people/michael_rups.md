@@ -4,10 +4,13 @@ name: Michael Rups
 surname: Rups
 confidence: sup
 line: bostyn-cappaert
-father: amandus_rups
+father:
+  id: amandus_rups
+  confidence: sup
 spouses:
   - id: maria_vanrenterghem
     name: Maria Van Renterghem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

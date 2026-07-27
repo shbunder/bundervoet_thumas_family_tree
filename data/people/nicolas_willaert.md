@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: catharina_vanmassenhove
     name: Catharina Van Massenhove
+    confidence: sup
 sources:
   - tree-isavdw
 ---

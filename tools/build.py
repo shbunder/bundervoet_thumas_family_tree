@@ -20,8 +20,9 @@ from pathlib import Path
 
 from familytree import docsite
 from familytree.bundle import build_bundle
+from familytree.edges import planned, rewrite
 from familytree.landing import census_sentence, fill, missing_markers
-from familytree.people import ROOT, format_date, load_config, load_people
+from familytree.people import PEOPLE_DIR, ROOT, format_date, load_config, load_people
 
 HERE = Path(__file__).resolve().parent
 
@@ -131,6 +132,23 @@ def build_docs() -> None:
 
 
 def main() -> int:
+    # BEFORE the validator, not after, and the order is forced rather than chosen. The
+    # validator fails on records whose edges are not written out — that is what keeps 994
+    # generated sibling links from drifting away from the parent links they derive from —
+    # so validating first would refuse to build a tree the very next step was about to fix,
+    # and the only way out would be running two commands in the right order from memory.
+    # Everything else here writes to dist/; this one writes to data/, so it is announced.
+    people = load_people(load_config()["roster"])
+    written = 0
+    for pid, fields in planned(people).items():
+        text = rewrite(pid, fields)
+        if text is not None:
+            (PEOPLE_DIR / f"{pid}.md").write_text(text, encoding="utf-8")
+            written += 1
+    if written:
+        print(f"data/people — {written} record(s) had their edges written out "
+              "(confidence on every link, siblings as edges)")
+
     check = subprocess.run([sys.executable, str(HERE / "check_data.py"), "--skip-generated"])
     if check.returncode != 0:
         print("\nValidation failed — nothing was generated.", file=sys.stderr)

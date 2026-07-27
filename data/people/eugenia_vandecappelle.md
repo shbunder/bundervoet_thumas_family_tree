@@ -9,6 +9,7 @@ spouses:
     name: Alfons Luciaan Vincke
     married: 1888-09-19
     place: Diksmuide
+    confidence: sup
 sources:
   - rab-bs-huwelijken
   - fwk-eugenia-vandecappelle

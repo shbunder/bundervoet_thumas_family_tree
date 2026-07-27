@@ -9,6 +9,7 @@ line: janssens
 spouses:
   - id: thiery_f
     name: François Thumas
+    confidence: fam
 sources:
   - tree-jswaelens
 ---

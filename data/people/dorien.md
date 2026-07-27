@@ -6,11 +6,19 @@ birth:
   date: 1988-09-06
 confidence: fam
 line: immediate
-father: thiery
-mother: christiane
+father:
+  id: thiery
+  confidence: fam
+mother:
+  id: christiane
+  confidence: fam
+siblings:
+  - id: bart
+    confidence: fam
 spouses:
   - id: shaun
     name: Shaun Bundervoet
+    confidence: fam
 sources:
   - family
 ---

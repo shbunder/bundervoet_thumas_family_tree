@@ -10,11 +10,16 @@ death:
 confidence: sup
 occupation: werkster (labourer)
 line: bundervoet
-father: henricus_bostyn
-mother: judith_cappaert
+father:
+  id: henricus_bostyn
+  confidence: sup
+mother:
+  id: judith_cappaert
+  confidence: sup
 spouses:
   - id: alphonsus
     name: Alphonsus Bernardus Bundervoet
+    confidence: sup
 sources:
   - fwk-alphonsus-1980
   - geneanet

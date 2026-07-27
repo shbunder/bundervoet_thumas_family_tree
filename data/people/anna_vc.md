@@ -9,6 +9,7 @@ line: janssens
 spouses:
   - id: rene_j
     name: René Janssens
+    confidence: fam
 sources:
   - tree-cisken
   - family

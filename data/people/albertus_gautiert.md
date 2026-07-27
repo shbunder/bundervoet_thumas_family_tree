@@ -15,6 +15,7 @@ spouses:
     name: Theresia Joanna Monica Robbe
     married: 1813-05-05
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
 ---

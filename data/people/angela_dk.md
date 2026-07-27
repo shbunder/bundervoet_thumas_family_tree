@@ -7,8 +7,21 @@ death:
   place: Oostende
 confidence: sup
 line: de-keyser
-father: edouard_dk
-mother: louise_bocklandt
+father:
+  id: edouard_dk
+  confidence: sup
+mother:
+  id: louise_bocklandt
+  confidence: sup
+siblings:
+  - id: bertha_dk
+    confidence: sup
+  - id: gustavus_j
+    confidence: sup
+  - id: jerome_dk
+    confidence: sup
+  - id: maria_dk
+    confidence: sup
 sources:
   - agatha-oostende-1903-death-angela-dekeyser
 ---

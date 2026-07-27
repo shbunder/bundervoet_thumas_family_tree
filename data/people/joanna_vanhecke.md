@@ -8,10 +8,13 @@ death:
   date: "1678"
 confidence: sup
 line: bundervoet
-father: willem_vanhecke
+father:
+  id: willem_vanhecke
+  confidence: sup
 spouses:
   - id: segerius_bundervoet
     name: Segerius Bundervoet
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

@@ -11,6 +11,7 @@ spouses:
     name: Laurentius Willems
     married: 1612-10-18
     place: Wingene
+    confidence: sup
 sources:
   - tree-isavdw
 ---

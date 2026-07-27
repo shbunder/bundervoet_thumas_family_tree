@@ -8,6 +8,7 @@ line: bostyn-cappaert
 spouses:
   - id: francisca_vanhoutte
     name: Francisca Van Houtte
+    confidence: sup
 sources:
   - tree-isavdw
 ---

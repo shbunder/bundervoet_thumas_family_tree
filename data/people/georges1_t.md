@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: menuisier (schrijnwerker / carpenter)
 line: thumas
-father: jeanlambert_t
-mother: leclercq_t
+father:
+  id: jeanlambert_t
+  confidence: sup
+mother:
+  id: leclercq_t
+  confidence: sup
 spouses:
   - id: noel_t
     name: Marie Catherine Noël
     married: 1771-01-03
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - fs-brabant-bs
   - S14

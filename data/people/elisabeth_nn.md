@@ -7,6 +7,7 @@ line: bundervoet
 spouses:
   - id: livinus_bundervoet
     name: Livinus Bundervoet
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

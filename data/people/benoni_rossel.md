@@ -8,6 +8,7 @@ line: de-keyser
 spouses:
   - id: leontine_schreel
     name: Leontine Schreel
+    confidence: doc
 sources:
   - familysearch
 ---

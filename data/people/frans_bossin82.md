@@ -8,8 +8,23 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: sup
 line: thumas
-father: jbbossin
-mother: maria_wolf
+father:
+  id: jbbossin
+  confidence: sup
+mother:
+  id: maria_wolf
+  confidence: sup
+siblings:
+  - id: gjosef_bossin69
+    confidence: sup
+  - id: janphilip_bossin76
+    confidence: sup
+  - id: jphilippus_bossin57
+    confidence: sup
+  - id: ludovicus_bossin79
+    confidence: sup
+  - id: pamandus_bossin59
+    confidence: sup
 sources:
   - S33
 ---

@@ -5,13 +5,21 @@ surname: Van Bogaert
 sex: m
 confidence: sup
 line: paelinck
-father: carolus_vb
-mother: martinet
+father:
+  id: carolus_vb
+  confidence: sup
+mother:
+  id: martinet
+  confidence: sup
+siblings:
+  - id: magdalena_vb
+    confidence: sup
 spouses:
   - name: Rosalia Moerloos
     married: 1909-04-07
     place: Sint-Niklaas
     id: rosalia_moerloos
+    confidence: sup
 sources:
   - S18
 ---

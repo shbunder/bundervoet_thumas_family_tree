@@ -13,8 +13,10 @@ spouses:
   - id: petrus_vandewalle
     name: Petrus Vandewalle
     kind: partnership
+    confidence: sup
   - name: Clementius Robaert
     id: clementius_robaert
+    confidence: sup
 sources:
   - tree-isavdw
 ---

@@ -9,13 +9,29 @@ birth:
 confidence: doc
 occupation: schaliedekker (roofer)
 line: thumas
-father: guilielmus_bossin
-mother: peremans
+father:
+  id: guilielmus_bossin
+  confidence: doc
+mother:
+  id: peremans
+  confidence: doc
+siblings:
+  - id: bossin
+    confidence: sup
+  - id: cornelius_bossin
+    confidence: sup
+  - id: joannes_bossin51
+    confidence: doc
+  - id: joannes_franciscus_bossin
+    confidence: sup
+  - id: ludovica_bossin
+    confidence: doc
 spouses:
   - id: guns_mc
     name: Maria Catharina Guns
     married: 1887-11-23
     place: Kraainem
+    confidence: doc
 sources:
   - S35
   - fs-kraainem-1887-marriage-bossin-guns

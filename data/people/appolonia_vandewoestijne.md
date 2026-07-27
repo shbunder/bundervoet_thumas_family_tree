@@ -9,6 +9,7 @@ spouses:
     name: Judocus Van Renterghem
     married: 1602-01-20
     place: Brugge (St-Catharina)
+    confidence: sup
 sources:
   - tree-isavdw
 ---

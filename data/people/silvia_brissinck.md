@@ -2,12 +2,13 @@
 id: silvia_brissinck
 name: Silvia Rosalia Brissinck
 surname: Brissinck
-occupation: werkvrouw (working woman / labourer)
 confidence: doc
+occupation: werkvrouw (working woman / labourer)
 line: van-iseghem
 spouses:
   - id: ludovicus_dv
     name: Ludovicus Josephus Devriendt
+    confidence: doc
 sources:
   - S20
   - rab-bs-huwelijken

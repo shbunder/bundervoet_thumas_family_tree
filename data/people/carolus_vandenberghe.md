@@ -6,6 +6,7 @@ confidence: sup
 line: bostyn-cappaert
 spouses:
   - name: (wife uncertain)
+    confidence: sup
 sources:
   - tree-isavdw
 ---

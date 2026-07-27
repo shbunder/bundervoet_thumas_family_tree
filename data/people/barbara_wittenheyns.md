@@ -6,11 +6,16 @@ birth:
   date: ~1535
 confidence: sup
 line: bostyn-cappaert
-father: petrus_wittenheyns
-mother: judoca_tjonck
+father:
+  id: petrus_wittenheyns
+  confidence: sup
+mother:
+  id: judoca_tjonck
+  confidence: sup
 spouses:
   - id: guillielmus_vanrenterghem
     name: Guillielmus Van Renterghem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

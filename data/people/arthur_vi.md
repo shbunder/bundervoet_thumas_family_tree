@@ -9,15 +9,36 @@ birth:
 confidence: sup
 occupation: boodschapper (messenger)
 line: van-iseghem
-father: joannes_vi2
-mother: hermanie_janssen
+father:
+  id: joannes_vi2
+  confidence: sup
+mother:
+  id: hermanie_janssen
+  confidence: sup
+siblings:
+  - id: augustus_vi
+    confidence: sup
+  - id: eduardus_vi
+    confidence: sup
+  - id: gustavus_vi
+    confidence: sup
+  - id: joannes_vi83
+    confidence: sup
+  - id: joannes_vi91
+    confidence: sup
+  - id: leontius_vi
+    confidence: sup
+  - id: ludovicus_vi
+    confidence: sup
 spouses:
   - name: Elodia Joanna Schellynck
     married: 1901-06-29
     place: Oostende
+    confidence: sup
   - name: Judith Maria Debbaut
     married: 1936-02-22
     place: Oostende
+    confidence: sup
 sources:
   - rab-bs-geboorten
   - rab-bs-huwelijken

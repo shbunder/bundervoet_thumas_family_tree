@@ -9,6 +9,7 @@ line: bostyn-cappaert
 spouses:
   - id: catharina_willems
     name: Catharina Willems
+    confidence: sup
 sources:
   - tree-isavdw
 ---

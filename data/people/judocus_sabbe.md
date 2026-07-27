@@ -9,13 +9,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: simon_sabbe
-mother: joanna_rotsaert_sabbe
+father:
+  id: simon_sabbe
+  confidence: sup
+mother:
+  id: joanna_rotsaert_sabbe
+  confidence: sup
 spouses:
   - id: anna_vannieuwenhuyse
     name: Anna Van Nieuwenhuyse
     married: 1700-08-04
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

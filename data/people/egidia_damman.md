@@ -9,6 +9,7 @@ line: bostyn-cappaert
 spouses:
   - id: martinus_degrande
     name: Martinus De Grande
+    confidence: sup
 sources:
   - tree-isavdw
 ---

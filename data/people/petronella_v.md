@@ -15,6 +15,7 @@ spouses:
     name: Ludovicus Paelinck
     married: 1681-02
     place: Lochristi
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

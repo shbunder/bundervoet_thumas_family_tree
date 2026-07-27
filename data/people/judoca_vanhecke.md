@@ -9,6 +9,7 @@ line: bostyn-cappaert
 spouses:
   - id: oliverius_stroobandt
     name: Oliverius Stroobandt
+    confidence: sup
 sources:
   - tree-isavdw
 ---

@@ -12,6 +12,7 @@ spouses:
   - id: daniel_bocklandt
     name: Daniel Bocklandt
     married: "1801"
+    confidence: sup
 sources:
   - tree-wete1998
 ---

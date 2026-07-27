@@ -7,8 +7,23 @@ birth:
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: alfons_vincke
-mother: eugenia_vandecappelle
+father:
+  id: alfons_vincke
+  confidence: sup
+mother:
+  id: eugenia_vandecappelle
+  confidence: sup
+siblings:
+  - id: camillecyrille_vincke
+    confidence: sup
+  - id: georgesremi_vincke
+    confidence: sup
+  - id: juliettegabrielle_vincke
+    confidence: sup
+  - id: karel_vincke
+    confidence: sup
+  - id: louisacamilla_vincke
+    confidence: sup
 sources:
   - rab-bs-geboorten
 ---

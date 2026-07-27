@@ -3,15 +3,42 @@ id: karolus_vincke
 name: Karolus Louis Vincke
 surname: Vincke
 birth:
-  date: 1870
+  date: "1870"
   place: Diksmuide
 death:
   date: 1871-09-09
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: lucien_vincke
-mother: ludovica_vanald
+father:
+  id: lucien_vincke
+  confidence: sup
+mother:
+  id: ludovica_vanald
+  confidence: sup
+siblings:
+  - id: alfons_vincke
+    confidence: sup
+  - id: bellarmin_vincke
+    confidence: sup
+  - id: camilla_vincke
+    confidence: sup
+  - id: charles_vincke
+    confidence: sup
+  - id: emma_vincke
+    confidence: sup
+  - id: eugene_vincke
+    confidence: sup
+  - id: florence_vincke
+    confidence: sup
+  - id: irma_vincke
+    confidence: sup
+  - id: jerome_vincke
+    confidence: sup
+  - id: romanie_vincke
+    confidence: sup
+  - id: theophil_vincke
+    confidence: sup
 sources:
   - rab-bs-overlijdens
 ---

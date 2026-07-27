@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: josephus_caeckaert
     name: Josephus Caeckaert
+    confidence: sup
 sources:
   - tree-isavdw
 ---

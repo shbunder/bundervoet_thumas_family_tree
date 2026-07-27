@@ -15,6 +15,7 @@ spouses:
     name: Judocus Franciscus Van Iseghem
     married: 1810-03-25
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
 ---

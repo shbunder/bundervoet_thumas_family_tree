@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: herbergier (innkeeper)
 line: van-iseghem
-father: joannes_jos_vi
-mother: anna_gautiert
+father:
+  id: joannes_jos_vi
+  confidence: sup
+mother:
+  id: anna_gautiert
+  confidence: sup
 spouses:
   - id: hermanie_janssen
     name: Hermanie Ludovica Janssen
     married: 1872-08-23
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
   - rab-bs-geboorten

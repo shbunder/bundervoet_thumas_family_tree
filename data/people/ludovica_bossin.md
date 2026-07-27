@@ -7,17 +7,34 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: doc
 line: thumas
-father: guilielmus_bossin
-mother: peremans
+father:
+  id: guilielmus_bossin
+  confidence: doc
+mother:
+  id: peremans
+  confidence: doc
+siblings:
+  - id: bossin
+    confidence: sup
+  - id: cornelius_bossin
+    confidence: sup
+  - id: henricus_bossin
+    confidence: doc
+  - id: joannes_bossin51
+    confidence: doc
+  - id: joannes_franciscus_bossin
+    confidence: sup
 spouses:
   - id: swaelens
     name: Joannes Baptista Julianus Swaelens
     married: 1884-02-25
     place: Kraainem
+    confidence: doc
   - id: petrus_vrebos
     name: Petrus Vrebos
     married: 1901-05-30
     place: Kraainem
+    confidence: sup
 sources:
   - S24
   - S33

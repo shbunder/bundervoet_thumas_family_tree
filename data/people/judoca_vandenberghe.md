@@ -9,12 +9,15 @@ death:
   place: Brugge (Lissewege)
 confidence: sup
 line: bostyn-cappaert
-father: carolus_vandenberghe
+father:
+  id: carolus_vandenberghe
+  confidence: sup
 spouses:
   - id: petrus_sabbe
     name: Petrus Sabbe
     married: 1616-06-11
     place: Oostkamp (Ruddervoorde)
+    confidence: sup
 sources:
   - tree-isavdw
 ---

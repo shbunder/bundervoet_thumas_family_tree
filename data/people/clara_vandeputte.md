@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: willem_sabbe_y
     name: Willem Sabbe
+    confidence: sup
 sources:
   - tree-isavdw
 ---

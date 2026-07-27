@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: werkster (charwoman)
 line: devriendt
-father: livinus_verkouille
-mother: maria_malfait
+father:
+  id: livinus_verkouille
+  confidence: sup
+mother:
+  id: maria_malfait
+  confidence: sup
 spouses:
   - id: carolus_ramon
     name: Carolus Ludovicus Ramon
     married: 1859-09-14
     place: Oostende
+    confidence: sup
 sources:
   - geneanet
 ---

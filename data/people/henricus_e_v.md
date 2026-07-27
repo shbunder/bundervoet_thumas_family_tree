@@ -10,11 +10,23 @@ death:
   place: Oostende
 confidence: sup
 line: vanstechelman
-father: petrusjacobus_v
-mother: clementia_w
+father:
+  id: petrusjacobus_v
+  confidence: sup
+mother:
+  id: clementia_w
+  confidence: sup
+siblings:
+  - id: augusta
+    confidence: sup
+  - id: leontius_v
+    confidence: sup
+  - id: paula_v
+    confidence: sup
 spouses:
   - name: Alicia Mathildis St Martin
     id: alicia_stmartin
+    confidence: sup
 sources:
   - fs-wvl-bs
 ---

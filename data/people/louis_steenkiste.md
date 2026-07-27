@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: reine_storms
     name: Reine Storms
+    confidence: sup
 sources:
   - tree-wernero
 ---

@@ -11,8 +11,15 @@ death:
   place: Grez-Doiceau
 confidence: sup
 line: thumas
-father: georgeslambert_t
-mother: quinart
+father:
+  id: georgeslambert_t
+  confidence: sup
+mother:
+  id: quinart
+  confidence: sup
+siblings:
+  - id: georges2_t
+    confidence: sup
 sources:
   - S13
   - netradyle-grez-naissances

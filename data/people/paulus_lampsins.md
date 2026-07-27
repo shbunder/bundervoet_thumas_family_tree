@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: clara_lampsins
     name: Clara Lampsins
+    confidence: sup
 sources:
   - tree-isavdw
 ---

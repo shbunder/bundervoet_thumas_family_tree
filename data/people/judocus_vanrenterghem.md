@@ -10,13 +10,18 @@ death:
 confidence: sup
 occupation: kerkmeester & dischmeester (churchwarden / poor-relief master)
 line: bostyn-cappaert
-father: guillielmus_vanrenterghem
-mother: barbara_wittenheyns
+father:
+  id: guillielmus_vanrenterghem
+  confidence: sup
+mother:
+  id: barbara_wittenheyns
+  confidence: sup
 spouses:
   - id: appolonia_vandewoestijne
     name: Appolonia Vande Woestijne
     married: 1602-01-20
     place: Brugge (St-Catharina)
+    confidence: sup
 sources:
   - tree-isavdw
 ---

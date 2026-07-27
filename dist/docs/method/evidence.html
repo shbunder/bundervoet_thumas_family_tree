@@ -496,6 +496,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#4a-unless-the-link-itself-says-it-is-assumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4a. …unless the link itself says it is assumed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#5-never-invent-a-field" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1001,6 +1012,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#4a-unless-the-link-itself-says-it-is-assumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4a. …unless the link itself says it is assumed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#5-never-invent-a-field" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1077,6 +1099,9 @@
 two different Hammes, two Simonne Vandewalles, Van Craenenbroecks in the wrong province,
 the Gustaaf/Gustavus confusion. They are enforced by the validator and the scorer, not by
 good intentions.</p>
+<p>Rule 4 has a qualification, § 4a, which is the one place this project permits a link on a
+single identifier. It is worth reading with rule 1 rather than instead of it: the floor
+holds because a link that declares itself assumed is evidence for nothing.</p>
 <hr />
 <h2 id="1-never-match-on-name-alone">1. Never match on name alone<a class="headerlink" href="#1-never-match-on-name-alone" title="Permanent link">&para;</a></h2>
 <p>A graft needs <strong>at least two independent identifiers</strong> to agree — and the record must say
@@ -1164,6 +1189,47 @@ of them is <code>doc</code>.</p>
 <p>Record it in the person's prose body as a named frontier. Do not graft it. The temptation
 to graft a 90%-likely parent is exactly the mechanism by which trees become unreliable,
 because nothing downstream will ever remember the 10%.</p>
+<h2 id="4a-unless-the-link-itself-says-it-is-assumed">4a. …unless the link itself says it is assumed<a class="headerlink" href="#4a-unless-the-link-itself-says-it-is-assumed" title="Permanent link">&para;</a></h2>
+<p>The rule above is right about the mechanism and wrong about the remedy, and at the scale
+this tree is aiming for the difference matters. Refusing every one-identifier link buys
+correctness at a price paid in coverage: a marriage act naming six people yields one graft
+instead of five, and the four it withheld are not recorded as doubts — they are recorded
+nowhere a tool can read. The 10% nothing downstream remembers is the real problem. Refusing
+the link is only one way to solve it.</p>
+<p>So a link may be drawn on one identifier <strong>if it declares that about itself</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">mother</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ludovica_vanald</span>
+<span class="w">  </span><span class="nt">confidence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">asm</span>
+<span class="w">  </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agatha-diksmuide-1880-birth</span>
+<span class="w">  </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">birth act names a Ludovica Vanalderweireldt; commune and year agree, no second identifier</span>
+</code></pre></div>
+<p>Four things then hold, and it is only safe because all four do:</p>
+<ol>
+<li><strong>An <code>asm</code> link is evidence for nothing.</strong> <code>from_person</code> hides it from the scorer in
+   both directions — as a parent, and as a child reaching back. This is the whole safety
+   property. Without it, guess A licenses graft B, which licenses C, every one scoring as
+   well-supported, and the error rate compounds down the line with nothing marking where it
+   started. The two-independent-identifiers floor in rule 1 stays a floor precisely because
+   the tree's own guesses cannot be counted towards it.</li>
+<li><strong>It must say what it rests on.</strong> A link with <code>confidence: asm</code> and no <code>note</code> fails the
+   build. An assumption nobody explained cannot be checked by anyone later, including
+   whoever made it — the note <em>is</em> the finding, and the link is only its consequence.</li>
+<li><strong>It is visible.</strong> The page draws the join red, with the note on hover; the GEDCOM
+   export carries a note on the <code>FAMC</code> link, because an exported tree is exactly where a
+   bad graft goes to become unfindable, copied into other trees and cited back as
+   agreement.</li>
+<li><strong>It is queued, and the queue is derived.</strong> <code>research.py weak</code> lists every one, ordered
+   by how many people are in the tree <em>only</em> through it — measured by walking the pedigree
+   with the link cut, not counted from the parent's ancestry, which double-counts wherever
+   the tree folds back on itself. Because the queue is computed from the records on every
+   run, an assumption cannot be forgotten and cannot go stale.</li>
+</ol>
+<p>What this does <strong>not</strong> license: an <code>asm</code> link with no note, an <code>asm</code> link nobody ever
+returns to, or <code>asm</code> as a way to avoid the argument. Rule 3 still applies — upgrading to
+<code>doc</code> needs a document — and a stated conflict still vetoes outright, whatever the link
+says about itself.</p>
+<p>There is deliberately no "assumed since" date. Git already knows when a line was written,
+and a hand-kept date beside it is the second copy the data model forbids.</p>
 <h2 id="5-never-invent-a-field">5. Never invent a field<a class="headerlink" href="#5-never-invent-a-field" title="Permanent link">&para;</a></h2>
 <p>If an occupation or a day-level date was not in the source, it is <strong>absent</strong>, not
 guessed. The date grammar deliberately has no syntax for "probably March" — a format for

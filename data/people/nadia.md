@@ -5,6 +5,15 @@ surname: Bundervoet
 sex: f
 confidence: fam
 line: bundervoet
-father: marcel_b
-mother: rosette
+father:
+  id: marcel_b
+  confidence: fam
+mother:
+  id: rosette
+  confidence: fam
+siblings:
+  - id: karine
+    confidence: fam
+  - id: ronny
+    confidence: fam
 ---

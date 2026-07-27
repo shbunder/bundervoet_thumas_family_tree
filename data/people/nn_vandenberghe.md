@@ -8,6 +8,7 @@ line: bostyn-cappaert
 spouses:
   - id: judocus_sabbe_1475
     name: Judocus (Joos) Sabbe
+    confidence: sup
 sources:
   - tree-isavdw
 ---

@@ -94,7 +94,8 @@ pyproject.toml                  the uv project. No dependencies, on purpose
 The central discipline. **Only irreducible facts are stored.** Everything else is
 computed on load from `father`/`mother` links:
 
-- children, siblings, generations
+- children, generations
+- siblings — *except* the sibships no parent link can state; see below
 - kinship between any two people
 - lineages and Index groupings
 - the display line under each name
@@ -105,14 +106,91 @@ A relationship is **never a field**. It is a fact about a *pair*, so it is deriv
 Writing "Ronny's sister" into a record puts a second, un-checkable copy of the tree into
 the prose, and nothing will ever validate it.
 
+**`siblings` is the one exception, and it is fenced rather than waved through.** See
+[below](#siblings-the-one-relationship-that-is-stored): the validator refuses a stated
+sibling link between two people who already share a recorded parent, so the field can only
+hold a sibship the links cannot derive. Where there is no first copy, there is no second
+copy to drift from it.
+
 The prose body is for reasoning, evidence and frontiers — the things that do not fit a
 field. It is never a second copy of one.
+
+## A link is a fact, so it carries its own confidence
+
+`father`, `mother` and each entry in `spouses` may be written either as a bare id or as a
+block with `confidence`, `source` and `note`. The scalar is not a legacy form: 646 of this
+tree's links are simply known, and a three-line block to say so would add two thousand
+lines of ceremony to 329 records for no fact gained.
+
+The vocabulary is **the same one a person carries**, because it is the same question asked
+of a different object — how well is this known. On a person it grades their own facts; on a
+link it grades whether the two ends really belong together, and a parent documented to the
+day can still be the wrong parent. One code is added for links, `asm` (assumed), and one is
+refused: `unk` means "not researched yet", which is a state a person can be in and a link
+cannot — a link whose existence is unknown is an absent link.
+
+Two consequences worth stating separately:
+
+- **An unqualified link states no confidence and does not inherit the person's.** The first
+  draft inherited, which reads well and invents a grade no source gave. It also broke the
+  marriage invariant below: a marriage is one link written on two records, so inheriting
+  made his `doc` and her `sup` disagree about the same act.
+- **`asm` links are invisible to the scorer**, so the tree's own guesses can never be
+  counted as one of the two independent identifiers that licenses the next graft. That is
+  what makes drawing one survivable; see [evidence § 4a](method/evidence.md).
+
+In memory there is exactly one shape — `load_person` normalises the scalar into a block,
+because `if p.get("father")` is truthy for both and `p["father"] == pid` silently goes
+False against a dict, so a missed reader would not raise, it would just stop finding
+parents. Read links through `parent_id`, `link_of` and `edge_confidence`, never off the
+field.
+
+## `siblings` — the one relationship that is stored
+
+Siblinghood is derived from shared parents wherever it can be. It cannot be derived when an
+act names two people as brother and sister and names no parent either of them can be
+grafted to — and that case had no home at all. `antoine_vanald` states it in its own prose:
+a probable elder sister, named by a third act giving the same parent pair, given up because
+*"she cannot be linked as a sibling while the parents themselves are only a frontier"*.
+
+So `siblings` is a list of links carrying the same `confidence`/`source`/`note` as any
+other, with three rules:
+
+- **It may not state what the tree derives.** A stated link between two people who already
+  share a recorded parent is an error. This is the whole fence: the field holds only what
+  the parent links cannot say, so it is not a second copy of anything.
+- **It is mutual and agrees field for field**, like a marriage. Siblinghood is symmetric;
+  a one-sided entry makes the tree answer differently depending on whose record is read.
+- **It needs an `id`, not a name.** Unlike a spouse — a spouse with no record still belongs
+  on the card as a name, but a sibling with no record connects nothing in the graph, which
+  is the only reason to state one.
+
+### The parent nobody could name
+
+Downstream, the kinship engine gives each stated sibship **one anonymous shared parent**,
+derived on load and written nowhere. That is the honest reading of the fact — the act says
+these two share a parent it could not identify — and it means every relation past the pair
+falls out instead of being special-cased: siblings read as siblings, their children as
+first cousins, the index counts them blood (objective 2). Union-find over the stated links,
+so A–B and B–C are one sibship rather than two overlapping ones.
+
+Two consequences worth stating:
+
+- A stated sibship never reads as **half-**sibling. Sharing one derived parent means the
+  other is known to differ; sharing the anonymous one means nothing is known about it, and
+  "half-brother" would assert more than the act did.
+- The arch on the relations tab draws that apex as an **unnamed dashed card**. It is a
+  position the records require and no record fills, and giving it a name it does not have
+  is what the whole model exists to prevent.
 
 ## Invariants the validator enforces
 
 | Invariant | Why |
 |---|---|
 | `father`/`mother` are ids of real person files | The vertical link |
+| A link's `confidence` is one of `doc`/`sup`/`fam`/`asm`, and its `source` resolves | A link is a fact and is evidenced like one |
+| An `asm` link states what it rests on | An assumption nobody explained cannot be checked by anyone later |
+| A stated `siblings` link is mutual, and never states a sibship the parent links derive | The one stored relationship, fenced to the case with nothing to duplicate |
 | **Marriage is mutual** — if A lists B, B lists A | Lets the tree be walked sideways |
 | **A shared child proves a couple** — `father: A` + `mother: B` obliges each to list the other | Lets the tree be built *downwards* without losing branches |
 | Every referenced person has their own file | No one exists only as a string in someone else's note |

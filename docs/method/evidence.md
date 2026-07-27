@@ -5,6 +5,10 @@ two different Hammes, two Simonne Vandewalles, Van Craenenbroecks in the wrong p
 the Gustaaf/Gustavus confusion. They are enforced by the validator and the scorer, not by
 good intentions.
 
+Rule 4 has a qualification, § 4a, which is the one place this project permits a link on a
+single identifier. It is worth reading with rule 1 rather than instead of it: the floor
+holds because a link that declares itself assumed is evidence for nothing.
+
 ---
 
 ## 1. Never match on name alone
@@ -61,6 +65,54 @@ of them is `doc`.
 Record it in the person's prose body as a named frontier. Do not graft it. The temptation
 to graft a 90%-likely parent is exactly the mechanism by which trees become unreliable,
 because nothing downstream will ever remember the 10%.
+
+## 4a. …unless the link itself says it is assumed
+
+The rule above is right about the mechanism and wrong about the remedy, and at the scale
+this tree is aiming for the difference matters. Refusing every one-identifier link buys
+correctness at a price paid in coverage: a marriage act naming six people yields one graft
+instead of five, and the four it withheld are not recorded as doubts — they are recorded
+nowhere a tool can read. The 10% nothing downstream remembers is the real problem. Refusing
+the link is only one way to solve it.
+
+So a link may be drawn on one identifier **if it declares that about itself**:
+
+```yaml
+mother:
+  id: ludovica_vanald
+  confidence: asm
+  source: agatha-diksmuide-1880-birth
+  note: birth act names a Ludovica Vanalderweireldt; commune and year agree, no second identifier
+```
+
+Four things then hold, and it is only safe because all four do:
+
+1. **An `asm` link is evidence for nothing.** `from_person` hides it from the scorer in
+   both directions — as a parent, and as a child reaching back. This is the whole safety
+   property. Without it, guess A licenses graft B, which licenses C, every one scoring as
+   well-supported, and the error rate compounds down the line with nothing marking where it
+   started. The two-independent-identifiers floor in rule 1 stays a floor precisely because
+   the tree's own guesses cannot be counted towards it.
+2. **It must say what it rests on.** A link with `confidence: asm` and no `note` fails the
+   build. An assumption nobody explained cannot be checked by anyone later, including
+   whoever made it — the note *is* the finding, and the link is only its consequence.
+3. **It is visible.** The page draws the join red, with the note on hover; the GEDCOM
+   export carries a note on the `FAMC` link, because an exported tree is exactly where a
+   bad graft goes to become unfindable, copied into other trees and cited back as
+   agreement.
+4. **It is queued, and the queue is derived.** `research.py weak` lists every one, ordered
+   by how many people are in the tree *only* through it — measured by walking the pedigree
+   with the link cut, not counted from the parent's ancestry, which double-counts wherever
+   the tree folds back on itself. Because the queue is computed from the records on every
+   run, an assumption cannot be forgotten and cannot go stale.
+
+What this does **not** license: an `asm` link with no note, an `asm` link nobody ever
+returns to, or `asm` as a way to avoid the argument. Rule 3 still applies — upgrading to
+`doc` needs a document — and a stated conflict still vetoes outright, whatever the link
+says about itself.
+
+There is deliberately no "assumed since" date. Git already knows when a line was written,
+and a hand-kept date beside it is the second copy the data model forbids.
 
 ## 5. Never invent a field
 

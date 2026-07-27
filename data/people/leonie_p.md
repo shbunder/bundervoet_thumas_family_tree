@@ -10,13 +10,18 @@ death:
 confidence: doc
 nickname: Meme Lenie
 line: de-keyser
-father: eduardus_p
-mother: magdalena_vb
+father:
+  id: eduardus_p
+  confidence: doc
+mother:
+  id: magdalena_vb
+  confidence: doc
 spouses:
   - id: jerome_dk
     name: Jerome Joseph Dekeyser
     married: 1919-12-10
     place: Sint-Niklaas
+    confidence: sup
 sources:
   - S16
   - S7

@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: adriana_devriese
     name: Adriana De Vriese
+    confidence: sup
 sources:
   - tree-isavdw
 ---

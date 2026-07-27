@@ -7,6 +7,7 @@ line: bostyn-cappaert
 spouses:
   - id: bernardus_cap
     name: Bernardus Cappaert
+    confidence: sup
 sources:
   - fauconier-parenteel
 ---

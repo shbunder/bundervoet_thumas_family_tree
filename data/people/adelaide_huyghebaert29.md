@@ -7,8 +7,31 @@ birth:
   place: Oudenburg
 confidence: sup
 line: van-iseghem
-father: hubertus_huyghebaert
-mother: joanna_derudder
+father:
+  id: hubertus_huyghebaert
+  confidence: sup
+mother:
+  id: joanna_derudder
+  confidence: sup
+siblings:
+  - id: adelia_huyghebaert26
+    confidence: sup
+  - id: appolonia_huyghebaert
+    confidence: sup
+  - id: augustinus_huyghebaert24
+    confidence: sup
+  - id: carolus_huyghebaert22
+    confidence: sup
+  - id: carolus_huyghebaert23
+    confidence: sup
+  - id: magdalena_huyghebaert34
+    confidence: sup
+  - id: marielouise_huyghebaert32
+    confidence: sup
+  - id: petrus_huyghebaert27
+    confidence: sup
+  - id: petruspaulus_huyghebaert37
+    confidence: sup
 sources:
   - rab-bs-geboorten
 ---

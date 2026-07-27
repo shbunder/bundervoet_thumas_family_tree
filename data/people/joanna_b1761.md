@@ -9,8 +9,27 @@ death:
   date: "1825"
 confidence: sup
 line: bundervoet
-father: petrus_b1727
-mother: marie_anna_dedeckere
+father:
+  id: petrus_b1727
+  confidence: sup
+mother:
+  id: marie_anna_dedeckere
+  confidence: sup
+siblings:
+  - id: christophorus_b1755
+    confidence: sup
+  - id: coleta_b1766
+    confidence: sup
+  - id: joannes_bapt_b1757
+    confidence: sup
+  - id: joannis_b1751
+    confidence: sup
+  - id: livina_maria_b1760
+    confidence: sup
+  - id: livinus_b1752
+    confidence: sup
+  - id: petronella_b1754
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

@@ -8,13 +8,31 @@ birth:
   place: Oostende
 confidence: doc
 line: van-iseghem
-father: eduardus_vi
-mother: emma_vincke
+father:
+  id: eduardus_vi
+  confidence: sup
+mother:
+  id: emma_vincke
+  confidence: doc
+siblings:
+  - id: camillusgustavus_vi05
+    confidence: sup
+  - id: camillushenricus_vi11
+    confidence: sup
+  - id: flavie_vi
+    confidence: doc
+  - id: joannes_vi
+    confidence: doc
+  - id: maria_vi
+    confidence: sup
+  - id: valentina_vi
+    confidence: sup
 spouses:
   - id: angela_gunst
     name: Angela Coralia Gunst
     married: 1927-01-15
     place: Oostende
+    confidence: sup
 sources:
   - rab-bs-huwelijken
   - rab-bs-geboorten

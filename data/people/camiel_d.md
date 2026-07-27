@@ -7,6 +7,7 @@ line: devriendt
 spouses:
   - id: declercq
     name: Mathildis Clothildis Declercq
+    confidence: sup
 sources:
   - tree-wernero
 ---

@@ -11,11 +11,16 @@ death:
 confidence: sup
 occupation: koster / landman (church sexton / farmer)
 line: bostyn-cappaert
-father: simon_vandewalle_1530
-mother: joanna_wittenheyns
+father:
+  id: simon_vandewalle_1530
+  confidence: sup
+mother:
+  id: joanna_wittenheyns
+  confidence: sup
 spouses:
   - id: christina_desangere
     name: Christina Desangere
+    confidence: sup
 sources:
   - tree-isavdw
 ---

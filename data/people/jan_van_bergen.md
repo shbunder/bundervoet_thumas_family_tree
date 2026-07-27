@@ -12,6 +12,7 @@ line: de-keyser
 spouses:
   - id: ida_vermandel
     name: Ida Vermandel
+    confidence: sup
 sources:
   - fs-hamme-1865-death-ida-vermandel
   - fs-hamme-1882-marriage-vermorgen-vandenberghe

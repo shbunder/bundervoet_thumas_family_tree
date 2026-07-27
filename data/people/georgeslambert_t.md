@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: menuisier (carpenter)
 line: thumas
-father: georges1_t
-mother: noel_t
+father:
+  id: georges1_t
+  confidence: sup
+mother:
+  id: noel_t
+  confidence: sup
 spouses:
   - id: quinart
     name: Marie Anne Catherine Quinart (Kinart)
     married: 1801-02-09
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - S23
   - geneanet

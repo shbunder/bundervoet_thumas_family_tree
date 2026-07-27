@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: georgius_maertens
     name: Georgius Maertens
+    confidence: sup
 sources:
   - tree-isavdw
 ---

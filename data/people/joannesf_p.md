@@ -8,11 +8,16 @@ birth:
 confidence: sup
 occupation: arbeider (labourer)
 line: paelinck
-father: janbaptist_p
-mother: joanna_va
+father:
+  id: janbaptist_p
+  confidence: sup
+mother:
+  id: joanna_va
+  confidence: sup
 spouses:
   - id: rosalia_w
     name: Rosalia Wittock
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

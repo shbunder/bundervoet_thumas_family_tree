@@ -11,13 +11,31 @@ death:
 confidence: sup
 occupation: timmerman (carpenter)
 line: van-iseghem
-father: antoine_vanald
-mother: brigitte_wyllie
+father:
+  id: antoine_vanald
+  confidence: sup
+mother:
+  id: brigitte_wyllie
+  confidence: sup
+siblings:
+  - id: carolus_vanald
+    confidence: sup
+  - id: jean_vanald
+    confidence: sup
+  - id: catharina_looten
+    confidence: sup
+  - id: ludovica_looten
+    confidence: sup
+  - id: maria_looten
+    confidence: sup
+  - id: renatus_looten
+    confidence: sup
 spouses:
   - id: marietheresia_bouckaert
     name: Marie Theresia Bouckaert
     married: 1828-04-20
     place: Diksmuide
+    confidence: sup
 sources:
   - rab-bs-huwelijken
   - rab-bs-overlijdens

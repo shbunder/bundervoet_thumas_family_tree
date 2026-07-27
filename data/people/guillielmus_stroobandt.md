@@ -8,11 +8,16 @@ death:
   date: "1721"
 confidence: sup
 line: bostyn-cappaert
-father: hercules_stroobandt
-mother: joanna_willaert
+father:
+  id: hercules_stroobandt
+  confidence: sup
+mother:
+  id: joanna_willaert
+  confidence: sup
 spouses:
   - id: clara_vansieleghem
     name: Clara Van Sieleghem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

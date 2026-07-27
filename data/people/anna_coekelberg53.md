@@ -7,8 +7,17 @@ birth:
   place: Bertem
 confidence: sup
 line: thumas
-father: jb_coekelberghs
-mother: anna_haesaerts
+father:
+  id: jb_coekelberghs
+  confidence: sup
+mother:
+  id: anna_haesaerts
+  confidence: sup
+siblings:
+  - id: coekelberghs
+    confidence: sup
+  - id: joannes_coekelberg58
+    confidence: sup
 sources:
   - S32
 ---

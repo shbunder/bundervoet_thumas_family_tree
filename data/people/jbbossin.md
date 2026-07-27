@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: herbergier (innkeeper)
 line: thumas
-father: judocus_bossin
-mother: maria_desmedt
+father:
+  id: judocus_bossin
+  confidence: sup
+mother:
+  id: maria_desmedt
+  confidence: sup
 spouses:
   - id: maria_wolf
     name: Maria Wolf
     married: 1858-06-17
     place: Sint-Stevens-Woluwe
+    confidence: sup
 sources:
   - S28
   - S33

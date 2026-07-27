@@ -3,18 +3,32 @@ id: georgesjoseph_t
 name: Georges Joseph Thumas
 surname: Thumas
 birth:
-  date: 1843
+  date: "1843"
   raw: declared at Grez-Doiceau on 31 March 1843
   place: Grez-Doiceau
 confidence: sup
 line: thumas
-father: georges2_t
-mother: joostens
+father:
+  id: georges2_t
+  confidence: sup
+mother:
+  id: joostens
+  confidence: sup
+siblings:
+  - id: charleseugene_t
+    confidence: sup
+  - id: georges_cj
+    confidence: sup
+  - id: jbzenon_t
+    confidence: sup
+  - id: mtstephanie_t
+    confidence: sup
 spouses:
   - id: deridder_sophie
     name: Sophie Miranda Deridder
     married: 1868-10-07
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - S25
   - netradyle-grez-mariages

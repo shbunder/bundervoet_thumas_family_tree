@@ -9,6 +9,7 @@ spouses:
     name: Paulina Van Den Berghe
     married: 1882-05-18
     place: Hamme (Oost-Vlaanderen)
+    confidence: doc
 sources:
   - fs-hamme-1882-marriage-vermorgen-vandenberghe
 ---

@@ -15,6 +15,7 @@ spouses:
     name: Adrianus Paelinck
     married: 1711-01-17
     place: Lochristi
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

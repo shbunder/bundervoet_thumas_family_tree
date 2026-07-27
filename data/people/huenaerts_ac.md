@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: vangindertaelen_jf
     name: Joannes Franciscus Van Gindertaelen
+    confidence: sup
 sources:
   - S34
 ---

@@ -16,6 +16,7 @@ spouses:
     name: Brigitte Josephine Joanna Wyllie
     married: 1803-06-08
     place: Diksmuide
+    confidence: sup
 sources:
   - tree-bartvanhooren
   - rab-bs-huwelijken

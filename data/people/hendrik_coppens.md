@@ -8,6 +8,7 @@ line: thumas
 spouses:
   - id: catharina_bossin
     name: Catharina Bossin
+    confidence: sup
 sources:
   - S26
 ---

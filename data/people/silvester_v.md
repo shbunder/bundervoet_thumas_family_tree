@@ -10,11 +10,16 @@ death:
   place: Zevekote
 confidence: sup
 line: vanstechelman
-father: andreasandries_v
-mother: boxoens
+father:
+  id: andreasandries_v
+  confidence: sup
+mother:
+  id: boxoens
+  confidence: sup
 spouses:
   - id: angela_c
     name: Angela Jacoba Casteleyn
+    confidence: sup
 sources:
   - tree-stechec
 ---

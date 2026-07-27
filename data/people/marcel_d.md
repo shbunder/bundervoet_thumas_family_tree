@@ -11,13 +11,18 @@ death:
 confidence: sup
 occupation: smid (blacksmith)
 line: devriendt
-father: camiel_d
-mother: declercq
+father:
+  id: camiel_d
+  confidence: sup
+mother:
+  id: declercq
+  confidence: sup
 spouses:
   - id: yvonne
     name: Yvonne Smessaert (1937)
     married: 1937-10-16
     place: Stene
+    confidence: sup
 sources:
   - tree-wernero
 ---

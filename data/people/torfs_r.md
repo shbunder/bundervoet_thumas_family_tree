@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: verstraeten_l
     name: Ludovicus Verstraeten
+    confidence: sup
 sources:
   - S35
 ---

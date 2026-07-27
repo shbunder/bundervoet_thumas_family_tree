@@ -9,6 +9,7 @@ line: thumas
 spouses:
   - id: vrebos_hf
     name: Henricus Franciscus Vrebos
+    confidence: sup
 sources:
   - S35
 ---

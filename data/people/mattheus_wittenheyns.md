@@ -12,6 +12,7 @@ line: bostyn-cappaert
 spouses:
   - id: maria_deruwe
     name: Maria De Ruwe
+    confidence: sup
 sources:
   - tree-isavdw
 ---

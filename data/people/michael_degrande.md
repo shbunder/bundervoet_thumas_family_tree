@@ -10,13 +10,18 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: petrus_degrande
-mother: adriana_sabbe
+father:
+  id: petrus_degrande
+  confidence: sup
+mother:
+  id: adriana_sabbe
+  confidence: sup
 spouses:
   - id: brigitta_deblaere
     name: Brigitta De Blaere
     married: 1755-05-04
     place: Ruiselede
+    confidence: sup
 sources:
   - tree-isavdw
 ---

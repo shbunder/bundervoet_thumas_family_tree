@@ -11,6 +11,7 @@ line: paelinck
 spouses:
   - id: joannesf_p
     name: Joannes Franciscus Paelinck
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

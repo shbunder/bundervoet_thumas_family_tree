@@ -8,6 +8,7 @@ line: bostyn-cappaert
 spouses:
   - id: maria_vanrenterghem
     name: Maria Van Renterghem
+    confidence: sup
 sources:
   - tree-isavdw
 ---

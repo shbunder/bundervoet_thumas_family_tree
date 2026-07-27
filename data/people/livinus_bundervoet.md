@@ -8,12 +8,16 @@ death:
   date: ~1651
 confidence: sup
 line: bundervoet
-father: petrus_bundervoet1560
+father:
+  id: petrus_bundervoet1560
+  confidence: sup
 spouses:
   - id: elisabeth_nn
     name: Elisabeth NN
+    confidence: sup
   - id: catharina_vanhecke
     name: Catharina van Hecke
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

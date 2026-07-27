@@ -11,13 +11,41 @@ death:
 confidence: sup
 occupation: schoenmaker (shoemaker)
 line: van-iseghem
-father: lucien_vincke
-mother: ludovica_vanald
+father:
+  id: lucien_vincke
+  confidence: sup
+mother:
+  id: ludovica_vanald
+  confidence: sup
+siblings:
+  - id: alfons_vincke
+    confidence: sup
+  - id: bellarmin_vincke
+    confidence: sup
+  - id: camilla_vincke
+    confidence: sup
+  - id: charles_vincke
+    confidence: sup
+  - id: emma_vincke
+    confidence: sup
+  - id: eugene_vincke
+    confidence: sup
+  - id: florence_vincke
+    confidence: sup
+  - id: irma_vincke
+    confidence: sup
+  - id: jerome_vincke
+    confidence: sup
+  - id: karolus_vincke
+    confidence: sup
+  - id: romanie_vincke
+    confidence: sup
 spouses:
   - id: valerie_bolle
     name: Valerie Marie Pharaïlde Bolle
     married: 1893-12-13
     place: Diksmuide
+    confidence: sup
 sources:
   - rab-bs-huwelijken
   - rab-bs-overlijdens

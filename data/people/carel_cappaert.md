@@ -10,13 +10,18 @@ death:
 confidence: sup
 occupation: dagloner (day-labourer)
 line: bostyn-cappaert
-father: bernardus_cap
-mother: sophia_vh
+father:
+  id: bernardus_cap
+  confidence: sup
+mother:
+  id: sophia_vh
+  confidence: sup
 spouses:
   - id: juliana_stroobandt
     name: Juliana Stroobandt
     married: 1863-09-30
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-1960dirk
 ---

@@ -9,11 +9,23 @@ death:
   place: Evergem
 confidence: sup
 line: bundervoet
-father: livinus_bundervoet
-mother: elisabeth_nn
+father:
+  id: livinus_bundervoet
+  confidence: sup
+mother:
+  id: elisabeth_nn
+  confidence: sup
+siblings:
+  - id: livinus_b1615
+    confidence: sup
+  - id: maria_b1623
+    confidence: sup
+  - id: wilhelmina_b1650
+    confidence: sup
 spouses:
   - id: joanna_vanhecke
     name: Joanna (Janneken) van Hecke
+    confidence: sup
 sources:
   - tree-paulderidder
   - tree-glorieuxp

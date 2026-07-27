@@ -10,6 +10,7 @@ spouses:
     name: Paula Mathilde Vanstechelman
     married: 1924-05-11
     place: Oostende
+    confidence: sup
 sources:
   - fs-wvl-bs
 ---

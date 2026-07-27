@@ -10,13 +10,31 @@ death:
   place: Diksmuide
 confidence: sup
 line: van-iseghem
-father: antoine_vanald
-mother: brigitte_wyllie
+father:
+  id: antoine_vanald
+  confidence: sup
+mother:
+  id: brigitte_wyllie
+  confidence: sup
+siblings:
+  - id: jean_vanald
+    confidence: sup
+  - id: petrus_vanald
+    confidence: sup
+  - id: catharina_looten
+    confidence: sup
+  - id: ludovica_looten
+    confidence: sup
+  - id: maria_looten
+    confidence: sup
+  - id: renatus_looten
+    confidence: sup
 spouses:
   - id: eugenia_dutreeuw
     name: Eugenia Henrica Dutreeuw
     married: 1828-06-04
     place: Diksmuide
+    confidence: sup
 sources:
   - tree-bartvanhooren
   - rab-bs-huwelijken

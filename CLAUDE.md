@@ -73,8 +73,13 @@ two different Hammes, two Simonne Vandewalles, the Gustaaf who was a Gustavus.
 3. **Confidence is honest, not aspirational.** `doc` = a primary act or image was actually
    read. `sup` = one member tree, unverified. `fam` = family testimony. `unk` = to
    research. Downgrading is always allowed; upgrading needs a document.
-4. **A strong lead is not a link.** Record it in the person's `note` as a named frontier.
-   Do not graft it. (`anna_vc` is the model for how to do this.)
+4. **A strong lead is not a link** — *unless the link says so itself.* Record a bare lead
+   in the person's `note` as a named frontier (`anna_vc` is the model). A link you are
+   willing to draw on one identifier is written as a block with `confidence: asm`, its
+   `source`, and a `note` saying which identifier it rests on and which is still missing.
+   An `asm` link is **evidence for nothing** — the scorer cannot see it, so it can never
+   become one of the two identifiers rule 1 demands. `research.py weak` is the queue of
+   them. Never `asm` without a note; never upgrade one without a document.
 5. **Never invent a field.** If an occupation or a day-level date wasn't in the source, it
    is absent, not guessed. Say "not in the reachable pages" in the log.
 6. **Corrections are first-class.** When a past conclusion is wrong, retract it explicitly
@@ -219,10 +224,21 @@ The rules worth having in front of you while editing records:
 1. **Nothing is listed twice.** The roster is the directory; the Index groups from each
    person's own `line`; citations are ids into `research/sources.json`. If you find
    yourself keeping two things in step by hand, that is the bug.
-2. **A relationship is never a field.** It is a fact about a *pair*, so it is derived from
-   the links. Writing "Ronny's sister" into a record puts a second, un-checkable copy of the
-   tree in the prose. The same goes for which children came from which marriage: every child
-   already names its own father and mother.
+2. **A relationship is never a field, but a link is a fact.** A *relationship* is derived from
+   the links — never stored. A *link* (`father`, `mother`, a `spouses` or `siblings` entry)
+   carries its own `confidence`, `source` and `note`, on the same scale a person does, because
+   how well a join is known is a different question from how well either end is.
+   The derived half is unchanged: writing "Ronny's sister" into a record puts a second,
+   un-checkable copy of the tree in the prose. The same goes for which children came from
+   which marriage: every child already names its own father and mother.
+   **Edges are written out in full, and `build.py` writes them.** Every `father`, `mother`,
+   `siblings` and `spouses` entry carries an explicit `confidence`; every derived sibship is
+   materialised as `siblings` edges. Do not hand-maintain either — `uv run tools/edges.py
+   sync` generates them and the validator FAILS on a record that disagrees, which is what
+   keeps 994 redundant sibling edges from drifting off the parent links they come from.
+   Hand-written `confidence`, `source`, `note` and any sibling the parent links cannot reach
+   are findings and are never overwritten. A stated sibship the parent links *contradict* —
+   both pairs fully recorded, sharing nobody — is an error.
 3. **Marriage is mutual, and a shared child proves a couple.** If A lists B, B lists A; a
    record with `father: A`, `mother: B` obliges A and B to list each other. **One marriage,
    one set of facts** — the two records must agree field for field. The validator enforces
@@ -244,6 +260,8 @@ The rules worth having in front of you while editing records:
 ```
 uv run tools/build.py                      validate, then regenerate bundle.js + the GEDCOM
 uv run tools/check_data.py                 validate only (must be green before commit)
+uv run tools/edges.py sync                 write every link out in full — build.py does this too
+uv run tools/edges.py check                which records' edges are out of step
 
 uv run tools/research.py frontiers         what to work on next, ranked by value/cost
 uv run tools/research.py acts              which held act answers the most frontiers
@@ -254,6 +272,7 @@ uv run tools/research.py stale             misses a venue has since outgrown
 uv run tools/research.py children          unrecorded children of couples we hold — objective 2
 uv run tools/research.py components        disconnected families — objective 3
 uv run tools/research.py collapse          where the tree folds back on itself
+uv run tools/research.py weak              links drawn on one identifier — the debt queue
 uv run tools/research.py log …             record a search — hit or miss
 
 uv run tools/harvest.py bulk <archive>     a WHOLE archive in one request — try this first

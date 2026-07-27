@@ -10,13 +10,18 @@ death:
   place: Wingene
 confidence: sup
 line: bostyn-cappaert
-father: judocus_devriese
-mother: esther_vanderbeken
+father:
+  id: judocus_devriese
+  confidence: sup
+mother:
+  id: esther_vanderbeken
+  confidence: sup
 spouses:
   - id: joanna_vdoughstraete
     name: Joanna Van Der Oughstraete
     married: 1687-11-23
     place: Tielt
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

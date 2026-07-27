@@ -65,6 +65,6 @@ def build_bundle() -> str:
         _call("lineages", config["lineages"]),
         _call("groups", site["groups"]),
         _call("roster", roster),
-        *[_call("person", to_browser_record(people[pid])) for pid in roster],
+        *[_call("person", to_browser_record(people[pid], people)) for pid in roster],
     ]
     return "\n".join(lines) + "\n"

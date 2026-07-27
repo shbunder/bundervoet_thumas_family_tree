@@ -11,13 +11,21 @@ death:
 confidence: doc
 occupation: huishoudster (housekeeper)
 line: paelinck
-father: carolus_vb
-mother: martinet
+father:
+  id: carolus_vb
+  confidence: sup
+mother:
+  id: martinet
+  confidence: sup
+siblings:
+  - id: alphonsus_vb
+    confidence: sup
 spouses:
   - id: eduardus_p
     name: Eduardus Paelinck
     married: 1888-11-17
     place: Sint-Niklaas
+    confidence: doc
 sources:
   - S16
   - S7

@@ -11,13 +11,21 @@ death:
 confidence: doc
 occupation: landbouwer (farmer)
 line: thumas
-father: arnoldus_bossin
-mother: elisabeth_deyn
+father:
+  id: arnoldus_bossin
+  confidence: sup
+mother:
+  id: elisabeth_deyn
+  confidence: sup
+siblings:
+  - id: anna_maria_bossin
+    confidence: sup
 spouses:
   - id: peremans
     name: Joanna Catharina Jacoba Peremans
     married: 1846-02-24
     place: Zaventem
+    confidence: doc
 sources:
   - S19
   - S22

@@ -7,8 +7,19 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: sup
 line: thumas
-father: coenraets_f
-mother: henrica_thumas
+father:
+  id: coenraets_f
+  confidence: sup
+mother:
+  id: henrica_thumas
+  confidence: sup
+siblings:
+  - id: amelia_coenraets03
+    confidence: sup
+  - id: pieter_coenraets04
+    confidence: sup
+  - id: seraphina_coenraets02
+    confidence: sup
 sources:
   - S32
 ---

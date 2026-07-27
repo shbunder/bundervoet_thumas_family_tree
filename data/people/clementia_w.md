@@ -8,13 +8,18 @@ death:
   date: "1927"
 confidence: sup
 line: vanstechelman
-father: henricus_w
-mother: angela_vd
+father:
+  id: henricus_w
+  confidence: sup
+mother:
+  id: angela_vd
+  confidence: sup
 spouses:
   - id: petrusjacobus_v
     name: Petrus Jacobus Vanstechelman
     married: 1875-01-21
     place: Mariakerke
+    confidence: sup
 sources:
   - fs-wvl-bs
   - tree-stechec

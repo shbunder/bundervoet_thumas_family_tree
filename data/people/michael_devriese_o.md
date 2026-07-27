@@ -11,6 +11,7 @@ line: bostyn-cappaert
 spouses:
   - id: judoca_scherrens
     name: Judoca Scherrens
+    confidence: sup
 sources:
   - tree-isavdw
   - tree-kathrynann

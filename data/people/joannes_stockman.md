@@ -11,6 +11,7 @@ line: bundervoet
 spouses:
   - id: guillielma_dellaert
     name: Guillielma (Willemijne) Dellaert
+    confidence: sup
 sources:
   - tree-paulderidder
 ---

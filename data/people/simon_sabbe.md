@@ -9,11 +9,16 @@ death:
   place: Oostkamp
 confidence: sup
 line: bostyn-cappaert
-father: petrus_sabbe
-mother: judoca_vandenberghe
+father:
+  id: petrus_sabbe
+  confidence: sup
+mother:
+  id: judoca_vandenberghe
+  confidence: sup
 spouses:
   - id: joanna_rotsaert_sabbe
     name: Joanna Rotsaert
+    confidence: sup
 sources:
   - tree-isavdw
 ---

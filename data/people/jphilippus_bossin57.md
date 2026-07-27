@@ -9,12 +9,28 @@ birth:
 confidence: sup
 occupation: papiermaekersgast (paper-mill hand)
 line: thumas
-father: jbbossin
-mother: maria_wolf
+father:
+  id: jbbossin
+  confidence: sup
+mother:
+  id: maria_wolf
+  confidence: sup
+siblings:
+  - id: frans_bossin82
+    confidence: sup
+  - id: gjosef_bossin69
+    confidence: sup
+  - id: janphilip_bossin76
+    confidence: sup
+  - id: ludovicus_bossin79
+    confidence: sup
+  - id: pamandus_bossin59
+    confidence: sup
 spouses:
   - name: Maria Theresia De Rom
     married: 1907-05-25
     place: Sint-Stevens-Woluwe
+    confidence: sup
 sources:
   - S33
 ---

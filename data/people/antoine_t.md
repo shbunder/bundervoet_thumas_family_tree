@@ -15,6 +15,7 @@ spouses:
   - id: daix
     name: Dieudonnée Daix
     married: 1687-11-30
+    confidence: sup
 sources:
   - tree-m2155
 ---

@@ -11,13 +11,21 @@ death:
 confidence: doc
 occupation: menuisier (carpenter)
 line: thumas
-father: georgeslambert_t
-mother: quinart
+father:
+  id: georgeslambert_t
+  confidence: sup
+mother:
+  id: quinart
+  confidence: sup
+siblings:
+  - id: etienne_thumas
+    confidence: sup
 spouses:
   - id: joostens
     name: Marie Catharina Joostens
     married: 1835-02-17
     place: Grez-Doiceau
+    confidence: sup
 sources:
   - S23
   - S15

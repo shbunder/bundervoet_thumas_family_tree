@@ -10,13 +10,18 @@ death:
   place: Lochristi
 confidence: sup
 line: paelinck
-father: ludovicus_p
-mother: petronella_v
+father:
+  id: ludovicus_p
+  confidence: sup
+mother:
+  id: petronella_v
+  confidence: sup
 spouses:
   - id: livina_pickaut
     name: Livina Pickaut
     married: 1711-01-17
     place: Lochristi
+    confidence: sup
 sources:
   - tree-stefpaelinck
 ---

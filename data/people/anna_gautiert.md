@@ -10,13 +10,18 @@ death:
   place: Oostende
 confidence: sup
 line: van-iseghem
-father: albertus_gautiert
-mother: theresia_robbe
+father:
+  id: albertus_gautiert
+  confidence: sup
+mother:
+  id: theresia_robbe
+  confidence: sup
 spouses:
   - id: joannes_jos_vi
     name: Joannes Josephus Van Iseghem
     married: 1847-03-24
     place: Oostende
+    confidence: sup
 sources:
   - tree-gverdievel
   - rab-bs-huwelijken

@@ -13,6 +13,7 @@ spouses:
     name: Petrus Van Nieuwenhuyse
     married: 1673-07-23
     place: Oostkamp
+    confidence: sup
 sources:
   - tree-isavdw
 ---

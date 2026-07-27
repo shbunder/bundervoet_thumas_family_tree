@@ -7,13 +7,18 @@ death:
   place: Oostkamp (Ruddervoorde)
 confidence: sup
 line: bostyn-cappaert
-father: willem_sabbe_y
-mother: clara_vandeputte
+father:
+  id: willem_sabbe_y
+  confidence: sup
+mother:
+  id: clara_vandeputte
+  confidence: sup
 spouses:
   - id: judoca_vandenberghe
     name: Judoca Vandenberghe
     married: 1616-06-11
     place: Oostkamp (Ruddervoorde)
+    confidence: sup
 sources:
   - tree-isavdw
 ---

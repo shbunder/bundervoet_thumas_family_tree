@@ -4,18 +4,46 @@ name: Florence Amelie Vincke
 surname: Vincke
 sex: f
 birth:
-  date: 1869
+  date: "1869"
   place: Diksmuide
 confidence: sup
 occupation: kantwerkster (lace-maker)
 line: van-iseghem
-father: lucien_vincke
-mother: ludovica_vanald
+father:
+  id: lucien_vincke
+  confidence: sup
+mother:
+  id: ludovica_vanald
+  confidence: sup
+siblings:
+  - id: alfons_vincke
+    confidence: sup
+  - id: bellarmin_vincke
+    confidence: sup
+  - id: camilla_vincke
+    confidence: sup
+  - id: charles_vincke
+    confidence: sup
+  - id: emma_vincke
+    confidence: sup
+  - id: eugene_vincke
+    confidence: sup
+  - id: irma_vincke
+    confidence: sup
+  - id: jerome_vincke
+    confidence: sup
+  - id: karolus_vincke
+    confidence: sup
+  - id: romanie_vincke
+    confidence: sup
+  - id: theophil_vincke
+    confidence: sup
 spouses:
   - id: caesar_bocklandt
     name: Caesar Antonius Bocklandt
     married: 1893-02-11
     place: Diksmuide
+    confidence: sup
 sources:
   - agatha-diksmuide-1893-marriage-bocklandt-vincke
   - rab-bs-geboorten

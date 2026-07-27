@@ -8,8 +8,12 @@ birth:
   place: Sint-Stevens-Woluwe
 confidence: sup
 line: thumas
-father: ludovicus_bossin79
-mother: misabella_t
+father:
+  id: ludovicus_bossin79
+  confidence: sup
+mother:
+  id: misabella_t
+  confidence: sup
 sources:
   - S33
 ---
