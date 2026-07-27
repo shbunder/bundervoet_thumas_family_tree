@@ -4823,3 +4823,39 @@ logged `ambiguous` rather than `hit` for that reason.
 1738–43 Sint-Pieters partition (five siblings and their father, in Egidius's own parish); the
 1786 Vergult page (Egidius by name, a year before his marriage); then the 1746–55 division
 (three sibling groups at once). Each is one ark and one page.
+
+## 84. The images behind the notarial series are captcha-gated — and what that does not mean
+
+§83 ended with a queue of three Gent notarial acts to read. **All three are unreachable, and
+the pass stops there rather than working around it.**
+
+The image ark pages serve a genuine human-verification challenge — hCaptcha, *"Ik ben een
+mens"*, confirmed by screenshot — and the underlying artifact endpoint answers
+`403 "Access to artifact denied"`. The ark page itself is a 13 KB SPA shell carrying no image
+reference, so there is nothing to reach without passing the challenge. **A captcha is a site
+saying it wants a person rather than a script, and answering it on a script's behalf is not
+something this project will do.** Logged `blocked`, with its scope: FamilySearch *image
+delivery* for these films only.
+
+**This sharpens §82 rather than reopening it, and the distinction is worth keeping straight.**
+§82 retracted an earlier claim that FamilySearch full-text was hCaptcha-blocked, and that
+retraction stands: the **search API** is not captcha'd, and its failure really was a 400
+caused by the UI sending `q.textCountry`, a parameter its own service rejects. What this pass
+found is a *different surface* — the **image pages** — which genuinely are challenged. One
+venue, two access paths, two different answers. Recording both stops the next pass from
+concluding either "FamilySearch is blocked" or "FamilySearch is open", both of which are
+wrong.
+
+**What is therefore still true and still usable:** the transcription layer for all 237
+documents is captured, readable and already mined. What is out of reach is only the
+confirmation step — turning `sup` OCR into a `doc` reading of the page.
+
+**The alternative route, unattempted and named for the next pass.** These are Rijksarchief
+holdings, and AGATHA serves Gent *notariaat* alongside the parish registers whose IIIF
+manifests §78 already used successfully. The obstacle is that notarial archives are ordered
+**by notary**, not by person or parish, so entering that series needs a notary's name and a
+year. The full-text layer supplies exactly one: **notary Vergult, Gent, 1786**, from the page
+carrying Egidius's own signature. That is where the next attempt should start, and it is a
+genuinely different search problem from anything this project has run.
+
+Nothing entered the tree this pass. Two searches logged, one `ambiguous` and one `blocked`.
