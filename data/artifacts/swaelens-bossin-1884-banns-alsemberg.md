@@ -2,7 +2,7 @@
 id: swaelens-bossin-1884-banns-alsemberg
 file: swaelens-bossin-1884-banns-alsemberg.jpg
 media: image/jpeg
-bytes: 2288928
+bytes: "2288928"
 sha256: 8b009fdaf57c84606de492c1b9d6d41f9c025aa7f990052997974c2ed3cb8cd2
 title: Marriage banns nrs. 7 and 8 — Joannes Baptista Julianus Swaelens × Ludovica Bossin, Alsemberg, 10 and 17 February 1884 (register image)
 kind: register-image
@@ -10,16 +10,16 @@ event: marriage-banns
 date: 1884-02-17
 place: Alsemberg
 repository: FamilySearch (filmed from the Brabant civil registers, Rijksarchief te Brussel)
-collection: "Belgium, Brabant, Civil Registration and Church Records, 1704-1916; Alsemberg, Registers van de Burgerlijke Stand 1800-1928 (catalog koha:136261), film 1688399, image group (DGS) 004714966, frame 004714966_00489, APID TH-1-18272-23998-41"
+collection: Belgium, Brabant, Civil Registration and Church Records, 1704-1916; Alsemberg, Registers van de Burgerlijke Stand 1800-1928 (catalog koha:136261), film 1688399, image group (DGS) 004714966, frame 004714966_00489, APID TH-1-18272-23998-41
 source: familysearch
 url: https://www.familysearch.org/ark:/61903/3:1:9392-CSTK-B
 accessed: 2026-07-27
 evidences:
-  - swaelens
-  - ludovica_bossin
-  - egidius_swaelens
-  - joanna_ackermans
-  - guilielmus_bossin
+  - swaelens_joannes_1858
+  - bossin_ludovica_1853
+  - swaelens_egidius
+  - ackermans_joanna
+  - bossin_guilielmus_1824
 ---
 
 **THE REGISTER IMAGE WAS READ.** The opening carries Alsemberg banns acts nrs. 6–10 on the

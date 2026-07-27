@@ -1,0 +1,23 @@
+---
+id: vanmaele_christina_1747
+name: Christina Van Maele
+surname: Van Maele
+birth:
+  date: 1747-09-30
+  place: Destelbergen
+death:
+  date: 1824-04-15
+  place: Laarne
+confidence: sup
+line: paelinck
+spouses:
+  - id: paelinck_apolonius_1748
+    name: Apolonius Paelinck
+    married: 1770-09-04
+    place: Destelbergen
+    confidence: sup
+sources:
+  - tree-stefpaelinck
+---
+
+Mother of Jan Baptist (1771); moved with the family from Destelbergen to Laarne.

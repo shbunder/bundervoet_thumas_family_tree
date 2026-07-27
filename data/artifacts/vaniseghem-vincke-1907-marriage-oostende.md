@@ -2,7 +2,7 @@
 id: vaniseghem-vincke-1907-marriage-oostende
 file: vaniseghem-vincke-1907-marriage-oostende.jpg
 media: image/jpeg
-bytes: 614578
+bytes: "614578"
 sha256: e847d6c49956a22c15c4863c34b3111315d1183e175815ecce2b778b499328d5
 title: Marriage act nr. 212 — Eduardus Ludovicus Rudolphus Vanyseghem × Emma Celesta Vincke, Oostende, 28 September 1907 (register image)
 kind: register-image
@@ -10,21 +10,21 @@ event: marriage
 date: 1907-09-28
 place: Oostende
 repository: FamilySearch (filmed from the West-Vlaanderen civil registers)
-collection: "België, West-Vlaanderen, burgerlijke stand, 1582-1950; image group (DGS) 004166052, frame 004166052_00139 (viewer i=138), APID TH-266-11779-56129-40, folio 136 blad"
+collection: België, West-Vlaanderen, burgerlijke stand, 1582-1950; image group (DGS) 004166052, frame 004166052_00139 (viewer i=138), APID TH-266-11779-56129-40, folio 136 blad
 source: familysearch
 url: https://www.familysearch.org/ark:/61903/3:1:S3HT-6SKS-SZ1?lang=nl&i=138
 accessed: 2026-07-27
 evidences:
-  - eduardus_vi
-  - emma_vincke
-  - flavie_vi
-  - eduardus_vi2
-  - joannes_vi
-  - joannes_vi2
-  - hermanie_janssen
-  - lucien_vincke
-  - ludovica_vanald
-  - alfons_vincke
+  - vaniseghem_eduardus_1880
+  - vincke_emma_1880
+  - vaniseghem_flavie_1898
+  - vaniseghem_eduardus_1901
+  - vaniseghem_joannes_1903
+  - vaniseghem_joannes_1852
+  - janssen_hermanie_1853
+  - vincke_lucien_1840
+  - vanalderweireldt_ludovica_1845
+  - vincke_alfons_1865
 ---
 
 **THE REGISTER IMAGE WAS READ**, not an index row. The scan is the double-page opening
@@ -104,7 +104,7 @@ principal signed; nobody is recorded as unable to write.
 It names **no fourth child**. Two further births already associated with this couple fall
 before the marriage and are absent from the clause, and in both cases the child was
 **already dead** by September 1907, which is the ordinary reason a legitimation clause
-passes over a child: [[camillusgustavus_vi05]] (b. Oostende 25 April 1905, d. Oostende 29
+passes over a child: [[vaniseghem_camillus_1905]] (b. Oostende 25 April 1905, d. Oostende 29
 November 1905) and the unattached "VINCKE Albert Joseph" of Diksmuide (b. 9 December 1899,
 d. 26 March 1900). The act is therefore **silent** on both, not contrary to either — it
 neither confirms nor refutes the paternity of Albert Joseph.

@@ -2,7 +2,7 @@
 id: thumas-bossin-1872-marriage-kraainem
 file: thumas-bossin-1872-marriage-kraainem.png
 media: image/png
-bytes: 742062
+bytes: "742062"
 sha256: 7b81cdcd77d8bae519c72f88be371a02ddacdcd505752cb2ea2a3fb23fa9ea47
 title: Marriage act nr. 2 — Georges Carolus Josephus Thumas and Antonia Bossin, Kraainem, 20 June 1872
 kind: index-page
@@ -15,12 +15,12 @@ source: S8
 url: https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00185915_0
 accessed: 2026-07-25
 evidences:
-  - georges_cj
-  - bossin
-  - georges2_t
-  - joostens
-  - guilielmus_bossin
-  - peremans
+  - thumas_georges_1836
+  - bossin_antonia_1849
+  - thumas_georges_1804
+  - joostens_marie_1810
+  - bossin_guilielmus_1824
+  - peremans_joanna_1824
 ---
 
 The parents' generation of the 1902 act ([[thumas-vandenbemden-1902-marriage-kraainem]]),

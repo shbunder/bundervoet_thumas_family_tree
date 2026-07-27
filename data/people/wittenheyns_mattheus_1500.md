@@ -1,0 +1,20 @@
+---
+id: wittenheyns_mattheus_1500
+name: Mattheus Wittenheyns
+surname: Wittenheyns
+birth:
+  date: ~1500
+death:
+  date: ~1546
+  place: Oostkamp
+confidence: sup
+line: bostyn-cappaert
+spouses:
+  - id: deruwe_maria_1500
+    name: Maria De Ruwe
+    confidence: sup
+sources:
+  - tree-isavdw
+---
+
+DEEPEST CONFIRMED ANCESTOR (with his wife). Called 'gheseyt Maraels'. Named with wife and children in the 1547 Bruges orphan register (weesregister St.-Jan). Born ~1500 — the reign of Charles V. No parents recorded.

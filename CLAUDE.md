@@ -249,8 +249,14 @@ The rules worth having in front of you while editing records:
    a record whose only date was prose is, to the matcher, entirely undated.
 5. **`sex` is recorded from what a source says**, never from a forename — and being a
    `father`/`mother` already settles it.
-6. **Ids are stable, and data files are plain text** (`é`, `&`, never HTML entities).
-   Renaming an id breaks every reference. The renderer escapes.
+6. **Ids follow one form, and only a tool may change them.** `<surname>_<given>_<birthyear>`,
+   lowercase ASCII, particles folded (`vandenbemden_adela_1884`); the year is omitted where no
+   birth year is asserted. Surname first so the directory sorts into families and
+   `ls data/people | grep dekeyser` is a line of descent. A rename breaks every reference —
+   1925 wikilinks, 444 log entries, 35 artifacts, two config files — so never do one by hand:
+   `uv run tools/rename_ids.py plan`, then `apply`, which moves all of them and then proves
+   nothing dangles. **Data files are plain text** (`é`, `&`, never HTML entities); the renderer
+   escapes.
 7. **Presentation carries no facts:** nothing in `assets/` contains a name or a date.
 
 ---
@@ -262,6 +268,8 @@ uv run tools/build.py                      validate, then regenerate bundle.js +
 uv run tools/check_data.py                 validate only (must be green before commit)
 uv run tools/edges.py sync                 write every link out in full — build.py does this too
 uv run tools/edges.py check                which records' edges are out of step
+uv run tools/rename_ids.py plan            ids that are not in canonical form
+uv run tools/rename_ids.py apply           rename them, and every reference, in one pass
 
 uv run tools/research.py frontiers         what to work on next, ranked by value/cost
 uv run tools/research.py acts              which held act answers the most frontiers

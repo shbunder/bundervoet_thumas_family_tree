@@ -734,6 +734,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ids
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-date-grammar" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1096,6 +1107,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ids
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-date-grammar" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1317,7 +1339,7 @@ field.</p>
 <h2 id="siblings-the-one-relationship-that-is-stored"><code>siblings</code> — the one relationship that is stored<a class="headerlink" href="#siblings-the-one-relationship-that-is-stored" title="Permanent link">&para;</a></h2>
 <p>Siblinghood is derived from shared parents wherever it can be. It cannot be derived when an
 act names two people as brother and sister and names no parent either of them can be
-grafted to — and that case had no home at all. <code>antoine_vanald</code> states it in its own prose:
+grafted to — and that case had no home at all. <code>vanalderweireldt_antoine_1780</code> states it in its own prose:
 a probable elder sister, named by a third act giving the same parent pair, given up because
 <em>"she cannot be linked as a sibling while the parents themselves are only a frontier"</em>.</p>
 <p>So <code>siblings</code> is a list of links carrying the same <code>confidence</code>/<code>source</code>/<code>note</code> as any
@@ -1403,7 +1425,27 @@ so A–B and B–C are one sibship rather than two overlapping ones.</p>
 </tr>
 </tbody>
 </table>
-<p>Ids are stable. Renaming one breaks every reference — don't.</p>
+<h2 id="ids">Ids<a class="headerlink" href="#ids" title="Permanent link">&para;</a></h2>
+<p><code>&lt;surname&gt;_&lt;given&gt;_&lt;birthyear&gt;</code> — lowercase ASCII, particles folded in, so "Van den Bemden"
+is <code>vandenbemden</code> and a family is one prefix. <strong>Surname first</strong>, because the point of an id
+here is finding something by hand: the directory listing sorts into families, and
+<code>ls data/people | grep dekeyser</code> is a line of descent. The first given name only — "Adriana
+Theresia Judoca Sabbe" is <code>sabbe_adriana_1703</code>, and the disambiguation the rest would buy is
+already bought by the year.</p>
+<p>The year is <code>point_year</code>, so it appears only where the record <em>asserts</em> one: <code>&lt;1727</code> bounds
+a birth without stating it, and an id ending <code>_1727</code> would be claiming more than the record.
+152 people have no year in their id for that reason. A numeric suffix breaks a genuine
+clash; across 537 people there are currently none.</p>
+<p>Renaming breaks every reference — 1925 wikilinks, 444 log entries, 35 artifact records, two
+config files — so it is done by machine or not at all:</p>
+<div class="highlight"><pre><span></span><code>uv run tools/rename_ids.py plan      what would change, writing nothing
+uv run tools/rename_ids.py apply     all of it, then a check that nothing dangles
+</code></pre></div>
+<p>It deliberately never rewrites prose. 55 of the old ids were also ordinary words —
+<code>alphonsus</code> was an id and a forename, <code>bossin</code> an id and a surname — so a text substitution
+would have corrupted the sentences describing the evidence while looking like it worked.
+Only exact structured positions and <code>[[…]]</code> links are touched, and anything left pointing at
+a dead id is reported rather than guessed at.</p>
 <h2 id="the-date-grammar">The date grammar<a class="headerlink" href="#the-date-grammar" title="Permanent link">&para;</a></h2>
 <p>A deliberately small, fixed grammar, so dates are queryable and sortable rather than
 prose:</p>

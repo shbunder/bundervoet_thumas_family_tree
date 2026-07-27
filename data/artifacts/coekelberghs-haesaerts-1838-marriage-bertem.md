@@ -2,7 +2,7 @@
 id: coekelberghs-haesaerts-1838-marriage-bertem
 file: coekelberghs-haesaerts-1838-marriage-bertem.jpg
 media: image/jpeg
-bytes: 1522005
+bytes: "1522005"
 sha256: 0ee0fa1a2c9201ebd1241ad7569723c7a8605b604d0392d088c42f2afb9e402b
 title: Marriage act nr. 8 — Joannes Baptista Coekelberghs × Anna Haesaerts, Berthem (Bertem), 30 October 1838 (register image)
 kind: civil-act
@@ -15,8 +15,8 @@ source: fs-bertem-1838-marriage-register-nr8
 url: https://www.familysearch.org/ark:/61903/3:1:9392-HG83-X
 accessed: 2026-07-26
 evidences:
-  - jb_coekelberghs
-  - anna_haesaerts
+  - coekelberghs_joannes_1809
+  - haesaerts_anna_1810
 ---
 
 **THIS IS THE REGISTER IMAGE, READ LINE BY LINE — not an index and not a transcription.**
@@ -120,7 +120,7 @@ what a search matches on:
 
 ## The forename question, which is what this act was opened for
 
-[[anna_haesaerts]] is written three ways across the acts that name her — *Anna* in 1838,
+[[haesaerts_anna_1810]] is written three ways across the acts that name her — *Anna* in 1838,
 1853, 1873 and 1903, *Anna Maria* in two 1867 acts, *Anna Catharina* in an 1858 act. Her
 own marriage act writes her **Anna**, plainly and three times over: in the large display
 hand that opens her half of the act, and again in the operative sentence *dat door het
@@ -146,7 +146,7 @@ this act cannot prove the two are one man, only that the 1838 groom was a butche
 
 ## What it does not settle
 
-Nothing in this act names [[coekelberghs]], the daughter born ten years later, and nothing
+Nothing in this act names [[coekelberghs_maria_1848]], the daughter born ten years later, and nothing
 in it gives a death. The chain from this couple to her still rests entirely on the 1873
 Sint-Stevens-Woluwe and 1903 Kraainem acts naming her parents as Joannes Baptista
 Coekelberghs and Anna Haesaerts of Bertem. Nor is the groom's own birth of 29 July 1809

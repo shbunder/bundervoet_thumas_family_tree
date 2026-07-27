@@ -265,8 +265,8 @@ parentage and birthplace.**
 Oostende — it will state both spouses' parents *and* Édouard's own birthplace and age; (2) a
 family bidprentje (memorial card) for Édouard (†8 Sep 1951 Oostende).
 
-Tree updated: `edouard_dk` (marriage detail corrected off "Hamme"; note rewritten) and
-`jerome_dk` (birth 14 Jun 1897; legitimized 4 May 1901). Validator green — 292 people.
+Tree updated: `dekeyser_edouard_1876` (marriage detail corrected off "Hamme"; note rewritten) and
+`dekeyser_jerome_1897` (birth 14 Jun 1897; legitimized 4 May 1901). Validator green — 292 people.
 
 *End of log.
 
@@ -310,7 +310,7 @@ Anna's parents is under the 100-year seal. No amount of tree/obituary searching 
 3. **Family memory** — a relative recalling René's parents' names, his birth village, or his
    birth year; enough even to file the certificate request in #1.
 
-Tree updated: `rene_j` note rewritten to record the exhaustive sweep and the unlocks.
+Tree updated: `janssens_rene` note rewritten to record the exhaustive sweep and the unlocks.
 Validator green — 292 people.
 
 *End of log.
@@ -353,8 +353,8 @@ Rejected along the way (regional false positives, common surname): jammart doods
 collections for Dworp and Wetteren; MyHeritage (login-walled); ingedachten/inmemoriam obituary
 hits — none were our Zaventem couple.
 
-Tree updated: `anna_vc` note rewritten with the located family + candidate parents (no
-unverified parent grafted); `rene_j` note re-framed (privacy-rule excuse removed). Validator
+Tree updated: `vancraenenbroeck_anna` note rewritten with the located family + candidate parents (no
+unverified parent grafted); `janssens_rene` note re-framed (privacy-rule excuse removed). Validator
 green — 292 people.
 
 *End of log.
@@ -369,7 +369,7 @@ more tractable surname) paid off through Geneanet's record index and the tree **
 place: it is **Louise Bocklandt's BIRTHPLACE — Hamme in OOST-VLAANDEREN (Waasland)**, not
 Hamme-Merchtem in Brabant. Louise Bocklandt was born there 31 Dec 1877. This is why the
 Merchtem registers (checked directly last session) never held a Bocklandt or Dekeyser — wrong
-Hamme entirely. Our `louise_bocklandt` record is corrected accordingly.
+Hamme entirely. Our `bocklandt_louise_1877` record is corrected accordingly.
 
 **Louise's Bocklandt line extended (verified as ours — wete1998 shows the same parents our
 AGATHA join already had, so it is not a namesake):**
@@ -412,12 +412,12 @@ both of which name his parents; or a bidprentje. The 1951 death act is the clean
 
 **New child found.** The Geneanet/Ancestry index turned up **Bertha Alida Theresia Dekeyser,
 b. 7 Aug 1901 Oostende** — her birth act names Eduardus de Keyser × Louisa Maria Bocklandt, so
-she is a genuine sixth child (born 3 months after the wedding). Added (`bertha_dk`).
+she is a genuine sixth child (born 3 months after the wedding). Added (`dekeyser_bertha_1901`).
 
 **Van Craenenbroeck trunk pushed to the 1830s.** The cisken tree gives Antonius Josephus's own
 parents: **Amandus Franciscus Van Craenenbroeck (1835–1914) × Paulina Mommaerts (1838–1909)**,
 and Antonius's wife **Anna Maria Meeus (1877–1957)**. So Anna's near-certain family is now
-documented Zaventem-back to the 1830s (recorded in `anna_vc`'s note as context; her specific
+documented Zaventem-back to the 1830s (recorded in `vancraenenbroeck_anna`'s note as context; her specific
 parent among the 1902–18 siblings still needs a family-side source).
 
 Validator green — 299 people.
@@ -439,7 +439,7 @@ Every identifier matches our Édouard (werkman; born 12 Nov 1876; first wife Lou
 Bocklandt), so this is unambiguously him. Results:
 
 1. **PARENTS: Desiderius De Keyser × Maria Theresia Van den Broeck** (both deceased by 1946).
-   Added `desiderius_dk` and `mtheresia_vandenbroeck` (confidence "doc").
+   Added `dekeyser_desiderius` and `vandenbroeck_maria` (confidence "doc").
 2. **BIRTHPLACE: Hamme (Oost-Vlaanderen)** — the SAME Waasland town Louise Bocklandt was born
    in. They were fellow Hamme natives who both moved to Oostende. This is the real origin of the
    whole "Hamme" confusion: a shared BIRTH-town, never Hamme-Merchtem, never a marriage place.
@@ -637,11 +637,11 @@ Triggered by two family questions: who Roland's sister was, and whether the two 
 Bundervoets are really two people.
 
 **MERGED — Rita and "Roland's sister" were one person recorded twice.** The tree held
-both `rita_dk` (Rita De Keyser, no dates) and `roland_sis` ("Roland's sister (name
+both `dekeyser_rita` (Rita De Keyser, no dates) and `roland_sis` ("Roland's sister (name
 unknown)", born 1940s). Both were daughters of Gustaaf × Simonne, both female, both
 described as Roland's sister; `roland_sis` had simply been written before the family
 recalled her name, and nothing ever distinguished them. Gustaaf's record says one
-daughter, and the family knows of one sister. Merged into `rita_dk`, which keeps the
+daughter, and the family knows of one sister. Merged into `dekeyser_rita`, which keeps the
 name; `roland_sis` deleted.
 
 This one hid from the §37 audit because that pass compared *names*, and these two names
@@ -860,7 +860,7 @@ store, so the harvest is now stopped before a verification pass rather than left
 **FOUR ACTS, eleven records.**
 
 - **Sint-Niklaas, 31 October 1901 — Léonie Paelinck's birth act.** Her record held the bare
-  year; the act gives the day, and names both parents, [[eduardus_p]] and [[magdalena_vb]].
+  year; the act gives the day, and names both parents, [[paelinck_eduardus_1858]] and [[vanbogaert_maria_1861]].
 - **Kraainem, 20 June 1872 — Thumas × Bossin.** Four parents in one document: the groom as
   son of Georges Thumas × Maria Catharina Joostens, the bride as daughter of Guilielmus
   Bossin × Anna Catharina Peremans. With the 1902 act from §40, two consecutive Thumas
@@ -870,14 +870,14 @@ store, so the harvest is now stopped before a verification pass rather than left
   Deconninck**, and her birthplace, Woluwe-Saint-Lambert. Two new ancestors, named in a
   civil act and recorded as a documented frontier rather than grafted unread.
 - **Oostkamp, 4 March 1876 — Florentinus Stroobandt's death act.** The year becomes a day,
-  with his wife [[rosalia_caeckaert]] named beside him.
+  with his wife [[caeckaert_rosalia_1815]] named beside him.
 
 A name difference recorded rather than smoothed: the 1872 act calls the bride's mother
 *Anna* Catharina Peremans; this tree calls her Joanna Catharina Jacoba. Both forms stand
 until a second act decides.
 
 **REJECTED — a 46-bit match sixty-two years out.** The corpus's best candidate for
-[[georgeslambert_t]] was a Lambert Thumas who died at **Brussels in 1801**; ours died at
+[[thumas_georges_1772]] was a Lambert Thumas who died at **Brussels in 1801**; ours died at
 Grez-Doiceau in 1863. The score came from agreement on a mother and a wife — but on their
 *forenames only*: Marie Joseph **Docq** against our Marie Catherine **Noël**, Marie Catherine
 **Becquevort** against our Marie Anne Catherine **Quinart**. The surnames, which would have
@@ -921,14 +921,14 @@ is the Open Archives record that located it, `S11` the AGATHA page that was actu
 Collapsing them would have made the search log claim a reading that did not happen at the
 venue it names — and it broke the validator, which is how the distinction got made properly.
 
-**Two ancestors added.** [[guillaume_joostens]] and [[jeanne_deconninck]], named in their
+**Two ancestors added.** [[joostens_guillaume]] and [[deconninck_jeanne]], named in their
 daughter's 1857 death act (§41), now have records. Neither has a date: the act gave none,
 and none is invented. Marie Catharina Joostens's parents were blank before this.
 
 **A frontier the search turned up.** Querying AGATHA for Thumas at Kraainem returned a
 second act: a **marriage of 15 April 1899** whose bride is *Henrica Thumas*, daughter of
 Georgius Carolus Josephus Thumas and Antonia Bossin. That makes her a sister of
-[[jbgeorgius]] whom the tree does not have. Named, not grafted — the act is unopened.
+[[thumas_joannes_1876]] whom the tree does not have. Named, not grafted — the act is unopened.
 
 **A defect I introduced and caught.** Several records were given citations by a script that
 inserted them after a `sources:` line. Records that had never had a `sources:` block — they
@@ -983,17 +983,17 @@ marries a **Franciscus Léopoldus Smessaert** to an **Anna Francisca Morbeé**, 
 sets of parents — four ancestors, if it is ours. The groom's triple name matches exactly, the
 bride's forenames match exactly, and 1851 fits a son born at Oostende in 1857. But the bride
 is **Morbeé** where this tree says **Morree**, and that is a disagreement rather than a
-silence. Both [[francl_s]] and [[morree]] are bare records with no dates and no source of
+silence. Both [[smessaert_franciscus]] and [[morree_anna]] are bare records with no dates and no source of
 their own, so there is nothing independent to break the tie. Not grafted. The decisive
-record is [[joannesf_s]]'s 1857 Oostende birth act, which would give his mother's surname as
+record is [[smessaert_joannes_1857]]'s 1857 Oostende birth act, which would give his mother's surname as
 the registrar wrote it.
 
-**Recorded from acts this pass:** [[quinart]] corroborated by the Grez-Doiceau death act of
+**Recorded from acts this pass:** [[quinart_marie_1780]] corroborated by the Grez-Doiceau death act of
 her son **Etienne Thumas** (18 October 1812) — which also reveals Etienne, a brother of
-[[georges2_t]] the tree does not have; [[elodia]] and [[eduardus_vi]] each confirmed as a
+[[thumas_georges_1804]] the tree does not have; [[bostyn_elodia_1908]] and [[vaniseghem_eduardus_1880]] each confirmed as a
 spouse on their partner's memorial card.
 
-**Rejected:** [[judocus_vi]], whose best candidate is an Aalst death act of 1869 naming a
+**Rejected:** [[vaniseghem_judocus_1787]], whose best candidate is an Aalst death act of 1869 naming a
 *Constantinus* Franciscus Van Iseghem as father. Ours died at Oostende in 1832 and cannot be
 a father in an 1869 act; the shared *Franciscus* is the commonest middle name in these
 registers.
@@ -1008,14 +1008,14 @@ Working the corroborated bucket to the bottom. Of the twelve people in it who ha
 citation yet, **two were real and five were plainly wrong** — and the five are wrong in the
 same way, which is worth writing down.
 
-- **[[hubert_devriese]]**, born 1665 at Tielt and dead 1728 at Wingene, was matched to a
+- **[[devriese_hubert_1665]]**, born 1665 at Tielt and dead 1728 at Wingene, was matched to a
   **Brussels marriage of 1911**. Nearly two centuries out.
-- **[[edouard_dk]]**, died 1951, was matched to an Albert Dekeyser standing as surviving
+- **[[dekeyser_edouard_1876]]**, died 1951, was matched to an Albert Dekeyser standing as surviving
   partner in a **1963** Oostende death.
-- **[[gustaaf]]** was matched to André Dekeyser, widower of **Simonne Barbier**, who died at
+- **[[dekeyser_gustaaf]]** was matched to André Dekeyser, widower of **Simonne Barbier**, who died at
   Oostende in **2016** — because our Gustaaf's wife was also a Simonne. A shared forename
   between two men's wives, seventy years apart, read as a spouse agreement.
-- **[[joannes_jos_vi]]** and **[[joannes_vi2]]** were matched to Van Iseghems with entirely
+- **[[vaniseghem_joannes_1819]]** and **[[vaniseghem_joannes_1852]]** were matched to Van Iseghems with entirely
   different forenames — Jacobus, and Charles Thomas Jean.
 
 In every case the anchor that let them into the bucket was a **place**, and in every case the
@@ -1084,7 +1084,7 @@ spouses:
 `segerius_bundervoet.md` already records `mother: elisabeth_nn`. Nothing checked the two
 against each other. This is exactly the failure the charter names for `occupation` and
 `nickname`, a second copy of the tree in a field, and it was in the marriages the whole
-time: `joannes_b` carried "mother of Christoffel & Pieter" the same way. The validator
+time: `bundervoet_joannes_1682` carried "mother of Christoffel & Pieter" the same way. The validator
 now rejects a marriage detail that names its own child, and rejects one carrying a date
 or an ordinal.
 
@@ -1098,8 +1098,8 @@ children without a recorded marriage.
 
 Three things fell out of structuring it, none of them anticipated:
 
-1. **Two records were giving different places for the same wedding.** `petrus_sabbe` said
-   the 1616 marriage was at Oostkamp; `judoca_vandenberghe` said Oostkamp/Ruddervoorde.
+1. **Two records were giving different places for the same wedding.** `sabbe_petrus` said
+   the 1616 marriage was at Oostkamp; `vandenberghe_judoca_1594` said Oostkamp/Ruddervoorde.
    Both are still in the tree, as one string on both records, because neither can be
    checked from here. The link was already required to be mutual; the *facts* were not,
    so whichever record was read first won. They are compared now, field for field.
@@ -1127,8 +1127,8 @@ and stay as they are.
 
 The sixteen now have records. No new claims: each was already asserted by the partner's
 record and the partner's source, and the confidence is carried across unchanged, never
-raised. Two are written with a surname and no given name, `nn_vandenberghe` and
-`nn_vyveraert`, the mirror of `elisabeth_nn` — a name half known is recorded half.
+raised. Two are written with a surname and no given name, `vandenberghe_nn` and
+`vyveraert_nn`, the mirror of `elisabeth` — a name half known is recorded half.
 
 Writing Leontine Schreel produced a seventeenth. Édouard's 1946 act, which is why she is
 `doc`, says she was divorced from **Benoni Joseph Rossel** — a documented marriage that
@@ -1174,7 +1174,7 @@ remembered numbering. **Read-then-write on a tree another session is editing is 
 safe; match on the content, and assert the shape you expected before writing.**
 
 What actually held the line was the validator. The four new parents had been linked as
-father and mother of [[eugenius_dv]] and [[octavia_schal]] without the couples listing
+father and mother of [[devriendt_eugenius_1882]] and [[schalandrijn_octavia_1886]] without the couples listing
 each other, and `check_data.py` refused the build on the charter's own rule that a shared
 child proves a couple. Four mutual spouse links were added carrying **no date and no
 place** — the vrijwilligersrab index offers Stene 1876 and Oudenburg 1871 for the two
@@ -1188,9 +1188,9 @@ that will not parse is now dropped rather than guessed. An unreadable day yields
 guess, and this was exactly the place one would have got invented.
 
 NEXT: the acts behind the leads, all of which need a logged-in AGATHA session — the
-Diksmuide 1873 birth that would give [[emma_vincke]] an elder sister, the Stene 1876 and
+Diksmuide 1873 birth that would give [[vincke_emma_1880]] an elder sister, the Stene 1876 and
 Oudenburg 1871 marriages that would date the two new couples, and the Oudenburg 1842
-birth that would carry [[ludovicus_schal]] back another generation.
+birth that would carry [[schalandryn_ludovicus]] back another generation.
 
 ## 47. Zaventem, 24 February 1846 — two orphans, four parents, and a documented dead end
 
@@ -1200,8 +1200,8 @@ surname pair instead — *Bossin Peremans*, the move the charter recommends and 
 now produced both of this project's breakthroughs — returned their own marriage act, which
 is the richer record by far.
 
-**Zaventem, act nr. 1, 24 February 1846.** [[guilielmus_bossin]], born at
-Sint-Stevens-Woluwe, twenty-one, an *arbeider*. [[peremans]], born at Zaventem,
+**Zaventem, act nr. 1, 24 February 1846.** [[bossin_guilielmus_1824]], born at
+Sint-Stevens-Woluwe, twenty-one, an *arbeider*. [[peremans_joanna_1824]], born at Zaventem,
 twenty-one, an *arbeidster*. Two ages that confirm from a civil act the 1824 both records
 had been carrying from a member tree, and two birthplaces the tree did not have.
 
@@ -1211,11 +1211,11 @@ Jacoba*, and §42 recorded both rather than choosing. The act that married her w
 long form in full. A civil act quoting a parent from memory is now the outlier, and the
 tree's reading is the documented one.
 
-Four people enter the index from it. On the groom's side [[arnoldus_bossin]], an
-*arbeider* of Sint-Stevens-Woluwe, and [[elisabeth_deyn]] — both at the wedding, both
+Four people enter the index from it. On the groom's side [[bossin_arnoldus]], an
+*arbeider* of Sint-Stevens-Woluwe, and [[deyn_elisabeth]] — both at the wedding, both
 consenting, and both signing with a mark, because the act says neither could write. On the
-bride's side [[egidius_peremans]], dead at Zaventem on 6 March 1837, and
-[[joanna_verelst]], dead at Zaventem on 19 December 1843. She married at twenty-one having
+bride's side [[peremans_egidius]], dead at Zaventem on 6 March 1837, and
+[[verelst_joanna]], dead at Zaventem on 19 December 1843. She married at twenty-one having
 lost both parents, the second of them barely two years earlier.
 
 **And the act closes a line rather than opening one.** The bride declared, with her
@@ -1242,13 +1242,13 @@ The act behind §46's collision, read as an image rather than the vrijwilligersr
 alone: Oostende marriage act nr. 258, 10 November 1906, Eugenius Alphonsius Devriendt ×
 Octavia Maria Schalandrijn (S20), together with the Bredene birth act nr. 116,
 certificate dated 2 May 1886 (S21). The marriage act names both sets of parents in full,
-which is what makes four new ancestors graftable in one pass: [[ludovicus_schal]]
+which is what makes four new ancestors graftable in one pass: [[schalandryn_ludovicus]]
 (Ludovicus Franciscus Schalandryn — the act's own spelling of him; his daughter's record
 already held Schalandrijn, so the name is now recorded both ways across one generation)
-and [[mathilde_standaert]], both already dead by 1906; and [[ludovicus_dv]] (Ludovicus
-Josephus Devriendt), also already dead, and [[silvia_brissinck]] (Silvia Rosalia
-Brissinck), alive, present and consenting, werkvrouw of Steene. [[octavia_schal]] and
-[[eugenius_dv]] both move to `doc`: the act confirms Eugenius's birth (Steene, 13 April
+and [[standaert_mathilde]], both already dead by 1906; and [[devriendt_ludovicus]] (Ludovicus
+Josephus Devriendt), also already dead, and [[brissinck_silvia]] (Silvia Rosalia
+Brissinck), alive, present and consenting, werkvrouw of Steene. [[schalandrijn_octavia_1886]] and
+[[devriendt_eugenius_1882]] both move to `doc`: the act confirms Eugenius's birth (Steene, 13 April
 1882) field for field, and independently corroborates Octavia's corrected birth date and
 Bredene birthplace.
 
@@ -1274,18 +1274,18 @@ Devriendt × Brissinck, Stene 1876 act 12); Ludovicus Schalandryn's own death (O
 age of 42 in 1886 implies ~1844, but an age is not a birth date and is recorded only as
 the derivation it is. Also not entered as records: at least seven siblings of Octavia
 and nine of Eugenius (both in the Huwelijken/Geboorten indexes), and the three younger
-children of Eugenius × Octavia beyond [[adrienne_dv]] — Ludovicus Josephus (1907),
-August Bernard (1909), Germaine Marceline (1920). [[adrienne_dv]]'s own record now
+children of Eugenius × Octavia beyond [[devriendt_adrienne_1908]] — Ludovicus Josephus (1907),
+August Bernard (1909), Germaine Marceline (1920). [[devriendt_adrienne_1908]]'s own record now
 carries its birth-index act reference (nr. 29) as corroboration; her confidence stays
 `sup`, since that act image was not read either.
 
-Also folded into this pass: [[emma_vincke]] and [[lucien_vincke]], written earlier in
+Also folded into this pass: [[vincke_emma_1880]] and [[vincke_lucien_1840]], written earlier in
 the same session from a Familiekunde Vlaanderen memorial card and an AGATHA index
 analysis (`data/artifacts/emma-vincke-1880-birth-diksmuide`) that puts Emma's birth,
 birthplace and both parents on civil registration independently of the memorial card —
 `sup`, since the analysis is the index page, not the register scan. The same pass
 surfaced a probable elder sister, Romanie Elodie Vincke (Diksmuide 1873), left as a
-named frontier on [[lucien_vincke]] rather than grafted, since the act is unread and the
+named frontier on [[vincke_lucien_1840]] rather than grafted, since the act is unread and the
 father's name on the index (*Lucien Julien*) is not quite *Lucien Julianus*.
 
 See §46 for the source-id collision this pass ran into against a concurrent session
@@ -1321,10 +1321,10 @@ returns eleven acts in the entire database. Their own marriage is not among them
 name them as parents, and the second was unknown here: **Sint-Stevens-Woluwe, act nr. 9,
 1 December 1853**.
 
-[[anna_maria_bossin]], of age, born at Sint-Stevens-Woluwe on **3 November 1829**, a
+[[bossin_anna_1829]], of age, born at Sint-Stevens-Woluwe on **3 November 1829**, a
 *dagloonster*, married Françiscus Pardon, a servant of Zaventem born at Winksele. Her
-parents are [[arnoldus_bossin]] and [[elisabeth_deyn]] — the same two names, in the same
-commune, that the 1846 act gives as the parents of [[guilielmus_bossin]]. And the fourth
+parents are [[bossin_arnoldus]] and [[deyn_elisabeth]] — the same two names, in the same
+commune, that the 1846 act gives as the parents of [[bossin_guilielmus_1824]]. And the fourth
 person in the act settles it: **Guilielmus Bossin, 29, steenslager of Sint-Stevens-Woluwe,
 standing as a witness at his sister's wedding.**
 
@@ -1335,8 +1335,8 @@ and early December** — which is the year the tree held on a member tree's word
 carried by two civil acts seven years apart. His trade tracks his life: *arbeider* at
 twenty-one, *steenslager* at twenty-nine, *landbouwer* of Kraainem by 1872.
 
-Three more people come with the bride: [[franciscus_pardon]] and his parents
-[[guilielmus_pardon]] and [[maria_anna_pergijsels]], *daglooners* of Winksele, both present
+Three more people come with the bride: [[pardon_franciscus_1830]] and his parents
+[[pardon_guilielmus]] and [[pergijsels_maria]], *daglooners* of Winksele, both present
 and consenting.
 
 **A household that signed with marks.** The bride, the groom, both his parents, her father
@@ -1356,7 +1356,7 @@ generation on a surname rare enough to search alone — *Pergijsels* more so tha
 ## 49. Sint-Stevens-Woluwe, 1 December 1853 — the first sibling of that generation
 
 §47 grafted Guilielmus Bossin's parents and closed the Peremans line above them. It also
-left the obvious downward question unasked: [[arnoldus_bossin]] and [[elisabeth_deyn]]
+left the obvious downward question unasked: [[bossin_arnoldus]] and [[deyn_elisabeth]]
 had one recorded child, and 127 couples in this tree are in that position. The frontier
 queue would never have asked it, because a frontier is someone whose parents are unknown
 and theirs are now known.
@@ -1377,11 +1377,11 @@ been carrying from a member tree since before any act was read. He is 29 on 1 De
 1825. The two windows overlap only in **1824, between late February and early December**.
 Two acts, five years apart, neither knowing about the other.
 
-Four people enter the index: [[anna_maria_bossin]], born at Sint-Stevens-Woluwe on
+Four people enter the index: [[bossin_anna_1829]], born at Sint-Stevens-Woluwe on
 **3 November 1829** — a date the act gives to the day, and the first thing this tree
-knows about that generation besides her brother; her husband [[franciscus_pardon]], born
+knows about that generation besides her brother; her husband [[pardon_franciscus_1830]], born
 at Winksele 16 February 1830, a *dienstbode* living at Zaventem; and his parents
-[[guilielmus_pardon]] and [[maria_anna_pergijsels]], *daglooner* and *dagloonster* of
+[[pardon_guilielmus]] and [[pergijsels_maria]], *daglooner* and *dagloonster* of
 Winksele, both at the wedding and both consenting.
 
 **All four are `sup`, not `doc`, and that is the point of the pass.** This is AGATHA's
@@ -1394,7 +1394,7 @@ Sint-Stevens-Woluwe is the named next step for them.
 
 What is *not* recorded, again deliberately: the Pardon parents get no birth dates, because
 the act gives them no ages and their son's twenty-three would only license a guess. And
-nothing is recorded from [[elisabeth_deyn]]'s silence — she appears here as a bare name,
+nothing is recorded from [[deyn_elisabeth]]'s silence — she appears here as a bare name,
 with none of the *present and consenting* the act gives her husband, where in 1846 she was
 present. Absent, dead, or simply not transcribed in that field cannot be told from an
 analysis, so the record says so and stops.
@@ -1411,7 +1411,7 @@ commune-level harvest, not a name search.
 §42's artifact left a ten-year hole open. Marie Catherine Joostens's 1857 death act names her
 surviving husband as *Georges Thumas, menuisier of Grez-Doiceau* — the trade this tree
 already had, so the man is not in doubt — and gives his age as **63**, putting his birth
-around 1793–94. [[georges2_t]] is recorded as born **24 January 1804**. The act got his
+around 1793–94. [[thumas_georges_1804]] is recorded as born **24 January 1804**. The act got his
 wife's age right, which is what made the discrepancy hard to dismiss.
 
 **Both documentary routes are now closed at AGATHA, and closed for reasons worth writing
@@ -1430,9 +1430,9 @@ Grez-Doiceau **birth acts across 1796–1815 with no name at all** returns 57 re
 every single one falls in **1813 or 1814**. There is no 1804 in the index to search.
 
 **And then the argument that was sitting in the tree the whole time.** The note in
-[[georges2_t]] had compared his father's birth year — 1772 — and concluded that fathering a
+[[thumas_georges_1804]] had compared his father's birth year — 1772 — and concluded that fathering a
 son at 22 or at 32 is equally ordinary, so the parent link decided nothing. But
-[[georgeslambert_t]] married [[quinart]] on **9 February 1801**. A son born in 1793–94 would
+[[thumas_georges_1772]] married [[quinart_marie_1780]] on **9 February 1801**. A son born in 1793–94 would
 arrive seven years before his parents' marriage; a son born in January 1804 arrives three
 years after it. That is not proof — births before a marriage happen, and the 1801 date is
 itself only `sup`, resting on Geneanet — but it moves the weight decidedly onto 1804.
@@ -1451,7 +1451,7 @@ registers for 1793–94.
 
 ## 50. Death acts hide in marriage annexes
 
-§49 closed two AGATHA venues on [[georges2_t]] and said the only thing left was the register
+§49 closed two AGATHA venues on [[thumas_georges_1804]] and said the only thing left was the register
 images. That turned out to be right, and the image was one search away — on the venue this
 project's own ladder calls highest-value and least-used.
 
@@ -1475,7 +1475,7 @@ Grez-Doiceau's registers, and §49 had just found a *Charles Julien Thumas* appe
 commune official in dozens of acts, exactly the trap a name-and-place match walks into.
 
 **What it documents.** The death date, 12 January 1864, was in this tree from a member tree;
-it is now from civil registration. And the parent link — [[georgeslambert_t]] × [[quinart]]
+it is now from civil registration. And the parent link — [[thumas_georges_1772]] × [[quinart_marie_1780]]
 — had **never been documented at all**. Those two records rested entirely on Geneanet; this
 is the first document of any kind that touches them, and it also places them both as dead by
 September 1868.
@@ -1499,7 +1499,7 @@ could not pay for the paper.
 
 NEXT: the extract was drawn on 28 September 1868 *for a marriage*, so a child of Georges
 Thumas and Marie Catherine Joostens married at Grez-Doiceau around then. This tree knows only
-[[georges_cj]], who married at Kraainem in 1872. That 1868 act is in the same volume near
+[[thumas_georges_1836]], who married at Kraainem in 1872. That 1868 act is in the same volume near
 image 221 and should name a sibling.
 
 ## 51. Bertem and Everberg, through one act — and a confidence this project has been overstating
@@ -1509,11 +1509,11 @@ Maria Theresia Coekelberghs was second on the ranked queue with 892 held candida
 corpus. No browser was needed to find it, only to read it.
 
 **Sint-Stevens-Woluwe, act nr. 6, 24 April 1873.** It names all four parents, which is why
-one marriage act is worth six person-searches. On her side [[jb_coekelberghs]],
-*landbouwer* of Bertem, and [[anna_haesaerts]], *landbouwster* of Bertem, both present,
+one marriage act is worth six person-searches. On her side [[coekelberghs_joannes_1809]],
+*landbouwer* of Bertem, and [[haesaerts_anna_1810]], *landbouwster* of Bertem, both present,
 both consenting, both declaring themselves unable to write. On his side
-[[jb_vandenbemden]] — a bare name, no residence, no trade, no consent — and
-[[elisabeth_langes]], *landbouwster* of Everberg, present and consenting.
+[[vandenbemden_jan]] — a bare name, no residence, no trade, no consent — and
+[[langes_elisabeth]], *landbouwster* of Everberg, present and consenting.
 
 The brief guessed the marriage would be at the bride's commune. It was not: they married
 where they both lived and both served, at Sint-Stevens-Woluwe, while her parents were
@@ -1529,14 +1529,14 @@ date **and** the same commune that §42's 1902 act established when it corrected
 tree's Sint-Stevens-Woluwe to Kraainem. Three acts, thirty years apart, agreeing on a
 figure that had itself only just been corrected.
 
-It corrects as well as adds. [[hendrik_vdb]]'s record carried a Geneanet claim flagged *to
+It corrects as well as adds. [[vandenbemden_henricus_1849]]'s record carried a Geneanet claim flagged *to
 verify*: parents "Joannes Baptista Vandenbemden × Agatha Langa". The act makes the mother
 **Elisabeth Agatha** and the surname **Langes**. The forename was incomplete and the
 surname was wrong. That is what an unverified member-tree claim is worth, and it is worth
 noting that it was close enough to have looked like confirmation.
 
-The 1903 act also gives [[coekelberghs]] a second marriage this tree did not have — to
-[[henricus_vanesch]], a widower born at Bertem in 1836, an *herbergier* at Zaventem,
+The 1903 act also gives [[coekelberghs_maria_1848]] a second marriage this tree did not have — to
+[[vanesch_henricus_1836]], a widower born at Bertem in 1836, an *herbergier* at Zaventem,
 fourteen years after she was widowed. Two innkeepers from the same village, marrying in
 their sixties. And it gives her parents their deaths: Bertem, 8 January and 19 November
 1880.
@@ -1545,7 +1545,7 @@ their sixties. And it gives her parents their deaths: Bertem, 8 January and 19 N
 
 Her parents' own 1838 Bertem marriage is registered
 (`bertem-1838-marriage-coeckelberghs-haesaerts`) and **not grafted**. It would give
-[[jb_coekelberghs]] a birth in 1809 and a further generation above, but his trade moves —
+[[coekelberghs_joannes_1809]] a birth in 1809 and a further generation above, but his trade moves —
 *slagter* in 1838, 1853 and 1867, *landbouwer* in 1858, 1861 and 1873 — while his wife's
 forename is written three ways over the same span: *Anna*, *Anna Maria*, *Anna Catharina*.
 One man and one woman recorded loosely across forty-five years is much the likeliest
@@ -1566,11 +1566,11 @@ are still not the act.
 
 The charter is not ambiguous about this. `doc` = *a primary act or image was actually
 read*. So roughly twenty records currently read `doc` on evidence that earns `sup` —
-including [[coekelberghs]], [[hendrik_vdb]], [[vandenbemden]], [[jbgeorgius]],
-[[georges_cj]], [[bossin]], [[georges2_t]], [[guilielmus_bossin]], [[peremans]],
-[[arnoldus_bossin]], [[egidius_peremans]], [[elisabeth_deyn]] and [[joanna_verelst]].
+including [[coekelberghs_maria_1848]], [[vandenbemden_henricus_1849]], [[vandenbemden_joanna_1882]], [[thumas_joannes_1876]],
+[[thumas_georges_1836]], [[bossin_antonia_1849]], [[thumas_georges_1804]], [[bossin_guilielmus_1824]], [[peremans_joanna_1824]],
+[[bossin_arnoldus]], [[peremans_egidius]], [[deyn_elisabeth]] and [[verelst_joanna]].
 
-This pass downgrades the two records it wrote, [[coekelberghs]] and [[hendrik_vdb]], and
+This pass downgrades the two records it wrote, [[coekelberghs_maria_1848]] and [[vandenbemden_henricus_1849]], and
 stops there. The rest is a sweep, not a side-effect: it needs one consistent ruling applied
 in one place, checked per source rather than per person, because some AGATHA citations in
 this tree *were* backed by a register image read separately and must not be swept with the
@@ -1609,23 +1609,23 @@ own transcriptions — authoritative, complete, field-by-field, and not the act.
 
 **Twenty-four records go from `doc` to `sup`**, in two groups.
 
-*Eighteen* rest on an AGATHA act analysis and nothing stronger: [[arnoldus_bossin]],
-[[bossin]], [[elisabeth_deyn]], [[egidius_peremans]], [[georges_cj]], [[georges1_t]],
-[[guilielmus_bossin]], [[guillaume_joostens]], [[jeanlambert_t]], [[jerome_dk]],
-[[jbgeorgius]], [[jeanne_deconninck]], [[joanna_verelst]], [[joostens]], [[leclercq_t]],
-[[noel_t]], [[peremans]], [[vandenbemden]].
+*Eighteen* rest on an AGATHA act analysis and nothing stronger: [[bossin_arnoldus]],
+[[bossin_antonia_1849]], [[deyn_elisabeth]], [[peremans_egidius]], [[thumas_georges_1836]], [[thumas_georges_1744]],
+[[bossin_guilielmus_1824]], [[joostens_guillaume]], [[thumas_jean_1701]], [[dekeyser_jerome_1897]],
+[[thumas_joannes_1876]], [[deconninck_jeanne]], [[verelst_joanna]], [[joostens_marie_1810]], [[leclercq_marie_1710]],
+[[noel_marie_1751]], [[peremans_joanna_1824]], [[vandenbemden_joanna_1882]].
 
 *Six* are worse than that, and they are the ones worth dwelling on:
-[[edouard_bocklandt]], [[helena_denijs]], [[louise_bocklandt]], [[marie_vanbergen]],
-[[pieter_stekelorum]] and [[petrus_vannieuwenhuyse]] carry a bare `agatha` citation with
+[[bocklandt_edouard_1839]], [[denijs_helena]], [[bocklandt_louise_1877]], [[vanbergen_marielouise_1842]],
+[[stekelorum_pieter]] and [[vannieuwenhuyse_petrus_1649]] carry a bare `agatha` citation with
 **no page id, no artifact, and no entry in `research/searches.jsonl`**. Nothing in this
 project records which act was consulted, let alone whether its image was opened. §37 swept
 257 records for exactly this and kept these ten under a looser standard than it applied in
 the same pass — the same section that documented `S2` as "the archive's transcription, not
-a scan" left [[jerome_dk]], which rests on `S2`, at `doc`. A correction pass can be
+a scan" left [[dekeyser_jerome_1897]], which rests on `S2`, at `doc`. A correction pass can be
 inconsistent with its own finding, and this one was.
 
-[[petrus_vannieuwenhuyse]] is the least certain of the twenty-four and his record says so.
+[[vannieuwenhuyse_petrus_1649]] is the least certain of the twenty-four and his record says so.
 His source line cites *agatha.arch.be scan 513_9000_000_00774*, phrased as though a scan
 really was seen — unlike the other five. It could not be resolved to a live act page and
 has no artifact behind it, so the downgrade rests on the absence of recorded evidence
@@ -1639,11 +1639,11 @@ records already carried `doc` correctly; the registry entry was the stale one. A
 `marcel-memorial-card` moves to `fam`: the card is a physical family document nobody in
 this project has read.
 
-**Fifteen records keep `doc`, and they are the ones that earn it** — [[benoni_rossel]],
-[[desiderius_dk]], [[edouard_dk]], [[eduardus_p]], [[eugenius_dv]], [[georges2_t]],
-[[leontine_schreel]], [[leonie_p]], [[ludovicus_dv]], [[ludovicus_schal]],
-[[magdalena_vb]], [[mathilde_standaert]], [[mtheresia_vandenbroeck]], [[octavia_schal]],
-[[silvia_brissinck]] — each resting on `S1`, `S16`, `S20`, `S21` or `S23`, every one a
+**Fifteen records keep `doc`, and they are the ones that earn it** — [[rossel_benoni]],
+[[dekeyser_desiderius]], [[dekeyser_edouard_1876]], [[paelinck_eduardus_1858]], [[devriendt_eugenius_1882]], [[thumas_georges_1804]],
+[[schreel_leontine_1890]], [[paelinck_leonie_1901]], [[devriendt_ludovicus]], [[schalandryn_ludovicus]],
+[[vanbogaert_maria_1861]], [[standaert_mathilde]], [[vandenbroeck_maria]], [[schalandrijn_octavia_1886]],
+[[brissinck_silvia]] — each resting on `S1`, `S16`, `S20`, `S21` or `S23`, every one a
 register image somebody actually opened.
 
 ### What it cost, and why that is the point
@@ -1661,7 +1661,7 @@ unreadable — including the fifteen that are.
 
 ### A question this pass deliberately did not answer
 
-[[peremans]], [[bossin]] and [[georges_cj]] are each supported by two or more
+[[peremans_joanna_1824]], [[bossin_antonia_1849]] and [[thumas_georges_1836]] are each supported by two or more
 *independent* AGATHA transcriptions of different acts. That is genuinely stronger than one
 member tree, and `sup` does not distinguish them. Whether the scale wants a tier between
 `sup` and `doc` for "independently transcribed more than once" is a scoring-policy
@@ -1678,7 +1678,7 @@ project.
 §52 ended by naming the highest-value non-graft work in the project: read the register
 images behind the acts this tree only holds as transcriptions. This pass did one, and it
 turned out to also be the top open frontier, because §51 had created
-[[jb_coekelberghs]] and then refused to graft his parents.
+[[coekelberghs_joannes_1809]] and then refused to graft his parents.
 
 The refusal is worth restating, because the pass is really about how it was overturned.
 §51 had the 1838 act as an AGATHA transcription and would not use it: he is a *slagter* in
@@ -1706,8 +1706,8 @@ run read that way.
 **What the image says.** Both spouses *meerderjaerig*, with full birth dates rather than
 ages — him Berthem **29 July 1809**, her *in this commune* **24 October 1810**. All four
 parents named, all four *landbouwers* at Berthem, all four **present en Consenteerende**
-in person, not one called *wijlen*: [[henricus_coekelberghs]] × [[petronella_elseviers]],
-and [[jb_haesaerts]] × [[elisabeth_vdbroeck]]. Banns 14 and 21 October. Four witnesses,
+in person, not one called *wijlen*: [[coekelberghs_henricus]] × [[elseviers_petronella]],
+and [[haesaerts_joannes]] × [[vandenbroeck_elisabeth]]. Banns 14 and 21 October. Four witnesses,
 **none stated as kin to either party**. And the bridegroom, the bride and all four parents
 declared they could not sign — six people at one wedding, none of whom could write their
 name.
@@ -1742,14 +1742,14 @@ a range.
 
 This is the point of the pass, and it is the discipline §52 bought. The image is
 `doc`-grade evidence for **what the 1838 act says**. It is not evidence that the man it
-marries is the man the 1873 and 1903 acts name as [[coekelberghs]]'s father — that bridge
+marries is the man the 1873 and 1903 acts name as [[coekelberghs_maria_1848]]'s father — that bridge
 runs entirely through two AGATHA transcriptions with no scan. A chain is as strong as its
 weakest link. Four new people enter the index at `sup`, and the two records above stay
 `sup`, on the day this project read its best image yet.
 
 ### The other target: a frontier that cannot be worked
 
-[[juliette]] has sat at the top of the ranked queue with **zero searches ever logged**, and
+[[vandenhoeck_juliette_1937]] has sat at the top of the ranked queue with **zero searches ever logged**, and
 would have kept sitting there. The wall is statutory, not coverage. Belgian birth acts open
 after **100 years**, marriages after 75, deaths after 50 — so a birth of 4 January 1937 is
 closed **until 2037**. Two venues confirm it independently: AGATHA states its own ceiling
@@ -1777,16 +1777,16 @@ acts of January and November 1880.
 Four things in one pass, all downward from couples already held: the Van den Bemden and
 Coekelberghs children, a correction, a partial correction, and a lead recorded rather than grafted.
 
-**Van den Bemden, complete.** [[hendrik_vdb]] x [[coekelberghs]] now has all seven further
+**Van den Bemden, complete.** [[vandenbemden_henricus_1849]] x [[coekelberghs_maria_1848]] now has all seven further
 Sint-Stevens-Woluwe births the held corpus names for them, 1873–1886:
-[[lodewijk_bemden73]], [[victor_bemden74]], [[felix_bemden76]], [[karel_vandenbemd78]],
-[[jan_bemden80]], [[adela_bemden84]] and [[julius_vandenbemd86]]. Four of the seven already
+[[vandenbemden_lodewijk_1873]], [[vandenbemden_victor_1874]], [[vandenbemden_felix_1876]], [[vandenbemden_karel_1878]],
+[[vandenbemden_jan_1880]], [[vandenbemden_adela_1884]] and [[vandenbemden_julius_1886]]. Four of the seven already
 existed as bulk records from an earlier pass; this pass added the last three (Lodewijk, Victor,
 Adela) — which is also what closes the gap §52 flagged and left unexplained: "`research.py
 children` printed a header saying 27 to add and then listed 24." The three missing were these
 three, found only by a corpus search that went beyond the tool's own printed candidate list, not
 by the tool itself. Every one of the seven carries the same two identifiers — father born
-Everberg, mother born Bertem, matching [[hendrik_vdb]] and [[coekelberghs]]'s own recorded
+Everberg, mother born Bertem, matching [[vandenbemden_henricus_1849]] and [[coekelberghs_maria_1848]]'s own recorded
 birthplaces exactly — plus the event falling inside the couple's 1873 marriage to 1889 death
 window. Lodewijk's birth, 4 July 1873, is ten weeks after the 24 April wedding; that is stated
 plainly on his record as a fact about the two dates, and nothing is concluded from it.
@@ -1795,51 +1795,51 @@ Felix and Jan are **double-attested**: their own Kraainem marriages (1897, 1900)
 repeat their births and name their late father's death date and place exactly as the tree already
 holds it. Both marriages are now recorded as events, and — because marriage is mutual and a
 person is never left as a string in someone else's note — their wives get stub records of their
-own: [[amelia_coenraets76]] and [[elisabeth_feyaerts78]], carrying only what their marriage acts
+own: [[coenraets_amelia_1876]] and [[feyaerts_elisabeth_1878]], carrying only what their marriage acts
 state. (A second, unrelated Amelia Coenraets, born 1903, was already in the tree as
-[[amelia_coenraets03]]; the new stub notes the distinction explicitly so a later pass does not
+[[coenraets_amelia_1903]]; the new stub notes the distinction explicitly so a later pass does not
 merge the two same-named women.)
 
-**Coekelberghs: one more child accepted.** [[anna_coekelberg53]], born Bertem 27 June 1853, is
-the same birth act already used in §53 to establish [[jb_coekelberghs]]'s own occupation change —
+**Coekelberghs: one more child accepted.** [[coekelberghs_anna_1853]], born Bertem 27 June 1853, is
+the same birth act already used in §53 to establish [[coekelberghs_joannes_1809]]'s own occupation change —
 he self-declares, aged 44, *slagter*, born Bertem — and names the mother in the plain, merged
 form "Anna Haesaerts" rather than one of the disputed variants. Both parents accepted.
 
 **Pardon: the Zaventem move is one family, and a death recovered.** All four children —
-[[henricus_pardon54]], [[joanna_pardon56]], [[cornelius_pardon59]], [[maria_pardon63]] — were
+[[pardon_henricus_1854]], [[pardon_joanna_1856]], [[pardon_cornelius_1859]], [[pardon_maria_1863]] — were
 already recorded. Three of the four are double-attested by their own later Zaventem marriage
 acts, and all three independently name the same father, "Frans/Franciscus/Jan Frans Pardon,
-deceased Zaventem 18/07/1874," and the same mother, [[anna_maria_bossin]]. That settles a
+deceased Zaventem 18/07/1874," and the same mother, [[bossin_anna_1829]]. That settles a
 question the residence change (Sint-Stevens-Woluwe to Zaventem, between the 1856 and 1859
 births) could otherwise have left open: one migrating family, not two couples with the same
-names. The reasoning is written out on [[cornelius_pardon59]], the first Zaventem-born child, and
-[[franciscus_pardon]] now carries the death those three acts gave and this tree did not have:
+names. The reasoning is written out on [[pardon_cornelius_1859]], the first Zaventem-born child, and
+[[pardon_franciscus_1830]] now carries the death those three acts gave and this tree did not have:
 **Zaventem, 18 July 1874**. A fifth possible child, **Isabella Pardon** — her own 1890 Zaventem
 marriage act names the same father by the same death date and place, and the same mother — has no
 birth act found in the held corpus, so she is recorded as a named frontier on
-[[franciscus_pardon]] and not given a record.
+[[pardon_franciscus_1830]] and not given a record.
 
 **Retraction — `appolonia_vandenbemd77` removed.** An earlier pass had grafted a Sint-Stevens-
-Woluwe birth of 28 January 1877 onto [[hendrik_vdb]] x [[coekelberghs]] as their daughter
+Woluwe birth of 28 January 1877 onto [[vandenbemden_henricus_1849]] x [[coekelberghs_maria_1848]] as their daughter
 Appolonia. Re-reading the act itself refutes it: the parents it actually names are **Willem
 Edouard Vandenbemden** (28, born Everberg, *daglooner*) and **Maria Anna Vandenhoven** (31, born
 Kraainem, *huishoudster*) — a different couple, confirmed a second time as parents of a further
 child, Frans Vandenbemden (b. Kraainem 1872), in that son's own 1897 marriage act. The
 mis-reading is a name-only error compounded by a real coincidence: this Willem Edouard is also
-Everberg-born, of about the same age, and living in the same commune as [[hendrik_vdb]] — enough
+Everberg-born, of about the same age, and living in the same commune as [[vandenbemden_henricus_1849]] — enough
 surface similarity that the two men's acts were conflated. `data/people/appolonia_vandenbemd77.md`
 is deleted outright rather than corrected in place, because the child it names belongs to a
 different couple, neither of whom is elsewhere in this tree; there is nothing salvageable to keep
-under that id. `hendrik_vdb`'s own frontier note is updated to record the correction rather than
+under that id. `vandenbemden_henricus_1849`'s own frontier note is updated to record the correction rather than
 silently dropping the old candidate.
 
-That same Willem Edouard is now recorded as a **named frontier on [[jb_vandenbemden]]** instead:
+That same Willem Edouard is now recorded as a **named frontier on [[vandenbemden_jan]]** instead:
 a second Everberg-born Vandenbemden of much the same age in the same commune as his son
-[[hendrik_vdb]], and a plausible brother — but not grafted. Shared birthplace and a shared decade
+[[vandenbemden_henricus_1849]], and a plausible brother — but not grafted. Shared birthplace and a shared decade
 of birth is one identifier, not the two this project requires, and neither act naming him gives
 his own parents, so there is not yet a way to test the reading directly.
 
-**Partial retraction, left as found — `joannes_coekelberg58`.** A correction was made by hand
+**Partial retraction, left as found — `coekelberghs_joannes_1858`.** A correction was made by hand
 before this pass began: the record's `mother: anna_haesaerts` link is removed because the 1858
 Bertem birth act it rests on names the mother as *Anna **Catharina** Haesaerts* — the forename
 variant §51 and §53 deliberately left unmerged with the plain *Anna Haesaerts* this tree holds.
@@ -1851,10 +1851,10 @@ settle the forename question — it is not a new act, only a re-reading of one a
 leaves the record exactly as the hand correction left it: one parent, one open frontier, honestly
 short of a mother.
 
-**Next frontier.** [[jb_vandenbemden]]'s own marriage (~1840s, Everberg or Kortenberg) and
+**Next frontier.** [[vandenbemden_jan]]'s own marriage (~1840s, Everberg or Kortenberg) and
 Willem Edouard's parentage, which would either confirm or refute the brother lead; the register
 images behind the AGATHA-transcribed acts this pass's new records still rest on; and
-[[anna_haesaerts]]'s own death act (Bertem, 8 January 1880), which is the one document that
+[[haesaerts_anna_1810]]'s own death act (Bertem, 8 January 1880), which is the one document that
 would settle her forename either way.
 
 Tree: 417 → 422 people. Validator green.
@@ -1867,7 +1867,7 @@ went from **26 to 52**.
 
 **Twenty of those 52 are echoes, not checks.** They are people created *today*, from acts read
 on AGATHA or FamilySearch — and the corroborating act in the corpus is the same act.
-[[jcseraphina_t]] is the clean demonstration: she was written from AGATHA's
+[[thumas_joanna_1873]] is the clean demonstration: she was written from AGATHA's
 `HUVLB_HUBRA_00204117_0`, and `link.py` now scores her at 61 bits, four independent
 identifiers, against Open Archives `abl:feb53842…`, whose own act reference is
 `HUBRA_00204117_0`. The same document, reached through two aggregators, counted as agreement
@@ -1908,10 +1908,10 @@ Two smaller things from the same run, both recorded rather than acted on:
 
 ## 56. Autopilot pass 7 — six bare-agatha citations resolved, and the Hamme registers explained
 
-§52's confidence sweep downgraded six records — [[louise_bocklandt]], [[petrus_blomme]] (by
-omission — his own facts came from the same downgraded act), [[edouard_bocklandt]],
-[[marie_vanbergen]], [[pieter_stekelorum]]/[[helena_denijs]] and
-[[petrus_vannieuwenhuyse]] — because their only citation was a bare `agatha`: a site id
+§52's confidence sweep downgraded six records — [[bocklandt_louise_1877]], [[blomme_petrus_1884]] (by
+omission — his own facts came from the same downgraded act), [[bocklandt_edouard_1839]],
+[[vanbergen_marielouise_1842]], [[stekelorum_pieter]]/[[denijs_helena]] and
+[[vannieuwenhuyse_petrus_1649]] — because their only citation was a bare `agatha`: a site id
 with no page, no artifact, no search-log entry. This pass identified the acts behind five
 of them and repaired the citations. Confidence outcomes differ per record, and the
 difference is the point: a repaired citation is not automatically a `doc`.
@@ -1919,17 +1919,17 @@ difference is the point: a repaired citation is not automatically a `doc`.
 **RESTORED to `doc` — louise_bocklandt.** Her Stene marriage act of 1 March 1924 (akte nr.
 9) was read as a register image, not an index — [[fs-stene-1924-marriage-blomme-bocklandt]]
 — and states her birth to the day and commune (31 Dec 1877, Hamme O-Vl) and her divorce
-from [[edouard_dk]] by the Rechtbank van eersten aanleg te Brugge, **14 November 1922**,
-against the tree's own `~1923`. [[edouard_dk]]'s independently-read 1946 remarriage act
+from [[dekeyser_edouard_1876]] by the Rechtbank van eersten aanleg te Brugge, **14 November 1922**,
+against the tree's own `~1923`. [[dekeyser_edouard_1876]]'s independently-read 1946 remarriage act
 agrees with this 22 years apart, so the two records now carry the same `divorced` field, as
 "one marriage, one set of facts" requires. **FamilySearch's own index misdates the act 1
 May 1924.** The register says *"den eersten Maart"*; the banns (10 Feb) and the facing act
 (nr. 8, 23 Feb) both fit March, not May. The index's raw month field reads `"Maand": "Maa"`
 — truncated Dutch for *Maart*, silently auto-expanded by the site to the English *May*
 instead of being read as Dutch. A genuine indexing bug, now on record so nobody re-derives
-the wrong date from the index page. The same act named [[petrus_blomme]]'s own birth (Stene,
-23 Jan 1884) and parents, who are new records: [[josephus_blomme]] and
-[[mathilde_meseure]].
+the wrong date from the index page. The same act named [[blomme_petrus_1884]]'s own birth (Stene,
+23 Jan 1884) and parents, who are new records: [[blomme_josephus]] and
+[[meseure_mathilde]].
 
 **REPAIRED, confidence stays `sup` — edouard_bocklandt, marie_vanbergen,
 pieter_stekelorum/helena_denijs.** Each now cites a specific AGATHA act
@@ -1939,15 +1939,15 @@ each of these only as an "analyse van akte" — a volunteer index transcription 
 scan itself behind a login nobody in this project has. `doc` means an act or its image was
 actually read; an index entry, however specific, is not that, so `sup` is the honest
 ceiling here regardless of how confidently it reads. Two corrections came out of these
-acts: [[marie_vanbergen]]'s *geboorteplaats* is **Waasmunster**, not Hamme — the family
+acts: [[vanbergen_marielouise_1842]]'s *geboorteplaats* is **Waasmunster**, not Hamme — the family
 prose's "Hamme" was her father's residence, not her birth commune, so her own birth act and
-her parents' marriage belong in the Waasmunster registers, and [[ida_vermandel]] now
-carries that pointer as a frontier. And [[edouard_bocklandt]]'s parents are spelled
+her parents' marriage belong in the Waasmunster registers, and [[vermandel_ida_1825]] now
+carries that pointer as a frontier. And [[bocklandt_edouard_1839]]'s parents are spelled
 **Isabella Livina Ichau** in the 1907 act against this tree's **Isabella Livia** — ruled the
 same woman, a single-letter variant with no rival Isabella Ichau to collide with, noted on
-both his record and [[isabella_ichau]]'s.
+both his record and [[ichau_isabella_1803]]'s.
 
-**THE STEKELORUM UNIQUENESS CHECK.** [[agatha_stekelorum]]'s Roksem death act (24 May 1855)
+**THE STEKELORUM UNIQUENESS CHECK.** [[stekelorum_agatha]]'s Roksem death act (24 May 1855)
 is the *only* act in AGATHA's 13.4-million-act index that pairs a Pieter Stekelorum with a
 Helena Denijs, checked against all 37 acts naming a Pieter Stekelorum. Two near-namesakes
 were pulled and refuted directly rather than taken on faith: `OVWVL_00197046` is a Pieter
@@ -1970,7 +1970,7 @@ available (`/nl/search/genealogie/35236` = item `513_9000_000_00777`); the Oostk
 baptisms of 1652–1673 are marked *"Niet beschikbaar — hiaten in de originele registers en
 op de microfilms"*, which matters for any earlier children or siblings; and a
 Begrafenisakten Oostkamp 1662 entry names a *Marinus Van Nieuwenhuyse* as *"Partner van de
-overledene"*, which does not sit with [[cornelia_govaert]]'s own ~1653 death — no act id
+overledene"*, which does not sit with [[govaert_cornelia_1625]]'s own ~1653 death — no act id
 read for that yet, so it is a frontier, not a correction.
 
 **SEVEN NEW SIBLINGS, FROM ONE SEARCH.** The AGATHA query `NAME=Bocklandt
@@ -1978,20 +1978,20 @@ ALL_PLACES=Hamme` — already logged in `research/searches.jsonl` as a miss for 
 goal (looking for Eduardus × Maria Louisa's own marriage act, which is not among the 18
 results) — turns out to hold five of the couple's OTHER children's own
 marriage acts, each naming Eduardus and Maria Louisa as parents by an explicit relational
-role (Vader/Moeder van de bruid or bruidegom): [[paulina_bocklandt]] (m. Ketels, Oostende
-1888), [[elodia_bocklandt]] (m. Debuf, Oostende 1892), [[mathildis_bocklandt]] (m. Dubuy,
-Oostende 1893), [[caesar_bocklandt]] (m. Vincke, Diksmuide 1893) and
-[[philemondus_bocklandt]] (m. Mewis, Oostende 1900) — plus [[alphonsus_bocklandt]] (d.
+role (Vader/Moeder van de bruid or bruidegom): [[bocklandt_paulina_1870]] (m. Ketels, Oostende
+1888), [[bocklandt_maria_1874]] (m. Debuf, Oostende 1892), [[bocklandt_maria_1872]] (m. Dubuy,
+Oostende 1893), [[bocklandt_caesar_1867]] (m. Vincke, Diksmuide 1893) and
+[[bocklandt_philemondus_1880]] (m. Mewis, Oostende 1900) — plus [[bocklandt_alphonsus]] (d.
 Oostende 1892, already held as a citation but never given a record) and
-[[ludovicus_bocklandt]] (d. Hamme 1880, `doc` — the one already backed by a read register
+[[bocklandt_ludovicus_1875]] (d. Hamme 1880, `doc` — the one already backed by a read register
 image). All five new marriage acts are now registered as sources and logged. One is left as
-a named frontier rather than grafted: [[caesar_bocklandt]]'s bride, Florence Amelie Vincke,
+a named frontier rather than grafted: [[bocklandt_caesar_1867]]'s bride, Florence Amelie Vincke,
 names parents — Lucien Julianus Vincke × Ludovica Maria Vanalderweireldt — matching this
-tree's existing [[lucien_vincke]] and `ludovica_vanald` (parents of [[emma_vincke]], on the
+tree's existing [[vincke_lucien_1840]] and `vanalderweireldt_ludovica_1845` (parents of [[vincke_emma_1880]], on the
 Van Iseghem line) by full name. If she is their daughter, this 1893 marriage links two
 branches this project has so far treated as disconnected — objective 3 — but a shared name
 in one act is one identifier, not the two a graft needs, and there is no Florence Amelie
-record to graft onto. [[angela_dk]], a sixth De Keyser child named only in her father's
+record to graft onto. [[dekeyser_angela]], a sixth De Keyser child named only in her father's
 prose until now, also got her own record from an already-registered citation.
 
 **STRUCTURAL FINDING, for the next passes.** FamilySearch holds the **Hamme
@@ -2003,7 +2003,7 @@ failure; it is a real gap in both venues, confirmed by two complete surname harv
 "Analyses van akten" projects, which cover West-Vlaanderen and Vlaams-Brabant civil
 registration but have no Oost-Vlaanderen equivalent at all. It is exactly why this family
 was unreachable for so many passes, and exactly why the register image, not another search,
-was what closed [[louise_bocklandt]] and [[petrus_blomme]]. The next frontier this points
+was what closed [[bocklandt_louise_1877]] and [[blomme_petrus_1884]]. The next frontier this points
 at directly: Louise's own 1877 Hamme birth act, the Bocklandt × Van Bergen marriage of the
 1860s, and Maria Louisa Van Bergen's 1842 birth — now redirected to **Waasmunster** — are
 all sitting in neighbouring, unopened films in the same FamilySearch series.
@@ -2054,7 +2054,7 @@ anything about a commune.
 
 ## 58. Hamme, 21 June 1865 — a grandmother read off the register, and a spelling that was blocking three grafts
 
-[[ida_vermandel]] was in this tree with a bare `1825`, a bare `1865`, no place at either
+[[vermandel_ida_1825]] was in this tree with a bare `1825`, a bare `1865`, no place at either
 end, no occupation, no parents, and one source: a Geneanet tree. She sat high on the ranked
 queue with 771 held candidates and the `vermandel` harvest complete at 736/736 — meaning a
 miss would have been meaningful.
@@ -2124,10 +2124,10 @@ twintigste Juny achttien honderd vyf en zestig**.
 That death date is the graft. Twenty-one June 1865 at Hamme, from a different act by a
 different clerk seventeen years later, neither knowing about the other. The second
 identifier is the father's trade — *metser*, the same trade his other daughter's 1888
-Oostende act gives him. [[paulina_vdberghe]] enters at `doc`, with [[petrus_vermorgen]]
+Oostende act gives him. [[vandenberghe_paulina_1849]] enters at `doc`, with [[vermorgen_petrus]]
 alongside her because a person named in this tree gets a record rather than a mention.
 
-[[jan_van_bergen]] gains the trade from three agreeing sources and an age — 65 in May 1882,
+[[vanbergen_joannes_1815]] gains the trade from three agreeing sources and an age — 65 in May 1882,
 so born about 1817, which the held 1815 survives without being confirmed by. He stays
 `sup`: the images prove he existed, married, worked and was alive at Hamme in 1865 and
 1882, and his birth, his death and his parents are still a tree's word.
@@ -2190,8 +2190,8 @@ and this run is not permitted to write one.
 The most useful thing in this pass is the state of those last three queue entries.
 
 **One is a graft this run retracted six hours earlier.** `research.py children` proposes
-*Appolonia Vandenbemden*, b. Sint-Stevens-Woluwe 1877-01-28, as a child of [[hendrik_vdb]]
-× [[coekelberghs]]. §54 deleted exactly that record after reading the act, which names
+*Appolonia Vandenbemden*, b. Sint-Stevens-Woluwe 1877-01-28, as a child of [[vandenbemden_henricus_1849]]
+× [[coekelberghs_maria_1848]]. §54 deleted exactly that record after reading the act, which names
 **Willem Edouard Vandenbemden** × **Maria Anna Vandenhoven** — a different couple in the
 same commune, corroborated by a second act naming them as parents of another child. The
 refutation is in `research/labels.jsonl`, with its full reasoning, written by the verifier
@@ -2199,12 +2199,12 @@ that found it. **The queue does not consult it.** Left alone, the next unattende
 re-grafts the same wrong person, and the run after that.
 
 **One is a link this run deliberately declined.** The queue proposes attaching
-[[joannes_coekelberg58]] to [[anna_haesaerts]] as his mother. §54 removed exactly that
+[[coekelberghs_joannes_1858]] to [[haesaerts_anna_1810]] as his mother. §54 removed exactly that
 link, because the 1858 act names *Anna **Catharina** Haesaerts* and §51/§53 left that
 forename deliberately unmerged. The record's own prose says so. The queue re-proposes it.
 
 **One is a match no verifier would make.** It suggests that *Karel Joseph Bossin*, born at
-Sint-Stevens-Woluwe on **27 February 1901**, is the [[cornelius_bossin]] already in the
+Sint-Stevens-Woluwe on **27 February 1901**, is the [[bossin_cornelius_1847]] already in the
 tree — a man whose birth was declared at Sint-Stevens-Woluwe on **13 September 1847**. A
 fifty-four-year gap, on a shared surname and a shared commune. `link.py` scores in bits of
 rare-evidence agreement and vetoes a stated conflict; the `[LINK →]` suggestion in
@@ -2238,7 +2238,7 @@ before it is worked** — including the two above, which must not be grafted.
 `evaluate.py report`, run at the end of this pass: **48 labels, 33 re-scored, precision
 80.0%, recall 33.3%.** More than half the labels were written today.
 
-The two false positives are both on [[marie_vanbergen]], and they are the ones to look at.
+The two false positives are both on [[vanbergen_marielouise_1842]], and they are the ones to look at.
 The scorer would graft *Maria Emilia Josephina van Bergen* (d. Aarschot 1923) at **28.6
 bits** and *Joanna Van Bergen* (d. Wuustwezel 1906) at **23.7 bits**, each on the same
 three-part agreement: surname, birth year ±1, and **father's forename**. Wrong province in
@@ -2250,7 +2250,7 @@ than suspected.
 
 The recall figure needs reading with care, because a good part of it is a **labelling
 convention** rather than the matcher. Several labelled matches score `REJECTED` on
-nonsense — `coekelberghs` against her own 1873 marriage act comes back *"sex disagrees;
+nonsense — `coekelberghs_maria_1848` against her own 1873 marriage act comes back *"sex disagrees;
 birth dates 1848-11-22 vs 1849-08-19"*, which is her being compared to **her husband**.
 The label cites the act id; an act names six people; the scorer picked one. Earlier labels
 in this file use a `…#Person1` suffix and those score correctly. Until the convention is
@@ -2282,7 +2282,7 @@ once. On the worst pair available:
 
 | | |
 |---|---|
-| tree | `coekelberghs` — Maria Theresia Coekelberghs |
+| tree | `coekelberghs_maria_1848` — Maria Theresia Coekelberghs |
 | act | `abl:2c0d71d9…` — **Maria Anna Vandenhoven**, 21.6 bits, graftable |
 
 That is the identification §54 retracted a person record over, and the refutation naming
@@ -2298,7 +2298,7 @@ count over those pairs went 382 → 381 with nothing else moving.
 `from_person` took its years from `year_of`, which reads a number out of any form in the
 grammar. So `1920..1929` became "1920", `stated_birth_year` was set from the mere presence
 of a date, and the ±2 conflict test then fired on **every other year in the range the
-record itself declares**. [[gustaaf]]'s birth is recorded `1920..1929`; acts stating 1923,
+record itself declares**. [[dekeyser_gustaaf]]'s birth is recorded `1920..1929`; acts stating 1923,
 1925 and 1929 were each REJECTED as conflicting with it. He is one of the people this
 project most needs to find in a foreign register, and the one thing his record admits it
 does not know had become a reason to refuse every record that would have told us.
@@ -2323,7 +2323,7 @@ earlier" or the encoding asserts more than the source did.
 
 ### Seventeen dates the matcher could not see at all
 
-[[cornelius_bossin]] carried `birth.raw: "declared at Sint-Stevens-Woluwe on 13 September
+[[bossin_cornelius_1847]] carried `birth.raw: "declared at Sint-Stevens-Woluwe on 13 September
 1847"` and no `date:` — so to the scorer he was **undated**, and no veto could fire. That is
 why `research.py children` proposed a boy born 1901 as him, a 54-year gap that a human
 caught and wrote up in the verify log as a refused merge. The proposal was still live.
@@ -2365,7 +2365,7 @@ mostly mechanical rather than a matter of judgement:
   they are judgements about an *act*, and forcing a pid onto one would invent the thing it
   denies. Left as they are.
 
-One re-pointing was **wrong and is retracted**: `joannes_jos_vi` against
+One re-pointing was **wrong and is retracted**: `vaniseghem_joannes_1819` against
 `abb:2537bedb…` was moved to the father, Jacobus Van Iseghem, because the label's text
 contains the word "father" — but that text is *describing the act* (*"father Jacobus x
 Rosalie Wolfs"*), not naming the pair ruled on. The rule is only sound for `--match`
@@ -2478,7 +2478,7 @@ the two identifiers a graft needs.
 **Precision 88.9% → 96.0%, recall 100%, no true match lost.** Fixing something that was never
 an identifier is not the same as raising the bar, and only one of the two was available.
 
-One false positive survives, and it reorders what to do next. `joannes_vi2` is graftable on
+One false positive survives, and it reorders what to do next. `vaniseghem_joannes_1852` is graftable on
 `name + place` while the forenames actively disagree — **Joannes** against *Charles Thomas
 Jean*. Closing it needs a forename-disagreement veto, and that is **unsafe until the folding
 table exists**: without it, Henricus/Hendrik reads as a disagreement and breaks the correct
@@ -2591,7 +2591,7 @@ at once, and there is no judgement to be made about a duplicate.
 
 ### The fold immediately disproved §61's plan
 
-§61 predicted the last false positive would fall to a forename-*disagreement* veto: `joannes_vi2`
+§61 predicted the last false positive would fall to a forename-*disagreement* veto: `vaniseghem_joannes_1852`
 was graftable while the forenames "actively disagree", Joannes against *Charles Thomas Jean*.
 With the table in place, **Jean folds to Joannes** — they agree, the pair's score went *up* from
 27.0 to 29.7 bits, and the veto §61 proposed would never have fired. The label's own reasoning,
@@ -2640,16 +2640,16 @@ data.
 §54 retracted the `appolonia_vandenbemd77` record after reading the act; the ruling that
 justified the retraction was left naming a person who no longer existed, so it has been
 uncountable ever since. Its evidence was never in doubt — the act was read directly — and what
-it denies is that this act's parents are `hendrik_vdb` × `coekelberghs`. That is two pairwise
+it denies is that this act's parents are `vandenbemden_henricus_1849` × `coekelberghs_maria_1848`. That is two pairwise
 rulings, so it is now recorded as two, with the evidence intact and the stale trailing sentence
 about a record that "needs correcting or removing" updated, because it has since been removed.
 49 labels, 35 re-scored, and no orphan.
 
 One half is the pair the shadowing veto let through while `same_surname` was being rebound by
-the kin loop (§60) — `coekelberghs` against Maria Anna Vandenhoven — and it now scores
+the kin loop (§60) — `coekelberghs_maria_1848` against Maria Anna Vandenhoven — and it now scores
 REJECTED, which pins that regression in the gold standard rather than only in a unit test.
 
-**The other half is a false positive, and it is not obviously a defect.** `hendrik_vdb` against
+**The other half is a false positive, and it is not obviously a defect.** `vandenbemden_henricus_1849` against
 Willem Edouard Vandenbemden reaches graftable on surname plus **Everberg as birthplace** — two
 independent classes, which is exactly what rule 1 of the charter asks for. The parent bound from
 §62 does not help: Willem Edouard is father of a child born 1877, so he must be born by 1864,
@@ -2678,7 +2678,7 @@ documented rival, not a wrong graft waiting to happen.
 ## 64. Eight children of Lucien Vincke, an act the tree already held without reading it that
 way, and a `doc` upgrade that came back negative
 
-**The target question, answered negative.** This tree has carried [[emma_vincke]]'s birth
+**The target question, answered negative.** This tree has carried [[vincke_emma_1880]]'s birth
 act as a named frontier for several passes now: indexed, not read, id unrecorded. This pass
 went to settle it — pull the register image, move her parent link from `sup` to `doc` — and
 came back negative, for a reason worth keeping because it is structural, not a session
@@ -2700,9 +2700,9 @@ search.
 
 **Eight children, not one.** The same vrijwilligersrab sweep — filtering the Diksmuide
 Geboorten index once by father's forename and once, independently, by the mother's rare
-surname — returned the identical seven rows both times: [[charles_vincke]] (1871),
-[[romanie_vincke]] (1873), [[irma_vincke]] (1874), [[camilla_vincke]] (1876),
-[[eugene_vincke]] (1877), [[emma_vincke]] (1880, already held) and [[jerome_vincke]] (1886).
+surname — returned the identical seven rows both times: [[vincke_charles_1871]] (1871),
+[[vincke_romanie_1873]] (1873), [[vincke_irma_1874]] (1874), [[vincke_camilla_1876]] (1876),
+[[vincke_eugene_1877]] (1877), [[vincke_emma_1880]] (1880, already held) and [[vincke_jerome_1886]] (1886).
 Each act names both parents in full, Vincke Lucien Julianus × Vanalderweireldt Ludovica
 Maria, and no rival couple of that name survives either filter. One row is worth flagging
 rather than folding in silently: the 1873 act for Romanie Elodie spells the father "Lucien
@@ -2712,14 +2712,14 @@ commune and the chronology all agree, and there is no evidence of a second husba
 recorded here and on her own record rather than quietly folded, because the whole point of
 flagging a variant is that folding it should be checkable, not assumed.
 
-An eighth child, [[florence_vincke]] (b. Diksmuide 1869), does not come from this sweep at
+An eighth child, [[vincke_florence_1869]] (b. Diksmuide 1869), does not come from this sweep at
 all — Diksmuide's 1866-1870 birth rows carry only a bare father surname, no forename and no
 mother, so the index cannot name her parents in that window. Hers is the more striking find
 of the two: **the tree already held the act that joins the Vincke and Bocklandt clusters,
-and had not read it that way.** [[caesar_bocklandt]]'s record has carried
+and had not read it that way.** [[bocklandt_caesar_1867]]'s record has carried
 `agatha-diksmuide-1893-marriage-bocklandt-vincke` since an earlier pass, with a frontier note
 reading almost exactly like this one — the bride's parents share full names with
-[[lucien_vincke]] × [[ludovica_vanald]], but the act alone named them by name only, one
+[[vincke_lucien_1840]] × [[vanalderweireldt_ludovica_1845]], but the act alone named them by name only, one
 identifier, and Florence Amelie had no record of her own to graft the link onto. Writing her
 record is the whole fix: the second identifier was never missing evidence, only a missing
 file. With it, this pass joins the Van Iseghem line to the De Keyser/Bocklandt line
@@ -2730,14 +2730,14 @@ time.
 Huwelijken index, searched for the couple's own 1907 marriage act (itself independent
 corroboration of the parent link — different commune, register and volunteer batch from the
 birth-index transcription, so not the same evidence counted twice), surfaced five marriage
-acts of [[eduardus_vi]] × [[emma_vincke]]'s own children marrying in turn: [[flavie_vi]]
-(Stene 1920), [[eduardus_vi2]] (Oostende 1927), [[joannes_vi]] himself (Stene 1928 — already
-held, previously undated), [[valentina_vi]] (Stene 1931) and [[maria_vi]] (Stene 1935). Four
+acts of [[vaniseghem_eduardus_1880]] × [[vincke_emma_1880]]'s own children marrying in turn: [[vaniseghem_flavie_1898]]
+(Stene 1920), [[vaniseghem_eduardus_1901]] (Oostende 1927), [[vaniseghem_joannes_1903]] himself (Stene 1928 — already
+held, previously undated), [[vaniseghem_valentina_1909]] (Stene 1931) and [[vaniseghem_maria_1913]] (Stene 1935). Four
 of the five are new records here. None of the four acts gives a birth date, so none is
 recorded — the acts are marriage acts, not birth acts, and inventing one would be exactly the
 guess rule 5 forbids.
 
-Each of the four names an in-law. Only one, Angela Coralia Gunst ([[eduardus_vi2]]'s wife),
+Each of the four names an in-law. Only one, Angela Coralia Gunst ([[vaniseghem_eduardus_1901]]'s wife),
 has both a forename and a surname on the act she was actually found on — the other three are
 recorded in this search only as "Gunst" (Flavie's husband), "Joye" (Valentina's) and
 "Zwaenepoel" (Maria's). **The choice made here: a person record is written only where a
@@ -2745,20 +2745,20 @@ forename and surname are both known.** Where only a surname is on hand, the marr
 named as a frontier in the child's own prose rather than as a spouses-field stub with no id
 — a stub whose identity nothing could check is worse than a sentence saying what is not yet
 known, because the stub looks resolved and the sentence does not. This is the same shape of
-decision as `eugenius_dv`'s three named-but-unentered children in an earlier pass: known
+decision as `devriendt_eugenius_1882`'s three named-but-unentered children in an earlier pass: known
 facts, deliberately deferred rather than half-entered.
 
 **The 1928 act also corroborates, without collapsing anything new.** It names the bride's
 parents as Devriendt Eugenius Alphonsius × Schalandryn Octavia Maria — an exact match to
-[[eugenius_dv]] × [[octavia_schal]], already `doc` from an unrelated 1906 act (S20). Both
+[[devriendt_eugenius_1882]] × [[schalandrijn_octavia_1886]], already `doc` from an unrelated 1906 act (S20). Both
 sides of this marriage were already fully linked in the tree before this pass; the 1928 act
 supplies a date and place that were missing, not a new join. Checked and confirmed, not a
 tree collapse.
 
-**An open question, left open.** [[joannes_vi]]'s held birth — Lens, 11 May 1903 — precedes
+**An open question, left open.** [[vaniseghem_joannes_1903]]'s held birth — Lens, 11 May 1903 — precedes
 his parents' held marriage — Oostende, 28 September 1907 — by more than four years. Neither
 date moves here. Either an earlier, unregistered union or a later legitimation would explain
-it, and this tree already documents the second pattern elsewhere: [[edouard_dk]]'s 1901
+it, and this tree already documents the second pattern elsewhere: [[dekeyser_edouard_1876]]'s 1901
 marriage to Louise Bocklandt legitimized two children already born (README's own worked
 example). Recorded as a frontier on his record rather than resolved.
 
@@ -2771,9 +2771,9 @@ Vincke births sit in that blind window, one of them Florence Amelie's own — an
 shows, the only way through it is the same route that resolved her: not a fresh sweep of the
 birth index, but each child's own later act.
 
-Twelve new records this pass: `charles_vincke`, `romanie_vincke`, `irma_vincke`,
-`camilla_vincke`, `eugene_vincke`, `jerome_vincke`, `florence_vincke`, `flavie_vi`,
-`eduardus_vi2`, `valentina_vi`, `maria_vi`, `angela_gunst`.
+Twelve new records this pass: `vincke_charles_1871`, `vincke_romanie_1873`, `vincke_irma_1874`,
+`vincke_camilla_1876`, `vincke_eugene_1877`, `vincke_jerome_1886`, `vincke_florence_1869`, `vaniseghem_flavie_1898`,
+`vaniseghem_eduardus_1901`, `vaniseghem_valentina_1909`, `vaniseghem_maria_1913`, `gunst_angela`.
 
 ## 65. Autopilot pass 2 (down) — a namesake ruled out, a fourth Bossin sibling, and five
 more children anchored by their parents' own marriage act
@@ -2784,8 +2784,8 @@ items sat on the downward queue for this family; one of them was a repeat propos
 refused once, and stays refused.
 
 **The queue re-proposed a graft this tree already retracted, and it is refused again.**
-`research.py children` surfaces [[joannes_coekelberg58]] as an unlinked child of
-[[jb_coekelberghs]] with no mother. It has no mother because §54 removed one by hand: the
+`research.py children` surfaces [[coekelberghs_joannes_1858]] as an unlinked child of
+[[coekelberghs_joannes_1809]] with no mother. It has no mother because §54 removed one by hand: the
 1858 Bertem birth act names the mother *Anna **Catharina** Haesaerts*, the forename variant
 §51/§53/§54 deliberately left unmerged with the plain *Anna Haesaerts* this tree holds. That
 retraction is not re-litigated here — grafting on the strength of the very act in dispute
@@ -2796,90 +2796,90 @@ label against the mention itself (`abl:a0b8c9a0…#Person20705606`), so the refu
 record a tool can read back, not only a note a human has to.
 
 **The Peremans/Haesaerts distinction, stated in full, because it is this pass's real
-contribution.** Two new acts name [[peremans]] as a mother — [[joannes_bossin51]]'s 1851
-birth and [[ludovica_bossin]]'s 1853 birth — and both write her *Anna Catharina Peremans*,
+contribution.** Two new acts name [[peremans_joanna_1824]] as a mother — [[bossin_joannes_1851]]'s 1851
+birth and [[bossin_ludovica_1853]]'s 1853 birth — and both write her *Anna Catharina Peremans*,
 shorter than this tree's *Joanna Catharina Jacoba*. That looks, on its face, like exactly the
 Haesaerts problem just above: a shortened forename on a disputed act. It is not, and the
-reason is the one CLAUDE.md rule 4 is built on. [[anna_haesaerts]]'s own anchor act — the
+reason is the one CLAUDE.md rule 4 is built on. [[haesaerts_anna_1810]]'s own anchor act — the
 1838 Bertem marriage that put her in this tree, read as a register image — calls her plain
 *Anna* three times, with no second forename anywhere; *Anna Catharina* appears only inside
 acts that are themselves in dispute, so no document independent of the dispute has ever
-settled it. [[peremans]]'s anchor act is different: her own 1846 Zaventem marriage (S19,
+settled it. [[peremans_joanna_1824]]'s anchor act is different: her own 1846 Zaventem marriage (S19,
 read as an image) already gives her the full *Joanna Catharina Jacoba Peremans*, and her
 record already reasons — from that same anchor — that shorter forms elsewhere are a clerk's
 memory of it. The two 1851 and 1853 acts repeat an *already-reconciled* shortening; they do
 not have to do the reconciling. One case has an independent document that settles the
 variant; the other has only the disputed act calling itself as a witness. That is the
-precedent a future pass will need, so it is written on [[peremans]], [[joannes_bossin51]]
-and [[ludovica_bossin]] rather than left to be re-derived.
+precedent a future pass will need, so it is written on [[peremans_joanna_1824]], [[bossin_joannes_1851]]
+and [[bossin_ludovica_1853]] rather than left to be re-derived.
 
-**A fourth Bossin sibling, [[joannes_bossin51]]**, born Sint-Stevens-Woluwe 15 August 1851 —
-a second, unrelated *Joannes Baptista Bossin*, four years before the [[bossin]] this tree
+**A fourth Bossin sibling, [[bossin_joannes_1851]]**, born Sint-Stevens-Woluwe 15 August 1851 —
+a second, unrelated *Joannes Baptista Bossin*, four years before the [[bossin_antonia_1849]] this tree
 already held. **Do not confuse the two**: this pass's other finding, below, independently
-settles that this family — [[guilielmus_bossin]] × [[peremans]] — is not [[jbbossin]]'s
+settles that this family — [[bossin_guilielmus_1824]] × [[peremans_joanna_1824]] — is not [[bossin_joannes_1834]]'s
 family, so the shared full name is coincidence twice over: same forename set, same surname,
-same small commune, two unconnected men a generation apart. [[guilielmus_bossin]]'s own
+same small commune, two unconnected men a generation apart. [[bossin_guilielmus_1824]]'s own
 birth window narrows again on the strength of this act — 25 February–1 December 1824 to 25
 February–15 August 1824 — recorded in prose rather than the field, because the date grammar's
 only span form is year-to-year and a plain `"1824"` already asserts no more than both windows
 agree on.
 
-**[[ludovica_bossin]]'s birth moves from a year to a day**, 1853-10-05, on a second,
+**[[bossin_ludovica_1853]]'s birth moves from a year to a day**, 1853-10-05, on a second,
 independent act (S33) that states an hour of birth and — uniquely in this family's acts —
 has its EventDate and SourceDate coincide. Across this corpus the two normally differ by a
 day or two, which is what made the FamilySearch declaration date (S24) read as "probably a
-day late," the same reasoning already applied to her sister [[bossin]]'s birth. Same-day
+day late," the same reasoning already applied to her sister [[bossin_antonia_1849]]'s birth. Same-day
 EventDate/SourceDate plus a stated hour is different evidence, and it is why that precedent
 does not carry over here.
 
-**Five more children of [[jbbossin]] × [[maria_wolf]], anchored by the couple's own marriage
-act.** [[jbbossin]] was, until this pass, a name with a death date and no birth, no parents
+**Five more children of [[bossin_joannes_1834]] × [[wolf_maria_1836]], anchored by the couple's own marriage
+act.** [[bossin_joannes_1834]] was, until this pass, a name with a death date and no birth, no parents
 and one child. His own marriage act — Sint-Stevens-Woluwe nr. 4, 17 June 1858 — supplies all
 three at once: his birth (2 January 1834, Sint-Stevens-Woluwe), his bride's birth (4 April
 1836, Brussel — she is recorded as a *verlaten kind*, an abandoned child who swore she never
-knew her own mother, though the act nonetheless names her, [[petronella_wolf]], formally),
-and — the finding that answers a question this tree had carried since [[ludovicus_bossin79]]
-and [[misabella_t]] married — his own parents, **Judocus Bossin × Maria Desmedt**, a couple
-with no connection at all to [[guilielmus_bossin]] × [[peremans]]. The shared-surname
-question on [[ludovicus_bossin79]]'s and [[jbbossin]]'s records is now resolved rather than
+knew her own mother, though the act nonetheless names her, [[wolf_petronella]], formally),
+and — the finding that answers a question this tree had carried since [[bossin_ludovicus_1879]]
+and [[thumas_maria_1880]] married — his own parents, **Judocus Bossin × Maria Desmedt**, a couple
+with no connection at all to [[bossin_guilielmus_1824]] × [[peremans_joanna_1824]]. The shared-surname
+question on [[bossin_ludovicus_1879]]'s and [[bossin_joannes_1834]]'s records is now resolved rather than
 merely flagged, in the negative: two Bossin families in one small commune, not one.
 
-Against that anchor birthdate, [[maria_wolf]]'s stated age is an *exact* match in five
-separate acts spanning 1857-1882 — 21, 22, 39, 46, and 43 on [[ludovicus_bossin79]]'s own
+Against that anchor birthdate, [[wolf_maria_1836]]'s stated age is an *exact* match in five
+separate acts spanning 1857-1882 — 21, 22, 39, 46, and 43 on [[bossin_ludovicus_1879]]'s own
 1879 birth act — five for five, which is what defeats the "two couples" reading the
-seventeen-year gap between the 1859 and 1876 births might otherwise invite. [[jbbossin]]'s
+seventeen-year gap between the 1859 and 1876 births might otherwise invite. [[bossin_joannes_1834]]'s
 own age matches exactly in two of those acts and is a year short in two others — ordinary
 rounding on the same documents where the mother is precise. Two of the five children are
 double-attested by their own later marriages, one of which (1897) independently restates
-[[jbbossin]]'s death — Sint-Stevens-Woluwe, 19 March 1887 — exactly, and a sixth child,
-[[gjosef_bossin69]] (b. Kraainem 1869), known only from his own 1896 marriage act, restates it
-a second time. [[jbbossin]]'s trade moves across seven documents: *papiermaekersgast* →
+[[bossin_joannes_1834]]'s death — Sint-Stevens-Woluwe, 19 March 1887 — exactly, and a sixth child,
+[[bossin_guillielmus_1869]] (b. Kraainem 1869), known only from his own 1896 marriage act, restates it
+a second time. [[bossin_joannes_1834]]'s trade moves across seven documents: *papiermaekersgast* →
 *daglooner* → *landbouwer* → *herbergier*, the trade he still holds at death and the one
-[[maria_wolf]] keeps alone afterward. The mother's surname is spelled five ways across the
+[[wolf_maria_1836]] keeps alone afterward. The mother's surname is spelled five ways across the
 same forty years of acts — *Dewolf*, *Wolf*, *De Wolf*, *Anna Maria Dewolf*, *Maria Anna
 Dewolf* — one woman, several clerks.
 
-**FLAG, not resolved: [[jphilippus_bossin57]] was born 28 June 1857, about eleven months
-before [[jbbossin]] × [[maria_wolf]]'s marriage on 17 June 1858.** Neither date is altered to
+**FLAG, not resolved: [[bossin_joannes_1857]] was born 28 June 1857, about eleven months
+before [[bossin_joannes_1834]] × [[wolf_maria_1836]]'s marriage on 17 June 1858.** Neither date is altered to
 make the other agree. Legitimation by a marriage following the birth is the obvious reading,
-and this tree already documents the same shape on [[joannes_vi]] (§64) — recorded as an open
+and this tree already documents the same shape on [[vaniseghem_joannes_1903]] (§64) — recorded as an open
 question on both records, not resolved by this pass.
 
-**Corroboration only, no new person:** [[misabella_t]]'s own 1880 Sint-Stevens-Woluwe birth
-act independently confirms both her parents, [[georges_cj]] and [[bossin]], by exact age and
+**Corroboration only, no new person:** [[thumas_maria_1880]]'s own 1880 Sint-Stevens-Woluwe birth
+act independently confirms both her parents, [[thumas_georges_1836]] and [[bossin_antonia_1849]], by exact age and
 birthplace, with the family spelled *Thomas* there against *Thumas* on her son
-[[karel_bossin01]]'s 1901 birth act — one family, an orthographic variant inside one
+[[bossin_karel_1901]]'s 1901 birth act — one family, an orthographic variant inside one
 transcription batch, ruled on and labelled in an earlier pass, written up here.
 
-**Ten new records this pass:** `karel_bossin01`, `joannes_bossin51`, `jphilippus_bossin57`,
-`pamandus_bossin59`, `janphilip_bossin76`, `frans_bossin82`, `gjosef_bossin69`,
-`judocus_bossin`, `maria_desmedt`, `petronella_wolf`. Tree: 446 → 456 people.
+**Ten new records this pass:** `bossin_karel_1901`, `bossin_joannes_1851`, `bossin_joannes_1857`,
+`bossin_philippus_1859`, `bossin_jan_1876`, `bossin_frans_1882`, `bossin_guillielmus_1869`,
+`bossin_judocus`, `desmedt_maria`, `wolf_petronella`. Tree: 446 → 456 people.
 
 **Everything above came from the corpus already on disk.** No harvest, no login, no browser
 session — every identifier check in this section reads an act `research/harvest/acts/abl.jsonl`
 already held, most of them already scored and labelled in `research/labels.jsonl` before this
 narrative was written. Three labels were added this pass: the repeat Coekelberghs refusal
-above, and two confirming [[jbbossin]] and [[maria_wolf]] against [[ludovicus_bossin79]]'s own
+above, and two confirming [[bossin_joannes_1834]] and [[wolf_maria_1836]] against [[bossin_ludovicus_1879]]'s own
 1879 birth act, which the "five for five" mother's-age argument above depends on.
 
 ## 66. Autopilot pass 4 (up) — a marriage act that answers two frontiers at once, and the
@@ -2892,80 +2892,80 @@ unauthenticated on ark `3:1:QZ9J-PQZ` and film 001358587) — logged as a one-re
 for the moment a session exists, not a miss, since the material was never reached.
 
 **The target: Oostende, 28 August 1851, act nr. 090 (RAB ID 574198, microfilm 1358587, FS
-waypoint QZ9J-PQZ).** [[josephus_janssen]] × [[appolonia_huyghebaert]]'s own marriage act
+waypoint QZ9J-PQZ).** [[janssen_josephus_1820]] × [[huyghebaert_appolonia_1830]]'s own marriage act
 answers two open parent-frontiers in one document, because a Belgian marriage act always
-names both sides: [[joannes_janssen]] × [[victoria_declerck]] for the groom, and
-[[hubertus_huyghebaert]] × [[joanna_derudder]] for the bride. Both spouses' birth date and
+names both sides: [[janssen_joannes_1778]] × [[declerck_victoria_1786]] for the groom, and
+[[huyghebaert_hubertus_1791]] × [[derudder_joanna_1793]] for the bride. Both spouses' birth date and
 place match this tree's pre-existing (tree-gverdievel) values exactly — the first
 identifier for each — and the parent names are the second, all four now created and linked.
 The spelling "Apollonia Johanna" against this tree's "Appolonia Joanna" is not a
 discrepancy: `data/forenames.json` folds `apollonia~appolonia` and `joanna~johanna`, checked
 directly rather than assumed.
 
-**The duplicate-id trap, checked explicitly this time.** [[josephus_janssen]]'s own birth
+**The duplicate-id trap, checked explicitly this time.** [[janssen_josephus_1820]]'s own birth
 act — Oostende, act nr. 303, 11 August 1820, RAB ID 623503, FS waypoint QZ9J-P7S —
 independently corroborates the same parent names, and the check that matters is that
 623503 ≠ 574198: a different register (geboorten vs huwelijken), a different RAB ID, a
 different FamilySearch waypoint and film. Genuinely independent, not the same transcription
 counted twice. A rival check was also run rather than assumed: of 315 Janssen rows in the
 province-wide birth index, exactly four have a Declerck mother, and all four name this one
-couple. This is the discipline [[jerome_vincke]]'s AGATHA/Geboorten duplicate-id problem
+couple. This is the discipline [[vincke_jerome_1886]]'s AGATHA/Geboorten duplicate-id problem
 (§65's predecessor note on `rab-bs-geboorten`) exists to guard against, applied here and
 found clean.
 
 **A second marriage, found without looking for it, and a death corroborated from a civil
-act.** [[appolonia_huyghebaert]] remarried as a widow: Oostende, 27 October 1868, act nr.
-106 (RAB ID 580783), to [[leopoldus_pieren]]. Its "Previous Partners" table reads exactly
+act.** [[huyghebaert_appolonia_1830]] remarried as a widow: Oostende, 27 October 1868, act nr.
+106 (RAB ID 580783), to [[pieren_leopoldus_1839]]. Its "Previous Partners" table reads exactly
 "JANSSEN | Josephus Joannes | Oostende | 26/07/1866" — an exact match to
-[[josephus_janssen]]'s held death date and place, which until now rested only on
+[[janssen_josephus_1820]]'s held death date and place, which until now rested only on
 tree-gverdievel. The same act's Detail view, read past what either spouse's summary
-required, also gives [[hubertus_huyghebaert]]'s own death (15 March 1857, Oudenburg) and
-shows [[joanna_derudder]] still living in 1868 at age 76 — broadly consistent with the
+required, also gives [[huyghebaert_hubertus_1791]]'s own death (15 March 1857, Oudenburg) and
+shows [[derudder_joanna_1793]] still living in 1868 at age 76 — broadly consistent with the
 ~1793 birth the 1821 marriage act computes. Noted for a future search: her own 1895 death
 may be registered under **Pieren**, not Huyghebaert or Janssen.
 
-**A scoped negative, kept rather than left implicit.** [[appolonia_huyghebaert]]'s own birth
+**A scoped negative, kept rather than left implicit.** [[huyghebaert_appolonia_1830]]'s own birth
 act was not found. Scope: both spellings (Huyghebaert 2,668 rows, Huygebaert 740),
 province-wide, all years; Oudenburg 1828–1833 read row by row. Oudenburg 1830 retains only
 one Huyghebaert row (nr. 96, 26/12/1830), which reads as an untranscribed batch rather than
-a contradiction: her siblings [[adelaide_huyghebaert29]] (04/03/1829) and
-[[marielouise_huyghebaert32]] (04/03/1832) bracket the slot exactly, an 18-month cadence
+a contradiction: her siblings [[huyghebaert_adelaide_1829]] (04/03/1829) and
+[[huyghebaert_marie_1832]] (04/03/1832) bracket the slot exactly, an 18-month cadence
 with a gap precisely where 26/09/1830 falls.
 
-**[[hermanie_janssen]] corroborated from a civil act.** Her own birth row (Oostende, act nr.
+**[[janssen_hermanie_1853]] corroborated from a civil act.** Her own birth row (Oostende, act nr.
 238, 5 July 1853, RAB ID 1458582) confirms the father/mother links she already held, which
 until now rested on one Geneanet tree (tree-gverdievel) alone. What changed is not the fact
 but its basis.
 
 **Siblings and children, recorded where the index gives a full name, date and act number.**
-Nine siblings of [[appolonia_huyghebaert]] at Oudenburg ([[hubertus_huyghebaert]] ×
-[[joanna_derudder]]): [[carolus_huyghebaert22]] and [[carolus_huyghebaert23]] (the same
+Nine siblings of [[huyghebaert_appolonia_1830]] at Oudenburg ([[huyghebaert_hubertus_1791]] ×
+[[derudder_joanna_1793]]): [[huyghebaert_carolus_1822]] and [[huyghebaert_carolus_1823]] (the same
 forename pair ten months apart — the ordinary sign of a name reused after an infant death),
-[[augustinus_huyghebaert24]], [[adelia_huyghebaert26]], [[petrus_huyghebaert27]],
-[[adelaide_huyghebaert29]], [[marielouise_huyghebaert32]], [[magdalena_huyghebaert34]] and
-[[petruspaulus_huyghebaert37]]. Two of them marry, spouses known only by surname and
-recorded as such — [[nn_goes]] (Oudenburg 1846) and [[nn_vantyghem]] (Zandvoorde 1859) —
-the same half-a-name convention already on file for [[nn_vandenberghe]]. Three siblings of
-[[josephus_janssen]] at Oostende ([[joannes_janssen]] × [[victoria_declerck]]):
-[[petrus_janssen22]], [[hermanus_janssen25]], [[clementia_janssen32]] (no act number
-transcribed for the last). Ten children of [[josephus_janssen]] × [[appolonia_huyghebaert]]
-at Oostende: [[pharaildis_janssen52]], [[hermanie_janssen]], [[augustus_janssen55]],
-[[paulus_janssen57]], [[marialudovica_janssen58]], [[victorina_janssen60]],
-[[florentina_janssen61]], [[carolus_janssen62]], [[seraphinus_janssen64]] and
-[[amandus_janssen66]] — this last **posthumous**, born eleven August 1866, sixteen days
+[[huyghebaert_augustinus_1824]], [[huyghebaert_adelia_1826]], [[huyghebaert_petrus_1827]],
+[[huyghebaert_adelaide_1829]], [[huyghebaert_marie_1832]], [[huyghebaert_magdalena_1834]] and
+[[huyghebaert_petrus_1837]]. Two of them marry, spouses known only by surname and
+recorded as such — [[goes_nn]] (Oudenburg 1846) and [[vantyghem_nn]] (Zandvoorde 1859) —
+the same half-a-name convention already on file for [[vandenberghe_nn]]. Three siblings of
+[[janssen_josephus_1820]] at Oostende ([[janssen_joannes_1778]] × [[declerck_victoria_1786]]):
+[[janssen_petrus_1822]], [[janssen_hermanus_1825]], [[janssen_clementia_1832]] (no act number
+transcribed for the last). Ten children of [[janssen_josephus_1820]] × [[huyghebaert_appolonia_1830]]
+at Oostende: [[janssen_pharaildis_1852]], [[janssen_hermanie_1853]], [[janssen_augustus_1855]],
+[[janssen_paulus_1857]], [[janssen_maria_1858]], [[janssen_victorina_1860]],
+[[janssen_florentina_1861]], [[janssen_carolus_1862]], [[janssen_seraphinus_1864]] and
+[[janssen_josephus_1866]] — this last **posthumous**, born eleven August 1866, sixteen days
 after his father's death on 26 July 1866; the arithmetic was checked.
 
-**A stated conflict, not smoothed over.** [[victoria_declerck]]'s own 1819 marriage act
+**A stated conflict, not smoothed over.** [[declerck_victoria_1786]]'s own 1819 marriage act
 gives her birth as 30 April 1786, which makes her 65 at the August 1851 wedding — but that
 act's Detail transcription gives her age as 64. Ordinary index slippage on a self-reported
 age thirty-two years after the fact; it does not veto an identification resting on two
 spouses' exact-matching birth date/place plus the independent 1820 birth-act corroboration.
 
 **Why the generation above was refused despite being right there.** The 1819 and 1821
-marriage acts each name a further generation — [[joannes_janssen]]'s parents Jean Janssen ×
-Karckman Catherine, [[victoria_declerck]]'s parents Declerck Pierre × Pauwels Josephe,
-[[hubertus_huyghebaert]]'s parents Ferdinandus Huyghebaert × Anna Theresia Termote, and
-[[joanna_derudder]]'s parents Derudder Pieter Josephus × Vandenbrande Anna Maria — and none
+marriage acts each name a further generation — [[janssen_joannes_1778]]'s parents Jean Janssen ×
+Karckman Catherine, [[declerck_victoria_1786]]'s parents Declerck Pierre × Pauwels Josephe,
+[[huyghebaert_hubertus_1791]]'s parents Ferdinandus Huyghebaert × Anna Theresia Termote, and
+[[derudder_joanna_1793]]'s parents Derudder Pieter Josephus × Vandenbrande Anna Maria — and none
 of the four is linked. Each rests on a single index row. The Huyghebaert pair carries
 **active rival risk** that makes this more than ordinary caution: the identical name pair
 "Ferdinandus Huyghebaert × Anna Theresia Termote" recurs as parents in at least four other
@@ -2975,7 +2975,7 @@ d. Oudenburg 06/07/1803 = 17 Messidor XI; Anna Theresia Termote d. Oudenburg 05/
 Floréal XII — both republican-calendar conversions verified correct by computation) and the
 Derudder/Vandenbrande pair's (Pieter Josephus d. Poperinge 09/04/1810; Anna Maria, 69 and
 living in 1821) are recorded as named frontiers on the relevant records' own prose, per
-CLAUDE.md rule 4 — the `anna_vc` model — rather than linked. The single document that would
+CLAUDE.md rule 4 — the `vancraenenbroeck_anna` model — rather than linked. The single document that would
 settle the Huyghebaert case, the Detail page of Oudenburg 1806 (RAB 253462, same name pair
 as parents, a different child), could not be pulled this pass and is the named next step.
 
@@ -2985,14 +2985,14 @@ bookmarkable URL: `janssen-huyghebaert-1851-marriage-oostende`,
 `pieren-huyghebaert-1868-marriage-oostende` — each marked `kind: index` with explicit prose
 that it is the index analysis, not the act image.
 
-**Twenty-eight new records this pass:** `joannes_janssen`, `victoria_declerck`,
-`hubertus_huyghebaert`, `joanna_derudder`, `leopoldus_pieren`, `carolus_huyghebaert22`,
-`carolus_huyghebaert23`, `augustinus_huyghebaert24`, `adelia_huyghebaert26`,
-`petrus_huyghebaert27`, `adelaide_huyghebaert29`, `marielouise_huyghebaert32`,
-`magdalena_huyghebaert34`, `petruspaulus_huyghebaert37`, `nn_goes`, `nn_vantyghem`,
-`petrus_janssen22`, `hermanus_janssen25`, `clementia_janssen32`, `pharaildis_janssen52`,
-`augustus_janssen55`, `paulus_janssen57`, `marialudovica_janssen58`, `victorina_janssen60`,
-`florentina_janssen61`, `carolus_janssen62`, `seraphinus_janssen64`, `amandus_janssen66`.
+**Twenty-eight new records this pass:** `janssen_joannes_1778`, `declerck_victoria_1786`,
+`huyghebaert_hubertus_1791`, `derudder_joanna_1793`, `pieren_leopoldus_1839`, `huyghebaert_carolus_1822`,
+`huyghebaert_carolus_1823`, `huyghebaert_augustinus_1824`, `huyghebaert_adelia_1826`,
+`huyghebaert_petrus_1827`, `huyghebaert_adelaide_1829`, `huyghebaert_marie_1832`,
+`huyghebaert_magdalena_1834`, `huyghebaert_petrus_1837`, `goes_nn`, `vantyghem_nn`,
+`janssen_petrus_1822`, `janssen_hermanus_1825`, `janssen_clementia_1832`, `janssen_pharaildis_1852`,
+`janssen_augustus_1855`, `janssen_paulus_1857`, `janssen_maria_1858`, `janssen_victorina_1860`,
+`janssen_florentina_1861`, `janssen_carolus_1862`, `janssen_seraphinus_1864`, `janssen_josephus_1866`.
 Tree: 456 → 484 people.
 
 Everything above reads searches and labels already on disk in `research/searches.jsonl` and
@@ -3003,7 +3003,7 @@ written; this section, the person files and the artifacts are its record.
 
 Entirely a `vrijwilligersrab` volunteer INDEX/Detail transcription pass — no register
 image was read anywhere in it, so every fact below is `sup`, never `doc`. The target was
-the frontier §64 left open on [[lucien_vincke]] × [[ludovica_vanald]]: eleven Diksmuide
+the frontier §64 left open on [[vincke_lucien_1840]] × [[vanalderweireldt_ludovica_1845]]: eleven Diksmuide
 Vincke births in 1866-1870 whose index rows carry only the bare father surname VINCKE, no
 forename, no mother and a birth date recorded as `YYYY/00/00` — the Detail view adds
 nothing either, every field from sex to legitimation coming back empty.
@@ -3016,7 +3016,7 @@ act does, and reaches a class of person a marriage-act sweep can never see —a 
 died before ever marrying. Registering `rab-bs-overlijdens` as a source was the
 precondition for logging any of this.
 
-**Four more children of [[lucien_vincke]] × [[ludovica_vanald]].** [[theophil_vincke]]
+**Four more children of [[vincke_lucien_1840]] × [[vanalderweireldt_ludovica_1845]].** [[vincke_theophil_1866]]
 (b. 1866) is carried by full parent-name agreement across two independent registers 29
 years apart — his own 1893 Diksmuide marriage and his own 1922 Oostende death — plus the
 death act separately naming his spouse, Bolle Valerie Maria, matching the 1893 bride
@@ -3029,12 +3029,12 @@ VANDERWEIRELT, the "-AL-" dropped, which is why that row is invisible to a plain
 Vanalderweireldt query; this pass's own marriage-index sweep queried eight spellings for
 exactly this reason, and `Louise`/`Ludovica` is a documented fold — `data/forenames.json`'s
 `f` block groups `ludovica`, `lodewijka` and `louise`, sex-split so it can never cross
-into a male form. [[bellarmin_vincke]] (b. 1867) and [[karolus_vincke]] (b. 1870) are
+into a male form. [[vincke_bellarmin_1867]] (b. 1867) and [[vincke_karolus_1870]] (b. 1870) are
 both infant deaths, recovered ONLY through their death acts (Diksmuide 1872 and 1871
 respectively) — the methodological point of this pass: a child who died before marrying
 is precisely the population a marriage-act route silently loses. Karolus Louis's name was
-then reused for [[charles_vincke]], born four months after he died — now noted on both
-records. [[alfons_vincke]] (b. 1865) falls one year *outside* the nominal window but was
+then reused for [[vincke_charles_1871]], born four months after he died — now noted on both
+records. [[vincke_alfons_1865]] (b. 1865) falls one year *outside* the nominal window but was
 found by the same marriage-index sweep and is independently corroborated from the local
 corpus (a Familiekunde Vlaanderen Westkust memorial card, not the same register as either
 act) — born 3 months 20 days after his parents' wedding, flagged rather than smoothed
@@ -3043,15 +3043,15 @@ reason for it.
 
 **Twelve grandchildren**, all contingent on the two marriages above and all read from the
 searcher's own birth/death-index report rather than invented: six children of
-[[theophil_vincke]] × [[valerie_bolle]] — [[mariesophie_vincke]],
-[[leopoldmaurice_vincke95]] (an infant death), [[marielouise_vincke]],
-[[madeleinemarie_vincke]] (an infant death), [[leopoldmaurice_vincke00]] (the same name
+[[vincke_theophil_1866]] × [[bolle_valerie]] — [[vincke_marie_1894]],
+[[vincke_leopold_1895]] (an infant death), [[vincke_marie_1896]],
+[[vincke_madeleine_1898]] (an infant death), [[vincke_leopold_1900]] (the same name
 reused five years later, and also an infant death — two children, not one row counted
-twice), and [[eduardushieronymus_vincke]] (born Oostende 1905, after the family moved) —
-and six of [[alfons_vincke]] × [[eugenia_vandecappelle]] — [[juliettegabrielle_vincke]],
-[[georgesremi_vincke]], [[karel_vincke]], [[louisacamilla_vincke]] (an infant death),
-[[camillecyrille_vincke]] (d. Brugge 1918, his own death act naming his parents a second
-time) and [[andrejerome_vincke]]. [[valerie_bolle]] and [[eugenia_vandecappelle]] are
+twice), and [[vincke_eduardus_1905]] (born Oostende 1905, after the family moved) —
+and six of [[vincke_alfons_1865]] × [[vandecappelle_eugenia]] — [[vincke_juliette_1889]],
+[[vincke_georges_1890]], [[vincke_karel_1892]], [[vincke_louisa_1894]] (an infant death),
+[[vincke_camille_1895]] (d. Brugge 1918, his own death act naming his parents a second
+time) and [[vincke_andre_1901]]. [[bolle_valerie]] and [[vandecappelle_eugenia]] are
 written as full records, not spouse-stubs, because both a forename and a surname are on
 record for each — the same standard §64 set for Gunst/Joye/Zwaenepoel, applied the other
 way here since the fuller name is what was actually found.
@@ -3064,7 +3064,7 @@ her own 1894 marriage act names her parents as Richard Aloïs Vincke × Eugenie 
 not this couple, and a birth-year wobble on the index (1870 vs 1871) is immaterial since
 under either year the parents are not ours. Worth stating plainly: this clan holds two
 different women named Elodie, and the tree already correctly holds the other one,
-[[romanie_vincke]] ("Romanie Elodie", act 206/1873, parents named in full, grafted in
+[[vincke_romanie_1873]] ("Romanie Elodie", act 206/1873, parents named in full, grafted in
 pass 1) — two Elodies in one clan is exactly the near-miss class CLAUDE.md rule 1 exists
 for, and it was kept straight.
 
@@ -3085,7 +3085,7 @@ recorded, still ambiguous: a Nieuwkerke marriage of "VINCKE Cyrille Camille" ×
 corpus memorial cards (`fwk:fb425dd0-…`, `dbe:9df7ed08-…`) confirm the couple existed
 (d. 22/05/1937) but name no parents on either side, so this neither confirms nor refutes
 a link to the blind-window Cyrille Camil above — labelled `--nonmatch` against
-[[lucien_vincke]] on both cards, "not a graftable pair" rather than a positive
+[[vincke_lucien_1840]] on both cards, "not a graftable pair" rather than a positive
 refutation of identity, since the evidence is simply insufficient either way.
 
 **An argument recorded as an argument, never as evidence for a link.** Diksmuide birth
@@ -3106,37 +3106,37 @@ arithmetic.
 **Four date corrections to this run's own pass-1 work, and the note that now says so
 twice.** Re-querying the death index found that two of the four already-held children's
 death dates §64 recorded were the index's "Certificate Date" column, not the "Date"
-column that is the actual death: [[irma_vincke]]'s death is 25 April 1875, not 26 April;
-[[jerome_vincke]]'s is 13 January 1889, not 14 January. [[camilla_vincke]] (10 December
-1876) and [[eugene_vincke]] (4 April 1902) needed no correction — both columns agree on
+column that is the actual death: [[vincke_irma_1874]]'s death is 25 April 1875, not 26 April;
+[[vincke_jerome_1886]]'s is 13 January 1889, not 14 January. [[vincke_camilla_1876]] (10 December
+1876) and [[vincke_eugene_1877]] (4 April 1902) needed no correction — both columns agree on
 those two acts. A fifth instance of the same slip, on a birth registered to
-[[emma_vincke]] before her own 1907 marriage ("Albert Joseph Vincke", d. 26 March 1900,
-not 27 March), is recorded on [[flavie_vi]]'s frontier note rather than as its own
+[[vincke_emma_1880]] before her own 1907 marriage ("Albert Joseph Vincke", d. 26 March 1900,
+not 27 March), is recorded on [[vaniseghem_flavie_1898]]'s frontier note rather than as its own
 record, since that child is not grafted at all (below). `research/sources.json`'s
 `rab-bs-geboorten` note has documented this Date-vs-Certificate-Date conflation for the
 births index since §64; its `rab-bs-overlijdens` note is updated now to say the deaths
 index shares it.
 
 **A legitimation frontier, recorded on three records rather than resolved.** Sweeping the
-birth index for rows naming [[emma_vincke]] as mother, incidental to the blind-window
+birth index for rows naming [[vincke_emma_1880]] as mother, incidental to the blind-window
 work above, turned up two births registered to her alone before her 1907 marriage to
-[[eduardus_vi]], father NN NN both times: "VINCKE Flavie Eulalie" (b. 1898) and "VINCKE
+[[vaniseghem_eduardus_1880]], father NN NN both times: "VINCKE Flavie Eulalie" (b. 1898) and "VINCKE
 Albert Joseph" (b. 1899, d. 1900). The first shares a rare forename pair with this
-tree's own [[flavie_vi]], already held as this couple's daughter from her own 1920
+tree's own [[vaniseghem_flavie_1898]], already held as this couple's daughter from her own 1920
 marriage act. If the 1907 marriage legitimized children already born, that would explain
-both — and would also explain [[joannes_vi]]'s own birth at Lens in 1903, four years
+both — and would also explain [[vaniseghem_joannes_1903]]'s own birth at Lens in 1903, four years
 before the same marriage, an open question §64 already left standing. **NOT PROVEN, not
 grafted**: it needs the marriage act's own legitimation field read — Oostende, hidden
 fields Gemeente/Jaar/ID = `4166052 / 28/09/1907 / 668717` — which this pass's Detail
-fetch returned as an empty template. Recorded as a named frontier on [[flavie_vi]],
-[[emma_vincke]] and [[joannes_vi]]; no second Flavie Eulalie record is created, and none
+fetch returned as an empty template. Recorded as a named frontier on [[vaniseghem_flavie_1898]],
+[[vincke_emma_1880]] and [[vaniseghem_joannes_1903]]; no second Flavie Eulalie record is created, and none
 for Albert Joseph.
 
 **Five birth dates recorded with an explicit unverified caveat, and two children found
 this way.** The same incidental sweep gave birth dates this tree did not have for three
-already-held children — [[eduardus_vi2]] (2 Nov 1901), [[valentina_vi]] (23 Mar 1909) and
-[[maria_vi]] (22 Jan 1913) — and two more children of [[eduardus_vi]] × [[emma_vincke]]
-with no record at all, [[camillusgustavus_vi05]] (b. 1905) and [[camillushenricus_vi11]]
+already-held children — [[vaniseghem_eduardus_1901]] (2 Nov 1901), [[vaniseghem_valentina_1909]] (23 Mar 1909) and
+[[vaniseghem_maria_1913]] (22 Jan 1913) — and two more children of [[vaniseghem_eduardus_1880]] × [[vincke_emma_1880]]
+with no record at all, [[vaniseghem_camillus_1905]] (b. 1905) and [[vaniseghem_camillus_1911]]
 (b. 1911). None of the five was independently re-checked against a second act, and this
 same index's date-column conflation (above) means a single citation is not as strong as
 it looks — each record says so plainly rather than presenting the date as settled. All
@@ -3144,12 +3144,12 @@ five are recorded rather than deferred because each cites a specific act number 
 `research/searches.jsonl`, the bar item 8 of this pass's brief set for the difference
 between "record with a caveat" and "leave as a frontier note."
 
-**Twenty new records this pass:** `theophil_vincke`, `valerie_bolle`, `bellarmin_vincke`,
-`karolus_vincke`, `alfons_vincke`, `eugenia_vandecappelle`, `mariesophie_vincke`,
-`leopoldmaurice_vincke95`, `marielouise_vincke`, `madeleinemarie_vincke`,
-`leopoldmaurice_vincke00`, `eduardushieronymus_vincke`, `juliettegabrielle_vincke`,
-`georgesremi_vincke`, `karel_vincke`, `louisacamilla_vincke`, `camillecyrille_vincke`,
-`andrejerome_vincke`, `camillusgustavus_vi05`, `camillushenricus_vi11`. Two new sources
+**Twenty new records this pass:** `vincke_theophil_1866`, `bolle_valerie`, `vincke_bellarmin_1867`,
+`vincke_karolus_1870`, `vincke_alfons_1865`, `vandecappelle_eugenia`, `vincke_marie_1894`,
+`vincke_leopold_1895`, `vincke_marie_1896`, `vincke_madeleine_1898`,
+`vincke_leopold_1900`, `vincke_eduardus_1905`, `vincke_juliette_1889`,
+`vincke_georges_1890`, `vincke_karel_1892`, `vincke_louisa_1894`, `vincke_camille_1895`,
+`vincke_andre_1901`, `vaniseghem_camillus_1905`, `vaniseghem_camillus_1911`. Two new sources
 registered (`fwk-alfons-vincke`, `fwk-eugenia-vandecappelle`); five labels recorded. Tree:
 484 → 504 people.
 
@@ -3163,7 +3163,7 @@ scores turned out to be worth
 The pass's target was the single highest-value open act on the Thumas line: **Georges
 Joseph Thumas × Sophie Miranda Deridder, Grez-Doiceau, 7 October 1868** — the wedding
 [[S23]]'s death extract was drawn up for, and the one act that would speak to
-[[georgesjoseph_t]], [[deridder_sophie]], [[georges2_t]] and [[jbzenon_t]] all at once. It
+[[thumas_georges_1843]], [[deridder_sophie]], [[thumas_georges_1804]] and [[thumas_jean_1845]] all at once. It
 was not read, and this pass's headline finding is that it **cannot** be read from any open
 venue right now, which is worth stating as precisely as the corpus allows rather than as a
 shrug.
@@ -3178,14 +3178,14 @@ where a party merely happened to be *born* there, so none of them is a route in 
 there is nothing behind any of those routes to fetch. FamilySearch and AGATHA both came
 back `blocked` this pass (expired session, logged-out header), not `miss`: the exact film
 and image are already known from S23's own volume, so a single re-authenticated session is
-a one-request retry, not more searching. Recorded on [[georgesjoseph_t]] and
+a one-request retry, not more searching. Recorded on [[thumas_georges_1843]] and
 [[deridder_sophie]] in exactly these terms, so the next pass does not mistake a session
 problem for a coverage wall.
 
 **The top of the greedy act cover turned out to be a false positive on four frontiers at
 once, and it is worth spelling out why the scorer got it wrong.** `research.py acts` ranked
 `abb:202f2000-3ab7-b26b-ecca-69790623e450` ("Overlijden Grez-Doiceau 1846-04-05") as
-resolving [[georgesjoseph_t]], [[georges2_t]], [[jbzenon_t]] and [[georges_cj]] at once, 23
+resolving [[thumas_georges_1843]], [[thumas_georges_1804]], [[thumas_jean_1845]] and [[thumas_georges_1836]] at once, 23
 bits each, "2 independent (name+place)". Reading the held record: the decedent is
 *Alexandre Thumas*, age 5, son of *Charles Joseph Thumas × Josephine Latour* — a different
 Thumas household in the same commune, with neither parent's name matching this line's
@@ -3212,16 +3212,16 @@ refute a parent link; and its **tables truncate at 100 rows with no "next" link*
 `&pg=2` must be fetched deliberately or a 100-row read silently looks complete when it is
 not (this pass's 134-row Thumas births table needed both pages). A third, systematic
 observation: every netradyle date sits **one to two days off** the FamilySearch index row
-for the same event — the 1868 marriage (8 vs 7 October), [[jbzenon_t]]'s birth (19 vs 20
-August 1845), [[mtstephanie_t]]'s (10 vs 11 August 1835 per S25) — which is two independent
+for the same event — the 1868 marriage (8 vs 7 October), [[thumas_jean_1845]]'s birth (19 vs 20
+August 1845), [[thumas_marie_1835]]'s (10 vs 11 August 1835 per S25) — which is two independent
 volunteer transcriptions disagreeing with each other, neither of them the act, and is
 treated throughout this section as ordinary drift rather than conflict.
 
-**Accepted corroborations, kept `sup`.** [[jbzenon_t]]'s birth (19 August 1845, father
+**Accepted corroborations, kept `sup`.** [[thumas_jean_1845]]'s birth (19 August 1845, father
 Georges, mother "Jostens Marie Catherine") agrees with the held record on a rare tripartite
 forename and a specific parent couple, across two independent index compilers.
-[[georges2_t]]'s birth (25 January 1804, mother "Kinar Anne Catherine") corroborates the
-held 24 January from a source independent of Geneanet. [[georgeslambert_t]]'s birth (17
+[[thumas_georges_1804]]'s birth (25 January 1804, mother "Kinar Anne Catherine") corroborates the
+held 24 January from a source independent of Geneanet. [[thumas_georges_1772]]'s birth (17
 February 1772, father Georges, mother "Noel Marie Catherine") matches the tree exactly on
 the day, with none of the 1-2 day drift seen elsewhere — the first evidence for that
 generation from anything but a member tree — and his parents' own marriage is indexed 3
@@ -3235,21 +3235,21 @@ dépouillement having nothing before that date is what the historical record bou
 predicts, whether or not a 1793/94 birth happened — such a birth would be a parish
 baptism, a different register entirely. This is a coverage-boundary artifact, not evidence,
 and §49 stays open exactly as it was. A conflict that *does* bear on it: netradyle indexes
-[[georgeslambert_t]]'s own marriage to [[quinart]] as **2 April 1799**, against the **9
+[[thumas_georges_1772]]'s own marriage to [[quinart_marie_1780]] as **2 April 1799**, against the **9
 February 1801** this tree carries from Geneanet — a two-year gap, a different phenomenon
-from the day-level drift above. [[georges2_t]]'s §49 note argues for his 1804 birth partly
+from the day-level drift above. [[thumas_georges_1804]]'s §49 note argues for his 1804 birth partly
 because a 1793/94 birth would precede his parents' marriage by about seven years; under
 1799 rather than 1801 that gap narrows to roughly five to six years. The direction of the
 argument is unchanged; its magnitude narrows by two years. Recorded explicitly on
-[[georgeslambert_t]] and [[quinart]] rather than left as if 1801 were uncontested.
+[[thumas_georges_1772]] and [[quinart_marie_1780]] rather than left as if 1801 were uncontested.
 
-**A conflict on [[joostens]], recorded rather than absorbed.** netradyle gives her origin,
-via [[jbzenon_t]]'s birth row, as Woluwe-Saint-Pierre — where her own 1857 death act (S9,
+**A conflict on [[joostens_marie_1810]], recorded rather than absorbed.** netradyle gives her origin,
+via [[thumas_jean_1845]]'s birth row, as Woluwe-Saint-Pierre — where her own 1857 death act (S9,
 S15) gives Woluwe-Saint-Lambert. Two different adjacent communes, not a spelling variant.
 Per CLAUDE.md rule 6 this is a conflict to record, not to silently resolve by picking the
-newer or the older source; recorded on [[joostens]], nothing changed.
+newer or the older source; recorded on [[joostens_marie_1810]], nothing changed.
 
-**[[etienne_thumas]] gains a birth date, not a new record.** netradyle's "THUMAS Georges
+**[[thumas_etienne_1802]] gains a birth date, not a new record.** netradyle's "THUMAS Georges
 Étienne, act 26/12/1802, father Georges Lambert, mother Kinart Marie Catherine" is his own
 birth act: both parent names match exactly and the double forename survives intact across
 this act and his already-held 1812 death act, and dying at not quite ten years old is
@@ -3258,7 +3258,7 @@ never itself been labelled; it now is (`research/labels.jsonl`, match: true). `i
 did not flag this match on its own — his record carried no birth date and no parents are
 compared by that tool — noted as an observation about the tool's reach, not a complaint.
 
-**[[georges_cj]]'s forename left open, on purpose.** netradyle has one 1836 birth act on
+**[[thumas_georges_1836]]'s forename left open, on purpose.** netradyle has one 1836 birth act on
 his exact date with his exact parents, but indexes the child as "THUMAS *Grégoire* Charles
 Joseph" against the tree's *Georges Carolus Josephus*. The identity is accepted — same
 event, same parents, no rival birth indexed at Grez that year, and his own 1872 Kraainem
@@ -3271,7 +3271,7 @@ not an implausible misreading in its own right. Following the §54 precedent exa
 recorded forename stands, and the netradyle reading is a named frontier, not a winner
 picked between two guesses.
 
-**[[quinart]]: three spellings, S23 still anchors.** netradyle rows disagree with each
+**[[quinart_marie_1780]]: three spellings, S23 still anchors.** netradyle rows disagree with each
 other — "Kinart Anne Catherine" (1799 marriage), "Kinar Anne Catherine" (son Georges's 1804
 birth), "Kinart Marie Catherine (Basse Hespinne)" (son Georges Étienne's 1802 birth) — and
 Anne Catherine versus Marie Catherine is a forename disagreement, not just a surname
@@ -3295,7 +3295,7 @@ recorded on [[deridder_sophie]] as a named frontier only; no `father`/`mother` l
 written. The settling document remains the one her record already names — the 1868
 marriage act itself, same Grez-Doiceau volume as [[S23]], near image 221.
 
-**A scoped negative.** [[georgesjoseph_t]]'s own 1843 birth is absent from netradyle's
+**A scoped negative.** [[thumas_georges_1843]]'s own 1843 birth is absent from netradyle's
 fully-paged 134-row Thumas/Grez births table, while four of his siblings are present in the
 same table (the only 1843 row at all is Rosalie Céline, 14 May). Ruled a coverage gap in
 one dépouillement, not evidence of a birth elsewhere: his existence and 1868 marriage
@@ -3306,9 +3306,9 @@ above.
 **No new person records this pass** — every finding above sits on a record already in the
 tree. Two source ids already registered (`netradyle-grez-mariages`,
 `netradyle-grez-naissances`) are cited on nine existing records now:
-[[georgesjoseph_t]], [[deridder_sophie]], [[georges2_t]], [[jbzenon_t]], [[joostens]],
-[[georgeslambert_t]], [[quinart]], [[georges_cj]], [[etienne_thumas]]. One label recorded
-new ([[etienne_thumas]] against S13); four false-positive labels on the greedy-cover act
+[[thumas_georges_1843]], [[deridder_sophie]], [[thumas_georges_1804]], [[thumas_jean_1845]], [[joostens_marie_1810]],
+[[thumas_georges_1772]], [[quinart_marie_1780]], [[thumas_georges_1836]], [[thumas_etienne_1802]]. One label recorded
+new ([[thumas_etienne_1802]] against S13); four false-positive labels on the greedy-cover act
 were already on disk and are not duplicated. Tree: 504 people, unchanged — this pass is
 corroboration, conflict and frontier work, not growth, and that is the result the target
 act being genuinely unreachable predicts.
@@ -3322,16 +3322,16 @@ Index-level AGATHA/Demogen act analysis throughout — `sup`, never `doc`. A Fam
 scan (`ark:/61903/3:1:S3HY-6423-8F1?i=24`) is behind a login wall, confirmed `blocked`
 this pass and logged as a one-request retry, not a scoped miss.
 
-**GRAFTED — [[jbaptista_peremans]], a fifth child of [[egidius_peremans]] ×
-[[joanna_verelst]].** He was 28, an *arbeider*, unable to write, his militia obligations
+**GRAFTED — [[peremans_joannes_1820]], a fifth child of [[peremans_egidius]] ×
+[[verelst_joanna]].** He was 28, an *arbeider*, unable to write, his militia obligations
 already met; he married **Joanna Catharina Van Gindertaelen**, 23, *arbeidster*, also
 unable to write. Two independent identifiers anchor the parent link: (1) his mother
 named as dead, **Zaventem, 19 December 1843** — an exact day-level match to
-[[joanna_verelst]]'s already-held death date, drawn from a *separately transcribed*
-Demogen batch (S19, his sister [[peremans]]'s 1846 marriage act, a different register
-entirely); (2) his father named as Egidius Peremans, matching [[egidius_peremans]] by
+[[verelst_joanna]]'s already-held death date, drawn from a *separately transcribed*
+Demogen batch (S19, his sister [[peremans_joanna_1824]]'s 1846 marriage act, a different register
+entirely); (2) his father named as Egidius Peremans, matching [[peremans_egidius]] by
 name and commune. **This clears a higher bar than the three siblings already in this
-family** — [[cornelius_peremans]], [[jathanasius_peremans]] and [[mjosephina_peremans]]
+family** — [[peremans_cornelius]], [[peremans_joannes_1822]] and [[peremans_maria]]
 were each grafted on the parent-name pair alone, with the commune supplied only by a
 volume title and no exact date anywhere in the act. Here, an independent transcription
 of a different register reproduces a day-level date already held, which is not the kind
@@ -3339,11 +3339,11 @@ of thing two unrelated couples of the same two names would coincidentally share.
 parents, **Joannes Franciscus Van Gindertaelen** × **Anna Catharina Huenaerts**, are
 named directly in the act with their roles labelled (present and consenting), so there
 is no identity-matching question for them — rule 2b, not rule 1 — and both are entered
-as [[vangindertaelen_jf]] and [[huenaerts_ac]]. New source **S34**, registered in
+as [[vangindertaelen_joannes]] and [[huenaerts_anna]]. New source **S34**, registered in
 `research/sources.json` (the next free numbered id after S33; checked directly against
 the registry to avoid repeating §46's S19/S20 collision). Four new person files:
-[[jbaptista_peremans]], [[vangindertaelen_jc]], [[vangindertaelen_jf]],
-[[huenaerts_ac]]. One label recorded — `jbaptista_peremans` against
+[[peremans_joannes_1820]], [[vangindertaelen_joanna_1825]], [[vangindertaelen_joannes]],
+[[huenaerts_anna]]. One label recorded — `peremans_joannes_1820` against
 `abl:22d86c23…#Person1605011`, MATCH — the one the verifier could not record, since
 `evaluate.py label` refuses a person not yet in the roster.
 
@@ -3354,7 +3354,7 @@ register image. Positing two separate Egidius Peremans × Joanna Theresia Verels
 in one small commune, whose wives happen to share an identical day-level death date, is a
 far larger coincidence than a single-digit transcription slip in one of the two
 independent Demogen batches — so this is read as one man, not two. **But which digit
-slipped is not decided here.** Both dates are recorded on [[egidius_peremans]], each
+slipped is not decided here.** Both dates are recorded on [[peremans_egidius]], each
 tagged to the source that gives it, and the frontmatter field is left at the
 earlier-held 1837-03-06 rather than silently overwritten. Only the Zaventem death
 register image settles it, and that image was the same one confirmed `blocked` above.
@@ -3364,7 +3364,7 @@ Vlaams-Brabant. The identical day-level death date made that search seem unneces
 but a judgement is not a search.
 
 **Three witness-line leads, refused, and why a witness line is structurally weak
-evidence.** [[cornelius_peremans]] and [[jathanasius_peremans]] both stand witness, aged
+evidence.** [[peremans_cornelius]] and [[peremans_joannes_1822]] both stand witness, aged
 33 and 26 — the first would imply a birth around 1814–1815, narrower than anything
 currently held for him, but **no birth date is written**: a witness line carries only a
 name and a commune, with no parent names restated, which is *weaker* than the
@@ -3373,12 +3373,12 @@ frontier on his own record, with the explicit rule that if it is ever accepted t
 honest form is a `year_span`, never a point date. Jathanasius's age is merely consistent
 with his already-held ~1822 and adds nothing; noted, nothing changed. A third witness,
 **Petrus Van Der Varen**, 35, is a plausible but unconfirmed match for
-[[mjosephina_peremans]]'s husband [[vandervarent_p]] (age implies ~1813, matching the
+[[peremans_maria]]'s husband [[vandervarent_petrus_1813]] (age implies ~1813, matching the
 held ~1813) — but the surname is spelled differently, the act states no relation, and
 surname + place + a plausible age is exactly the pattern that produced five false
-positives elsewhere this run. Recorded as a frontier on [[vandervarent_p]]; not linked.
+positives elsewhere this run. Recorded as a frontier on [[vandervarent_petrus_1813]]; not linked.
 A fourth witness, **Franciscus Engels**, 38, *veldwachter*, is a confirmed non-candidate:
-he also witnesses [[peremans]]'s own 1846 act at 35, the two ages intersecting cleanly
+he also witnesses [[peremans_joanna_1824]]'s own 1846 act at 35, the two ages intersecting cleanly
 at a birth in Feb–Aug 1810, consistent with one man holding a single per-commune
 constable's post across both weddings. No person file — a recurring professional
 witness is not a family lead, and this is worth saying so a later pass does not read him
@@ -3388,7 +3388,7 @@ as one.
 claims `RESOLVES mjosephina_peremans` for `abl:fa0664d5-a6ee-b84b-6d7d-d377d3152e45`
 (= S19) — but the act's own participant list (checked directly in
 `research/harvest/acts/abl.jsonl`) names exactly one Peremans, `Person1716021` "Joanna
-Catharina Jacoba Peremans", the bride, already anchored as [[peremans]]. No Maria
+Catharina Jacoba Peremans", the bride, already anchored as [[peremans_joanna_1824]]. No Maria
 Josephina is in this act at all; her real source is S29, an entirely different
 FamilySearch record. All four Peremans siblings share the identical held father+mother
 identifiers, and the cover appears to credit any of them once that pair matches, without
@@ -3413,20 +3413,20 @@ miss, because the material was never actually reached.
 
 **The honest shape of this pass: the act was found, and the parents are still not
 grafted.** Diksmuide, 8 June 1803 (19 Prairial XI, the Republican-calendar conversion
-checked by computation), marriage act nr. 14, RAB ID 84989 — [[antoine_vanald]] ×
-[[brigitte_wyllie]]'s own wedding — names all four of their parents at once. It is the
+checked by computation), marriage act nr. 14, RAB ID 84989 — [[vanalderweireldt_antoine_1780]] ×
+[[wyllie_brigitte_1779]]'s own wedding — names all four of their parents at once. It is the
 same document two frontiers had been waiting on, and reaching it does not clear either one:
 this is the same refusal §66 made for the Huyghebaert/Termote generation, applied again
 here, because reaching a document is not the same thing as clearing the two-independent-
 identifiers bar.
 
 **ACCEPTED — the couple's own identity, `sup`.** Two independent identifiers anchor
-[[antoine_vanald]] against this act: his birth date, 09/05/1780, matches the tree's
+[[vanalderweireldt_antoine_1780]] against this act: his birth date, 09/05/1780, matches the tree's
 pre-existing (tree-bartvanhooren) value to the day, and the marriage's own date and place
 match what the tree already held. His own death act (act nr. 97, RAB ID 2299984) supplies a
 third, consistent value — age 28, birthplace Diksmuide. No rival Vanalderweireldt couple was
 found in the area (a Bernard Carol Vanalderweireldt × Regina Papegay, d. 1820, is a
-different family). New facts recorded: Antoine *werkman*, age 23; [[brigitte_wyllie]] age
+different family). New facts recorded: Antoine *werkman*, age 23; [[wyllie_brigitte_1779]] age
 24; both fathers said to be born at Langemark; Antoine's mother born Diksmuide, Brigitte's
 mother born Woumen.
 
@@ -3445,8 +3445,8 @@ and "Deman Catharine" in 1818, and the death-index row renders her fully as "Dem
 Bregite" — read together this is a compound name split by two different clerks, consistent
 with the double-forename pattern running through this whole cluster (Isabella Claire/Clara,
 Antoine Joseph Albert, Brigitte Josephine Joanna), not a contradiction, and no single
-forename is asserted. All four names are recorded in prose on [[antoine_vanald]] and
-[[brigitte_wyllie]]; no father/mother field is set on either record.
+forename is asserted. All four names are recorded in prose on [[vanalderweireldt_antoine_1780]] and
+[[wyllie_brigitte_1779]]; no father/mother field is set on either record.
 
 **A `tools/` finding, not acted on.** `data/forenames.json` licenses `jacobus ≡ jacques`
 (the fold group already includes `jacob`, `jaak`), but "Ignace" and "Ignatius" appear
@@ -3457,8 +3457,8 @@ pattern behind roughly fifteen pairs already curated there (`antonius/antoine`,
 for review; `data/forenames.json` was not touched, per the standing rule against editing
 `tools/`-adjacent config unilaterally.
 
-**ACCEPTED — [[brigitte_wyllie]] remarried, and the row that identifies her, not the
-name.** Diksmuide, 25 June 1818, act nr. 82, RAB ID 85255 — [[francois_looten]] (b.
+**ACCEPTED — [[wyllie_brigitte_1779]] remarried, and the row that identifies her, not the
+name.** Diksmuide, 25 June 1818, act nr. 82, RAB ID 85255 — [[looten_francois_1785]] (b.
 17/08/1785 Rexpoede, Département du Nord, *timmerman*) × Wyllie Brigitte Josephine Jeanne,
 *weduwe*, 38, same parents as the 1803 act. Its Previous-Partners table reads
 `VANALDERWEIRELDT | Antoine | Diksmuide | 06/07/1808` — that row, not the surname, is what
@@ -3467,8 +3467,8 @@ point worth keeping: a Vanalderweireldt-only sweep would never have found this m
 because by 1818 she carries a different surname; it surfaced only because her own 1824
 death act still names Looten as her partner. At least four children are attested from the
 same sweep, each naming Looten Franciscus Josephus × Wyllie Brigitta Josephina in full:
-[[catharina_looten]] (d. 1823), [[renatus_looten]] (d. 1825, weeks after his mother),
-[[ludovica_looten]] (m. 1842) and [[maria_looten]] (m. 1843) — no individual act number read
+[[looten_catharina]] (d. 1823), [[looten_renatus]] (d. 1825, weeks after his mother),
+[[looten_ludovica]] (m. 1842) and [[looten_maria]] (m. 1843) — no individual act number read
 for any of the four, recorded at the precision the sweep actually reached.
 
 **A RETRACTION — a date read from the wrong index column.** The death-index columns are
@@ -3476,21 +3476,21 @@ for any of the four, recorded at the precision the sweep actually reached.
 Partner | Remarks`. Antoine's row has **`Date` blank** and 21/07/1808 only in `Certificate
 Date` — so the tree's held 1808-07-21 was a **registration date, not an attested death
 day**. His death day is open three ways, with no two sources agreeing: 06/07/1808 (the 1818
-act's Previous-Partners row), 16/07/1808 ([[petrus_vanald]]'s 1828 marriage act) and
+act's Previous-Partners row), 16/07/1808 ([[vanalderweireldt_petrus_1803]]'s 1828 marriage act) and
 21/07/1808 (the certificate date). July 1808 is solid across all three; the day is not.
-**The day-level precision is withdrawn**; [[antoine_vanald]]'s death is now held at month
+**The day-level precision is withdrawn**; [[vanalderweireldt_antoine_1780]]'s death is now held at month
 precision (`1808-07`), with all three candidates and their sources stated in prose. What
 would settle it: the death act's own image (film 4794755, blocked) or either son's 1828
-marriage act image. **Contrast, kept because the trap is not uniform**: [[brigitte_wyllie]]'s
+marriage act image. **Contrast, kept because the trap is not uniform**: [[wyllie_brigitte_1779]]'s
 row has the same blank-Date shape (Certificate Date 10/11/1824), but both her sons'
 1828 acts independently state her decease as 08/11/1824 — corroborating, not contradicting,
 the tree's held 1824-11-08, a two-day registration lag rather than a conflict. And
-[[carolus_vanald]]'s held 1808-03-11 is confirmed, not retracted: the birth index gives a
+[[vanalderweireldt_carolus_1808]]'s held 1808-03-11 is confirmed, not retracted: the birth index gives a
 certificate date of 12/03/1808 against his own marriage act's stated birth of 11/03/1808,
 the ordinary one-day lag. `research/sources.json`'s `rab-bs-overlijdens` note is updated to
 say the Date column can be entirely blank, with nothing to offset the Certificate Date by.
 
-**NOT PROVEN — [[brigitte_wyllie]]'s own birth date, which fails both ways it could be
+**NOT PROVEN — [[wyllie_brigitte_1779]]'s own birth date, which fails both ways it could be
 read.** Two acts write 22/10/1779; the tree held 1779-02-22 (day and month transposed).
 Both directions were recomputed independently: born 22/10/1779 gives age 23 at the 1803
 wedding (the act says 24, ✗) but age 38 at the 1818 one (✓); born 22/02/1779 gives age 24 in
@@ -3499,13 +3499,13 @@ ages, so neither is chosen — the record is held at year precision (`1779`) wit
 candidates and the arithmetic stated as a live conflict, not silently kept or silently
 switched. An index-level self-reported age would not reach `doc` even if this resolved.
 
-**ACCEPTED — two more sons of [[antoine_vanald]] × [[brigitte_wyllie]].**
-[[petrus_vanald]] (Petrus Antonius), born 11/06/1803 (22 Prairial XI) — **three days after
+**ACCEPTED — two more sons of [[vanalderweireldt_antoine_1780]] × [[wyllie_brigitte_1779]].**
+[[vanalderweireldt_petrus_1803]] (Petrus Antonius), born 11/06/1803 (22 Prairial XI) — **three days after
 his parents' own 8 June wedding**, checked by computation both ways (8 June + 3 = 11 June;
 19 Prairial XI + 3 = 22 Prairial XI) and read as the ordinary "married to legitimate a child
-already due" pattern, not a transcription slip. Married [[marietheresia_bouckaert]] (b.
+already due" pattern, not a transcription slip. Married [[bouckaert_marie_1799]] (b.
 16/10/1799 Avekapelle) in 1828; died 1869, corroborated across two independent acts (his
-1828 marriage, his 1869 death), both naming Antonius × Brigitta Wyllie. And [[jean_vanald]]
+1828 marriage, his 1869 death), both naming Antonius × Brigitta Wyllie. And [[vanalderweireldt_jean]]
 (Jean Antoine), an infant death, certificate 30/01/1805 — a single act, direct parent
 naming, no rival risk for a rare-surname infant death.
 
@@ -3514,22 +3514,22 @@ Joanna Vanalderweireldt, death certificate 30/09/1857, aged 82y 8m 28d, born Dik
 parents Jacobus Ignatius Vanalderweireldt × Isabella Clara Verhaeghe — a third act naming
 that parent pair. Working back from the certificate date, 82y 8m 28d before 30 September
 1857 lands on 2 January 1775 almost exactly (checked by computation), about 5.3 years
-before [[antoine_vanald]]'s own birth — plausibly his elder sister. But she cannot be
+before [[vanalderweireldt_antoine_1780]]'s own birth — plausibly his elder sister. But she cannot be
 grafted as his sibling while his own parents are only a frontier, and her date is itself
 back-computed from a certificate date, carrying the same registration lag documented above
-— recorded in prose on [[antoine_vanald]] as "about 1775-01-02", no person file created.
-[[brigitte_wyllie]]'s own grandparents, similarly named and similarly left open: Jean Deman
+— recorded in prose on [[vanalderweireldt_antoine_1780]] as "about 1775-01-02", no person file created.
+[[wyllie_brigitte_1779]]'s own grandparents, similarly named and similarly left open: Jean Deman
 × Marie Jeanne D'Hondt (her maternal grandparents, from her mother's 1801 death act) and
 Pierre Jacques Wyllie × Marie Barbe Lengs (her paternal grandparents, from her father's 1811
 death act, which also records his 1807 remarriage to Colette Prudence Minne). One index row
 each, one generation beyond an already-open parent generation, and D'Hondt carries real
 rival risk in this region — the same caution §66 applied to the Huyghebaert grandparents.
 None of the six named people above (the four parents, the probable sister, and the four
-grandparents) has a person file — per CLAUDE.md rule 4 and the `anna_vc` model, a strong
+grandparents) has a person file — per CLAUDE.md rule 4 and the `vancraenenbroeck_anna` model, a strong
 lead is recorded as a named frontier in prose, not grafted, and not given a stub record
 either.
 
-**A venue fact worth keeping.** [[carolus_vanald]]'s and [[petrus_vanald]]'s own 1828 acts
+**A venue fact worth keeping.** [[vanalderweireldt_carolus_1808]]'s and [[vanalderweireldt_petrus_1803]]'s own 1828 acts
 both write the surname `VANALDEWEIRELDT` — no R after `-ALD-` — so `naam=Vanalderweireldt`
 never returns them; they surfaced only via the mother's and brides' surnames. This is the
 second time in one day a variant spelling hid a true record in this collection (§67 found
@@ -3551,9 +3551,9 @@ the local harvested corpus as `<act-id>#<pid>` — `evaluate.py refs` confirms i
 is nothing to label against, and inventing a ref would misrepresent the basis. Revisitable
 if these acts are ever harvested.
 
-**Eight new records:** [[francois_looten]], [[petrus_vanald]], [[jean_vanald]],
-[[marietheresia_bouckaert]], [[catharina_looten]], [[renatus_looten]], [[ludovica_looten]],
-[[maria_looten]]. Three artifacts committed: `vanalderweireldt-wyllie-1803-marriage-diksmuide`,
+**Eight new records:** [[looten_francois_1785]], [[vanalderweireldt_petrus_1803]], [[vanalderweireldt_jean]],
+[[bouckaert_marie_1799]], [[looten_catharina]], [[looten_renatus]], [[looten_ludovica]],
+[[looten_maria]]. Three artifacts committed: `vanalderweireldt-wyllie-1803-marriage-diksmuide`,
 `looten-wyllie-1818-marriage-diksmuide`, `vanalderweireldt-antoine-1808-death-diksmuide`.
 `research/sources.json` updated on `rab-bs-huwelijken`, `rab-bs-overlijdens` and
 `rab-bs-geboorten` (yield and notes); no page-level entries created for the individual RAB
@@ -3561,12 +3561,12 @@ acts, following the standing convention that a `vrijwilligersrab` act is cited t
 collection id, with the artifact file as the underlying evidence.
 
 Tree: 508 → 516 people. Build green. Verdict NOT PROVEN — the pass's own headline frontier,
-the parents of [[antoine_vanald]] and [[brigitte_wyllie]], stayed open.
+the parents of [[vanalderweireldt_antoine_1780]] and [[wyllie_brigitte_1779]], stayed open.
 
 ## 71. Autopilot pass 8 (down) — nine different Joannes Vaniseghem, a sibship, and a date that could not be written
 
 Entirely a `vrijwilligersrab` volunteer INDEX/Detail transcription pass on
-[[joannes_vi2]] × [[hermanie_janssen]], Oostende — no register image was read anywhere in
+[[vaniseghem_joannes_1852]] × [[janssen_hermanie_1853]], Oostende — no register image was read anywhere in
 it, so every fact below is `sup`, never `doc`. Every result reproduces without a login:
 `curl -X POST https://www.vrijwilligersrab.be/en/node/114 --data-urlencode "naam=Van Iseghem"`
 (`/164` for deaths, `/148` for marriages; Detail views are GETs to `/160`, `/168`, `/172`).
@@ -3581,30 +3581,30 @@ clear CLAUDE.md rule 1 — **the pair, both parents' full names written in full,
 two-identifier minimum**, and no row anywhere in the province pairs "Joannes" with any
 mother but Hermania/Hermina Ludovica Janssen. This is what grounds everything below.
 
-**SEVEN NEW SIBLINGS GRAFTED, [[eduardus_vi]] having held only himself before now:**
-[[arthur_vi]] (17/03/1874, act 140, RAB ID 1486295 — m. Elodia Joanna Schellynck 1901,
+**SEVEN NEW SIBLINGS GRAFTED, [[vaniseghem_eduardus_1880]] having held only himself before now:**
+[[vaniseghem_arthur_1874]] (17/03/1874, act 140, RAB ID 1486295 — m. Elodia Joanna Schellynck 1901,
 remarried Judith Maria Debbaut 1936, the 1936 act's Previous Partners table naming the
-1901 bride so this is the same man remarrying, not a ninth child), [[augustus_vi]]
+1901 bride so this is the same man remarrying, not a ninth child), [[vaniseghem_augustus_1875]]
 (13/08/1875, act 417, ID 1486298 — d. 04/01/1876, age 4mo22d, exact against the birth
-date by computation), [[leontius_vi]] (act 541, ID 2042291 — see below), [[gustavus_vi]]
-(05/01/1878, act 13, ID 1486318 — single-sourced, no second act found), [[joannes_vi83]]
+date by computation), [[vaniseghem_leontius]] (act 541, ID 2042291 — see below), [[vaniseghem_gustavus_1878]]
+(05/01/1878, act 13, ID 1486318 — single-sourced, no second act found), [[vaniseghem_joannes_1883]]
 (21/03/1883, act 232, ID 1486324 — d. 04/09/1883, the death Detail's own Birth Date field
-restating 21/03/1883 exactly), [[ludovicus_vi]] (20/02/1888, act 139, ID 1486336 — d.
-16/06/1889, ongehuwd, Detail Birth Date restating 20/02/1888 exactly) and [[joannes_vi91]]
+restating 21/03/1883 exactly), [[vaniseghem_ludovicus_1888]] (20/02/1888, act 139, ID 1486336 — d.
+16/06/1889, ongehuwd, Detail Birth Date restating 20/02/1888 exactly) and [[vaniseghem_joannes_1891]]
 (16/05/1891, act 415, ID 1486325 — m. Bertha Martha Coenye 1911, groom's own stated birth
 matching exactly). Six of the eight therefore carry a second, independent identifier from
-a separately-transcribed act; only [[gustavus_vi]] rests on the birth row alone. Filtering
-the province-wide index separately by father-name and by [[hermanie_janssen]]'s own
+a separately-transcribed act; only [[vaniseghem_gustavus_1878]] rests on the birth row alone. Filtering
+the province-wide index separately by father-name and by [[janssen_hermanie_1853]]'s own
 surname returns the identical eight RAB IDs on both sides — no ninth child, no rival
 couple. **No sex is stated on any birth row** (Sex/Hour/Street/parents' ages all blank);
-only one Detail view (1486308, [[eduardus_vi]]'s own) was actually fetched to confirm
+only one Detail view (1486308, [[vaniseghem_eduardus_1880]]'s own) was actually fetched to confirm
 this, and it is not asserted for the other seven rows on that basis alone — sex is
 recorded on the new records only where a separate act states it structurally (a death
 Detail's "Sex M", or a marriage act's groom/bride role), never from the birth row and
 never from a forename.
 
 **A DATE THAT COULD NOT BE WRITTEN, the third time today this trap has appeared (after
-§67 and §70).** [[leontius_vi]] (Leontius Josephus)'s row, act 541, RAB ID 2042291, has an
+§67 and §70).** [[vaniseghem_leontius]] (Leontius Josephus)'s row, act 541, RAB ID 2042291, has an
 **empty Birth Date column** and only a Certificate Date of 24/10/1876. No bound is
 recorded — not even "born before 1876-10-24" — because whether this venue's certificates
 were filed same-day or days later is not established; his record holds `birth.place:
@@ -3626,21 +3626,21 @@ Iseghem and Janssen result sets; the other 38 are not claimed. Zero of the 33 na
 Partner, most name both parents — the signature of a newborn registration, never an
 adult's. Recorded as **"unnamed child"**, never "stillborn": the death Detail form has no
 "Stillborn" field at all (only the birth form does), so that distinction needs the
-register image. The hypothesis that the 1878 row is [[gustavus_vi]] dying at ten months
+register image. The hypothesis that the 1878 row is [[vaniseghem_gustavus_1878]] dying at ten months
 is **rejected**: every other child of this couple who died after being named appears in
 this index *under that name*, so a named child being transcribed "Sn" instead would break
 the venue's own demonstrated convention — "Sn" is consistent only with a child never
-named. Both unnamed infants are recorded as a frontier note on [[joannes_vi2]] and
-[[hermanie_janssen]], not linked.
+named. Both unnamed infants are recorded as a frontier note on [[vaniseghem_joannes_1852]] and
+[[janssen_hermanie_1853]], not linked.
 
-**TWO NEGATIVES, NARROWED RATHER THAN CLOSED.** (1) [[leontius_vi]] and [[gustavus_vi]]
+**TWO NEGATIVES, NARROWED RATHER THAN CLOSED.** (1) [[vaniseghem_leontius]] and [[vaniseghem_gustavus_1878]]
 have no death and no marriage anywhere in this venue. Scope actually covered: Oostende
 deaths 1800–1939 (corrected from a searcher's stated 1799); Stene carries only 2 rows for
 this surname in the whole file (1933, 1936), too thin to confirm or refute the claimed
 1915 lower bound for Stene coverage; marriages 1872–1936; both parent-side filters run
 each time. Four alternatives remain open: death after 1939; death at Stene before 1915;
 death outside West-Vlaanderen entirely — this family demonstrably moved, since
-[[eduardus_vi]]'s son [[joannes_vi]] was born at Lens, France; or an unmatched name-form.
+[[vaniseghem_eduardus_1880]]'s son [[vaniseghem_joannes_1903]] was born at Lens, France; or an unmatched name-form.
 (2) "No unrecorded daughter" of this couple: "Hermania Ludovica" appears exactly 5 times
 in the province-wide marriage file — once as a bride, four times as "Mother of the
 Groom", never as "Mother of the Bride". Real, but it overreaches to call it closed: this
@@ -3648,18 +3648,18 @@ same couple is shown above to have had at least one child die before ever being 
 exactly what a marriage sweep cannot catch. Recorded as **"no unrecorded daughter who
 lived to marry within this venue's window"**, not as "ruled out".
 
-**THE THREE-GENERATION CHAIN, STATED IN A CIVIL ACT'S OWN WORDS.** [[joannes_vi2]]'s own
+**THE THREE-GENERATION CHAIN, STATED IN A CIVIL ACT'S OWN WORDS.** [[vaniseghem_joannes_1852]]'s own
 death act — Stene, 13 November 1933, act nr. 40, RAB ID 2184011 — is the only source in
-this tree stating the [[joannes_vi2]] → [[eduardus_vi]] link in a document's own words:
+this tree stating the [[vaniseghem_joannes_1852]] → [[vaniseghem_eduardus_1880]] link in a document's own words:
 the two comparants are family, each stating their own relation — "VANISEGHEM Eduard, 50,
 boodschapper, Stene, *zoon*" and "VANISEGHEM Joannes, 30, werkman, Stene, *kleinzoon*".
-The son is [[eduardus_vi]] (whose 1901 brother's own marriage act separately gives him
-the same trade); the grandson, aged 30 in 1933, fits [[joannes_vi]] (b. 11/05/1903)
+The son is [[vaniseghem_eduardus_1880]] (whose 1901 brother's own marriage act separately gives him
+the same trade); the grandson, aged 30 in 1933, fits [[vaniseghem_joannes_1903]] (b. 11/05/1903)
 almost exactly — a second, previously unclaimed corroboration of the chain, alongside the
 one the act states outright. Eduard's declared age, 50, is two years light (he turned 53
 sixteen days later) — flagged, not smoothed. The Detail's own Birth Date field
 (25/09/1852, Oostende) matches this record to the day, and widowerhood is stated to
-"JANSSEN Hermania Ludovica". [[hermanie_janssen]]'s own death act (Oostende, 13/11/1926,
+"JANSSEN Hermania Ludovica". [[janssen_hermanie_1853]]'s own death act (Oostende, 13/11/1926,
 act 611, ID 2201502) independently confirms her own birth date and both partner names.
 **A curiosity, explicitly weightless**: the two deaths fall on the same day-of-year,
 seven years apart; a frequency check across 1,521 dated rows shows 13/11 occurring 7
@@ -3669,16 +3669,16 @@ evidence of anything.
 **BONUS — the couple's own 1872 marriage act, and three re-confirmed deaths a generation
 up.** Oostende, 23 August 1872, act nr. 93, RAB ID 582203, gives both spouses' birth
 dates exactly as held (previously resting on the single Geneanet tree `tree-gverdievel`
-alone) and names all four parents — matching [[joannes_jos_vi]] × [[anna_gautiert]] and
-[[josephus_janssen]] × [[appolonia_huyghebaert]] exactly. It also restates the previous
-generation's own deaths: [[joannes_jos_vi]] 06/11/1861, [[anna_gautiert]] 26/05/1860 and
-[[josephus_janssen]] 26/07/1866 — the last of these an independent *second*
+alone) and names all four parents — matching [[vaniseghem_joannes_1819]] × [[gautiert_anna_1819]] and
+[[janssen_josephus_1820]] × [[huyghebaert_appolonia_1830]] exactly. It also restates the previous
+generation's own deaths: [[vaniseghem_joannes_1819]] 06/11/1861, [[gautiert_anna_1819]] 26/05/1860 and
+[[janssen_josephus_1820]] 26/07/1866 — the last of these an independent *second*
 re-confirmation, since §66 had already corroborated it from a different act (Appolonia's
 1868 remarriage). All three records now cite `rab-bs-huwelijken` alongside
 `tree-gverdievel`.
 
 **A FRAMING CORRECTION.** Camillus Gustavus Van Iseghem is not "a sixth child not in the
-tree" — [[camillusgustavus_vi05]] already held him. What is new is his death: Oostende,
+tree" — [[vaniseghem_camillus_1905]] already held him. What is new is his death: Oostende,
 29/11/1905, act 810, ID 500127, Sex M, Detail Birth Date 25/04/1905 exactly matching his
 held birth — a second identifier the record lacked before. The mother is written "VINCKE
 Emma Coleta" here against "Emma Celesta" elsewhere; `data/forenames.json` folds
@@ -3687,12 +3687,12 @@ table — recorded as a variant, not resolved into the fold file, since the iden
 not depend on it (the father's rare full name plus the exact date already give two
 identifiers). Both parents are recorded "Ongehuwd", aged 25 — dating their relationship
 to at least 1905, two years before their actual 1907 marriage, which bears on the open
-legitimation frontier on [[joannes_vi]] (b. Lens 1903) and [[flavie_vi]] (b. Diksmuide
+legitimation frontier on [[vaniseghem_joannes_1903]] (b. Lens 1903) and [[vaniseghem_flavie_1898]] (b. Diksmuide
 1898 under the surname Vincke) — added to that frontier's evidence, not resolved by it.
-[[camillushenricus_vi11]]'s own record is corrected: it no longer says "no death act has
+[[vaniseghem_camillus_1911]]'s own record is corrected: it no longer says "no death act has
 been found for either brother" — only Camillus Henricus's own fate is still open.
 
-**NOT PROVEN, NOT GRAFTED — a child of [[joannes_vi]] × [[adrienne_dv]].** "VAN ISEGHEM
+**NOT PROVEN, NOT GRAFTED — a child of [[vaniseghem_joannes_1903]] × [[devriendt_adrienne_1908]].** "VAN ISEGHEM
 Roger Bernard", Stene, d. 27/02/1929, act 10, RAB ID 2148819, names both parents in full,
 eleven months after their 1928 marriage. Two identifiers are present, but no Detail view
 was fetched — no sex, no birth date, no age — so no record is created; recorded as a
@@ -3714,14 +3714,14 @@ the corpus `link.py` reads (`evaluate.py refs` would find nothing to label again
 two conventions are now in tension and neither is resolved here — no new label added, no
 existing label retro-edited.
 
-**Seven new records:** [[arthur_vi]], [[augustus_vi]], [[leontius_vi]], [[gustavus_vi]],
-[[joannes_vi83]], [[ludovicus_vi]], [[joannes_vi91]]. `research/sources.json` updated on
+**Seven new records:** [[vaniseghem_arthur_1874]], [[vaniseghem_augustus_1875]], [[vaniseghem_leontius]], [[vaniseghem_gustavus_1878]],
+[[vaniseghem_joannes_1883]], [[vaniseghem_ludovicus_1888]], [[vaniseghem_joannes_1891]]. `research/sources.json` updated on
 `rab-bs-geboorten`, `rab-bs-huwelijken` and `rab-bs-overlijdens` (yield and, for the
 death index, the "Sn" code note); no page-level entries created for the individual RAB
 acts, following the standing convention. No labels recorded (see above).
 
 Tree: 516 → 523 people. Build green. Verdict ACCEPTED for the sibship (on the parent-pair
-identifier), NOT PROVEN for [[leontius_vi]] and [[gustavus_vi]]'s own fates, and for the
+identifier), NOT PROVEN for [[vaniseghem_leontius]] and [[vaniseghem_gustavus_1878]]'s own fates, and for the
 Roger Bernard frontier.
 
 ## 72. Autopilot pass 9 (by act) — a fifth and sixth Bossin child, a near-empty record filled in, and a precedent corrected
@@ -3732,17 +3732,17 @@ Werchter wedding — registered together as **S35**. Index-level AGATHA/Demogen 
 analyses throughout, `sup` never `doc`; AGATHA holds a scan for the main act
 (`HUBRA_00197982_0`) but is logged out — confirmed `blocked`, not a scoped miss.
 
-**A FIFTH CHILD — [[henricus_bossin]], and which act actually carries him.** He first
-appears as an unlabelled witness, aged 21, at his sister [[ludovica_bossin]]'s own 1884
+**A FIFTH CHILD — [[bossin_henricus_1863]], and which act actually carries him.** He first
+appears as an unlabelled witness, aged 21, at his sister [[bossin_ludovica_1853]]'s own 1884
 Kraainem wedding — an act that names no parents for its witnesses. It is his **own**
-marriage act, Kraainem, 23 November 1887 (also the act that brings [[guns_mc]] and her
-parents [[guns_jf]]/[[vogels_a]] into the tree), that states his parents directly:
+marriage act, Kraainem, 23 November 1887 (also the act that brings [[guns_maria_1864]] and her
+parents [[guns_joannes]]/[[vogels_amelia]] into the tree), that states his parents directly:
 Guillelmus Bossin × Joanna Catharina Peremans. **Two identifiers carry the link**: the
-parent names on that 1887 act, and — independent of it — [[guilielmus_bossin]]'s death,
+parent names on that 1887 act, and — independent of it — [[bossin_guilielmus_1824]]'s death,
 Kraainem 10 October 1888, recurring identically to the day in two further, unconnected
 acts for two *different* children five years apart (his sister's 1901 remarriage, his
 brother's 1896 Werchter marriage). Two documents agreeing to the day on a death rules out
-a namesake Kraainem Bossin family — a real risk here, since [[jbbossin]] already turned
+a namesake Kraainem Bossin family — a real risk here, since [[bossin_joannes_1834]] already turned
 out to be an entirely unconnected Joannes Baptista Bossin two generations earlier (§65).
 
 **AGE CONSISTENCY IS A DERIVED CHECK, NOT AN INDEPENDENT IDENTIFIER.** Across five
@@ -3750,25 +3750,25 @@ appearances (1884, 1896, 1900, 1901, 1902) against his 1863-01-01 birth, his sta
 runs 21 (exact), 32 (one year short of 33), 36 (one year short of 37), 38 (exact), 39
 (exact). That pattern shows one continuous man — which the parent-name-plus-death-date
 pair already established — and adds no identifying weight beyond that; two years short
-out of five is ordinary rounding, the same pattern already accepted on [[jbbossin]]'s own
+out of five is ordinary rounding, the same pattern already accepted on [[bossin_joannes_1834]]'s own
 record. It is recorded plainly here because it would be easy to mistake "the ages all fit"
 for a second identifier when it is really a consistency check on the first.
 
-**A PROBABLE SIXTH CHILD — [[joannes_franciscus_bossin]], found by the verifier from the
+**A PROBABLE SIXTH CHILD — [[bossin_joannes_1866]], found by the verifier from the
 1896 Werchter act**, which also restates the father's death 1888-10-10 Kraainem — the same
 exact date given independently on the 1901 act above, five years apart. Two family members
-([[henricus_bossin]], [[swaelens]]) stand witness at his wedding, the same pattern that
+([[bossin_henricus_1863]], [[swaelens_joannes_1858]]) stand witness at his wedding, the same pattern that
 corroborates other siblings in this family. Recorded as probable, not certain: the
 evidence is the same class as Henricus's, but no third, independent appearance of this
-specific son has yet turned up. His wife [[verstraeten_mc]] and her parents
-[[verstraeten_l]]/[[torfs_r]] are entered from the same act.
+specific son has yet turned up. His wife [[verstraeten_maria_1867]] and her parents
+[[verstraeten_ludovicus]]/[[torfs_rosalia]] are entered from the same act.
 
-**[[swaelens]], filled in from a bare marriage-index row.** The record held only a
+**[[swaelens_joannes_1858]], filled in from a bare marriage-index row.** The record held only a
 marriage date, place and the bride's parents from S24. His own 1884 act now gives his
-birth (Alsemberg, 11 May 1858), trade (*schrijnwerker*) and parents — [[egidius_swaelens]]
-× [[joanna_ackermans]], her death dated Alsemberg, 27 December 1877. His own witness
-appearance at [[henricus_bossin]]'s 1887 wedding, aged 29, is an exact arithmetic match to
-that birth. His death — Kraainem, 7 October 1898 — comes from [[ludovica_bossin]]'s 1901
+birth (Alsemberg, 11 May 1858), trade (*schrijnwerker*) and parents — [[swaelens_egidius]]
+× [[ackermans_joanna]], her death dated Alsemberg, 27 December 1877. His own witness
+appearance at [[bossin_henricus_1863]]'s 1887 wedding, aged 29, is an exact arithmetic match to
+that birth. His death — Kraainem, 7 October 1898 — comes from [[bossin_ludovica_1853]]'s 1901
 remarriage act, naming him as her deceased "vorige partner"; the rare triple forename plus
 the bride's own independently-confirmed identity make this unambiguous.
 
@@ -3776,9 +3776,9 @@ the bride's own independently-confirmed identity make this unambiguous.
 Swaelens × Bossin marriage as 17 February 1884, Alsemberg; this civil act gives 25
 February 1884, Kraainem — eight days and one commune apart. Banns at Alsemberg then the
 act at Kraainem is plausible but is inference, not proof, and nothing this pass found
-settles it. Following the same handling already given to [[guilielmus_bossin]] and
-[[egidius_peremans]]'s one-year death conflict (§69), the frontmatter `married`/`place`
-fields on both [[swaelens]] and [[ludovica_bossin]] stay at the earlier-held S24 values;
+settles it. Following the same handling already given to [[bossin_guilielmus_1824]] and
+[[peremans_egidius]]'s one-year death conflict (§69), the frontmatter `married`/`place`
+fields on both [[swaelens_joannes_1858]] and [[bossin_ludovica_1853]] stay at the earlier-held S24 values;
 the civil act's fuller date and place stand in prose alongside them, not in place of them.
 
 **NOT PROVEN, refused — Franciscus Swaelens.** A second witness at the 1884 wedding, 24,
@@ -3787,35 +3787,35 @@ relationship and he appears exactly once in the held corpus. **The point worth k
 same surname, same trade and a plausible age together are ONE correlated signal, not two
 independent ones — a trade runs in families and apprenticeships, so it is exactly the kind
 of correlated pair rule 1 is written to catch. No person file is made for him; the lead is
-recorded in [[swaelens]]'s own prose as a frontier, settled only by the register image or
+recorded in [[swaelens_joannes_1858]]'s own prose as a frontier, settled only by the register image or
 an act naming his own parents.
 
-**NEW FACTS for [[ludovica_bossin]] and [[guilielmus_bossin]].** Her 1901 Kraainem
-remarriage to **[[petrus_vrebos]]** (widower, himself not previously in the tree, with his
-parents [[vrebos_hf]]/[[schoolmeesters_j]] and a first wife, Elisabeth Theresia Geuffens,
+**NEW FACTS for [[bossin_ludovica_1853]] and [[bossin_guilielmus_1824]].** Her 1901 Kraainem
+remarriage to **[[vrebos_petrus_1856]]** (widower, himself not previously in the tree, with his
+parents [[vrebos_henricus]]/[[schoolmeesters_josina]] and a first wife, Elisabeth Theresia Geuffens,
 named but given no record of her own for want of any further fact) was entirely unknown
-before this pass. [[guilielmus_bossin]]'s death is sharpened from a bare year to a day,
+before this pass. [[bossin_guilielmus_1824]]'s death is sharpened from a bare year to a day,
 1888-10-10 Kraainem, corroborated **twice independently** rather than once, as detailed
-above. And [[joannes_bossin51]] — added only in §65 — gets his first corroboration beyond
+above. And [[bossin_joannes_1851]] — added only in §65 — gets his first corroboration beyond
 his own birth act: his stated age (32) as a witness at the 1884 wedding is an exact
 arithmetic match to his held 1851-08-15 birth.
 
 **A PRECEDENT CORRECTED.** The lead into this pass justified accepting
-[[egidius_swaelens]] × [[joanna_ackermans]] at `sup` from a single act by citing
-[[carolus_vb]] × [[martinet]] as having been single-source before their own 1909 act. That
-citation is wrong: `martinet.md` and `carolus_vb.md` show `carolus_vb` already carried
+[[swaelens_egidius]] × [[ackermans_joanna]] at `sup` from a single act by citing
+[[vanbogaert_carolus_1819]] × [[martinet_maria_1838]] as having been single-source before their own 1909 act. That
+citation is wrong: `martinet.md` and `carolus_vb.md` show `vanbogaert_carolus_1819` already carried
 **two** sources before S18 — `tree-stefpaelinck` and S18 itself do not predate one
 another as claimed; rather, the couple was never single-source to begin with. **The
-correct precedent is inside this same family**: [[cornelius_bossin]], [[joannes_bossin51]]
-and [[bossin]] (Antonia) were each accepted at `sup` from one civil act's purpose-built
+correct precedent is inside this same family**: [[bossin_cornelius_1847]], [[bossin_joannes_1851]]
+and [[bossin_antonia_1849]] (Antonia) were each accepted at `sup` from one civil act's purpose-built
 parentage statement, no second source, no register image. That is the actual standard
-this record meets, and it is the one now written onto [[egidius_swaelens]]'s own page. A
+this record meets, and it is the one now written onto [[swaelens_egidius]]'s own page. A
 precedent cited wrongly is exactly how a standard drifts, which is why this is corrected
 here rather than quietly used.
 
 **A THIRD instance of the cover re-offering finished work.** Cover entry 6,
 `abt:78f3eb53-a706-9e24-4a46-4203498072a3` (Sint-Niklaas, 1909), is already fully grafted:
-[[carolus_vb]], [[martinet]], [[alphonsus_vb]] and [[rosalia_moerloos]] already quote every
+[[vanbogaert_carolus_1819]], [[martinet_maria_1838]], [[vanbogaert_alphonsus]] and [[moerloos_rosalia]] already quote every
 field of it verbatim, citing S18 (the same GUID) — including the "Vitalis Moerloos ×
 Nathalia Van Acker" parent names the cover credits as a fresh `RESOLVES`. This is the
 **third** cover entry this run has found already finished (after entries 3 and 5, §69,
@@ -3823,16 +3823,16 @@ which this pass could not re-confirm directly — only entry 6 was independently
 here). **The pattern, not the slip**: the greedy act cover does not know what the tree
 already holds. `tools/` is out of scope for this pass; this is a finding for the report.
 
-Thirteen new person files: [[henricus_bossin]], [[guns_mc]], [[guns_jf]], [[vogels_a]],
-[[joannes_franciscus_bossin]], [[verstraeten_mc]], [[verstraeten_l]], [[torfs_r]],
-[[egidius_swaelens]], [[joanna_ackermans]], [[petrus_vrebos]], [[vrebos_hf]],
-[[schoolmeesters_j]]. New source **S35**. Four labels recorded for identities the
-verifier's own ten did not cover (`henricus_bossin` × his 1887 act and his 1884 witness
-line, `joannes_franciscus_bossin` × his 1896 act, `petrus_vrebos` × his 1901 act) — the
+Thirteen new person files: [[bossin_henricus_1863]], [[guns_maria_1864]], [[guns_joannes]], [[vogels_amelia]],
+[[bossin_joannes_1866]], [[verstraeten_maria_1867]], [[verstraeten_ludovicus]], [[torfs_rosalia]],
+[[swaelens_egidius]], [[ackermans_joanna]], [[vrebos_petrus_1856]], [[vrebos_henricus]],
+[[schoolmeesters_josina]]. New source **S35**. Four labels recorded for identities the
+verifier's own ten did not cover (`bossin_henricus_1863` × his 1887 act and his 1884 witness
+line, `bossin_joannes_1866` × his 1896 act, `vrebos_petrus_1856` × his 1901 act) — the
 verifier's ten are not duplicated.
 
-Tree: 523 → 536 people. Build green. Verdict ACCEPTED for [[henricus_bossin]] and the
-1884/1887/1901 facts; ACCEPTED but PROBABLE for [[joannes_franciscus_bossin]]; NOT PROVEN
+Tree: 523 → 536 people. Build green. Verdict ACCEPTED for [[bossin_henricus_1863]] and the
+1884/1887/1901 facts; ACCEPTED but PROBABLE for [[bossin_joannes_1866]]; NOT PROVEN
 for Franciscus Swaelens; the 17-vs-25 February marriage date and the Franciscus Swaelens
 lead both stay open frontiers.
 
@@ -3867,16 +3867,16 @@ tree on present evidence.** The six patriarch couples, read off the `abt` death 
 Plus a 20th-century family cross-confirmed in three independent sources: Joannes
 Bundervoet × Sophia Livina De Moerloose → **Emilius** (1872–1943) × Sylvia Nathalia Maria
 De Rudder (m. Gent 1904) → Andreas 1905, Renatus Isidorus 1906, Gustavus Josephus 1908,
-Franciscus 1912. None matches any spouse in the tree ([[joannes_b]] × Livina Stockman /
-Livina De Wilde; [[christoffel]] × Petronilla Bogaert; [[petrus_b1727]] × Marie Anna de
+Franciscus 1912. None matches any spouse in the tree ([[bundervoet_joannes_1682]] × Livina Stockman /
+Livina De Wilde; [[bundervoet_christoffel_1709]] × Petronilla Bogaert; [[bundervoet_petrus_1727]] × Marie Anna de
 Deckere).
 
 **A chronological exclusion independent of the spouse-name argument.** Two of the six
-patriarchs are excludable from being [[petrus_b1727]] by arithmetic alone: "Petrus ×
+patriarchs are excludable from being [[bundervoet_petrus_1727]] by arithmetic alone: "Petrus ×
 Isabella De Coster" fathered a son in **1803** and "Petrus × Maria Wille" one ~**1790**,
 both well after our petrus_b1727's attested **1777** death (buried Assenede).
 
-**The one name echo stays flagged, not upgraded.** [[christoffel]]'s son "Guillaume (1731)"
+**The one name echo stays flagged, not upgraded.** [[bundervoet_christoffel_1709]]'s son "Guillaume (1731)"
 against Gent's "Guillielmus Bundervoet" is a common forename with no place, spouse or
 detail to compare. Worth recording plainly: `data/people/` has no file for Guillaume at
 all — he exists only as a string inside `christoffel.md`, so there is no rostered person to
@@ -3885,8 +3885,8 @@ record), left open rather than fixed here, since fixing it is not what this pass
 supports doing.
 
 **Both candidate pairings were scored, refused, and labelled** (`research/labels.jsonl`):
-[[petrus_b1727]] against the Gent cluster's `best_link` (30.7 bits, 1 independent
-identifier — name+kin-forename — NOT GRAFTABLE), and [[christoffel]] against the
+[[bundervoet_petrus_1727]] against the Gent cluster's `best_link` (30.7 bits, 1 independent
+identifier — name+kin-forename — NOT GRAFTABLE), and [[bundervoet_christoffel_1709]] against the
 "Oost-Vlaanderen, Gent" sub-cluster's `best_link` (26.5 bits, 1 independent identifier,
 NOT GRAFTABLE). Neither label duplicates the other; both were already recorded before this
 section was written.
@@ -3923,9 +3923,9 @@ substance is unchanged, but the scope is stated here as **civil-registration arc
 **REJECTED — the proposed "bridge", and the sharpest result of this pass.** An earlier
 hypothesis proposed Adrianus Bundervoet × Francisca Neukens's marriage act (c. 1815–19) as
 the most likely bridge, on the theory it might name Adrianus's parents as Joannes
-Bundervoet × Livina De Wilde — [[joannes_b]]'s own second, currently childless marriage.
+Bundervoet × Livina De Wilde — [[bundervoet_joannes_1682]]'s own second, currently childless marriage.
 **Refuted on chronology, not on the act's content** (unpulled): Adrianus's attested
-fertility window runs to **1829** (children b. 1820, ~1827, ~1829). [[joannes_b]] died in
+fertility window runs to **1829** (children b. 1820, ~1827, ~1829). [[bundervoet_joannes_1682]] died in
 **1760**, and that second marriage is ~**1745**. For Adrianus to be its son he would have to
 be **60–83 years old** across the births of those three children — not improbable,
 essentially impossible. So even if the act does say "father: Joannes Bundervoet, mother:
@@ -3948,10 +3948,10 @@ Balegem, Desteldonk, Drongen, Evergem, Gentbrugge, Hansbeke, Lovendegem, Mariake
 Merelbeke, Merendree, Oostakker, Semmerzake, Sleidinge, Vinderhoute, Wachtebeke, Wondelgem,
 Zomergem — logged as "a finding aid… never a person, a date or a parent — so nothing from
 it is graftable." Reproducing `coverage.surname_clusters()` this pass gives the identical
-score cited there: the Gent cluster's best link is [[petrus_b1727]] at 30.7 bits, 1
+score cited there: the Gent cluster's best link is [[bundervoet_petrus_1727]] at 30.7 bits, 1
 independent identifier; `link.py --all` puts the same pairing at band `[weak]` / NOT
-GRAFTABLE, and `link.py`'s stricter default shows **0 candidates** for [[joannes_b]],
-[[christoffel]] and [[petrus_b1727]]. Surname + Gent is one fact, and the 17-parish finding
+GRAFTABLE, and `link.py`'s stricter default shows **0 candidates** for [[bundervoet_joannes_1682]],
+[[bundervoet_christoffel_1709]] and [[bundervoet_petrus_1727]]. Surname + Gent is one fact, and the 17-parish finding
 shows it does not even narrow to one family.
 
 **The "zero migration trace" claim is weakened, not confirmed.** Across the abt+gnt corpus,
@@ -3960,11 +3960,11 @@ only **18 of 92** `abt` Bundervoet mentions and **0 of 56** `gnt` mentions carry
 zero, but it is mostly an absence of the field, not a checked-and-excluded absence, and is
 recorded that way here rather than as a clean negative.
 
-Three searches logged (`research/searches.jsonl`): [[petrus_b1727]] and [[christoffel]]
-against the `abt` archive, [[joannes_b]] against `gnt`, all `miss` / `name-index`, each
+Three searches logged (`research/searches.jsonl`): [[bundervoet_petrus_1727]] and [[bundervoet_christoffel_1709]]
+against the `abt` archive, [[bundervoet_joannes_1682]] against `gnt`, all `miss` / `name-index`, each
 scoped to what was actually covered rather than left to read as "everywhere." No labels
-written here beyond the two the verifier had already recorded on [[petrus_b1727]] and
-[[christoffel]]. No person files added or changed; no source yielded a fact for the tree.
+written here beyond the two the verifier had already recorded on [[bundervoet_petrus_1727]] and
+[[bundervoet_christoffel_1709]]. No person files added or changed; no source yielded a fact for the tree.
 
 Tree: 536 people, unchanged. Build green. Verdict for the whole pass: **NOT PROVEN** — the
 Gent cluster is closed as a bridge candidate on current evidence, the clustering-artifact
@@ -3980,26 +3980,26 @@ directly, not index rows, which is the first time that has happened today. This 
 about being precise on the boundary: which facts are now image-borne (`doc`) and which
 still rest on an index (`sup`), even within the same person's record.
 
-### `emma_vincke` — the birth act image, and two objections defeated
+### `vincke_emma_1880` — the birth act image, and two objections defeated
 
 FamilySearch image group 004833210, image 392 of 1269 (`fs-diksmuide-civil-registers-film-004833210`,
 held as `data/artifacts/emma-vincke-1880-birth-act-image.md`) is the Diksmuide birth
 register page itself, act nr. 14, 24 January 1880 — not the AGATHA index analysis this
 record rested on before. That AGATHA transcription (`data/artifacts/emma-vincke-1880-birth-diksmuide.md`)
 **stays `sup`** and is kept alongside it, not discarded: two identifiers agree on the
-image — birth date + place, and both parents' full names — so [[emma_vincke]]'s own
+image — birth date + place, and both parents' full names — so [[vincke_emma_1880]]'s own
 record is upgraded `sup` → `doc`. New facts the image gives that no index held: the birth
 hour (3 a.m.), the address (the father's own house on the Kleinendyk, Diksmuide), the
 father's trade written with the linking -s- as *metsersdiender* (the tree held
-"metserdiener" from a member tree), and [[ludovica_vanald]]'s occupation, *kantwerkster*
+"metserdiener" from a member tree), and [[vanalderweireldt_ludovica_1845]]'s occupation, *kantwerkster*
 (lacemaker) — held nowhere before. The declaring officer was Edmond Paret, schepen.
 
 Two objections were tested against the match, and both are defeated — recorded because
 they are the interesting part, not smoothed away. **The age offset:** both parents are
-stated one year older than their completed age (40 vs 39y10m for [[lucien_vincke]], 35 vs
-34y2m for [[ludovica_vanald]]). The identical +1 offset recurs, independently, on
-[[ludovica_vanald]] alone in a wholly separate document eight years and one register
-later — her son [[alfons_vincke]]'s 1888 marriage act (43 stated vs 42 completed, where
+stated one year older than their completed age (40 vs 39y10m for [[vincke_lucien_1840]], 35 vs
+34y2m for [[vanalderweireldt_ludovica_1845]]). The identical +1 offset recurs, independently, on
+[[vanalderweireldt_ludovica_1845]] alone in a wholly separate document eight years and one register
+later — her son [[vincke_alfons_1865]]'s 1888 marriage act (43 stated vs 42 completed, where
 Lucien's own age there is uninformative because his birthday had already passed). One
 person showing the same offset twice is a birth-year-subtraction convention, not two
 independent errors, and it unseats neither held birth date. **The surname reading:** an
@@ -4022,8 +4022,8 @@ so a later pass does not have to re-derive it.
 
 Marriage act nr. 212, Oostende, 28 September 1907 (film 004166052 frame `_00139`, ark
 `3:1:S3HT-6SKS-SZ1`, `fs-oostende-1907-marriage-vaniseghem-vincke`, held as
-`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`) is [[eduardus_vi]] ×
-[[emma_vincke]]'s own marriage act, read as a register image. Its legitimation clause
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`) is [[vaniseghem_eduardus_1880]] ×
+[[vincke_emma_1880]]'s own marriage act, read as a register image. Its legitimation clause
 names exactly three children as the couple's legitimate issue, by day, month, year and
 commune, and no others:
 
@@ -4033,27 +4033,27 @@ commune, and no others:
 > en Joannes Van Yseghem, geboren te Lens, in Frankrijk, den elfden Mei negentien honderd
 > en drie.
 
-**[[flavie_vi]]** — this ties the Diksmuide 1898 birth-index row "VINCKE Flavie Eulalie"
+**[[vaniseghem_flavie_1898]]** — this ties the Diksmuide 1898 birth-index row "VINCKE Flavie Eulalie"
 (father NN NN, mother VINCKE Emma Celesta) to her directly, by forename pair + day + month
 + year + commune, **not** by act reference — the 1907 act cites no birth act number. Her
 birth date and place are recorded for the first time. Record upgraded `sup` → `doc`.
-**[[eduardus_vi2]]** — his birth date (2 Nov 1901) carried an explicit "NOT INDEPENDENTLY
+**[[vaniseghem_eduardus_1901]]** — his birth date (2 Nov 1901) carried an explicit "NOT INDEPENDENTLY
 RE-CHECKED" caveat since §67; a wholly independent doc-grade source, a different register
 and clerk, now confirms the identical date, and the caveat is retracted. Record upgraded
-`sup` → `doc`. **[[joannes_vi]]** — this resolves both of his open questions at once:
+`sup` → `doc`. **[[vaniseghem_joannes_1903]]** — this resolves both of his open questions at once:
 which Lens (the act states "in Frankrijk" in its own words), and the four-year gap before
 his parents' marriage, which is a legitimation of a child already born, the same mechanism
-already documented in this tree at [[edouard_dk]], not an unrecorded earlier union. Record
+already documented in this tree at [[dekeyser_edouard_1876]], not an unrecorded earlier union. Record
 upgraded `sup` → `doc`.
 
 **The absence argument, sound and changing nothing.** No fourth child is named, and the
-verifier confirmed by direct crop that exactly three are. [[camillusgustavus_vi05]] (d. 29
+verifier confirmed by direct crop that exactly three are. [[vaniseghem_camillus_1905]] (d. 29
 Nov 1905) and the unattached "VINCKE Albert Joseph" (b. 9 Dec 1899, d. 26 Mar 1900) were
 both already dead by the wedding, and legitimating a deceased infant with no descendants
 carries no practical legal weight — omission is the ordinary case here, not a gap. The act
 is silent, not contrary; Albert Joseph's paternity **stays unproven and unlinked**.
 
-**[[alfons_vincke]] — the sibling link itself upgraded to `doc`.** The act's own witness
+**[[vincke_alfons_1865]] — the sibling link itself upgraded to `doc`.** The act's own witness
 line states it directly: *"Alphonsus Vincke, oud twee en veertig jaren, stoofmaker,
 broeder der echtgenoote"* — 42, matching his held birth to the exact day, and naming the
 sibling relationship in the register's own words rather than it being inferred only from
@@ -4063,12 +4063,12 @@ career change, flagged rather than treated as a contradiction. His own birth act
 unread as an image, so only this specific identification carries `doc`.
 
 **Corroborations, not resolutions — recorded without moving any of these five records off
-`sup`.** [[joannes_vi2]] (occupation herbergier, new) × [[hermanie_janssen]], both present,
-consenting and signed for their son; [[lucien_vincke]] (occupation *werkman* here, a later
+`sup`.** [[vaniseghem_joannes_1852]] (occupation herbergier, new) × [[janssen_hermanie_1853]], both present,
+consenting and signed for their son; [[vincke_lucien_1840]] (occupation *werkman* here, a later
 change from *metsersdiender*/*metser*) present and consenting for his daughter;
-[[ludovica_vanald]] (*zonder beroep* here, a later change from *kantwerkster*) consenting
+[[vanalderweireldt_ludovica_1845]] (*zonder beroep* here, a later change from *kantwerkster*) consenting
 by a separate act at Diksmuide, 8 September 1907, confirming her alive that month,
-consistent with her held 1914 death; [[eduardus_vi]] himself, occupation *werkman* (new),
+consistent with her held 1914 death; [[vaniseghem_eduardus_1880]] himself, occupation *werkman* (new),
 militia certificate produced. Banns at Oostende, Sunday 8 September 1907; officer
 Ernestus Van Glabbeke, schepen gedelegeerden; no marginal annotation of any kind. Each of
 these doc-grade facts is recorded in the relevant person's own prose, with the record's
@@ -4081,13 +4081,13 @@ The same act's witness lines name two relationships that reach outside this tree
 **Constantinus Degraeve**, 36, *aardewerker*, of Diksmuide, is stated as *zwager der
 echtgenoote* — brother-in-law of the bride — implying an unrecorded Vincke sister married
 a Degraeve. No person record, label or prior search anywhere in this tree mentions
-"Degraeve." [[romanie_vincke]] is the only daughter of [[lucien_vincke]] ×
-[[ludovica_vanald]] known to have survived to adulthood with no further record of her
+"Degraeve." [[vincke_romanie_1873]] is the only daughter of [[vincke_lucien_1840]] ×
+[[vanalderweireldt_ludovica_1845]] known to have survived to adulthood with no further record of her
 own, which is **pure surname-coincidence speculation, not an identifier**, and is recorded
 on her own page as exactly that — not a link. What would settle it: Constantinus
 Degraeve's own marriage act, or a Vincke-bride/Degraeve-groom marriage pairing. **Eugenius
 De Roo**, 40, *kleermaker*, of Oostende, is stated as *oom van den echtgenoot* — an uncle
-of the groom [[eduardus_vi]] — likewise unrecorded anywhere in this tree, and likewise not
+of the groom [[vaniseghem_eduardus_1880]] — likewise unrecorded anywhere in this tree, and likewise not
 linked.
 
 ### Housekeeping
@@ -4102,10 +4102,10 @@ fact would be the tree keeping one thing in two places, so it was moved to the s
 scratchpad instead of registered or deleted.
 
 Tree: 536 people, unchanged — this pass corroborates and resolves, it does not add.
-Sources touched: `emma_vincke`, `lucien_vincke`, `ludovica_vanald`, `flavie_vi`,
-`eduardus_vi2`, `joannes_vi`, `alfons_vincke`, `eduardus_vi`, `joannes_vi2`,
-`hermanie_janssen`, `romanie_vincke`. Confidence upgraded `sup` → `doc` on five records:
-[[emma_vincke]], [[flavie_vi]], [[eduardus_vi2]], [[joannes_vi]], [[alfons_vincke]]. Build
+Sources touched: `vincke_emma_1880`, `vincke_lucien_1840`, `vanalderweireldt_ludovica_1845`, `vaniseghem_flavie_1898`,
+`vaniseghem_eduardus_1901`, `vaniseghem_joannes_1903`, `vincke_alfons_1865`, `vaniseghem_eduardus_1880`, `vaniseghem_joannes_1852`,
+`janssen_hermanie_1853`, `vincke_romanie_1873`. Confidence upgraded `sup` → `doc` on five records:
+[[vincke_emma_1880]], [[vaniseghem_flavie_1898]], [[vaniseghem_eduardus_1901]], [[vaniseghem_joannes_1903]], [[vincke_alfons_1865]]. Build
 green.
 
 ## 75. Three Kraainem register images — a retraction, a refusal overturned by the document, and a discrepancy that was never wrong
@@ -4132,7 +4132,7 @@ harvest confirms it independently: `abl.jsonl`'s record for this GUID carries **
 `SourceDigitalOriginal` pointing at the now end-of-life `search.arch.be`. AGATHA does not
 publish a scan for this act to anyone, logged in or not — a real venue limit, not a session
 error. `research/searches.jsonl` is corrected to match (lines logging this as a `miss`
-with that stated scope, superseding the earlier mistyped entry), and `swaelens`'s own
+with that stated scope, superseding the earlier mistyped entry), and `swaelens_joannes_1858`'s own
 record states the retraction in full. **Why the distinction matters**: `blocked` invites a
 pointless retry next pass; `miss` records a limit that only a different venue (here,
 FamilySearch's own Kraainem film) can get past.
@@ -4146,7 +4146,7 @@ independent identifiers Rule 1 requires, because a trade runs in families and
 apprenticeships. **The register image states it outright**: *"Franciscus Swaelens,
 schrijnwerker, oud vier en twintig jaren, wonende te Sint-Genesius Rhode, broeder des
 bruidegoms"* — brother of the groom, in the act's own words, signed by his own hand. He is
-now [[franciscus_swaelens]], son of [[egidius_swaelens]] and [[joanna_ackermans]], b.
+now [[swaelens_franciscus]], son of [[swaelens_egidius]] and [[ackermans_joanna]], b.
 **1859..1860** (a year span, not a point — the act gives only his age, and this is what
 that age permits, no more). **This is the pass's methodological point.** §72's refusal was
 not an error to fix; it was the correct call on the evidence then available, and the
@@ -4157,7 +4157,7 @@ itself, and then let the document in.
 
 ### The parents, no longer single-source
 
-[[egidius_swaelens]] × [[joanna_ackermans]] were accepted at `sup` from the one 1884 act
+[[swaelens_egidius]] × [[ackermans_joanna]] were accepted at `sup` from the one 1884 act
 naming both, with the frontier stated plainly that nothing in the corpus cross-checked
 them. The Alsemberg banns — a different commune, a different register series, a different
 clerk, filed before the Kraainem act existed — name the identical pair: *Egidius
@@ -4177,21 +4177,21 @@ Sunday 17 February, "voor de tweede maal". The Kraainem act states the same thin
 own words: "de afkondigingen … en dat van Alsemberg, op de Zondagen tienden en
 zeventienden Februari laatstleden." **S24's 17 February is the second banns publication,
 not a rival marriage date — S24 never mistranscribed anything; this tree misread what
-kind of act its index row pointed at.** `swaelens` and `ludovica_bossin` now both carry
+kind of act its index row pointed at.** `swaelens_joannes_1858` and `bossin_ludovica_1853` now both carry
 `married: 1884-02-25, place: Kraainem` at `doc`, agreeing field for field as the data
 model requires; the banns dates are kept in prose as what they actually are, not
 discarded, and S24's registry note records the correction.
 
-### `henricus_bossin` — his own act, at `doc`
+### `bossin_henricus_1863` — his own act, at `doc`
 
 The 1887 Kraainem act gives his birth directly on the register — **Kraainem, 1 January
 1863**, a birthplace no bare AGATHA index row carried — and states both parents,
 **Guillelmus Bossin × Joanna Catharina Peremans**, married farmers of Kraainem, **present
 in person and consenting**, which puts a hard floor of 23 November 1887 under
-[[guilielmus_bossin]]'s held death of 10 October 1888. The bride, **Maria Catharina
+[[bossin_guilielmus_1824]]'s held death of 10 October 1888. The bride, **Maria Catharina
 Guns**, b. 23 December 1864, and her parents **Joannes Franciscus Guns × Amelia Vogels**,
-also present, are confirmed on the same image — [[guns_mc]], [[guns_jf]] and [[vogels_a]]
-all upgraded to `doc`. [[swaelens]] stands witness as *schoonbroeder des bruidegoms*, 29
+also present, are confirmed on the same image — [[guns_maria_1864]], [[guns_joannes]] and [[vogels_amelia]]
+all upgraded to `doc`. [[swaelens_joannes_1858]] stands witness as *schoonbroeder des bruidegoms*, 29
 (exact against his 11 May 1858 birth), now resident at Kraainem rather than the Alsemberg
 of his own 1884 wedding three years earlier. **Recorded, not smoothed**: the bride signs
 **"Justine Guns"** though the act names her Maria Catharina — a roepnaam or informal name,
@@ -4201,21 +4201,21 @@ at Sterrebeek is on offer.
 The same 1884 act that names Franciscus Swaelens also states, in its own words, that
 **Joannes Baptista Bossin (32)** and **Henricus Bossin (21)** are both *broeder der
 bruid*, and **Petrus Vanhoudenhoven (30)** is *schoonbroeder der bruid*. §72's Bossin
-sibships for [[joannes_bossin51]] and [[henricus_bossin]] rested on an exact arithmetic
+sibships for [[bossin_joannes_1851]] and [[bossin_henricus_1863]] rested on an exact arithmetic
 age match to their own separately-held birth acts; they now rest on the act's own stated
 relationship as well, and both records are upgraded to `doc`.
 
 ### A third Peremans forename variant — recorded, and §65 is explicitly not reopened
 
-[[peremans]] is held as *Joanna Catharina Jacoba*. Across the three images read this pass
+[[peremans_joanna_1824]] is held as *Joanna Catharina Jacoba*. Across the three images read this pass
 she appears as ***Joanna Maria*** (the Alsemberg banns, both acts), ***Anna Catharina***
 (the 1884 Kraainem act, signing "A.C. Peremans"), and ***Joanna Catharina*** (the 1887
 Kraainem act, signing "C. Peremans") — her own signature in two different forms, three
 years apart. This is a third variant on top of the ones §65 already reconciled, and it
-still does not reopen that ruling: unlike [[anna_haesaerts]], whose only forename ever
+still does not reopen that ruling: unlike [[haesaerts_anna_1810]], whose only forename ever
 came from the disputed acts themselves, this record's identity is anchored
 **independently** of every one of these variants — by her husband, named identically
-across all of them, and by her daughter [[ludovica_bossin]]'s own exact day-level birth
+across all of them, and by her daughter [[bossin_ludovica_1853]]'s own exact day-level birth
 date and place, restated without variation across three separate acts. A third clerk's
 spelling of an already-anchored woman is not a new question.
 
@@ -4224,7 +4224,7 @@ spelling of an already-anchored woman is not a new question.
 **Petrus Vanhoudenhoven** (30 in 1884, 34 in 1887 — b. ~1853) and **Egidius Franciscus De
 Hondt** (26 in 1887 — b. ~1861), both of Kraainem, are each stated a brother-in-law of a
 Bossin sibling by the acts themselves — but neither act names his wife, so each implies an
-unidentified Bossin daughter of [[guilielmus_bossin]] × [[peremans]], recorded once as a
+unidentified Bossin daughter of [[bossin_guilielmus_1824]] × [[peremans_joanna_1824]], recorded once as a
 frontier on that record rather than duplicated on every sibling's page.
 
 ### Housekeeping
@@ -4236,11 +4236,11 @@ Three new `research/sources.json` entries at `doc` (`fs-kraainem-1884-marriage-s
 the film-locating collection entry `fs-kraainem-civil-registers` and the superseded
 `agatha-kraainem-1884-marriage-swaelens-bossin` (`sup`, kept as the record of what the
 index-only reading held before the image). Eight labels recorded against these images'
-mentions (`egidius_swaelens`, `joanna_ackermans`, `peremans` ×2, `guilielmus_bossin`,
-`guns_mc`, `guns_jf`, `vogels_a`), all `match: true`, `basis: act`.
+mentions (`swaelens_egidius`, `ackermans_joanna`, `peremans_joanna_1824` ×2, `bossin_guilielmus_1824`,
+`guns_maria_1864`, `guns_joannes`, `vogels_amelia`), all `match: true`, `basis: act`.
 
-Tree: 536 → **537 people** — [[franciscus_swaelens]] is the only addition. Confidence
-upgraded `sup` → `doc` on eleven existing records: [[egidius_swaelens]],
-[[joanna_ackermans]], [[swaelens]], [[ludovica_bossin]], [[joannes_bossin51]],
-[[henricus_bossin]], [[guilielmus_bossin]], [[peremans]], [[guns_mc]], [[guns_jf]] and
-[[vogels_a]]. One retraction (§72's `blocked` → `miss`, with scope). Build green.
+Tree: 536 → **537 people** — [[swaelens_franciscus]] is the only addition. Confidence
+upgraded `sup` → `doc` on eleven existing records: [[swaelens_egidius]],
+[[ackermans_joanna]], [[swaelens_joannes_1858]], [[bossin_ludovica_1853]], [[bossin_joannes_1851]],
+[[bossin_henricus_1863]], [[bossin_guilielmus_1824]], [[peremans_joanna_1824]], [[guns_maria_1864]], [[guns_joannes]] and
+[[vogels_amelia]]. One retraction (§72's `blocked` → `miss`, with scope). Build green.

@@ -2,7 +2,7 @@
 id: jerome-dekeyser-1897-birth-agatha
 file: jerome-dekeyser-1897-birth-agatha.png
 media: image/png
-bytes: 332278
+bytes: "332278"
 sha256: 7d2096d8d15d52e93530e12845631ca27c8e8a4a6a7d73dbdc167d7f113e038d
 title: AGATHA index record for Jérôme Josephus Dekeyser's birth act, Oostende 1897, nr. 585
 kind: index-page
@@ -15,9 +15,9 @@ source: S2
 url: https://agatha.arch.be/nl/data/acts/GEWVL_GEBWVL_01442676
 accessed: 2026-07-25
 evidences:
-  - jerome_dk
-  - edouard_dk
-  - louise_bocklandt
+  - dekeyser_jerome_1897
+  - dekeyser_edouard_1876
+  - bocklandt_louise_1877
 ---
 
 The record page as AGATHA presents it. What it states:

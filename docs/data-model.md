@@ -149,7 +149,7 @@ field.
 
 Siblinghood is derived from shared parents wherever it can be. It cannot be derived when an
 act names two people as brother and sister and names no parent either of them can be
-grafted to — and that case had no home at all. `antoine_vanald` states it in its own prose:
+grafted to — and that case had no home at all. `vanalderweireldt_antoine_1780` states it in its own prose:
 a probable elder sister, named by a third act giving the same parent pair, given up because
 *"she cannot be linked as a sibling while the parents themselves are only a frontier"*.
 
@@ -199,7 +199,33 @@ Two consequences worth stating:
 | Generated files are not stale — the bundle, `index.html`'s counts, **and the rendered docs** | Old data cannot reach the site |
 | Demographic plausibility | The arithmetic signature of a graft off by a generation |
 
-Ids are stable. Renaming one breaks every reference — don't.
+## Ids
+
+`<surname>_<given>_<birthyear>` — lowercase ASCII, particles folded in, so "Van den Bemden"
+is `vandenbemden` and a family is one prefix. **Surname first**, because the point of an id
+here is finding something by hand: the directory listing sorts into families, and
+`ls data/people | grep dekeyser` is a line of descent. The first given name only — "Adriana
+Theresia Judoca Sabbe" is `sabbe_adriana_1703`, and the disambiguation the rest would buy is
+already bought by the year.
+
+The year is `point_year`, so it appears only where the record *asserts* one: `<1727` bounds
+a birth without stating it, and an id ending `_1727` would be claiming more than the record.
+152 people have no year in their id for that reason. A numeric suffix breaks a genuine
+clash; across 537 people there are currently none.
+
+Renaming breaks every reference — 1925 wikilinks, 444 log entries, 35 artifact records, two
+config files — so it is done by machine or not at all:
+
+```
+uv run tools/rename_ids.py plan      what would change, writing nothing
+uv run tools/rename_ids.py apply     all of it, then a check that nothing dangles
+```
+
+It deliberately never rewrites prose. 55 of the old ids were also ordinary words —
+`alphonsus` was an id and a forename, `bossin` an id and a surname — so a text substitution
+would have corrupted the sentences describing the evidence while looking like it worked.
+Only exact structured positions and `[[…]]` links are touched, and anything left pointing at
+a dead id is reported rather than guessed at.
 
 ## The date grammar
 

@@ -2,7 +2,7 @@
 id: edouard-dekeyser-1946-marriage
 file: edouard-dekeyser-1946-marriage.jpg
 media: image/jpeg
-bytes: 168846
+bytes: "168846"
 sha256: fc4901a16c4be44873064738a4599afe98836b887c50125af57f6d2fb0877581
 title: Marriage act of Eduardus De Keyser and Leontine Schreel, Oostende, 9 May 1946
 kind: civil-act
@@ -15,10 +15,10 @@ source: S1
 url: https://www.familysearch.org/ark:/61903/3:1:3QHN-LQKQ-R48T-B
 accessed: 2026-07-22
 evidences:
-  - edouard_dk
-  - desiderius_dk
-  - mtheresia_vandenbroeck
-  - louise_bocklandt
+  - dekeyser_edouard_1876
+  - dekeyser_desiderius
+  - vandenbroeck_maria
+  - bocklandt_louise_1877
 ---
 
 The act that broke the De Keyser wall, read directly from the image rather than from

@@ -2,7 +2,7 @@
 id: vanalderweireldt-antoine-1808-death-diksmuide
 file: vanalderweireldt-antoine-1808-death-diksmuide.html
 media: text/html
-bytes: 24594
+bytes: "24594"
 sha256: caae46f36665af1f341838a3bbdba5d35d2aa03b202b38452f1b7d3d78161760
 title: Vanaldeweireldt Antoine, death act nr. 97, Diksmuide, certificate dated 21 July 1808 — vrijwilligersrab Detail transcription
 kind: index
@@ -15,8 +15,8 @@ source: rab-bs-overlijdens
 url: https://www.vrijwilligersrab.be/en/node/168
 accessed: 2026-07-27
 evidences:
-  - antoine_vanald
-  - brigitte_wyllie
+  - vanalderweireldt_antoine_1780
+  - wyllie_brigitte_1779
 ---
 
 **This is the index analysis, not the act image.** FamilySearch film 004794755 image i=133

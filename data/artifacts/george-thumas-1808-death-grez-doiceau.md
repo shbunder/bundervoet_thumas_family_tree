@@ -2,7 +2,7 @@
 id: george-thumas-1808-death-grez-doiceau
 file: george-thumas-1808-death-grez-doiceau.png
 media: image/png
-bytes: 555822
+bytes: "555822"
 sha256: 19f5dfffb67e8643cac57f5e302a30113f16604795d731fc6e0482fa01eba7de
 title: Death act nr. 58 — George Thumas, Grez-Doiceau, died 20 November 1808
 kind: index-page
@@ -15,10 +15,10 @@ source: S6
 url: https://agatha.arch.be/nl/data/acts/Visu-542_9999_999_616490_000_A_5246-00000035
 accessed: 2026-07-26
 evidences:
-  - georges1_t
-  - jeanlambert_t
-  - leclercq_t
-  - noel_t
+  - thumas_georges_1744
+  - thumas_jean_1701
+  - leclercq_marie_1710
+  - noel_marie_1751
 ---
 
 Four of this tree's records stand on this one act, and it was read at the archive rather
@@ -36,8 +36,8 @@ than through an index.
 
 **What it confirms.** The death date, 20 November 1808 at Grez-Doiceau, exactly as held. The
 occupation *menuisier* — the word this tree already carried, which is a check in itself. And
-three links that rested on the m2155 tree: his father [[jeanlambert_t]], his mother
-[[leclercq_t]], and his wife [[noel_t]], who is written *Noé* here rather than Noël.
+three links that rested on the m2155 tree: his father [[thumas_jean_1701]], his mother
+[[leclercq_marie_1710]], and his wife [[noel_marie_1751]], who is written *Noé* here rather than Noël.
 
 **One thing it disagrees with, and the disagreement is left standing.** The act gives his
 age as **60**, which puts his birth around November 1747–1748. This tree records

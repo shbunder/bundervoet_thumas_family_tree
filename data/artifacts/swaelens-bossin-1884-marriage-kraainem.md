@@ -2,7 +2,7 @@
 id: swaelens-bossin-1884-marriage-kraainem
 file: swaelens-bossin-1884-marriage-kraainem.jpg
 media: image/jpeg
-bytes: 2748722
+bytes: "2748722"
 sha256: 109477b67e0e34064db257e7d2ad55f5f21b9c08e7f04a44cedd090c9492a446
 title: Marriage act nr. 3 — Joannes Baptista Julianus Swaelens × Ludovica Bossin, Kraainem, 25 February 1884 (register image)
 kind: register-image
@@ -10,19 +10,19 @@ event: marriage
 date: 1884-02-25
 place: Kraainem
 repository: FamilySearch (filmed from the Brabant civil registers, Rijksarchief te Brussel)
-collection: "Belgium, Brabant, Civil Registration; Kraainem, Registers van de Burgerlijke Stand 1794-1910 (catalog koha:204220), film 1733000, image group (DGS) 004716364, frame 004716364_00532, APID TH-1-18281-5337-18"
+collection: Belgium, Brabant, Civil Registration; Kraainem, Registers van de Burgerlijke Stand 1794-1910 (catalog koha:204220), film 1733000, image group (DGS) 004716364, frame 004716364_00532, APID TH-1-18281-5337-18
 source: familysearch
 url: https://www.familysearch.org/ark:/61903/3:1:9392-C8SW-B
 accessed: 2026-07-27
 evidences:
-  - swaelens
-  - ludovica_bossin
-  - egidius_swaelens
-  - joanna_ackermans
-  - guilielmus_bossin
-  - peremans
-  - joannes_bossin51
-  - henricus_bossin
+  - swaelens_joannes_1858
+  - bossin_ludovica_1853
+  - swaelens_egidius
+  - ackermans_joanna
+  - bossin_guilielmus_1824
+  - peremans_joanna_1824
+  - bossin_joannes_1851
+  - bossin_henricus_1863
 ---
 
 **THE REGISTER IMAGE WAS READ.** This is the act AGATHA holds only as a volunteer analysis

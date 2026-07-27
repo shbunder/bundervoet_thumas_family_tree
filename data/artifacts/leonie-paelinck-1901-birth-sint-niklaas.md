@@ -2,7 +2,7 @@
 id: leonie-paelinck-1901-birth-sint-niklaas
 file: leonie-paelinck-1901-birth-sint-niklaas.png
 media: image/png
-bytes: 684908
+bytes: "684908"
 sha256: 532736d4b47372146247a14afb6afc746f1286568c0e0145d2c109d4e2047403
 title: Birth registration nr. 997 — Philomena Leonia Paelinck, Sint-Niklaas, 31 October 1901
 kind: index-page
@@ -15,9 +15,9 @@ source: S16
 url: https://www.familysearch.org/ark:/61903/1:1:Q2QP-N3Z7
 accessed: 2026-07-26
 evidences:
-  - leonie_p
-  - eduardus_p
-  - magdalena_vb
+  - paelinck_leonie_1901
+  - paelinck_eduardus_1858
+  - vanbogaert_maria_1861
 ---
 
 The record AGATHA does not have, found one step further down the ladder.
@@ -32,8 +32,8 @@ The record AGATHA does not have, found one step further down the ladder.
 | Vader | **Eduardus Franciscus Paelinck** |
 | Moeder | **Maria Magdalena Van Bogaert** |
 
-Three records rest on this: [[leonie_p]]'s birth date and place, and her parentage from
-[[eduardus_p]] and [[magdalena_vb]]. The tree held the year 1901 and the two parent links on
+Three records rest on this: [[paelinck_leonie_1901]]'s birth date and place, and her parentage from
+[[paelinck_eduardus_1858]] and [[vanbogaert_maria_1861]]. The tree held the year 1901 and the two parent links on
 the stefpaelinck tree's word alone.
 
 **Why this matters beyond the three people.** The first verification pass of this run
@@ -52,4 +52,3 @@ rather than FamilySearch's index card for it. Kept because it honestly records h
 found — the index is what surfaced it after AGATHA had nothing — but the act itself is the
 evidence, and it carries three things this card does not: the father's birthplace, the
 mother's occupation, and the officiating schepen.
-

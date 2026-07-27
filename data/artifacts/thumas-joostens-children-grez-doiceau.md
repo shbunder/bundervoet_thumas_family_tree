@@ -2,7 +2,7 @@
 id: thumas-joostens-children-grez-doiceau
 file: thumas-joostens-children-grez-doiceau.png
 media: image/png
-bytes: 668681
+bytes: "668681"
 sha256: 7664a83875efa9f660930096c50501e6a1e74f52d3cea2384cab4c2f4dedf3b1
 title: The children of Georges Thumas × Marie Catherine Joostens at Grez-Doiceau, 1835–1868
 kind: index
@@ -13,14 +13,14 @@ source: S25
 url: https://www.familysearch.org/search/record/results?q.surname=Thumas&q.fatherSurname=Thumas&q.motherSurname=Joostens&f.recordCountry=Belgium
 accessed: 2026-07-26
 evidences:
-  - mtstephanie_t
-  - georgesjoseph_t
-  - jbzenon_t
-  - charleseugene_t
+  - thumas_marie_1835
+  - thumas_georges_1843
+  - thumas_jean_1845
+  - thumas_charles_1850
   - deridder_sophie
-  - georges_cj
-  - georges2_t
-  - joostens
+  - thumas_georges_1836
+  - thumas_georges_1804
+  - joostens_marie_1810
 ---
 
 **An index, not acts.** Every line is FamilySearch's transcription; no register image was read
@@ -37,7 +37,7 @@ for any of them. The whole family therefore enters at `sup`.
 
 Every line names both parents as *Georges Thumas* and *Marie Catherine Joostens*.
 
-**The anchor.** The second row is [[georges_cj]], whose birth this tree holds as **15
+**The anchor.** The second row is [[thumas_georges_1836]], whose birth this tree holds as **15
 September 1836** at Grez-Doiceau — read from his own 1872 Kraainem marriage act at the
 archive. The declaration falls one day later. A child already documented from an act, sitting
 inside the series with the same parents and commune, is what makes the rest safe to record;
@@ -49,8 +49,8 @@ volume. The banns here are 20 and 27 September 1868 and the wedding is 7 October
 extract was drawn for **this** marriage — his son Georges Joseph's — which is exactly what a
 *huwelijksbijlage* is for, and it identifies the document's purpose from the other side.
 
-**Two brothers both called Georges.** [[georges_cj]] is *Georges Charles Joseph*, born 1836,
-who married Antonia Bossin at Kraainem in 1872. [[georgesjoseph_t]] is *Georges Joseph*, born
+**Two brothers both called Georges.** [[thumas_georges_1836]] is *Georges Charles Joseph*, born 1836,
+who married Antonia Bossin at Kraainem in 1872. [[thumas_georges_1843]] is *Georges Joseph*, born
 1843, who married Sophie Miranda Deridder at Grez-Doiceau in 1868. They are not the same man
 and the index keeps them apart consistently by birth year. This is precisely the confusion the
 project's rules exist to prevent, and it is recorded here so no later pass merges them.

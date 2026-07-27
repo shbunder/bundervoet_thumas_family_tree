@@ -2,7 +2,7 @@
 id: huyghebaert-derudder-1821-marriage-oudenburg
 file: huyghebaert-derudder-1821-marriage-oudenburg.html
 media: text/html
-bytes: 27623
+bytes: "27623"
 sha256: e552ccab20828c8f485b7b608bab99e6b545ed61691d958edc15d948f0e8dbc2
 title: Huyghebaert Hubertus Franciscus x Derudder Joanna Theresia, marriage act nr. 24, Oudenburg 29 April 1821 — vrijwilligersrab Detail transcription
 kind: index
@@ -15,8 +15,8 @@ source: rab-bs-huwelijken
 url: https://www.vrijwilligersrab.be/en/node/172
 accessed: 2026-07-27
 evidences:
-  - hubertus_huyghebaert
-  - joanna_derudder
+  - huyghebaert_hubertus_1791
+  - derudder_joanna_1793
 ---
 
 **This is the index analysis, not the act image.** FamilySearch microfilm 1358641
@@ -42,7 +42,7 @@ What the page states, in full:
 > Location of Decease Mother: Oudenburg (groom's mother)
 > Remarks: SCAN 122 GSU
 
-This is [[hubertus_huyghebaert]] and [[joanna_derudder]]'s own marriage, read as a
+This is [[huyghebaert_hubertus_1791]] and [[derudder_joanna_1793]]'s own marriage, read as a
 **sup** fact behind both their records: his birth ~1791 at Oudenburg (age 30),
 *schoenmaker*; her birth ~1793 at **Poperinge** (age 28), *dienstmeid*. Both
 republican-calendar dates convert correctly: 17 Messidor XI = 6 July 1803; 15 Floréal
@@ -56,5 +56,5 @@ parents in at least four other West-Flemish communes (Eernegem, Leffinge, Westke
 Oostkerke-bij-Damme) — the surname-and-region trap CLAUDE.md rule 1 exists for. The
 document that would settle it — the Detail page of Oudenburg 1806, RAB 253462, same name
 pair as parents, a different child — could not be pulled this pass. Recorded as a named
-frontier on [[hubertus_huyghebaert]]'s and [[joanna_derudder]]'s own pages; **no link
+frontier on [[huyghebaert_hubertus_1791]]'s and [[derudder_joanna_1793]]'s own pages; **no link
 made**.

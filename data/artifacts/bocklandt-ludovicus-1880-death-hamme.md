@@ -2,7 +2,7 @@
 id: bocklandt-ludovicus-1880-death-hamme
 file: bocklandt-ludovicus-1880-death-hamme.jpg
 media: image/jpeg
-bytes: 939210
+bytes: "939210"
 sha256: b1d9cd6e5c30f55d3b8b88fb50013d1cc75109c10e10e718db75014e1dd32913
 title: Death act nr. 126 — Ludovicus Bocklandt, Hamme (Oost-Vlaanderen), registered 9 June 1880
 kind: register-image
@@ -15,9 +15,9 @@ source: fs-hamme-1880-death-ludovicus-bocklandt
 url: https://www.familysearch.org/ark:/61903/3:1:33SQ-GPDS-ZJ5?view=index&personArk=%2Fark%3A%2F61903%2F1%3A1%3A6TRL-6YGG&action=view&lang=nl
 accessed: 2026-07-26
 evidences:
-  - edouard_bocklandt
-  - marie_vanbergen
-  - louise_bocklandt
+  - bocklandt_edouard_1839
+  - vanbergen_marielouise_1842
+  - bocklandt_louise_1877
 ---
 
 **The register image, read** — the open spread of the Hamme 1880 death register, zoomed

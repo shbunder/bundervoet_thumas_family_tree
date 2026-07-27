@@ -2,7 +2,7 @@
 id: bundervoet-parishes-gent-totaalindex
 file: bundervoet-parishes-gent-totaalindex.png
 media: image/png
-bytes: 333467
+bytes: "333467"
 sha256: 056a65e6d102a035154547e20b9c8f23647fa45e0e9fe97d7692a94620e6a136
 title: Bundervoet across the parish registers of arrondissement Gent — Familiekunde Vlaanderen Totaalindex
 kind: index-page
@@ -14,9 +14,9 @@ source: fv-dataindexen
 url: https://dataindexen.familiekunde-vlaanderen.be/SearchDB/search.php
 accessed: 2026-07-26
 evidences:
-  - joannes_b
-  - christoffel
-  - petrus_bundervoet1560
+  - bundervoet_joannes_1682
+  - bundervoet_christoffel_1709
+  - bundervoet_petrus_1560
 ---
 
 **Seventeen parishes**, where this tree has Bundervoets in one. The flags are
@@ -48,5 +48,5 @@ Wondelgem and Zomergem carry all three registers, which makes them the places a
 neighbouring family would be reconstructable from.
 
 **And for the line already here.** Evergem shows `dho`, so its burial register covers
-[[joannes_b]]'s death of 7 November 1760 and [[christoffel]]'s of 1786 — the first of
+[[bundervoet_joannes_1682]]'s death of 7 November 1760 and [[bundervoet_christoffel_1709]]'s of 1786 — the first of
 which is the act whose only surviving scan is an illegible 230×38 crop.

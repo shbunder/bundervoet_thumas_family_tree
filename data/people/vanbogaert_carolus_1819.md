@@ -1,0 +1,32 @@
+---
+id: vanbogaert_carolus_1819
+name: Carolus Ludovicus Van Bogaert
+surname: Van Bogaert
+birth:
+  date: 1819-02-02
+  place: Nieuwkerken-Waas
+death:
+  date: 1892-06-02
+  place: Sint-Niklaas
+confidence: sup
+occupation: arbeider (labourer)
+line: paelinck
+spouses:
+  - id: martinet_maria_1838
+    name: Maria Ludovica Martinet
+    married: 1860-02-01
+    place: Nieuwkerken-Waas
+    confidence: sup
+sources:
+  - S18
+  - tree-stefpaelinck
+---
+
+A labourer; father of Maria Magdalena Van Bogaert by his wife Maria Ludovica Martinet (1838–1911).
+
+CORROBORATED FROM A CIVIL ACT (July 2026). He and [[martinet_maria_1838]] are named together as the
+bridegroom's parents in the Sint-Niklaas marriage act of 7 April 1909 ([[S18]]) — seventeen
+years after his own death, which is ordinary: an act names the parents whether living or not.
+
+The act also reveals a son, [[vanbogaert_alphonsus]], who was not in this tree and is a brother of
+[[vanbogaert_maria_1861]].

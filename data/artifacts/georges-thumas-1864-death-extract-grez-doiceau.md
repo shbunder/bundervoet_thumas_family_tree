@@ -2,7 +2,7 @@
 id: georges-thumas-1864-death-extract-grez-doiceau
 file: georges-thumas-1864-death-extract-grez-doiceau.png
 media: image/png
-bytes: 1490530
+bytes: "1490530"
 sha256: dfac9412b9dd984d71768b999e2d81afe4fff42d08298a360fe4b20f7bb04df9
 title: Extract from the Grez-Doiceau death register — Georges Thumas, died 12 January 1864; issued 28 September 1868 as a marriage annex
 kind: act-image
@@ -15,10 +15,10 @@ source: S23
 url: https://www.familysearch.org/ark:/61903/3:1:3QS7-L93X-692M?view=index&personArk=%2Fark%3A%2F61903%2F1%3A1%3A6VSH-GSKT&lang=nl
 accessed: 2026-07-26
 evidences:
-  - georges2_t
-  - georgeslambert_t
-  - quinart
-  - joostens
+  - thumas_georges_1804
+  - thumas_georges_1772
+  - quinart_marie_1780
+  - joostens_marie_1810
 ---
 
 **This is the manuscript, not an index.** The image is assembled from the register's own
@@ -42,20 +42,20 @@ What it says, in full:
 > the commune seal of Grez-Doiceau, Brabant)*
 
 **Why it is certainly him.** Three independent identifiers agree at once and none of them is
-a forename: both parents by name, and the wife by name — [[georgeslambert_t]],
-[[quinart]] and [[joostens]] are exactly the three this tree already had around
-[[georges2_t]]. Add the commune. Nothing here rests on "Georges Thumas", which is the
+a forename: both parents by name, and the wife by name — [[thumas_georges_1772]],
+[[quinart_marie_1780]] and [[joostens_marie_1810]] are exactly the three this tree already had around
+[[thumas_georges_1804]]. Add the commune. Nothing here rests on "Georges Thumas", which is the
 commonest name in Grez-Doiceau's registers.
 
 **What it settles.**
 
 1. **His death: 12 January 1864 at Grez-Doiceau** — to the day, from a civil register, where
    this tree had the date from a member tree alone.
-2. **His parents.** The link to [[georgeslambert_t]] × [[quinart]] had never been documented.
+2. **His parents.** The link to [[thumas_georges_1772]] × [[quinart_marie_1780]] had never been documented.
    It is now, by an act of civil registration rather than by Geneanet.
 3. **Both his parents were dead by September 1868** — the extract says *décédés*, consistent
    with the 1863 and (undated) deaths this tree holds.
-4. **He was a widower**, which matches [[joostens]] dying in 1857.
+4. **He was a widower**, which matches [[joostens_marie_1810]] dying in 1857.
 
 **What it does not settle.** It gives **no age and no birth date**. The ten-year conflict
 between the recorded 24 January 1804 and the *63* stated in his wife's 1857 death act is
@@ -72,5 +72,5 @@ constatée* — on certified poverty. The family could not pay the fee for the p
 
 FRONTIER: the extract was drawn on 28 September 1868, so **a child of Georges Thumas and
 Marie Catherine Joostens married at Grez-Doiceau around that date**. This tree knows only
-one of their children, [[georges_cj]], who married at Kraainem in 1872. The 1868 marriage in
+one of their children, [[thumas_georges_1836]], who married at Kraainem in 1872. The 1868 marriage in
 this same volume should name a sibling — pages near image 221 are the place to look.

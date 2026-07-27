@@ -2,7 +2,7 @@
 id: joannes-bundervoet-1760-death-evergem
 file: joannes-bundervoet-1760-death-evergem.jpg
 media: image/jpeg
-bytes: 15084
+bytes: "15084"
 sha256: fce8eaa8ca4a6e4b85fa37211a46819141e0d1a285c970dfb2efe6e294236b41
 title: Cropped line from the Evergem death register for Joannes Bundervoet, 7 November 1760
 kind: civil-act
@@ -15,7 +15,7 @@ source: tree-paulderidder
 url: https://gw.geneanet.org/paulderidder?lang=en&n=bundervoet&oc=0&p=joannes&type=fiche
 accessed: 2026-07-25
 evidences:
-  - joannes_b
+  - bundervoet_joannes_1682
 ---
 
 The image the paulderidder tree attaches to Joannes Bundervoet (ca 1682–1760) as its

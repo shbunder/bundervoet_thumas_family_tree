@@ -2,7 +2,7 @@
 id: bossin-peremans-1846-marriage-zaventem
 file: bossin-peremans-1846-marriage-zaventem.png
 media: image/png
-bytes: 974023
+bytes: "974023"
 sha256: bd91a77f749db081edb0369bc743daa4b111897bd32f02b346fb41456cd426df
 title: Marriage act nr. 1 — Guillielmus Bossin and Joanna Catharina Jacoba Peremans, Zaventem, 24 February 1846
 kind: index-page
@@ -15,9 +15,9 @@ source: S19
 url: https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00011036_0
 accessed: 2026-07-26
 evidences:
-  - guilielmus_bossin
-  - peremans
-  - bossin
+  - bossin_guilielmus_1824
+  - peremans_joanna_1824
+  - bossin_antonia_1849
 ---
 
 The richest act found in this run: it carries **four ancestors this tree did not have**,

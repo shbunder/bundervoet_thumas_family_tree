@@ -6,7 +6,7 @@ sex: f
 confidence: sup
 line: thumas
 spouses:
-  - id: georgesjoseph_t
+  - id: thumas_georges_1843
     name: Georges Joseph Thumas
     married: 1868-10-07
     place: Grez-Doiceau
@@ -17,8 +17,8 @@ sources:
   - netradyle-grez-naissances
 ---
 
-Married [[georgesjoseph_t]] at Grez-Doiceau on **7 October 1868**, which makes her
-[[georges_cj]]'s sister-in-law.
+Married [[thumas_georges_1843]] at Grez-Doiceau on **7 October 1868**, which makes her
+[[thumas_georges_1836]]'s sister-in-law.
 
 Nothing else is held. The index rows that record the banns and the marriage give her name and
 no more — no birth, no parents, no trade — so this record has none rather than a guess at any.

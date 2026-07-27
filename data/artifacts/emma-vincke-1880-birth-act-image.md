@@ -2,7 +2,7 @@
 id: emma-vincke-1880-birth-act-image
 file: emma-vincke-1880-birth-act-image.png
 media: image/png
-bytes: 3710363
+bytes: "3710363"
 sha256: cc8065e0e68433fb04c4656bcf28a35400f622011349f404d5c866da34830758
 title: Emma Celesta Vincke, birth act nr. 14, Diksmuide 24 January 1880 — THE REGISTER IMAGE
 kind: image
@@ -15,9 +15,9 @@ source: familysearch
 url: https://www.familysearch.org/ark:/61903/3:1:33SQ-GPD9-32V?cc=2139860&view=explore&lang=nl
 accessed: 2026-07-27
 evidences:
-  - emma_vincke
-  - lucien_vincke
-  - ludovica_vanald
+  - vincke_emma_1880
+  - vincke_lucien_1840
+  - vanalderweireldt_ludovica_1845
 ---
 
 **THE ACT IMAGE WAS READ, not an index row.** This is the register page itself, at the
@@ -59,7 +59,7 @@ What the image adds over the index transcription:
 - **The mother's occupation, *kantwerkster* (lacemaker)** — not previously held anywhere.
 
 **A one-year offset in both stated ages, in the same direction.** Against the dates this
-tree holds — [[lucien_vincke]] b. 26 March 1840, [[ludovica_vanald]] b. 23 November 1845 —
+tree holds — [[vincke_lucien_1840]] b. 26 March 1840, [[vanalderweireldt_ludovica_1845]] b. 23 November 1845 —
 on 24 January 1880 he was 39y 10m and she was 34y 2m, while the act says 40 and 35. Each
 stated age is the age the person would *reach during 1880*, not the age completed at the
 declaration. Both err by exactly one year in the same direction, which reads as one clerk's

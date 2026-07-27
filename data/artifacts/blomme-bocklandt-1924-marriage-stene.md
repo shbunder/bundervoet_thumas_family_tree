@@ -2,7 +2,7 @@
 id: blomme-bocklandt-1924-marriage-stene
 file: blomme-bocklandt-1924-marriage-stene.jpg
 media: image/jpeg
-bytes: 792060
+bytes: "792060"
 sha256: a509922df48075e671daa936934e07955acb66c9431c59d1393ed229a6ee3746
 title: Marriage act nr. 9 — Petrus Augustus Blomme × Louisa Maria Bocklandt, Stene, 1 March 1924
 kind: register-image
@@ -15,11 +15,11 @@ source: fs-stene-1924-marriage-blomme-bocklandt
 url: https://www.familysearch.org/ark:/61903/3:1:3QHJ-TQK7-M954-S?view=index&personArk=%2Fark%3A%2F61903%2F1%3A1%3AX7YH-857T&action=view&lang=nl
 accessed: 2026-07-26
 evidences:
-  - louise_bocklandt
-  - edouard_bocklandt
-  - marie_vanbergen
-  - edouard_dk
-  - petrus_blomme
+  - bocklandt_louise_1877
+  - bocklandt_edouard_1839
+  - vanbergen_marielouise_1842
+  - dekeyser_edouard_1876
+  - blomme_petrus_1884
 ---
 
 **This is the register image itself, not an index page.** The screenshot is the

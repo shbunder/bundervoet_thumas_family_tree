@@ -2,7 +2,7 @@
 id: janssen-declerck-1819-marriage-oostende
 file: janssen-declerck-1819-marriage-oostende.html
 media: text/html
-bytes: 27497
+bytes: "27497"
 sha256: 7378e3487a4b49456920e57eef2998c94f18451e33dc0efc39a66b010d3e1406
 title: Janssen Jean x Declerck Victoire, marriage act, Oostende 17 November 1819 — vrijwilligersrab Detail transcription
 kind: index
@@ -15,8 +15,8 @@ source: rab-bs-huwelijken
 url: https://www.vrijwilligersrab.be/en/node/172
 accessed: 2026-07-27
 evidences:
-  - joannes_janssen
-  - victoria_declerck
+  - janssen_joannes_1778
+  - declerck_victoria_1786
 ---
 
 **This is the index analysis, not the act image.** FamilySearch microfilm 1358564
@@ -42,15 +42,15 @@ What the page states, in full:
 > mother)
 > Remarks: SCAN 812 GSU
 
-This is [[joannes_janssen]] and [[victoria_declerck]]'s own marriage, read as a **sup**
+This is [[janssen_joannes_1778]] and [[declerck_victoria_1786]]'s own marriage, read as a **sup**
 fact behind both their records: his birth 11 April 1778 at **Moersum (Deutschland)** —
 Germany — as a *zeeman* (seaman); her birth 30 April 1786 at **Klemskerke**. The 1820
 Oostende birth register (still French at that date) spells him "Jean Janssen"; the 1851
-marriage act of their son [[josephus_janssen]] spells him "Joannes Janssen" (Dutch) — the
+marriage act of their son [[janssen_josephus_1820]] spells him "Joannes Janssen" (Dutch) — the
 same man, a register-language difference, not two people.
 
 **Names a further generation, deliberately not linked.** The groom's parents, JANSSEN
 Jean x KARCKMAN Catherine, and the bride's parents, DECLERCK Pierre x PAUWELS Josephe,
 rest on this single index row alone — no death dates for either couple, and no second,
-independent document naming them. Recorded as a frontier on [[joannes_janssen]]'s and
-[[victoria_declerck]]'s own pages, not linked into the tree.
+independent document naming them. Recorded as a frontier on [[janssen_joannes_1778]]'s and
+[[declerck_victoria_1786]]'s own pages, not linked into the tree.

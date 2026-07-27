@@ -2,7 +2,7 @@
 id: vermandel-ida-1865-death-hamme
 file: vermandel-ida-1865-death-hamme.jpg
 media: image/jpeg
-bytes: 452894
+bytes: "452894"
 sha256: 07e80e6ddb7a6088021e5beddbbe18633a2d1ca1f27990d5a239c49110aa565d
 title: Death act nr. 123 — Ida Vermandel, Hamme (Oost-Vlaanderen), died 21 June 1865, act 22 June 1865 (register image)
 kind: civil-act
@@ -15,8 +15,8 @@ source: fs-hamme-1865-death-ida-vermandel
 url: https://www.familysearch.org/ark:/61903/3:1:S3HY-67JS-YLV?i=79&cat=koha%3A349052&lang=nl
 accessed: 2026-07-26
 evidences:
-  - ida_vermandel
-  - jan_van_bergen
+  - vermandel_ida_1825
+  - vanbergen_joannes_1815
 ---
 
 **THIS IS THE REGISTER IMAGE, READ — not an index and not a transcription.** The act was

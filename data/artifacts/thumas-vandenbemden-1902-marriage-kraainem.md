@@ -2,7 +2,7 @@
 id: thumas-vandenbemden-1902-marriage-kraainem
 file: thumas-vandenbemden-1902-marriage-kraainem.png
 media: image/png
-bytes: 798734
+bytes: "798734"
 sha256: dbfc2f45e9ec01fc432c6d3c611b6966acdf049a91729da198b7f83feb2c1666
 title: Marriage act nr. 2 — Joannes Baptista Georgius Thumas and Joanna Vandenbemden, Kraainem, 3 February 1902
 kind: index-page
@@ -15,12 +15,12 @@ source: agatha
 url: https://agatha.arch.be/nl/data/acts/HUVLB_HUBRA_00221638_0
 accessed: 2026-07-25
 evidences:
-  - jbgeorgius
-  - vandenbemden
-  - georges_cj
-  - bossin
-  - hendrik_vdb
-  - coekelberghs
+  - thumas_joannes_1876
+  - vandenbemden_joanna_1882
+  - thumas_georges_1836
+  - bossin_antonia_1849
+  - vandenbemden_henricus_1849
+  - coekelberghs_maria_1848
 ---
 
 The richest kind of record there is, and the reason the charter says to prefer marriage

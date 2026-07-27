@@ -2,7 +2,7 @@
 id: looten-wyllie-1818-marriage-diksmuide
 file: looten-wyllie-1818-marriage-diksmuide.html
 media: text/html
-bytes: 27683
+bytes: "27683"
 sha256: f735a8873e54d8ff6488b52a7f3540a998dbc8cdd8125ba51116e4a611f6cb63
 title: Looten François Joseph x Wyllie Brigitte Josephine Jeanne (widow of Antoine Vanalderweireldt), marriage act nr. 82, Diksmuide 25 June 1818 — vrijwilligersrab Detail transcription
 kind: index
@@ -15,9 +15,9 @@ source: rab-bs-huwelijken
 url: https://www.vrijwilligersrab.be/en/node/172
 accessed: 2026-07-27
 evidences:
-  - brigitte_wyllie
-  - antoine_vanald
-  - francois_looten
+  - wyllie_brigitte_1779
+  - vanalderweireldt_antoine_1780
+  - looten_francois_1785
 ---
 
 **This is the index analysis, not the act image.**

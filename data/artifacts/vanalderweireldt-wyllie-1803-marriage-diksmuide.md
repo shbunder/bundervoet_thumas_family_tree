@@ -2,7 +2,7 @@
 id: vanalderweireldt-wyllie-1803-marriage-diksmuide
 file: vanalderweireldt-wyllie-1803-marriage-diksmuide.html
 media: text/html
-bytes: 27566
+bytes: "27566"
 sha256: ec03702d6e921160a48012a71a5e7f0f714f17e44e577ca0dbedb3282194005d
 title: Vanalderweireldt Antoine Joseph Albert x Wyllie Brigitte Josephine, marriage act nr. 14, Diksmuide 8 June 1803 (19 Prairial XI) — vrijwilligersrab Detail transcription
 kind: index
@@ -15,8 +15,8 @@ source: rab-bs-huwelijken
 url: https://www.vrijwilligersrab.be/en/node/172
 accessed: 2026-07-27
 evidences:
-  - antoine_vanald
-  - brigitte_wyllie
+  - vanalderweireldt_antoine_1780
+  - wyllie_brigitte_1779
 ---
 
 **This is the index analysis, not the act image.** The act image is FamilySearch film

@@ -2,7 +2,7 @@
 id: leonie-paelinck-1901-birth-register
 file: leonie-paelinck-1901-birth-register.png
 media: image/png
-bytes: 2954642
+bytes: "2954642"
 sha256: 685b878d5f61d62827290dfc679fb0d42b4276371527be63b7c84e10d661726c
 title: Birth act nr. 997 — Philomena Leonia Paelinck, Sint-Niklaas, 31 October 1901 (register page)
 kind: civil-act
@@ -15,9 +15,9 @@ source: S16
 url: https://www.familysearch.org/ark:/61903/3:1:3QS7-89Q8-PCHK?view=index&personArk=%2Fark%3A%2F61903%2F1%3A1%3AQ2QP-N3Z7&action=view&cc=2138513&lang=nl
 accessed: 2026-07-26
 evidences:
-  - leonie_p
-  - eduardus_p
-  - magdalena_vb
+  - paelinck_leonie_1901
+  - paelinck_eduardus_1858
+  - vanbogaert_maria_1861
 ---
 
 **The register page, not the index entry about it.** Sint-Niklaas births for 1901, image
@@ -33,7 +33,7 @@ What can be read in the act's own hand:
 - the officer **Michel De Smet, schepen**, and the same signature closing the neighbouring
   acts on the opening.
 
-**The father's birthplace is the part worth noting.** [[eduardus_p]] is recorded here as
+**The father's birthplace is the part worth noting.** [[paelinck_eduardus_1858]] is recorded here as
 born at Belsele on 19 November 1858, on the stefpaelinck tree's word. The act says Belsele
 independently, in 1901, from the man himself standing before the registrar. That is a second
 identifier agreeing, and it is what makes this a safe identification rather than a name match.

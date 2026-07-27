@@ -2,7 +2,7 @@
 id: bossin-guns-1887-marriage-kraainem
 file: bossin-guns-1887-marriage-kraainem.jpg
 media: image/jpeg
-bytes: 2449985
+bytes: "2449985"
 sha256: 9e7eebcb3d886ee73005dd0338d27ba10efd74a37c649d4af775102e17de6f50
 title: Marriage act nr. 6 — Henricus Bossin × Maria Catharina Guns, Kraainem, 23 November 1887 (register image)
 kind: register-image
@@ -10,23 +10,23 @@ event: marriage
 date: 1887-11-23
 place: Kraainem
 repository: FamilySearch (filmed from the Brabant civil registers, Rijksarchief te Brussel)
-collection: "Belgium, Brabant, Civil Registration; Kraainem, Registers van de Burgerlijke Stand 1794-1910 (catalog koha:204220), film 1733081, image group (DGS) 004716365, frame 004716365_00094, APID TH-1-18280-40437-97"
+collection: Belgium, Brabant, Civil Registration; Kraainem, Registers van de Burgerlijke Stand 1794-1910 (catalog koha:204220), film 1733081, image group (DGS) 004716365, frame 004716365_00094, APID TH-1-18280-40437-97
 source: familysearch
 url: https://www.familysearch.org/ark:/61903/3:1:9392-C8SW-B
 accessed: 2026-07-27
 evidences:
-  - henricus_bossin
-  - guns_mc
-  - guilielmus_bossin
-  - peremans
-  - guns_jf
-  - vogels_a
-  - swaelens
+  - bossin_henricus_1863
+  - guns_maria_1864
+  - bossin_guilielmus_1824
+  - peremans_joanna_1824
+  - guns_joannes
+  - vogels_amelia
+  - swaelens_joannes_1858
 ---
 
 **THE REGISTER IMAGE WAS READ.** The opening carries Kraainem marriage acts nrs. 3 and 4 on
 the left page and nrs. 5 and 6 on the right; only nr. 6 is transcribed. This is the act that
-carried [[henricus_bossin]]'s graft in research-log §72 from an index alone.
+carried [[bossin_henricus_1863]]'s graft in research-log §72 from an index alone.
 
 > **HUWELIJKSAKTE, N° 6.** Op heden **den drij en twintigsten November** duizend achthonderd
 > zeven-en-tachtig, ten **twaalf** ure **'s** middags, zijn voor Ons **Joseph Van Hove,
@@ -70,11 +70,11 @@ Pauw*, and the officer *J. Van Hove*.
    date the tree already held, now from a read register rather than an index row, and with
    the birthplace, which the index does not give.
 2. **Both his parents were alive, present in person and consenting on 23 November 1887.**
-   That is a hard floor under [[guilielmus_bossin]]'s death date of 10 October 1888.
-3. **[[swaelens]] is stated to be the groom's brother-in-law**, aged 29 — the arithmetic
+   That is a hard floor under [[bossin_guilielmus_1824]]'s death date of 10 October 1888.
+3. **[[swaelens_joannes_1858]] is stated to be the groom's brother-in-law**, aged 29 — the arithmetic
    match to his 11 May 1858 birth is exact — and he is **living at Kraainem by 1887**, not
    Alsemberg. The 1884 and 1887 acts together therefore state, rather than infer, that
-   [[ludovica_bossin]] and [[henricus_bossin]] are siblings.
+   [[bossin_ludovica_1853]] and [[bossin_henricus_1863]] are siblings.
 4. **Two further brothers-in-law**, so two more married Bossin daughters: **Petrus
    Vanhoudenhoven** (34 here, 30 on the 1884 act — b. ~1853) and **Egidius Franciscus De
    Hondt** (26, b. ~1861), both of Kraainem. Neither wife is named in either act.

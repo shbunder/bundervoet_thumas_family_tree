@@ -1,0 +1,21 @@
+---
+id: monballiu_jacoba_1651
+name: Jacoba Monballiu
+surname: Monballiu
+birth:
+  date: "1651"
+death:
+  date: "1689"
+confidence: sup
+line: bostyn-cappaert
+spouses:
+  - id: vannieuwenhuyse_petrus_1649
+    name: Petrus Van Nieuwenhuyse
+    married: 1673-07-23
+    place: Oostkamp
+    confidence: sup
+sources:
+  - tree-isavdw
+---
+
+FRONTIER above — mother of Anna Van Nieuwenhuyse (1676).

@@ -1,0 +1,88 @@
+---
+id: vincke_alfons_1865
+name: Alfons Luciaan Vincke
+surname: Vincke
+birth:
+  date: 1865-09-13
+  place: Diksmuide
+confidence: doc
+occupation: ijzersmit (blacksmith)
+line: van-iseghem
+father:
+  id: vincke_lucien_1840
+  confidence: sup
+mother:
+  id: vanalderweireldt_ludovica_1845
+  confidence: sup
+siblings:
+  - id: vincke_bellarmin_1867
+    confidence: sup
+  - id: vincke_camilla_1876
+    confidence: sup
+  - id: vincke_charles_1871
+    confidence: sup
+  - id: vincke_emma_1880
+    confidence: sup
+  - id: vincke_eugene_1877
+    confidence: sup
+  - id: vincke_florence_1869
+    confidence: sup
+  - id: vincke_irma_1874
+    confidence: sup
+  - id: vincke_jerome_1886
+    confidence: sup
+  - id: vincke_karolus_1870
+    confidence: sup
+  - id: vincke_romanie_1873
+    confidence: sup
+  - id: vincke_theophil_1866
+    confidence: sup
+spouses:
+  - id: vandecappelle_eugenia
+    name: Eugenia Maria Vandecappelle
+    married: 1888-09-19
+    place: Diksmuide
+    confidence: sup
+sources:
+  - rab-bs-huwelijken
+  - rab-bs-geboorten
+  - fwk-alfons-vincke
+  - fs-oostende-1907-marriage-vaniseghem-vincke
+---
+
+Son of [[vincke_lucien_1840]] and [[vanalderweireldt_ludovica_1845]], and [[vincke_emma_1880]]'s brother — found
+one year **outside** the 1866-1870 blind window this pass was sent to close, while
+sweeping the marriage index for the window's children. His own birth, Diksmuide 1865 act
+nr. 202, falls just before it: the couple married 24 May 1865, so this is barely four
+months on.
+
+His marriage — Diksmuide, 19 September 1888, act nr. 149 (`rab-bs-huwelijken`) — gives
+him born Diksmuide 13 September 1865, age 23, *ijzersmit*, and names his parents in full
+as Vincke Lucianus Julianus (48, metser) × Vanalderweireldt Ludovica Maria (43,
+kantwerkster) — matching this couple exactly and matching birth act nr. 202 to the day.
+Independently corroborated from the local corpus, not the same register: a Familiekunde
+Vlaanderen Westkust memorial card (`fwk-alfons-vincke`,
+`fwk:bb261d5b-e241-84c8-0c3c-860a943cca23`) gives his birth as 13 September 1865 and names
+the same spouse, Eugenia Vandecappelle.
+
+**Flagged plainly, not smoothed over:** he was born 3 months 20 days after his parents'
+24 May 1865 wedding — conception preceding the marriage by roughly five months, which is
+sometimes the reason for the marriage rather than a contradiction of it. Neither date is
+adjusted.
+
+His own birth act and 1888 marriage act remain index only, not the register image.
+
+**THE SIBLING LINK ITSELF UPGRADED TO `doc` (2026-07-27).** His sister [[vincke_emma_1880]]'s
+own 1907 marriage act, read as a register image
+([[fs-oostende-1907-marriage-vaniseghem-vincke]],
+`data/artifacts/vaniseghem-vincke-1907-marriage-oostende.md`), carries him as a witness,
+in the register's own words: *"Alphonsus Vincke, oud twee en veertig jaren, stoofmaker,
+broeder der echtgenoote"* — 42 years old, stoofmaker, **brother of the bride**. Two
+identifiers agree in this one primary image: his stated age matches his held birth date
+to the exact day (he turned 42 fifteen days before the 28 September 1907 act), and the act
+**states the sibling relationship directly**, rather than it being inferred only from the
+separately-held parent records that grafted him here at `sup` (research-log §67). His
+occupation there, *stoofmaker*, differs from *ijzersmit* on his own 1888 marriage act — a
+plausible 19-year career change, flagged rather than treated as a contradiction. His own
+birth act is still unread as an image, so only the sibling identification itself carries
+`doc`.

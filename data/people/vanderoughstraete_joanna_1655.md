@@ -1,0 +1,22 @@
+---
+id: vanderoughstraete_joanna_1655
+name: Joanna Van Der Oughstraete
+surname: Van Der Oughstraete
+birth:
+  date: "1655"
+death:
+  date: "1723"
+confidence: sup
+line: bostyn-cappaert
+spouses:
+  - id: devriese_hubert_1665
+    name: Hubert De Vriese
+    married: 1687-11-23
+    place: Tielt
+    confidence: sup
+sources:
+  - tree-isavdw
+  - tree-kathrynann
+---
+
+FRONTIER — wife of Hubert De Vriese; her own parents not yet recovered.

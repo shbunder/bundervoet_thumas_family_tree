@@ -2,7 +2,7 @@
 id: bundervoet-fulltext-flanders-fiefs
 file: bundervoet-fulltext-flanders-fiefs.png
 media: image/png
-bytes: 611675
+bytes: "611675"
 sha256: 814cb865fa4a4092456e26b200aea476cb903f8c39b361bf164669897d46e78c
 title: FamilySearch full-text — "Bundervoet" across unindexed Flemish manuscripts, 1463 onwards
 kind: index-page
@@ -14,9 +14,9 @@ source: fs-fulltext
 url: https://www.familysearch.org/search/full-text/results?q.text=Bundervoet&q.anyPlace=Belgium
 accessed: 2026-07-26
 evidences:
-  - petrus_bundervoet1560
-  - livinus_bundervoet
-  - segerius_bundervoet
+  - bundervoet_petrus_1560
+  - bundervoet_livinus_1600
+  - bundervoet_segerius_1615
 ---
 
 The answer to the problem that has blocked half this tree.
@@ -36,7 +36,7 @@ From *Flanders. Nobility Records* alone, with the years the collection spans lis
 
 Those last three are a **three-generation chain stated outright** — François → Lievin →
 Pasquier → Lievin — in exactly the century where this tree's Bundervoet line
-([[petrus_bundervoet1560]] ~1560, [[livinus_bundervoet]] ~1600, [[segerius_bundervoet]]
+([[bundervoet_petrus_1560]] ~1560, [[bundervoet_livinus_1600]] ~1600, [[bundervoet_segerius_1615]]
 ~1615) rests on member trees alone.
 
 Also present: *Gent, East Flanders. Notarial Records 1746-1755* and *1753-1757*, with
@@ -44,7 +44,7 @@ Bundervoet family transactions naming wives and siblings, and a Belgian militia 
 giving a mother as "Bundervoet Petronilla Catherine, née à Gand".
 
 **Nothing here is grafted, and nothing here should be.** These are not our people until an
-identity is established, and a fief-holder called Lievin in Alost is not [[livinus_bundervoet]]
+identity is established, and a fief-holder called Lievin in Alost is not [[bundervoet_livinus_1600]]
 of Evergem because they share a name and a century. What this artifact records is that the
 *source* exists and is reachable — which for the 158 people in this tree born before civil
 registration was the missing thing, not the willingness to look.

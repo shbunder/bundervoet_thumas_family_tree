@@ -1,0 +1,38 @@
+---
+id: vanstechelman_leontius
+name: Leontius Ivo Vanstechelman
+surname: Vanstechelman
+sex: m
+confidence: sup
+line: vanstechelman
+father:
+  id: vanstechelman_petrus_1854
+  confidence: sup
+mother:
+  id: wagebaert_clementia_1853
+  confidence: sup
+siblings:
+  - id: vanstechelman_augusta_1882
+    confidence: sup
+  - id: vanstechelman_henricus_1877
+    confidence: sup
+  - id: vanstechelman_paula
+    confidence: sup
+spouses:
+  - name: Lucia Amelia Maene
+    married: 1922-08-20
+    place: Oostende
+    id: maene_lucia
+    confidence: sup
+sources:
+  - fs-wvl-bs
+---
+
+Brother of [[vanstechelman_augusta_1882]], named in his own Oostende marriage registration of 20 August 1922,
+which gives his parents as Petrus Jacobus and Clementia Sophia Wagebaert and his bride as
+Lucia Amelia Maene.
+
+No dates of his own: the marriage act is indexed under the event, not his birth, and nothing
+else has been read for him. FRONTIER — his birth act at Mariakerke or Oostende would give
+them, and the marriage act itself, read rather than indexed, would give both spouses' ages
+and his wife's parents.

@@ -2,7 +2,7 @@
 id: vandervarent-peremans-1840-marriage-zaventem
 file: vandervarent-peremans-1840-marriage-zaventem.png
 media: image/png
-bytes: 2737634
+bytes: "2737634"
 sha256: 49298be85799558df3b65a5f7123ff6edecc55bf87ce49693fc55446007d23b9
 title: Marriage of Petrús van der Varent × Maria Josephina Peremans, Zaventem, 5 November 1840
 kind: index
@@ -15,13 +15,13 @@ source: S29
 url: https://www.familysearch.org/ark:/61903/1:1:X98K-CXNQ?lang=nl
 accessed: 2026-07-26
 evidences:
-  - mjosephina_peremans
-  - vandervarent_p
-  - vandervarent_j
-  - goossens
-  - egidius_peremans
-  - joanna_verelst
-  - peremans
+  - peremans_maria
+  - vandervarent_petrus_1813
+  - vandervarent_joannes
+  - goossens_anna
+  - peremans_egidius
+  - verelst_joanna
+  - peremans_joanna_1824
 ---
 
 **The indexed entry and the register page it sits on**, not a reading of the act's own words.
@@ -39,13 +39,13 @@ Marriage registration **5 November 1840**. The same register page carries a seco
 marriage — Petrus Van Meerbeéck × Rosalia Van Nerom — which is simply how the volume is bound.
 
 **What anchors it.** The record itself gives no place; the **volume title does — *Zaventem.
-Huwelijksakten 1840***. That matters, because Zaventem is where [[egidius_peremans]] died in
-1837, where [[joanna_verelst]] died in 1843, and where their daughter [[peremans]] was born
+Huwelijksakten 1840***. That matters, because Zaventem is where [[peremans_egidius]] died in
+1837, where [[verelst_joanna]] died in 1843, and where their daughter [[peremans_joanna_1824]] was born
 and married in 1846. So this is the commune, and the parent pair is exact, including the
 distinctive three-part *Joanna Theresia Ver Elst*. Place plus parent pair is two independent
 identifiers with one anchored, which is the bar.
 
-**What it adds.** [[mjosephina_peremans]] is a sister of [[peremans]] — the first sibling this
+**What it adds.** [[peremans_maria]] is a sister of [[peremans_joanna_1824]] — the first sibling this
 tree has on that line. With her come her husband and his parents.
 
 **And it points at the document §47 could not reach.** Egidius Peremans was already dead in

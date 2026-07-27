@@ -2,7 +2,7 @@
 id: bossin-peremans-children-sint-stevens-woluwe
 file: bossin-peremans-children-sint-stevens-woluwe.png
 media: image/png
-bytes: 620373
+bytes: "620373"
 sha256: f388083b4f3da0acfa141a5b9d5b468723c33ba9980ae0e4cb7e963cd3b5e1e3
 title: Birth declarations at Sint-Stevens-Woluwe for three children of Guilielmus Bossin × Peremans, 1847–1853
 kind: index
@@ -14,11 +14,11 @@ source: S24
 url: https://www.familysearch.org/search/record/results?q.surname=Bossin&q.fatherGivenName=Guilielmus&q.fatherSurname=Bossin&q.motherSurname=Peremans&f.recordCountry=Belgium&q.birthLikeDate.from=1846&q.birthLikeDate.to=1870
 accessed: 2026-07-26
 evidences:
-  - cornelius_bossin
-  - ludovica_bossin
-  - bossin
-  - guilielmus_bossin
-  - peremans
+  - bossin_cornelius_1847
+  - bossin_ludovica_1853
+  - bossin_antonia_1849
+  - bossin_guilielmus_1824
+  - peremans_joanna_1824
 ---
 
 **This is a results list, not an act.** Every line below is FamilySearch's index of a civil
@@ -36,14 +36,14 @@ A fourth line, from the same search: **Ludovica Bossin**, marriage registered **
 and *Joanna Maria Peremans*.
 
 **The middle row is the check that makes the other two safe.** "Antonius, 11 January 1849,
-Sint-Stevens-Woluwe" is [[bossin]] — this tree holds her birth as **10 January 1849** at
+Sint-Stevens-Woluwe" is [[bossin_antonia_1849]] — this tree holds her birth as **10 January 1849** at
 Sint-Stevens-Woluwe, read from her 1872 Kraainem marriage act at the archive. One day apart is
 the ordinary gap between a birth and its declaration, and the forename is the register's Latin
 masculine where the act she married under says Antonia. So the series is demonstrably this
 family's: a child already documented here sits in the middle of it, with the same parents and
 the same commune.
 
-That gives [[cornelius_bossin]] and [[ludovica_bossin]] two independent identifiers each —
+That gives [[bossin_cornelius_1847]] and [[bossin_ludovica_1853]] two independent identifiers each —
 both parents by name, and the commune — plus a documented sibling in the same sequence.
 
 **The mother's name is unstable across every act, and that is now a pattern rather than a

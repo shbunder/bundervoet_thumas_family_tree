@@ -1,8 +1,8 @@
 {
   "_comment": "Where the tree starts. `roots` is a list for the forest case; the first is where the explorer opens. Confidence codes are data; their human labels are in site/.",
   "roots": [
-    "renee",
-    "leon"
+    "bundervoet_renee_2017",
+    "bundervoet_leon_2019"
   ],
   "defaultSource": "family",
   "confidence": [
