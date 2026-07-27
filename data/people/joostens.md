@@ -19,6 +19,7 @@ spouses:
 sources:
   - S15
   - S9
+  - netradyle-grez-naissances
 ---
 
 DOCUMENTED (July 2026) by her own death act — Grez-Doiceau, 10 June 1857, the year this
@@ -44,3 +45,10 @@ Nothing here was refuted and no fact changed. What changed is the honest name fo
 evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 its image was actually read. None was. The register images are the named next step.
+
+CONFLICT, RECORDED NOT RESOLVED (2026-07-27): [[netradyle-grez-naissances]]'s index of
+her son [[jbzenon_t]]'s 1845 birth gives her origin as **Woluwe-Saint-Pierre**, against the
+**Woluwe-Saint-Lambert** this record holds from her own 1857 death act (S9/S15). These are
+two distinct, adjacent communes, not a spelling variant of one place, and one
+unauthenticated 2006 volunteer index row does not outweigh her own act. Nothing changed;
+recorded so a later pass does not silently pick one without knowing there was a choice.

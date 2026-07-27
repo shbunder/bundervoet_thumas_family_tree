@@ -18,6 +18,7 @@ sources:
   - fs-brabant-bs
   - S13
   - geneanet
+  - netradyle-grez-naissances
 ---
 
 Wife of the carpenter Georges Lambert Thumas (m. 1801); mother of ten, including Georges (1804).
@@ -46,3 +47,16 @@ civil registration rather than on a member tree.
 The extract writes her **Marie Catherine**, where this record carries *Marie Anne Catherine*
 and the variant *Kinart*. Both forms stand; the act's is recorded here as what the clerk
 wrote, not as a correction.
+
+MUDDIED, NOT DISPLACED (2026-07-27): [[netradyle-grez-naissances]] names her three times
+and the three do not agree with each other: `KINART Anne Catherine` (her own 1799 marriage
+index row), `KINAR Anne Catherine` (son Georges's 1804 birth), `KINART Marie Catherine
+(Basse Hespinne)` (son Georges Étienne's 1802 birth, i.e. [[etienne_thumas]]). Anne
+Catherine versus Marie Catherine is a forename disagreement, not merely a spelling one.
+Against it stands [[S23]] — the only IMAGE read anywhere in this cluster — which names her
+**Marie Catherine Quinart**; an unauthenticated index split evenly against itself does not
+outweigh a register image. Confidence and the recorded forename are unchanged.
+
+FRONTIER: the KINART/QUINART surname tables at netradyle were never searched directly —
+she was only ever reached through her husband's and children's Thumas rows — and her own
+birth or baptismal record has not been sought at all.

@@ -12,6 +12,7 @@ father: georges2_t
 mother: joostens
 sources:
   - S25
+  - netradyle-grez-naissances
 ---
 
 Younger brother of [[georges_cj]]. His birth was declared at Grez-Doiceau on **20 August
@@ -24,3 +25,11 @@ Younger brother of [[georges_cj]]. His birth was declared at Grez-Doiceau on **2
 FRONTIER: his birth act, and whether he lived to marry — nothing is known of him after 1845.
 *Zénon* is an unusual enough forename to search on its own, which is worth trying before the
 common ones.
+
+CORROBORATED, INDEX-LEVEL (2026-07-27): [[netradyle-grez-naissances]] independently
+indexes him as **19 August 1845** — one day off the 20 August declaration held here (S25),
+the same order of drift documented across this venue — with father Georges and mother
+`JOSTENS Marie Catherine`. Two independent index compilers now agree on the rare tripartite
+forename and both parents. The same row gives her origin commune as Woluwe-Saint-Pierre,
+which conflicts with the Woluwe-Saint-Lambert on [[joostens]]'s own death act; the
+disagreement is recorded there, not resolved here.

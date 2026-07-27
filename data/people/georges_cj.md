@@ -27,6 +27,7 @@ sources:
   - S8
   - S5
   - geneanet
+  - netradyle-grez-naissances
 ---
 
 The migration generation: born in the Thumas heartland of Grez-Doiceau, he broke the four-generation carpentry tradition to become a farmer and innkeeper, moving north to Kraainem and then Sint-Stevens-Woluwe — founding the Kraainem Thumas family. Widowed of Antoina Bossin (d. 1894), he later partnered Maria Dehoux.
@@ -90,3 +91,16 @@ Nothing here was refuted and no fact changed. What changed is the honest name fo
 evidence: every act behind this record is an AGATHA act analysis — the Rijksarchief's own
 Demogen transcription — and AGATHA holds no scan for any of them. `doc` means an act or
 its image was actually read. None was. The register images are the named next step.
+
+FORENAME LEFT OPEN, NOT MERGED (2026-07-27): [[netradyle-grez-naissances]] independently
+indexes a birth on his exact date with his exact parents — 15 September 1836, father
+Georges, mother `JOUSTEN Marie Catherine` — but the child is entered as **THUMAS Grégoire
+Charles Joseph**, not Georges Charles Joseph. The identity is accepted: same event, same
+parents, no rival birth indexed at Grez in 1836, and his own 1872 Kraainem marriage act —
+read as an IMAGE — already gives *Georges Carolus Josephus* with these same parents. The
+forename itself is NOT PROVEN: two index-level sources disagree and neither is an image,
+and `data/forenames.json` folds no Georges/Grégoire pair — checked directly, and correctly
+kept apart, since Grégoire is independently attested in this same family (Lambert Grégoire
+in the 1799 marriage index above; a Grégoire Joseph born 1812) and so is not an implausible
+reading in its own right. Following the §54 precedent: the recorded forename stands as it
+is, and this is named as a frontier, not decided.

@@ -3156,3 +3156,159 @@ registered (`fwk-alfons-vincke`, `fwk-eugenia-vandecappelle`); five labels recor
 Everything above reads searches already on disk in `research/searches.jsonl` — the
 searching happened before this narrative was written; this section, the person files, the
 five labels and the two source registrations are its record.
+
+## 68. Autopilot pass 3 (by act) — the target stayed unreached, and what four passing
+scores turned out to be worth
+
+The pass's target was the single highest-value open act on the Thumas line: **Georges
+Joseph Thumas × Sophie Miranda Deridder, Grez-Doiceau, 7 October 1868** — the wedding
+[[S23]]'s death extract was drawn up for, and the one act that would speak to
+[[georgesjoseph_t]], [[deridder_sophie]], [[georges2_t]] and [[jbzenon_t]] all at once. It
+was not read, and this pass's headline finding is that it **cannot** be read from any open
+venue right now, which is worth stating as precisely as the corpus allows rather than as a
+shrug.
+
+**The venue is closed, not merely unlucky.** Checked directly against the held corpus:
+Open Archives' whole index for `EventPlace = Grez-Doiceau` is 507 Overlijden mentions and
+**zero** Huwelijk or Geboorte — the commune's marriage and birth registers were simply
+never ingested there. The 45 Huwelijk acts elsewhere in the corpus whose free text mentions
+"Grez-Doiceau" are all events held at *other* communes (Ukkel, Etterbeek, Schaarbeek…)
+where a party merely happened to be *born* there, so none of them is a route in either.
+`harvest.py` therefore cannot reach this act by any method — bulk, OAI or per-act — because
+there is nothing behind any of those routes to fetch. FamilySearch and AGATHA both came
+back `blocked` this pass (expired session, logged-out header), not `miss`: the exact film
+and image are already known from S23's own volume, so a single re-authenticated session is
+a one-request retry, not more searching. Recorded on [[georgesjoseph_t]] and
+[[deridder_sophie]] in exactly these terms, so the next pass does not mistake a session
+problem for a coverage wall.
+
+**The top of the greedy act cover turned out to be a false positive on four frontiers at
+once, and it is worth spelling out why the scorer got it wrong.** `research.py acts` ranked
+`abb:202f2000-3ab7-b26b-ecca-69790623e450` ("Overlijden Grez-Doiceau 1846-04-05") as
+resolving [[georgesjoseph_t]], [[georges2_t]], [[jbzenon_t]] and [[georges_cj]] at once, 23
+bits each, "2 independent (name+place)". Reading the held record: the decedent is
+*Alexandre Thumas*, age 5, son of *Charles Joseph Thumas × Josephine Latour* — a different
+Thumas household in the same commune, with neither parent's name matching this line's
+*Georges Thumas × Marie Catharina Joostens* anywhere. The "two independent identifiers"
+the scorer counted were surname Thumas and commune Grez-Doiceau — one fact about a locally
+common surname in a commune already known to hold at least two unrelated Thumas couples in
+this era, doubled because a `BirthPlace` field simply repeated the same commune name. All
+four nonmatch labels were already recorded by the verifier before this pass began
+(`research/labels.jsonl`, dated 2026-07-27) and are not re-labelled here.
+[[netradyle-grez-naissances]] independently confirms the real couple is real and distinct:
+it indexes "13/02/1831 THUMAS Charles Joseph × LATOUR Marie Barbe Josèphe" at Grez, a
+marriage that has nothing to do with this line.
+
+**A new free venue.** [`netradyle.be`](https://www.netradyle.be/actes/) — a Brabant-wallon
+dépouillement by the Cercle Historique de Perwez, already registered in
+`research/sources.json` with its two Grez pages (`netradyle-grez-mariages`,
+`netradyle-grez-naissances`) — is completely unauthenticated; the login is for
+administrators only. It gave this pass 1,602 marriages, 6,813 births and 4,593 deaths of
+material for Grez to search, all reachable by plain GET. Two structural limits are worth
+having in front of anyone who uses it next: **marriage detail pages carry only the two
+spouses' names and a date** — no parents, no ages, no birthplaces, no trades, no act
+number — so a hit there can corroborate that an event happened and can never supply or
+refute a parent link; and its **tables truncate at 100 rows with no "next" link**, so
+`&pg=2` must be fetched deliberately or a 100-row read silently looks complete when it is
+not (this pass's 134-row Thumas births table needed both pages). A third, systematic
+observation: every netradyle date sits **one to two days off** the FamilySearch index row
+for the same event — the 1868 marriage (8 vs 7 October), [[jbzenon_t]]'s birth (19 vs 20
+August 1845), [[mtstephanie_t]]'s (10 vs 11 August 1835 per S25) — which is two independent
+volunteer transcriptions disagreeing with each other, neither of them the act, and is
+treated throughout this section as ordinary drift rather than conflict.
+
+**Accepted corroborations, kept `sup`.** [[jbzenon_t]]'s birth (19 August 1845, father
+Georges, mother "Jostens Marie Catherine") agrees with the held record on a rare tripartite
+forename and a specific parent couple, across two independent index compilers.
+[[georges2_t]]'s birth (25 January 1804, mother "Kinar Anne Catherine") corroborates the
+held 24 January from a source independent of Geneanet. [[georgeslambert_t]]'s birth (17
+February 1772, father Georges, mother "Noel Marie Catherine") matches the tree exactly on
+the day, with none of the 1-2 day drift seen elsewhere — the first evidence for that
+generation from anything but a member tree — and his parents' own marriage is indexed 3
+January 1771, consistent with it.
+
+**§49 narrowed, explicitly not closed.** The searcher's negative — no Thumas birth indexed
+at Grez 1783-1797 — does **not** advance the age conflict left open in §49: Belgian civil
+registration in the French-annexed departments only began around 1796-97, exactly where
+netradyle's own births table starts (earliest row 17 Sep 1797), so a civil-acts
+dépouillement having nothing before that date is what the historical record boundary
+predicts, whether or not a 1793/94 birth happened — such a birth would be a parish
+baptism, a different register entirely. This is a coverage-boundary artifact, not evidence,
+and §49 stays open exactly as it was. A conflict that *does* bear on it: netradyle indexes
+[[georgeslambert_t]]'s own marriage to [[quinart]] as **2 April 1799**, against the **9
+February 1801** this tree carries from Geneanet — a two-year gap, a different phenomenon
+from the day-level drift above. [[georges2_t]]'s §49 note argues for his 1804 birth partly
+because a 1793/94 birth would precede his parents' marriage by about seven years; under
+1799 rather than 1801 that gap narrows to roughly five to six years. The direction of the
+argument is unchanged; its magnitude narrows by two years. Recorded explicitly on
+[[georgeslambert_t]] and [[quinart]] rather than left as if 1801 were uncontested.
+
+**A conflict on [[joostens]], recorded rather than absorbed.** netradyle gives her origin,
+via [[jbzenon_t]]'s birth row, as Woluwe-Saint-Pierre — where her own 1857 death act (S9,
+S15) gives Woluwe-Saint-Lambert. Two different adjacent communes, not a spelling variant.
+Per CLAUDE.md rule 6 this is a conflict to record, not to silently resolve by picking the
+newer or the older source; recorded on [[joostens]], nothing changed.
+
+**[[etienne_thumas]] gains a birth date, not a new record.** netradyle's "THUMAS Georges
+Étienne, act 26/12/1802, father Georges Lambert, mother Kinart Marie Catherine" is his own
+birth act: both parent names match exactly and the double forename survives intact across
+this act and his already-held 1812 death act, and dying at not quite ten years old is
+chronologically clean. His only prior documentary basis, the 1812 death act (S13), had
+never itself been labelled; it now is (`research/labels.jsonl`, match: true). `identify.py`
+did not flag this match on its own — his record carried no birth date and no parents are
+compared by that tool — noted as an observation about the tool's reach, not a complaint.
+
+**[[georges_cj]]'s forename left open, on purpose.** netradyle has one 1836 birth act on
+his exact date with his exact parents, but indexes the child as "THUMAS *Grégoire* Charles
+Joseph" against the tree's *Georges Carolus Josephus*. The identity is accepted — same
+event, same parents, no rival birth indexed at Grez that year, and his own 1872 Kraainem
+marriage act, read as an image, already gives *Georges Carolus Josephus* with these same
+parents. The forename is NOT PROVEN: two index-level sources disagree, neither is an
+image, and `data/forenames.json` carries no fold joining Georges and Grégoire — confirmed
+directly, and correctly kept apart, since Grégoire is independently attested in this same
+family (Lambert Grégoire in the 1799 marriage index; a Grégoire Joseph born 1812) and so is
+not an implausible misreading in its own right. Following the §54 precedent exactly: the
+recorded forename stands, and the netradyle reading is a named frontier, not a winner
+picked between two guesses.
+
+**[[quinart]]: three spellings, S23 still anchors.** netradyle rows disagree with each
+other — "Kinart Anne Catherine" (1799 marriage), "Kinar Anne Catherine" (son Georges's 1804
+birth), "Kinart Marie Catherine (Basse Hespinne)" (son Georges Étienne's 1802 birth) — and
+Anne Catherine versus Marie Catherine is a forename disagreement, not just a surname
+spelling. [[S23]] — the only IMAGE read anywhere in this cluster — gives *Marie Catherine
+Quinart*, and an index split evenly against itself does not outweigh a register image.
+Ruling: muddied, not displaced; confidence unchanged. Named frontier: the KINART/QUINART
+surname tables at netradyle were never searched directly, only reached through her
+husband's and children's own rows, and her own birth or baptismal record has not been
+sought at all.
+
+**[[deridder_sophie]] — NOT PROVEN, and no graft.** netradyle indexes a Sophie Deridder
+born at Grez-Doiceau on 20 May 1844, daughter of Isidore Deridder × Cordélie Victorine
+Lacourt (married there 2 Dec 1839, further children 1840-1853), aged 24 at an October 1868
+wedding — agreeing on forename, surname (a spelling variant), commune and an age consistent
+with the marriage. Her middle name **Miranda** appears nowhere in this venue. The decisive
+limitation is structural, not circumstantial: netradyle's marriage detail pages carry no
+parents at all, so nothing can link her to the 1868 groom by construction, whatever else
+agrees. Surname + commune is one fact, and age-consistency is arithmetic that fits any
+Sophie Deridder of the right cohort. Isidore Deridder × Cordélie Victorine Lacourt is
+recorded on [[deridder_sophie]] as a named frontier only; no `father`/`mother` link is
+written. The settling document remains the one her record already names — the 1868
+marriage act itself, same Grez-Doiceau volume as [[S23]], near image 221.
+
+**A scoped negative.** [[georgesjoseph_t]]'s own 1843 birth is absent from netradyle's
+fully-paged 134-row Thumas/Grez births table, while four of his siblings are present in the
+same table (the only 1843 row at all is Rosalie Céline, 14 May). Ruled a coverage gap in
+one dépouillement, not evidence of a birth elsewhere: his existence and 1868 marriage
+already rest on S23 (a register image) and S25 (FamilySearch's independent index). The
+table was fully paged (100 + 34 rows), so this is not the `&pg=2` truncation trap described
+above.
+
+**No new person records this pass** — every finding above sits on a record already in the
+tree. Two source ids already registered (`netradyle-grez-mariages`,
+`netradyle-grez-naissances`) are cited on nine existing records now:
+[[georgesjoseph_t]], [[deridder_sophie]], [[georges2_t]], [[jbzenon_t]], [[joostens]],
+[[georgeslambert_t]], [[quinart]], [[georges_cj]], [[etienne_thumas]]. One label recorded
+new ([[etienne_thumas]] against S13); four false-positive labels on the greedy-cover act
+were already on disk and are not duplicated. Tree: 504 people, unchanged — this pass is
+corroboration, conflict and frontier work, not growth, and that is the result the target
+act being genuinely unreachable predicts.

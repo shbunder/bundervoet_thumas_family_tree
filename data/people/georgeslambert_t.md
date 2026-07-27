@@ -21,6 +21,7 @@ spouses:
 sources:
   - S23
   - geneanet
+  - netradyle-grez-naissances
 ---
 
 Second of the four carpenter generations; had ten children and lived to age 90.
@@ -54,3 +55,18 @@ Note the name order. This record and Geneanet call him *Georges Lambert*; the ex
 
 Confidence stays `sup`: nothing here documents his own birth, marriage or death, only that he
 was his son's father and dead by 1868.
+
+CORROBORATED, INDEX-LEVEL (2026-07-27): [[netradyle-grez-naissances]] independently
+indexes his birth as **17 February 1772** at Grez — matching this record's day-level date
+exactly, with none of the 1-2 day drift seen elsewhere in this venue — naming his own
+parents as Georges Thumas and Marie Catherine Noël, and their marriage as 3 January 1771,
+nine months before. This is the first evidence for this generation from a source other
+than Geneanet.
+
+CONFLICT, RECORDED NOT RESOLVED (2026-07-27): the same venue indexes his own marriage to
+[[quinart]] as **2 April 1799**, two years before the 9 February 1801 this record carries
+from Geneanet — a two-year gap, not the 1-2 day slippage seen on birth dates elsewhere in
+this pass. Neither figure is a register image; this is one unauthenticated 2006 index
+against one member tree, and nothing here decides between them. It narrows, without
+closing, the argument [[georges2_t]]'s own §49 note makes about his birth year — see that
+record.

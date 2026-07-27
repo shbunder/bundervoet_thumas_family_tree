@@ -17,6 +17,8 @@ spouses:
     place: Grez-Doiceau
 sources:
   - S25
+  - netradyle-grez-mariages
+  - netradyle-grez-naissances
 ---
 
 Younger brother of [[georges_cj]], and **the reason his father's death act survives at
@@ -38,3 +40,29 @@ this project's rules exist to catch.
 
 FRONTIER: the 1868 marriage act, which would give his trade, his exact birth and his wife's
 parents.
+
+CORROBORATED, SECOND INDEX (2026-07-27): [[netradyle-grez-mariages]] independently indexes
+the marriage — "row 50, 08/10/1868 THUMAS Georges & DERRIDER Sophie" — a second, unrelated
+compiler agreeing with S25 that this wedding happened at Grez-Doiceau in October 1868. Its
+date, 8 October, is one day off the 7 October held here from S25; ordinary drift, not a
+conflict, and this venue's marriage detail pages carry no parents, ages or trade in any
+case, so this can only corroborate the event, never supply what the FRONTIER above is
+still asking for.
+
+VENUE CLOSED (2026-07-27): the target act was checked against the local corpus directly.
+Open Archives holds **zero** Huwelijk or Geboorte acts for Grez-Doiceau at all — every one
+of its mentions there is an Overlijden — so neither the commune's own index nor
+`harvest.py` can reach this marriage by any route; a bulk or targeted pull would be
+wasted. FamilySearch (the exact film and image are already known, from S23's own volume)
+and AGATHA both came back `blocked` this pass — an expired/logged-out session, not a
+`miss` — so this remains the single highest-value open target on the Thumas line, waiting
+on a session rather than on more searching.
+
+NEGATIVE, SCOPED (2026-07-27): his own birth is absent from
+[[netradyle-grez-naissances]]'s Thumas-surname Grez-Doiceau births table — 134 rows,
+fully paged, no `&pg=2` truncation trap — while four of his siblings appear in the same
+table (Marie Thérèse Stéphanie 1835, the 1836 child, Jean Baptiste Zénon 1845, Charles
+Eugène 1850). The only 1843 row at all is Rosalie Céline, 14 May. Read as a coverage gap
+in one 2006 volunteer dépouillement, not evidence of a birth elsewhere: his existence and
+1868 marriage already rest on S23 (a register **image**) and S25 (FamilySearch's
+independent index).

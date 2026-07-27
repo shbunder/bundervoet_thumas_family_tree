@@ -24,6 +24,7 @@ sources:
   - S11
   - S8
   - geneanet
+  - netradyle-grez-naissances
 ---
 
 Third of the four carpenter generations. Civil records give his birth as 24 Jan 1804 (earlier trees said 1805).
@@ -100,3 +101,34 @@ FRONTIER: it was drawn up on 28 September 1868 *for a marriage*, which means **a
 this couple married at Grez-Doiceau around then**. This tree knows only [[georges_cj]], who
 married at Kraainem in 1872. The 1868 marriage sits in the same volume, near image 221, and
 should name a sibling.
+
+That marriage — [[georgesjoseph_t]] to [[deridder_sophie]], 7 October 1868 — is now
+identified (S25) but the act itself remains VENUE CLOSED (2026-07-27): Open Archives holds
+zero Huwelijk or Geboorte acts for Grez-Doiceau at all, only Overlijden, so it cannot be
+reached by harvest; FamilySearch and AGATHA both came back `blocked` (expired session), not
+`miss`, this pass. See [[georgesjoseph_t]] and [[deridder_sophie]].
+
+CORROBORATED, INDEX-LEVEL (2026-07-27): [[netradyle-grez-naissances]] independently
+indexes his birth as **25 January 1804** — one day off the 24 January held here, the same
+order of slippage seen across every date this venue supplies — with father Georges and
+mother `KINAR Anne Catherine`, agreeing with [[georgeslambert_t]] and [[quinart]]. A second
+index compiler, independent of both Geneanet and FamilySearch, now agrees on the year and
+the day is within the venue's own documented drift.
+
+NEGATIVE, SCOPED (2026-07-27) — checked, and it does **not** reopen §49. The same table
+indexes no Thumas birth at Grez between 1783 and 1797 at all (its earliest rows: 17 Sep
+1797, 24 Aug 1799, 10 Apr 1800), which could look like it counts against a 1793/94 birth.
+It does not: Belgian civil registration in the French-annexed departments only began
+around 1796-97, exactly where this table's own coverage starts, so a civil-acts
+dépouillement holding nothing before that date is what the historical boundary predicts,
+whether or not a 1793/94 birth happened — a birth that early would sit in a parish
+baptismal register, a different kind of record entirely, not a civil one this venue could
+ever show. **§49 stays open exactly as it was.**
+
+A CONFLICT THAT DOES BEAR ON §49 (2026-07-27), recorded fully on [[georgeslambert_t]] and
+[[quinart]] rather than here: his parents' own marriage is independently indexed at
+netradyle as **2 April 1799**, two years earlier than the 9 February 1801 this record's
+§49 argument leans on. Under 1799 rather than 1801, the gap between the parents' marriage
+and a hypothetical 1793/94 birth narrows from roughly seven years to roughly five to six.
+The direction of the §49 argument is unchanged — 1804 still sits comfortably after the
+marriage, while 1793/94 would still precede it — only its size narrows by two years.
