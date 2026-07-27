@@ -2998,3 +2998,161 @@ Tree: 456 → 484 people.
 Everything above reads searches and labels already on disk in `research/searches.jsonl` and
 `research/labels.jsonl` — the searching and verifying happened before this narrative was
 written; this section, the person files and the artifacts are its record.
+
+## 67. Autopilot pass 5 (down) — the death index breaks a blind window, twice over
+
+Entirely a `vrijwilligersrab` volunteer INDEX/Detail transcription pass — no register
+image was read anywhere in it, so every fact below is `sup`, never `doc`. The target was
+the frontier §64 left open on [[lucien_vincke]] × [[ludovica_vanald]]: eleven Diksmuide
+Vincke births in 1866-1870 whose index rows carry only the bare father surname VINCKE, no
+forename, no mother and a birth date recorded as `YYYY/00/00` — the Detail view adds
+nothing either, every field from sex to legitimation coming back empty.
+
+**Two more routes than the one that found Florence Amelie.** §64 broke this wall once,
+for one child, through her own later marriage act. This pass generalised that to all
+eleven, and then added a second route the marriage-act approach cannot reach at all: the
+Overlijden (death) index, which names both parents on a death act exactly as a marriage
+act does, and reaches a class of person a marriage-act sweep can never see —a child who
+died before ever marrying. Registering `rab-bs-overlijdens` as a source was the
+precondition for logging any of this.
+
+**Four more children of [[lucien_vincke]] × [[ludovica_vanald]].** [[theophil_vincke]]
+(b. 1866) is carried by full parent-name agreement across two independent registers 29
+years apart — his own 1893 Diksmuide marriage and his own 1922 Oostende death — plus the
+death act separately naming his spouse, Bolle Valerie Maria, matching the 1893 bride
+exactly. A rival of the same forename pair and surname in the same commune,
+*Theophile Achille Vincke* (son of Adolf Vincke × Celina Maria Vandenberghe, married
+1903, died Diksmuide 1959), was ruled out by parents, spouse and death year — exactly the
+class of near-miss CLAUDE.md rule 1 exists for, and labelled `--nonmatch` against the
+mention rather than left as a note only. His mother's surname on the 1893 act reads
+VANDERWEIRELT, the "-AL-" dropped, which is why that row is invisible to a plain
+Vanalderweireldt query; this pass's own marriage-index sweep queried eight spellings for
+exactly this reason, and `Louise`/`Ludovica` is a documented fold — `data/forenames.json`'s
+`f` block groups `ludovica`, `lodewijka` and `louise`, sex-split so it can never cross
+into a male form. [[bellarmin_vincke]] (b. 1867) and [[karolus_vincke]] (b. 1870) are
+both infant deaths, recovered ONLY through their death acts (Diksmuide 1872 and 1871
+respectively) — the methodological point of this pass: a child who died before marrying
+is precisely the population a marriage-act route silently loses. Karolus Louis's name was
+then reused for [[charles_vincke]], born four months after he died — now noted on both
+records. [[alfons_vincke]] (b. 1865) falls one year *outside* the nominal window but was
+found by the same marriage-index sweep and is independently corroborated from the local
+corpus (a Familiekunde Vlaanderen Westkust memorial card, not the same register as either
+act) — born 3 months 20 days after his parents' wedding, flagged rather than smoothed
+over, since conception preceding a marriage by roughly five months is sometimes the
+reason for it.
+
+**Twelve grandchildren**, all contingent on the two marriages above and all read from the
+searcher's own birth/death-index report rather than invented: six children of
+[[theophil_vincke]] × [[valerie_bolle]] — [[mariesophie_vincke]],
+[[leopoldmaurice_vincke95]] (an infant death), [[marielouise_vincke]],
+[[madeleinemarie_vincke]] (an infant death), [[leopoldmaurice_vincke00]] (the same name
+reused five years later, and also an infant death — two children, not one row counted
+twice), and [[eduardushieronymus_vincke]] (born Oostende 1905, after the family moved) —
+and six of [[alfons_vincke]] × [[eugenia_vandecappelle]] — [[juliettegabrielle_vincke]],
+[[georgesremi_vincke]], [[karel_vincke]], [[louisacamilla_vincke]] (an infant death),
+[[camillecyrille_vincke]] (d. Brugge 1918, his own death act naming his parents a second
+time) and [[andrejerome_vincke]]. [[valerie_bolle]] and [[eugenia_vandecappelle]] are
+written as full records, not spouse-stubs, because both a forename and a surname are on
+record for each — the same standard §64 set for Gunst/Joye/Zwaenepoel, applied the other
+way here since the fuller name is what was actually found.
+
+**Two exclusions, and a near-miss already handled correctly.** "Medard Edmond Vincke"
+(blind-window birth 1866 nr. 214) is a different Vincke woman's child outright: his own
+death act names father NN NN, mother Vincke Philomena Helena. "Elodie Vincke"
+(blind-window birth 1870 nr. 16) belongs to a separate, prolific Diksmuide Vincke line —
+her own 1894 marriage act names her parents as Richard Aloïs Vincke × Eugenie Dekeyrel,
+not this couple, and a birth-year wobble on the index (1870 vs 1871) is immaterial since
+under either year the parents are not ours. Worth stating plainly: this clan holds two
+different women named Elodie, and the tree already correctly holds the other one,
+[[romanie_vincke]] ("Romanie Elodie", act 206/1873, parents named in full, grafted in
+pass 1) — two Elodies in one clan is exactly the near-miss class CLAUDE.md rule 1 exists
+for, and it was kept straight.
+
+**Five still NOT PROVEN, with the scope that keeps the frontier re-openable rather than
+closed.** Emil Fidèle (1867 nr. 256), Gustave Camil (1867 nr. 266), Florida Juliana (1869
+nr. 74), Arthur Carolus (1870 nr. 88) and Cyrille Camil (1870 nr. 69) are bare
+VINCKE-only rows; no parent-naming act was found for any of them, in either index. What
+was actually covered: the whole West-Flemish marriage index, every commune and year,
+Vincke + Vyncke, eight spellings of the mother's surname; the whole West-Flemish death
+index, single surname Vincke, 2212 rows (Florida returns zero province-wide); Open
+Archives Belgium-wide, twelve forename queries, 75 records read. Diksmuide itself carries
+26 Vincke-touching marriages 1880-1910 and 124 death rows 1798-1910 continuously, so the
+commune **is** covered — these five are absent from it, not hidden behind it. What would
+settle them is the register image behind AGATHA's `SCAN nnn GSU` reference, or a
+FamilySearch session on the vrijwilligersrab arks, not a further index sweep. Also
+recorded, still ambiguous: a Nieuwkerke marriage of "VINCKE Cyrille Camille" ×
+"REUBRECHT Valerie Eugenie" (act nr. 4) whose Detail view is blank in every field; two
+corpus memorial cards (`fwk:fb425dd0-…`, `dbe:9df7ed08-…`) confirm the couple existed
+(d. 22/05/1937) but name no parents on either side, so this neither confirms nor refutes
+a link to the blind-window Cyrille Camil above — labelled `--nonmatch` against
+[[lucien_vincke]] on both cards, "not a graftable pair" rather than a positive
+refutation of identity, since the evidence is simply insufficient either way.
+
+**An argument recorded as an argument, never as evidence for a link.** Diksmuide birth
+acts are strictly date-ordered — 77 act-number/date pairs checked across 1871-1910, zero
+ordering violations — so act-number spacing against a known birth rate can flag an
+implausible gap between two candidate siblings. The rate is not constant, though: it
+declines from ~0.73-0.81 acts/day in the early 1870s to ~0.2-0.3 by 1900-1910, a premise
+correction to an initial flat ~0.82/day estimate. Recomputed with the conservative
+in-period rate (~0.75), the two 1870 estimates come out to roughly 212-237 days rather
+than 194/217 — still under the ~270-300-day floor a second full-term birth needs. **This
+may be used only to EXCLUDE, never to INCLUDE** — grafting on an inference is exactly what
+CLAUDE.md rule 1 forbids. It agrees with the independent exclusion of Medard Edmond above
+(~48 days' spacing, implausible on its own, and his own death act settles it anyway — the
+two arguments agree); it does **not** close the excluded Elodie above (~282 days,
+borderline) — that case is settled by her own marriage act, a document, not by this
+arithmetic.
+
+**Four date corrections to this run's own pass-1 work, and the note that now says so
+twice.** Re-querying the death index found that two of the four already-held children's
+death dates §64 recorded were the index's "Certificate Date" column, not the "Date"
+column that is the actual death: [[irma_vincke]]'s death is 25 April 1875, not 26 April;
+[[jerome_vincke]]'s is 13 January 1889, not 14 January. [[camilla_vincke]] (10 December
+1876) and [[eugene_vincke]] (4 April 1902) needed no correction — both columns agree on
+those two acts. A fifth instance of the same slip, on a birth registered to
+[[emma_vincke]] before her own 1907 marriage ("Albert Joseph Vincke", d. 26 March 1900,
+not 27 March), is recorded on [[flavie_vi]]'s frontier note rather than as its own
+record, since that child is not grafted at all (below). `research/sources.json`'s
+`rab-bs-geboorten` note has documented this Date-vs-Certificate-Date conflation for the
+births index since §64; its `rab-bs-overlijdens` note is updated now to say the deaths
+index shares it.
+
+**A legitimation frontier, recorded on three records rather than resolved.** Sweeping the
+birth index for rows naming [[emma_vincke]] as mother, incidental to the blind-window
+work above, turned up two births registered to her alone before her 1907 marriage to
+[[eduardus_vi]], father NN NN both times: "VINCKE Flavie Eulalie" (b. 1898) and "VINCKE
+Albert Joseph" (b. 1899, d. 1900). The first shares a rare forename pair with this
+tree's own [[flavie_vi]], already held as this couple's daughter from her own 1920
+marriage act. If the 1907 marriage legitimized children already born, that would explain
+both — and would also explain [[joannes_vi]]'s own birth at Lens in 1903, four years
+before the same marriage, an open question §64 already left standing. **NOT PROVEN, not
+grafted**: it needs the marriage act's own legitimation field read — Oostende, hidden
+fields Gemeente/Jaar/ID = `4166052 / 28/09/1907 / 668717` — which this pass's Detail
+fetch returned as an empty template. Recorded as a named frontier on [[flavie_vi]],
+[[emma_vincke]] and [[joannes_vi]]; no second Flavie Eulalie record is created, and none
+for Albert Joseph.
+
+**Five birth dates recorded with an explicit unverified caveat, and two children found
+this way.** The same incidental sweep gave birth dates this tree did not have for three
+already-held children — [[eduardus_vi2]] (2 Nov 1901), [[valentina_vi]] (23 Mar 1909) and
+[[maria_vi]] (22 Jan 1913) — and two more children of [[eduardus_vi]] × [[emma_vincke]]
+with no record at all, [[camillusgustavus_vi05]] (b. 1905) and [[camillushenricus_vi11]]
+(b. 1911). None of the five was independently re-checked against a second act, and this
+same index's date-column conflation (above) means a single citation is not as strong as
+it looks — each record says so plainly rather than presenting the date as settled. All
+five are recorded rather than deferred because each cites a specific act number in
+`research/searches.jsonl`, the bar item 8 of this pass's brief set for the difference
+between "record with a caveat" and "leave as a frontier note."
+
+**Twenty new records this pass:** `theophil_vincke`, `valerie_bolle`, `bellarmin_vincke`,
+`karolus_vincke`, `alfons_vincke`, `eugenia_vandecappelle`, `mariesophie_vincke`,
+`leopoldmaurice_vincke95`, `marielouise_vincke`, `madeleinemarie_vincke`,
+`leopoldmaurice_vincke00`, `eduardushieronymus_vincke`, `juliettegabrielle_vincke`,
+`georgesremi_vincke`, `karel_vincke`, `louisacamilla_vincke`, `camillecyrille_vincke`,
+`andrejerome_vincke`, `camillusgustavus_vi05`, `camillushenricus_vi11`. Two new sources
+registered (`fwk-alfons-vincke`, `fwk-eugenia-vandecappelle`); five labels recorded. Tree:
+484 → 504 people.
+
+Everything above reads searches already on disk in `research/searches.jsonl` — the
+searching happened before this narrative was written; this section, the person files, the
+five labels and the two source registrations are its record.

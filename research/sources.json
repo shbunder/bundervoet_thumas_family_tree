@@ -1588,7 +1588,27 @@
       "yielded": "Six Diksmuide death acts naming Lucien Julianus Vincke x Ludovica Maria Vanalderweireldt as parents: two resolve blind-window births (Carolus Ludovicus, d. 1871; Bellarmin Eugenius, d. 1872) and four give death dates for children the tree already held without one (Irma Maria, Camilla Celina, Jerome Maurice, Eugeen Lucien). A second, independent corroboration of Theophile Henri Vincke (d. Oostende 1922). One name EXCLUDED outright: Medardus Edmondus Vincke (d. 1866) is an illegitimate child of a different Vincke woman, not this couple's. A separate sweep for the five remaining blind-window forenames (Emil/Fidel, Gustav/Gustaaf, Florida, Arthur, Cyriel) returned nothing tying to this couple.",
       "confidence": "sup",
       "accessed": "2026-07-27",
-      "note": "Query shape as the other two vrijwilligersrab indexes: POST /en/node/164 with 'naam'. The Diksmuide subset runs continuously 1798-1910, so a name absent from it there is absent from the transcription, not necessarily from life — death after 1910, elsewhere in the province, or under an unmatched name-form are the three untested alternatives, all stated as such rather than as a closed wall."
+      "note": "Query shape as the other two vrijwilligersrab indexes: POST /en/node/164 with 'naam'. The Diksmuide subset runs continuously 1798-1910, so a name absent from it there is absent from the transcription, not necessarily from life — death after 1910, elsewhere in the province, or under an unmatched name-form are the three untested alternatives, all stated as such rather than as a closed wall. READ THE TWO DATE COLUMNS APART HERE TOO (2026-07-27): this index carries the same Date-vs-Certificate-Date conflation already documented on rab-bs-geboorten's note — a re-query of the death rows first proposed 26/04/1875 for Irma Maria Vincke and 14/01/1889 for Jerome Maurice Vincke and 27/03/1900 for Albert Joseph Vincke, each one day later than the true Date column (25/04/1875, 13/01/1889, 26/03/1900 respectively); Camilla Celina (10/12/1876) and Eugène Lucien (04/04/1902) show no such offset, both columns agreeing. Read the Date column, not the Certificate Date, exactly as for the births index."
+    },
+    {
+      "id": "fwk-alfons-vincke",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Memorial card — Alfons Luciaan Vincke, partner Eugenia Maria Vandecappelle",
+      "url": "https://www.openarchieven.nl/fwk:bb261d5b-e241-84c8-0c3c-860a943cca23",
+      "yielded": "Alfons Luciaan Vincke, born Diksmuide 13 September 1865, partner Eugenia Maria Vandecappelle — corroborating the 1888 Diksmuide marriage act (rab-bs-huwelijken) from a source outside the vrijwilligersrab indexes.",
+      "confidence": "sup",
+      "accessed": "2026-07-27"
+    },
+    {
+      "id": "fwk-eugenia-vandecappelle",
+      "site": "openarch",
+      "kind": "record",
+      "title": "Memorial card — Eugenia Maria Vandecappelle, partner Alfons Luciaan Vincke",
+      "url": "https://www.openarchieven.nl/fwk:f5704ac2-7b0f-1f02-6cfe-1829d47b9e7a",
+      "yielded": "Eugenia Maria Vandecappelle, partner Alfons Luciaan Vincke — the same couple as fwk-alfons-vincke, a second card rather than the same one counted twice.",
+      "confidence": "sup",
+      "accessed": "2026-07-27"
     }
   ]
 }

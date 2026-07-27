@@ -65,3 +65,23 @@ FOUR MORE CHILDREN GRAFTED (research-log §64), from the same Huwelijken sweep:
 (m. Stene 1931) and [[maria_vi]] (m. Stene 1935) — each act naming both parents
 identically to this record, alongside [[joannes_vi]] himself, whose own 1928 marriage act
 turned up in the same sweep (see his record).
+
+TWO MORE CHILDREN, WITH A CAVEAT (2026-07-27): a birth-index sweep for rows naming this
+record as mother turned up two more Oostende children of [[eduardus_vi]] × this record —
+[[camillusgustavus_vi05]] (b. 25 April 1905, act nr. 501) and [[camillushenricus_vi11]]
+(b. 6 January 1911, act nr. 14) — and birth dates for three already-held children,
+[[eduardus_vi2]] (2 November 1901), [[valentina_vi]] (23 March 1909) and [[maria_vi]]
+(22 January 1913), none independently re-checked against a second act; see each record.
+
+FRONTIER — two births before this marriage, NOT PROVEN, not grafted. The same sweep also
+found "VINCKE Flavie Eulalie" (b. Diksmuide 26 March 1898, act nr. 21) and "VINCKE Albert
+Joseph" (b. 9 December 1899 act nr. 84, d. 26 March 1900), both registered father NN NN,
+mother VINCKE Emma Celesta — nine and eight years respectively before this record's 1907
+marriage. The first shares a rare forename pair with [[flavie_vi]], already held as this
+couple's daughter from her own 1920 marriage act. Legitimation by the 1907 marriage would
+reconcile both, and would also explain [[joannes_vi]]'s birth at Lens 1903, four years
+before this same marriage. **NOT ASSERTED.** It needs the marriage act's own legitimation
+field read — see [[flavie_vi]]'s record for the exact query handle
+(`rab-bs-huwelijken`, Oostende 4166052 / 28/09/1907 / 668717) — which this pass could not
+reach. No record is created for Albert Joseph, or for a second Flavie Eulalie distinct
+from [[flavie_vi]].

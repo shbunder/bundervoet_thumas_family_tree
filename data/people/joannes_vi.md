@@ -48,3 +48,13 @@ an earlier, unregistered union or a later legitimation would explain it — this
 already carries the second pattern elsewhere (see [[edouard_dk]]'s marriage to Louise
 Bocklandt, which legitimized two children already born). Left open; neither date is
 altered here.
+
+**A second data point for the same pattern (2026-07-27).** A birth-index sweep for rows
+naming [[emma_vincke]] as mother, incidental to an unrelated blind-window pass, turned up
+two more births registered to her alone before the 1907 marriage, father NN NN: "VINCKE
+Flavie Eulalie" (b. 1898, matching [[flavie_vi]]'s rare forename pair) and "VINCKE Albert
+Joseph" (b. 1899, d. 1900). If either was legitimized by the 1907 marriage, that would be
+the same mechanism that would explain this record's own Lens-1903 gap. **NOT PROVEN,
+not grafted** — it needs the marriage act's own legitimation field read (see
+[[flavie_vi]]'s record for the exact query handle). Recorded here as the same open
+question, not resolved by it.

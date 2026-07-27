@@ -5,12 +5,16 @@ surname: Vincke
 birth:
   date: 1886-09-22
   place: Diksmuide
+death:
+  date: 1889-01-13
+  place: Diksmuide
 confidence: sup
 line: van-iseghem
 father: lucien_vincke
 mother: ludovica_vanald
 sources:
   - rab-bs-geboorten
+  - rab-bs-overlijdens
 ---
 
 Son of [[lucien_vincke]] and [[ludovica_vanald]], and [[emma_vincke]]'s brother — the
@@ -23,3 +27,10 @@ consistent with unrecorded infant losses in the couple's 1866-1870 blind window 
 [[lucien_vincke]]'s record). A province-wide sweep of the same index, filtered separately
 by father's forename and by mother's surname, returns the identical seven rows — no rival
 couple. Index only, not the register image, hence `sup`.
+
+Died at Diksmuide, act nr. 5, 13 January 1889, aged two (`rab-bs-overlijdens`), naming
+both parents again. **CORRECTED on entry**: the death index's "Certificate Date" column
+reads 14 January; the "Date" column, which is the death itself, reads 13 January — the
+same Date-vs-Certificate-Date conflation already documented on `rab-bs-geboorten`'s note
+for the births index, now confirmed to affect the deaths index too. 13 January is
+recorded here, not 14.
