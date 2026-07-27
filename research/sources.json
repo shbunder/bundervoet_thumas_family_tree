@@ -2068,6 +2068,23 @@
    "confidence": "doc",
    "accessed": "2026-07-27",
    "note": "THE ROUTE WORTH REMEMBERING. A Dutch civil marriage required the groom's birth certificate, so when the groom was born abroad the foreign extract was physically filed with the act. For any Fleming who married in the Netherlands this puts a Belgian parish act inside an open Dutch archive, with no Belgian venue involved. Reached by resolving the Open Archives handle to stadsarchief.rotterdam.nl, then reading the huwelijksbijlagen viewer attached to the act page. Scans serve at 725x1024 with &format=large; that is the maximum, and the Latin needed upscaling to read."
+  },
+  {
+   "id": "agatha-gent-sintmichielsnoord-1787-marriage-bundervoet-peeters",
+   "site": "agatha",
+   "kind": "record",
+   "title": "Gent, Sint-Michiels-Noord — marriage of Aegidius Bundervoet and Anna Maria Elisabetha Peeters, 17 April 1787",
+   "url": "https://agatha.arch.be/nl/data/images/514/514_9000_000_00100_000/0_0221_r",
+   "collection": "Rijksarchief Gent, parochieregisters Gent Sint-Michiels-Noord, huwelijksbeloften en -akten 07/01/1737-20/11/1796, register 514_9000_000_00100_000, image 221 of 230",
+   "covers": [
+    "Bundervoet",
+    "Peeters",
+    "Gravelijn"
+   ],
+   "yielded": "IMAGE READ. The marriage act: 17 April 1787 after three banns; the groom born in Onze-Lieve-Vrouw (B. Mariae) parish, Gent; the bride born at HORN near Roermond and unable to write; witnesses Livinus Bundervoet, born in the same B. Mariae parish and living in Sint-Michiels-Noord, and Carolina Gravelijn. Signed by the groom as Gillis Bundervoet and by the witness as Lieven Bundervoet.",
+   "confidence": "doc",
+   "accessed": "2026-07-27",
+   "note": "THE ROUTE, since AGATHA's person-name search no longer exists. Its genealogie tab is a place-and-parish browser that must be driven through its form, not by URL; that gives the register, and the register page embeds `var manifest_path` pointing at a IIIF manifest under agatha.arch.be/nl//data/json/. The manifest lists every canvas with a direct i3f.arch.be image URL, so pages can be fetched at full size without the Mirador viewer. Scanning is cheap because each act carries a marginal surname pair: cropping just the margin columns from a run of pages and stitching them into one sheet located this act in a single look. THE ACT DOES NOT NAME PARENTS - this older Flemish form gives origins and witnesses only, and adds a consent clause naming a father only when a party is a minor."
   }
  ]
 }

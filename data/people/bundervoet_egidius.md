@@ -9,15 +9,16 @@ line: bundervoet
 spouses:
   - id: peeters_annamaria
     name: Anna Maria Elisabeth Peeters
-    married: "1787"
+    married: 1787-04-17
     place: Gent
     confidence: doc
-    source: srt-rotterdam-1818-bijlagen-bundervoet
+    source: agatha-gent-sintmichielsnoord-1787-marriage-bundervoet-peeters
   - id: ledent_mariafrancisca_1777
     name: Maria Francisca Ledent
     confidence: sup
     source: geneanet-archives-bundervoet
 sources:
+  - agatha-gent-sintmichielsnoord-1787-marriage-bundervoet-peeters
   - srt-rotterdam-1818-bijlagen-bundervoet
   - geneanet-gent-1787-marriage-bundervoet-peters
   - geneanet-archives-bundervoet
@@ -49,11 +50,23 @@ register, the Gent notary who stood in the room with him, and his own signature 
 Egidius/Gillis. The Rotterdam clerk was wrong, and §76 recorded the conflict before it
 could be resolved.
 
+**HIS OWN MARRIAGE ACT HAS NOW BEEN READ** (Gent, Sint-Michiels-Noord, **17 April 1787**,
+after three banns). It gives his birth parish — *natus in B[eatae] Mariae Gande*, the
+Onze-Lieve-Vrouw parish of Gent — which independently confirms the *ex Sancti Petri* of his
+son's baptism the following year, those being the same parish. **It does not name his
+parents.** This older Flemish form states origins and witnesses and adds a consent clause
+naming a father only when a party is under age; Egidius was not, so the generation above
+him is still open.
+
 **THE FRONTIER, and it is the best one open on objective 3.** The godfather at his son's
 baptism was **Livinus Bundervoet**, who *dixit se non posse scribere* — declared he could
 not write. Godparents in a Flemish baptism register are almost always kin, so this is the
-nearest approach yet to the generation above the Gent patriarchs. The Gent Sint-Pieters
-register holds several candidate Livinus Bundervoets, of whom *Livinus Bundervoet ×
-Petronilla De Smet, married Sint-Pieters 1757*, sits in the right generation to be his
-father. **Not grafted** — a forename and a parish are one identifier. His own marriage act
-of 1787 would name his parents outright and settle it.
+nearest approach yet to the generation above the Gent patriarchs. **The 1787 marriage act names the same
+man as a witness** — *[[bundervoet_livinus_gent]], natus in B: Mariae, habitans in hac
+parochia*: born in Egidius's own birth parish and living in Egidius's own parish. Witness
+at the wedding and godfather to the first child, out of the same parish: that is what a
+brother or a father looks like. **Not grafted** — the act states no relationship, and a
+shared forename and parish is one identifier.
+
+The act to fetch now is **Egidius's own baptism in Onze-Lieve-Vrouw / Sint-Pieters, Gent**,
+which the marriage act has just pinned to a parish. A baptism names both parents outright.

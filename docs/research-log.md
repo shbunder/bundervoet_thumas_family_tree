@@ -4477,3 +4477,97 @@ Tree: 545 → **550 people**. Two acts read as images and saved as artifacts. Th
 logged, two of them `image-read` hits. Two labels, both `--match`, both `act`-based — the
 first `doc` rulings this line has ever carried. One new source page. Verdict: **the Gent
 forest now has a documented root**, and it is one act away from a generation older.
+
+## 78. The 1787 marriage act, and every known Bundervoet folded into the tree
+
+Two things in one pass: the act §77 named as next, and a sweep that turns the surname
+indexes into people.
+
+### 78a. Gent Sint-Michiels-Noord, 17 April 1787 — read
+
+§77 wanted Egidius Bundervoet's marriage act because it should name his parents. **It was
+found, it was read, and it does not name them.** Recording that plainly, because a goal
+that goes unmet is still a result.
+
+**Getting there is worth writing down, since AGATHA's person-name search no longer exists.**
+Its surviving `genealogie` tab is a place-and-parish browser that must be driven through its
+**form** — a constructed URL renders an empty shell, which is what §76 hit and wrongly wrote
+off. Driven properly it returns the register: *Gent, Sint-Michiels-Noord, huwelijksbeloften
+en -akten, 7 Jan 1737 – 20 Nov 1787*. The register page then embeds `var manifest_path`,
+pointing at a **IIIF manifest**; the manifest lists all 230 canvases with direct
+`i3f.arch.be` image URLs, so pages can be pulled at full size without the Mirador viewer at
+all. And because each act carries a **marginal surname pair**, cropping only the margin
+columns from a run of pages and stitching them into one sheet found the act in a single
+look — the alternative being thirteen full-page reads.
+
+> **Die 17 aprilis** praeviis tribus bannis matrimonium contraxerunt **Ægidius Bundervoet**
+> natus in **B[eatae]: Mariae Gande** habitans in hac parochia et **Anna Maria Elisabetha
+> Peeters** nata in **Horn prope Ruremundam** habitans in hac parochia, **scribere non
+> valens**, coram me infrascripto et testibus **Livino Bundervoet** nato in **B: Mariae**
+> habitante in hac parochia et **Carolina Gravelijn**.
+
+What it settles:
+
+- **The date**: 17 April 1787, after three banns. The Geneanet index had only a year.
+- **Egidius's birth parish**: *B. Mariae Gande*, Gent's Onze-Lieve-Vrouw parish. His son's
+  1788 baptism says *ex Sancti Petri* — the same parish — so two independent acts agree.
+- **The bride's birthplace, to the village**: **Horn, near Roermond**, where the baptism
+  said only *ruremondensis*. A village is a register; a region is not.
+- **A Bundervoet witness**: *Livinus Bundervoet, born in the same B. Mariae parish, living
+  in this one* — and godfather to the couple's first child a year later. Now
+  [[bundervoet_livinus_gent]], **with no link drawn**: neither act states a relationship,
+  and surname-plus-parish is one identifier. A discrepancy is kept rather than smoothed —
+  he **signs** the 1787 register in a fluent hand, and in 1788 the clerk records that he
+  *declared he could not write*. Either two men share the name in one parish, or a clerk was
+  careless.
+- **Why no parents**: this older Flemish form gives origins and witnesses, and names a
+  father only in a consent clause when a party is under age. The act directly below this one
+  carries exactly that clause; Egidius's does not.
+
+**Next act, and it is now pinned to a parish rather than a city:** Egidius's own baptism in
+Onze-Lieve-Vrouw / Sint-Pieters, Gent.
+
+### 78b. Every known Bundervoet, indexed — and the 899 that stayed out
+
+The four venues swept this run yield **1,475 person-mentions carrying the surname**. Folded
+by forename and clustered conservatively — merging only when a birth year, a death year or
+a birthplace agrees, so that two mentions which cannot be told apart are kept **separate** —
+they resolve into **1,171 distinct people**.
+
+| Identifier types present (year / place / spouse) | Clusters |
+|---|---|
+| 0 — a forename and nothing else | 400 |
+| 1 | 499 |
+| **2 or more** | **272** |
+
+**258 new person records were written**: the 272 that clear the project's own
+two-identifier bar, less **14 that turned out to be people the tree already held** — the
+duplicate check ran every candidate against the 35 existing Bundervoet records and caught,
+among others, [[bundervoet_petrus_1727]], [[bundervoet_coleta_1766]] and
+[[bundervoet_annacatharina_1772]] added earlier today. All 258 are `sup`, index-level, and
+**carry no links at all**: no parents, no siblings, and a spouse only as a bare name where
+an index gave one. A shared surname is one identifier.
+
+**The other 899 were deliberately not written, and that is the substantive decision of this
+half.** Four hundred of them are a forename and nothing else. Writing them would put ~900
+mutually indistinguishable records into a tree of 551 — which is exactly the failure
+`tools/identify.py` and the build-time blocking index exist to prevent, and at that scale a
+wrong record is unfindable later. They are indexed instead, in full, with every mention
+behind them, in `research/findings/bundervoet-roster-2026-07-27.json`. Nothing is lost: they
+remain findable by name, and any one of them becomes a record the moment a second identifier
+turns up.
+
+**Two tool findings, for review rather than for this pass.** `harvest.py cmd_surname`
+hardcodes `country_code: "be"`, so no Dutch record can enter the corpus through it — the
+Dutch harvest had to be run by importing the module and passing the parameter. And `api()`
+guards `HTTPError`/`URLError` but not a **200 carrying a non-JSON body**, which Open Archives
+does return; inside `fetch_acts`'s thread pool one such response kills the whole harvest
+before the manifest is written, so a partial run records nothing. A tolerant wrapper around
+`api()` was used instead of editing `tools/`.
+
+**A presentation consequence worth flagging:** the site now reports "343 married in",
+because its three-way split is ancestor / blood / married-in and 258 unconnected Bundervoets
+fall through to the third. They are not married in. That classification lives in `tools/`.
+
+Tree: 551 → **809 people**. One act read and saved as an artifact, two searches logged, one
+`--match` label on the act, one new source page. Build green.

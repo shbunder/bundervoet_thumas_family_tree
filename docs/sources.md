@@ -17,10 +17,10 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 53 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 54 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 3 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
 | `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 60 | Belgian civil and church registration, with act images. |
-| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 21 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
+| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 22 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
 | `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 42 | Volunteer transcriptions of West-Flemish marriage and death records. |
@@ -307,6 +307,15 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-27
 - **Note:** NO SCAN, logged in or not. The act page's Link row (#modal_URL) is empty and hidden and there is no img, Mirador or IIIF reference anywhere in its DOM; the Open Archives copy's SourceDigitalOriginal points back to search.arch.be's person view, not to an image. This is a structural limit of AGATHA's HUVLB project, not a login wall — research-log §72's 'AGATHA holds a scan but is logged out' is wrong. The image is on the FamilySearch Kraainem film: see fs-kraainem-1884-marriage-swaelens-bossin.
+
+#### `agatha-gent-sintmichielsnoord-1787-marriage-bundervoet-peeters` — Gent, Sint-Michiels-Noord — marriage of Aegidius Bundervoet and Anna Maria Elisabetha Peeters, 17 April 1787
+- **Kind:** record · <https://agatha.arch.be/nl/data/images/514/514_9000_000_00100_000/0_0221_r>
+- **Collection:** Rijksarchief Gent, parochieregisters Gent Sint-Michiels-Noord, huwelijksbeloften en -akten 07/01/1737-20/11/1796, register 514_9000_000_00100_000, image 221 of 230
+- **Covers:** ['Bundervoet', 'Peeters', 'Gravelijn']
+- **Yielded:** IMAGE READ. The marriage act: 17 April 1787 after three banns; the groom born in Onze-Lieve-Vrouw (B. Mariae) parish, Gent; the bride born at HORN near Roermond and unable to write; witnesses Livinus Bundervoet, born in the same B. Mariae parish and living in Sint-Michiels-Noord, and Carolina Gravelijn. Signed by the groom as Gillis Bundervoet and by the witness as Lieven Bundervoet.
+- **Confidence:** doc
+- **Accessed:** 2026-07-27
+- **Note:** THE ROUTE, since AGATHA's person-name search no longer exists. Its genealogie tab is a place-and-parish browser that must be driven through its form, not by URL; that gives the register, and the register page embeds `var manifest_path` pointing at a IIIF manifest under agatha.arch.be/nl//data/json/. The manifest lists every canvas with a direct i3f.arch.be image URL, so pages can be fetched at full size without the Mirador viewer. Scanning is cheap because each act carries a marginal surname pair: cropping just the margin columns from a run of pages and stitching them into one sheet located this act in a single look. THE ACT DOES NOT NAME PARENTS - this older Flemish form gives origins and witnesses only, and adds a consent clause naming a father only when a party is a minor.
 
 ### FamilySearch
 

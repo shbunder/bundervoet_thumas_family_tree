@@ -4,8 +4,8 @@ name: Anna Maria Elisabeth Peeters
 surname: Peeters
 sex: f
 birth:
-  place: Roermond
-  raw: no date; the baptism act names her only as "ruremondensis", of Roermond
+  place: Horn
+  raw: born at Horn near Roermond; no date in either act
 death:
   date: <1818
   raw: dead by 21 October 1818, when the notarial act calls her "wylent"
@@ -14,11 +14,12 @@ line: bundervoet
 spouses:
   - id: bundervoet_egidius
     name: Egidius (Gillis) Bundervoet
-    married: "1787"
+    married: 1787-04-17
     place: Gent
     confidence: doc
-    source: srt-rotterdam-1818-bijlagen-bundervoet
+    source: agatha-gent-sintmichielsnoord-1787-marriage-bundervoet-peeters
 sources:
+  - agatha-gent-sintmichielsnoord-1787-marriage-bundervoet-peeters
   - srt-rotterdam-1818-bijlagen-bundervoet
   - geneanet-gent-1787-marriage-bundervoet-peters
 ---
@@ -26,11 +27,16 @@ sources:
 First wife of [[bundervoet_egidius]], married at Gent Sint-Michiels Noord in 1787, and
 mother of [[bundervoet_livinus_1788]].
 
-**She was not from Gent.** Her son's baptism act names her *annæ mariæ Elizabethæ Peeters
-**ruremondensis*** — of **Roermond**, in Limburg, some 150 km east. That single word
-explains what had looked odd from the indexes alone: Peeters is not a Gent surname, and
-her four-part given name is not a Gent pattern either. How a Roermond woman came to marry
-into a Sint-Pieters weaving family is not answered by anything read here.
+**She was not from Gent, and the marriage act says exactly where she was from.** Her son's
+baptism of 1788 calls her *ruremondensis*, of Roermond. The marriage act of 17 April 1787
+is finer: *nata in **Horn prope Ruremundam*** — born at **Horn, near Roermond**, a village
+in Dutch Limburg some 150 km east of Gent. That is a parish to search, not just a region.
+It explains what looked odd from the indexes alone: Peeters is not a Gent surname and her
+four-part given name is not a Gent pattern. How a woman from Horn came to marry into a Gent
+Sint-Pieters family is not answered by anything read here.
+
+**She could not write.** The marriage act says *scribere non valens* and she signed with a
+cross; her husband signed his own name.
 
 **The death is bounded, not dated.** The notarial act of 21 October 1818 calls her *by
 wylent* — "by the late" — so she was dead by then, and she was alive in April 1788. The
