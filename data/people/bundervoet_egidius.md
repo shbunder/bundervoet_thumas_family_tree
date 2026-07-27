@@ -18,6 +18,7 @@ spouses:
     confidence: sup
     source: geneanet-archives-bundervoet
 sources:
+  - fs-fulltext-bundervoet
   - agatha-gent-sintmichielsnoord-1787-marriage-bundervoet-peeters
   - srt-rotterdam-1818-bijlagen-bundervoet
   - geneanet-gent-1787-marriage-bundervoet-peters
@@ -70,3 +71,10 @@ shared forename and parish is one identifier.
 
 The act to fetch now is **Egidius's own baptism in Onze-Lieve-Vrouw / Sint-Pieters, Gent**,
 which the marriage act has just pinned to a parish. A baptism names both parents outright.
+
+**A third autograph, and a sighting fifteen months before the marriage.** He signs as a
+witness — *temoin* — to a notarial act at Gent on **19 August 1786**, before notary A.
+Vergult: see [[bundervoet-1786-gent-notarial-gillis-witness]]. The act is somebody else's
+business and says nothing of his family, but he writes **gillis bundervoet** in the same
+practised hand that closes his son's 1788 baptism entry, which places him in the city and
+literate in 1786.

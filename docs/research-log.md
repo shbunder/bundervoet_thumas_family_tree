@@ -4912,3 +4912,52 @@ by the tile method above.
 
 Tree: 809 → 815 people. One artifact, one `--match` label, one search logged `hit` on
 `image-read`.
+
+## 86. Working the queue: an autograph, a sibship of sisters, and two acts that are not what was hoped
+
+Both remaining items from §85's queue were read from the images. **Neither gives Egidius's
+parents, and both are logged `ambiguous` rather than `hit`** — the goal was parentage and
+neither act supplies it.
+
+**The 1786 Vergult page.** §83 flagged it because the entity layer put `gillis bundervoet` on
+a Gent notarial page one year before Egidius married, and a marriage contract of that date
+would have named his parents. **It is not a contract.** It is the closing four lines of
+somebody else's deed:
+
+> en presence de S.r **M. Batkin** et **G: Bundervoet** temoins a ce requis ce **19 aout 1786**
+> — signed Jacques Fruot · M. Batkin · **gillis bundervoet** · A. Vergult, nots pub
+
+He is a **witness**. The act says nothing of his family. Its whole value is the autograph:
+**gillis bundervoet**, in a fluent practised hand, the same signature in the same form that
+closes his son's baptism entry two years later. That places him in the city, literate, in
+August 1786 — and it sharpens a discrepancy §78 already recorded, because the Livinus
+Bundervoet who stood godfather in 1788 *declared he could not write*. On that evidence they
+are two different men.
+
+**The 1746–55 division.** The parties here are not Bundervoets but the **children of several
+Bundervoet sisters**, each group standing in its late mother's place. One clause was read
+from the image:
+
+> … van **Marie Joanne gheboren den 19 februarij 1712**, ende **Livinus de Smet gheboren den
+> 30 maert 1719**, gewonnen bij wijlent **Passchijntien de Bundervoet**, van ghelijcken
+> **suster van vollen bedde** was als vooren …
+
+So Paschasia Bundervoet, dead by the date of the act, left two children by a Pieter de Smet
+with birth dates to the day. The transcription layer puts two further groups in the same act
+— three children of Frans de Moerloose by the late **Joanna Bundervoet**, and four children of
+a van der [Craissen / Waijlle, two readings, disagreeing] by another late sister.
+
+**Nothing from either act entered the tree, and the reason is scope rather than doubt.** The
+clause above is soundly read; the rest of the act was not. **The sisters' own father is
+nowhere in the portion read**, and without him a sibship of married women is a set of
+surnames, not a family that can be joined to anything. Read in full it would give exactly
+that — which is why it stays on the queue rather than being written up as settled.
+
+**A note on the method, since it is now routine.** Both pages were reassembled the same way
+as §85: read the tile grid from the viewer's DOM, lay the tiles out as plain `<img>` in a
+page of their own, screenshot. It worked first time on both. The cost is that a screenshot
+captures what fits, so a long act needs several passes over the same opening, and that is the
+real reason the 1746–55 division is only partly read.
+
+Two artifacts saved, two searches logged `ambiguous` with their scope stated. Tree unchanged
+at 815.
