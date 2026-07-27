@@ -6,13 +6,14 @@ sex: m
 birth:
   date: 1851-08-15
   place: Sint-Stevens-Woluwe
-confidence: sup
+confidence: doc
 line: thumas
 father: guilielmus_bossin
 mother: peremans
 sources:
   - S33
   - S35
+  - fs-kraainem-1884-marriage-swaelens-bossin
 ---
 
 Named as the child in a civil birth act at **Sint-Stevens-Woluwe nr. 19, 15 Aug 1851**.
@@ -51,4 +52,8 @@ stands witness at his sister [[ludovica_bossin]]'s wedding — Kraainem, 25 Febr
 given as 32, *pleisteraar*. Age 32 on that date is an exact arithmetic match to the
 1851-08-15 birth this record already holds.
 
-`sup`: an act analysis, not the register image.
+**UPGRADED TO `doc` (2026-07-27) — THE REGISTER IMAGE WAS READ, and it states the
+relationship outright.** The act's own words, not this tree's inference from a shared
+birth act: *"Joannes Baptista Bossin, pleisteraar, oud twee en dertig jaren, wonende te
+Crainhem, **broeder der bruid**"* — brother of the bride, in the register itself. The
+sibship no longer rests on the arithmetic match to his own 1851 birth act alone.

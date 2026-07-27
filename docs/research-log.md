@@ -4107,3 +4107,140 @@ Sources touched: `emma_vincke`, `lucien_vincke`, `ludovica_vanald`, `flavie_vi`,
 `hermanie_janssen`, `romanie_vincke`. Confidence upgraded `sup` → `doc` on five records:
 [[emma_vincke]], [[flavie_vi]], [[eduardus_vi2]], [[joannes_vi]], [[alfons_vincke]]. Build
 green.
+
+## 75. Three Kraainem register images — a retraction, a refusal overturned by the document, and a discrepancy that was never wrong
+
+§72 worked the Swaelens×Bossin family entirely from AGATHA/Open Archives act analyses —
+structured transcriptions, no image. This pass reads the three register **images** behind
+that work: the Kraainem marriage act of 25 February 1884 (Swaelens×Bossin), the Alsemberg
+banns of 10 and 17 February 1884 for the same couple, and the Kraainem marriage act of 23
+November 1887 (Bossin×Guns) — held as `data/artifacts/swaelens-bossin-1884-marriage-kraainem.{jpg,md}`,
+`data/artifacts/swaelens-bossin-1884-banns-alsemberg.{jpg,md}` and
+`data/artifacts/bossin-guns-1887-marriage-kraainem.{jpg,md}`. Between them they settle
+everything §72 left open in this family, and retract one thing §72 got wrong.
+
+### A RETRACTION, against §72
+
+§72 recorded that AGATHA holds a scan for the 1884 act (`HUVLB_HUBRA_00197982_0`) but that
+the session was logged out — `blocked`. **That is wrong, and is retracted here.** The
+act's AGATHA page was reopened in a live, logged-in session (the anonymous login modal is
+absent, so the session is up), and its own `modal_URL` field is **empty and hidden**, with
+**no img, Mirador or IIIF reference anywhere in the DOM** — the identical structural limit
+already documented for the GEWVL West-Vlaanderen birth project at §64/§74. The local
+harvest confirms it independently: `abl.jsonl`'s record for this GUID carries **no
+`SourceAvailableScans` field at all**, unlike the 1887 act, which does, only a
+`SourceDigitalOriginal` pointing at the now end-of-life `search.arch.be`. AGATHA does not
+publish a scan for this act to anyone, logged in or not — a real venue limit, not a session
+error. `research/searches.jsonl` is corrected to match (lines logging this as a `miss`
+with that stated scope, superseding the earlier mistyped entry), and `swaelens`'s own
+record states the retraction in full. **Why the distinction matters**: `blocked` invites a
+pointless retry next pass; `miss` records a limit that only a different venue (here,
+FamilySearch's own Kraainem film) can get past.
+
+### Franciscus Swaelens — a correctly-cautious refusal, overturned by reading the act
+
+§72 found a witness at the 1884 wedding, **Franciscus Swaelens**, 24, of
+Sint-Genesius-Rode, a *schrijnwerker* like the groom, and explicitly declined to graft him
+as a relative: shared surname plus shared trade is one correlated signal, not the two
+independent identifiers Rule 1 requires, because a trade runs in families and
+apprenticeships. **The register image states it outright**: *"Franciscus Swaelens,
+schrijnwerker, oud vier en twintig jaren, wonende te Sint-Genesius Rhode, broeder des
+bruidegoms"* — brother of the groom, in the act's own words, signed by his own hand. He is
+now [[franciscus_swaelens]], son of [[egidius_swaelens]] and [[joanna_ackermans]], b.
+**1859..1860** (a year span, not a point — the act gives only his age, and this is what
+that age permits, no more). **This is the pass's methodological point.** §72's refusal was
+not an error to fix; it was the correct call on the evidence then available, and the
+correction came from reading the primary document, not from a better score or a change of
+heart. Rule 4 — a strong lead is not a link — worked exactly as intended in both
+directions: it kept a probable relative out of the tree until the document could speak for
+itself, and then let the document in.
+
+### The parents, no longer single-source
+
+[[egidius_swaelens]] × [[joanna_ackermans]] were accepted at `sup` from the one 1884 act
+naming both, with the frontier stated plainly that nothing in the corpus cross-checked
+them. The Alsemberg banns — a different commune, a different register series, a different
+clerk, filed before the Kraainem act existed — name the identical pair: *Egidius
+Swaelens, hovenier, wonende te Braken-Eigen [Eigenbrakel = Braine-l'Alleud]*, and *Joanna
+Ackermans, overleden*. Two independent identifiers (occupation + residence) now agree
+across two unconnected registers, and both records are upgraded to `doc`. The Kraainem
+act also gives two details no index carried: Egidius was **present in person and
+consenting**, and the act states he **could not sign, being illiterate**.
+
+### The discrepancy §72 refused to resolve — resolved, and S24 was never wrong
+
+§72 held both **17 February 1884, Alsemberg** (S24, a FamilySearch declaration index) and
+**25 February 1884, Kraainem** (the civil act) as a banns-then-act inference, not a proof.
+Both images now say it directly. Every box on the Alsemberg page is printed **AKTE VAN
+HUWELIJKSAFKONDIGING**: act nr. 7, Sunday 10 February, "voor de eerste maal"; act nr. 8,
+Sunday 17 February, "voor de tweede maal". The Kraainem act states the same thing in its
+own words: "de afkondigingen … en dat van Alsemberg, op de Zondagen tienden en
+zeventienden Februari laatstleden." **S24's 17 February is the second banns publication,
+not a rival marriage date — S24 never mistranscribed anything; this tree misread what
+kind of act its index row pointed at.** `swaelens` and `ludovica_bossin` now both carry
+`married: 1884-02-25, place: Kraainem` at `doc`, agreeing field for field as the data
+model requires; the banns dates are kept in prose as what they actually are, not
+discarded, and S24's registry note records the correction.
+
+### `henricus_bossin` — his own act, at `doc`
+
+The 1887 Kraainem act gives his birth directly on the register — **Kraainem, 1 January
+1863**, a birthplace no bare AGATHA index row carried — and states both parents,
+**Guillelmus Bossin × Joanna Catharina Peremans**, married farmers of Kraainem, **present
+in person and consenting**, which puts a hard floor of 23 November 1887 under
+[[guilielmus_bossin]]'s held death of 10 October 1888. The bride, **Maria Catharina
+Guns**, b. 23 December 1864, and her parents **Joannes Franciscus Guns × Amelia Vogels**,
+also present, are confirmed on the same image — [[guns_mc]], [[guns_jf]] and [[vogels_a]]
+all upgraded to `doc`. [[swaelens]] stands witness as *schoonbroeder des bruidegoms*, 29
+(exact against his 11 May 1858 birth), now resident at Kraainem rather than the Alsemberg
+of his own 1884 wedding three years earlier. **Recorded, not smoothed**: the bride signs
+**"Justine Guns"** though the act names her Maria Catharina — a roepnaam or informal name,
+self-referential within the one act and no threat to identity, since no rival Guns family
+at Sterrebeek is on offer.
+
+The same 1884 act that names Franciscus Swaelens also states, in its own words, that
+**Joannes Baptista Bossin (32)** and **Henricus Bossin (21)** are both *broeder der
+bruid*, and **Petrus Vanhoudenhoven (30)** is *schoonbroeder der bruid*. §72's Bossin
+sibships for [[joannes_bossin51]] and [[henricus_bossin]] rested on an exact arithmetic
+age match to their own separately-held birth acts; they now rest on the act's own stated
+relationship as well, and both records are upgraded to `doc`.
+
+### A third Peremans forename variant — recorded, and §65 is explicitly not reopened
+
+[[peremans]] is held as *Joanna Catharina Jacoba*. Across the three images read this pass
+she appears as ***Joanna Maria*** (the Alsemberg banns, both acts), ***Anna Catharina***
+(the 1884 Kraainem act, signing "A.C. Peremans"), and ***Joanna Catharina*** (the 1887
+Kraainem act, signing "C. Peremans") — her own signature in two different forms, three
+years apart. This is a third variant on top of the ones §65 already reconciled, and it
+still does not reopen that ruling: unlike [[anna_haesaerts]], whose only forename ever
+came from the disputed acts themselves, this record's identity is anchored
+**independently** of every one of these variants — by her husband, named identically
+across all of them, and by her daughter [[ludovica_bossin]]'s own exact day-level birth
+date and place, restated without variation across three separate acts. A third clerk's
+spelling of an already-anchored woman is not a new question.
+
+### Two frontiers, named and not linked
+
+**Petrus Vanhoudenhoven** (30 in 1884, 34 in 1887 — b. ~1853) and **Egidius Franciscus De
+Hondt** (26 in 1887 — b. ~1861), both of Kraainem, are each stated a brother-in-law of a
+Bossin sibling by the acts themselves — but neither act names his wife, so each implies an
+unidentified Bossin daughter of [[guilielmus_bossin]] × [[peremans]], recorded once as a
+frontier on that record rather than duplicated on every sibling's page.
+
+### Housekeeping
+
+Three artifacts committed: `swaelens-bossin-1884-marriage-kraainem.{jpg,md}`,
+`swaelens-bossin-1884-banns-alsemberg.{jpg,md}`, `bossin-guns-1887-marriage-kraainem.{jpg,md}`.
+Three new `research/sources.json` entries at `doc` (`fs-kraainem-1884-marriage-swaelens-bossin`,
+`fs-alsemberg-1884-banns-swaelens-bossin`, `fs-kraainem-1887-marriage-bossin-guns`), plus
+the film-locating collection entry `fs-kraainem-civil-registers` and the superseded
+`agatha-kraainem-1884-marriage-swaelens-bossin` (`sup`, kept as the record of what the
+index-only reading held before the image). Eight labels recorded against these images'
+mentions (`egidius_swaelens`, `joanna_ackermans`, `peremans` ×2, `guilielmus_bossin`,
+`guns_mc`, `guns_jf`, `vogels_a`), all `match: true`, `basis: act`.
+
+Tree: 536 → **537 people** — [[franciscus_swaelens]] is the only addition. Confidence
+upgraded `sup` → `doc` on eleven existing records: [[egidius_swaelens]],
+[[joanna_ackermans]], [[swaelens]], [[ludovica_bossin]], [[joannes_bossin51]],
+[[henricus_bossin]], [[guilielmus_bossin]], [[peremans]], [[guns_mc]], [[guns_jf]] and
+[[vogels_a]]. One retraction (§72's `blocked` → `miss`, with scope). Build green.

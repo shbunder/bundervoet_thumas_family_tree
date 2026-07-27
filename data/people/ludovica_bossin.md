@@ -5,15 +5,15 @@ surname: Bossin
 birth:
   date: 1853-10-05
   place: Sint-Stevens-Woluwe
-confidence: sup
+confidence: doc
 line: thumas
 father: guilielmus_bossin
 mother: peremans
 spouses:
   - id: swaelens
     name: Joannes Baptista Julianus Swaelens
-    married: 1884-02-17
-    place: Alsemberg
+    married: 1884-02-25
+    place: Kraainem
   - id: petrus_vrebos
     name: Petrus Vrebos
     married: 1901-05-30
@@ -22,6 +22,8 @@ sources:
   - S24
   - S33
   - S35
+  - fs-kraainem-1884-marriage-swaelens-bossin
+  - fs-alsemberg-1884-banns-swaelens-bossin
 ---
 
 Younger sister of [[bossin]], and one of six known children of [[guilielmus_bossin]] and
@@ -43,31 +45,44 @@ why this act is read as giving the birth itself rather than a declaration a day 
 and the field now carries **1853-10-05** as a day-level date rather than a year with a
 `raw` declaration note.
 
-She married **Joannes Baptista Julianus Swaelens** at **Alsemberg on 17 February 1884**, at
-about thirty. The marriage index names her parents as *Guilielmus Bossin* and *Joanna Maria
-Peremans* — a fourth spelling of her mother's forename, after the *Joanna Catharina Jacoba* of
-her mother's own act, the *Anna Catharina* of her sister's 1872 act, and the *Anna Catharina*
-of these birth declarations. One woman, four clerks.
+A FamilySearch declaration index (S24) named her parents as *Guilielmus Bossin* and
+*Joanna Maria Peremans* against an entry it read as "marriage, 17 February 1884,
+Alsemberg" — a fourth spelling of her mother's forename, after the *Joanna Catharina
+Jacoba* of her mother's own act, the *Anna Catharina* of her sister's 1872 act, and the
+*Anna Catharina* of these birth declarations. **That reading is now known to be the second
+publication of the marriage banns, not the marriage — see below**; it was S24 correctly
+transcribing an index row and this record misreading what kind of act the row was.
 
 **Her own marriage act, read in full (2026-07-27) — Kraainem, 25 February 1884.** It
 restates her birth exactly as held here, **5 October 1853, Sint-Stevens-Woluwe**, and
 names her parents as **Guillelmus Bossin**, landbouwer, and **Anna Catharina Peremans**,
 landbouwster, both of Kraainem — a further, independent match to [[guilielmus_bossin]]
 and [[peremans]], with the mother's forename in the already-reconciled shortened form
-(see peremans.md, joannes_bossin51.md, research-log §65). **A discrepancy is recorded,
-not smoothed over**: this act gives the marriage as **25 February 1884, Kraainem**,
-eight days and one commune away from the **17 February 1884, Alsemberg** the S24
-declaration index already gave. Banns at Alsemberg followed by the act at Kraainem is
-plausible but unproven, so the frontmatter `married`/`place` fields stay at the
-earlier-held S24 values, and the civil act's date and place stand alongside them in
-prose as the fuller record of the event — not a silent replacement for S24 — the same
-treatment [[guilielmus_bossin]] and [[egidius_peremans]]'s one-year death conflict
-already received (§69).
+(see peremans.md, joannes_bossin51.md, research-log §65).
 
-That variation is why the marriage is attached at `sup` and not more. The birth row and the
-marriage row agree on the surname pair, the father's forename and a consistent age, which is
-enough to record — but the register images would settle whether the 1853 child and the 1884
-bride are the same Ludovica.
+**THE REGISTER IMAGE WAS READ (2026-07-27), and the 17-vs-25 February discrepancy is
+SETTLED.** The Kraainem marriage act states outright that the banns were published "op de
+Zondagen tienden en zeventienden Februari laatstleden" — Sundays the 10th and 17th of
+February — at Kraainem and Alsemberg. A second, independent register confirms it: the
+**Alsemberg banns register itself**, read as an image, carries acts nrs. 7 and 8, each
+printed **AKTE VAN HUWELIJKSAFKONDIGING**, dated Sunday 10 February ("voor de eerste maal
+afgekondigd") and Sunday 17 February ("voor de tweede maal afgekondigd") 1884. **S24 was
+never wrong about the 17th — it correctly read the second banns publication; what was
+missing was the fact that a banns publication and a marriage are two different acts.**
+The marriage itself is **25 February 1884, Kraainem**, now the value in this record's
+frontmatter, matching [[swaelens]]'s record field for field as the data model requires.
+The banns dates are kept here, in prose, as what they actually are, not discarded.
+
+Confidence is raised to `doc`: both this marriage and the discrepancy that had kept it at
+`sup` now rest on two independently read register images, not an index row.
+
+**The witnesses, all named by relationship in the act's own words.** [[franciscus_swaelens]],
+24, is stated *broeder des bruidegoms* — the groom's brother. [[joannes_bossin51]], 32, and
+[[henricus_bossin]], 21, are both stated *broeder der bruid* — her own brothers, no longer
+resting on inference from their own separate acts alone. **Petrus Vanhoudenhoven**, 30, is
+stated *schoonbroeder der bruid* — her brother-in-law, meaning a Bossin sister not yet
+identified in this tree married him; see [[guilielmus_bossin]] for that frontier, which a
+second, independent act in 1887 repeats.
 
 **A REMARRIAGE (2026-07-27) — Petrus Vrebos, Kraainem, 30 May 1901.** Not previously in
 the tree. By then a widow — [[swaelens]] had died at Kraainem on 7 October 1898, named in
@@ -79,5 +94,5 @@ from a bare year to a day, now corroborated a second time independently by
 [[joannes_franciscus_bossin]]'s own 1896 marriage act — and her mother **Anna Catharina
 Peremans**, the already-reconciled shortened form.
 
-FRONTIER: both register images (the 1884 marriage and this one), and any children of
-either marriage.
+FRONTIER: the 1901 remarriage register image (the 1884 marriage's image is now read), and
+any children of either marriage.

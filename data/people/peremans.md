@@ -7,7 +7,7 @@ birth:
   place: Zaventem
 death:
   date: "1907"
-confidence: sup
+confidence: doc
 occupation: huishoudster (housekeeper)
 line: thumas
 father: egidius_peremans
@@ -27,6 +27,9 @@ sources:
   - S33
   - S34
   - S35
+  - fs-kraainem-1884-marriage-swaelens-bossin
+  - fs-kraainem-1887-marriage-bossin-guns
+  - fs-alsemberg-1884-banns-swaelens-bossin
 ---
 
 CORROBORATED (July 2026) as a mother, by her daughter's Kraainem marriage act of
@@ -146,3 +149,27 @@ Two of her daughter [[ludovica_bossin]]'s acts corroborate this record twice mor
 1884 marriage act (*Anna Catharina Peremans*) and her 1901 remarriage act (*Anna Catharina
 Peremans*, again zonder beroep) — the shortened form, matching the pattern already
 documented above.
+
+**TWO REGISTER IMAGES READ (2026-07-27), and a THIRD forename variant surfaces.** The
+Kraainem marriage act and the Alsemberg banns behind [[ludovica_bossin]]'s 1884 wedding
+were both read as images, not indexes, and between them this record's mother appears in
+**three different forms across three documents**: ***Joanna Maria*** on the Alsemberg
+banns (both act nr. 7 and act nr. 8), ***Anna Catharina*** on the Kraainem marriage act
+eight days later — where she is **present in person, signs "A.C. Peremans"**, confirmed by
+direct inspection of the signature line — and ***Joanna Catharina*** on her son
+[[henricus_bossin]]'s 1887 Kraainem marriage act, where she again signs, this time
+**"C. Peremans"**. One woman's own signature in two different forms, three years apart, in
+addition to the *Joanna Catharina Jacoba* of her own 1846 marriage act (S19) and the *Anna
+Catharina* the family's several other acts already use.
+
+**This still holds together as one woman, and §65's ruling is explicitly NOT reopened.**
+What anchors her identity is not any of the disputed acts themselves but two things
+independent of all of them: her husband, named identically as **Guilielmus/Guillelmus
+Bossin** across every one of these documents, and her daughter [[ludovica_bossin]]'s own
+**exact day-level birth date and place** (5 October 1853, Sint-Stevens-Woluwe), restated
+without variation across her birth act, her 1884 marriage act and her 1901 remarriage act.
+That is precisely what distinguishes this case from [[anna_haesaerts]]'s, where no
+document independent of the disputed acts ever settled her forename: there, the anchor and
+the dispute are the same acts; here, the anchor (S19, plus the daughter's birth) sits
+outside the dispute entirely, so a third spelling variant is one more clerk's rendering of
+the same well-anchored woman, not a new question to resolve.

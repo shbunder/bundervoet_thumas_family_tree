@@ -390,7 +390,7 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Saved artifact:** `data/artifacts/bossin-peremans-children-sint-stevens-woluwe.md`
 - **Confidence:** sup
 - **Accessed:** 2026-07-26
-- **Note:** An index. Declaration dates, not birth dates. Search covered 1846-1870 only, so further children are possible.
+- **Note:** An index. Declaration dates, not birth dates. Search covered 1846-1870 only, so further children are possible. CORRECTED (2026-07-27): the '17 Feb 1884 Alsemberg' row this index carries for Ludovica's marriage was never a transcription error -- it is the SECOND publication of the marriage banns, correctly read off the index. The marriage itself is 25 Feb 1884, Kraainem, per the civil act and the Alsemberg banns register both read as images (fs-kraainem-1884-marriage-swaelens-bossin, fs-alsemberg-1884-banns-swaelens-bossin). What research-log Sec.72 got wrong was treating a banns index row as a marriage date, not this source's own transcription.
 
 #### `S25` — The children of Georges Thumas x Marie Catherine Joostens at Grez-Doiceau, 1835-1868
 - **Kind:** index · <https://www.familysearch.org/search/record/results?q.surname=Thumas&q.fatherSurname=Thumas&q.motherSurname=Joostens&f.recordCountry=Belgium>

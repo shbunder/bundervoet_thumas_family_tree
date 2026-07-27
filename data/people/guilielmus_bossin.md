@@ -8,7 +8,7 @@ birth:
 death:
   date: 1888-10-10
   place: Kraainem
-confidence: sup
+confidence: doc
 occupation: landbouwer (farmer)
 line: thumas
 father: arnoldus_bossin
@@ -25,6 +25,8 @@ sources:
   - S8
   - S33
   - S35
+  - fs-kraainem-1884-marriage-swaelens-bossin
+  - fs-kraainem-1887-marriage-bossin-guns
 ---
 
 CORROBORATED (July 2026) as a father, by his daughter's Kraainem marriage act of
@@ -96,3 +98,25 @@ son [[joannes_franciscus_bossin]]'s 1896 Werchter marriage act — two different
 two different registers, five years apart — both give his death as **Kraainem, 10
 October 1888**, agreeing to the day. That is what makes the day-level date safe to hold
 rather than a single-source guess, and it now supersedes the bare year.
+
+**UPGRADED BACK TO `doc` (2026-07-27) — two register images, not index rows, were read.**
+[[ludovica_bossin]]'s 1884 Kraainem marriage act and [[henricus_bossin]]'s 1887 Kraainem
+marriage act were both read as images. Both state him **present in person and
+consenting** alongside his wife [[peremans]] — the 1887 act naming both explicitly:
+*"beiden alhier tegenwoordig en toestemmende."* That puts a **hard floor of 23 November
+1887** under the 10 October 1888 death this record already holds, a third, direct
+confirmation independent of the two children's later acts that first supplied the
+day-level date. This does not reopen §52's downgrade of the AGATHA-only acts, which remain
+`sup`-grade evidence in their own right; it is these two specific, newly-read images that
+carry the record's overall confidence back to `doc`.
+
+**TWO MORE SONS-IN-LAW, NAMED BUT NOT LINKED — a frontier, not a graft.** Both weddings
+name a brother-in-law of the bride/groom whose own wife is never given: **Petrus
+Vanhoudenhoven**, aged 30 in 1884 and 34 in 1887 (b. ~1853), stated *schoonbroeder der
+bruid* at [[ludovica_bossin]]'s wedding and *schoonbroeder des bruidegoms* at
+[[henricus_bossin]]'s — the same man both times, on the arithmetic — and **Egidius
+Franciscus De Hondt**, 26 in 1887 (b. ~1861), stated *schoonbroeder des bruidegoms* at
+[[henricus_bossin]]'s wedding only. Each therefore married a Bossin daughter of this
+couple who is not yet identified in this tree — a seventh child, or an eighth, neither
+named in any register read so far. Recorded here, once, rather than duplicated on every
+child's own page.

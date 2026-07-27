@@ -6,7 +6,7 @@ sex: m
 birth:
   date: 1863-01-01
   place: Kraainem
-confidence: sup
+confidence: doc
 occupation: schaliedekker (roofer)
 line: thumas
 father: guilielmus_bossin
@@ -18,6 +18,8 @@ spouses:
     place: Kraainem
 sources:
   - S35
+  - fs-kraainem-1887-marriage-bossin-guns
+  - fs-kraainem-1884-marriage-swaelens-bossin
 ---
 
 A FIFTH CHILD of [[guilielmus_bossin]] and [[peremans]] (2026-07-27), found as a witness
@@ -53,6 +55,33 @@ act calls her *Joanna Catharina Peremans* — closer to [[peremans]]'s own ancho
 use. It applies the standing reconciliation (peremans.md, joannes_bossin51.md,
 research-log §65) and changes nothing.
 
-`sup`: an index-level AGATHA/Demogen act analysis, no register image read.
+**UPGRADED TO `doc` (2026-07-27) — BOTH REGISTER IMAGES WERE READ.** His own 1887 Kraainem
+marriage act confirms his birth directly on the register — **Kraainem, 1 January
+1863** — and states his parents were **both present in person and consenting**: *"meerderjarigen
+zoon van Guillelmus Bossin en van Joanna Catharina Peremans, gehuwden, landbouwers, wonende
+te Crainhem, beiden alhier tegenwoordig en toestemmende."* That is a hard floor: both
+parents were demonstrably alive on 23 November 1887, sharpening what
+[[guilielmus_bossin]]'s own record already treats as his death window. The 1884 Kraainem
+act (his sister [[ludovica_bossin]]'s wedding) states the sibship outright as well,
+independently of this act: *"Henricus Bossin, schaliedekker, oud een en twintig jaren,
+wonende te Crainhem, **broeder der bruid**"* — no longer resting on the arithmetic
+coincidence of his stated age alone.
 
-FRONTIER: his own birth act, and any children of this marriage.
+**His bride signs a different name from the one the act gives her — recorded, not
+smoothed over.** [[guns_mc]] is named throughout as *Maria Catharina Guns*, but she signs
+the register **"Justine Guns"**. A roepnaam (call-name) or a formal/informal name pair used
+by the same woman for the same act is self-referential and no threat to identity — there is
+no rival Guns family proposed at Sterrebeek — but it is worth recording exactly as written.
+
+**Three brothers-in-law stand witness, two of them frontiers rather than links.**
+[[swaelens]], 29, *schrijnwerker*, is stated *schoonbroeder des bruidegoms* — the groom's
+brother-in-law, and by 1887 resident at **Kraainem** rather than the Alsemberg of his own
+1884 wedding, an exact arithmetic match to his 11 May 1858 birth. The other two are new
+names, and neither act names a wife for either: **Petrus Vanhoudenhoven**, 34 here (30 at
+the 1884 wedding, so b. ~1853), and **Egidius Franciscus De Hondt**, 26 (b. ~1861), both of
+Kraainem, both stated *schoonbroeder des bruidegoms*. Each therefore married an
+unidentified Bossin daughter — see [[guilielmus_bossin]] for that frontier, recorded once
+rather than on every sibling's own page.
+
+FRONTIER: his own civil birth registration (a separate document from this marriage act),
+and any children of this marriage.
