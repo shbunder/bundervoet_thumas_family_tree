@@ -1,0 +1,6715 @@
+{
+ "generated": "2026-07-27",
+ "pass": "objective 3 — Bundervoet diaspora beyond Open Archives BE",
+ "status": "EVIDENCE ONLY — nothing here has been grafted, labelled or logged. See the .md dossier.",
+ "venues": {
+  "openarch_be": {
+   "total": 396,
+   "note": "complete, already harvested (manifest id 'bundervoet')"
+  },
+  "openarch_nl": {
+   "total": 176,
+   "note": "NEVER harvested — harvest ran country_code=be. Full records in openarch_nl_acts below."
+  },
+  "openarch_world": {
+   "total": 576
+  },
+  "familysearch_be": {
+   "total": 1118,
+   "exact_surname_personas": 216,
+   "pre_1845": 76,
+   "note": "never harvested"
+  },
+  "familysearch_nl": {
+   "total": 5653,
+   "note": "never harvested"
+  },
+  "familysearch_fr": {
+   "total": 807,
+   "note": "includes a Reunion colonial branch"
+  },
+  "familysearch_us": {
+   "total": 1175,
+   "note": "includes Evergem->Indiana emigration and a 'Bundervoet d'Hautecourt' line"
+  }
+ },
+ "rarity": {
+  "corpus_mentions": 4276988,
+  "bundervoet": 391,
+  "bits": 13.4,
+  "variants_in_corpus": "none",
+  "comparison": {
+   "janssens": 8.2,
+   "devriendt": 10.5,
+   "stockman": 11.2
+  }
+ },
+ "birthplaces_all_belgian_corpus": {
+  "Evergem": 47,
+  "Gent": 29,
+  "Oostende": 17,
+  "Wachtebeke": 9,
+  "Kluizen": 5,
+  "Zwijnaarde": 2,
+  "Zaffelare": 2,
+  "Wippelgem": 2,
+  "Dendermonde": 2,
+  "Aalst": 1,
+  "Sleidinge": 1,
+  "Doornzele": 1
+ },
+ "openarch_nl_acts": [
+  {
+   "y": 1631,
+   "id": "wba:ba041910-4865-11e1-9853-b7a7dd2b6a2a",
+   "ev": "Notariële akte",
+   "date": "1631-4-3",
+   "place": "Bergen op Zoom",
+   "people": [
+    [
+     "Geregistreerde",
+     "Michiel Geertssen Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Pieter de Nagel",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Phls (Philips) Adriaenssen",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Henrick Willem",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Gille",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Christiaen Jacobssen",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Matthys Janssen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/wba:ba041910-4865-11e1-9853-b7a7dd2b6a2a"
+  },
+  {
+   "y": 1648,
+   "id": "srt:F8826C16-9409-4612-8988-F4EBDFC0BD98",
+   "ev": "Doop",
+   "date": "1648-09-24",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Catelijn",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Heinderijck Maertense",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Hester Koenraets",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Michgiel Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jannetge Michgiels",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Grietge Jans",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F8826C16-9409-4612-8988-F4EBDFC0BD98"
+  },
+  {
+   "y": 1651,
+   "id": "bhi:45dfeddb-80ad-c5cd-c580-149944d55ec9",
+   "ev": "Doop",
+   "date": "1651-4-19",
+   "place": "Bergen op Zoom",
+   "people": [
+    [
+     "Moeder",
+     "Janneke Adriaensen",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Machiel Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Gillis de Neve",
+     "",
+     ""
+    ],
+    [
+     "Kind",
+     "Maria Wolfersen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Guillam Wolfersen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/bhi:45dfeddb-80ad-c5cd-c580-149944d55ec9"
+  },
+  {
+   "y": 1651,
+   "id": "srt:EA697AC0-7E1D-468C-BF54-65092043ACB2",
+   "ev": "Trouwen",
+   "date": "1651-05-29",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Jan Versteeghen",
+     "",
+     "Mechelen"
+    ],
+    [
+     "other:bruid",
+     "Jannetje Bundervoet",
+     "",
+     "Bergen Op Zoom"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:EA697AC0-7E1D-468C-BF54-65092043ACB2"
+  },
+  {
+   "y": 1651,
+   "id": "wba:681a338c-4865-11e1-9853-b7a7dd2b6a2a",
+   "ev": "Doop",
+   "date": "1651-4-19",
+   "place": "Bergen op Zoom",
+   "people": [
+    [
+     "Vader",
+     "Guillam Wolfersen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Janneke Adriaensen",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Machiel Geertsen Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Gillis de Neve",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Nicolais Turcq",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Janneke Cornelissen",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Mayken Mertenssen",
+     "",
+     ""
+    ],
+    [
+     "Dopeling",
+     "Maria Wolfersen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/wba:681a338c-4865-11e1-9853-b7a7dd2b6a2a"
+  },
+  {
+   "y": 1652,
+   "id": "srt:5ED57605-DD64-406C-80A1-3E3E1C52EA71",
+   "ev": "Doop",
+   "date": "1652-10-31",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Barbara",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan van Ganswijck",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marija Thijbouts",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Abram Velthuijse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Anna Velthuijse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Isack van Heel",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Mijchiel Gerritse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "N.n. Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5ED57605-DD64-406C-80A1-3E3E1C52EA71"
+  },
+  {
+   "y": 1652,
+   "id": "srt:9B8BC861-F78C-4C82-8F46-6182193D26C8",
+   "ev": "Doop",
+   "date": "1652-10-31",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Barbara",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan van Ganswijck",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marija Thijbouts",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Abram Velthuijse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Anna Velthuijse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Isack van Heel",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Mijchiel Gerritse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "N.n. Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:9B8BC861-F78C-4C82-8F46-6182193D26C8"
+  },
+  {
+   "y": 1655,
+   "id": "wba:a9bb5938-4865-11e1-9853-b7a7dd2b6a2a",
+   "ev": "Notariële akte",
+   "date": "1655-11-9",
+   "place": "Bergen op Zoom",
+   "people": [
+    [
+     "Geregistreerde",
+     "Jan Pieterssen",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Anthonie du Pon",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Pieter Willemssen",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Anthonie Cornelissen",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adriaen Claessen",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Michiel Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maijken Laureijs",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Jacob Janssen Nieuwgebuer",
+     "",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "weduwe van Pieter Willemssen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/wba:a9bb5938-4865-11e1-9853-b7a7dd2b6a2a"
+  },
+  {
+   "y": 1656,
+   "id": "srt:6D4C8CDF-3FC9-490B-BB8B-77869F84E6A7",
+   "ev": "Trouwen",
+   "date": "1656-06-11",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Gerret Bundervoet",
+     "",
+     "Bergen Op Zoom"
+    ],
+    [
+     "other:bruid",
+     "Maritjen Barents",
+     "",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6D4C8CDF-3FC9-490B-BB8B-77869F84E6A7"
+  },
+  {
+   "y": 1657,
+   "id": "bhi:97b4324a-a3ca-00ba-e557-ed54b2fe04eb",
+   "ev": "Doop",
+   "date": "1657-5-16",
+   "place": "Bergen op Zoom",
+   "people": [
+    [
+     "Kind",
+     "Adriaentgen Poij",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Joos Poij",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Poij",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Adriaentgen Lievens",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/bhi:97b4324a-a3ca-00ba-e557-ed54b2fe04eb"
+  },
+  {
+   "y": 1657,
+   "id": "srt:FFE30984-8CB3-4B3F-9B98-CDF0F8A615CC",
+   "ev": "Doop",
+   "date": "1657-11-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maritje",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteve",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetje Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Wolfertse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Lijsbet Jans",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Fransijntje Jans",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:FFE30984-8CB3-4B3F-9B98-CDF0F8A615CC"
+  },
+  {
+   "y": 1657,
+   "id": "srt:FFE30984-8CB3-4B3F-9B98-CDF0F8A615CC",
+   "ev": "Doop",
+   "date": "1657-11-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maritje",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteve",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetje Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Wolfertse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Lijsbet Jans",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Fransijntje Jans",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:FFE30984-8CB3-4B3F-9B98-CDF0F8A615CC"
+  },
+  {
+   "y": 1657,
+   "id": "wba:6903f51c-4865-11e1-9853-b7a7dd2b6a2a",
+   "ev": "Doop",
+   "date": "1657-5-16",
+   "place": "Bergen op Zoom",
+   "people": [
+    [
+     "Vader",
+     "Joos Adriaensen Poij",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Adriaentgen Lievens",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Adriaensen Poij",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Machielsen Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francyne Jans",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Janneken Adriaens Poij",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Merryken Berents",
+     "",
+     ""
+    ],
+    [
+     "Dopeling",
+     "Adriaentgen Poij",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/wba:6903f51c-4865-11e1-9853-b7a7dd2b6a2a"
+  },
+  {
+   "y": 1658,
+   "id": "srt:5BD74FED-2AAF-406A-AC4F-7A39455759A6",
+   "ev": "Doop",
+   "date": "1658-12-17",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Michiel",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Claes Troch",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Guiljam Wolfertse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Trijntge Jacobs",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5BD74FED-2AAF-406A-AC4F-7A39455759A6"
+  },
+  {
+   "y": 1658,
+   "id": "srt:5BD74FED-2AAF-406A-AC4F-7A39455759A6",
+   "ev": "Doop",
+   "date": "1658-12-17",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Michiel",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Claes Troch",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Guiljam Wolfertse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Trijntge Jacobs",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5BD74FED-2AAF-406A-AC4F-7A39455759A6"
+  },
+  {
+   "y": 1658,
+   "id": "srt:A7C6A414-E620-4418-A419-66F076293078",
+   "ev": "Trouwen",
+   "date": "1658-06-23",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Jan Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:bruid",
+     "Trijntie Jacobs",
+     "",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A7C6A414-E620-4418-A419-66F076293078"
+  },
+  {
+   "y": 1659,
+   "id": "srt:5CCB3C30-A1D8-4C87-B14B-AF0217C7E0A4",
+   "ev": "Doop",
+   "date": "1659-07-03",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Lijntje",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Trijntje Jacobs",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Floortje Michiels",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Pieterse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Arij Jacobse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Marij Barents",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5CCB3C30-A1D8-4C87-B14B-AF0217C7E0A4"
+  },
+  {
+   "y": 1660,
+   "id": "srt:6E9E58C9-52AF-40F0-9DC9-7AAA6C2DF02E",
+   "ev": "Begraven",
+   "date": "1660-01-18",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Jan Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Partner",
+     "Trijntje Jacobs",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6E9E58C9-52AF-40F0-9DC9-7AAA6C2DF02E"
+  },
+  {
+   "y": 1661,
+   "id": "srt:090C1787-FB0F-4A34-9096-005C2BEE5B76",
+   "ev": "Doop",
+   "date": "1661-05-01",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Barent",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Barentse",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marijtje van Swiepe",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Gerrit Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Marijtje Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Trijntje Cools",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:090C1787-FB0F-4A34-9096-005C2BEE5B76"
+  },
+  {
+   "y": 1661,
+   "id": "srt:090C1787-FB0F-4A34-9096-005C2BEE5B76",
+   "ev": "Doop",
+   "date": "1661-05-01",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Barent",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Barentse",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marijtje van Swiepe",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Gerrit Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Marijtje Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Trijntje Cools",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:090C1787-FB0F-4A34-9096-005C2BEE5B76"
+  },
+  {
+   "y": 1661,
+   "id": "srt:9F0EF62A-AAE3-4DD6-900E-9EE346F1F87D",
+   "ev": "Doop",
+   "date": "1661-10-02",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Jan",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Heijndrick Balckensche",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Trijntge Andet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertie Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:9F0EF62A-AAE3-4DD6-900E-9EE346F1F87D"
+  },
+  {
+   "y": 1661,
+   "id": "srt:9F0EF62A-AAE3-4DD6-900E-9EE346F1F87D",
+   "ev": "Doop",
+   "date": "1661-10-02",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Jan",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Heijndrick Balckensche",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Trijntge Andet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertie Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:9F0EF62A-AAE3-4DD6-900E-9EE346F1F87D"
+  },
+  {
+   "y": 1663,
+   "id": "srt:34A960AF-E1D3-4217-9FF9-B94A2F1224A5",
+   "ev": "Trouwen",
+   "date": "1663-08-12",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Willem Maes",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:bruid",
+     "Maertien Bundervoet",
+     "",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:34A960AF-E1D3-4217-9FF9-B94A2F1224A5"
+  },
+  {
+   "y": 1663,
+   "id": "srt:6FE502C6-E5EB-4929-B003-384F60434150",
+   "ev": "Doop",
+   "date": "1663-09-19",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gerrit",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Sijmen Cornelisse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Flora Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6FE502C6-E5EB-4929-B003-384F60434150"
+  },
+  {
+   "y": 1663,
+   "id": "srt:6FE502C6-E5EB-4929-B003-384F60434150",
+   "ev": "Doop",
+   "date": "1663-09-19",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gerrit",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Sijmen Cornelisse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Flora Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6FE502C6-E5EB-4929-B003-384F60434150"
+  },
+  {
+   "y": 1663,
+   "id": "srt:6FE502C6-E5EB-4929-B003-384F60434150",
+   "ev": "Doop",
+   "date": "1663-09-19",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gerrit",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Sijmen Cornelisse",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Flora Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6FE502C6-E5EB-4929-B003-384F60434150"
+  },
+  {
+   "y": 1663,
+   "id": "srt:FF79632F-ECAE-476B-BCDA-327A7D3B97A3",
+   "ev": "Trouwen",
+   "date": "1663-01-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Cornelis van der Kemp",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:bruid",
+     "Trijntje van Andel",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:Eerdere partner",
+     "Jan Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:FF79632F-ECAE-476B-BCDA-327A7D3B97A3"
+  },
+  {
+   "y": 1664,
+   "id": "srt:009B9035-7083-4050-BEEA-8FDF78FD5FDE",
+   "ev": "Doop",
+   "date": "1664-06-01",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Jan",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Willem Maes",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Maertge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Bastiaen Maes",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Maes",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Versteven",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Lijntge Jaes",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Cornelia Cornelis",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:009B9035-7083-4050-BEEA-8FDF78FD5FDE"
+  },
+  {
+   "y": 1664,
+   "id": "srt:C707E942-052F-4059-BAB3-34B046DCABB3",
+   "ev": "Doop",
+   "date": "1664-10-09",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Lijntge",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Heijndrick Balckeschoot",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Flora Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Willem Maes",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maritge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Versteven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:C707E942-052F-4059-BAB3-34B046DCABB3"
+  },
+  {
+   "y": 1664,
+   "id": "srt:C707E942-052F-4059-BAB3-34B046DCABB3",
+   "ev": "Doop",
+   "date": "1664-10-09",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Lijntge",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Heijndrick Balckeschoot",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Flora Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Willem Maes",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maritge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Versteven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:C707E942-052F-4059-BAB3-34B046DCABB3"
+  },
+  {
+   "y": 1664,
+   "id": "srt:C707E942-052F-4059-BAB3-34B046DCABB3",
+   "ev": "Doop",
+   "date": "1664-10-09",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Lijntge",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Heijndrick Balckeschoot",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Flora Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Willem Maes",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maritge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jan Versteven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:C707E942-052F-4059-BAB3-34B046DCABB3"
+  },
+  {
+   "y": 1665,
+   "id": "srt:B384585E-E1F0-4853-BE18-EC94F14B6396",
+   "ev": "Trouwen",
+   "date": "1665-04-06",
+   "place": "Hillegersberg",
+   "people": [
+    [
+     "Bruidegom",
+     "Juriaen de Jonge",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Francijntje Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:B384585E-E1F0-4853-BE18-EC94F14B6396"
+  },
+  {
+   "y": 1665,
+   "id": "srt:E487F1AC-7DD0-4FAA-9E63-A9F3A8BFFF2C",
+   "ev": "Trouwen",
+   "date": "1665-03-22",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Jurriaan de Jonge",
+     "",
+     "Schiedam"
+    ],
+    [
+     "other:bruid",
+     "Francijntje Bundervoet",
+     "",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:E487F1AC-7DD0-4FAA-9E63-A9F3A8BFFF2C"
+  },
+  {
+   "y": 1666,
+   "id": "srt:AE1E0A9D-B5B6-4044-8B23-A66EA38E90CA",
+   "ev": "Doop",
+   "date": "1666-01-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maritie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteine",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jannetge Migiels",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:AE1E0A9D-B5B6-4044-8B23-A66EA38E90CA"
+  },
+  {
+   "y": 1666,
+   "id": "srt:AE1E0A9D-B5B6-4044-8B23-A66EA38E90CA",
+   "ev": "Doop",
+   "date": "1666-01-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maritie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteine",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jannetge Migiels",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:AE1E0A9D-B5B6-4044-8B23-A66EA38E90CA"
+  },
+  {
+   "y": 1666,
+   "id": "srt:F20C2E43-6CE6-4C29-B9FB-068FFBE1BD05",
+   "ev": "Doop",
+   "date": "1666-01-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maerten",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteine",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jannetge Migiels",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F20C2E43-6CE6-4C29-B9FB-068FFBE1BD05"
+  },
+  {
+   "y": 1666,
+   "id": "srt:F20C2E43-6CE6-4C29-B9FB-068FFBE1BD05",
+   "ev": "Doop",
+   "date": "1666-01-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maerten",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteine",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jannetge Migiels",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F20C2E43-6CE6-4C29-B9FB-068FFBE1BD05"
+  },
+  {
+   "y": 1668,
+   "id": "srt:BF7F97A3-F1CD-45E6-B24B-4B479DEE13B1",
+   "ev": "Doop",
+   "date": "1668-10-18",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Fransintie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteun",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertie Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Arijaentie Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:BF7F97A3-F1CD-45E6-B24B-4B479DEE13B1"
+  },
+  {
+   "y": 1668,
+   "id": "srt:BF7F97A3-F1CD-45E6-B24B-4B479DEE13B1",
+   "ev": "Doop",
+   "date": "1668-10-18",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Fransintie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteun",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertie Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Arijaentie Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:BF7F97A3-F1CD-45E6-B24B-4B479DEE13B1"
+  },
+  {
+   "y": 1668,
+   "id": "srt:BF7F97A3-F1CD-45E6-B24B-4B479DEE13B1",
+   "ev": "Doop",
+   "date": "1668-10-18",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Fransintie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan Versteun",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Jannetge Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maertie Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Arijaentie Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:BF7F97A3-F1CD-45E6-B24B-4B479DEE13B1"
+  },
+  {
+   "y": 1668,
+   "id": "srt:F41176C3-D752-4BB0-9EEF-A3FD23110026",
+   "ev": "Trouwen",
+   "date": "1668-09-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Jacob van Ganswijck",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:bruid",
+     "Francijntje Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Jurian Jurriaense",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F41176C3-D752-4BB0-9EEF-A3FD23110026"
+  },
+  {
+   "y": 1677,
+   "id": "srt:2A3E8F54-0828-41CA-86F9-5FE74C6A2861",
+   "ev": "Trouwen",
+   "date": "1677-12-12",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Cornelis Alblasserdam",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:bruid",
+     "Francijntje Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:Eerdere partner",
+     "Jacob Ganswijck",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2A3E8F54-0828-41CA-86F9-5FE74C6A2861"
+  },
+  {
+   "y": 1677,
+   "id": "srt:6795DCEB-314C-49CE-A88A-371EDFDB6EF8",
+   "ev": "Trouwen",
+   "date": "1677-12-26",
+   "place": "Kralingen",
+   "people": [
+    [
+     "Bruidegom",
+     "Cornelis Alblasserdam",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Francyntje Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6795DCEB-314C-49CE-A88A-371EDFDB6EF8"
+  },
+  {
+   "y": 1677,
+   "id": "srt:D8FA493F-6CD6-4027-BA5A-9DC1E68914C4",
+   "ev": "Trouwen",
+   "date": "1677-12-26",
+   "place": "Kralingen",
+   "people": [
+    [
+     "Bruidegom",
+     "Cornelis Jacobsz",
+     "",
+     "Alblasserdam (?)"
+    ],
+    [
+     "Bruid",
+     "Francyntje Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D8FA493F-6CD6-4027-BA5A-9DC1E68914C4"
+  },
+  {
+   "y": 1678,
+   "id": "srt:1F2BA7EF-3B81-4BB4-8350-AB575D8A523B",
+   "ev": "Trouwen",
+   "date": "1678-05-22",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "other:bruidegom",
+     "Lodewijk de Jonker",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:bruid",
+     "Lijntje Bundervoet",
+     "",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:1F2BA7EF-3B81-4BB4-8350-AB575D8A523B"
+  },
+  {
+   "y": 1679,
+   "id": "srt:FB6A807A-896C-4916-9E1D-8CEB445BAE6F",
+   "ev": "Doop",
+   "date": "1679-07-16",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Jannetie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Lodewijck de Joncker",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Lijntie Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Lambert de Joncker",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Isaacq de Groot",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jannetie Jonckers",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Chatrina Jonckers",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:FB6A807A-896C-4916-9E1D-8CEB445BAE6F"
+  },
+  {
+   "y": 1681,
+   "id": "srt:781B0BBB-E17A-4C56-952D-8962C86BBA99",
+   "ev": "Doop",
+   "date": "1681-10-19",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Johannes",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Lodewijck de Joncker",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Lijntie Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Cornelis Alblasserd",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Francintie Machielse",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:781B0BBB-E17A-4C56-952D-8962C86BBA99"
+  },
+  {
+   "y": 1694,
+   "id": "srt:75CD6BAD-3F75-427E-9F37-A5E28E135B53",
+   "ev": "Doop",
+   "date": "1694-12-14",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Catharina",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Teunis Steck",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Lijntie Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Jacobus van der Kemp",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Maria van Tilborgh",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:75CD6BAD-3F75-427E-9F37-A5E28E135B53"
+  },
+  {
+   "y": 1696,
+   "id": "zar:61D6F880-F252-44F7-8B01-BC5B11AD8444",
+   "ev": "Notariële akte",
+   "date": "1696-10-12",
+   "place": "Zierikzee",
+   "people": [
+    [
+     "other:Persoon in notariële akte",
+     "Pieter Mangelaer",
+     "",
+     ""
+    ],
+    [
+     "other:Persoon in notariële akte",
+     "Jacobus de Vos",
+     "",
+     ""
+    ],
+    [
+     "other:Persoon in notariële akte",
+     "Anthonij Rombouts",
+     "",
+     ""
+    ],
+    [
+     "other:Persoon in notariële akte",
+     "Pieter Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "other:Persoon in notariële akte",
+     "Pieter Durant",
+     "",
+     ""
+    ],
+    [
+     "other:Persoon in notariële akte",
+     "Cornelis Willemse van Beest",
+     "",
+     ""
+    ],
+    [
+     "other:Notaris",
+     "Cornelis Zeeman",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:61D6F880-F252-44F7-8B01-BC5B11AD8444"
+  },
+  {
+   "y": 1713,
+   "id": "srt:D54986E0-9070-4130-AAA8-430312927E6B",
+   "ev": "Doop",
+   "date": "1713-05-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Cornelis",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Jan van Alphen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Aafje de Bree",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Fransijntje Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Gijsbert van Alphen",
+     "",
+     ""
+    ],
+    [
+     "Getuige",
+     "Agata de Leeuw",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D54986E0-9070-4130-AAA8-430312927E6B"
+  },
+  {
+   "y": 1718,
+   "id": "srt:E41A546A-D88E-467D-82EF-353307F59B49",
+   "ev": "Begraven",
+   "date": "1718-03-22",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Fransijntje Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:E41A546A-D88E-467D-82EF-353307F59B49"
+  },
+  {
+   "y": 1724,
+   "id": "elo:086dd8da-eaae-d1ec-dd5f-2fb0cf02a31d",
+   "ev": "other:Notariële akten",
+   "date": "1724",
+   "place": "Leiden",
+   "people": [
+    [
+     "Geregistreerde",
+     "Pieter Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/elo:086dd8da-eaae-d1ec-dd5f-2fb0cf02a31d"
+  },
+  {
+   "y": 1807,
+   "id": "zar:A14E09AB-0BC1-46A9-B919-2C6741A22D0F",
+   "ev": "Registratie",
+   "date": "1807-12-27",
+   "place": "Assenede (B)",
+   "people": [
+    [
+     "Geregistreerde",
+     "Colete Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:A14E09AB-0BC1-46A9-B919-2C6741A22D0F"
+  },
+  {
+   "y": 1807,
+   "id": "zar:af8d6744-80a1-9b2b-8a8e-e3fa3e4d3f2e",
+   "ev": "Registratie",
+   "date": "1807-12-27",
+   "place": "Assenede (B)",
+   "people": [
+    [
+     "Geregistreerde",
+     "Colete Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:af8d6744-80a1-9b2b-8a8e-e3fa3e4d3f2e"
+  },
+  {
+   "y": 1814,
+   "id": "zar:7E840FAF-EDCF-4BAB-890D-C8A53EF254A0",
+   "ev": "Overlijden",
+   "date": "1814-03-30",
+   "place": "Hontenisse",
+   "people": [
+    [
+     "Overledene",
+     "Maria Theresia Vermeeren",
+     "",
+     "Assenede"
+    ],
+    [
+     "Partner",
+     "Livinus Bernardus Steijaert",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Karel Vermeeren",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Petronella Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:7E840FAF-EDCF-4BAB-890D-C8A53EF254A0"
+  },
+  {
+   "y": 1818,
+   "id": "srt:31D79CDE-2D18-4F3D-AE5C-34EF328C9462",
+   "ev": "Huwelijk",
+   "date": "1818-11-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gend"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Joanna Christina van Gerven",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Hermanus van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Johanna Daalsen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:31D79CDE-2D18-4F3D-AE5C-34EF328C9462"
+  },
+  {
+   "y": 1818,
+   "id": "srt:31D79CDE-2D18-4F3D-AE5C-34EF328C9462",
+   "ev": "Huwelijk",
+   "date": "1818-11-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gend"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Joanna Christina van Gerven",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Hermanus van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Johanna Daalsen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:31D79CDE-2D18-4F3D-AE5C-34EF328C9462"
+  },
+  {
+   "y": 1818,
+   "id": "srt:eea72c01-71d3-ef74-fa4a-390b152f5592",
+   "ev": "Huwelijk",
+   "date": "1818-11-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gend"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Joanna Christina van Gerven",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Hermanus van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Johanna Daalsen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:eea72c01-71d3-ef74-fa4a-390b152f5592"
+  },
+  {
+   "y": 1818,
+   "id": "srt:eea72c01-71d3-ef74-fa4a-390b152f5592",
+   "ev": "Huwelijk",
+   "date": "1818-11-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gend"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Joanna Christina van Gerven",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Hermanus van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Johanna Daalsen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:eea72c01-71d3-ef74-fa4a-390b152f5592"
+  },
+  {
+   "y": 1821,
+   "id": "srt:D5EB7B58-9F45-45E1-BB63-ECFA6694AED2",
+   "ev": "Geboorte",
+   "date": "1821-11-24",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D5EB7B58-9F45-45E1-BB63-ECFA6694AED2"
+  },
+  {
+   "y": 1821,
+   "id": "srt:D5EB7B58-9F45-45E1-BB63-ECFA6694AED2",
+   "ev": "Geboorte",
+   "date": "1821-11-24",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D5EB7B58-9F45-45E1-BB63-ECFA6694AED2"
+  },
+  {
+   "y": 1823,
+   "id": "srt:5AF4EA7E-7782-4D45-8567-2DDD6C35DD3A",
+   "ev": "Overlijden",
+   "date": "1823-02-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5AF4EA7E-7782-4D45-8567-2DDD6C35DD3A"
+  },
+  {
+   "y": 1823,
+   "id": "srt:5AF4EA7E-7782-4D45-8567-2DDD6C35DD3A",
+   "ev": "Overlijden",
+   "date": "1823-02-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5AF4EA7E-7782-4D45-8567-2DDD6C35DD3A"
+  },
+  {
+   "y": 1823,
+   "id": "srt:73acc284-df10-e76e-29ef-f3cfe93d1280",
+   "ev": "Overlijden",
+   "date": "1823-02-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:73acc284-df10-e76e-29ef-f3cfe93d1280"
+  },
+  {
+   "y": 1823,
+   "id": "srt:73acc284-df10-e76e-29ef-f3cfe93d1280",
+   "ev": "Overlijden",
+   "date": "1823-02-25",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:73acc284-df10-e76e-29ef-f3cfe93d1280"
+  },
+  {
+   "y": 1824,
+   "id": "srt:A4C9E6F6-40F4-4294-A8EA-36C1BA61ADCC",
+   "ev": "Geboorte",
+   "date": "1824-02-03",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gijsbertus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A4C9E6F6-40F4-4294-A8EA-36C1BA61ADCC"
+  },
+  {
+   "y": 1824,
+   "id": "srt:A4C9E6F6-40F4-4294-A8EA-36C1BA61ADCC",
+   "ev": "Geboorte",
+   "date": "1824-02-03",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gijsbertus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A4C9E6F6-40F4-4294-A8EA-36C1BA61ADCC"
+  },
+  {
+   "y": 1826,
+   "id": "srt:2a1aab42-428d-1f39-39ae-eb459361aa68",
+   "ev": "Overlijden",
+   "date": "1826-02-17",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinius Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2a1aab42-428d-1f39-39ae-eb459361aa68"
+  },
+  {
+   "y": 1826,
+   "id": "srt:2a1aab42-428d-1f39-39ae-eb459361aa68",
+   "ev": "Overlijden",
+   "date": "1826-02-17",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinius Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2a1aab42-428d-1f39-39ae-eb459361aa68"
+  },
+  {
+   "y": 1826,
+   "id": "srt:308F54BB-1EA1-4A20-860F-ADF098B094E9",
+   "ev": "Overlijden",
+   "date": "1826-02-17",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinius Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:308F54BB-1EA1-4A20-860F-ADF098B094E9"
+  },
+  {
+   "y": 1826,
+   "id": "srt:308F54BB-1EA1-4A20-860F-ADF098B094E9",
+   "ev": "Overlijden",
+   "date": "1826-02-17",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Livinius Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:308F54BB-1EA1-4A20-860F-ADF098B094E9"
+  },
+  {
+   "y": 1826,
+   "id": "srt:392834ff-e4a7-013a-d522-e25c23933dcb",
+   "ev": "Overlijden",
+   "date": "1826-01-11",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lavien Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:392834ff-e4a7-013a-d522-e25c23933dcb"
+  },
+  {
+   "y": 1826,
+   "id": "srt:392834ff-e4a7-013a-d522-e25c23933dcb",
+   "ev": "Overlijden",
+   "date": "1826-01-11",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lavien Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:392834ff-e4a7-013a-d522-e25c23933dcb"
+  },
+  {
+   "y": 1826,
+   "id": "srt:FD1C4F44-99D0-49ED-91C5-88BD6BBBD3B3",
+   "ev": "Overlijden",
+   "date": "1826-01-11",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lavien Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:FD1C4F44-99D0-49ED-91C5-88BD6BBBD3B3"
+  },
+  {
+   "y": 1826,
+   "id": "srt:FD1C4F44-99D0-49ED-91C5-88BD6BBBD3B3",
+   "ev": "Overlijden",
+   "date": "1826-01-11",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lavien Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:FD1C4F44-99D0-49ED-91C5-88BD6BBBD3B3"
+  },
+  {
+   "y": 1827,
+   "id": "srt:B0C557FE-B852-4B84-BBD2-38548BE47573",
+   "ev": "Geboorte",
+   "date": "1827-01-27",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Cornelia Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:B0C557FE-B852-4B84-BBD2-38548BE47573"
+  },
+  {
+   "y": 1827,
+   "id": "srt:B0C557FE-B852-4B84-BBD2-38548BE47573",
+   "ev": "Geboorte",
+   "date": "1827-01-27",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Cornelia Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:B0C557FE-B852-4B84-BBD2-38548BE47573"
+  },
+  {
+   "y": 1829,
+   "id": "srt:43d98ebd-f1ec-83d2-8a64-6aca7e785a4a",
+   "ev": "Overlijden",
+   "date": "1829-07-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:43d98ebd-f1ec-83d2-8a64-6aca7e785a4a"
+  },
+  {
+   "y": 1829,
+   "id": "srt:43d98ebd-f1ec-83d2-8a64-6aca7e785a4a",
+   "ev": "Overlijden",
+   "date": "1829-07-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:43d98ebd-f1ec-83d2-8a64-6aca7e785a4a"
+  },
+  {
+   "y": 1829,
+   "id": "srt:482f9c4a-5239-0ac8-498c-4fa3c6038a08",
+   "ev": "Overlijden",
+   "date": "1829-12-13",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lurnus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:482f9c4a-5239-0ac8-498c-4fa3c6038a08"
+  },
+  {
+   "y": 1829,
+   "id": "srt:482f9c4a-5239-0ac8-498c-4fa3c6038a08",
+   "ev": "Overlijden",
+   "date": "1829-12-13",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lurnus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:482f9c4a-5239-0ac8-498c-4fa3c6038a08"
+  },
+  {
+   "y": 1829,
+   "id": "srt:5ac9dc60-0df2-1735-25d2-fd2c0a04e8d7",
+   "ev": "Geboorte",
+   "date": "1829-11-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5ac9dc60-0df2-1735-25d2-fd2c0a04e8d7"
+  },
+  {
+   "y": 1829,
+   "id": "srt:5ac9dc60-0df2-1735-25d2-fd2c0a04e8d7",
+   "ev": "Geboorte",
+   "date": "1829-11-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:5ac9dc60-0df2-1735-25d2-fd2c0a04e8d7"
+  },
+  {
+   "y": 1829,
+   "id": "srt:7B666B88-BB81-40F8-ACA8-FEAFD19088AD",
+   "ev": "Overlijden",
+   "date": "1829-12-13",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lurnus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:7B666B88-BB81-40F8-ACA8-FEAFD19088AD"
+  },
+  {
+   "y": 1829,
+   "id": "srt:7B666B88-BB81-40F8-ACA8-FEAFD19088AD",
+   "ev": "Overlijden",
+   "date": "1829-12-13",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Lurnus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:7B666B88-BB81-40F8-ACA8-FEAFD19088AD"
+  },
+  {
+   "y": 1829,
+   "id": "srt:A717BA29-3BB7-491E-820C-36993A3F316B",
+   "ev": "Geboorte",
+   "date": "1829-11-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A717BA29-3BB7-491E-820C-36993A3F316B"
+  },
+  {
+   "y": 1829,
+   "id": "srt:A717BA29-3BB7-491E-820C-36993A3F316B",
+   "ev": "Geboorte",
+   "date": "1829-11-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Gijsbertus Gerardus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A717BA29-3BB7-491E-820C-36993A3F316B"
+  },
+  {
+   "y": 1829,
+   "id": "srt:CE5ED41C-3ED8-4FB5-9F69-246372B46C76",
+   "ev": "Overlijden",
+   "date": "1829-07-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:CE5ED41C-3ED8-4FB5-9F69-246372B46C76"
+  },
+  {
+   "y": 1829,
+   "id": "srt:CE5ED41C-3ED8-4FB5-9F69-246372B46C76",
+   "ev": "Overlijden",
+   "date": "1829-07-30",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Cornelia Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:CE5ED41C-3ED8-4FB5-9F69-246372B46C76"
+  },
+  {
+   "y": 1832,
+   "id": "srt:056bbc97-00c6-cde6-d162-bcfa1fc92e20",
+   "ev": "Geboorte",
+   "date": "1832-01-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Diminikus Antonius Hendrikus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:056bbc97-00c6-cde6-d162-bcfa1fc92e20"
+  },
+  {
+   "y": 1832,
+   "id": "srt:056bbc97-00c6-cde6-d162-bcfa1fc92e20",
+   "ev": "Geboorte",
+   "date": "1832-01-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Diminikus Antonius Hendrikus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:056bbc97-00c6-cde6-d162-bcfa1fc92e20"
+  },
+  {
+   "y": 1832,
+   "id": "srt:1d80c482-f8a6-c503-f394-1987aafc4b3d",
+   "ev": "Overlijden",
+   "date": "1832-09-14",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Dominicus Antonius Hendricus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:1d80c482-f8a6-c503-f394-1987aafc4b3d"
+  },
+  {
+   "y": 1832,
+   "id": "srt:1d80c482-f8a6-c503-f394-1987aafc4b3d",
+   "ev": "Overlijden",
+   "date": "1832-09-14",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Dominicus Antonius Hendricus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:1d80c482-f8a6-c503-f394-1987aafc4b3d"
+  },
+  {
+   "y": 1832,
+   "id": "srt:3E44D41D-16AC-45D0-B8BB-43559A6699CE",
+   "ev": "Geboorte",
+   "date": "1832-01-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Diminikus Antonius Hendrikus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:3E44D41D-16AC-45D0-B8BB-43559A6699CE"
+  },
+  {
+   "y": 1832,
+   "id": "srt:3E44D41D-16AC-45D0-B8BB-43559A6699CE",
+   "ev": "Geboorte",
+   "date": "1832-01-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Diminikus Antonius Hendrikus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:3E44D41D-16AC-45D0-B8BB-43559A6699CE"
+  },
+  {
+   "y": 1832,
+   "id": "srt:D5437623-5A72-4A97-995C-F658A6DA95FE",
+   "ev": "Overlijden",
+   "date": "1832-09-14",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Dominicus Antonius Hendricus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D5437623-5A72-4A97-995C-F658A6DA95FE"
+  },
+  {
+   "y": 1832,
+   "id": "srt:D5437623-5A72-4A97-995C-F658A6DA95FE",
+   "ev": "Overlijden",
+   "date": "1832-09-14",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Dominicus Antonius Hendricus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D5437623-5A72-4A97-995C-F658A6DA95FE"
+  },
+  {
+   "y": 1839,
+   "id": "srt:393CF869-2A14-42B7-956B-53878E8EBF65",
+   "ev": "Geboorte",
+   "date": "1839-12-22",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Petronella Wakkie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Nicolaas Jacobus Wakkie",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "maria Johanna Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:393CF869-2A14-42B7-956B-53878E8EBF65"
+  },
+  {
+   "y": 1839,
+   "id": "srt:be17adf4-7437-19cf-1c87-e43ce145296d",
+   "ev": "Geboorte",
+   "date": "1839-12-22",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Petronella Wakkie",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Nicolaas Jacobus Wakkie",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "maria Johanna Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:be17adf4-7437-19cf-1c87-e43ce145296d"
+  },
+  {
+   "y": 1843,
+   "id": "srt:2d0ed137-d18a-f033-a671-ec234a6d4bbd",
+   "ev": "Huwelijk",
+   "date": "1843-12-20",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Joannes Neijens",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Maria Freijermuth",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2d0ed137-d18a-f033-a671-ec234a6d4bbd"
+  },
+  {
+   "y": 1843,
+   "id": "srt:2d0ed137-d18a-f033-a671-ec234a6d4bbd",
+   "ev": "Huwelijk",
+   "date": "1843-12-20",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Joannes Neijens",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Maria Freijermuth",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2d0ed137-d18a-f033-a671-ec234a6d4bbd"
+  },
+  {
+   "y": 1843,
+   "id": "srt:C24777A0-875A-4F62-8356-627FBE3D0747",
+   "ev": "Huwelijk",
+   "date": "1843-12-20",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Joannes Neijens",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Maria Freijermuth",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:C24777A0-875A-4F62-8356-627FBE3D0747"
+  },
+  {
+   "y": 1843,
+   "id": "srt:C24777A0-875A-4F62-8356-627FBE3D0747",
+   "ev": "Huwelijk",
+   "date": "1843-12-20",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Joannes Neijens",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Maria Freijermuth",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:C24777A0-875A-4F62-8356-627FBE3D0747"
+  },
+  {
+   "y": 1844,
+   "id": "srt:4acd81d3-407d-c14d-df4c-294046707d50",
+   "ev": "Geboorte",
+   "date": "1844-09-24",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:4acd81d3-407d-c14d-df4c-294046707d50"
+  },
+  {
+   "y": 1844,
+   "id": "srt:4acd81d3-407d-c14d-df4c-294046707d50",
+   "ev": "Geboorte",
+   "date": "1844-09-24",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:4acd81d3-407d-c14d-df4c-294046707d50"
+  },
+  {
+   "y": 1844,
+   "id": "srt:D68ED745-C049-4816-B4FD-8B2355FD1DF4",
+   "ev": "Geboorte",
+   "date": "1844-09-24",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D68ED745-C049-4816-B4FD-8B2355FD1DF4"
+  },
+  {
+   "y": 1844,
+   "id": "srt:D68ED745-C049-4816-B4FD-8B2355FD1DF4",
+   "ev": "Geboorte",
+   "date": "1844-09-24",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D68ED745-C049-4816-B4FD-8B2355FD1DF4"
+  },
+  {
+   "y": 1858,
+   "id": "srt:448d2274-01fc-dde4-4fc6-cfb9d5c0458d",
+   "ev": "Overlijden",
+   "date": "1858-05-26",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Joanna Christina van Gerven",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Partner",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Hermanus van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Daalsen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:448d2274-01fc-dde4-4fc6-cfb9d5c0458d"
+  },
+  {
+   "y": 1858,
+   "id": "srt:D8A5AE81-2B61-4495-862F-72084CEA536C",
+   "ev": "Overlijden",
+   "date": "1858-05-26",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Joanna Christina van Gerven",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Partner",
+     "Livinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Hermanus van Gerven",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Daalsen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:D8A5AE81-2B61-4495-862F-72084CEA536C"
+  },
+  {
+   "y": 1860,
+   "id": "srt:0CFE2FE2-5334-4E82-87C3-001C3AACE97A",
+   "ev": "Overlijden",
+   "date": "1860-12-05",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Partner",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:0CFE2FE2-5334-4E82-87C3-001C3AACE97A"
+  },
+  {
+   "y": 1860,
+   "id": "srt:0CFE2FE2-5334-4E82-87C3-001C3AACE97A",
+   "ev": "Overlijden",
+   "date": "1860-12-05",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Partner",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:0CFE2FE2-5334-4E82-87C3-001C3AACE97A"
+  },
+  {
+   "y": 1860,
+   "id": "srt:b43b36af-1042-6f4b-543c-706389471d08",
+   "ev": "Overlijden",
+   "date": "1860-12-05",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Partner",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:b43b36af-1042-6f4b-543c-706389471d08"
+  },
+  {
+   "y": 1860,
+   "id": "srt:b43b36af-1042-6f4b-543c-706389471d08",
+   "ev": "Overlijden",
+   "date": "1860-12-05",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Partner",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Levinus Cornelis Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:b43b36af-1042-6f4b-543c-706389471d08"
+  },
+  {
+   "y": 1868,
+   "id": "ghn:112dd6c6-257b-11e1-9674-00505693001d",
+   "ev": "Registratie",
+   "date": "1868-2-6",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/ghn:112dd6c6-257b-11e1-9674-00505693001d"
+  },
+  {
+   "y": 1868,
+   "id": "srt:EFFADB5C-D598-4175-9DCC-D4D5CC19842F",
+   "ev": "Huwelijk",
+   "date": "1868-02-26",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Theodorus Laurentius Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Joannes Nicolaas Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Agnes Allegonda Roemaat",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:EFFADB5C-D598-4175-9DCC-D4D5CC19842F"
+  },
+  {
+   "y": 1868,
+   "id": "srt:EFFADB5C-D598-4175-9DCC-D4D5CC19842F",
+   "ev": "Huwelijk",
+   "date": "1868-02-26",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Theodorus Laurentius Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Joannes Nicolaas Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Agnes Allegonda Roemaat",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruid",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Marie Willielmine Elisabeth Neijens",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:EFFADB5C-D598-4175-9DCC-D4D5CC19842F"
+  },
+  {
+   "y": 1870,
+   "id": "srt:29c9d416-7083-f9d3-1def-d2e6520ab278",
+   "ev": "Geboorte",
+   "date": "1870-02-23",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lourina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:29c9d416-7083-f9d3-1def-d2e6520ab278"
+  },
+  {
+   "y": 1870,
+   "id": "srt:78B615AB-B28A-4427-B3CA-964407A8703C",
+   "ev": "Geboorte",
+   "date": "1870-02-23",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lourina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:78B615AB-B28A-4427-B3CA-964407A8703C"
+  },
+  {
+   "y": 1870,
+   "id": "srt:A2D8714F-ABE6-4E4D-B0BE-F8E0BDB8AECE",
+   "ev": "Overlijden",
+   "date": "1870-03-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Hermanus Wilhelmus Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lourina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A2D8714F-ABE6-4E4D-B0BE-F8E0BDB8AECE"
+  },
+  {
+   "y": 1870,
+   "id": "srt:cd8189b0-2d7d-cb93-0dec-a65964200186",
+   "ev": "Overlijden",
+   "date": "1870-03-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Hermanus Wilhelmus Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lourina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:cd8189b0-2d7d-cb93-0dec-a65964200186"
+  },
+  {
+   "y": 1871,
+   "id": "srt:44858E06-A0E9-4B22-BE39-1126C69F83A5",
+   "ev": "Geboorte",
+   "date": "1871-01-15",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:44858E06-A0E9-4B22-BE39-1126C69F83A5"
+  },
+  {
+   "y": 1871,
+   "id": "srt:7f7ee452-605e-b8a8-83ef-bbe9770176b2",
+   "ev": "Geboorte",
+   "date": "1871-01-15",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:7f7ee452-605e-b8a8-83ef-bbe9770176b2"
+  },
+  {
+   "y": 1872,
+   "id": "srt:2D80408A-6730-4B45-91C9-FAC066676311",
+   "ev": "Overlijden",
+   "date": "1872-02-28",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gent (België)"
+    ],
+    [
+     "Vader",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2D80408A-6730-4B45-91C9-FAC066676311"
+  },
+  {
+   "y": 1872,
+   "id": "srt:2D80408A-6730-4B45-91C9-FAC066676311",
+   "ev": "Overlijden",
+   "date": "1872-02-28",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gent (België)"
+    ],
+    [
+     "Vader",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2D80408A-6730-4B45-91C9-FAC066676311"
+  },
+  {
+   "y": 1872,
+   "id": "srt:35AACE60-1CAE-4A36-9292-8C917EBAA14D",
+   "ev": "Geboorte",
+   "date": "1872-03-19",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Jozephus Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:35AACE60-1CAE-4A36-9292-8C917EBAA14D"
+  },
+  {
+   "y": 1872,
+   "id": "srt:7a5b3a92-b1ba-29d9-f564-06f1a7a50de4",
+   "ev": "Overlijden",
+   "date": "1872-02-28",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gent (België)"
+    ],
+    [
+     "Vader",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:7a5b3a92-b1ba-29d9-f564-06f1a7a50de4"
+  },
+  {
+   "y": 1872,
+   "id": "srt:7a5b3a92-b1ba-29d9-f564-06f1a7a50de4",
+   "ev": "Overlijden",
+   "date": "1872-02-28",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Livinus Cornelis Bundervoet",
+     "",
+     "Gent (België)"
+    ],
+    [
+     "Vader",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Anna Maria Elizabeth Peeters",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Joanna Christina van Gerven",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:7a5b3a92-b1ba-29d9-f564-06f1a7a50de4"
+  },
+  {
+   "y": 1872,
+   "id": "srt:8ca59608-3cd8-4e62-1d69-18b7e569d263",
+   "ev": "Geboorte",
+   "date": "1872-03-19",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Hermanus Wilhelmus Jozephus Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:8ca59608-3cd8-4e62-1d69-18b7e569d263"
+  },
+  {
+   "y": 1873,
+   "id": "srt:2029A555-FC6A-44FC-811A-27911CA7058E",
+   "ev": "Overlijden",
+   "date": "1873-07-28",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Maria Wilhelmina Elizabeth Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:2029A555-FC6A-44FC-811A-27911CA7058E"
+  },
+  {
+   "y": 1873,
+   "id": "srt:EAF19573-9199-4FFE-A524-5DFE8B35A4BA",
+   "ev": "Geboorte",
+   "date": "1873-07-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maria Wilhelmina Elizabeth Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:EAF19573-9199-4FFE-A524-5DFE8B35A4BA"
+  },
+  {
+   "y": 1873,
+   "id": "srt:fd831320-9960-ef01-0730-12667404d48a",
+   "ev": "Overlijden",
+   "date": "1873-07-28",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Maria Wilhelmina Elizabeth Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:fd831320-9960-ef01-0730-12667404d48a"
+  },
+  {
+   "y": 1873,
+   "id": "srt:ff4b06c6-cb34-d000-46f2-8b7ad8d19de0",
+   "ev": "Geboorte",
+   "date": "1873-07-21",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Kind",
+     "Maria Wilhelmina Elizabeth Moonen",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:ff4b06c6-cb34-d000-46f2-8b7ad8d19de0"
+  },
+  {
+   "y": 1874,
+   "id": "srt:29e03169-ac22-3598-2808-d5df86db721b",
+   "ev": "Overlijden",
+   "date": "1874-12-05",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Maria Lowina Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:29e03169-ac22-3598-2808-d5df86db721b"
+  },
+  {
+   "y": 1874,
+   "id": "srt:607A48B2-B0F9-45F8-992C-9AAD1959F635",
+   "ev": "Overlijden",
+   "date": "1874-12-05",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Maria Lowina Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:607A48B2-B0F9-45F8-992C-9AAD1959F635"
+  },
+  {
+   "y": 1875,
+   "id": "srt:1f62f94b-8dfe-8ee6-3c05-8422c9ec60d6",
+   "ev": "Overlijden",
+   "date": "1875-10-13",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Maria Lowina Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:1f62f94b-8dfe-8ee6-3c05-8422c9ec60d6"
+  },
+  {
+   "y": 1875,
+   "id": "srt:46F04402-1873-4876-B2DF-368A5B9D1736",
+   "ev": "Overlijden",
+   "date": "1875-10-13",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "n.n. Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Johanna Maria Lowina Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:46F04402-1873-4876-B2DF-368A5B9D1736"
+  },
+  {
+   "y": 1881,
+   "id": "rzh:999750f0-d370-4ec9-937a-60ebb3445221",
+   "ev": "Geboorte",
+   "date": "1881-08-30",
+   "place": "Kralingen",
+   "people": [
+    [
+     "Kind",
+     "Johannes Lagerwaart",
+     "1881-08-30",
+     "Kralingen"
+    ],
+    [
+     "Vader",
+     "Arie Lagerwaart",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Willemina Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/rzh:999750f0-d370-4ec9-937a-60ebb3445221"
+  },
+  {
+   "y": 1881,
+   "id": "srt:999750F0-D370-4EC9-937A-60EBB3445221",
+   "ev": "Geboorte",
+   "date": "1881-08-30",
+   "place": "Kralingen",
+   "people": [
+    [
+     "Kind",
+     "Johannes Lagerwaart",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Arie Lagerwaart",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Willemina Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:999750F0-D370-4EC9-937A-60EBB3445221"
+  },
+  {
+   "y": 1909,
+   "id": "zar:FB289174-3019-42FD-95F0-AB5921905E16",
+   "ev": "Huwelijk",
+   "date": "1909-04-28",
+   "place": "Aardenburg",
+   "people": [
+    [
+     "Bruidegom",
+     "Ivo Gregoir",
+     "",
+     "Evergem, België"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Joannes Baptiste Gregoir",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Monica Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Louisa Maria Lootens",
+     "",
+     "Aardenburg"
+    ],
+    [
+     "Vader van de bruid",
+     "Johannes Bernardus Lootens",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Sophia de Clercq",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:FB289174-3019-42FD-95F0-AB5921905E16"
+  },
+  {
+   "y": 1912,
+   "id": "srt:66f570b9-4d70-86df-01f1-f5e468bd0fac",
+   "ev": "Huwelijk",
+   "date": "1912-08-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Johannes Nicolaas Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Maria Catharina de Caluwe",
+     "",
+     "Rijswijk (Zuid-Holland)"
+    ],
+    [
+     "Vader van de bruid",
+     "Jacobus Quirinus de Caluwe",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Maria Johanna van Meerbeek",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:66f570b9-4d70-86df-01f1-f5e468bd0fac"
+  },
+  {
+   "y": 1912,
+   "id": "srt:A6AFC20C-421B-4694-B967-E9A7B5CB9AA6",
+   "ev": "Huwelijk",
+   "date": "1912-08-07",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Bruidegom",
+     "Johannes Nicolaas Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Maria Catharina de Caluwe",
+     "",
+     "Rijswijk (Zuid-Holland)"
+    ],
+    [
+     "Vader van de bruid",
+     "Jacobus Quirinus de Caluwe",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Maria Johanna van Meerbeek",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A6AFC20C-421B-4694-B967-E9A7B5CB9AA6"
+  },
+  {
+   "y": 1922,
+   "id": "ade:62672a9c-4025-11e5-b933-4bfc71bcb180",
+   "ev": "Overlijden",
+   "date": "1922-9-14",
+   "place": "Delft",
+   "people": [
+    [
+     "Overledene",
+     "Theodorus Laurentius Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "other:Relatie",
+     "Johanna Maria Louwina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Johannes Nicolaas Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Agnes Alegonda Roemaat",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/ade:62672a9c-4025-11e5-b933-4bfc71bcb180"
+  },
+  {
+   "y": 1922,
+   "id": "srt:F8AC0DF8-06B6-4B93-8A1C-59AF9B2EDD95",
+   "ev": "Overlijden",
+   "date": "1922-09-14",
+   "place": "Rhoon",
+   "people": [
+    [
+     "Overledene",
+     "Theodorus Laurentius Moonen",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Partner",
+     "Johanna Maria Lowina Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Vader",
+     "Johannes Nicolaas Moonen",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Agnes Alegonda Roemaat",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F8AC0DF8-06B6-4B93-8A1C-59AF9B2EDD95"
+  },
+  {
+   "y": 1925,
+   "id": "srt:A763FB88-1BFE-4BDE-ACBA-4A6C87F24D8E",
+   "ev": "Overlijden",
+   "date": "1925-01-29",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A763FB88-1BFE-4BDE-ACBA-4A6C87F24D8E"
+  },
+  {
+   "y": 1925,
+   "id": "srt:A763FB88-1BFE-4BDE-ACBA-4A6C87F24D8E",
+   "ev": "Overlijden",
+   "date": "1925-01-29",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:A763FB88-1BFE-4BDE-ACBA-4A6C87F24D8E"
+  },
+  {
+   "y": 1925,
+   "id": "srt:ab67ca80-2621-ce4c-3620-fa9339ab83bf",
+   "ev": "Overlijden",
+   "date": "1925-01-29",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:ab67ca80-2621-ce4c-3620-fa9339ab83bf"
+  },
+  {
+   "y": 1925,
+   "id": "srt:ab67ca80-2621-ce4c-3620-fa9339ab83bf",
+   "ev": "Overlijden",
+   "date": "1925-01-29",
+   "place": "Rotterdam",
+   "people": [
+    [
+     "Overledene",
+     "Johanna Lowina Maria Bundervoet",
+     "",
+     "Rotterdam"
+    ],
+    [
+     "Vader",
+     "Hermanus Wilhelmus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder",
+     "Marie Wilhelmine Elisabeth Neijens",
+     "",
+     ""
+    ],
+    [
+     "other:Eerdere partner",
+     "Theodorus Laurentius Moonen",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:ab67ca80-2621-ce4c-3620-fa9339ab83bf"
+  },
+  {
+   "y": 1929,
+   "id": "zar:52EAC836-8844-49CB-A687-9924107C9024",
+   "ev": "Huwelijk",
+   "date": "1929-07-10",
+   "place": "Overslag",
+   "people": [
+    [
+     "Bruidegom",
+     "Camillus Bundervoet",
+     "",
+     "Wachtebeke (België)"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Emma Raman",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Anna Maria de Meij",
+     "",
+     "Overslag"
+    ],
+    [
+     "Vader van de bruid",
+     "Petrus de Meij",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Emilie Stephanie Gerres",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:52EAC836-8844-49CB-A687-9924107C9024"
+  },
+  {
+   "y": 1929,
+   "id": "zar:52EAC836-8844-49CB-A687-9924107C9024",
+   "ev": "Huwelijk",
+   "date": "1929-07-10",
+   "place": "Overslag",
+   "people": [
+    [
+     "Bruidegom",
+     "Camillus Bundervoet",
+     "",
+     "Wachtebeke (België)"
+    ],
+    [
+     "Vader van de bruidegom",
+     "Petrus Bundervoet",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruidegom",
+     "Emma Raman",
+     "",
+     ""
+    ],
+    [
+     "Bruid",
+     "Anna Maria de Meij",
+     "",
+     "Overslag"
+    ],
+    [
+     "Vader van de bruid",
+     "Petrus de Meij",
+     "",
+     ""
+    ],
+    [
+     "Moeder van de bruid",
+     "Emilie Stephanie Gerres",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:52EAC836-8844-49CB-A687-9924107C9024"
+  },
+  {
+   "y": 9999,
+   "id": "srt:0E3A5542-FB61-4FCF-9052-AAAAA99F4596",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Evert de Knecht",
+     "1848-02-06",
+     "De Werken en Sleeuwijk"
+    ],
+    [
+     "Geregistreerde",
+     "Alida van der Graaf",
+     "1850-02-05",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Trijntje Klein",
+     "1828-04-08",
+     "Maasland"
+    ],
+    [
+     "Geregistreerde",
+     "Evert van Well",
+     "1850-03-30",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Moonen",
+     "1871-01-15",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Hendrikus de Meere",
+     "1839-09-20",
+     "Leiden"
+    ],
+    [
+     "Geregistreerde",
+     "Gerrit Frederik Brinkman",
+     "1807-06-15",
+     "Amsterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Arie Nimwegen",
+     "1838-04-28",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Antonius Knaapen",
+     "1849-01-10",
+     "'s-Gravenhage"
+    ],
+    [
+     "Geregistreerde",
+     "Commerina van Well",
+     "1855-03-04",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Joanna Ceelen",
+     "1848-10-18",
+     "'s Bosch"
+    ],
+    [
+     "Geregistreerde",
+     "Jan Hoogeboom",
+     "1854-11-11",
+     "Heerde"
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Josephus Moonen",
+     "1872-03-19",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Lawina Maria Bundervoet",
+     "1844-09-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Nicolaas Moonen",
+     "1868-12-04",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Jacobus van Nimwegen",
+     "1862-01-30",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Petronella ter Hennip",
+     "1856-05-11",
+     "Alblasserdam"
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elizabeth Moonen",
+     "1873-07-21",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Aart van Well",
+     "1852-08-03",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Theodorus Lourentius Moonen",
+     "1843-11-22",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:0E3A5542-FB61-4FCF-9052-AAAAA99F4596"
+  },
+  {
+   "y": 9999,
+   "id": "srt:232A6983-8DB8-4F9F-A880-97FE936D470C",
+   "ev": "other:Inschrijving",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Arij de Haas",
+     "1821-04-08",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Jan Hendrik Sprik",
+     "1821-12-11",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Nathan Bolle",
+     "1821-02-08",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Paulus Bartholomeus Ouwendijk",
+     "1821-05-26",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Willem Wenk",
+     "1821-01-14",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Wolf Speelman",
+     "1821-05-27",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:232A6983-8DB8-4F9F-A880-97FE936D470C"
+  },
+  {
+   "y": 9999,
+   "id": "srt:24B713AA-1D1E-414A-9D5C-64181DE96300",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Jacoba Petronella Stolk",
+     "1822-03-31",
+     "Delfshaven"
+    ],
+    [
+     "Geregistreerde",
+     "Agatha Mulder",
+     "1832-08-06",
+     "Haastrecht"
+    ],
+    [
+     "Geregistreerde",
+     "Izak Hollaar",
+     "1833-01-07",
+     "Zwartewaal"
+    ],
+    [
+     "Geregistreerde",
+     "Jannetje Prohn",
+     "1875-02-23",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Christiaan Prohn",
+     "1877-02-05",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Jacoba Hollaar",
+     "1824-11-03",
+     "Zwartewaal"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel Fijten",
+     "1808-03-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Dirk van Waasdijk",
+     "1830-12-04",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Cornelis Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Adriana Catharina Tas",
+     "1854-05-05",
+     "Overschie"
+    ],
+    [
+     "Geregistreerde",
+     "Jacobus Marcus van Waasdijk",
+     "1866-04-25",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Friederika Johanna Gesina Kröner",
+     "1860-02-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Philippus Schotting",
+     "1817-10-20",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Gerritje Witse",
+     "1863-11-07",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elisabeth Neijens",
+     "1821-05-13",
+     "IJperen"
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Friedrich August Kroner",
+     "1861-07-16",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Helena van Waasdijk",
+     "1862-08-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Jannetje Spitters",
+     "1851-10-27",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Hermina Gertruida Fikkert",
+     "1828-01-08",
+     "Amsterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Christiaan Martijn Prohn",
+     "1850-10-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Wilhelmina Cornelia Brouwer",
+     "1833-08-17",
+     "Arnhem"
+    ],
+    [
+     "Geregistreerde",
+     "Dirk van Waasdijk",
+     "1864-06-05",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Maria Verkerk",
+     "1826-12-20",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Friedrich August Kröner",
+     "1822-06-06",
+     "Teckelenburg"
+    ],
+    [
+     "Geregistreerde",
+     "Jan Driest",
+     "1833-11-24",
+     "Leiden"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:24B713AA-1D1E-414A-9D5C-64181DE96300"
+  },
+  {
+   "y": 9999,
+   "id": "srt:62EEFA58-B823-41FE-A87B-8CC0E7B3920D",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Johanna Lowina Maria Bundervoet",
+     "1844-09-24",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:62EEFA58-B823-41FE-A87B-8CC0E7B3920D"
+  },
+  {
+   "y": 9999,
+   "id": "srt:6BA89F88-9015-4482-A9B6-1F1464786400",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Adrianus Nicolaas Brokx",
+     "1859-11-16",
+     "Sprang"
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Josephus Moonen",
+     "1872-03-19",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Adrianus Brokx",
+     "1850-01-01",
+     "Bezooijen"
+    ],
+    [
+     "Geregistreerde",
+     "Wijnandus Hendrikus Moonen",
+     "1835-04-25",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Nicolaas Moonen",
+     "1868-12-04",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Petronella de Moor",
+     "1826-03-04",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Ida Adriana Speekenbrink",
+     "1821-08-02",
+     "Waspik"
+    ],
+    [
+     "Geregistreerde",
+     "Adrianus Moonen",
+     "1814-05-29",
+     "Breda"
+    ],
+    [
+     "Geregistreerde",
+     "Theodorus Laurentius Moonen",
+     "1843-11-22",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Lourina Maria Bundervoet",
+     "1844-09-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Pieter Cornelis de Moor",
+     "1829-09-30",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6BA89F88-9015-4482-A9B6-1F1464786400"
+  },
+  {
+   "y": 9999,
+   "id": "srt:6C797DD1-FFB7-4135-BCE5-B3050A98E8D9",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Cornelis Johannes Vreezen",
+     "1850-07-16",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adriana Cornelia de Leeuw",
+     "1829-02-15",
+     "Zevenbergen"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel Fijsen",
+     "1808-03-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elizabeth Neyens",
+     "1821-05-13",
+     "Ieper"
+    ],
+    [
+     "Geregistreerde",
+     "Gerhardus Jan de Oude",
+     "1862-07-22",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Joseph Stokvis",
+     "1869-11-08",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Flora Stokvis",
+     "1871-03-09",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Alida de Oude",
+     "1874-04-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Bernard Stokvis",
+     "1874-08-10",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Jan de Oude",
+     "1819-09-19",
+     "Lemmer"
+    ],
+    [
+     "Geregistreerde",
+     "Adriana Rouw",
+     "1811-07-07",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Christiaan Nelemans",
+     "1857-09-21",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "David Stokvis",
+     "1872-12-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maria Gijsberta Krijgsman",
+     "1820-11-03",
+     "Kralingen"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Lowina Maria Bundervoet",
+     "1844-09-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Leonard Karel van der Zwan",
+     "1847-07-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Raphaël Stokvis",
+     "1842-08-09",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Cornelis Johannes van der Zwan",
+     "1839-03-10",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Josina van der Groen",
+     "1853-03-19",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Rebecca Wessel",
+     "1843-11-01",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Elizabeth van der Zwan",
+     "1858",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adriana de Oude",
+     "1864-08-30",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Helena Cornelia Vreezen",
+     "1874-01-08",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Cornelis Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Eva Stokvis",
+     "1876-04-15",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Klaas Jan de Oude",
+     "1854-02-03",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Arie de Oude",
+     "1859-10-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Cornelis Johannes Vreezen",
+     "1876-10-31",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Pieter Hullen",
+     "1838-10-04",
+     "Zwolle"
+    ],
+    [
+     "Geregistreerde",
+     "Adrianus Cornelis van der Zwan",
+     "1810-03-18",
+     "Scheveningen"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna van Dijk",
+     "1837-12-22",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johan Adriaan Pieter van der Zwan",
+     "1868-05-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6C797DD1-FFB7-4135-BCE5-B3050A98E8D9"
+  },
+  {
+   "y": 9999,
+   "id": "srt:6C797DD1-FFB7-4135-BCE5-B3050A98E8D9",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Cornelis Johannes Vreezen",
+     "1850-07-16",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adriana Cornelia de Leeuw",
+     "1829-02-15",
+     "Zevenbergen"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel Fijsen",
+     "1808-03-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elizabeth Neyens",
+     "1821-05-13",
+     "Ieper"
+    ],
+    [
+     "Geregistreerde",
+     "Gerhardus Jan de Oude",
+     "1862-07-22",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Joseph Stokvis",
+     "1869-11-08",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Flora Stokvis",
+     "1871-03-09",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Alida de Oude",
+     "1874-04-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Bernard Stokvis",
+     "1874-08-10",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Jan de Oude",
+     "1819-09-19",
+     "Lemmer"
+    ],
+    [
+     "Geregistreerde",
+     "Adriana Rouw",
+     "1811-07-07",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Christiaan Nelemans",
+     "1857-09-21",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "David Stokvis",
+     "1872-12-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maria Gijsberta Krijgsman",
+     "1820-11-03",
+     "Kralingen"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Lowina Maria Bundervoet",
+     "1844-09-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Leonard Karel van der Zwan",
+     "1847-07-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Raphaël Stokvis",
+     "1842-08-09",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Cornelis Johannes van der Zwan",
+     "1839-03-10",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Josina van der Groen",
+     "1853-03-19",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Rebecca Wessel",
+     "1843-11-01",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Elizabeth van der Zwan",
+     "1858",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adriana de Oude",
+     "1864-08-30",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Helena Cornelia Vreezen",
+     "1874-01-08",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Cornelis Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Eva Stokvis",
+     "1876-04-15",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Klaas Jan de Oude",
+     "1854-02-03",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Arie de Oude",
+     "1859-10-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Cornelis Johannes Vreezen",
+     "1876-10-31",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Pieter Hullen",
+     "1838-10-04",
+     "Zwolle"
+    ],
+    [
+     "Geregistreerde",
+     "Adrianus Cornelis van der Zwan",
+     "1810-03-18",
+     "Scheveningen"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna van Dijk",
+     "1837-12-22",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johan Adriaan Pieter van der Zwan",
+     "1868-05-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6C797DD1-FFB7-4135-BCE5-B3050A98E8D9"
+  },
+  {
+   "y": 9999,
+   "id": "srt:6C797DD1-FFB7-4135-BCE5-B3050A98E8D9",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Cornelis Johannes Vreezen",
+     "1850-07-16",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adriana Cornelia de Leeuw",
+     "1829-02-15",
+     "Zevenbergen"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel Fijsen",
+     "1808-03-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elizabeth Neyens",
+     "1821-05-13",
+     "Ieper"
+    ],
+    [
+     "Geregistreerde",
+     "Gerhardus Jan de Oude",
+     "1862-07-22",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Joseph Stokvis",
+     "1869-11-08",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Flora Stokvis",
+     "1871-03-09",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Alida de Oude",
+     "1874-04-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Bernard Stokvis",
+     "1874-08-10",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Jan de Oude",
+     "1819-09-19",
+     "Lemmer"
+    ],
+    [
+     "Geregistreerde",
+     "Adriana Rouw",
+     "1811-07-07",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Christiaan Nelemans",
+     "1857-09-21",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "David Stokvis",
+     "1872-12-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Maria Gijsberta Krijgsman",
+     "1820-11-03",
+     "Kralingen"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Lowina Maria Bundervoet",
+     "1844-09-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Leonard Karel van der Zwan",
+     "1847-07-24",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Raphaël Stokvis",
+     "1842-08-09",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Cornelis Johannes van der Zwan",
+     "1839-03-10",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Josina van der Groen",
+     "1853-03-19",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Rebecca Wessel",
+     "1843-11-01",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Elizabeth van der Zwan",
+     "1858",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adriana de Oude",
+     "1864-08-30",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Helena Cornelia Vreezen",
+     "1874-01-08",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Cornelis Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Eva Stokvis",
+     "1876-04-15",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Klaas Jan de Oude",
+     "1854-02-03",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Arie de Oude",
+     "1859-10-13",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Cornelis Johannes Vreezen",
+     "1876-10-31",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Pieter Hullen",
+     "1838-10-04",
+     "Zwolle"
+    ],
+    [
+     "Geregistreerde",
+     "Adrianus Cornelis van der Zwan",
+     "1810-03-18",
+     "Scheveningen"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna van Dijk",
+     "1837-12-22",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Johan Adriaan Pieter van der Zwan",
+     "1868-05-12",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:6C797DD1-FFB7-4135-BCE5-B3050A98E8D9"
+  },
+  {
+   "y": 9999,
+   "id": "srt:804881FF-FFAF-4FBE-8B07-7D1E6A4CA39D",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Livinus Bundervoet",
+     "1788",
+     ""
+    ],
+    [
+     "Geregistreerde",
+     "Adrianus Stals",
+     "1778-02-26",
+     "Maassluis"
+    ],
+    [
+     "Geregistreerde",
+     "Petronella Cornelia Stals",
+     "1810-03-07",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel van Konijnenburg",
+     "1836-01-30",
+     "Delft"
+    ],
+    [
+     "Geregistreerde",
+     "Fransiscus Leusen",
+     "1795-08-28",
+     "Haastrecht"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna van der Vlist",
+     "1798-02-09",
+     "Bodegraven"
+    ],
+    [
+     "Geregistreerde",
+     "Dorothea Fransisca Stals",
+     "1807-11-07",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna van Gerven",
+     "1790",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Johanna Valkenier",
+     "1847-01-10",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Gerardus van Konijnenburg",
+     "1861-01-06",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Katharina Valkenier",
+     "1833-01-11",
+     "Vlaardingen"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:804881FF-FFAF-4FBE-8B07-7D1E6A4CA39D"
+  },
+  {
+   "y": 9999,
+   "id": "srt:DA41F5F6-DCF9-4EC5-8EE8-9189441B35B5",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "IJda Kamp",
+     "1820",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Sophia Linders",
+     "1807-07-29",
+     "Kleef"
+    ],
+    [
+     "Geregistreerde",
+     "Hendrikus Gerardus Leurs",
+     "1850-12-26",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Joanna Christina van Gerven",
+     "1790-09-15",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Wilhelmina Frederica Klop",
+     "1845",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Apolonia Hendrica Klop",
+     "1835",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Arnoldus Johannes Leurs",
+     "1846",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Gerardus Carolus Leurs",
+     "1816",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Gerardus Hendrikus Leurs",
+     "1853-04-05",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Leentje Klop",
+     "1848",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Anthonij Rochus Sebastianus Leurs",
+     "1844",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Wilhelmina Hendrika Klop",
+     "1813",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Henricus van Zoelen",
+     "1810-08-04",
+     "Berkenrode"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:DA41F5F6-DCF9-4EC5-8EE8-9189441B35B5"
+  },
+  {
+   "y": 9999,
+   "id": "srt:F175DA9C-A04E-40A8-95EB-C99B48EC750E",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Johanna Maria Lovina Bundervoet",
+     "1844-09-24",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elizabeth Nijens",
+     "1822-05-31",
+     "Iperen"
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Benjamin Ringels",
+     "1838-09-22",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Henricus Hubertus Regoud",
+     "1840-06-12",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel Feijten",
+     "1808-03-13",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Hendrikus Mari Nicols",
+     "1838-10-16",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Albertus Johannes Fredericus Nicols",
+     "1840-07-06",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F175DA9C-A04E-40A8-95EB-C99B48EC750E"
+  },
+  {
+   "y": 9999,
+   "id": "srt:F175DA9C-A04E-40A8-95EB-C99B48EC750E",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Johanna Maria Lovina Bundervoet",
+     "1844-09-24",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elizabeth Nijens",
+     "1822-05-31",
+     "Iperen"
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Benjamin Ringels",
+     "1838-09-22",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Henricus Hubertus Regoud",
+     "1840-06-12",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel Feijten",
+     "1808-03-13",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Hendrikus Mari Nicols",
+     "1838-10-16",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Albertus Johannes Fredericus Nicols",
+     "1840-07-06",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F175DA9C-A04E-40A8-95EB-C99B48EC750E"
+  },
+  {
+   "y": 9999,
+   "id": "srt:F175DA9C-A04E-40A8-95EB-C99B48EC750E",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Johanna Maria Lovina Bundervoet",
+     "1844-09-24",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Maria Wilhelmina Elizabeth Nijens",
+     "1822-05-31",
+     "Iperen"
+    ],
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Levinus Bundervoet",
+     "1788-05-22",
+     "Gent"
+    ],
+    [
+     "Geregistreerde",
+     "Benjamin Ringels",
+     "1838-09-22",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Henricus Hubertus Regoud",
+     "1840-06-12",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Christoffel Feijten",
+     "1808-03-13",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Johannes Hendrikus Mari Nicols",
+     "1838-10-16",
+     "Rotterdam"
+    ],
+    [
+     "Geregistreerde",
+     "Albertus Johannes Fredericus Nicols",
+     "1840-07-06",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:F175DA9C-A04E-40A8-95EB-C99B48EC750E"
+  },
+  {
+   "y": 9999,
+   "id": "srt:cb9396ad-b509-8b5d-9935-41a6fe57db00",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Hermanus Wilhelmus Bundervoet",
+     "1821-11-24",
+     "Rotterdam"
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/srt:cb9396ad-b509-8b5d-9935-41a6fe57db00"
+  },
+  {
+   "y": 9999,
+   "id": "zar:3d8228a1-d2e3-db48-1660-22a10d2340c0",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Joanna Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:3d8228a1-d2e3-db48-1660-22a10d2340c0"
+  },
+  {
+   "y": 9999,
+   "id": "zar:9a28381e-69ac-5ca5-2fd1-f0c92f57b0ca",
+   "ev": "Registratie",
+   "date": "",
+   "place": "",
+   "people": [
+    [
+     "Geregistreerde",
+     "Sijmen Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:9a28381e-69ac-5ca5-2fd1-f0c92f57b0ca"
+  },
+  {
+   "y": 9999,
+   "id": "zar:bed9003c-e77b-1d4f-f992-bd203033a3bb",
+   "ev": "Begraven",
+   "date": "",
+   "place": "Middelburg",
+   "people": [
+    [
+     "other:Begravene",
+     "Cornelia Bundervoet",
+     "",
+     ""
+    ]
+   ],
+   "url": "https://www.openarchieven.nl/zar:bed9003c-e77b-1d4f-f992-bd203033a3bb"
+  }
+ ]
+}

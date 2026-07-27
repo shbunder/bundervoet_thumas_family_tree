@@ -14,6 +14,9 @@ mother:
   id: dedeckere_marie_1731
   confidence: sup
 siblings:
+  - id: bundervoet_annacatharina_1772
+    confidence: asm
+    note: rests on her Assenede birth in this household's own commune; no act names her parents
   - id: bundervoet_christophorus_1755
     confidence: sup
   - id: bundervoet_coleta_1766

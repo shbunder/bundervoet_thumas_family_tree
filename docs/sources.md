@@ -17,10 +17,10 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 
 | Site | Kind | Access | Capabilities | Searches run | Covers |
 |---|---|---|---|---|---|
-| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 51 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
+| `agatha` <https://agatha.arch.be/> | archive | login | name-index, image-read | 52 | Belgian civil and parish registers by commune and year, with scans. The primary route to 19th-century Belgian acts. |
 | `search-arch` <https://search.arch.be/> | archive | offline | name-index, image-read | 3 | Scanned civil registers by commune and year; sibling portal to AGATHA. |
-| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 58 | Belgian civil and church registration, with act images. |
-| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 17 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
+| `familysearch` <https://www.familysearch.org/> | index | login | name-index, image-read, full-text | 60 | Belgian civil and church registration, with act images. |
+| `geneanet` <https://www.geneanet.org/> | index | mixed | name-index, tree, image-read | 21 | Member-submitted trees plus an indexed record collection. The member trees are the main lever on a 19th-century frontier. |
 | `ancestry` <https://www.ancestry.com/> | index | paywall | name-index, image-read | 2 | West-Vlaanderen and Brabant civil-registration indexes, searchable province-wide. |
 | `myheritage` <https://www.myheritage.com/> | index | paywall | name-index, tree | 5 | Indexed Belgian and French civil registration, plus member family trees with automatic Smart Matches against your own uploaded tree. |
 | `vrijwilligersrab` <https://www.vrijwilligersrab.be/> | index | open | name-index | 42 | Volunteer transcriptions of West-Flemish marriage and death records. |
@@ -33,10 +33,11 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 | `grafzerkje` <https://www.grafzerkje.be/> | cemetery | open | name-index | 1 | Belgian gravestone and cemetery records. |
 | `family` | family | offline | testimony | 1 | Testimony, memorial cards, photographs and papers held by relatives. |
 | `web` | web | open | full-text | 4 | Parenteel documents and family sites published outside the big platforms. |
-| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 63 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
+| `openarch` <https://www.openarchieven.nl/> | index | open | api, name-index | 65 | About 30 million Belgian person-mentions: the Familiekunde Vlaanderen and Doodsprentjes.be bidprentjes and rouwbrieven, the heemkring collections, and the Rijksarchief civil acts transcribed by the Demogen volunteers. Coverage is uneven by province — Vlaams-Brabant has indexed civil acts with full parent roles; Oostende and Evergem are overwhelmingly 20th-century memorial cards. |
 | `fv-dataindexen` <https://dataindexen.familiekunde-vlaanderen.be/> | index | open | name-index | 5 | Familiekunde Vlaanderen's regional documentation centres, in four collections: the TOTAALINDEX OP DE OUDE PAROCHIEREGISTERS (baptism, marriage and burial indexes per parish, arrondissement by arrondissement), the COD Centrum Oostende Databank, FV-Kempen, and Regio Mandelleie, plus klappers on genealogical books. |
-| `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 5 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
+| `fs-fulltext` <https://www.familysearch.org/search/full-text> | index | login | full-text, image-read | 6 | Machine transcription of image collections that were never name-indexed: Flemish feudal and nobility records, Gent notarial deeds, militia and military registers, land records. Reaches back to the 1460s — far beyond civil registration, and beyond most parish indexing. Critically for this tree: 'Belgium. Court Records 1639-1700, 1761-1795' — the STATEN VAN GOED, estate inventories drawn up on a death, which name the deceased, the surviving spouse and every child with ages and marriages. That is the richest single document type for pre-1796 Flemish family reconstruction and it is machine-transcribed here. The catalogue is organised as province x record type with a date span each — 'Antwerpen, Rechtsgang, 0190-1995', 'Brabant, Eigendommen, 1273-1964', and the same shape for Migraties, Religieus, Woonplaatsen, Militaire dienst and Biografieen. Property, judicial and residence records reaching back to the Middle Ages, none of it name-indexed. |
 | `netradyle` <https://www.netradyle.be/actes/> | index | open | name-index | 8 | 1,353,989 indexed acts for Namur, Liège, Hainaut, BRABANT WALLON, Luxembourg and Vlaams-Brabant: 721,862 births/baptisms, 181,589 marriages, 381,148 deaths/burials, 69,390 other. Mostly 1500-1912. Runs on ExpoActes 3.2.4. Free and completely unauthenticated for visitors — the login is for administrators only, so everything here is reproducible without a session. |
+| `wiewaswie` <https://www.wiewaswie.nl/> | index | open | name-index | 1 | The Dutch national aggregator of civil registration, DTB (baptism/marriage/burial), population registers, notarial and military records. |
 
 **`agatha`** — Post-1900 Oostende civil registers are NOT here — they sit at the Stadsarchief Oostende. Go straight to commune + year + act number; 19th-c. acts are handwritten but formulaic, and the parents are named in the opening lines ('zoon/dochter van … en …').
 
@@ -61,6 +62,8 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 **`fs-fulltext`** — THE ROUTE TO THE PRE-1796 HALF OF THIS TREE. 158 of its people were born before civil registration and are unreachable by AGATHA, Open Archives or any name index, because the documents that name them were never indexed. This searches the manuscript itself. A first query for 'Bundervoet' returned 159 hits including a Bundervoet family holding fiefs at Saint-Pierre-Alost 1687-1701, with descent stated (Francois > Lievin; Lievin and Pasquier each holding in turn) and a Catherine Bundervoet acting as guardian for her son in 1687. NOTE: the snippets that surfaced those entries ran two adjacent surnames together and gave three wrong dates and one wrong place; the page itself had to be opened to get them right. Read the document, not the snippet. Search by surname alone and read the snippets; the place filter behaves like FamilySearch's others and should not be trusted to constrain. COVERAGE IS UNEVEN BY COLLECTION, NOT BY PROVINCE. A surname query alone looked thin for West-Vlaanderen — Wittenheyns returned a single 1657 Bruges notarial mention — while 'Sabbe Oostkamp' returned thousands, all in the court records. So the province is well covered and the rare surname simply is rare; do not read a thin surname result as thin coverage. Search surname + commune, and expect the yield to be staten van goed rather than registers. LIMITATION, FOUND THE HARD WAY: it is a discovery tool, not a lookup. Multi-word queries are ORed rather than phrased — 'sterfhuyse Sabbe Oostcamp' returned 101,134 hits — and the collection and year filters are a dynamic widget that resists scripting. So it will tell you a family is present in a body of records, and it will not hand you one named person's document. Reaching a specific act through it means filtering by hand in the browser, or paging. Budget for that; do not expect a targeted hit.
 
 **`netradyle`** — FOUND by discovery (2026-07-27) after Open Archives was shown to hold ZERO marriage and ZERO birth acts for Grez-Doiceau — 17,086 of its 17,091 mentions there are death acts. Netradyle reaches the Brabant-wallon layer that Open Archives does not, which makes it the open counterpart to FamilySearch's Brabant films for the Thumas line. HOW TO QUERY WITHOUT A BROWSER, all plain GET: tables are /actes/tab_naiss.php, /actes/tab_mari.php and /actes/tab_deces.php with ?args=<Commune>,<SURNAME>; the commune string for Grez-Doiceau is 'Grez [Brabant Wallon]' — the modern hyphenated name returns nothing. Tables page at 100 rows with &pg=2, and there is NO 'next' link, so a 100-row table is a truncated one and must be paged or it silently reads as complete. Detail pages are /actes/acte_naiss.php?xid=&xct= etc. THE ASYMMETRY THAT MATTERS: birth detail pages carry the father's forename and the mother's full name; MARRIAGE detail pages carry only the two spouses' names and the date — no parents, no ages, no trades, no act number. So this venue can corroborate a parent link from a birth but can never substitute for reading a marriage act. It is a volunteer dépouillement deposited in 2006, index-level throughout, with visible transcription noise (Joustens/Jousten/Jostens, Kinart/Kinar, Derrider/Deridder, and one child's mother given as Marie Thérèse where every sibling has Marie Catherine) — sup, never doc.
+
+**`wiewaswie`** — Returns HTTP 403 to unauthenticated scripted requests; reachable from a browser. Its search API is POST /Umbraco/Api/nl-NL/Service/GetSearchResults, but the payload shape was not worked out this pass — results were read from the rendered pages instead.
 
 ## Pages
 
@@ -575,6 +578,22 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Accessed:** 2026-07-27
 - **Note:** Alsemberg film 1688399, DGS 004714966, frame 00489. The bride's mother is written Joanna Maria Peremans here, against Anna Catharina on the Kraainem act eight days later.
 
+#### `fs-personas-bundervoet` — FamilySearch record search — surname Bundervoet, exact, worldwide
+- **Kind:** index · <https://www.familysearch.org/search/record/results?q.surname=Bundervoet&q.surname.exact=on>
+- **Covers:** ['Bundervoet']
+- **Yielded:** 320 exact-surname records worldwide (261 unique): Belgium 212, Netherlands 72, France 12, United States 24. Its Belgian pre-1803 content is the Evergem registers of 1791-1802 and nothing else.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Fuzzy search returns 9,154 and folds in Maerivoet, Bervoet and Meervoet; only q.surname.exact=on is meaningful for this surname. MEASURED LIMIT: FamilySearch does not index Gent city registers before ~1851 — a 600-record control on the common Gent surname De Coster returned 91 register titles and not one Gent register earlier than 1851. Full capture in research/findings/bundervoet-familysearch-2026-07-27.json.
+
+#### `fs-evergem-1792-burial-bogaert` — Evergem burial register 1792 — Petronella Bogaert, 31 August 1792
+- **Kind:** record · <https://www.familysearch.org/ark:/61903/1:1:6T52-YW43>
+- **Covers:** ['Bogaert', 'Bundervoet', 'Taedts']
+- **Yielded:** Petronella Bogaert buried 31 August 1792, born 1711, wife of Christophorus Bundervoet, daughter of Petrus Bogaert and Maria Taedts — a birth year, a burial date and a generation the tree did not have.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Index entry, not the image. The date is the BURIAL; the death is not stated and is not recorded as one.
+
 ### Geneanet
 
 #### `tree-stefpaelinck` — stefpaelinck (Stef Paelinck)
@@ -701,6 +720,43 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Kind:** collection
 - **Covers:** Zaventem burials.
 - **Yielded:** Independent confirmation of several Van Craenenbroeck dates (Arthur 1908-1982, Paul 1934-2010, Elisa 1887-1967, Desiré 1859-1944); the family runs back to a 1721 Zaventem marriage.
+
+#### `geneanet-archives-bundervoet` — Geneanet archives-and-documents index — surname BUNDERVOET, whole index
+- **Kind:** index · <https://en.geneanet.org/fonds/individus/archives/?go=1&nom=BUNDERVOET>
+- **Covers:** ['Bundervoet']
+- **Yielded:** 728 archival records (member trees excluded), of which 284 are dated before 1800 and run from 1602. Holds the Gent city PARISH registers — Mariages Sint-Pieters (46) and Sint-Martinus (32), plus Sint-Michiels Noord, Sint-Jacobs, Sint-Baafs, Sint-Niklaas — which no other venue in this registry indexes, and the Assenede acts of Petrus Bundervoet's household.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Index level only: it gives names, a year, a parish and a spouse, never the act text, so nothing from it can be better than `sup`. Its `Archives :` line often carries the COLLECTION span (e.g. '1581-1910'); read as a record date that manufactures 16th-century records which do not exist. Full capture in research/findings/bundervoet-geneanet-archives-2026-07-27.json.
+
+#### `geneanet-assenede-1781-marriage-vermeire-bundervoet` — Assenede marriage 1781 — Carolus Vermeire × Petronella Bundervoet
+- **Kind:** record · <https://en.geneanet.org/fonds/individus/archives/?go=1&nom=BUNDERVOET>
+- **Covers:** ['Bundervoet', 'Vermeire']
+- **Yielded:** The marriage that identifies the Petronella Bundervoet named as a mother in the Hontenisse death act of 1814.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+
+#### `geneanet-assenede-1788-marriage-vervaeck-bundervoet` — Assenede marriage 1788 — Antonius Joannes Vervaeck × Livina Maria Bundervoet
+- **Kind:** record · <https://en.geneanet.org/fonds/individus/archives/?go=1&nom=BUNDERVOET>
+- **Covers:** ['Bundervoet', 'Vervaeck']
+- **Yielded:** A husband for Livina Maria Bundervoet (1760-1831), and her death at Assenede in 1831.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+
+#### `geneanet-assenede-bundervoet-household` — Assenede register entries for the Bundervoet household, 1766-1831
+- **Kind:** record · <https://en.geneanet.org/fonds/individus/archives/?go=1&nom=BUNDERVOET>
+- **Covers:** ['Bundervoet']
+- **Yielded:** Petrus Bundervoet death 1777; Coleta birth 1766; Anna Catharina birth 1772; Joanna Maria death 1825; Livina Maria death 1831 — all at Assenede, which documents from the registers a household the tree held only from one Geneanet member tree.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+
+#### `geneanet-gent-1787-marriage-bundervoet-peters` — Gent (Sint-Michiels Noord) marriage 1787 — Egidius Bundervoet × Anna Maria Elisabeth Peters
+- **Kind:** record · <https://en.geneanet.org/fonds/individus/archives/?go=1&nom=BUNDERVOET>
+- **Covers:** ['Bundervoet', 'Peters']
+- **Yielded:** The first marriage of the Gent patriarch Egidius Bundervoet, and the only record found that names the mother of the Bundervoet who emigrated to Rotterdam.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** NOT grafted. The Rotterdam records name that emigrant's father as Petrus, this act names him Egidius; a stated conflict vetoes. See research-log for what would resolve it.
 
 ### MyHeritage
 
@@ -998,6 +1054,50 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Accessed:** 2026-07-27
 - **Note:** Corrects an earlier characterisation as spanning only 1901–1955 — it actually runs 1791–1970s and already holds roughly 4,700 pre-1901 mentions, so the 1882–1900 window between it and `abt` is not an untried gap. One stray EventDate.Year value of "5687" is a data-quality outlier worth a footnote, not a real date.
 
+#### `openarch-nl-bundervoet` — Open Archives — surname Bundervoet, country_code=nl and worldwide
+- **Kind:** index · <https://www.openarchieven.nl/>
+- **Covers:** ['Bundervoet']
+- **Yielded:** 176 Dutch records, none of them previously harvested: the whole 17th-century Bergen op Zoom/Rotterdam family and the 19th-century Rotterdam family of Livinus Cornelis Bundervoet of Gent. Worldwide the surname returns 576, which is now fully accounted for (396 BE held + 176 NL + 8 stragglers).
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** The standing surname harvest was run country_code=be, so these 176 were invisible to it. Full records in research/findings/bundervoet-diaspora-2026-07-27.json.
+
+#### `zar-assenede-1807-memorie-bundervoet-coleta` — Memorie van successie, kantoor Hulst nr. 2027, filed 27 December 1807, Assenede — Colete Bundervoet
+- **Kind:** record · <https://www.openarchieven.nl/zar:A14E09AB-0BC1-46A9-B919-2C6741A22D0F>
+- **Collection:** Zeeuws Archief 398/144, Memories van successie
+- **Covers:** ['Bundervoet', 'Bouchier']
+- **Yielded:** Coleta Bundervoet's husband — Constantin Stanislas Bouchier — and an estate declared at Assenede on 27 December 1807.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** A memorie van successie is an estate-duty declaration filed AFTER a death. 27 December 1807 is the filing date and is not a death date; the death is only 'by' that day.
+
+#### `zar-hontenisse-1814-death-vermeeren` — Hontenisse death act nr. 31, 30 March 1814 — Maria Theresia Vermeeren
+- **Kind:** record · <https://www.openarchieven.nl/zar:7E840FAF-EDCF-4BAB-890D-C8A53EF254A0>
+- **Collection:** Zeeuws Archief 25, Burgerlijke Stand Zeeland, HON-O-1814
+- **Covers:** ['Vermeeren', 'Bundervoet', 'Steijaert']
+- **Yielded:** Maria Theresia Vermeeren, aged 27, born Assenede, wife of Livinus Bernardus Steijaert (veldwachter); parents Karel Vermeeren and Petronella Bundervoet. A granddaughter of Petrus Bundervoet, over the border in Zeeuws-Vlaanderen.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Scan available at the Zeeuws Archief proxy; not read this pass.
+
+#### `srt-rotterdam-1818-marriage-bundervoet-vangerven` — Rotterdam marriage, 25 November 1818 — Livinus Cornelis Bundervoet × Joanna Christina van Gerven
+- **Kind:** record · <https://www.openarchieven.nl/srt:31D79CDE-2D18-4F3D-AE5C-34EF328C9462>
+- **Collection:** Stadsarchief Rotterdam 999-06, huwelijksakten 1818B folio b66v
+- **Covers:** ['Bundervoet', 'van Gerven', 'Peeters']
+- **Yielded:** Livinus Cornelis Bundervoet, aged 28, born Gent, son of Petrus Bundervoet and Anna Maria Elizabeth Peeters — a Gent Bundervoet emigrating to Rotterdam.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** A Dutch civil marriage required the groom's birth certificate, so for a foreign-born groom the Gent extract should be filed with this act's huwelijksbijlagen. Not yet fetched — this is the cheapest route to a Gent baptism of 22 May 1788.
+
+#### `srt-rotterdam-1872-death-bundervoet-livinus` — Rotterdam death act 1872.741, 28 February 1872 — Livinus Cornelis Bundervoet
+- **Kind:** record · <https://www.openarchieven.nl/srt:2D80408A-6730-4B45-91C9-FAC066676311>
+- **Collection:** Stadsarchief Rotterdam 999-09, overlijdensakten 1872A folio a193v
+- **Covers:** ['Bundervoet', 'Peeters', 'van Gerven']
+- **Yielded:** Aged 83 years and 10 months, born Gent (België), same parent pair as the 1818 marriage — an independent confirmation, and with four Rotterdam population-register entries it fixes his birth at 22 May 1788.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Scan available at the Stadsarchief Rotterdam proxy; not read this pass.
+
 ### Familiekunde Vlaanderen — dataindexen (indices en klappers)
 
 #### `fv-ttind-gent` — Totaalindex op de oude parochieregisters — Arrondissement Gent (table 008_GENT)
@@ -1034,3 +1134,13 @@ miss is only a miss for what somebody indexed, and a venue that later gains
 - **Confidence:** sup
 - **Accessed:** 2026-07-27
 - **Note:** See the netradyle site entry for how to query it without a browser. A 2006 volunteer deposit with visible transcription noise (Joustens/Jousten/Jostens, Kinart/Kinar, Derrider/Deridder) — sup throughout, never doc, and several rows here are recorded as AMBIGUOUS or CANDIDATE rather than grafted.
+
+### WieWasWie (CBG Centrum voor familiegeschiedenis)
+
+#### `wiewaswie-bundervoet` — WieWasWie — surname Bundervoet, whole index
+- **Kind:** index · <https://www.wiewaswie.nl/nl/zoeken/?q=Bundervoet>
+- **Covers:** ['Bundervoet']
+- **Yielded:** 128 records, all inside the two Dutch populations Open Archives already showed. Adds Daniel Bundervoet in VOC service at Batavia (1707, 1710), a militia record of 1840 and the Rotterdam population registers of 1850/1860/1880.
+- **Confidence:** sup
+- **Accessed:** 2026-07-27
+- **Note:** Its value here is a NEGATIVE with a real extent: no Bundervoet appears anywhere in the Netherlands between 1728 and 1813, which is what shows the 17th-century Rotterdam family and the 19th-century one to be two separate arrivals rather than one line.

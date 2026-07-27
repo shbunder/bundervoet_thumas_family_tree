@@ -7,6 +7,7 @@ birth:
   date: "1761"
 death:
   date: "1825"
+  place: Assenede
 confidence: sup
 line: bundervoet
 father:
@@ -16,6 +17,9 @@ mother:
   id: dedeckere_marie_1731
   confidence: sup
 siblings:
+  - id: bundervoet_annacatharina_1772
+    confidence: asm
+    note: rests on her Assenede birth in this household's own commune; no act names her parents
   - id: bundervoet_christophorus_1755
     confidence: sup
   - id: bundervoet_coleta_1766
@@ -32,6 +36,7 @@ siblings:
     confidence: sup
 sources:
   - tree-paulderidder
+  - geneanet-assenede-bundervoet-household
 ---
 
 One of the eight children of [[bundervoet_petrus_1727]] and [[dedeckere_marie_1731]]. Their father was
@@ -39,6 +44,11 @@ the younger brother of [[bundervoet_christoffel_1709]], through whom this tree's
 first cousins of [[bundervoet_philippus_1756]]'s generation — blood relatives of Renée and Léon under
 objective 2.
 
-Recorded from the paulderidder tree's list of the couple's children, which gives the years
-above and nothing further. No act has been read for Joanna: a birth act at Evergem
-or Assenede would give the day and the parents in the register's own words.
+Recorded first from the paulderidder tree's list of the couple's children. **The Assenede
+register now stands behind the death year and gives the place**: she died at Assenede in
+**1825**, where her father had been buried in 1777 and her sister
+[[bundervoet_coleta_1766]] was born.
+
+Two identifiers agree: the death year the held record already carried from a different
+source, and the commune. Index-level, so `sup` — no act has been read, and one would give
+the day, her age and whether she had married.

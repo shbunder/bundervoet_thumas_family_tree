@@ -4244,3 +4244,143 @@ upgraded `sup` → `doc` on eleven existing records: [[swaelens_egidius]],
 [[ackermans_joanna]], [[swaelens_joannes_1858]], [[bossin_ludovica_1853]], [[bossin_joannes_1851]],
 [[bossin_henricus_1863]], [[bossin_guilielmus_1824]], [[peremans_joanna_1824]], [[guns_maria_1864]], [[guns_joannes]] and
 [[vogels_amelia]]. One retraction (§72's `blocked` → `miss`, with scope). Build green.
+
+## 76. Three venues nobody had opened — the Gent Bundervoets are older than the Evergem ones, and §73's "closed door" was a closed venue
+
+Run in a second session alongside §74–75, on one question: **dig under §73's "six distinct
+Bundervoet families" and find a link, even a weak one.** The answer turned out not to be in
+the corpus at all.
+
+**THE CORRECTION THAT MATTERS. §73's verdict is sound for Open Archives Belgium, and that
+is the only place it is sound.** It should be read with that scope, because three other
+indexes had never been opened on this surname:
+
+| Venue | Bundervoet records | State after this pass |
+|---|---|---|
+| Open Archives, **worldwide** | **576** | exhausted — 396 BE (held) + 176 NL + 8 stragglers, all accounted for |
+| FamilySearch, exact surname | **320** (261 unique) | exhausted — BE 212, NL 72, FR 12, US 24 |
+| **Geneanet, archives index only** | **728** | swept — *this* is the venue that holds Gent |
+| WieWasWie (CBG) | **128** | exhausted |
+
+The standing surname harvest was run `country_code=be`, so the 176 Dutch records were
+invisible to it by construction. All four venues are now registered in
+`research/sources.json` with what they cover and what they cannot.
+
+**A PRIOR OF MY OWN, BUILT AND THEN RETRACTED.** Mid-pass I measured every stated
+Bundervoet birthplace in the held Belgian corpus — Evergem 47, Gent 29, Oostende 17,
+Wachtebeke 9, Kluizen 5, and nothing outside a 20 km circle — and concluded the surname
+radiates from Evergem with Gent as a satellite. **Withdrawn.** That corpus is Open
+Archives, which for this region is memorial cards plus 19th–20th-century civil
+registration: Evergem-heavy by construction. Geneanet's archive index holds Bundervoet
+marriages at **Gent Sint-Martinus from 1602**, continuous through Sint-Pieters to 1796,
+with deaths at Sint-Pieters from 1653 — roughly a hundred parish marriages, **older and
+denser than anything documented on our Evergem line**, whose evidence begins about 1615. By
+1682 the Gent group was marrying within itself: *Livinus Bundervoet × Martina Bundervoet*,
+Sint-Martinus. Which of Gent or Evergem is upstream is **open**, and Gent currently has the
+better record. What survives is only the weak form — the surname is rare (391 of 4,276,988
+corpus mentions, **13.4 bits**, no spelling variants anywhere) and every Belgian occurrence
+falls inside that circle.
+
+**A second measurement, which is why Gent looked empty.** FamilySearch does not index Gent
+city registers before about 1851. Control: surname `De Coster`, very common in Gent, 600
+records pulled from the same collection — 91 distinct register titles and **not one Gent
+register earlier than 1851**. Any Gent negative scoped to FamilySearch means nothing before
+that year.
+
+**THE FIND.** Two records, from two of the unopened venues:
+
+- **Gent (Sint-Michiels Noord), 1787 — Egidius Bundervoet × Anna Maria Elisabeth Peters.**
+- **Rotterdam, 25 Nov 1818 and 28 Feb 1872 — Livinus Cornelis Bundervoet, born Gent, father
+  Petrus Bundervoet, mother Anna Maria Elizabeth Peeters.** Four Rotterdam
+  population-register entries fix his birth at **22 May 1788, Gent**.
+
+The mother's name agrees on all four tokens, in the same city, with a marriage in 1787 and
+a first child in May 1788. And **Egidius Bundervoet is patriarch #6 of §73's six** — the one
+married to Maria Francisca Ledent, who was born in 1777 and so cannot have been his wife in
+1787. Peters is the first marriage, Ledent the second.
+
+**NOT GRAFTED, and the reason is written down.** Both Rotterdam records give the father's
+forename as *Petrus*, the Gent act gives *Egidius*. A stated conflict vetoes. The readings
+are (a) one man, with the emigrant son mis-reporting a forename or a double name *Egidius
+Petrus*, or (b) two Bundervoet men who each married an Anna Maria Elisabeth Peters in Gent
+— which for a 13.4-bit surname is close to impossible, and is still not a document.
+Labelled `--nonmatch` against [[bundervoet_petrus_1727]] with the whole argument, so the
+refusal and the reason to re-test are both on the record.
+
+**Four of the six patriarchs now have their marriage acts located** — Petrus × Maria Wille
+1787 Sint-Pieters, Petrus × Isabella De Coster 1790 Sint-Pieters, "Felix × Costers Maria"
+1779 Sint-Pieters, Egidius 1787 Sint-Michiels Noord. Two of §73's collateral couples are
+confirmed from the same registers: *Catharina Bundervoet × Livinus Clareman*, married 1752
+(their son Josephus born 1776), and *Maria Anna Bundervoet × Livinus De Smet*, married 1781
+(their daughter born 1784). Bundervoet–De Smet recurs **six times** between 1675 and 1781
+and Bundervoet–Wille three times. §73's "six distinct families" reads better as **one
+intermarrying Gent network**, and a hypothesis worth exactly one act: *Petrus × Maria
+Wille* marries 1787 and has a son in 1790, *Petrus × Isabella De Coster* marries 1790 and
+has a daughter in 1791 — if Maria Wille died at that birth, two of the six are one man
+remarrying.
+
+**WHAT WENT INTO THE TREE — Assenede, and a generation on the Bogaert line.** Nine
+records, all `sup`, all index-level:
+
+- [[bogaert_petronilla]] held a bare `death: 1792`. The Evergem burial register gives her
+  burial **31 August 1792**, birth **1711**, and her parents **[[bogaert_petrus]] × [[taedts_maria]]**,
+  both new — a generation above on a **direct ancestral line**. Two identifiers: the death
+  year the record already carried from another source, and the husband named in the register.
+- [[bundervoet_coleta_1766]] — born Assenede 1766; an estate-duty declaration filed at
+  Assenede **27 December 1807** gives her husband **[[bouchier_constantin]]**.
+- [[bundervoet_petronella_1754]] — married **[[vermeire_carolus]]** at Assenede in **1781**,
+  which is the second identifier that ties her to the Hontenisse death act of 1814 naming
+  their daughter **[[vermeeren_maria_1787]]** (aged 27, born Assenede), with her husband
+  **[[steijaert_livinus]]**, a *veldwachter*. That frontier is now closed.
+- [[bundervoet_livina_1760]] — married **[[vervaeck_antonius]]** at Assenede in **1788**, died
+  there 1831. [[bundervoet_joanna_1761]] — died Assenede 1825.
+- [[bundervoet_annacatharina_1772]] — a Bundervoet born at Assenede in 1772, not in the
+  paulderidder list. **Her parent links are `asm`**: one identifier (a 13-bit surname) plus
+  a commune where this is the only attested Bundervoet household, and a mother who would
+  have been 41. The scorer cannot see an `asm` link in either direction, so the tree's own
+  guess can never come back as evidence. Her Assenede baptism would settle it.
+
+**Two dates are deliberately not death dates.** A *memorie van successie* is filed after a
+death, so 27 December 1807 says only that Coleta was dead by then; and 31 August 1792 is
+Petronilla Bogaert's burial. Both sit in `raw` beside the year, the distinction
+[[bundervoet_petrus_1727]]'s own record already draws.
+
+**A separate structural finding: two Flanders→Rotterdam migrations, not one.** The Dutch
+material is two unrelated populations — the Bergen op Zoom family of **Michiel Geertssen
+Bundervoet** (1631–1727, three generations, reconstructed in full) and the Gent family of
+Livinus Cornelis (1818 onward). WieWasWie and Open Archives together show **no Bundervoet
+anywhere in the Netherlands between 1728 and 1813**, and the first family has almost no
+surviving male line. They must not be merged. Wider diaspora newly visible: a Réunion
+branch, *Marie Liévine Bundervoet* in French Flanders, an Evergem→Indiana emigration, and a
+styled *Bundervoet d'Hautecourt* line.
+
+**BLOCKED, not missed.** **AGATHA's person-name search no longer exists** —
+`/nl/search/persons/results/` returns 404 and the surviving tabs are `genealogie`,
+`analyses`, `ead`, of which `genealogie` is a register-and-place browser with no
+person-name field. Logged in fine, so this is a changed URL scheme, and **every earlier
+miss logged against an AGATHA person search should be re-checked, because that route is
+gone.** **FamilySearch full-text** served an hCaptcha challenge all session (the
+cookie-authed record API kept working, which is why the record search succeeded and
+full-text did not); loading the page once by hand clears it, and it is the venue that would
+reach un-indexed Gent registers 1796–1850.
+
+**A method warning, earned twice.** FamilySearch and Geneanet both stamp a record with the
+**collection's** date span — `1541-1950`, `1581-1910`, `1509-1920`. Parsed as a record date
+that manufactures 16th-century records which do not exist. I made the error once in this
+pass and caught it on the second occurrence; anything that ingests these venues needs a
+guard.
+
+**NEXT, and it is now one named act rather than a direction.** The **Gent baptism of 22 May
+1788**. It names the father as the parish clerk had him and its **godparents, who in a
+Flemish baptism register are almost always kin** — which is the test of whether the Gent
+families reach Evergem. The cheap route avoids Gent entirely: a Dutch civil marriage
+required the groom's birth certificate, so for a foreign-born groom **the Gent extract was
+filed with the Rotterdam 1818 huwelijksbijlagen**, which Stadsarchief Rotterdam has
+scanned. After that, the Gent Sint-Michiels Noord marriage act of 1787, which names
+Egidius's own parents.
+
+Tree: 537 → **545 people**; 8 added, 6 edited, 2 `asm` links drawn. Eleven searches logged,
+two blocked with their reason. Two labels, both `--nonmatch`. One new site and thirteen new
+pages in `research/sources.json`. Full evidence, including the three raw venue captures, in
+`research/findings/`. Verdict: **NOT PROVEN for objective 3** — no Gent patriarch is
+grafted and none should be — **but no longer closed.**

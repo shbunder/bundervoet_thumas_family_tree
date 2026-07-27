@@ -1,0 +1,2628 @@
+{
+ "generated": "2026-07-27",
+ "venue": "FamilySearch persona search (service/search/hr/v2/personas), q.surname.exact=on, no country filter",
+ "totals": {
+  "exact_worldwide": 320,
+  "unique_after_dedupe": 261,
+  "fuzzy_worldwide": 9154,
+  "exact_by_country": {
+   "Belgium": 212,
+   "Netherlands": 72,
+   "France": 12,
+   "United States": 24
+  }
+ },
+ "warning": "EVIDENCE ONLY - nothing grafted, labelled or logged. In 'reg', spans like '1541/1950' are COLLECTION date ranges, not record dates.",
+ "records": [
+  {
+   "id": "Q24P-WKQF",
+   "n": "Maurice François De Poorter",
+   "f": "Birth:28 Mar 1907@Ledeberg, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Oost-Vlaanderen, Belgium 1541/1950",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:François Joseph Eulalie De Poorter>Maurice François De Poorter ; CP:François Joseph Eulalie De Poorter>Maria Louisa Bundervoet ; PC:Maria Louisa Bundervoet>Maurice François De Poorter",
+   "others": "Maria Louisa Bundervoet ; François Joseph Eulalie De Poorter"
+  },
+  {
+   "id": "Q24P-WGSB",
+   "n": "Albert August Bundervoet Or De Poorter",
+   "f": "Birth:25 Aug 1902@Ledeberg, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Oost-Vlaanderen, Belgium 1541/1950",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Franciscus Josephus Eulalia De Poorter>Marie Louise Bundervoet ; PC:Franciscus Josephus Eulalia De Poorter>Albert August Bundervoet Or De Poorter ; PC:Marie Louise Bundervoet>Albert August Bundervoet Or De Poorter",
+   "others": "Marie Louise Bundervoet ; Franciscus Josephus Eulalia De Poorter"
+  },
+  {
+   "id": "X1M2-7BP",
+   "n": "Hermanus Wilhelmus Josephus Moonen",
+   "f": "Birth:19 Mar 1872@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Netherlands 1564/1910",
+   "coll": "",
+   "rel": "CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet ; PC:Theodorus Laurentius Moonen>Hermanus Wilhelmus Josephus Moonen ; PC:Johanna Lowina Maria Bundervoet>Hermanus Wilhelmus Josephus Moonen",
+   "others": "Johanna Lowina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "VRPQ-TTW",
+   "n": "Augustin Steÿaert",
+   "f": "",
+   "age": "",
+   "reg": "Hainaut, Belgium 1600/1913",
+   "coll": "\"Belgique, Hainaut, registres d’état civil, 1600-1913\"",
+   "rel": "CP:Jean François Steÿaert>Pélagie Bundervoet ; PC:Pélagie Bundervoet>Augustin Steÿaert ; PC:Jean François Steÿaert>Augustin Steÿaert ; CP:Augustin Steÿaert>Marie Hamays",
+   "others": "Pélagie Bundervoet ; Jean François Steÿaert ; Marie Hamays ; Louis Augustin Hamays ; Adèle Galliez"
+  },
+  {
+   "id": "QP4J-GKTS",
+   "n": "Michiel Geertssen Bundervoet",
+   "f": "Property:3 Apr 1631@Bergen op Zoom, Noord-Brabant, Nederland Occupation:",
+   "age": "",
+   "reg": "Bergen op Zoom, Noord-Brabant, Nederland 3 Apr 1631",
+   "coll": "\"Netherlands, Archival Indexes, Public Records\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "QLDR-ZX1K",
+   "n": "Maria Wolfersen",
+   "f": "Baptism:19 Apr 1651@Bergen op Zoom, Noord-Brabant, Nederland",
+   "age": "",
+   "reg": "Bergen op Zoom, Noord-Brabant, Nederland 19 Apr 1651",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": "Machiel Geertsen Bundervoet ; Guillam Wolfersen ; Janneke Adriaensen ; Gillis de Neve"
+  },
+  {
+   "id": "6ZYN-ZX7W",
+   "n": "Barbara van Ganswijck",
+   "f": "Baptism:31 Oct 1652@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland 31 Oct 1652",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": "N.n. Bundervoet ; Jan van Ganswijck ; Marija Thijbouts ; Mijchiel Gerritse ; Isack van Heel ; Abram Velthuijse ; Anna Velthuijse"
+  },
+  {
+   "id": "QP4J-8ZKH",
+   "n": "Michiel Bundervoet",
+   "f": "Residence:@Rotterdam Property:9 Nov 1655@Bergen op Zoom, Noord-Brabant, Nederland Occupation:",
+   "age": "",
+   "reg": "Bergen op Zoom, Noord-Brabant, Nederland 9 Nov 1655",
+   "coll": "\"Netherlands, Archival Indexes, Public Records\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "QLDR-YZVL",
+   "n": "Adriaentgen Poij",
+   "f": "Baptism:16 May 1657@Bergen op Zoom, Noord-Brabant, Nederland",
+   "age": "",
+   "reg": "Bergen op Zoom, Noord-Brabant, Nederland 16 May 1657",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": "Jan Machielsen Bundervoet ; Joos Adriaensen Poij ; Adriaentgen Lievens ; Jan Adriaensen Poij"
+  },
+  {
+   "id": "6ZY6-MSX3",
+   "n": "Barent Barentse",
+   "f": "Baptism:1 May 1661@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland 1 May 1661",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": "Marijtje Bundervoet ; Jan Barentse ; Marijtje van Swiepe ; Gerrit Bundervoet ; Trijntje Cools"
+  },
+  {
+   "id": "6ZY6-9NHP",
+   "n": "Gerrit Pietersse Versteven",
+   "f": "Baptism:19 Sep 1663@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland 19 Sep 1663",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": "Francina Bundervoet ; Jan Pietersse Versteven ; Jannetge Michiels Bundervoet ; Sijmen Cornelisse ; Flora Bundervoet"
+  },
+  {
+   "id": "6ZYF-F23Z",
+   "n": "Jannetie de Joncker",
+   "f": "Baptism:16 Jul 1679@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland 16 Jul 1679",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Lodewijck de Joncker>Lijntie Bundervoet ; PC:Lodewijck de Joncker>Jannetie de Joncker ; PC:Lijntie Bundervoet>Jannetie de Joncker",
+   "others": "Lijntie Bundervoet ; Lodewijck de Joncker ; Jannetie Jonckers ; Lambert de Joncker ; Isaacq de Groot ; Chatrina Jonckers"
+  },
+  {
+   "id": "6ZYF-SJ3C",
+   "n": "Johannes de Joncker",
+   "f": "Baptism:19 Oct 1681@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland 19 Oct 1681",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Lodewijck de Joncker>Johannes de Joncker ; CP:Lodewijck de Joncker>Lijntie Bundervoet ; PC:Lijntie Bundervoet>Johannes de Joncker",
+   "others": "Lijntie Bundervoet ; Lodewijck de Joncker ; Cornelis Alblasserd ; Francintie Machielse"
+  },
+  {
+   "id": "6ZYF-F6PH",
+   "n": "Cornelis van Alphen",
+   "f": "Baptism:30 May 1713@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland 30 May 1713",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": "Fransijntje Bundervoet ; Jan van Alphen ; Aafje de Bree ; Gijsbert van Alphen ; Agata de Leeuw"
+  },
+  {
+   "id": "68M1-9H1M",
+   "n": "Fransijntje Bundervoet",
+   "f": "Burial:22 Mar 1718@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland 22 Mar 1718",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "Q2M1-H5KR",
+   "n": "Maria De Cock Bundervoet",
+   "f": "Burial:@Knokke-Heist, West-Vlaanderen, Vlaanderen, Belgium Death:1990 Birth:1909",
+   "age": "",
+   "reg": "World 1750/2013",
+   "coll": "\"BillionGraves Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "6T52-X1ZD",
+   "n": "Jacobum Franciscum",
+   "f": "Baptism:16 Aug 1791",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1791",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Joannis Bapta Bundervoet>Jacobum Franciscum ; CP:Joannis Bapta Bundervoet>Maria Anna Rengis ; PC:Maria Anna Rengis>Jacobum Franciscum",
+   "others": "Joannis Bapta Bundervoet ; Maria Anna Rengis"
+  },
+  {
+   "id": "6T52-6XR2",
+   "n": "Joannem Baptistam",
+   "f": "Baptism:7 Jun 1791",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1791",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Livina Pieters>Joannem Baptistam ; CP:Guillielmi Bundervoet>Livina Pieters ; PC:Guillielmi Bundervoet>Joannem Baptistam",
+   "others": "Guillielmi Bundervoet ; Livina Pieters"
+  },
+  {
+   "id": "6T52-NRTX",
+   "n": "Petronellam Theresiam",
+   "f": "Baptism:2 Sep 1792",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1792",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Joannis Baptistae Bundervoet>Marianae Roegers ; PC:Marianae Roegers>Petronellam Theresiam ; PC:Joannis Baptistae Bundervoet>Petronellam Theresiam",
+   "others": "Joannis Baptistae Bundervoet ; Marianae Roegers"
+  },
+  {
+   "id": "6T52-YW43",
+   "n": "Petronella Bogaert",
+   "f": "Burial:31 Aug 1792 Birth:1711",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1792",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Mariae Taedts>Petronella Bogaert ; CP:Petronella Bogaert>Christophori Bundervoet ; PC:Petri>Petronella Bogaert",
+   "others": "Christophori Bundervoet ; Petri ; Mariae Taedts"
+  },
+  {
+   "id": "X7Y3-3CKD",
+   "n": "Angelina Margerita Stephania Haeck",
+   "f": "BirthRegistration:20 Feb 1903@Muizen, Antwerpen, België",
+   "age": "",
+   "reg": "Antwerp, Belgium 1798/1909",
+   "coll": "Belgium, Antwerp, Civil Registration and Church Records, 1798-1909",
+   "rel": "CP:Alouisius Haeck>Leonia Bundervoet ; PC:Alouisius Haeck>Angelina Margerita Stephania Haeck ; PC:Leonia Bundervoet>Angelina Margerita Stephania Haeck",
+   "others": "Leonia Bundervoet ; Alouisius Haeck"
+  },
+  {
+   "id": "6T52-XVG7",
+   "n": "Guillaume Bundervoet",
+   "f": "Birth:1714 DeathRegistration:5 Jun 1800",
+   "age": "86 years",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1799–1800",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Jean>Livine Hackman ; PC:Livine Hackman>Guillaume Bundervoet ; PC:Jean>Guillaume Bundervoet ; CP:Guillaume Bundervoet>Jeanne Van Hyfte",
+   "others": "Jean ; Livine Hackman ; Jeanne Van Hyfte"
+  },
+  {
+   "id": "6T52-LKDR",
+   "n": "Livin Lybaert",
+   "f": "BirthRegistration:28 Sep 1799",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1799–1800",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Petronille Therese Bundervoet>Livin Lybaert ; CP:André Lÿbaert>Petronille Therese Bundervoet ; PC:André Lÿbaert>Livin Lybaert",
+   "others": "Petronille Therese Bundervoet ; André Lÿbaert"
+  },
+  {
+   "id": "6T52-5VBK",
+   "n": "Pierre Francois Bundervoet",
+   "f": "BirthRegistration:17 Jan 1801",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1800–1801",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Christophle>Petronille Bogaert ; PC:Christophle>Pierre Francois Bundervoet ; PC:Petronille Bogaert>Pierre Francois Bundervoet",
+   "others": "Christophle ; Petronille Bogaert"
+  },
+  {
+   "id": "6T5L-7MWB",
+   "n": "Jean Baptiste de Cuyper",
+   "f": "DeathRegistration:4 Jan 1801 Birth:1798",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1800–1801",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Jacques Francois>Marie Anne Bundervoet ; PC:Marie Anne Bundervoet>Jean Baptiste de Cuyper ; PC:Jacques Francois>Jean Baptiste de Cuyper",
+   "others": "Marie Anne Bundervoet ; Jacques Francois"
+  },
+  {
+   "id": "6T52-FGFX",
+   "n": "Livin Scherre",
+   "f": "Birth:1770",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1800–1801",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Livin Scherre>Petronille Van de Voorde ; CP:Laurent>Marie Anna Bundervoet ; PC:Laurent>Petronille Van de Voorde ; PC:Marie Anna Bundervoet>Petronille Van de Voorde",
+   "others": "Marie Anna Bundervoet ; Petronille Van de Voorde[Birth:1776] ; Laurent ; Livin ; Marie de Clerck"
+  },
+  {
+   "id": "6T52-VMSB",
+   "n": "Albert Bundervoet",
+   "f": "DeathRegistration:6 Jun 1802 Birth:1788",
+   "age": "14 years",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1801–1802",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Catrine Crevaels>Albert Bundervoet ; PC:Jacques Francois Bundervoet>Albert Bundervoet ; CP:Jacques Francois Bundervoet>Catrine Crevaels",
+   "others": "Jacques Francois Bundervoet ; Catrine Crevaels"
+  },
+  {
+   "id": "6T52-BCVP",
+   "n": "Isabella Bundervoet",
+   "f": "DeathRegistration:30 Jun 1802",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1801–1802",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Jacques Francois>Isabella Bundervoet ; PC:Catrine Crevaels>Isabella Bundervoet ; CP:Jacques Francois>Catrine Crevaels",
+   "others": "Jacques Francois ; Catrine Crevaels"
+  },
+  {
+   "id": "6T52-5V51",
+   "n": "Liven de Cuypper",
+   "f": "DeathRegistration:7 Jul 1802",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Evergem 1801–1802",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Jacques Francois de Cuypper>Liven de Cuypper ; PC:Marie Anne Bundervoet>Liven de Cuypper ; CP:Jacques Francois de Cuypper>Marie Anne Bundervoet",
+   "others": "Marie Anne Bundervoet ; Jacques Francois de Cuypper"
+  },
+  {
+   "id": "Q295-Z8JK",
+   "n": "Livin Jean De Smet",
+   "f": "Birth:1726@Gent Death:17 Jun 1804@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1803-1804",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Isabelle Van Damme>Livin Jean De Smet ; PC:Josse De Smet>Livin Jean De Smet ; CP:Livin Jean De Smet>Marianne Bundervoet",
+   "others": "Marianne Bundervoet ; Josse De Smet ; Isabelle Van Damme"
+  },
+  {
+   "id": "QVKC-NZSM",
+   "n": "Rosalie Bundervoet",
+   "f": "Birth:04 Feb 1809 Death:24 Nov 1894 Burial:@Ghent, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "6Q3P-PM3Z",
+   "n": "",
+   "f": "",
+   "age": "",
+   "reg": "Indiana, United States of America 1811/2019",
+   "coll": "",
+   "rel": "CP:>Adrienne De Kesel ; CP:Edgar De Kesel>Rachel Bundervoet ; PC:Edgar De Kesel>Adrienne De Kesel ; PC:Rachel Bundervoet>Adrienne De Kesel",
+   "others": "Rachel Bundervoet ; Adrienne De Kesel[Birth:10 Sep 1915@Belgium] ; Edgar De Kesel ; Karl Dubail"
+  },
+  {
+   "id": "6TRM-BD1V",
+   "n": "Jean Baptiste Baudonck",
+   "f": "Birth:1783",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Lotenhulle 1813–1832",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Petronella Judoca Bundervoet>Jean Baptiste Baudonck ; CP:Jacobus>Petronella Judoca Bundervoet ; PC:Jacobus>Jean Baptiste Baudonck ; CP:Jean Baptiste Baudonck>Coleta de Pauw",
+   "others": "Petronella Judoca Bundervoet ; Jacobus ; Coleta de Pauw[Birth:1795] ; Josephus ; Marie Joanna Dovsterlinck"
+  },
+  {
+   "id": "6TRM-VXRR",
+   "n": "Emanuel Baudonck",
+   "f": "Birth:1786",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Lotenhulle 1813–1832",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Jacques Baudonck>Petronille Bundervoet ; PC:Jacques Baudonck>Emanuel Baudonck ; PC:Petronille Bundervoet>Emanuel Baudonck ; CP:Emanuel Baudonck>Anne Marie Christiaen",
+   "others": "Petronille Bundervoet ; Jacques Baudonck ; Anne Marie Christiaen[Birth:1784] ; Fraçois Christiaen ; Livine Goethals"
+  },
+  {
+   "id": "QL2S-9XRC",
+   "n": "Maria Theresia Vermeeren",
+   "f": "Birth:1787@Assenede Death:30 Mar 1814@Hontenisse, Zeeland, Nederland",
+   "age": "",
+   "reg": "Hontenisse, Zeeland, Nederland 30 Mar 1814",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Karel Vermeeren>Maria Theresia Vermeeren ; CP:Karel Vermeeren>Petronella Bundervoet ; PC:Petronella Bundervoet>Maria Theresia Vermeeren ; CP:Maria Theresia Vermeeren>Livinus Bernardus Steijaert",
+   "others": "Petronella Bundervoet ; Karel Vermeeren ; Livinus Bernardus Steijaert[Birth:1787]"
+  },
+  {
+   "id": "Q2XK-HL4C",
+   "n": "Livinus Cornelis Bundervoet",
+   "f": "Birth:1790@Gend",
+   "age": "28",
+   "reg": "Rotterdam, South Holland, Netherlands 25 Nov 1818",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Hermanus van Gerven>Joanna Christina van Gerven ; CP:Livinus Cornelis Bundervoet>Joanna Christina van Gerven ; PC:Johanna Daalsen>Joanna Christina van Gerven ; PC:Anna Maria Elizabeth Peeters>Livinus Cornelis Bundervoet ; CP:Petrus Bundervoet>Anna Maria Elizabeth Peeters ; PC:Petrus Bundervoet>Livinus Cornelis Bundervoet",
+   "others": "Petrus Bundervoet ; Anna Maria Elizabeth Peeters ; Joanna Christina van Gerven[Birth:1790@Rotterdam] ; Hermanus van Gerven ; Johanna Daalsen"
+  },
+  {
+   "id": "Q2XK-HLHC",
+   "n": "Livinus Cornelis Bundervoet",
+   "f": "Birth:1790@Gend",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 25 Nov 1818",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Livinus Cornelis Bundervoet>Joanna Christina van Gerven ; PC:Anna Maria Elizabeth Peeters>Livinus Cornelis Bundervoet ; CP:Petrus Bundervoet>Anna Maria Elizabeth Peeters ; PC:Petrus Bundervoet>Livinus Cornelis Bundervoet",
+   "others": "Petrus Bundervoet ; Anna Maria Elizabeth Peeters ; Joanna Christina van Gerven[Birth:1790@Rotterdam] ; Hermanus van Gerven ; Johanna Daalsen"
+  },
+  {
+   "id": "Q2XF-WWZZ",
+   "n": "Hermanus Wilhelmus Bundervoet",
+   "f": "Birth:24 Nov 1821@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 24 Nov 1821",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Joanna Christina van Gerven>Hermanus Wilhelmus Bundervoet ; PC:Livinus Cornelis Bundervoet>Hermanus Wilhelmus Bundervoet ; CP:Livinus Cornelis Bundervoet>Joanna Christina van Gerven",
+   "others": "Livinus Cornelis Bundervoet ; Joanna Christina van Gerven"
+  },
+  {
+   "id": "Q2X4-VNGH",
+   "n": "Johanna Cornelia Bundervoet",
+   "f": "Death:25 Feb 1823@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "3",
+   "reg": "Rotterdam, South Holland, Netherlands 25 Feb 1823",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Livinus Bundervoet>Johanna Van Gerven ; PC:Livinus Bundervoet>Johanna Cornelia Bundervoet ; PC:Johanna Van Gerven>Johanna Cornelia Bundervoet",
+   "others": "Livinus Bundervoet ; Johanna Van Gerven"
+  },
+  {
+   "id": "Q26B-BCYP",
+   "n": "Gijsbertus Bundervoet",
+   "f": "Birth:03 Feb 1824@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 03 Feb 1824",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Livinus Cornelis Bundervoet>Johanna van Gerven ; PC:Livinus Cornelis Bundervoet>Gijsbertus Bundervoet ; PC:Johanna van Gerven>Gijsbertus Bundervoet",
+   "others": "Livinus Cornelis Bundervoet ; Johanna van Gerven"
+  },
+  {
+   "id": "Q2XM-148Q",
+   "n": "Gijsbertus Bundervoet",
+   "f": "Death:17 Feb 1826@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "2",
+   "reg": "Rotterdam, South Holland, Netherlands 17 Feb 1826",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Livinius Cornelis Bundervoet>Gijsbertus Bundervoet ; PC:Joanna Van Gerven>Gijsbertus Bundervoet ; CP:Livinius Cornelis Bundervoet>Joanna Van Gerven",
+   "others": "Livinius Cornelis Bundervoet ; Joanna Van Gerven"
+  },
+  {
+   "id": "Q2XS-L8MG",
+   "n": "Bundervoet",
+   "f": "Birth:@Rotterdam Death:11 Jan 1826@Rotterdam, South Holland, Netherlands",
+   "age": "0 jaar",
+   "reg": "Rotterdam, South Holland, Netherlands 11 Jan 1826",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Johanna Van Gerven>Bundervoet ; PC:Lavien Bundervoet>Bundervoet ; CP:Lavien Bundervoet>Johanna Van Gerven",
+   "others": "Lavien Bundervoet ; Johanna Van Gerven"
+  },
+  {
+   "id": "6T5P-Z16H",
+   "n": "Joannes Baptiste Bundervoet",
+   "f": "Birth:1799",
+   "age": "27 years",
+   "reg": "Zelzate, Oost-Vlaanderen, België 20 Jul 1826",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Petronilla Vaclaere>Monica van de Voorde ; PC:Laurentius van de Voorde>Monica van de Voorde ; CP:Joannes Baptiste Bundervoet>Monica van de Voorde ; CP:Joannes Baptiste Bundervoet>Marie Anna Reigeer ; PC:Joannes Baptiste Bundervoet>Joannes Baptiste Bundervoet ; PC:Marie Anna Reigeer>Joannes Baptiste Bundervoet",
+   "others": "Joannes Baptiste Bundervoet ; Marie Anna Reigeer ; Monica van de Voorde[Birth:1801] ; Laurentius van de Voorde ; Petronilla Vaclaere"
+  },
+  {
+   "id": "6T5P-LG3Z",
+   "n": "Joannes Baptiste Bundervoet",
+   "f": "Birth:1799",
+   "age": "",
+   "reg": "Zelzate, Oost-Vlaanderen, België 20 Jul 1826",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Joannes Baptiste Bundervoet>Monica van de Voorde ; CP:Joannes Baptiste Bundervoet>Marie Anna Reigeer ; PC:Joannes Baptiste Bundervoet>Joannes Baptiste Bundervoet ; PC:Marie Anna Reigeer>Joannes Baptiste Bundervoet",
+   "others": "Joannes Baptiste Bundervoet ; Marie Anna Reigeer ; Monica van de Voorde[Birth:1801] ; Laurentius van de Voorde ; Petronilla Vaclaere"
+  },
+  {
+   "id": "Q2XQ-C6GP",
+   "n": "Cornelia Bundervoet",
+   "f": "Birth:27 Jan 1827@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 27 Jan 1827",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Johanna van Gerven>Cornelia Bundervoet ; CP:Levinus Bundervoet>Johanna van Gerven ; PC:Levinus Bundervoet>Cornelia Bundervoet",
+   "others": "Levinus Bundervoet ; Johanna van Gerven"
+  },
+  {
+   "id": "Q2X3-D71B",
+   "n": "Cornelia Bundervoet",
+   "f": "Death:30 Jul 1829@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "2",
+   "reg": "Rotterdam, South Holland, Netherlands 30 Jul 1829",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Joanna Van Gerven>Cornelia Bundervoet ; PC:Levinus Bundervoet>Cornelia Bundervoet ; CP:Levinus Bundervoet>Joanna Van Gerven",
+   "others": "Levinus Bundervoet ; Joanna Van Gerven"
+  },
+  {
+   "id": "Q2X7-Q27L",
+   "n": "Gijsbertus Gerardus Bundervoet",
+   "f": "Birth:@Rotterdam Death:13 Dec 1829@Rotterdam, South Holland, Netherlands",
+   "age": "16 dagen",
+   "reg": "Rotterdam, South Holland, Netherlands 13 Dec 1829",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Joanna Christina Van Gerven>Gijsbertus Gerardus Bundervoet ; CP:Lurnus Cornelis Bundervoet>Joanna Christina Van Gerven ; PC:Lurnus Cornelis Bundervoet>Gijsbertus Gerardus Bundervoet",
+   "others": "Lurnus Cornelis Bundervoet ; Joanna Christina Van Gerven"
+  },
+  {
+   "id": "Q2X4-2NF7",
+   "n": "Gijsbertus Gerardus Bundervoet",
+   "f": "Birth:30 Nov 1829@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 30 Nov 1829",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Levinus Cornelis Bundervoet>Gijsbertus Gerardus Bundervoet ; PC:Johanna Christina van Gerven>Gijsbertus Gerardus Bundervoet ; CP:Levinus Cornelis Bundervoet>Johanna Christina van Gerven",
+   "others": "Levinus Cornelis Bundervoet ; Johanna Christina van Gerven"
+  },
+  {
+   "id": "Q261-S9B8",
+   "n": "Diminikus Antonius Hendrikus Bundervoet",
+   "f": "Birth:07 Jan 1832@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 07 Jan 1832",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Livinus Cornelis Bundervoet>Diminikus Antonius Hendrikus Bundervoet ; PC:Johanna van Gerven>Diminikus Antonius Hendrikus Bundervoet ; CP:Livinus Cornelis Bundervoet>Johanna van Gerven",
+   "others": "Livinus Cornelis Bundervoet ; Johanna van Gerven"
+  },
+  {
+   "id": "Q2XM-TJ41",
+   "n": "Dominicus Antonius Hendricus Bundervoet",
+   "f": "Death:14 Sep 1832@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "7 maanden en 7 dgn",
+   "reg": "Rotterdam, South Holland, Netherlands 14 Sep 1832",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Joanna Van Gerven>Dominicus Antonius Hendricus Bundervoet ; PC:Levinus Cornelis Bundervoet>Dominicus Antonius Hendricus Bundervoet ; CP:Levinus Cornelis Bundervoet>Joanna Van Gerven",
+   "others": "Levinus Cornelis Bundervoet ; Joanna Van Gerven"
+  },
+  {
+   "id": "XSVK-CW4C",
+   "n": "Joseph Bundervoet",
+   "f": "BirthRegistration:22 Mar 1839@Saint-Denis, Réunion, France Birth:1839",
+   "age": "",
+   "reg": "Reunion, Saint-Denis 1838-1840",
+   "coll": "\"France, La Réunion, registres paroissiaux et d’état civil, 1522-1956\"",
+   "rel": "PC:Charlotte Vassut>Joseph Bundervoet ; PC:Joseph Charles Bundervoet>Joseph Bundervoet ; CP:Joseph Charles Bundervoet>Charlotte Vassut",
+   "others": "Joseph Charles Bundervoet ; Charlotte Vassut"
+  },
+  {
+   "id": "Q2XX-CXZ4",
+   "n": "Petronella Wakkie",
+   "f": "Birth:22 Dec 1839@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 22 Dec 1839",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Nicolaas Jacobus Wakkie>maria Johanna Bundervoet ; PC:Nicolaas Jacobus Wakkie>Petronella Wakkie ; PC:maria Johanna Bundervoet>Petronella Wakkie",
+   "others": "maria Johanna Bundervoet ; Nicolaas Jacobus Wakkie"
+  },
+  {
+   "id": "XSVK-4YZ7",
+   "n": "Elisabeth Bundervoet",
+   "f": "Birth:1841 BirthRegistration:7 Jan 1841@Saint-Denis, Réunion, France",
+   "age": "",
+   "reg": "Reunion, Saint-Denis 1841-1842",
+   "coll": "\"France, La Réunion, registres paroissiaux et d’état civil, 1522-1956\"",
+   "rel": "PC:Charlotte Vassal>Elisabeth Bundervoet ; PC:Joseph Bundervoet>Elisabeth Bundervoet ; CP:Joseph Bundervoet>Charlotte Vassal",
+   "others": "Joseph Bundervoet ; Charlotte Vassal"
+  },
+  {
+   "id": "Q2XS-9GDT",
+   "n": "Hermanus Wilhelmus Bundervoet",
+   "f": "Birth:1821@Rotterdam",
+   "age": "22",
+   "reg": "Rotterdam, South Holland, Netherlands 20 Dec 1843",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Joanna Christina van Gerven>Hermanus Wilhelmus Bundervoet ; CP:Hermanus Wilhelmus Bundervoet>Marie Wilhelmine Elisabeth Neijens ; PC:Levinus Cornelis Bundervoet>Hermanus Wilhelmus Bundervoet ; CP:Levinus Cornelis Bundervoet>Joanna Christina van Gerven ; PC:Maria Freijermuth>Marie Wilhelmine Elisabeth Neijens ; PC:Joannes Neijens>Marie Wilhelmine Elisabeth Neijens",
+   "others": "Levinus Cornelis Bundervoet ; Joanna Christina van Gerven ; Marie Wilhelmine Elisabeth Neijens[Birth:1821@Rotterdam] ; Joannes Neijens ; Maria Freijermuth"
+  },
+  {
+   "id": "Q2X9-DYQC",
+   "n": "Hermanus Wilhelmus Bundervoet",
+   "f": "Birth:1821@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 20 Dec 1843",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Joanna Christina van Gerven>Hermanus Wilhelmus Bundervoet ; CP:Hermanus Wilhelmus Bundervoet>Marie Wilhelmine Elisabeth Neijens ; PC:Levinus Cornelis Bundervoet>Hermanus Wilhelmus Bundervoet ; CP:Levinus Cornelis Bundervoet>Joanna Christina van Gerven",
+   "others": "Levinus Cornelis Bundervoet ; Joanna Christina van Gerven ; Marie Wilhelmine Elisabeth Neijens[Birth:1821@Rotterdam] ; Joannes Neijens ; Maria Freijermuth"
+  },
+  {
+   "id": "QGLR-9DJ9",
+   "n": "Johanna Lowina Maria Bundervoet",
+   "f": "Birth:24 September 1844 MunicipalCensus:@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland",
+   "coll": "\"Netherlands, Archival Indexes, Population Registers\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "QGLR-3LXJ",
+   "n": "Johanna Lourina Maria Bundervoet",
+   "f": "Birth:24 September 1844 MunicipalCensus:@Rotterdam, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Rotterdam, Zuid-Holland, Nederland",
+   "coll": "\"Netherlands, Archival Indexes, Population Registers\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "Q2X3-KKZ4",
+   "n": "Johanna Lowina Maria Bundervoet",
+   "f": "Birth:24 Sep 1844@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 24 Sep 1844",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Hermanus Wilhelmus Bundervoet>Johanna Lowina Maria Bundervoet ; PC:Marie Willielmine Elisabeth Neijens>Johanna Lowina Maria Bundervoet ; CP:Hermanus Wilhelmus Bundervoet>Marie Willielmine Elisabeth Neijens",
+   "others": "Hermanus Wilhelmus Bundervoet ; Marie Willielmine Elisabeth Neijens"
+  },
+  {
+   "id": "VRGR-C56",
+   "n": "Sn Poelman",
+   "f": "Death:23 Mei 1851@Gent, Oost-Vlaanderen, Belgium Birth:22 May 1851@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1851",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Eduardus Poelman>Sophia Bundervoet ; PC:Sophia Bundervoet>Sn Poelman ; PC:Eduardus Poelman>Sn Poelman",
+   "others": "Sophia Bundervoet ; Eduardus Poelman"
+  },
+  {
+   "id": "VRGR-XKZ",
+   "n": "Virginia Rosalia Josepha Loncke",
+   "f": "Birth:1829@Halluin Vrankryk Death:26 Dec 1851@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1851",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Virginia Rosalia Josepha Loncke>Josephus Bundervoet ; PC:Regina Loncke>Virginia Rosalia Josepha Loncke",
+   "others": "Josephus Bundervoet ; Regina Loncke"
+  },
+  {
+   "id": "X7YS-LB97",
+   "n": "Hendricus Bundervoet",
+   "f": "Birth:1826",
+   "age": "",
+   "reg": "21 Oct 1852",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Hendricus Bundervoet>Julia Vandersypt ; PC:Judocus>Julia Vandersypt ; PC:Joanna Beke>Julia Vandersypt ; PC:Joannes Baptista>Hendricus Bundervoet ; PC:Joanna Maria D Honst>Hendricus Bundervoet ; CP:Joannes Baptista>Joanna Maria D Honst",
+   "others": "Joannes Baptista ; Joanna Maria D Honst ; Julia Vandersypt[Birth:1823] ; Judocus ; Joanna Beke"
+  },
+  {
+   "id": "VRGR-WX2",
+   "n": "Joanna Ferdinandina Bundervoet",
+   "f": "Birth:1852@Gent Death:13 Jan 1852@Gent, Oost-Vlaanderen, Belgium",
+   "age": "0",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1852",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Virginia Rosalia Josepha Loncke>Joanna Ferdinandina Bundervoet ; CP:Josephus Bundervoet>Virginia Rosalia Josepha Loncke ; PC:Josephus Bundervoet>Joanna Ferdinandina Bundervoet",
+   "others": "Josephus Bundervoet ; Virginia Rosalia Josepha Loncke"
+  },
+  {
+   "id": "VRGR-PH1",
+   "n": "Sn Poelman",
+   "f": "Death:14 Jun 1852@Gent, Oost-Vlaanderen, Belgium Birth:12 Jun 1852@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1852",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Eduardus Poelman>Sophia Bundervoet ; PC:Sophia Bundervoet>Sn Poelman ; PC:Eduardus Poelman>Sn Poelman",
+   "others": "Sophia Bundervoet ; Eduardus Poelman"
+  },
+  {
+   "id": "VRGB-X3F",
+   "n": "Joanna De Vreese",
+   "f": "Birth:1793@Gent Death:16 Feb 1852@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1852",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Joanna De Vreese>Petrus Franciscus Bundervoet ; PC:Franciscus De Vreese>Joanna De Vreese ; PC:Maria Catharina De Moerloose>Joanna De Vreese",
+   "others": "Petrus Franciscus Bundervoet ; Franciscus De Vreese ; Maria Catharina De Moerloose"
+  },
+  {
+   "id": "VRGY-TY7",
+   "n": "Maria Francisca Ledent",
+   "f": "Death:15 Jul 1853@Gent, Oost-Vlaanderen, Belgium Birth:1777@Lokeren",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1853",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joanna Catharina De Strooper>Maria Francisca Ledent ; PC:Joannes Baptista Ledent>Maria Francisca Ledent ; CP:Maria Francisca Ledent>Egidius Bundervoet",
+   "others": "Egidius Bundervoet ; Joannes Baptista Ledent ; Joanna Catharina De Strooper"
+  },
+  {
+   "id": "VRGT-JR5",
+   "n": "Josephus Bundervoet",
+   "f": "Death:03 Mar 1854@Gent, Oost-Vlaanderen, Belgium Birth:1827@Gent",
+   "age": "27",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1854",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Adrianus Bundervoet>Josephus Bundervoet ; CP:Adrianus Bundervoet>Francisca Neukens ; CP:Josephus Bundervoet>Virginia Rosalia Josepha Loncke ; PC:Francisca Neukens>Josephus Bundervoet",
+   "others": "Adrianus Bundervoet ; Francisca Neukens ; Virginia Rosalia Josepha Loncke"
+  },
+  {
+   "id": "VRGT-VMF",
+   "n": "Sophia Francisca Van Wemmel",
+   "f": "Birth:1828@Gent Death:29 Sep 1854@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1854",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Sophia Francisca Van Wemmel>Livinus Rogghé ; PC:Isabella Bundervoet>Sophia Francisca Van Wemmel ; PC:Theodorus Van Wemmel>Sophia Francisca Van Wemmel ; CP:Theodorus Van Wemmel>Isabella Bundervoet",
+   "others": "Isabella Bundervoet ; Theodorus Van Wemmel ; Livinus Rogghé"
+  },
+  {
+   "id": "VRGT-QJ3",
+   "n": "Virginia Maria Van Wemmel",
+   "f": "Death:23 Sep 1854@Gent, Oost-Vlaanderen, Belgium Birth:1816@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1854",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Theodorus Van Wemmel>Virginia Maria Van Wemmel ; CP:Theodorus Van Wemmel>Isabella Bundervoet ; PC:Isabella Bundervoet>Virginia Maria Van Wemmel ; CP:Virginia Maria Van Wemmel>Josephus Franciscus Bisschop",
+   "others": "Isabella Bundervoet ; Theodorus Van Wemmel ; Josephus Franciscus Bisschop"
+  },
+  {
+   "id": "VRGY-17N",
+   "n": "Theodorus Van Wemmel",
+   "f": "Birth:1793@Gent Death:26 Sep 1854@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1854",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Theodorus Van Wemmel>Isabella Bundervoet ; PC:Anna Maria Heelaert>Theodorus Van Wemmel ; PC:Andreas Van Wemmel>Theodorus Van Wemmel",
+   "others": "Isabella Bundervoet ; Andreas Van Wemmel ; Anna Maria Heelaert"
+  },
+  {
+   "id": "VRGY-BTL",
+   "n": "Petronilla Bundervoet",
+   "f": "Birth:1786@Gent Death:26 Apr 1855@Gent, Oost-Vlaanderen, Belgium",
+   "age": "69",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1855",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Felicianus Bundervoet>Maria De Coster ; PC:Felicianus Bundervoet>Petronilla Bundervoet ; CP:Petronilla Bundervoet>Jacobus Augustinus Van Bambrugge ; PC:Maria De Coster>Petronilla Bundervoet",
+   "others": "Felicianus Bundervoet ; Maria De Coster ; Jacobus Augustinus Van Bambrugge"
+  },
+  {
+   "id": "XXDT-KB5",
+   "n": "Petrus Franciscus Bundervoet",
+   "f": "Death:21 Oct 1857@Gent, Oost-Vlaanderen, Belgium Birth:1790@Gent",
+   "age": "67",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1857",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Petrus Bundervoet>Petrus Franciscus Bundervoet ; CP:Petrus Bundervoet>Maria Wille ; CP:Petrus Franciscus Bundervoet>Joanna De Vreese ; PC:Maria Wille>Petrus Franciscus Bundervoet",
+   "others": "Petrus Bundervoet ; Maria Wille ; Joanna De Vreese"
+  },
+  {
+   "id": "VRGJ-R88",
+   "n": "Petrus Franciscus Bundervoet",
+   "f": "Birth:1790@Gent Death:21 Oct 1857@Gent, Oost-Vlaanderen, Belgium",
+   "age": "67",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1857",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Petrus Bundervoet>Maria Wille ; PC:Petrus Bundervoet>Petrus Franciscus Bundervoet ; CP:Petrus Franciscus Bundervoet>Joanna de Vreese ; PC:Maria Wille>Petrus Franciscus Bundervoet",
+   "others": "Petrus Bundervoet ; Maria Wille ; Joanna de Vreese"
+  },
+  {
+   "id": "XXDP-6QM",
+   "n": "Josephina Bundervoet",
+   "f": "Birth:1857@Gent Death:10 Aug 1857@Gent, Oost-Vlaanderen, Belgium",
+   "age": "0",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1857",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Rosalia Joanna Bundervoet>Josephina Bundervoet",
+   "others": "Rosalia Joanna Bundervoet"
+  },
+  {
+   "id": "VRGV-C1H",
+   "n": "Josephina Bundervoet",
+   "f": "Death:10 Aug 1857@Gent, Oost-Vlaanderen, Belgium Birth:1857@Gent",
+   "age": "0",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1857",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Rosalia Joanna Bundervoet>Josephina Bundervoet",
+   "others": "Rosalia Joanna Bundervoet"
+  },
+  {
+   "id": "XXDP-D3B",
+   "n": "Josephus Claerman",
+   "f": "Death:22 Jul 1857@Gent, Oost-Vlaanderen, Belgium Birth:1776@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1857",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Josephus Claerman>Sophia Wille ; PC:Catharina Bundervoet>Josephus Claerman ; CP:Livinus Claerman>Catharina Bundervoet ; PC:Livinus Claerman>Josephus Claerman",
+   "others": "Catharina Bundervoet ; Livinus Claerman ; Sophia Wille"
+  },
+  {
+   "id": "VRGN-5PK",
+   "n": "Josephus Claerman",
+   "f": "Death:22 Jul 1857@Gent, Oost-Vlaanderen, Belgium Birth:1776@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1857",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Josephus Claerman>Sophia Wille ; CP:Livinus Claerman>Catharina Bundervoet ; PC:Livinus Claerman>Josephus Claerman ; PC:Catharina Bundervoet>Josephus Claerman",
+   "others": "Catharina Bundervoet ; Livinus Claerman ; Sophia Wille"
+  },
+  {
+   "id": "Q2X3-HWV7",
+   "n": "Joanna Christina Van Gerven",
+   "f": "Birth:@Rotterdam Death:26 May 1858@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 26 May 1858",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Hermanus Van Gerven>Joanna Christina Van Gerven ; PC:Joanna Daalsen>Joanna Christina Van Gerven ; CP:Joanna Christina Van Gerven>Livinus Cornelis Bundervoet",
+   "others": "Livinus Cornelis Bundervoet ; Hermanus Van Gerven ; Joanna Daalsen"
+  },
+  {
+   "id": "XXDR-TTB",
+   "n": "Joanna Petronilla De Smet",
+   "f": "Death:14 May 1858@Gent, Oost-Vlaanderen, Belgium Birth:1784@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1858",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Livinus De Smet>Joanna Petronilla De Smet ; CP:Livinus De Smet>Maria Anna Bundervoet ; PC:Maria Anna Bundervoet>Joanna Petronilla De Smet ; CP:Joanna Petronilla De Smet>Gerardus Boesman",
+   "others": "Maria Anna Bundervoet ; Livinus De Smet ; Gerardus Boesman"
+  },
+  {
+   "id": "VRGV-ZVG",
+   "n": "Joanna Petronilla De Smet",
+   "f": "Death:14 May 1858@Gent, Oost-Vlaanderen, Belgium Birth:1784@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1858",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Maria Anna Bundervoet>Joanna Petronilla De Smet ; CP:Livinus De Smet>Maria Anna Bundervoet ; PC:Livinus De Smet>Joanna Petronilla De Smet ; CP:Joanna Petronilla De Smet>Gerardus Boesman",
+   "others": "Maria Anna Bundervoet ; Livinus De Smet ; Gerardus Boesman"
+  },
+  {
+   "id": "XXDY-3FL",
+   "n": "Isabella Bundervoet",
+   "f": "Death:19 Oct 1859@Gent, Oost-Vlaanderen, Belgium Birth:1791@Zwynaerde",
+   "age": "68",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1859",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Isabella De Coster>Isabella Bundervoet ; CP:Isabella Bundervoet>Theodor Van Wemmel ; PC:Petrus Bundervoet>Isabella Bundervoet ; CP:Petrus Bundervoet>Isabella De Coster",
+   "others": "Petrus Bundervoet ; Isabella De Coster ; Theodor Van Wemmel"
+  },
+  {
+   "id": "VRGJ-N7S",
+   "n": "Isabella Bundervoet",
+   "f": "Birth:1791@Zwynaerde Death:19 Oct 1859@Gent, Oost-Vlaanderen, Belgium",
+   "age": "68",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1859",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Petrus Bundervoet>Isabella De Coster ; PC:Petrus Bundervoet>Isabella Bundervoet ; PC:Isabella De Coster>Isabella Bundervoet ; CP:Isabella Bundervoet>Theodor Van Wemmel",
+   "others": "Petrus Bundervoet ; Isabella De Coster ; Theodor Van Wemmel"
+  },
+  {
+   "id": "VRGJ-W31",
+   "n": "Egidius Van Hulle",
+   "f": "Birth:1811@Gent Death:02 Mar 1859@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1859",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joanna Maria Bundervoet>Egidius Van Hulle ; PC:Mattheus Van Hulle>Egidius Van Hulle ; CP:Egidius Van Hulle>Anna Maria Stampaert ; CP:Mattheus Van Hulle>Joanna Maria Bundervoet",
+   "others": "Joanna Maria Bundervoet ; Mattheus Van Hulle ; Anna Maria Stampaert"
+  },
+  {
+   "id": "XXDT-CJ3",
+   "n": "Egidius Van Hulle",
+   "f": "Death:02 Mar 1859@Gent, Oost-Vlaanderen, Belgium Birth:1811@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1859",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Mattheus Van Hulle>Egidius Van Hulle ; PC:Joanna Maria Bundervoet>Egidius Van Hulle ; CP:Egidius Van Hulle>Anna Maria Stampaert ; CP:Mattheus Van Hulle>Joanna Maria Bundervoet",
+   "others": "Joanna Maria Bundervoet ; Mattheus Van Hulle ; Anna Maria Stampaert"
+  },
+  {
+   "id": "Q2X6-GDDF",
+   "n": "Hermanus Wilhelmus Bundervoet",
+   "f": "Death:5 Dec 1860@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "39",
+   "reg": "Rotterdam, South Holland, Netherlands 5 Dec 1860",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Hermanus Wilhelmus Bundervoet>Marie Willielmine Elisabeth Neijens ; PC:Joanna Christina Van Gerven>Hermanus Wilhelmus Bundervoet ; PC:Levinus Cornelis Bundervoet>Hermanus Wilhelmus Bundervoet ; CP:Levinus Cornelis Bundervoet>Joanna Christina Van Gerven",
+   "others": "Levinus Cornelis Bundervoet ; Joanna Christina Van Gerven ; Marie Willielmine Elisabeth Neijens"
+  },
+  {
+   "id": "X7YS-LFCD",
+   "n": "Solomon Petrus de Dupper",
+   "f": "Birth:1818",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1860",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Petrus Franciscus de Dupper>Solomon Petrus de Dupper ; PC:Franciscus Bundervoet>Barbara Bundervoet ; CP:Franciscus Bundervoet>Antonia van Zhcisnnhe ; PC:Regina Vercorke>Solomon Petrus de Dupper ; PC:Antonia van Zhcisnnhe>Barbara Bundervoet ; CP:Solomon Petrus de Dupper>Barbara Bundervoet",
+   "others": "Barbara Bundervoet[Birth:1828] ; Franciscus Bundervoet ; Antonia van Zhcisnnhe ; Petrus Franciscus de Dupper ; Regina Vercorke"
+  },
+  {
+   "id": "X7YS-LFC6",
+   "n": "Solomon Petrus de Dupper",
+   "f": "Birth:1818",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1860",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Franciscus Bundervoet>Barbara Bundervoet ; CP:Franciscus Bundervoet>Antonia van Zhcisnnhe ; PC:Antonia van Zhcisnnhe>Barbara Bundervoet ; CP:Solomon Petrus de Dupper>Barbara Bundervoet",
+   "others": "Franciscus Bundervoet ; Barbara Bundervoet[Birth:1828] ; Antonia van Zhcisnnhe ; Petrus Franciscus de Dupper ; Regina Vercorke"
+  },
+  {
+   "id": "X7YS-LTKQ",
+   "n": "Carolus Ludovicus van Oostende",
+   "f": "Birth:1821",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1860",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Josephus van Oostende>Carolus Ludovicus van Oostende ; PC:Sophia de Meyer>Carolus Ludovicus van Oostende ; PC:Antonia Van*>Rosalia Bundervoet ; CP:Franciscus Bundervoet>Antonia Van* ; CP:Carolus Ludovicus van Oostende>Rosalia Bundervoet ; PC:Franciscus Bundervoet>Rosalia Bundervoet",
+   "others": "Rosalia Bundervoet[Birth:1831] ; Franciscus Bundervoet ; Antonia Van* ; Josephus van Oostende ; Sophia de Meyer"
+  },
+  {
+   "id": "X7YS-LTKW",
+   "n": "Carolus Ludovicus van Oostende",
+   "f": "Birth:1821",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1860",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Antonia Van*>Rosalia Bundervoet ; CP:Franciscus Bundervoet>Antonia Van* ; CP:Carolus Ludovicus van Oostende>Rosalia Bundervoet ; PC:Franciscus Bundervoet>Rosalia Bundervoet",
+   "others": "Franciscus Bundervoet ; Rosalia Bundervoet[Birth:1831] ; Antonia Van* ; Josephus van Oostende ; Sophia de Meyer"
+  },
+  {
+   "id": "XXDY-24X",
+   "n": "Julius Van Kerckhove",
+   "f": "Death:07 Dec 1860@Gent, Oost-Vlaanderen, Belgium Birth:1860@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1860",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Augustinus Van Kerckhove>Rosalia Joanna Bundervoet ; PC:Rosalia Joanna Bundervoet>Julius Van Kerckhove ; PC:Augustinus Van Kerckhove>Julius Van Kerckhove",
+   "others": "Rosalia Joanna Bundervoet ; Augustinus Van Kerckhove"
+  },
+  {
+   "id": "VRGV-BPX",
+   "n": "Julius Van Kerckhove",
+   "f": "Birth:1860@Gent Death:07 Dec 1860@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1860",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Augustinus Van Kerckhove>Julius Van Kerckhove ; CP:Augustinus Van Kerckhove>Rosalia Joanna Bundervoet ; PC:Rosalia Joanna Bundervoet>Julius Van Kerckhove",
+   "others": "Rosalia Joanna Bundervoet ; Augustinus Van Kerckhove"
+  },
+  {
+   "id": "VRGK-TJ8",
+   "n": "Francisca Antonia Bundervoet",
+   "f": "Death:11 Mei 1861@Gent, Oost-Vlaanderen, Belgium Birth:1829@Gent",
+   "age": "32",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1861",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Francisca Antonia Bundervoet>Franciscus Vanderlinden ; PC:Adrianus Bundervoet>Francisca Antonia Bundervoet ; PC:Francisca Neukens>Francisca Antonia Bundervoet ; CP:Adrianus Bundervoet>Francisca Neukens",
+   "others": "Adrianus Bundervoet ; Francisca Neukens ; Franciscus Vanderlinden"
+  },
+  {
+   "id": "XX6N-VQQ",
+   "n": "Francisca Antonia Bundervoet",
+   "f": "Death:11 May 1861@Gent, Oost-Vlaanderen, Belgium Birth:1829@Gent",
+   "age": "32",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1861",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Francisca Neukens>Francisca Antonia Bundervoet ; CP:Francisca Antonia Bundervoet>Franciscus Van Der Linden ; PC:Adrianus Bundervoet>Francisca Antonia Bundervoet ; CP:Adrianus Bundervoet>Francisca Neukens",
+   "others": "Adrianus Bundervoet ; Francisca Neukens ; Franciscus Van Der Linden"
+  },
+  {
+   "id": "X7YS-RQG2",
+   "n": "Petrus Joannes de Raedt",
+   "f": "Birth:1816",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1862",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Maria Joanna Baeyens>Petrus Joannes de Raedt ; CP:Petrus Joannes de Raedt>Mathilde Bundervoet ; PC:Joannes de Raedt>Petrus Joannes de Raedt ; PC:Antonia van Theemschi>Mathilde Bundervoet ; CP:Francius Bundervoet>Antonia van Theemschi ; PC:Francius Bundervoet>Mathilde Bundervoet",
+   "others": "Mathilde Bundervoet[Birth:1837] ; Francius Bundervoet ; Antonia van Theemschi ; Joannes de Raedt ; Maria Joanna Baeyens"
+  },
+  {
+   "id": "X7YS-RQG5",
+   "n": "Petrus Joannes de Raedt",
+   "f": "Birth:1816",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1862",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Petrus Joannes de Raedt>Mathilde Bundervoet ; PC:Antonia van Theemschi>Mathilde Bundervoet ; CP:Francius Bundervoet>Antonia van Theemschi ; PC:Francius Bundervoet>Mathilde Bundervoet",
+   "others": "Francius Bundervoet ; Mathilde Bundervoet[Birth:1837] ; Antonia van Theemschi ; Joannes de Raedt ; Maria Joanna Baeyens"
+  },
+  {
+   "id": "VRG5-P8W",
+   "n": "Maria Judoca Bundervoet",
+   "f": "Death:11 Apr 1863@Gent, Oost-Vlaanderen, Belgium Birth:1799@Gent",
+   "age": "64",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1863",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Guillielmus Bundervoet>Joanna Catharina Smet ; PC:Guillielmus Bundervoet>Maria Judoca Bundervoet ; PC:Joanna Catharina Smet>Maria Judoca Bundervoet ; CP:Maria Judoca Bundervoet>Petrus Trossaert",
+   "others": "Guillielmus Bundervoet ; Joanna Catharina Smet ; Petrus Trossaert"
+  },
+  {
+   "id": "VRGP-BXZ",
+   "n": "Ludovicus Van Kerckhove",
+   "f": "Death:01 Apr 1863@Gent, Oost-Vlaanderen, Belgium Birth:1863@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1863",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Rosalia Joanna Bundervoet>Ludovicus Van Kerckhove ; PC:Augustinus Van Kerckhove>Ludovicus Van Kerckhove ; CP:Augustinus Van Kerckhove>Rosalia Joanna Bundervoet",
+   "others": "Rosalia Joanna Bundervoet ; Augustinus Van Kerckhove"
+  },
+  {
+   "id": "VRGT-8J9",
+   "n": "Nathalia Toch",
+   "f": "Birth:1836@Vinderhoute Death:14 Maa 1863@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1863",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Franciscus Toch>Nathalia Toch ; CP:Nathalia Toch>Petrus Bundervoet ; PC:Amelia Pypaert>Nathalia Toch",
+   "others": "Petrus Bundervoet ; Franciscus Toch ; Amelia Pypaert"
+  },
+  {
+   "id": "XSVD-YR6Q",
+   "n": "Joseph Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Reunion, Saint-Denis 1866",
+   "coll": "\"France, La Réunion, registres paroissiaux et d’état civil, 1522-1956\"",
+   "rel": "CP:Joseph Charles>Charlette Vassal ; PC:Joseph Charles>Joseph Bundervoet ; PC:Charlette Vassal>Joseph Bundervoet ; PC:Louis Domenjod>Marie Louise Alice Domenjod ; CP:Joseph Bundervoet>Marie Louise Alice Domenjod ; PC:Louise Sers>Marie Louise Alice Domenjod",
+   "others": "Joseph Charles ; Charlette Vassal ; Marie Louise Alice Domenjod ; Louis Domenjod ; Louise Sers"
+  },
+  {
+   "id": "Q295-H2BG",
+   "n": "Ludovicus Livinus Bundervoet",
+   "f": "Birth:1864@Gent Death:19 Aug 1866@Gent, Oost-Vlaanderen, Belgium",
+   "age": "2",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1866",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Joannes Bundervoet>Sophia Livina De Moerloose ; PC:Joannes Bundervoet>Ludovicus Livinus Bundervoet ; PC:Sophia Livina De Moerloose>Ludovicus Livinus Bundervoet",
+   "others": "Joannes Bundervoet ; Sophia Livina De Moerloose"
+  },
+  {
+   "id": "8XP3-R62M",
+   "n": "Jean Papens",
+   "f": "Death:5 Aug 1866 DeathRegistration:5 Aug 1866@Armentières, Nord, France Birth:1827",
+   "age": "",
+   "reg": "France, Nord, Armentières 1866-1870",
+   "coll": "\"France, Nord, Parish and Civil Registration, 1524-1893\"",
+   "rel": "CP:Jean Papens>Pauline Rowan ; CP:Jean Baptiste Papens>Marie Liévine Bundervoet ; PC:Marie Liévine Bundervoet>Jean Papens ; PC:Jean Baptiste Papens>Jean Papens",
+   "others": "Marie Liévine Bundervoet ; Jean Baptiste Papens ; Pauline Rowan"
+  },
+  {
+   "id": "XSV6-MDKP",
+   "n": "Louis Joseph Bundervoët",
+   "f": "BirthRegistration:21 Nov 1867@Saint-Denis, Réunion, France Birth:1867",
+   "age": "",
+   "reg": "Reunion, Saint-Denis 1867",
+   "coll": "\"France, La Réunion, registres paroissiaux et d’état civil, 1522-1956\"",
+   "rel": "PC:Joseph Bundervoët>Louis Joseph Bundervoët ; PC:Marie Louise Alice Domenjod>Louis Joseph Bundervoët ; CP:Joseph Bundervoët>Marie Louise Alice Domenjod",
+   "others": "Joseph Bundervoët ; Marie Louise Alice Domenjod"
+  },
+  {
+   "id": "Q26B-6Y1T",
+   "n": "Johanna Lowina Maria Bundervoet",
+   "f": "Birth:1845@Rotterdam",
+   "age": "23",
+   "reg": "Rotterdam, South Holland, Netherlands 26 Feb 1868",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Marie Willielmine Elisabeth Neijens>Johanna Lowina Maria Bundervoet ; CP:Hermanus Wilhelmus Bundervoet>Marie Willielmine Elisabeth Neijens ; PC:Hermanus Wilhelmus Bundervoet>Johanna Lowina Maria Bundervoet ; PC:Agnes Allegonda Roemaat>Theodorus Laurentius Moonen ; PC:Joannes Nicolaas Moonen>Theodorus Laurentius Moonen ; CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet",
+   "others": "Theodorus Laurentius Moonen[Birth:1844@Rotterdam] ; Hermanus Wilhelmus Bundervoet ; Marie Willielmine Elisabeth Neijens ; Joannes Nicolaas Moonen ; Agnes Allegonda Roemaat"
+  },
+  {
+   "id": "Q261-4VR1",
+   "n": "Johanna Lowina Maria Bundervoet",
+   "f": "Birth:1845@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 26 Feb 1868",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Marie Willielmine Elisabeth Neijens>Johanna Lowina Maria Bundervoet ; CP:Hermanus Wilhelmus Bundervoet>Marie Willielmine Elisabeth Neijens ; PC:Hermanus Wilhelmus Bundervoet>Johanna Lowina Maria Bundervoet ; CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet",
+   "others": "Hermanus Wilhelmus Bundervoet ; Marie Willielmine Elisabeth Neijens ; Theodorus Laurentius Moonen[Birth:1844@Rotterdam] ; Joannes Nicolaas Moonen ; Agnes Allegonda Roemaat"
+  },
+  {
+   "id": "XSLD-RBZS",
+   "n": "Eugène Henry Bundervoët",
+   "f": "BirthRegistration:17 Mar 1869@Saint-Denis, Réunion, France",
+   "age": "",
+   "reg": "Reunion, Saint-Denis 1869",
+   "coll": "\"France, La Réunion, registres paroissiaux et d’état civil, 1522-1956\"",
+   "rel": "CP:Joseph Bundervoët>Marie Louise Alice Domenjod ; PC:Marie Louise Alice Domenjod>Eugène Henry Bundervoët ; PC:Joseph Bundervoët>Eugène Henry Bundervoët",
+   "others": "Joseph Bundervoët ; Marie Louise Alice Domenjod"
+  },
+  {
+   "id": "XSV6-9RP8",
+   "n": "Marie Julie Eva Bundervoët",
+   "f": "BirthRegistration:10 Oct 1870@Saint-Denis, Réunion, France Birth:1870",
+   "age": "",
+   "reg": "Reunion, Saint-Denis 1870",
+   "coll": "\"France, La Réunion, registres paroissiaux et d’état civil, 1522-1956\"",
+   "rel": "PC:Marie Louise Alice Domenjod>Marie Julie Eva Bundervoët ; CP:Joseph Bundervoët>Marie Louise Alice Domenjod ; PC:Joseph Bundervoët>Marie Julie Eva Bundervoët",
+   "others": "Joseph Bundervoët ; Marie Louise Alice Domenjod"
+  },
+  {
+   "id": "VRGP-KGG",
+   "n": "Rosalia Joanna Bundervoet",
+   "f": "Death:15 Dec 1870@Gent, Oost-Vlaanderen, Belgium Birth:1831@Gent",
+   "age": "39",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1870",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Petrus Bundervoet>Rosalia Joanna Bundervoet ; PC:Livina Quaekebeke>Rosalia Joanna Bundervoet ; CP:Rosalia Joanna Bundervoet>Augustinus Van Kerckhove ; CP:Petrus Bundervoet>Livina Quaekebeke",
+   "others": "Petrus Bundervoet ; Livina Quaekebeke ; Augustinus Van Kerckhove"
+  },
+  {
+   "id": "Q2XF-W1Q1",
+   "n": "Hermanus Wilhelmus Moonen",
+   "f": "Death:7 Mar 1870@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 7 Mar 1870",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Johanna Lourina Maria Bundervoet>Hermanus Wilhelmus Moonen ; PC:Theodorus Laurentius Moonen>Hermanus Wilhelmus Moonen ; CP:Theodorus Laurentius Moonen>Johanna Lourina Maria Bundervoet",
+   "others": "Johanna Lourina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "Q2XS-SSHM",
+   "n": "Hermanus Wilhelmus Moonen",
+   "f": "Birth:23 Feb 1870@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 23 Feb 1870",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Theodorus Laurentius Moonen>Hermanus Wilhelmus Moonen ; PC:Johanna Lourina Maria Bundervoet>Hermanus Wilhelmus Moonen ; CP:Theodorus Laurentius Moonen>Johanna Lourina Maria Bundervoet",
+   "others": "Johanna Lourina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "Q2XC-J45D",
+   "n": "Hermanus Wilhelmus Moonen",
+   "f": "Birth:15 Jan 1871@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 15 Jan 1871",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet ; PC:Theodorus Laurentius Moonen>Hermanus Wilhelmus Moonen ; PC:Johanna Lowina Maria Bundervoet>Hermanus Wilhelmus Moonen",
+   "others": "Johanna Lowina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "Q2XC-X4KV",
+   "n": "Livinus Cornelis Bundervoet",
+   "f": "Death:28 Feb 1872@Rotterdam, South Holland, Netherlands Birth:@Gent België",
+   "age": "83",
+   "reg": "Rotterdam, South Holland, Netherlands 28 Feb 1872",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Anna Maria Elizabeth Peeters>Livinus Cornelis Bundervoet ; CP:Petrus Bundervoet>Anna Maria Elizabeth Peeters ; PC:Petrus Bundervoet>Livinus Cornelis Bundervoet",
+   "others": "Petrus Bundervoet ; Anna Maria Elizabeth Peeters"
+  },
+  {
+   "id": "Q2XZ-51YH",
+   "n": "Hermanus Wilhelmus Jozephus Moonen",
+   "f": "Birth:19 Mar 1872@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 19 Mar 1872",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet ; PC:Johanna Lowina Maria Bundervoet>Hermanus Wilhelmus Jozephus Moonen ; PC:Theodorus Laurentius Moonen>Hermanus Wilhelmus Jozephus Moonen",
+   "others": "Johanna Lowina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "Q2XK-MPWZ",
+   "n": "Maria Wilhelmina Elizabeth Moonen",
+   "f": "Death:28 Jul 1873@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 28 Jul 1873",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Theodorus Laurentius Moonen>Maria Wilhelmina Elizabeth Moonen ; CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet ; PC:Johanna Lowina Maria Bundervoet>Maria Wilhelmina Elizabeth Moonen",
+   "others": "Johanna Lowina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "Q2XK-JZ6M",
+   "n": "Maria Wilhelmina Elizabeth Moonen",
+   "f": "Birth:21 Jul 1873@Rotterdam, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 21 Jul 1873",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Theodorus Laurentius Moonen>Maria Wilhelmina Elizabeth Moonen ; PC:Johanna Lowina Maria Bundervoet>Maria Wilhelmina Elizabeth Moonen ; CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet",
+   "others": "Johanna Lowina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "6PMH-1HYY",
+   "n": "Stephanie Bundervoet",
+   "f": "Death:05 Apr 1943 Birth:18 Jun 1874 Burial:@Mortsel, Arrondissement Antwerpen, Antwerp, Belgium",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "Q2XM-GJZB",
+   "n": "Moonen",
+   "f": "Death:5 Dec 1874@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 5 Dec 1874",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Theodorus Laurentius Moonen>Moonen ; PC:Johanna Maria Lowina Bundervoet>Moonen ; CP:Theodorus Laurentius Moonen>Johanna Maria Lowina Bundervoet",
+   "others": "Johanna Maria Lowina Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "Q2X9-617F",
+   "n": "Moonen",
+   "f": "Death:13 Oct 1875@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 13 Oct 1875",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Theodorus Laurentius Moonen>Moonen ; CP:Theodorus Laurentius Moonen>Johanna Maria Lowina Bundervoet ; PC:Johanna Maria Lowina Bundervoet>Moonen",
+   "others": "Johanna Maria Lowina Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "XX6S-HDM",
+   "n": "Petrus Bundervoet",
+   "f": "Birth:05 Jan 1803@Gent Death:03 Mar 1877@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1876–1878",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Petrus Bundervoet>Isabella De Coster ; PC:Petrus Bundervoet>Petrus Bundervoet ; PC:Isabella De Coster>Petrus Bundervoet ; CP:Petrus Bundervoet>Livina Quackebeke",
+   "others": "Petrus Bundervoet ; Isabella De Coster ; Livina Quackebeke"
+  },
+  {
+   "id": "XX69-JYQ",
+   "n": "Maria Joanna Bundervoet",
+   "f": "Death:16 May 1876@Gent, Oost-Vlaanderen, Belgium Birth:24 Dec 1820@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1876",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Adrianus Bundervoet>Maria Joanna Bundervoet ; CP:Adrianus Bundervoet>Francisca Neukens ; PC:Francisca Neukens>Maria Joanna Bundervoet ; CP:Maria Joanna Bundervoet>Petrus Carolus Verbeeck",
+   "others": "Adrianus Bundervoet ; Francisca Neukens ; Petrus Carolus Verbeeck"
+  },
+  {
+   "id": "XX69-2D7",
+   "n": "Livina Quackebeke",
+   "f": "Birth:24 Dec 1805@Gent Death:11 Jul 1876@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1876",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Livina Quackebeke>Petrus Bundervoet ; PC:Petronilla Quackebeke>Livina Quackebeke",
+   "others": "Petrus Bundervoet ; Petronilla Quackebeke"
+  },
+  {
+   "id": "XX6S-PV3",
+   "n": "Maria Josepha Crevaels",
+   "f": "Death:24 Jan 1878@Gent, Oost-Vlaanderen, Belgium Birth:24 Apr 1808@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1876–1878",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Georgius Joannes Crevaels>Maria Josepha Crevaels ; CP:Maria Josepha Crevaels>Joannes Baptista Bundervoet ; PC:Jacoba De La Meyte>Maria Josepha Crevaels",
+   "others": "Joannes Baptista Bundervoet ; Georgius Joannes Crevaels ; Jacoba De La Meyte"
+  },
+  {
+   "id": "X7Y8-YP88",
+   "n": "Livin de Cuyper",
+   "f": "DeathRegistration:29 Oct 1877 Birth:1807",
+   "age": "",
+   "reg": "Belgium, Brabant, Brussel 1877",
+   "coll": "\"Belgique, Brabant, registres d’état civil, 1582-1950\"",
+   "rel": "CP:Livin de Cuyper>Louise Van Coppenolle ; CP:Jacques François de Cuyper>Marie Anne Bundervoet ; PC:Marie Anne Bundervoet>Livin de Cuyper ; PC:Jacques François de Cuyper>Livin de Cuyper",
+   "others": "Marie Anne Bundervoet ; Jacques François de Cuyper ; Louise Van Coppenolle"
+  },
+  {
+   "id": "XX63-6D4",
+   "n": "Georgius Eugenius Bundervoet",
+   "f": "Death:14 Apr 1879@Gent, Oost-Vlaanderen, Belgium Birth:19 Feb 1878@Gent",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1878–1879",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Petrus Joannes Bundervoet>Maria Justina Vanderlinden ; PC:Petrus Joannes Bundervoet>Georgius Eugenius Bundervoet ; PC:Maria Justina Vanderlinden>Georgius Eugenius Bundervoet",
+   "others": "Petrus Joannes Bundervoet ; Maria Justina Vanderlinden"
+  },
+  {
+   "id": "XX67-29T",
+   "n": "Joannes Baptista Bundervoet",
+   "f": "Birth:27 Feb 1836@Gent Death:05 Aug 1881@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1880–1881",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Livina Quackebeke>Joannes Baptista Bundervoet ; CP:Petrus Bundervoet>Livina Quackebeke ; PC:Petrus Bundervoet>Joannes Baptista Bundervoet",
+   "others": "Petrus Bundervoet ; Livina Quackebeke"
+  },
+  {
+   "id": "XX6Q-PBY",
+   "n": "Dominicus Van Bambrugge",
+   "f": "Birth:18 Mar 1810@Gent Death:11 Feb 1880@Gent, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1880–1881",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Dominicus Van Bambrugge>Paulina Helaert ; PC:Petronilla Catharina Bundervoet>Dominicus Van Bambrugge ; PC:Jacobus Augustinus Van Bambrugge>Dominicus Van Bambrugge ; CP:Jacobus Augustinus Van Bambrugge>Petronilla Catharina Bundervoet",
+   "others": "Petronilla Catharina Bundervoet ; Jacobus Augustinus Van Bambrugge ; Paulina Helaert"
+  },
+  {
+   "id": "X7Y8-623F",
+   "n": "Sophie Bundervoet",
+   "f": "DeathRegistration:20 Jan 1881 Birth:1826",
+   "age": "55 years",
+   "reg": "Belgium, Brabant, Brussel 1881",
+   "coll": "\"Belgique, Brabant, registres d’état civil, 1582-1950\"",
+   "rel": "CP:Sophie Bundervoet>Edouard Poelman",
+   "others": "Edouard Poelman"
+  },
+  {
+   "id": "QLCN-WZNT",
+   "n": "Johannes Lagerwaart",
+   "f": "Birth:30 Aug 1881@Kralingen, Zuid-Holland, Nederland",
+   "age": "",
+   "reg": "Kralingen, Zuid-Holland, Nederland 30 Aug 1881",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Arie Lagerwaart>Johannes Lagerwaart ; PC:Willemina Bundervoet>Johannes Lagerwaart ; CP:Arie Lagerwaart>Willemina Bundervoet",
+   "others": "Willemina Bundervoet ; Arie Lagerwaart"
+  },
+  {
+   "id": "X7Y2-Y6QB",
+   "n": "Gustaf Marie van Damme",
+   "f": "Birth:1856",
+   "age": "",
+   "reg": "Belgium, Antwerpen, Antwerpen 1881-1882",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "PC:Monica Bundervoet>Gustaf Marie van Damme ; CP:Jan Baptiste van Damme>Monica Bundervoet ; PC:Jan Baptiste van Damme>Gustaf Marie van Damme ; CP:Gustaf Marie van Damme>Joanna Amelia van Oost",
+   "others": "Monica Bundervoet ; Jan Baptiste van Damme ; Joanna Amelia van Oost[Birth:1857] ; Bruno van Oost ; Maria Ludovica Sellenslagh"
+  },
+  {
+   "id": "QP7Q-H4GV",
+   "n": "Ivo Mussche",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Mendonk 1886-1905",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Ivo Mussche>Coleta van Acker ; CP:Joannes Franciscus>Joanna Theresia Bundervoet ; PC:Joannes Franciscus>Ivo Mussche ; PC:Joanna Theresia Bundervoet>Ivo Mussche",
+   "others": "Joanna Theresia Bundervoet ; Joannes Franciscus ; Coleta van Acker ; Petrus ; Minica van Acker"
+  },
+  {
+   "id": "66MQ-P71V",
+   "n": "Zulma Augusta Bundervoet",
+   "f": "Burial:@Ghent, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium Birth:21 Jan 1888 Death:13 Apr 1980",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "X7TG-VHLR",
+   "n": "Antonia Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wondelgem 1891-1900",
+   "coll": "Household of Petrus de Buck, \"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Petrus de Buck>Maria Louisa Blomme ; PC:Ludovicus de Back>Petrus de Buck ; CP:Ludovicus de Back>Antonia Bundervoet ; PC:Antonia Bundervoet>Petrus de Buck",
+   "others": "Petrus de Buck[Birth:1862] ; Ludovicus de Back ; Maria Louisa Blomme[Birth:1871] ; Fredericus Blomme ; Emilie Claeys"
+  },
+  {
+   "id": "X7TG-GJ47",
+   "n": "Antonia Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wondelgem 1891-1900",
+   "coll": "Household of Joannes de Buck, \"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Antonia Bundervoet>Joannes de Buck ; CP:Ludovicus>Antonia Bundervoet ; PC:Ludovicus>Joannes de Buck ; CP:Joannes de Buck>Maria Vande Velde",
+   "others": "Joannes de Buck[Birth:1867] ; Ludovicus ; Maria Vande Velde[Birth:1868] ; Petrus ; Coleta Hamen"
+  },
+  {
+   "id": "XWYN-B6F9",
+   "n": "Toon de Sutter",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Brabant, Brussel Jun 1893–Dec 1893",
+   "coll": "\"Belgique, Brabant, registres d’état civil, 1582-1950\"",
+   "rel": "CP:Jean-François de Sutter>Lucie Bundervoet ; PC:Lucie Bundervoet>Toon de Sutter ; CP:Toon de Sutter>Marie-Zoé de Cock ; PC:Jean-François de Sutter>Toon de Sutter",
+   "others": "Lucie Bundervoet ; Jean-François de Sutter ; Pierre de Cock ; Marie Thérèse de Groote ; Marie-Zoé de Cock"
+  },
+  {
+   "id": "X7Y4-V466",
+   "n": "Bundervoet",
+   "f": "DeathRegistration:27 Sep 1894",
+   "age": "",
+   "reg": "27 Sep 1894",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Petrus Bundervoet>Bundervoet ; PC:Emma Raman>Bundervoet ; CP:Petrus Bundervoet>Emma Raman",
+   "others": "Petrus Bundervoet ; Emma Raman"
+  },
+  {
+   "id": "66MQ-2NZV",
+   "n": "Joannes Bundervoet",
+   "f": "Birth:16 Aug 1895 Death:17 Jul 1982 Burial:@Ghent, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "66MQ-P71L",
+   "n": "Gustavus Bundervoet",
+   "f": "Burial:@Ghent, Arrondissement Gent, East Flanders, Belgium Birth:17 Oct 1895 Death:27 May 1957",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "X7YH-2S5X",
+   "n": "Philomena Bundervoet",
+   "f": "DeathRegistration:2 Sep 1895 Birth:1871",
+   "age": "24 years",
+   "reg": "2 Sep 1895",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Charles Louis Bundervoet>Melanie de Blieck ; PC:Melanie de Blieck>Philomena Bundervoet ; PC:Charles Louis Bundervoet>Philomena Bundervoet ; CP:Philomena Bundervoet>Edmondus Augustus Veldeman",
+   "others": "Charles Louis Bundervoet ; Melanie de Blieck ; Edmondus Augustus Veldeman"
+  },
+  {
+   "id": "X7YL-X4FX",
+   "n": "Jacobus Henricus Steyaert",
+   "f": "Birth:1872",
+   "age": "",
+   "reg": "Belgium, Antwerpen, Antwerpen 1896",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "CP:Jacobus Henricus Steyaert>Maria Sophia Cop ; PC:Pelagia Bundervoet>Jacobus Henricus Steyaert ; CP:Jan Francies Steyaert>Pelagia Bundervoet ; PC:Jan Francies Steyaert>Jacobus Henricus Steyaert",
+   "others": "Pelagia Bundervoet ; Jan Francies Steyaert ; Maria Sophia Cop[Birth:1872] ; Joannes Carolus Cop ; Maria Stephania Verlinden"
+  },
+  {
+   "id": "XWYP-L2R3",
+   "n": "Joseph Bundervoet",
+   "f": "Death:2 Nov 1899 Birth:1839 DeathRegistration:2 Nov 1899@Saint-Denis, Réunion, France",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 2 Nov 1899",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Joseph Bundervoet>Marie Louise Alice Domenjod ; PC:Charlotte Vassal>Joseph Bundervoet ; PC:Joseph Charles Bundervoet>Joseph Bundervoet ; CP:Joseph Charles Bundervoet>Charlotte Vassal",
+   "others": "Joseph Charles Bundervoet ; Charlotte Vassal ; Marie Louise Alice Domenjod"
+  },
+  {
+   "id": "XWYP-KQ68",
+   "n": "Gabrielle Alice Marie Eva Bédier",
+   "f": "Birth:11 May 1899 BirthRegistration:12 May 1899@Sainte-Marie, Réunion, France",
+   "age": "",
+   "reg": "Sainte-Marie, Réunion, France 12 May 1899",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Marie Armand Victor Bédier>Marie Julia Eva Bundervoët ; PC:Marie Armand Victor Bédier>Gabrielle Alice Marie Eva Bédier ; PC:Marie Julia Eva Bundervoët>Gabrielle Alice Marie Eva Bédier",
+   "others": "Marie Julia Eva Bundervoët ; Marie Armand Victor Bédier"
+  },
+  {
+   "id": "78GD-ZST2",
+   "n": "Renatus Josephus Bundervoet",
+   "f": "Birth:24 Sep 1900@Wachtebeke, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1900-1901",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Emma Raman>Renatus Josephus Bundervoet ; CP:Petrus Bundervoet>Emma Raman ; PC:Petrus Bundervoet>Renatus Josephus Bundervoet",
+   "others": "Petrus Bundervoet ; Emma Raman"
+  },
+  {
+   "id": "QR35-1NT2",
+   "n": "Leontina Clementina Verplancke",
+   "f": "Birth:3 Aug 1901@Wachtebeke, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1900-1901",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Theophilus Petrus Franciscus Verplancke>Leontina Clementina Verplancke ; CP:Theophilus Petrus Franciscus Verplancke>Marie Louise Bundervoet ; PC:Marie Louise Bundervoet>Leontina Clementina Verplancke",
+   "others": "Marie Louise Bundervoet ; Theophilus Petrus Franciscus Verplancke"
+  },
+  {
+   "id": "X7YH-J69S",
+   "n": "Theophilus Petrus Franciscus Verplancke",
+   "f": "Birth:1876",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1900-1904",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joanna>Theophilus Petrus Franciscus Verplancke ; PC:Dominicus Verplancke>Theophilus Petrus Franciscus Verplancke ; CP:Theophilus Petrus Franciscus Verplancke>Marie Louise Bundervoet ; PC:Melanie de Blieck>Marie Louise Bundervoet ; CP:Charles Louis Bundervoet>Melanie de Blieck ; PC:Charles Louis Bundervoet>Marie Louise Bundervoet",
+   "others": "Marie Louise Bundervoet[Birth:1875] ; Charles Louis Bundervoet ; Melanie de Blieck ; Dominicus Verplancke ; Joanna"
+  },
+  {
+   "id": "X7YH-3LB5",
+   "n": "Melanie de Blieck",
+   "f": "Birth:1840 DeathRegistration:18 Jan 1900",
+   "age": "",
+   "reg": "18 Jan 1900",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Macharius de Blieck>Melanie de Blieck ; CP:Melanie de Blieck>Carel Ludovicus Bundervoet ; PC:Rosalia Malschaert>Melanie de Blieck",
+   "others": "Carel Ludovicus Bundervoet ; Macharius de Blieck ; Rosalia Malschaert"
+  },
+  {
+   "id": "X7YH-J69Q",
+   "n": "Theophilus Petrus Franciscus Verplancke",
+   "f": "Birth:1876",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1900-1904",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Theophilus Petrus Franciscus Verplancke>Marie Louise Bundervoet ; PC:Melanie de Blieck>Marie Louise Bundervoet ; CP:Charles Louis Bundervoet>Melanie de Blieck ; PC:Charles Louis Bundervoet>Marie Louise Bundervoet",
+   "others": "Charles Louis Bundervoet ; Marie Louise Bundervoet[Birth:1875] ; Melanie de Blieck ; Dominicus Verplancke ; Joanna"
+  },
+  {
+   "id": "X7YH-3MNR",
+   "n": "Carel Ludovicus Bundervoet",
+   "f": "Birth:1832 DeathRegistration:24 May 1901",
+   "age": "69 years",
+   "reg": "24 May 1901",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Angelus Bundervoet>Maria Theresia de Meester ; PC:Maria Theresia de Meester>Carel Ludovicus Bundervoet ; PC:Angelus Bundervoet>Carel Ludovicus Bundervoet ; CP:Carel Ludovicus Bundervoet>Melanie de Blieck",
+   "others": "Angelus Bundervoet ; Maria Theresia de Meester ; Melanie de Blieck"
+  },
+  {
+   "id": "QG5F-ZQG7",
+   "n": "Maria Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1901",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Carolus Ludovicus van Keymeulen>Polydorus van Keymeulen ; PC:Joanna Petronilla Bodino>Polydorus van Keymeulen ; PC:Maria Justina van Derlinden>Maria Bundervoet ; CP:Petrus Joannes Bundervoet>Maria Justina van Derlinden ; CP:Polydorus van Keymeulen>Maria Bundervoet ; PC:Petrus Joannes Bundervoet>Maria Bundervoet",
+   "others": "Polydorus van Keymeulen ; Petrus Joannes Bundervoet ; Maria Justina van Derlinden ; Carolus Ludovicus van Keymeulen ; Joanna Petronilla Bodino"
+  },
+  {
+   "id": "Q24P-W68G",
+   "n": "Elodia Maria De Raedt",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1901-1903",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Mathilda Bundervoet>Elodia Maria De Raedt ; CP:Oscar Eeckhout>Elodia Maria De Raedt ; PC:Pieter Jan De Raedt>Elodia Maria De Raedt ; CP:Pieter Jan De Raedt>Mathilda Bundervoet",
+   "others": "Mathilda Bundervoet ; Pieter Jan De Raedt ; Oscar Eeckhout ; Augustus ; Julie De Schampheleire"
+  },
+  {
+   "id": "QR4B-KY6Z",
+   "n": "Martha Creve",
+   "f": "Birth:2 Mar 1901@Sint-Kruis-Winkel, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Sint-Kruis-Winkel, Oost-Vlaanderen, België 2 Mar 1901",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Theophilus Creve>Amelia Bundervoet ; PC:Theophilus Creve>Martha Creve ; PC:Amelia Bundervoet>Martha Creve",
+   "others": "Amelia Bundervoet ; Theophilus Creve"
+  },
+  {
+   "id": "QG5F-ZQGC",
+   "n": "Maria Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1901",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Maria Justina van Derlinden>Maria Bundervoet ; CP:Petrus Joannes Bundervoet>Maria Justina van Derlinden ; CP:Polydorus van Keymeulen>Maria Bundervoet ; PC:Petrus Joannes Bundervoet>Maria Bundervoet",
+   "others": "Petrus Joannes Bundervoet ; Maria Justina van Derlinden ; Polydorus van Keymeulen ; Carolus Ludovicus van Keymeulen ; Joanna Petronilla Bodino"
+  },
+  {
+   "id": "X7YH-V3LX",
+   "n": "Felix Nimmegeers",
+   "f": "DeathRegistration:27 Nov 1901 Birth:1833",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Sint-Kruis-Winkel 1901-1905",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Ferdinandus>Felix Nimmegeers ; PC:Marie Theresia Kaekebeyls>Felix Nimmegeers ; CP:Felix Nimmegeers>Melania Bundervoet",
+   "others": "Melania Bundervoet ; Ferdinandus ; Marie Theresia Kaekebeyls"
+  },
+  {
+   "id": "Q24P-W313",
+   "n": "Maria Louisa De Raedt",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1901-1903",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Pieter Jan De Raedt>Maria Louisa De Raedt ; CP:Pieter Jan De Raedt>Mathilda Bundervoet ; CP:Alphons Eduard Bracke>Maria Louisa De Raedt ; PC:Mathilda Bundervoet>Maria Louisa De Raedt",
+   "others": "Mathilda Bundervoet ; Pieter Jan De Raedt ; Alphons Eduard Bracke ; Francies Bracke ; Maria Theresia Maes"
+  },
+  {
+   "id": "X7YH-32M1",
+   "n": "Valerius Evarist de Raedt",
+   "f": "Birth:1874",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Sint-Lievens-Houtem 1901-1910",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Mathilda Bundervoet>Valerius Evarist de Raedt ; CP:Pieter Jan de Raedt>Mathilda Bundervoet ; PC:Pieter Jan de Raedt>Valerius Evarist de Raedt ; CP:Valerius Evarist de Raedt>Maria Sidonia Kestelier",
+   "others": "Mathilda Bundervoet ; Pieter Jan de Raedt ; Maria Sidonia Kestelier[Birth:1876] ; Petrus Kestelier ; Marie Felicita van Lierde"
+  },
+  {
+   "id": "2HR8-2TS",
+   "n": "Valerius Evarist De Raedt",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Sint-Lievens-Houtem 1901-1910",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Mathilda Bundervoet>Valerius Evarist De Raedt ; CP:Pieter Jan De Raedt>Mathilda Bundervoet ; CP:Valerius Evarist De Raedt>Maria Sidonia Kestelier ; PC:Pieter Jan De Raedt>Valerius Evarist De Raedt",
+   "others": "Mathilda Bundervoet ; Pieter Jan De Raedt ; Maria Sidonia Kestelier ; Petrus Kestelier ; Marie Félicita Van Lierde"
+  },
+  {
+   "id": "X7YH-VS3W",
+   "n": "Leontina Clementina Verplancke",
+   "f": "DeathRegistration:23 Sep 1901 Birth:1901",
+   "age": "",
+   "reg": "23 Sep 1901",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Theophilus Petrus Franciscus Verplancke>Leontina Clementina Verplancke ; PC:Marie Louise Bundervoet>Leontina Clementina Verplancke ; CP:Theophilus Petrus Franciscus Verplancke>Marie Louise Bundervoet",
+   "others": "Marie Louise Bundervoet ; Theophilus Petrus Franciscus Verplancke"
+  },
+  {
+   "id": "XWYP-YYBR",
+   "n": "Louis Gustave Bundervoët",
+   "f": "Birth:1876",
+   "age": "",
+   "reg": "Arrondissement de Saint-Denis, Réunion, France 28 Jul 1902",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "PC:Crescence Eulalie Gamin>Jeanne Amélie Hugot ; CP:Joseph Bundervoët>Marie Louise Alice Damenjod ; PC:Marie Louise Alice Damenjod>Louis Gustave Bundervoët ; CP:Louis Gustave Bundervoët>Jeanne Amélie Hugot ; PC:Joseph Bundervoët>Louis Gustave Bundervoët ; PC:Alexandre Hirgaude Emile Hugot>Jeanne Amélie Hugot",
+   "others": "Joseph Bundervoët ; Marie Louise Alice Damenjod ; Jeanne Amélie Hugot[Birth:1877] ; Alexandre Hirgaude Emile Hugot ; Crescence Eulalie Gamin"
+  },
+  {
+   "id": "QG5F-FVR6",
+   "n": "Michaël Bundervoet",
+   "f": "Birth:02 Apr 1902@Gent, East Flanders, Belgium",
+   "age": "",
+   "reg": "Gent, East Flanders, Belgium 02 Apr 1902",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Leonie van Durmen>Michaël Bundervoet ; CP:Augustus Bundervoet>Leonie van Durmen ; PC:Augustus Bundervoet>Michaël Bundervoet",
+   "others": "Augustus Bundervoet ; Leonie van Durmen"
+  },
+  {
+   "id": "X7Y2-DPTR",
+   "n": "Henricus Dielman",
+   "f": "Birth:1878",
+   "age": "",
+   "reg": "Belgium, Antwerpen, Antwerpen 1902",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "CP:Henricus Dielman>Stephanie Bundervoet ; PC:Melanie de Blieck>Stephanie Bundervoet ; PC:Charles Bundervoet>Stephanie Bundervoet ; CP:Charles Bundervoet>Melanie de Blieck",
+   "others": "Charles Bundervoet ; Stephanie Bundervoet[Birth:1874] ; Melanie de Blieck ; Fredericus Dielman ; Felicita Geldof"
+  },
+  {
+   "id": "X7Y2-DPTP",
+   "n": "Henricus Dielman",
+   "f": "Birth:1878",
+   "age": "",
+   "reg": "Belgium, Antwerpen, Antwerpen 1902",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "PC:Fredericus Dielman>Henricus Dielman ; CP:Henricus Dielman>Stephanie Bundervoet ; PC:Melanie de Blieck>Stephanie Bundervoet ; PC:Charles Bundervoet>Stephanie Bundervoet ; CP:Charles Bundervoet>Melanie de Blieck ; PC:Felicita Geldof>Henricus Dielman",
+   "others": "Stephanie Bundervoet[Birth:1874] ; Charles Bundervoet ; Melanie de Blieck ; Fredericus Dielman ; Felicita Geldof"
+  },
+  {
+   "id": "QG5F-LJT5",
+   "n": "Clementina Nimmegeers",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1902",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joannes Nimmegeers>Clementina Nimmegeers ; CP:Joannes Nimmegeers>Ida Bundervoet ; PC:Ida Bundervoet>Clementina Nimmegeers ; CP:Leo de Weirt>Clementina Nimmegeers",
+   "others": "Ida Bundervoet ; Joannes Nimmegeers ; Leo de Weirt ; Casimirus de Weirt ; Angelica Augustina Morret"
+  },
+  {
+   "id": "XWYP-YYBY",
+   "n": "Louis Gustave Bundervoët",
+   "f": "Birth:1876",
+   "age": "",
+   "reg": "Arrondissement de Saint-Denis, Réunion, France 28 Jul 1902",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Joseph Bundervoët>Marie Louise Alice Damenjod ; PC:Marie Louise Alice Damenjod>Louis Gustave Bundervoët ; CP:Louis Gustave Bundervoët>Jeanne Amélie Hugot ; PC:Joseph Bundervoët>Louis Gustave Bundervoët",
+   "others": "Joseph Bundervoët ; Marie Louise Alice Damenjod ; Jeanne Amélie Hugot[Birth:1877] ; Alexandre Hirgaude Emile Hugot ; Crescence Eulalie Gamin"
+  },
+  {
+   "id": "XWYP-54V1",
+   "n": "Gabrielle Marie Eva Bédier",
+   "f": "Birth:1900 DeathRegistration:15 Jan 1903@Saint-Denis, Réunion, France Death:15 Jan 1903",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 15 Jan 1903",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "PC:Marie Julie Eva Bundervoët>Gabrielle Marie Eva Bédier ; PC:Marie Armand Victor Bédier>Gabrielle Marie Eva Bédier ; CP:Marie Armand Victor Bédier>Marie Julie Eva Bundervoët",
+   "others": "Marie Julie Eva Bundervoët ; Marie Armand Victor Bédier"
+  },
+  {
+   "id": "QG5F-2XYL",
+   "n": "Emilius Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1904",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joannes Bundervoet>Emilius Bundervoet ; CP:Emilius Bundervoet>Sylvia Nathalia Maria de Rudder ; PC:Sophia Livina de Moerloose>Emilius Bundervoet ; PC:Isidorus de Rudder>Sylvia Nathalia Maria de Rudder ; PC:Anna Francisca de Rudder>Sylvia Nathalia Maria de Rudder ; CP:Joannes Bundervoet>Sophia Livina de Moerloose",
+   "others": "Joannes Bundervoet ; Sophia Livina de Moerloose ; Sylvia Nathalia Maria de Rudder ; Isidorus de Rudder ; Anna Francisca de Rudder"
+  },
+  {
+   "id": "X7YH-K4R8",
+   "n": "Franciscus Bundervoet",
+   "f": "Birth:1936 DeathRegistration:2 Aug 1906",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gentbrugge 1904-1906",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Angelus>Franciscus Bundervoet ; PC:Maria Theresia de Meester>Franciscus Bundervoet ; CP:Angelus>Maria Theresia de Meester",
+   "others": "Angelus ; Maria Theresia de Meester"
+  },
+  {
+   "id": "X7YH-JGQW",
+   "n": "Maria Louise Verplancke",
+   "f": "BirthRegistration:12 Jan 1904",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1904-1905",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Marie Louise Bundervoet>Maria Louise Verplancke ; CP:Theophilus Petrus Franciscus Verplancke>Marie Louise Bundervoet ; PC:Theophilus Petrus Franciscus Verplancke>Maria Louise Verplancke",
+   "others": "Marie Louise Bundervoet ; Theophilus Petrus Franciscus Verplancke"
+  },
+  {
+   "id": "Q24P-CQKH",
+   "n": "De Raedt",
+   "f": "Death:12 Sep 1906@Wetteren, Wetteren, Oost-Vlaanderen, Belgium Birth:1863",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wetteren 1904-1906",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Mathilde Bundervoet>De Raedt ; CP:Pieter De Raedt>Mathilde Bundervoet ; PC:Pieter De Raedt>De Raedt",
+   "others": "Mathilde Bundervoet ; Pieter De Raedt"
+  },
+  {
+   "id": "X7Y4-V88Z",
+   "n": "Augusta Amelia Verplancke",
+   "f": "BirthRegistration:1 May 1905",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1904-1905",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Theophilus Petrus Franciscus Verplancke>Marie Louise Bundervoet ; PC:Theophilus Petrus Franciscus Verplancke>Augusta Amelia Verplancke ; PC:Marie Louise Bundervoet>Augusta Amelia Verplancke",
+   "others": "Marie Louise Bundervoet ; Theophilus Petrus Franciscus Verplancke"
+  },
+  {
+   "id": "X7YH-JZ69",
+   "n": "Maria Louisa Ronges",
+   "f": "BirthRegistration:17 Dec 1905",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1904-1905",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Livinus Ronges>Elodie Bundervoet ; PC:Elodie Bundervoet>Maria Louisa Ronges ; PC:Livinus Ronges>Maria Louisa Ronges",
+   "others": "Elodie Bundervoet ; Livinus Ronges"
+  },
+  {
+   "id": "QG5F-2XYT",
+   "n": "Emilius Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1904",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joannes Bundervoet>Emilius Bundervoet ; CP:Emilius Bundervoet>Sylvia Nathalia Maria de Rudder ; PC:Sophia Livina de Moerloose>Emilius Bundervoet ; CP:Joannes Bundervoet>Sophia Livina de Moerloose",
+   "others": "Joannes Bundervoet ; Sophia Livina de Moerloose ; Sylvia Nathalia Maria de Rudder ; Isidorus de Rudder ; Anna Francisca de Rudder"
+  },
+  {
+   "id": "Q24P-C7C9",
+   "n": "de Raedt",
+   "f": "Birth:1863 Death:12 Sep 1906@Wetteren, Wetteren, Oost-Vlaanderen, Belgium",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wetteren 1904-1906",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Pieter de Raedt>Mathilde Bundervoet ; PC:Pieter de Raedt>de Raedt ; PC:Mathilde Bundervoet>de Raedt",
+   "others": "Mathilde Bundervoet ; Pieter de Raedt"
+  },
+  {
+   "id": "QPTF-ZSJV",
+   "n": "Prosper Creve",
+   "f": "Birth:25 Aug 1904@Sint-Kruis-Winkel, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Sint-Kruis-Winkel, Oost-Vlaanderen, België 25 Aug 1904",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Theophilus Creve>Amelia Bundervoet ; PC:Theophilus Creve>Prosper Creve ; PC:Amelia Bundervoet>Prosper Creve",
+   "others": "Amelia Bundervoet ; Theophilus Creve"
+  },
+  {
+   "id": "XWY5-FR3H",
+   "n": "Marie Louise Alice Domonjod",
+   "f": "Death:24 Mar 1904 DeathRegistration:24 Mar 1904@Saint-Denis, Réunion, France Birth:1841",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 24 Mar 1904",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Marie Louise Alice Domonjod>Joseph Bundervoet ; PC:Louis Domonjod>Marie Louise Alice Domonjod ; PC:Louise Sers>Marie Louise Alice Domonjod",
+   "others": "Joseph Bundervoet ; Louis Domonjod ; Louise Sers"
+  },
+  {
+   "id": "QG5F-8BLG",
+   "n": "Leonardus Bundervoet",
+   "f": "Birth:07 Apr 1905@Gent, East Flanders, Belgium",
+   "age": "",
+   "reg": "Gent, East Flanders, Belgium 07 Apr 1905",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Margareta Bundervoet>Leonardus Bundervoet",
+   "others": "Margareta Bundervoet"
+  },
+  {
+   "id": "QG5F-DCTQ",
+   "n": "Andreas Petrus Joannes Bundervoet",
+   "f": "Birth:13 Apr 1905@Gent, East Flanders, Belgium",
+   "age": "",
+   "reg": "Gent, East Flanders, Belgium 13 Apr 1905",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Sylvia Nathalia Maria de Rudder>Andreas Petrus Joannes Bundervoet ; CP:Emilius Bundervoet>Sylvia Nathalia Maria de Rudder ; PC:Emilius Bundervoet>Andreas Petrus Joannes Bundervoet",
+   "others": "Emilius Bundervoet ; Sylvia Nathalia Maria de Rudder"
+  },
+  {
+   "id": "XWY5-XXFL",
+   "n": "Gustave Charles Bundervoët",
+   "f": "Death:24 Feb 1905 DeathRegistration:24 Feb 1905@Saint-Denis, Réunion, France Birth:1845",
+   "age": "",
+   "reg": "Arrondissement de Saint-Denis, Réunion, France 24 Feb 1905",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Joseph Bundervoët>Charlette Vassal ; PC:Joseph Bundervoët>Gustave Charles Bundervoët ; PC:Charlette Vassal>Gustave Charles Bundervoët ; CP:Gustave Charles Bundervoët>Marie Gabriele Uranie Domenjod",
+   "others": "Joseph Bundervoët ; Charlette Vassal ; Marie Gabriele Uranie Domenjod"
+  },
+  {
+   "id": "6TRN-6JLG",
+   "n": "Petrus Carolus Verbeck",
+   "f": "Birth:1800 DeathRegistration:29 May 1905",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1905",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Petrus Carolus Verbeck>Maria Joanna Bundervoet ; PC:Henrica Joanna Geny>Petrus Carolus Verbeck ; PC:Henricus>Petrus Carolus Verbeck",
+   "others": "Maria Joanna Bundervoet ; Henricus ; Henrica Joanna Geny"
+  },
+  {
+   "id": "X7YH-3YSM",
+   "n": "Emilius Benedictus Verdurmen",
+   "f": "Birth:1883",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1905-1909",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Emilius Benedictus Verdurmen>Coralie Bundervoet ; CP:Charles Louis Bundervoet>Helena de Blieck ; PC:Charles Louis Bundervoet>Coralie Bundervoet ; PC:Helena de Blieck>Coralie Bundervoet",
+   "others": "Charles Louis Bundervoet ; Coralie Bundervoet[Birth:1884] ; Helena de Blieck ; Emilius Verdurmen ; Philomena Austonaert"
+  },
+  {
+   "id": "X7YH-V5G7",
+   "n": "Livinus Rouges",
+   "f": "Birth:1882",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1905-1909",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Ferdinandus Rouges>Livinus Rouges ; CP:Charles Louis Bundervoet>Melanie de Blieck ; PC:Melanie de Blieck>Elodie Bundervoet ; CP:Livinus Rouges>Elodie Bundervoet ; PC:Charles Louis Bundervoet>Elodie Bundervoet ; PC:Melanie Stevons>Livinus Rouges",
+   "others": "Elodie Bundervoet[Birth:1881] ; Charles Louis Bundervoet ; Melanie de Blieck ; Ferdinandus Rouges ; Melanie Stevons"
+  },
+  {
+   "id": "X7YH-3Y9T",
+   "n": "Emilius Benedictus Verdurmen",
+   "f": "Birth:1883",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1905-1909",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Philomena Austonaert>Emilius Benedictus Verdurmen ; CP:Emilius Benedictus Verdurmen>Coralie Bundervoet ; PC:Emilius Verdurmen>Emilius Benedictus Verdurmen ; CP:Charles Louis Bundervoet>Helena de Blieck ; PC:Charles Louis Bundervoet>Coralie Bundervoet ; PC:Helena de Blieck>Coralie Bundervoet",
+   "others": "Coralie Bundervoet[Birth:1884] ; Charles Louis Bundervoet ; Helena de Blieck ; Emilius Verdurmen ; Philomena Austonaert"
+  },
+  {
+   "id": "X7YH-V5GW",
+   "n": "Livinus Rouges",
+   "f": "Birth:1882",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1905-1909",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Charles Louis Bundervoet>Melanie de Blieck ; PC:Melanie de Blieck>Elodie Bundervoet ; CP:Livinus Rouges>Elodie Bundervoet ; PC:Charles Louis Bundervoet>Elodie Bundervoet",
+   "others": "Charles Louis Bundervoet ; Elodie Bundervoet[Birth:1881] ; Melanie de Blieck ; Ferdinandus Rouges ; Melanie Stevons"
+  },
+  {
+   "id": "XWYP-G96X",
+   "n": "Josèphe Marie Louise Alice Bédier",
+   "f": "Birth:28 Feb 1905 BirthRegistration:3 Mar 1905@Saint-Denis, Réunion, France",
+   "age": "",
+   "reg": "Arrondissement de Saint-Denis, Réunion, France 3 Mar 1905",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "PC:Armand Bédier>Josèphe Marie Louise Alice Bédier ; PC:Eva Bundervoët>Josèphe Marie Louise Alice Bédier ; CP:Armand Bédier>Eva Bundervoët",
+   "others": "Eva Bundervoët ; Armand Bédier"
+  },
+  {
+   "id": "X7YH-SV3D",
+   "n": "Aloysius Bundervoet",
+   "f": "Birth:1865 DeathRegistration:6 Mar 1906",
+   "age": "41 years",
+   "reg": "6 Mar 1906",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Charles Louis Bundervoet>Aloysius Bundervoet ; CP:Charles Louis Bundervoet>Melanie de Blieck ; PC:Melanie de Blieck>Aloysius Bundervoet",
+   "others": "Charles Louis Bundervoet ; Melanie de Blieck"
+  },
+  {
+   "id": "X7YH-29NC",
+   "n": "Marcella Rufina Bundervoet",
+   "f": "BirthRegistration:8 Jul 1906",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1906-1907",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Petrus Bundervoet>Emma Raman ; PC:Emma Raman>Marcella Rufina Bundervoet ; PC:Petrus Bundervoet>Marcella Rufina Bundervoet",
+   "others": "Petrus Bundervoet ; Emma Raman"
+  },
+  {
+   "id": "QG5F-Z61C",
+   "n": "Renatus Isidorus Bundervoet",
+   "f": "Birth:09 Jul 1906@Gent, East Flanders, Belgium",
+   "age": "",
+   "reg": "Gent, East Flanders, Belgium 09 Jul 1906",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Emilius Bundervoet>Sylvia Nathalia Maria de Rudder ; PC:Emilius Bundervoet>Renatus Isidorus Bundervoet ; PC:Sylvia Nathalia Maria de Rudder>Renatus Isidorus Bundervoet",
+   "others": "Emilius Bundervoet ; Sylvia Nathalia Maria de Rudder"
+  },
+  {
+   "id": "6KQ8-SSLJ",
+   "n": "Renatus Isidorus Bundervoet",
+   "f": "Burial:@Ghent, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium Death:16 Mar 1995 Birth:08 Jul 1906",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "X7YL-L7FC",
+   "n": "Victor Auguste Vandeginste",
+   "f": "Birth:1881",
+   "age": "",
+   "reg": "Belgium, Antwerpen, Antwerpen 1906",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "CP:Victor Auguste Vandeginste>Clemence Bundervoet ; PC:Melanie de Blieck>Clemence Bundervoet ; PC:Charles Louis Bundervoet>Clemence Bundervoet ; CP:Charles Louis Bundervoet>Melanie de Blieck",
+   "others": "Charles Louis Bundervoet ; Clemence Bundervoet[Birth:1878] ; Melanie de Blieck ; Jean Augustin Vandeginste ; Cornélie Pattyn"
+  },
+  {
+   "id": "X7YL-L7FH",
+   "n": "Victor Auguste Vandeginste",
+   "f": "Birth:1881",
+   "age": "",
+   "reg": "Belgium, Antwerpen, Antwerpen 1906",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "CP:Victor Auguste Vandeginste>Clemence Bundervoet ; PC:Melanie de Blieck>Clemence Bundervoet ; PC:Charles Louis Bundervoet>Clemence Bundervoet ; CP:Charles Louis Bundervoet>Melanie de Blieck ; PC:Cornélie Pattyn>Victor Auguste Vandeginste ; PC:Jean Augustin Vandeginste>Victor Auguste Vandeginste",
+   "others": "Clemence Bundervoet[Birth:1878] ; Charles Louis Bundervoet ; Melanie de Blieck ; Jean Augustin Vandeginste ; Cornélie Pattyn"
+  },
+  {
+   "id": "X7YH-381G",
+   "n": "Theodoor Wynant",
+   "f": "Birth:1870",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1906",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Theodoor Wynant>Bertha Philomena Douliez ; PC:Isidor>Theodoor Wynant ; PC:Maria Livina Bundervoet>Theodoor Wynant ; CP:Isidor>Maria Livina Bundervoet",
+   "others": "Maria Livina Bundervoet ; Isidor ; Bertha Philomena Douliez[Birth:1884] ; Joannes Carolus ; Maria Thereisa Camilla Moreels"
+  },
+  {
+   "id": "X7YH-VLHF",
+   "n": "Gustaaf Kamiel Rouges",
+   "f": "BirthRegistration:7 Jun 1907",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1906-1907",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Elodie Bundervoet>Gustaaf Kamiel Rouges ; CP:Livinus Rouges>Elodie Bundervoet ; PC:Livinus Rouges>Gustaaf Kamiel Rouges",
+   "others": "Elodie Bundervoet ; Livinus Rouges"
+  },
+  {
+   "id": "X7YH-SJ14",
+   "n": "Josephus Joannes Moriau",
+   "f": "Birth:1883",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1906",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Josephus Joannes Moriau>Maria Ludovica Criel ; PC:Petrus>Maria Ludovica Criel ; PC:Ida Bundervoet>Maria Ludovica Criel ; CP:Petrus>Ida Bundervoet",
+   "others": "Ida Bundervoet ; Maria Ludovica Criel[Birth:1885] ; Petrus ; Joannes Franciscus ; Joanna Paulina Coppejans"
+  },
+  {
+   "id": "X7YH-VLWY",
+   "n": "Leonie Marie Verplancke",
+   "f": "BirthRegistration:17 Apr 1906",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wachtebeke 1906-1907",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Theophilus Petrus Franciscus Verplancke>Marie Louise Bundervoet ; PC:Theophilus Petrus Franciscus Verplancke>Leonie Marie Verplancke ; PC:Marie Louise Bundervoet>Leonie Marie Verplancke",
+   "others": "Marie Louise Bundervoet ; Theophilus Petrus Franciscus Verplancke"
+  },
+  {
+   "id": "XWYP-2XXD",
+   "n": "Marie Benoite Paule Josèphe Bédier",
+   "f": "BirthRegistration:11 Apr 1906@Saint-Denis, Réunion, France Birth:3 Apr 1906",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 11 Apr 1906",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Armand Bédier>Eva Bundervoët ; PC:Armand Bédier>Marie Benoite Paule Josèphe Bédier ; PC:Eva Bundervoët>Marie Benoite Paule Josèphe Bédier",
+   "others": "Eva Bundervoët ; Armand Bédier"
+  },
+  {
+   "id": "X7Y4-JR7W",
+   "n": "Marie Louise Bundervoet",
+   "f": "Birth:1876 DeathRegistration:4 Apr 1907",
+   "age": "31 years",
+   "reg": "4 Apr 1907",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Charles Louis Bundervoet>Marie Louise Bundervoet ; CP:Charles Louis Bundervoet>Melanie de Nleeck ; CP:Marie Louise Bundervoet>Theophilus Petrus Franciscus Verplancke ; PC:Melanie de Nleeck>Marie Louise Bundervoet",
+   "others": "Charles Louis Bundervoet ; Melanie de Nleeck ; Theophilus Petrus Franciscus Verplancke"
+  },
+  {
+   "id": "X7Y4-J51R",
+   "n": "Marcella Rufina Bundervoet",
+   "f": "DeathRegistration:4 Mar 1907 Birth:1907",
+   "age": "0 days",
+   "reg": "4 Mar 1907",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Emma Raman>Marcella Rufina Bundervoet ; CP:Petrus Bundervoet>Emma Raman ; PC:Petrus Bundervoet>Marcella Rufina Bundervoet",
+   "others": "Petrus Bundervoet ; Emma Raman"
+  },
+  {
+   "id": "6TRF-YV5S",
+   "n": "Gustaaf de Sloover",
+   "f": "Birth:1883",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1907",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Hortence Helderwevit>Gustaaf de Sloover ; PC:Ida Bundervoet>Margaretha Bundervoet ; CP:Gustaaf de Sloover>Margaretha Bundervoet ; PC:Hippoliet>Gustaaf de Sloover",
+   "others": "Margaretha Bundervoet[Birth:1881] ; Ida Bundervoet ; Hippoliet ; Hortence Helderwevit"
+  },
+  {
+   "id": "6TRL-NFZM",
+   "n": "Maria Ludovica Criel",
+   "f": "DeathRegistration:6 May 1907 Birth:1885",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1907",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "CP:Petrus>Ida Bundervoet ; PC:Ida Bundervoet>Maria Ludovica Criel ; CP:Maria Ludovica Criel>Josephus Joannes Morian ; PC:Petrus>Maria Ludovica Criel",
+   "others": "Ida Bundervoet ; Petrus ; Josephus Joannes Morian"
+  },
+  {
+   "id": "6TRF-YV53",
+   "n": "Gustaaf de Sloover",
+   "f": "Birth:1883",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1907",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Ida Bundervoet>Margaretha Bundervoet ; CP:Gustaaf de Sloover>Margaretha Bundervoet",
+   "others": "Ida Bundervoet ; Margaretha Bundervoet[Birth:1881] ; Hippoliet ; Hortence Helderwevit"
+  },
+  {
+   "id": "Q5CW-82N2",
+   "n": "Omer Honore Creve",
+   "f": "Birth:8 Jan 1907@Sint-Kruis-Winkel, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Sint-Kruis-Winkel, Oost-Vlaanderen, België 8 Jan 1907",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Theophilus Creve>Omer Honore Creve ; CP:Theophilus Creve>Amelia Bundervoet ; PC:Amelia Bundervoet>Omer Honore Creve",
+   "others": "Amelia Bundervoet ; Theophilus Creve"
+  },
+  {
+   "id": "Q5W9-9VZR",
+   "n": "Bertha de Sloover",
+   "f": "Birth:28 Aug 1907@Sint-Amandsberg, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Sint-Amandsberg, Oost-Vlaanderen, België 28 Aug 1907",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Gustaaf de Sloover>Bertha de Sloover ; CP:Gustaaf de Sloover>Margaretha Bundervoet ; PC:Margaretha Bundervoet>Bertha de Sloover",
+   "others": "Margaretha Bundervoet ; Gustaaf de Sloover"
+  },
+  {
+   "id": "Q24P-CMRM",
+   "n": "Maria De Raedt",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Wetteren 1907-1910",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Mathilda Bundervoet>Maria De Raedt ; CP:Pieter Jan De Raedt>Mathilda Bundervoet ; CP:Charles Louis Fiermans>Maria De Raedt ; PC:Pieter Jan De Raedt>Maria De Raedt",
+   "others": "Mathilda Bundervoet ; Pieter Jan De Raedt ; Charles Louis Fiermans ; Petrus Fiermans ; Virgenia Livina De Jaeger"
+  },
+  {
+   "id": "QG5F-LWW2",
+   "n": "Gustavus Josephus Bundervoet",
+   "f": "Birth:02 Jun 1908@Gent, East Flanders, Belgium",
+   "age": "",
+   "reg": "Gent, East Flanders, Belgium 02 Jun 1908",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Sylvia Nathalia Maria de Rudder>Gustavus Josephus Bundervoet ; CP:Emilius Bundervoet>Sylvia Nathalia Maria de Rudder ; PC:Emilius Bundervoet>Gustavus Josephus Bundervoet",
+   "others": "Emilius Bundervoet ; Sylvia Nathalia Maria de Rudder"
+  },
+  {
+   "id": "6TRF-BLRJ",
+   "n": "Napoleon Verbeeck",
+   "f": "DeathRegistration:23 May 1908 Birth:1850",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Gent 1908",
+   "coll": "\"Belgium, East Flanders, Church and Civil Registration, 1541-1920\"",
+   "rel": "PC:Petrus Carolus>Napoleon Verbeeck ; CP:Petrus Carolus>Maria Joanna Bundervoet ; PC:Maria Joanna Bundervoet>Napoleon Verbeeck",
+   "others": "Maria Joanna Bundervoet ; Petrus Carolus"
+  },
+  {
+   "id": "X7YH-Q32J",
+   "n": "Clementina Rimmegeers",
+   "f": "DeathRegistration:17 Aug 1908",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Sint-Amandsberg 1908",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joannes>Clementina Rimmegeers ; CP:Joannes>Ida Bundervoet ; PC:Ida Bundervoet>Clementina Rimmegeers",
+   "others": "Ida Bundervoet ; Joannes"
+  },
+  {
+   "id": "QVMF-DDLK",
+   "n": "Allain Bundervoet",
+   "f": "Birth:1943@England Immigration:1945@New York, New York, United States",
+   "age": "2",
+   "reg": "New York City, New York, United States 1909/1958",
+   "coll": "",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "QVP8-YSHL",
+   "n": "Marcel H Bundervoet",
+   "f": "Immigration:1954@New York, New York, United States",
+   "age": "",
+   "reg": "New York City, New York, United States 1909/1958",
+   "coll": "",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "QVMF-K3DZ",
+   "n": "André P Bundervoet",
+   "f": "Immigration:1953@New York, New York, United States",
+   "age": "",
+   "reg": "New York City, New York, United States 1909/1958",
+   "coll": "",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "QL5Y-5MPV",
+   "n": "Ivo Gregoir",
+   "f": "Birth:1873@Evergem, België",
+   "age": "",
+   "reg": "Aardenburg, Zeeland, Nederland 28 Apr 1909",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Joannes Baptiste Gregoir>Monica Bundervoet ; PC:Monica Bundervoet>Ivo Gregoir ; PC:Joannes Baptiste Gregoir>Ivo Gregoir ; CP:Ivo Gregoir>Louisa Maria Lootens",
+   "others": "Monica Bundervoet ; Joannes Baptiste Gregoir ; Louisa Maria Lootens[Birth:1875@Aardenburg] ; Johannes Bernardus Lootens ; Sophia de Clercq"
+  },
+  {
+   "id": "XWY5-XBPN",
+   "n": "Julien Joseph Marie Charles Edouard Rougeuil Drouhet",
+   "f": "Birth:1886",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 6 Feb 1909",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Joseph Théodore Drouhet>Elisabeth Bundervoët ; PC:Joseph Théodore Drouhet>Julien Joseph Marie Charles Edouard Rougeuil Drouhet ; PC:Elisabeth Bundervoët>Julien Joseph Marie Charles Edouard Rougeuil Drouhet ; CP:Julien Joseph Marie Charles Edouard Rougeuil Drouhet>Anne Camille Maria Douce",
+   "others": "Elisabeth Bundervoët ; Joseph Théodore Drouhet ; Anne Camille Maria Douce[Birth:1887] ; Marcelin Douce ; Arianne Joséphine Marie Amélie Ménard"
+  },
+  {
+   "id": "QGDV-TXR1",
+   "n": "Julie van der Sypt",
+   "f": "Death:16 maart 1909@Ledeberg, Oost-Vlaanderen, België Birth:10 april 1823@Gentbrugge",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Ledeberg 1909-1911",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Julie van der Sypt>Henri Bundervoet ; PC:Joanna Beke>Julie van der Sypt ; PC:Judocus van der Sypt>Julie van der Sypt",
+   "others": "Henri Bundervoet ; Judocus van der Sypt ; Joanna Beke"
+  },
+  {
+   "id": "QG5F-Z3PH",
+   "n": "Florentius Mauritius van Keymeulen",
+   "f": "Birth:20 Jun 1909@Gent, East Flanders, Belgium",
+   "age": "",
+   "reg": "Gent, East Flanders, Belgium 20 Jun 1909",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Maria Bundervoet>Florentius Mauritius van Keymeulen ; PC:Polydorus van Keymeulen>Florentius Mauritius van Keymeulen ; CP:Polydorus van Keymeulen>Maria Bundervoet",
+   "others": "Maria Bundervoet ; Polydorus van Keymeulen"
+  },
+  {
+   "id": "QGYD-KQ7C",
+   "n": "Camiel Segers",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Ledeberg 1909-1910",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Desiderius Segers>Camiel Segers ; CP:Desiderius Segers>Clementia Bundervoet ; CP:Camiel Segers>Clementina de Cuyper ; PC:Clementia Bundervoet>Camiel Segers",
+   "others": "Clementia Bundervoet ; Desiderius Segers ; Clementina de Cuyper ; Theodoor de Cuyper ; Juliana Haegeman"
+  },
+  {
+   "id": "Q5CW-XZN2",
+   "n": "Suzanna Germaine Ronges",
+   "f": "Birth:16 Jan 1909@Sint-Kruis-Winkel, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Sint-Kruis-Winkel, Oost-Vlaanderen, België 16 Jan 1909",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Elodie Bundervoet>Suzanna Germaine Ronges ; PC:Livinus Ronges>Suzanna Germaine Ronges ; CP:Livinus Ronges>Elodie Bundervoet",
+   "others": "Elodie Bundervoet ; Livinus Ronges"
+  },
+  {
+   "id": "X7YH-JTRZ",
+   "n": "Leon Gustaaf van Den Bossche",
+   "f": "Birth:1888",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Sint-Amandsberg 1910",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Ida Bundervoet>Elisa Criel ; PC:Pieter>Elisa Criel ; CP:Leon Gustaaf van Den Bossche>Elisa Criel ; CP:Pieter>Ida Bundervoet",
+   "others": "Ida Bundervoet ; Elisa Criel[Birth:1887] ; Pieter ; Charles Louis ; Maria Christina de Moor"
+  },
+  {
+   "id": "X7YH-JMZ3",
+   "n": "Maria Ludovica de Sloover",
+   "f": "DeathRegistration:26 Mar 1910 Birth:1909",
+   "age": "",
+   "reg": "Belgium, Oost Vlaanderen, Sint-Amandsberg 1910",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Gustaaf de Sloover>Maria Ludovica de Sloover ; CP:Gustaaf de Sloover>Margaretha Bundervoet ; PC:Margaretha Bundervoet>Maria Ludovica de Sloover",
+   "others": "Margaretha Bundervoet ; Gustaaf de Sloover"
+  },
+  {
+   "id": "78GD-DKN2",
+   "n": "Maria Louisa de Sloover",
+   "f": "Birth:4 Jul 1910@Sint-Amandsberg, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Sint-Amandsberg, Oost-Vlaanderen, België 4 Jul 1910",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Gustaaf de Sloover>Maria Louisa de Sloover ; CP:Gustaaf de Sloover>Margaretha Bundervoet ; PC:Margaretha Bundervoet>Maria Louisa de Sloover",
+   "others": "Margaretha Bundervoet ; Gustaaf de Sloover"
+  },
+  {
+   "id": "X9T9-BQY1",
+   "n": "Ivo de Sutter",
+   "f": "",
+   "age": "",
+   "reg": "Belgium, Brabant, Brussel 1910",
+   "coll": "\"Belgique, Brabant, registres d’état civil, 1582-1950\"",
+   "rel": "CP:Ivo de Sutter>Maria Jozefina Bouchez ; CP:Jan Frans de Sutter>Lucia Bundervoet ; PC:Jan Frans de Sutter>Ivo de Sutter ; PC:Lucia Bundervoet>Ivo de Sutter",
+   "others": "Lucia Bundervoet ; Jan Frans de Sutter ; Jan Baptist Bouchez ; Maria Juliana Thoon ; Maria Jozefina Bouchez"
+  },
+  {
+   "id": "6KQ8-SSLX",
+   "n": "Armandus Gustavus Bundervoet",
+   "f": "Burial:@Ghent, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium Birth:16 Sep 1911 Death:06 Dec 1980",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "XWYP-YT9N",
+   "n": "Joseph Henri Bundervoët",
+   "f": "Birth:1892",
+   "age": "",
+   "reg": "Saint-André, Réunion, France 2 Dec 1911",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Joseph Henri Bundervoët>Marie Marcelle d'Hautcourt ; PC:Marie Dambray Léron Mant d'Hautcourt>Marie Marcelle d'Hautcourt ; PC:Marie Estelle Brunet>Marie Marcelle d'Hautcourt ; PC:Eugène Henri Bundervoët>Joseph Henri Bundervoët ; CP:Eugène Henri Bundervoët>Marie Manette Melina Berthier ; PC:Marie Manette Melina Berthier>Joseph Henri Bundervoët",
+   "others": "Eugène Henri Bundervoët ; Marie Manette Melina Berthier ; Marie Marcelle d'Hautcourt[Birth:1889] ; Marie Dambray Léron Mant d'Hautcourt ; Marie Estelle Brunet"
+  },
+  {
+   "id": "XWYP-YT9K",
+   "n": "Joseph Henri Bundervoët",
+   "f": "Birth:1892",
+   "age": "",
+   "reg": "Saint-André, Réunion, France 2 Dec 1911",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Joseph Henri Bundervoët>Marie Marcelle d'Hautcourt ; PC:Eugène Henri Bundervoët>Joseph Henri Bundervoët ; CP:Eugène Henri Bundervoët>Marie Manette Melina Berthier ; PC:Marie Manette Melina Berthier>Joseph Henri Bundervoët",
+   "others": "Eugène Henri Bundervoët ; Marie Manette Melina Berthier ; Marie Marcelle d'Hautcourt[Birth:1889] ; Marie Dambray Léron Mant d'Hautcourt ; Marie Estelle Brunet"
+  },
+  {
+   "id": "Q2XH-SM5S",
+   "n": "Johannes Nicolaas Moonen",
+   "f": "Birth:1869@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 07 Aug 1912",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Johannes Nicolaas Moonen>Maria Catharina de Caluwe ; PC:Theodorus Laurentius Moonen>Johannes Nicolaas Moonen ; PC:Johanna Lowina Maria Bundervoet>Johannes Nicolaas Moonen ; CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet",
+   "others": "Johanna Lowina Maria Bundervoet ; Theodorus Laurentius Moonen ; Maria Catharina de Caluwe[Birth:1880@Rijswijk (Zuid-Holland)] ; Jacobus Quirinus de Caluwe ; Maria Johanna van Meerbeek"
+  },
+  {
+   "id": "X9RP-W95X",
+   "n": "Franciscus Collaert",
+   "f": "",
+   "age": "",
+   "reg": "Baasrode, Oost-Vlaanderen, België 21 Jul 1912",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Augustinus Bundervoet>Rosalia van Yper ; PC:Augustinus Bundervoet>Paulina Pharaïldis Bundervoet ; PC:Rosalia van Yper>Paulina Pharaïldis Bundervoet ; CP:Franciscus Collaert>Paulina Pharaïldis Bundervoet",
+   "others": "Augustinus Bundervoet ; Rosalia van Yper ; Paulina Pharaïldis Bundervoet ; Joannes Baptista Collaert ; Rosalie de Saeger"
+  },
+  {
+   "id": "X9RP-W95J",
+   "n": "Franciscus Collaert",
+   "f": "",
+   "age": "",
+   "reg": "Baasrode, Oost-Vlaanderen, België 21 Jul 1912",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Joannes Baptista Collaert>Franciscus Collaert ; CP:Augustinus Bundervoet>Rosalia van Yper ; PC:Augustinus Bundervoet>Paulina Pharaïldis Bundervoet ; PC:Rosalia van Yper>Paulina Pharaïldis Bundervoet ; PC:Rosalie de Saeger>Franciscus Collaert ; CP:Franciscus Collaert>Paulina Pharaïldis Bundervoet",
+   "others": "Paulina Pharaïldis Bundervoet ; Augustinus Bundervoet ; Rosalia van Yper ; Joannes Baptista Collaert ; Rosalie de Saeger"
+  },
+  {
+   "id": "XQ4T-62ZN",
+   "n": "Karel Bundervoet",
+   "f": "Birth:1913 Burial:@Evergem, Arrondissement Gent, East Flanders, Belgium Death:1999",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "6TTW-PXTC",
+   "n": "Julma Maria Rosalie Collaert",
+   "f": "BirthRegistration:12 Apr 1913@Sint-Gillis-bij-Dendermonde, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Sint-Gillis-bij-Dendermonde, Oost-Vlaanderen, België 12 Apr 1913",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Franciscus Collaert>Julma Maria Rosalie Collaert ; CP:Franciscus Collaert>Paulina Pharaildis Bundervoet ; PC:Paulina Pharaildis Bundervoet>Julma Maria Rosalie Collaert",
+   "others": "Paulina Pharaildis Bundervoet ; Franciscus Collaert"
+  },
+  {
+   "id": "XWYP-2VP2",
+   "n": "Marie Gabrielle Uranie Domajod",
+   "f": "DeathRegistration:24 Jun 1915@Saint-Denis, Réunion, France Death:24 Jun 1915 Birth:1846",
+   "age": "",
+   "reg": "Arrondissement de Saint-Denis, Réunion, France 24 Jun 1915",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "PC:Louis Charles Domajod>Marie Gabrielle Uranie Domajod ; CP:Marie Gabrielle Uranie Domajod>Gustave Charles Bundervoët ; PC:Louise Sers>Marie Gabrielle Uranie Domajod",
+   "others": "Gustave Charles Bundervoët ; Louis Charles Domajod ; Louise Sers"
+  },
+  {
+   "id": "66M7-SF8M",
+   "n": "Rachel Bundervoet",
+   "f": "Burial:@Evergem, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium Birth:1916 Death:1992",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "X7YX-GVLG",
+   "n": "Adolphus Spruyt",
+   "f": "",
+   "age": "",
+   "reg": "9 Jul 1916",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "PC:Benoni Carolus Spruyt>Adolphus Spruyt ; PC:Stephania Bundervoet>Adolphus Spruyt ; CP:Adolphus Spruyt>Joanna Maria Antonia Callebaut ; CP:Benoni Carolus Spruyt>Stephania Bundervoet",
+   "others": "Stephania Bundervoet ; Benoni Carolus Spruyt ; Petrus Carolus Callebaut ; Maria Philomena de Vos ; Joanna Maria Antonia Callebaut"
+  },
+  {
+   "id": "X9RP-HPWT",
+   "n": "Henri Bundervoet",
+   "f": "Birth:1888",
+   "age": "",
+   "reg": "Aalst, Oost-Vlaanderen, België 12 Nov 1919",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Rosalia Dhouge>Henri Bundervoet ; CP:Bernardus>Rosalia Dhouge ; PC:Bernardus>Henri Bundervoet ; CP:Henri Bundervoet>Maria Ludovica Sonck ; PC:Leonia de Leeuw>Maria Ludovica Sonck ; PC:Carolus>Maria Ludovica Sonck",
+   "others": "Bernardus ; Rosalia Dhouge ; Maria Ludovica Sonck[Birth:1890] ; Carolus ; Leonia de Leeuw"
+  },
+  {
+   "id": "XWY5-N6B4",
+   "n": "Louis Gustave Bundervoët",
+   "f": "Birth:1876",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 26 Apr 1921",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "PC:Henri Laurent Potier>Marie Pauline Clélie Laure Potier ; PC:Marie Claire Barau>Marie Pauline Clélie Laure Potier ; CP:Louis Gustave Bundervoët>Marie Pauline Clélie Laure Potier ; PC:Joseph Bundervoët>Louis Gustave Bundervoët ; CP:Joseph Bundervoët>Marie Louise Chilice Gomengod ; PC:Marie Louise Chilice Gomengod>Louis Gustave Bundervoët",
+   "others": "Joseph Bundervoët ; Marie Louise Chilice Gomengod ; Marie Pauline Clélie Laure Potier[Birth:1898] ; Henri Laurent Potier ; Marie Claire Barau"
+  },
+  {
+   "id": "XWY5-N6BZ",
+   "n": "Louis Gustave Bundervoët",
+   "f": "Birth:1876",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 26 Apr 1921",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Louis Gustave Bundervoët>Marie Pauline Clélie Laure Potier ; PC:Joseph Bundervoët>Louis Gustave Bundervoët ; CP:Joseph Bundervoët>Marie Louise Chilice Gomengod ; PC:Marie Louise Chilice Gomengod>Louis Gustave Bundervoët",
+   "others": "Joseph Bundervoët ; Marie Louise Chilice Gomengod ; Marie Pauline Clélie Laure Potier[Birth:1898] ; Henri Laurent Potier ; Marie Claire Barau"
+  },
+  {
+   "id": "WBKH-HF2M",
+   "n": "Theodorus Laurentius Moonen",
+   "f": "Birth:1844@Rotterdam Death:14 Sep 1922@Rhoon, South Holland, Netherlands",
+   "age": "",
+   "reg": "Rhoon, South Holland, Netherlands 14 Sep 1922",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "PC:Johannes Nicolaas Moonen>Theodorus Laurentius Moonen ; CP:Theodorus Laurentius Moonen>Johanna Maria Lowina Bundervoet ; PC:Agnes Alegonda Roemaat>Theodorus Laurentius Moonen",
+   "others": "Johanna Maria Lowina Bundervoet ; Johannes Nicolaas Moonen ; Agnes Alegonda Roemaat"
+  },
+  {
+   "id": "QL96-6M8S",
+   "n": "Theodorus Laurentius Moonen",
+   "f": "Birth:@Rotterdam Death:14 Sep 1922@Delft, South Holland, Netherlands",
+   "age": "",
+   "reg": "Delft, South Holland, Netherlands 14 Sep 1922",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "",
+   "others": "Johanna Maria Louwina Bundervoet ; Johannes Nicolaas Moonen ; Agnes Alegonda Roemaat"
+  },
+  {
+   "id": "XWY5-GQN2",
+   "n": "André Henri Yves Bédier",
+   "f": "Birth:1898",
+   "age": "",
+   "reg": "Saint-Denis, Réunion, France 23 Dec 1922",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:Marie Armand Victor Bédier>Marie Julie Eva Bundervoet ; PC:Marie Armand Victor Bédier>André Henri Yves Bédier ; CP:André Henri Yves Bédier>Marie Antoinette Josephine Blanche Carrère ; PC:Marie Julie Eva Bundervoet>André Henri Yves Bédier",
+   "others": "Marie Julie Eva Bundervoet ; Marie Armand Victor Bédier ; Marie Antoinette Josephine Blanche Carrère[Birth:1899] ; Jean Raphaël Carrère ; Marie Louise Elisabeth Amélie de Roland"
+  },
+  {
+   "id": "6TTW-L53H",
+   "n": "Gustaaf Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Sinaai, Oost-Vlaanderen, België 28 Jan 1923",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Louise Roelant>Germana Rosalia Voncke ; CP:Gustaaf Bundervoet>Germana Rosalia Voncke ; PC:Adolphus Voncke>Germana Rosalia Voncke ; PC:Petrus Bundervoet>Gustaaf Bundervoet ; PC:Emma Roman>Gustaaf Bundervoet ; CP:Petrus Bundervoet>Emma Roman",
+   "others": "Petrus Bundervoet ; Emma Roman ; Germana Rosalia Voncke ; Adolphus Voncke ; Louise Roelant"
+  },
+  {
+   "id": "6TTW-JT29",
+   "n": "Gustaaf Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Sinaai, Oost-Vlaanderen, België 28 Jan 1923",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Gustaaf Bundervoet>Germana Rosalia Voncke ; PC:Petrus Bundervoet>Gustaaf Bundervoet ; PC:Emma Roman>Gustaaf Bundervoet ; CP:Petrus Bundervoet>Emma Roman",
+   "others": "Petrus Bundervoet ; Emma Roman ; Adolphus Voncke ; Louise Roelant ; Germana Rosalia Voncke"
+  },
+  {
+   "id": "6K3L-QCZS",
+   "n": "Gabrielle Lounges",
+   "f": "SocialProgramCorrespondence:@United States Birth:4 Jul 1923@Evergem, Belgium Death:1 May 2004",
+   "age": "",
+   "reg": "United States",
+   "coll": "",
+   "rel": "PC:Marie L Bundervoet>Gabrielle Lounges ; CP:Theophile Dedobbelaere>Marie L Bundervoet ; PC:Theophile Dedobbelaere>Gabrielle Lounges",
+   "others": "Marie L Bundervoet ; Theophile Dedobbelaere"
+  },
+  {
+   "id": "Q2XD-LMHV",
+   "n": "Johanna Lowina Maria Bundervoet",
+   "f": "Death:29 Jan 1925@Rotterdam, South Holland, Netherlands Birth:@Rotterdam",
+   "age": "80",
+   "reg": "Rotterdam, South Holland, Netherlands 29 Jan 1925",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Hermanus Wilhelmus Bundervoet>Marie Wilhelmine Elisabeth Neijens ; PC:Hermanus Wilhelmus Bundervoet>Johanna Lowina Maria Bundervoet ; PC:Marie Wilhelmine Elisabeth Neijens>Johanna Lowina Maria Bundervoet",
+   "others": "Hermanus Wilhelmus Bundervoet ; Marie Wilhelmine Elisabeth Neijens"
+  },
+  {
+   "id": "X7Y7-XQYT",
+   "n": "Camilius Eugenius de Clerck",
+   "f": "Birth:1863",
+   "age": "",
+   "reg": "25 Feb 1925",
+   "coll": "\"Belgique, Flandre-Occidentale, registres d’état civil, 1582-1950\"",
+   "rel": "CP:Camilius Eugenius de Clerck>Maria van Damme ; PC:Jan Baptiste van Damme>Maria van Damme ; CP:Jan Baptiste van Damme>Monica Bundervoet ; PC:Monica Bundervoet>Maria van Damme",
+   "others": "Monica Bundervoet ; Maria van Damme[Birth:1867] ; Jan Baptiste van Damme ; Eugenius de Clerck ; Amelia Huys"
+  },
+  {
+   "id": "X9RP-YZ2J",
+   "n": "Komaan Bundervoet",
+   "f": "Birth:1908",
+   "age": "",
+   "reg": "Aalst, Oost-Vlaanderen, België 13 Sep 1930",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Komaan Bundervoet>Maria Victorina Gabriel ; PC:Josephina de Bruyn>Maria Victorina Gabriel ; PC:Jacobus Edmond>Maria Victorina Gabriel ; PC:Henri>Komaan Bundervoet ; CP:Henri>Maria Ludovica Sonck ; PC:Maria Ludovica Sonck>Komaan Bundervoet",
+   "others": "Henri ; Maria Ludovica Sonck ; Maria Victorina Gabriel[Birth:1908] ; Jacobus Edmond ; Josephina de Bruyn"
+  },
+  {
+   "id": "X9RL-DB9T",
+   "n": "Romaan Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Aalst, Oost-Vlaanderen, België 24 Aug 1930",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Jacobus Edmond>Maria Victorina Gabriël ; CP:Romaan Bundervoet>Maria Victorina Gabriël ; PC:Josephina de Bruyn>Maria Victorina Gabriël ; PC:Henri>Romaan Bundervoet ; PC:Maria Ludovica Sonck>Romaan Bundervoet ; CP:Henri>Maria Ludovica Sonck",
+   "others": "Henri ; Maria Ludovica Sonck ; Maria Victorina Gabriël ; Jacobus Edmond ; Josephina de Bruyn"
+  },
+  {
+   "id": "X9TW-2D94",
+   "n": "Jan Némeÿer",
+   "f": "",
+   "age": "",
+   "reg": "12 Oct 1930",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "PC:Elodie Bundervoet>Suzanna Germaine Ronges ; CP:Livinus>Elodie Bundervoet ; PC:Livinus>Suzanna Germaine Ronges ; CP:Jan Némeÿer>Suzanna Germaine Ronges",
+   "others": "Elodie Bundervoet ; Livinus ; Suzanna Germaine Ronges ; Jan Johannes Berend ; Elsina Bekkering"
+  },
+  {
+   "id": "X9TW-22HH",
+   "n": "Aldert Hendrik Boumans",
+   "f": "",
+   "age": "",
+   "reg": "25 Oct 1931",
+   "coll": "\"Belgique, Anvers, registres d’état civil, 1588-1953\"",
+   "rel": "CP:Aldert Hendrik Boumans>Maria Louisa Rouges ; PC:Elodie Bundervoet>Maria Louisa Rouges ; PC:Livinus>Maria Louisa Rouges ; CP:Livinus>Elodie Bundervoet",
+   "others": "Elodie Bundervoet ; Livinus ; Maria Louisa Rouges ; Albert ; Hendrika Susanna Ricuwerts"
+  },
+  {
+   "id": "XWY5-M2LZ",
+   "n": "André Henri Yves Bédier",
+   "f": "Birth:1898",
+   "age": "",
+   "reg": "Saint-André, Réunion, France 7 Apr 1931",
+   "coll": "\"France, Reunion, Civil Registration, 1840-1980\"",
+   "rel": "CP:André Henri Yves Bédier>Anna Aline Marie de Fayard ; PC:Marie Armand Victor Bédier>André Henri Yves Bédier ; PC:Marie Julie Eva Bundervoët>André Henri Yves Bédier ; CP:Marie Armand Victor Bédier>Marie Julie Eva Bundervoët",
+   "others": "Marie Julie Eva Bundervoët ; Marie Armand Victor Bédier ; Anna Aline Marie de Fayard[Birth:1901] ; Charles Louis Armand Maurice de Fayard ; Marie Lise Blanche Bédier"
+  },
+  {
+   "id": "X9T9-FV69",
+   "n": "Marcellus Constant Petrus Bundervoet",
+   "f": "Birth:1911",
+   "age": "",
+   "reg": "Buggenhout, Oost-Vlaanderen, België 21 Aug 1933",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Petrus Joannes de Cock>Maria Josephina de Cock ; PC:Francisca Lariviere>Maria Josephina de Cock ; CP:Marcellus Constant Petrus Bundervoet>Maria Josephina de Cock ; PC:Florent Bundervoet>Marcellus Constant Petrus Bundervoet ; CP:Florent Bundervoet>Maria Ludovicus Domick ; PC:Maria Ludovicus Domick>Marcellus Constant Petrus Bundervoet",
+   "others": "Florent Bundervoet ; Maria Ludovicus Domick ; Maria Josephina de Cock[Birth:1909] ; Petrus Joannes de Cock ; Francisca Lariviere"
+  },
+  {
+   "id": "X9T9-2MPP",
+   "n": "Marcellus Constant Petrus Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Buggenhout, Oost-Vlaanderen, België 6 Aug 1933",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Francisca Lariviére>Maria Josephina de Cock ; PC:Petrus Joannes de Cock>Maria Josephina de Cock ; PC:Florent Bundervoet>Marcellus Constant Petrus Bundervoet ; CP:Florent Bundervoet>Maria Ludovica Davinck ; PC:Maria Ludovica Davinck>Marcellus Constant Petrus Bundervoet ; CP:Marcellus Constant Petrus Bundervoet>Maria Josephina de Cock",
+   "others": "Florent Bundervoet ; Maria Ludovica Davinck ; Maria Josephina de Cock ; Petrus Joannes de Cock ; Francisca Lariviére"
+  },
+  {
+   "id": "X9TQ-DRNB",
+   "n": "Marcellus Constant Petrus Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Dendermonde, Oost-Vlaanderen, België 6 Aug 1933",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Maria Ludovica Daninck>Marcellus Constant Petrus Bundervoet ; CP:Marcellus Constant Petrus Bundervoet>Maria Josephina de Cock ; PC:Florent>Marcellus Constant Petrus Bundervoet ; CP:Florent>Maria Ludovica Daninck ; PC:Francisca Lariviere>Maria Josephina de Cock ; PC:Petrus Joannes>Maria Josephina de Cock",
+   "others": "Florent ; Maria Ludovica Daninck ; Maria Josephina de Cock ; Petrus Joannes ; Francisca Lariviere"
+  },
+  {
+   "id": "X9RZ-GJNX",
+   "n": "Augustus Ramon",
+   "f": "",
+   "age": "",
+   "reg": "Sint-Andries, West-Vlaanderen, België 16 Jul 1933",
+   "coll": "\"Belgique, Flandre-Occidentale, registres d’état civil, 1582-1950\"",
+   "rel": "PC:Jan Baptiste>Marie van Damme ; CP:Jan Baptiste>Monica Bundervoet ; CP:Augustus Ramon>Marie van Damme ; PC:Monica Bundervoet>Marie van Damme",
+   "others": "Monica Bundervoet ; Jan Baptiste ; Marie van Damme ; Ludovicus ; Lucia Roose"
+  },
+  {
+   "id": "XS9C-M3V9",
+   "n": "Augustinus Elant",
+   "f": "Birth:1910",
+   "age": "",
+   "reg": "Sint-Gillis-bij-Dendermonde, Oost-Vlaanderen, België 23 Jun 1933",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Augustinus Elant>Julma Maria Rosalie Collaert ; CP:Franciscus>Paulina Pharailda Bundervoet ; PC:Franciscus>Julma Maria Rosalie Collaert ; PC:Paulina Pharailda Bundervoet>Julma Maria Rosalie Collaert",
+   "others": "Paulina Pharailda Bundervoet ; Julma Maria Rosalie Collaert[Birth:1913] ; Franciscus ; Joannes ; Pharailda van Goethem"
+  },
+  {
+   "id": "X9T9-2MPT",
+   "n": "Marcellus Constant Petrus Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Buggenhout, Oost-Vlaanderen, België 6 Aug 1933",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Florent Bundervoet>Marcellus Constant Petrus Bundervoet ; CP:Florent Bundervoet>Maria Ludovica Davinck ; PC:Maria Ludovica Davinck>Marcellus Constant Petrus Bundervoet ; CP:Marcellus Constant Petrus Bundervoet>Maria Josephina de Cock",
+   "others": "Florent Bundervoet ; Maria Ludovica Davinck ; Petrus Joannes de Cock ; Francisca Lariviére ; Maria Josephina de Cock"
+  },
+  {
+   "id": "6TT4-5543",
+   "n": "Augustinus Elant",
+   "f": "",
+   "age": "",
+   "reg": "Sint-Gillis-bij-Dendermonde, Oost-Vlaanderen, België 1933",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Paulina Pharaldis Bundervoet>Juliana Maria Rosalia Collaert ; CP:Augustinus Elant>Juliana Maria Rosalia Collaert ; PC:Franciscus Collaert>Juliana Maria Rosalia Collaert ; CP:Franciscus Collaert>Paulina Pharaldis Bundervoet",
+   "others": "Paulina Pharaldis Bundervoet ; Franciscus Collaert ; Juliana Maria Rosalia Collaert ; Joannes Elant ; Pharailda van Goethem"
+  },
+  {
+   "id": "X9T9-FV6S",
+   "n": "Marcellus Constant Petrus Bundervoet",
+   "f": "Birth:1911",
+   "age": "",
+   "reg": "Buggenhout, Oost-Vlaanderen, België 21 Aug 1933",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Marcellus Constant Petrus Bundervoet>Maria Josephina de Cock ; PC:Florent Bundervoet>Marcellus Constant Petrus Bundervoet ; CP:Florent Bundervoet>Maria Ludovicus Domick ; PC:Maria Ludovicus Domick>Marcellus Constant Petrus Bundervoet",
+   "others": "Florent Bundervoet ; Maria Ludovicus Domick ; Maria Josephina de Cock[Birth:1909] ; Petrus Joannes de Cock ; Francisca Lariviere"
+  },
+  {
+   "id": "6TT3-DHWR",
+   "n": "Florens Bundervoet",
+   "f": "DeathRegistration:6 Dec 1934@Dendermonde, Oost-Vlaanderen, België Birth:1881",
+   "age": "53 years",
+   "reg": "Dendermonde, Oost-Vlaanderen, België 6 Dec 1934",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Petrus Joannes>Florens Bundervoet ; CP:Petrus Joannes>Maria Justina Vanderlinden ; PC:Maria Justina Vanderlinden>Florens Bundervoet ; CP:Florens Bundervoet>Maria Ludovica Daninck",
+   "others": "Petrus Joannes ; Maria Justina Vanderlinden ; Maria Ludovica Daninck"
+  },
+  {
+   "id": "6KRD-RHLD",
+   "n": "Hedwig Bundervoet",
+   "f": "Burial:@Knesselare, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium Birth:01 Aug 1935 Death:30 Mar 2006",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "6TT3-NX33",
+   "n": "Franciscus Andreas Petrus Bundervoet",
+   "f": "",
+   "age": "",
+   "reg": "Dendermonde, Oost-Vlaanderen, België 15 Aug 1937",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Elisa de Ridder>Simonne Celina Maria de Buck ; PC:Maria Ludovica Daninck>Franciscus Andreas Petrus Bundervoet ; CP:Florens>Maria Ludovica Daninck ; CP:Franciscus Andreas Petrus Bundervoet>Simonne Celina Maria de Buck ; PC:Oscar Eduard>Simonne Celina Maria de Buck ; PC:Florens>Franciscus Andreas Petrus Bundervoet",
+   "others": "Florens ; Maria Ludovica Daninck ; Simonne Celina Maria de Buck ; Oscar Eduard ; Elisa de Ridder"
+  },
+  {
+   "id": "X9TQ-DBCY",
+   "n": "Franciscus Andreas Petrus Bundervoet",
+   "f": "Birth:1912",
+   "age": "",
+   "reg": "Dendermonde, Oost-Vlaanderen, België 31 Aug 1937",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Oscar Eduard de Buck>Simonne Celina Maria de Buck ; PC:Elisa de Ridder>Simonne Celina Maria de Buck ; PC:Maria Ludovica Daninck>Franciscus Andreas Petrus Bundervoet ; CP:Florens Bundervoet>Maria Ludovica Daninck ; CP:Franciscus Andreas Petrus Bundervoet>Simonne Celina Maria de Buck ; PC:Florens Bundervoet>Franciscus Andreas Petrus Bundervoet",
+   "others": "Florens Bundervoet ; Maria Ludovica Daninck ; Simonne Celina Maria de Buck[Birth:1911] ; Oscar Eduard de Buck ; Elisa de Ridder"
+  },
+  {
+   "id": "X9TQ-DJ2M",
+   "n": "Franciscus Andreas Petrus Bundervoet",
+   "f": "Birth:1912",
+   "age": "",
+   "reg": "Dendermonde, Oost-Vlaanderen, België 31 Aug 1937",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Maria Ludovica Daninck>Franciscus Andreas Petrus Bundervoet ; CP:Florens Bundervoet>Maria Ludovica Daninck ; CP:Franciscus Andreas Petrus Bundervoet>Simonne Celina Maria de Buck ; PC:Florens Bundervoet>Franciscus Andreas Petrus Bundervoet",
+   "others": "Florens Bundervoet ; Maria Ludovica Daninck ; Simonne Celina Maria de Buck[Birth:1911] ; Oscar Eduard de Buck ; Elisa de Ridder"
+  },
+  {
+   "id": "6TRB-YV3Q",
+   "n": "Maria Victorina Gabriël",
+   "f": "Birth:1908 DeathRegistration:20 Jan 1941@Aalst, Oost-Vlaanderen, België",
+   "age": "",
+   "reg": "Aalst, Oost-Vlaanderen, België 20 Jan 1941",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "PC:Josephina de Bruyn>Maria Victorina Gabriël ; PC:Jacobus Edmond>Maria Victorina Gabriël ; CP:Maria Victorina Gabriël>Romaan Bundervoet",
+   "others": "Romaan Bundervoet ; Jacobus Edmond ; Josephina de Bruyn"
+  },
+  {
+   "id": "X9RP-CZ6V",
+   "n": "Frans Spiessens",
+   "f": "",
+   "age": "",
+   "reg": "Baasrode, Oost-Vlaanderen, België 18 Mar 1945",
+   "coll": "\"Belgique, Flandre-Orientale, registres d’état civil, 1541-1950\"",
+   "rel": "CP:Franciscus Collaert>Paulina Pharahildis Bundervoet ; PC:Paulina Pharahildis Bundervoet>Marie José Collaert ; CP:Frans Spiessens>Marie José Collaert ; PC:Franciscus Collaert>Marie José Collaert",
+   "others": "Paulina Pharahildis Bundervoet ; Franciscus Collaert ; Marie José Collaert ; Theofiel Spiessens ; Maria Thérésia Verheyden"
+  },
+  {
+   "id": "X9RF-N1W7",
+   "n": "Pierre Jacques Ghislain Briot",
+   "f": "Birth:1926",
+   "age": "",
+   "reg": "Oostende, West-Vlaanderen, België 6 Jul 1946",
+   "coll": "\"Belgique, Flandre-Occidentale, registres d’état civil, 1582-1950\"",
+   "rel": "PC:Leone Maria Ghislaine Massart>Pierre Jacques Ghislain Briot ; PC:Auguste Odelin>Pierre Jacques Ghislain Briot ; CP:Pierre Jacques Ghislain Briot>Denise Marcelle Bundervoet ; PC:Emilius Josephus>Denise Marcelle Bundervoet ; PC:Lucia Elisa Bruyneel>Denise Marcelle Bundervoet ; CP:Emilius Josephus>Lucia Elisa Bruyneel",
+   "others": "Denise Marcelle Bundervoet[Birth:1928] ; Emilius Josephus ; Lucia Elisa Bruyneel ; Auguste Odelin ; Leone Maria Ghislaine Massart"
+  },
+  {
+   "id": "XSW7-6L2Y",
+   "n": "William Paul Basiel Bundervoet",
+   "f": "Birth:21 Jan 1948 Death:02 Apr 1996 Burial:@Lokeren, Arrondissement Sint-Niklaas, East Flanders, Belgium",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  },
+  {
+   "id": "WBVC-PN3Z",
+   "n": "Hermanus Wilhelmus Josephus Moonen",
+   "f": "Death:3 May 1962@Rotterdam, South Holland, Netherlands Birth:1872@Rotterdam",
+   "age": "",
+   "reg": "Rotterdam, South Holland, Netherlands 3 May 1962",
+   "coll": "\"Netherlands, Archival Indexes, Vital Records, 1600-2000\"",
+   "rel": "CP:Theodorus Laurentius Moonen>Johanna Lowina Maria Bundervoet ; PC:Johanna Lowina Maria Bundervoet>Hermanus Wilhelmus Josephus Moonen ; PC:Theodorus Laurentius Moonen>Hermanus Wilhelmus Josephus Moonen",
+   "others": "Johanna Lowina Maria Bundervoet ; Theodorus Laurentius Moonen"
+  },
+  {
+   "id": "66MQ-LLJY",
+   "n": "Rosalie Bundervoet",
+   "f": "Burial:@Ghent, Arrondissement Gent, East Flanders Oost-Vlaanderen, Belgium Death:23 Dec 1968",
+   "age": "",
+   "reg": "World",
+   "coll": "\"Find a Grave Index\"",
+   "rel": "",
+   "others": ""
+  }
+ ]
+}
