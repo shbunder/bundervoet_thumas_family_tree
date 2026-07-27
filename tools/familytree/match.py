@@ -452,11 +452,14 @@ def surname_weight(surname: str | None, freq: Frequencies | None = None) -> Weig
 # the name, and the log is full of right-name/wrong-province rejections that prove it.
 CLASSES = ("name", "date", "place", "role", "kin")
 # Agreements that are real evidence but must never be one of the two independent
-# identifiers. Both were promoted to full classes once and both produced false grafts:
-# an act HELD at Oostende matched everyone in the tree who lived there, and two men's
-# wives sharing the forename Simonne matched across seventy years. They still add bits —
-# they are not nothing — but they cannot carry a graft on their own.
-WEAK_CLASSES = ("context", "kin-forename", "name-forename", "date-near")
+# identifiers. Every one of them was a full class once and every one produced false
+# grafts: an act HELD at Oostende matched everyone in the tree who lived there, two men's
+# wives sharing the forename Simonne matched across seventy years, and a shared BIRTH YEAR
+# matched Appolonia Huyghebaert of Oudenburg to a Marie Huyghebaert eighty kilometres away
+# and Lucien Vincke of Diksmuide to a witness called Gustave at a Brussels wedding. They
+# still add bits — they are not nothing — but they cannot carry a graft on their own.
+WEAK_CLASSES = ("context", "kin-forename", "name-forename", "date-near", "date-year",
+                "kin-sibship")
 
 
 @dataclass
@@ -591,12 +594,29 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     # only that they were born in the 1920s scored 12 bits for "the same day", and one of
     # them against an act stating a real day was vetoed for "birth dates 1920..1929 vs
     # 1920-06-01". A length is not a format.
+    #
+    # THE YEAR ALONE IS NOT THE DATE CLASS. It scores — six bits is what the arithmetic
+    # says and the arithmetic is right — but in a corpus of four million mentions thousands
+    # of people share any one birth year, so "born the same year" is a filter, not an
+    # identifier, and it was being counted as half of a graft. Measured on the gold
+    # standard: surname + birth year 1830 grafted Appolonia Joanna Huyghebaert of Oudenburg
+    # onto a Marie Huyghebaert in an Aalst population register eighty kilometres away, and
+    # surname + birth year 1840 grafted Lucien Vincke of Diksmuide onto Gustave Vincke, a
+    # WITNESS at a Brussels wedding. Both read "2 independent (name+date)"; both are one
+    # fact about a surname and one about a cohort. Demoting the bare year removed both and
+    # cost no true match at all — every confirmed pair that leaned on a year had a place, a
+    # kin or a day-level date under it as well.
+    #
+    # A death year is the same statement about a different event and is classed the same
+    # way. That half is reasoned rather than measured: the gold standard holds two labels
+    # where a death year agrees, both of which also agree on a day-level birth date, so
+    # nothing in it moves either way.
     if a.birth_date and b.birth_date and DAY.match(a.birth_date) and a.birth_date == b.birth_date:
         add("date", f"birth {a.birth_date}", 12.0)
     elif a_born and b_born:
         gap = abs(a_born - b_born)
         if gap == 0:
-            add("date", f"birth year {a_born}", 6.0)
+            add("date-year", f"birth year {a_born}", 6.0)
         elif gap <= 2:
             # A NEAR miss is corroboration, not identification, so it cannot be one of the
             # two independent identifiers. §59 of the research log had already said why —
@@ -611,7 +631,7 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
             # fixes what was never an identifier in the first place.
             add("date-near", f"birth year ±{gap}", 2.0)
     if a_died and b_died and a_died == b_died:
-        add("date", f"death year {a_died}", 5.0)
+        add("date-year", f"death year {a_died}", 5.0)
 
     # --- place ---
     # The class that did all the rejecting in the log so far: the Van Craenenbroeck and
@@ -629,15 +649,28 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
             w = _bits(freq.places.get(ctx[0], 0), freq.n, 5.0) if freq.n else _NO_CORPUS["place"]
             add("context", f"record at {ctx[0]}", max(w, 2.0))
     if shared:
+        # ONE COMMUNE, ONE WEIGHT — this used to be two `add`s and they were the same fact.
+        # A birthplace is IN `places` on both sides, so a birthplace agreement always fired
+        # the general clause too: five bits for "place grezdoiceau" and four more for
+        # "birthplace Grez-Doiceau", nine bits and a doubled weight out of one statement
+        # about where a family lives. That is the reading that put a five-year-old of an
+        # unrelated Grez-Doiceau Thumas household at 23 bits against FOUR people of this
+        # line at once (§68) — the same commune counted twice, next to a surname that is
+        # locally common, and no other evidence anywhere in the act.
+        #
         # Capped low on purpose. Place counts come from the harvest, and a harvest is
         # filtered to one surname — so the commune that family lived in looks rare
         # simply because the corpus is mostly them. Unlike the surname, there is no
         # population figure to correct it with, so the weight is bounded instead of
-        # trusted.
+        # trusted. A birthplace agreement keeps a higher floor than a bare place one,
+        # because "born in the same commune" is a stronger statement than "appears in it";
+        # it is a floor under one weight, not a second weight.
+        born_together = bool(a.birth_place and b.birth_place
+                             and normalise_key(a.birth_place) == normalise_key(b.birth_place))
         w = _bits(freq.places.get(shared[0], 0), freq.n, 5.0) if freq.n else _NO_CORPUS["place"]
-        add("place", f"place {shared[0]}", max(w, 2.0))
-    if a.birth_place and b.birth_place and normalise_key(a.birth_place) == normalise_key(b.birth_place):
-        add("place", f"birthplace {a.birth_place}", 4.0)
+        add("place",
+            f"birthplace {a.birth_place}" if born_together else f"place {shared[0]}",
+            max(w, 4.0 if born_together else 2.0))
 
     # --- occupation ---
     if a.occupation and b.occupation and normalise_key(a.occupation) == normalise_key(b.occupation):
@@ -651,6 +684,10 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
     # Only relatives in the same bucket are compared, and the weight follows the same
     # rule as everything else — what the agreement would cost to get by chance.
     kin_bits, kin_labels, kin_anchored = 0.0, [], False
+    # Which buckets the anchoring agreement came from — a sibling shares your parents and
+    # nothing else, so "which relative agreed" decides whether the agreement is about a
+    # family or about a person. See the demotion under the loop.
+    anchored_in: set[str] = set()
     # Named apart from the `same_surname`/`shared` above on purpose. These are facts about
     # a RELATIVE; those are facts about the two people being compared. Reusing the names
     # here rebound them, and the surname veto below — which reads `same_surname` — was
@@ -686,10 +723,29 @@ def compare(a: Candidate, b: Candidate, freq: Frequencies | None = None) -> Matc
                 # this is really for.
                 if kin_surname_agrees and surname_key != family_key(a.surname):
                     kin_anchored = True
+                    anchored_in.add(bucket)
                 break
     if kin_bits:
         seen = ", ".join(dict.fromkeys(kin_labels))
         cls = "kin" if kin_anchored else "kin-forename"
+        # A PARENT PAIR NAMES A SIBSHIP, NOT A PERSON. An act that names your father and
+        # your mother names every one of their children equally well, and a sibship is the
+        # commonest thing in this material there is to confuse: four Peremans siblings carry
+        # the identical held father+mother, so `abl:fa0664d5…` — which contains exactly one
+        # Peremans, the bride Joanna Catharina Jacoba — scored graftable against her sister
+        # Maria Josephina, whose forename appears nowhere in the act (§69). The same shape
+        # put Georges Joseph Thumas on the death act of Charles Eugène, his infant brother:
+        # right parents, wrong child.
+        #
+        # So where the anchoring agreement is ONLY a parent's, and the two principals both
+        # state forenames that share no token even after folding, the kin agreement is
+        # demoted: it still scores, it can no longer carry the graft. Scoped to parent
+        # buckets deliberately — a sibling does not share your spouse, and both confirmed
+        # matches in the gold standard that agree on a relative while disagreeing on the
+        # principal's own forename are spouse agreements (eugenius_dv, louise_bocklandt).
+        # Measured: this demotes exactly the two sibling false positives and no true match.
+        if cls == "kin" and anchored_in <= {"father", "mother"} and ga and gb and not given_bits:
+            cls = "kin-sibship"
         add(cls, f"{seen} name{'s' if len(kin_labels) > 1 else ''}", min(kin_bits, 16.0))
 
     # --- vetoes ---

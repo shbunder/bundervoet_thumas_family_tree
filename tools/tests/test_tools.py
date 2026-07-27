@@ -459,15 +459,32 @@ def test_every_class_compare_emits_is_declared_strong_or_weak():
     assert seen & set(WEAK_CLASSES), "these pairs are supposed to exercise the weak classes"
 
 
-def test_a_birth_year_off_by_one_is_not_an_independent_identifier():
-    """"Birth year ±1 is nearly free when the tree holds a bare year" — §59, before the gold
+def test_a_bare_birth_year_is_not_an_independent_identifier():
+    """Neither an off-by-one year nor an exact one, and the second half of that is new.
+
+    "Birth year ±1 is nearly free when the tree holds a bare year" — §59, before the gold
     standard could show it. Once the act-level rejections started scoring, both Van Bergen
     rivals turned out to reach graftable on exactly this: surname plus a ±1 year, wrong
-    province and wrong parents in each case. It still scores its two bits, because it is worth
-    noticing; it cannot be one of the two identifiers a graft needs.
+    province and wrong parents in each case. That half is unchanged and still pinned here.
 
-    An EXACT year still is one, which is the half that must not be broken."""
-    from familytree.match import CLASSES, compare
+    THE EXACT YEAR FOLLOWED IT, and this test asserted the opposite until it did. The
+    assumption was that an exact birth-year agreement is a full identifier; two false
+    positives of precisely that shape, both settled by reading the act, say otherwise:
+
+      appolonia_huyghebaert × aal:8e1db4bf-… — 19.3 bits, "2 independent (name+date)",
+        being surname Huyghebaert + birth year 1830. The record is *Marie* Huyghebaert in
+        an Aalst population-register residency row, 80km from Oudenburg.
+      lucien_vincke × abb:f445f3e2-…#Person10355353 — 19.3 bits, the same shape on surname
+        Vincke + birth year 1840. The record is the *witness* Gustave Vincke at a Brussels
+        marriage of a different man entirely.
+
+    In a corpus of four million mentions thousands of people share any one year, so this is
+    the same statement as the ±1 case and not a weaker one. It still scores its six bits;
+    it cannot be one of the two identifiers a graft needs. Demoting it cost no true match
+    in the gold standard.
+
+    A DAY-LEVEL agreement still is an identifier, which is the half that must not break."""
+    from familytree.match import CLASSES, WEAK_CLASSES, compare
     near = compare(_cand(surname="Van Bergen", given="Maria", birth_year=1843),
                    _cand(ref="y", surname="Van Bergen", given="Maria", birth_year=1844))
     assert "date-near" in near.classes and "date" not in near.classes
@@ -476,8 +493,101 @@ def test_a_birth_year_off_by_one_is_not_an_independent_identifier():
 
     exact = compare(_cand(surname="Van Bergen", given="Maria", birth_year=1843),
                     _cand(ref="y", surname="Van Bergen", given="Maria", birth_year=1843))
-    assert "date" in exact.classes and exact.independent >= 2
-    assert "date-near" not in CLASSES
+    assert "date-year" in exact.classes and "date" not in exact.classes
+    assert exact.independent < 2 and not exact.graftable
+    assert exact.distinguishing >= 6, "an exact year is still the strongest of the weak"
+
+    day = compare(_cand(surname="Van Bergen", given="Maria", birth_date="1843-04-02",
+                        birth_year=1843),
+                  _cand(ref="y", surname="Van Bergen", given="Maria", birth_date="1843-04-02",
+                        birth_year=1843))
+    assert "date" in day.classes, "a day-level agreement is still an identifier"
+
+    for weak in ("date-near", "date-year"):
+        assert weak not in CLASSES and weak in WEAK_CLASSES
+
+
+def test_one_commune_is_one_fact_however_many_fields_state_it():
+    """An act's own commune and a participant's birthplace naming the same place is one
+    statement, and it was being paid for twice — five bits for "place grezdoiceau" and four
+    more for "birthplace Grez-Doiceau".
+
+    Read directly (§68): `abb:202f2000-…` is the 1846 death of *Alexandre* Thumas, age 5,
+    son of Charles Joseph Thumas × Josephine Latour — an unrelated Thumas household in a
+    commune known to hold at least two. It scored 23 bits, "2 independent (name+place)",
+    against FOUR people of this line at once: georgesjoseph_t, georges2_t, jbzenon_t and
+    georges_cj. A locally common surname and the commune it lives in are one signal about a
+    family, not two about a person, and the doubled weight was the whole of the second."""
+    a = _cand(surname="Thumas", given="Georges Joseph", places=["Grez-Doiceau"],
+              birth_place="Grez-Doiceau")
+    b = _cand(ref="y", surname="Thumas", given="Alexandre", places=["Grez-Doiceau"],
+              birth_place="Grez-Doiceau", context_places=["Grez-Doiceau"])
+    m = compare(a, b)
+    assert [cls for cls, _, _ in m.agree].count("place") == 1, "one commune, one weight"
+    assert m.distinguishing < 6 and not m.graftable
+
+
+def test_a_bare_year_and_a_bare_surname_are_not_two_identifiers():
+    """The other two false positives of 2026-07-27, both settled by reading the act, both
+    reaching graftable at 19.3 bits on "2 independent (name+date)".
+
+    They are reconstructed here as the records actually read, rather than as bare
+    Candidates, so the pin is against the shape of evidence the venue really produces."""
+    appolonia = compare(
+        _cand(surname="Huyghebaert", given="Appolonia Joanna", birth_date="1830-09-26",
+              birth_year=1830, birth_place="Oudenburg", places=["Oudenburg", "Oostende"],
+              stated_birth_year=True),
+        # Aalst 1856 population register, a residency row 80km away: Marie Huyghebaert,
+        # b.1830 Clemskerke, servante. No parents, no marriage, nothing else to test.
+        _cand(ref="y", surname="Huyghebaert", given="Marie", birth_year=1830,
+              birth_place="Clemskerke", places=["Clemskerke", "Aalst"],
+              context_places=["Aalst"], stated_birth_year=True))
+    assert appolonia.independent < 2 and not appolonia.graftable
+
+    lucien = compare(
+        _cand(surname="Vincke", given="Lucien Julianus", birth_date="1840-03-26",
+              birth_year=1840, birth_place="Diksmuide", places=["Diksmuide"],
+              occupation="metserdiener", stated_birth_year=True),
+        # The WITNESS at a Brussels marriage of a different man: Gustave Vincke, 25,
+        # menuisier — an age-implied year, a different trade, a different city.
+        _cand(ref="y", surname="Vincke", given="Gustave", birth_year=1840,
+              places=["Bruxelles"], context_places=["Brussel"], occupation="menuisier"))
+    assert lucien.independent < 2 and not lucien.graftable
+
+
+def test_a_parent_pair_names_a_sibship_not_a_person():
+    """An act naming your father and your mother names every one of their children equally
+    well, and this material is full of sibships: four Peremans siblings carry the identical
+    held father+mother, so `abl:fa0664d5-…` — whose ten participants include exactly ONE
+    Peremans, the bride Joanna Catharina Jacoba — scored graftable against her sister Maria
+    Josephina, who appears in it nowhere (§69). The same shape put Georges Joseph Thumas on
+    the 1851 death act of Charles Eugène, his infant brother: right parents, wrong child.
+
+    Scoped to parent buckets, because a sibling does not share your spouse."""
+    parents = [("father", "peremans", frozenset({"egidius"})),
+               ("mother", "verelst", frozenset({"joanna", "theresia"}))]
+    m = compare(_cand(surname="Peremans", given="Maria Josephina", kin=list(parents)),
+                _cand(ref="y", surname="Peremans", given="Joanna Catharina Jacoba",
+                      kin=list(parents)))
+    assert "kin-sibship" in m.classes and "kin" not in m.classes
+    assert not m.graftable
+    assert m.distinguishing > 0, "the parents still agree, and that is worth noticing"
+
+    spouse = [("spouse", "vandervarent", frozenset({"petrus"}))]
+    shares_a_husband = compare(
+        _cand(surname="Peremans", given="Maria Josephina", kin=parents + spouse),
+        _cand(ref="y", surname="Peremans", given="Joanna Catharina Jacoba",
+              kin=list(parents + spouse)))
+    assert "kin" in shares_a_husband.classes, "a sibling does not share your spouse"
+
+
+def test_a_day_level_date_with_a_place_is_still_two_identifiers():
+    """The half the demotions above must not break. Deduplicating the commune and demoting
+    the bare year are both about what an agreement is worth; a day-level birth date and the
+    commune it happened in remain the two identifiers CLAUDE.md rule 1 names first."""
+    m = compare(*_pair())
+    assert "date" in m.classes and "place" in m.classes
+    assert m.independent >= 2 and m.graftable and m.band == "strong"
 
 
 def test_agreement_beyond_the_name_is_what_promotes_a_candidate():
