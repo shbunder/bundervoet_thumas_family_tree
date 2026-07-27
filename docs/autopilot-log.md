@@ -127,3 +127,76 @@ One change to `tools/` **was** made, by a subagent, before this constraint was e
 commit `3af3326`, a crash fix in `corpus.py` for archive dates like `"ca"` and `"-"` that
 was killing the validator, with six cases pinned in a test. It is load-bearing for the rest
 of the run. **It needs your review.**
+
+---
+
+## Run summary — 2026-07-27, ten passes
+
+**434 → 536 people (+102). The corpus gained nothing: 1,721,653 acts held, before and after.**
+Every graft came from acts already on disk or from three open, unauthenticated web indexes.
+No harvest was run. Ten commits, `dfc3e23` … `328fee3`, none pushed. Build green throughout.
+
+Seven passes GRAFTED, three concluded NOT PROVEN. The rotation ran up/down/act three times;
+pass 10 deliberately left it for **objective 3**, which the first nine passes had given nothing.
+
+### Grafted, and the two independent identifiers that carried each
+
+| pass | graft | identifier 1 | identifier 2 |
+|---|---|---|---|
+| 1 | 8 children of `lucien_vincke`, + Florence Amelie and 4 Van Iseghem children — 12 people | father's full forename pair **and** mother's rare full name on each Diksmuide act | two independent filters (by father-name, by mother-surname) return the identical set — no rival couple |
+| 2 | 2 Bossin children + 5 siblings of `ludovicus_bossin79` — 10 people | each parent's **age-implied birth year matching the held date to the day**, plus birthplace | the couple's own 1858 marriage act as anchor: the mother's stated age matches exactly in **5 of 5** acts |
+| 4 | parents of **both** spouses from one act, + 2 generations of siblings — 28 people | both spouses' birth date **and** place matching the tree exactly, from an index independent of the tree they came from | a second marriage act 17 years later whose Previous-Partners row names the first husband's death, matching to the day |
+| 5 | 4 children born inside the 1866–1870 blind window, + 12 grandchildren — 20 people | full parent-name agreement across **two registers 29 years apart** (1893 marriage, 1922 death) | the 1922 act's spouse name matching the 1893 bride exactly; a rival Theophile ruled out on parents, spouse and death year |
+| 6 | a fifth Peremans sibling + his wife's family — 4 people | the mother's death, **19 Dec 1843 Zaventem, to the day**, from a separately transcribed batch | the father named, dead, same commune — clearing a *higher* bar than the three siblings already grafted |
+| 8 | 7 siblings of `eduardus_vi` — 7 people | the **parent pair**, both names in full — because "Joannes Vaniseghem" alone matches **nine different men** in this index | 6 of 7 cross-locked by a day-level date from a separately transcribed death or marriage act |
+| 9 | a fifth and sixth Bossin child + in-laws — 13 people | parent names on **his own** 1887 marriage act (not the 1884 act — witnesses carry no parentage) | the father's death, 10 Oct 1888 Kraainem, recurring in **two unconnected acts five years apart** |
+
+### What was refuted, and what refuted it
+
+- **The top of the greedy act cover**, scored as resolving four Thumas frontiers at 23 bits each — refuted by *reading the held act*: the decedent is Alexandre Thumas, age 5, of an unrelated household in the same commune. "2 independent (name+place)" was surname + commune, doubled by a `BirthPlace` field repeating the commune.
+- **`appolonia_huyghebaert`'s best candidate** (`graftable: True`) — a population-register row for *Marie* Huyghebaert, 80 km away. **`lucien_vincke`'s best** — a Brussels act whose matched pid was a *witness*, Gustave. **`georgesjoseph_t`'s best at 39 bits** — his own infant brother's death act, a person already in the tree.
+- **The Gent Bundervoet cluster** (153 mentions) — six distinct families, none connecting. The proposed bridge act was killed on chronology alone: its subject would have to have fathered children aged 60–83.
+- **`emma_vincke`'s `doc` upgrade** — AGATHA's West-Flanders birth project publishes no scan link at all; the reference "SCAN 392 GSU" is bare text with no IIIF or viewer anywhere in the DOM.
+- **Three witness-line leads and a shared trade** — a trade correlates with family and apprenticeship networks, so surname + trade + age + region is one signal, not two.
+
+### Corrected — including this run's own work
+
+Four death dates recorded in pass 1 were **certificate dates**, corrected the same day in pass 5.
+`antoine_vanald`'s death lost its day-level precision entirely — `1808-07-21` was a registration
+date, and three sources give three different days. `brigitte_wyllie`'s birth was reduced to the
+year: neither candidate date satisfies both acts' stated ages.
+
+### Blocked — needs you
+
+**AGATHA and FamilySearch were logged out for the whole run** (401/403; a control navigation to
+a plain catalog page confirmed it was the session, not a per-collection restriction). Every
+`doc` upgrade this run therefore failed. **Nothing added today is `doc`; all 102 people are `sup`.**
+One re-authenticated session would settle: `emma_vincke`'s birth act image, the Zaventem scan
+`S3HY-6423-8F1`, the Diksmuide 1803 scan (film 1166236 image 962), and the Kraainem 1884 scan.
+
+### What the labels say about the scorer
+
+**153 labels, 98 re-scored — precision 86.4%, recall 78.1%**, down from 96%/100%. That fall is
+the point: this run added **nine hard rejections the scorer would wrongly graft**, all of the
+same shape. Refusing to redefine the metric is what §61 and §63 already committed to.
+
+### Findings about the tools — none acted on, all need your review
+
+1. **Weak classes are counted as independent.** "surname + commune" and "surname + birth-year" are scored as two identifiers. Five confirmed false positives, one of them against four frontiers at once.
+2. **The greedy cover re-offers finished work.** Three of its seven entries were already fully grafted and cited.
+3. **The cover credits the wrong sibling** — it claimed an act resolved `mjosephina_peremans`, whose name does not appear in it. Siblings share held parent identifiers, and it appears to credit any of them once the pair matches, without checking the participant's own forename.
+4. **`surname_clusters()` groups by event place, not birthplace** — so people who died in a Gent hospital but were born in Evergem cluster as "Gent".
+5. **A veto that exists is not applied one hop up.** `link.py` auto-rejects a 1904 record for a man dead in 1760, but the same logic is not applied through kin-name scoring, which is why the Gent cluster's score survived.
+6. **Two label conventions are in tension** — ~20 labels use a synthetic `vrijwilligersrab-<slug>` ref; other passes were told to record none. One convention should win.
+7. `data/forenames.json` has no `Ignace`/`Ignatius` fold, though it curates ~15 equivalent Latin/vernacular pairs.
+
+### The single most valuable thing to do next — and it needs you
+
+**Log Chrome back in to AGATHA and FamilySearch.** The research is no longer the bottleneck; the
+session is. Three open venues carried this entire run — `vrijwilligersrab.be` (West Flanders),
+`openarchieven.nl`, and `netradyle.be` (Brabant-wallon, newly registered) — and they took the
+tree 102 people further without a single login. But every one of those 102 is `sup`, and four
+specific images, already identified by film and frame, are one authenticated request away.
+
+After that: **finding 1 above.** A scoring floor that treats surname + commune as two identifiers
+is the failure mode this project is built to prevent, and it is currently the default.
