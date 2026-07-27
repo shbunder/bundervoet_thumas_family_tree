@@ -4571,3 +4571,36 @@ fall through to the third. They are not married in. That classification lives in
 
 Tree: 551 → **809 people**. One act read and saved as an artifact, two searches logged, one
 `--match` label on the act, one new source page. Build green.
+
+## 79. The Dutch records are still not in the corpus — and why that is logged rather than retried
+
+A correction to §78's framing, which implied the Dutch material was in hand. It is in hand
+as *evidence*; it is **not in the corpus**.
+
+Two attempts to harvest Open Archives' 176 Dutch Bundervoet records into
+`research/harvest/` both failed, and the failure is worth recording because a later pass
+will otherwise walk straight into it:
+
+1. **The first died outright.** `api()` in `tools/harvest.py` guards `HTTPError` and
+   `URLError` but not a **200 response carrying a non-JSON body**, which Open Archives
+   returns intermittently. Inside `fetch_acts`'s thread pool one such response raises out of
+   `pool.map`, past `save_manifest`, so the run records nothing at all — the mentions file
+   is written, ten acts are on disk, and the manifest says the harvest never happened.
+2. **The second was tolerant and uneconomic.** A wrapper retrying `JSONDecodeError` with
+   backoff got 4 of roughly 148 `srt` acts before it became clear the venue was returning
+   bad bodies steadily enough to cost up to 20 seconds per act. Stopped deliberately: this
+   is a free, unauthenticated API that this project leans on, and a few hundred requests had
+   already gone to it today.
+
+**Nothing is lost analytically.** All 176 records, with full act detail, are in
+`research/findings/bundervoet-diaspora-2026-07-27.json`, and they are what the §78 roster
+was built from. What is missing is their presence in the local corpus — so `link.py`, the
+blocking index and the bits-of-surprise scorer still cannot see them, and the Dutch
+component stays invisible to every automated query the project runs.
+
+**Two `tools/` changes this argues for, both still for review rather than made here:**
+`api()` should treat a non-JSON 200 as the same "come back later" condition it already
+treats 429 and 5xx as; and `cmd_surname` should take a country rather than hardcoding
+`country_code: "be"`, which is why the Dutch harvest had to be driven by importing the
+module in the first place. Until the first is fixed, **any large harvest can die silently
+and record nothing**, which is a worse failure than a slow one.
