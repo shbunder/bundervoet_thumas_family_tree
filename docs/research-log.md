@@ -3402,3 +3402,163 @@ cover does not know what the tree already holds. Neither finding is fixed here �
 `tools/` is out of scope for this pass — but both are worth a future review.
 
 Tree: 504 → 508 people. Build green.
+
+## 70. Autopilot pass 7 (up) — the act was reached, and the generation above it stayed a frontier
+
+Entirely a `vrijwilligersrab` volunteer INDEX/Detail transcription pass — no register image
+was read anywhere in it, so every fact below is `sup`, never `doc`. The scan behind the
+headline act is FamilySearch film 1166236 image 962 (ark `3:1:33SQ-GGKY-9C7D`), confirmed
+`blocked` at HTTP 403 unauthenticated — a one-request retry once a session exists, not a
+miss, because the material was never actually reached.
+
+**The honest shape of this pass: the act was found, and the parents are still not
+grafted.** Diksmuide, 8 June 1803 (19 Prairial XI, the Republican-calendar conversion
+checked by computation), marriage act nr. 14, RAB ID 84989 — [[antoine_vanald]] ×
+[[brigitte_wyllie]]'s own wedding — names all four of their parents at once. It is the
+same document two frontiers had been waiting on, and reaching it does not clear either one:
+this is the same refusal §66 made for the Huyghebaert/Termote generation, applied again
+here, because reaching a document is not the same thing as clearing the two-independent-
+identifiers bar.
+
+**ACCEPTED — the couple's own identity, `sup`.** Two independent identifiers anchor
+[[antoine_vanald]] against this act: his birth date, 09/05/1780, matches the tree's
+pre-existing (tree-bartvanhooren) value to the day, and the marriage's own date and place
+match what the tree already held. His own death act (act nr. 97, RAB ID 2299984) supplies a
+third, consistent value — age 28, birthplace Diksmuide. No rival Vanalderweireldt couple was
+found in the area (a Bernard Carol Vanalderweireldt × Regina Papegay, d. 1820, is a
+different family). New facts recorded: Antoine *werkman*, age 23; [[brigitte_wyllie]] age
+24; both fathers said to be born at Langemark; Antoine's mother born Diksmuide, Brigitte's
+mother born Woumen.
+
+**NOT PROVEN — all four parents named on the act, none linked.** Antoine's: Vanaldeweireldt
+Jacques Ignace × Verhaeghe Isabella Claire. Brigitte's: Wyllie François Antoine × Deman
+Brigitte. A split verdict, reproduced rather than smoothed into a single confidence level:
+**Isabella Claire/Clara Verhaeghe** leans toward acceptance (named identically across three
+independent acts — this one, Antoine's 1808 death act, and a probable sister's 1857 death
+act below — no rival family); **François Antoine Wyllie** leans toward acceptance too
+(corroborated by an exact death date and place, 30/09/1811 Diksmuide, on the 1818 act
+below). **Antoine's father is NOT PROVEN on form** — three readings, no two agreeing:
+Jacques Ignace (1803 act), François (1808 death act), Jacobus Ignatius (1857 act) — the same
+man beyond doubt, the exact forename open. **Brigitte's mother is NOT PROVEN on forename,
+and this conflict was not flagged going in**: the raw HTML gives "Deman Brigitte" in 1803
+and "Deman Catharine" in 1818, and the death-index row renders her fully as "Deman Catherine
+Bregite" — read together this is a compound name split by two different clerks, consistent
+with the double-forename pattern running through this whole cluster (Isabella Claire/Clara,
+Antoine Joseph Albert, Brigitte Josephine Joanna), not a contradiction, and no single
+forename is asserted. All four names are recorded in prose on [[antoine_vanald]] and
+[[brigitte_wyllie]]; no father/mother field is set on either record.
+
+**A `tools/` finding, not acted on.** `data/forenames.json` licenses `jacobus ≡ jacques`
+(the fold group already includes `jacob`, `jaak`), but "Ignace" and "Ignatius" appear
+nowhere in the file, in either the `m` or `f` block — grepped, zero hits. So "Jacques Ignace
+≡ Jacobus Ignatius" is not literally licensed, though it is the identical Latin/vernacular
+pattern behind roughly fifteen pairs already curated there (`antonius/antoine`,
+`franciscus/francois`, `augustinus/august`, `stephanus/etienne`). Suggested as a fold group
+for review; `data/forenames.json` was not touched, per the standing rule against editing
+`tools/`-adjacent config unilaterally.
+
+**ACCEPTED — [[brigitte_wyllie]] remarried, and the row that identifies her, not the
+name.** Diksmuide, 25 June 1818, act nr. 82, RAB ID 85255 — [[francois_looten]] (b.
+17/08/1785 Rexpoede, Département du Nord, *timmerman*) × Wyllie Brigitte Josephine Jeanne,
+*weduwe*, 38, same parents as the 1803 act. Its Previous-Partners table reads
+`VANALDERWEIRELDT | Antoine | Diksmuide | 06/07/1808` — that row, not the surname, is what
+makes the identification, exactly as the verifier confirmed. **This is the methodological
+point worth keeping: a Vanalderweireldt-only sweep would never have found this marriage**,
+because by 1818 she carries a different surname; it surfaced only because her own 1824
+death act still names Looten as her partner. At least four children are attested from the
+same sweep, each naming Looten Franciscus Josephus × Wyllie Brigitta Josephina in full:
+[[catharina_looten]] (d. 1823), [[renatus_looten]] (d. 1825, weeks after his mother),
+[[ludovica_looten]] (m. 1842) and [[maria_looten]] (m. 1843) — no individual act number read
+for any of the four, recorded at the precision the sweep actually reached.
+
+**A RETRACTION — a date read from the wrong index column.** The death-index columns are
+`Location | Date | Certificate Date | Year | Certificate | Deceased | Father | Mother |
+Partner | Remarks`. Antoine's row has **`Date` blank** and 21/07/1808 only in `Certificate
+Date` — so the tree's held 1808-07-21 was a **registration date, not an attested death
+day**. His death day is open three ways, with no two sources agreeing: 06/07/1808 (the 1818
+act's Previous-Partners row), 16/07/1808 ([[petrus_vanald]]'s 1828 marriage act) and
+21/07/1808 (the certificate date). July 1808 is solid across all three; the day is not.
+**The day-level precision is withdrawn**; [[antoine_vanald]]'s death is now held at month
+precision (`1808-07`), with all three candidates and their sources stated in prose. What
+would settle it: the death act's own image (film 4794755, blocked) or either son's 1828
+marriage act image. **Contrast, kept because the trap is not uniform**: [[brigitte_wyllie]]'s
+row has the same blank-Date shape (Certificate Date 10/11/1824), but both her sons'
+1828 acts independently state her decease as 08/11/1824 — corroborating, not contradicting,
+the tree's held 1824-11-08, a two-day registration lag rather than a conflict. And
+[[carolus_vanald]]'s held 1808-03-11 is confirmed, not retracted: the birth index gives a
+certificate date of 12/03/1808 against his own marriage act's stated birth of 11/03/1808,
+the ordinary one-day lag. `research/sources.json`'s `rab-bs-overlijdens` note is updated to
+say the Date column can be entirely blank, with nothing to offset the Certificate Date by.
+
+**NOT PROVEN — [[brigitte_wyllie]]'s own birth date, which fails both ways it could be
+read.** Two acts write 22/10/1779; the tree held 1779-02-22 (day and month transposed).
+Both directions were recomputed independently: born 22/10/1779 gives age 23 at the 1803
+wedding (the act says 24, ✗) but age 38 at the 1818 one (✓); born 22/02/1779 gives age 24 in
+1803 (✓) but age 39 in 1818 (the act says 38, ✗). Neither reading satisfies both stated
+ages, so neither is chosen — the record is held at year precision (`1779`) with both
+candidates and the arithmetic stated as a live conflict, not silently kept or silently
+switched. An index-level self-reported age would not reach `doc` even if this resolved.
+
+**ACCEPTED — two more sons of [[antoine_vanald]] × [[brigitte_wyllie]].**
+[[petrus_vanald]] (Petrus Antonius), born 11/06/1803 (22 Prairial XI) — **three days after
+his parents' own 8 June wedding**, checked by computation both ways (8 June + 3 = 11 June;
+19 Prairial XI + 3 = 22 Prairial XI) and read as the ordinary "married to legitimate a child
+already due" pattern, not a transcription slip. Married [[marietheresia_bouckaert]] (b.
+16/10/1799 Avekapelle) in 1828; died 1869, corroborated across two independent acts (his
+1828 marriage, his 1869 death), both naming Antonius × Brigitta Wyllie. And [[jean_vanald]]
+(Jean Antoine), an infant death, certificate 30/01/1805 — a single act, direct parent
+naming, no rival risk for a rare-surname infant death.
+
+**NOT PROVEN — a probable elder sister, and two more generations of grandparents.** Maria
+Joanna Vanalderweireldt, death certificate 30/09/1857, aged 82y 8m 28d, born Diksmuide,
+parents Jacobus Ignatius Vanalderweireldt × Isabella Clara Verhaeghe — a third act naming
+that parent pair. Working back from the certificate date, 82y 8m 28d before 30 September
+1857 lands on 2 January 1775 almost exactly (checked by computation), about 5.3 years
+before [[antoine_vanald]]'s own birth — plausibly his elder sister. But she cannot be
+grafted as his sibling while his own parents are only a frontier, and her date is itself
+back-computed from a certificate date, carrying the same registration lag documented above
+— recorded in prose on [[antoine_vanald]] as "about 1775-01-02", no person file created.
+[[brigitte_wyllie]]'s own grandparents, similarly named and similarly left open: Jean Deman
+× Marie Jeanne D'Hondt (her maternal grandparents, from her mother's 1801 death act) and
+Pierre Jacques Wyllie × Marie Barbe Lengs (her paternal grandparents, from her father's 1811
+death act, which also records his 1807 remarriage to Colette Prudence Minne). One index row
+each, one generation beyond an already-open parent generation, and D'Hondt carries real
+rival risk in this region — the same caution §66 applied to the Huyghebaert grandparents.
+None of the six named people above (the four parents, the probable sister, and the four
+grandparents) has a person file — per CLAUDE.md rule 4 and the `anna_vc` model, a strong
+lead is recorded as a named frontier in prose, not grafted, and not given a stub record
+either.
+
+**A venue fact worth keeping.** [[carolus_vanald]]'s and [[petrus_vanald]]'s own 1828 acts
+both write the surname `VANALDEWEIRELDT` — no R after `-ALD-` — so `naam=Vanalderweireldt`
+never returns them; they surfaced only via the mother's and brides' surnames. This is the
+second time in one day a variant spelling hid a true record in this collection (§67 found
+`VANDERWEIRELT`, the `-AL-` dropped, on the Vincke side of the same family). Recorded on
+`rab-bs-huwelijken`'s note. All five Republican-calendar conversions reached this pass — 19
+& 22 Prairial XI, 24 Vendémiaire VIII, 10 Nivôse IX, 2 Fructidor XII — check out by
+computation against the index's own Gregorian forms.
+
+**Two frontiers, both scoped.** No death act for Jacobus Ignatius Vanalderweireldt or
+Isabella Clara Verhaeghe turned up in the Diksmuide death index under any spelling tried —
+they most plausibly died before civil registration, i.e. they are in the parish registers.
+And the Diksmuide **birth** index for 1796–1815 is a blind window of the same shape as the
+1866–1870 Vincke one broken in §67: a bare father surname, no forename, no mother at all —
+recorded on `rab-bs-geboorten`.
+
+**No labels recorded, and why that is not an oversight.** None of this pass's RAB IDs
+(84989, 85255, 2299984, 85443, 2300267, 2292938, 2294441, 2298609, and the rest) exist in
+the local harvested corpus as `<act-id>#<pid>` — `evaluate.py refs` confirms it — so there
+is nothing to label against, and inventing a ref would misrepresent the basis. Revisitable
+if these acts are ever harvested.
+
+**Eight new records:** [[francois_looten]], [[petrus_vanald]], [[jean_vanald]],
+[[marietheresia_bouckaert]], [[catharina_looten]], [[renatus_looten]], [[ludovica_looten]],
+[[maria_looten]]. Three artifacts committed: `vanalderweireldt-wyllie-1803-marriage-diksmuide`,
+`looten-wyllie-1818-marriage-diksmuide`, `vanalderweireldt-antoine-1808-death-diksmuide`.
+`research/sources.json` updated on `rab-bs-huwelijken`, `rab-bs-overlijdens` and
+`rab-bs-geboorten` (yield and notes); no page-level entries created for the individual RAB
+acts, following the standing convention that a `vrijwilligersrab` act is cited through its
+collection id, with the artifact file as the underlying evidence.
+
+Tree: 508 → 516 people. Build green. Verdict NOT PROVEN — the pass's own headline frontier,
+the parents of [[antoine_vanald]] and [[brigitte_wyllie]], stayed open.
