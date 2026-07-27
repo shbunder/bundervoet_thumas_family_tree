@@ -2115,6 +2115,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#80-two-tools-fixes-a-harvest-that-can-no-longer-die-silently-and-a-country-that-is-a-default-rather-than-a-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        80. Two tools fixes: a harvest that can no longer die silently, and a country that is a default rather than a limit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-something-is-duplicating-files-into-the-working-tree-and-the-build-wrote-2803-bad-links-before-noticing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        81. Something is duplicating files into the working tree, and the build wrote 2,803 bad links before noticing
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3545,6 +3567,28 @@
     <span class="md-ellipsis">
       
         79. The Dutch records are still not in the corpus — and why that is logged rather than retried
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#80-two-tools-fixes-a-harvest-that-can-no-longer-die-silently-and-a-country-that-is-a-default-rather-than-a-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        80. Two tools fixes: a harvest that can no longer die silently, and a country that is a default rather than a limit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-something-is-duplicating-files-into-the-working-tree-and-the-build-wrote-2803-bad-links-before-noticing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        81. Something is duplicating files into the working tree, and the build wrote 2,803 bad links before noticing
       
     </span>
   </a>
@@ -7860,6 +7904,86 @@ treats 429 and 5xx as; and <code>cmd_surname</code> should take a country rather
 <code>country_code: "be"</code>, which is why the Dutch harvest had to be driven by importing the
 module in the first place. Until the first is fixed, <strong>any large harvest can die silently
 and record nothing</strong>, which is a worse failure than a slow one.</p>
+<h2 id="80-two-tools-fixes-a-harvest-that-can-no-longer-die-silently-and-a-country-that-is-a-default-rather-than-a-limit">80. Two tools fixes: a harvest that can no longer die silently, and a country that is a default rather than a limit<a class="headerlink" href="#80-two-tools-fixes-a-harvest-that-can-no-longer-die-silently-and-a-country-that-is-a-default-rather-than-a-limit" title="Permanent link">&para;</a></h2>
+<p>§79 argued for both of these and deliberately did not make them. Made now, on request.</p>
+<p><strong>1. <code>api()</code> no longer treats a non-JSON 200 as a crash.</strong> Open Archives under load answers
+with an HTML error page or an empty body and a success status. That was the only failure
+mode <code>api()</code> did not catch, and the consequence was out of all proportion to the cause:
+raised inside <code>fetch_acts</code>'s thread pool it propagated out of <code>pool.map</code>, past
+<code>save_manifest</code>, so a harvest recorded <strong>nothing</strong> while leaving its mentions file and
+however many acts it had managed on disk. A later run saw no manifest entry, started over,
+and hit the same wall — which is exactly what happened twice to the Dutch harvest.</p>
+<p>It is now retried four times with backoff and then raised as <code>Blocked</code>, the class this
+project already uses for "never reached the material". <strong>That is what makes the fix
+work</strong>, and it is worth being precise about why: <code>fetch_acts</code>'s inner <code>fetch()</code> already
+catches <code>Blocked</code> per act and returns it as an error rather than raising. So a bad response
+now costs one act, the run continues, and <code>save_manifest</code> still records what was actually
+fetched. A harvest can still come back incomplete — but it says so in the manifest instead
+of claiming it never ran. <strong>Dying slowly is recoverable; dying silently and lying about it
+is not.</strong></p>
+<p><strong>2. <code>country_code</code> is a parameter with <code>be</code> as its default.</strong> <code>cmd_surname</code> hardcoded
+<code>"be"</code>, and one string made 176 Dutch Bundervoet records — including the whole
+17th-century Bergen op Zoom and Rotterdam family — unreachable through the tool at all,
+invisible to <code>link.py</code>, to the blocking index and to the scorer. <code>surname</code> and <code>place</code> now
+take <code>--country</code>, defaulting to <code>be</code> because that is where every objective in CLAUDE.md
+lives.</p>
+<p>The harvest id keeps the default country <strong>out</strong> of the name, so <code>bundervoet</code> stays
+<code>bundervoet</code> and no harvest recorded before this argument existed is re-fetched;
+<code>--country nl</code> files itself as <code>bundervoet-nl</code>, which neither overwrites nor is overwritten
+by the Belgian one. <code>out_of_scope()</code>'s docstring is corrected too — it used to explain the
+Zeeuws Archief trap by saying every API harvest was filtered <code>country_code=be</code>, which is no
+longer true, and the guard it describes still applies to whole-archive <code>bulk</code>/<code>oai</code> pulls
+rather than to a surname search.</p>
+<p>Neither change touches how anything is scored, matched or grafted.</p>
+<p><strong>3. A test that was asserting against a stub.</strong> Fixing the two above surfaced a third
+thing. <code>test_every_validator_check_at_least_runs</code> called
+<code>_check_links(report, people, meta, set())</code> — and that fourth argument is the set of
+<strong>registered source ids</strong>, against which the check reports any citation it cannot find. An
+empty set therefore asserts that <em>no link anywhere cites a source</em>, which was true only
+while no link ever had. Today's records are the first to carry <code>source:</code> on a link, which
+<code>README.md</code> documents as the entire point of link-level citation, and the test failed
+listing sources that are in fact registered — while <code>check_data.py</code> itself stayed green,
+because it passes the real set.</p>
+<p>The test now builds that set the way <code>main()</code> does. Its own docstring already warns against
+"a test written against a check that had nowhere to report to"; passing a stub collection is
+the same mistake one level up, and it is worth stating because a smoke test that can only
+pass while a feature is unused will go green for years and then fail on the first correct
+use of it.</p>
+<p><strong>The harvest, run through the fixed code, and what it proves.</strong> 176 mentions, 174 acts,
+<strong>two acts skipped with a stated reason</strong> (<code>ghn:…: non-JSON body after 4 attempts</code>) and the
+manifest written — where the same run twice recorded nothing. The corpus went 392 → <strong>566</strong>
+Bundervoet mentions, and <code>link.py</code> can see the Dutch component for the first time: it scores
+[[bundervoet_livinus_1788]] at <strong>50.0 bits, 2 independent identifiers</strong> against his own
+Rotterdam death act of 1872, and [[bundervoet_egidius]] at 38.0 bits against the 1853 Gent
+death act that names him as Maria Francisca Ledent's husband. Both are facts already
+recorded from the images, so neither is a new graft — what is new is that the scorer can
+reach them at all.</p>
+<h2 id="81-something-is-duplicating-files-into-the-working-tree-and-the-build-wrote-2803-bad-links-before-noticing">81. Something is duplicating files into the working tree, and the build wrote 2,803 bad links before noticing<a class="headerlink" href="#81-something-is-duplicating-files-into-the-working-tree-and-the-build-wrote-2803-bad-links-before-noticing" title="Permanent link">&para;</a></h2>
+<p>Not research. An incident, recorded because it will recur and because it came close to
+entering a commit.</p>
+<p><strong>679 copies</strong> appeared in the working tree — <code>bocklandt_alphonsus 3.md</code>,
+<code>bogaert_petronilla 2.md</code>, <code>data/lineages 3.json</code>, <code>research/labels 2.jsonl</code>, and a <strong>5 GB
+<code>research/harvest/corpus 2.db</code></strong>. All untracked, all mode 600, names suffixed <code>2</code>/<code>3</code>,
+mtimes preserved from their originals. That is the signature of a sync or backup client
+making conflict copies (Dropbox and iCloud both do this), not of anything in this
+repository.</p>
+<p><strong>Why they are not harmless.</strong> <code>people.on_disk()</code> is <code>glob("*.md")</code> with no filter, so the
+roster picked all of them up. Each copy carries the <strong>same <code>id:</code> as its original</strong>, so
+<code>load_people</code> collapsed 1348 files back to 809 people and the site was never wrong — but
+<code>build.py</code> writes edges to <code>data/people/</code> <strong>before</strong> validation decides whether to generate.
+That pass walked the copies, resolved their filename stems as ids, and wrote <strong>2,803 sibling
+links across 333 tracked records</strong> — <code>- id: bocklandt_caesar_1867 2</code>, and so on — and only
+then failed with "Validation failed — nothing was generated". The generated output was
+correctly withheld; the <em>source records</em> had already been mutated.</p>
+<p>Recovered by moving all 679 out of the tree — moved, not deleted — and
+<code>git checkout -- data/people</code>, which was exact rather than a guess because the preceding
+commit was green and no intended <code>data/</code> edit had been made since.</p>
+<p><strong>The finding worth acting on is the ordering.</strong> A build that mutates tracked source records
+before it knows the tree is valid turns any foreign file in <code>data/people/</code> into a corruption
+of records that have nothing to do with it. Two cheap defences, neither made here: have
+<code>on_disk()</code> ignore filenames that cannot be ids — a stem with a space is never a valid id —
+and write edges only after validation passes. The first alone would have made this incident
+nothing at all.</p>
 
 
 

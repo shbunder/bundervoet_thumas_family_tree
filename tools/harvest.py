@@ -32,6 +32,7 @@ Rijksarchief and Familiekunde sets this tree mostly rests on.
     uv run tools/harvest.py oai den                 a whole archive, 150 acts a request
     uv run tools/harvest.py surname Bundervoet
     uv run tools/harvest.py surname "Van Craenenbroeck" --place Zaventem
+    uv run tools/harvest.py surname Bundervoet --country nl   Belgium is the default, not a limit
     uv run tools/harvest.py place Oostende
     uv run tools/harvest.py frontiers --limit 5      harvest what the queue asks for
     uv run tools/harvest.py status                  what is held, and what is missing
@@ -77,6 +78,13 @@ API = "https://api.openarch.nl/1.1"
 # throttles to four requests a second per IP. Going under that deliberately: losing
 # access to the one open venue in the registry would cost far more than the wait.
 UA = "family-tree/0.1 (genealogy research; contact via repository)"
+# Belgium is where every objective in CLAUDE.md lives, so it is the default — but it is a
+# DEFAULT, not a limit. The surname harvest hardcoded it, which meant the Dutch Bundervoets
+# were unreachable through this tool at all: 176 records, including the whole 17th-century
+# Rotterdam family, invisible to `link.py` and the scorer because of one string. See
+# research-log §79.
+DEFAULT_COUNTRY = "be"
+COUNTRY_NAMES = {"be": "Belgium", "nl": "the Netherlands", "fr": "France"}
 RATE = 3.0        # requests a second, aggregate across every worker
 WORKERS = 4       # concurrent act fetches
 PAGE = 100
@@ -144,6 +152,20 @@ def api(endpoint: str, params: dict) -> dict:
             if attempt == 4:
                 raise Blocked(f"{endpoint}: {e}") from e
             time.sleep(attempt)
+            continue
+        except (json.JSONDecodeError, UnicodeDecodeError) as e:
+            # A 200 carrying a body that is not JSON. Under load the venue answers with an
+            # HTML error page or an empty response and a success status, so this is the
+            # same "come back later" as a 429 — but it used to be the only failure here
+            # that was not caught, and the difference was severe rather than cosmetic:
+            # raised inside `fetch_acts`'s thread pool it propagates out of `pool.map`,
+            # past `save_manifest`, and the whole harvest records NOTHING while leaving
+            # its mentions file and however many acts it managed on disk. A later run then
+            # sees no manifest entry, starts from the beginning, and hits the same wall.
+            # Dying slowly is recoverable; dying silently and lying about it is not.
+            if attempt == 4:
+                raise Blocked(f"{endpoint}: non-JSON body after {attempt} attempts") from e
+            time.sleep(2 * attempt)
             continue
         if body.get("error_code"):
             raise Blocked(f"{endpoint}: {body.get('error_description')}")
@@ -400,7 +422,9 @@ def out_of_scope(archive: str) -> str | None:
 
     The trap this exists for: the corpus holds Oostende and Bredene acts from Zeeuws
     Archief and Historisch Centrum Limburg, which look like Belgian archives and are not.
-    They are only in the corpus because every API harvest was filtered `country_code=be`.
+    They are in the corpus because an API harvest is filtered by country, and `be` is the
+    default — `--country nl` is now a deliberate choice a caller can make, which is what
+    makes saying "in scope" out loud matter more rather than less.
     Their EXPORTS are the whole archive — Zeeuws Archief alone is millions of Dutch
     records — so pulling one floods the corpus with material no objective in CLAUDE.md
     asks for, and skews the fallback rarity weights in `frequencies()` toward Dutch name
@@ -632,7 +656,8 @@ def cmd_oai(args):
 # ---------- commands ----------
 
 
-def surname_harvest_id(surname: str, place: str | None = None) -> str:
+def surname_harvest_id(surname: str, place: str | None = None,
+                       country: str = DEFAULT_COUNTRY) -> str:
     """One id per surname, minted in one place.
 
     It was minted in two: `surname` slugged the name and `frontiers` used the project's
@@ -641,16 +666,21 @@ def surname_harvest_id(surname: str, place: str | None = None) -> str:
     finding whichever one it happened to ask for. The family key wins because it is
     already the project's answer to "are these the same family name".
     """
-    return family_key(surname) + (f"-{slug(place)}" if place else "")
+    return (family_key(surname)
+            + (f"-{slug(place)}" if place else "")
+            # The default country is left out of the id so every harvest recorded before
+            # this argument existed keeps its name and is not re-fetched from scratch.
+            + ("" if country == DEFAULT_COUNTRY else f"-{slug(country)}"))
 
 
 def cmd_surname(args):
-    params = {"name": args.surname, "country_code": "be"}
+    params = {"name": args.surname, "country_code": args.country}
     if args.place:
         params["eventplace"] = args.place
+    where = COUNTRY_NAMES.get(args.country, args.country.upper())
     harvest(
-        surname_harvest_id(args.surname, args.place),
-        f'Surname "{args.surname}"' + (f" at {args.place}" if args.place else "") + ", Belgium",
+        surname_harvest_id(args.surname, args.place, args.country),
+        f'Surname "{args.surname}"' + (f" at {args.place}" if args.place else "") + f", {where}",
         params, args.max, args.refresh,
     )
 
@@ -659,10 +689,11 @@ def cmd_place(args):
     # The API has no year filter, so a commune harvest is a whole-commune harvest and
     # the years are applied when the corpus is read. Saying so rather than silently
     # pulling 262,000 Oostende records under a --from that does nothing.
+    where = COUNTRY_NAMES.get(args.country, args.country.upper())
     harvest(
-        f"place-{slug(args.place)}",
-        f'Commune "{args.place}", Belgium',
-        {"name": "*", "eventplace": args.place, "country_code": "be"},
+        f"place-{slug(args.place)}" + ("" if args.country == DEFAULT_COUNTRY else f"-{slug(args.country)}"),
+        f'Commune "{args.place}", {where}',
+        {"name": "*", "eventplace": args.place, "country_code": args.country},
         args.max, args.refresh,
     )
 
@@ -848,12 +879,19 @@ def main() -> int:
         p.add_argument("--refresh", action="store_true", help="re-fetch what is already held")
         return p
 
-    p = common(sub.add_parser("surname", help="every Belgian record for one surname"))
+    def scoped(p):
+        p.add_argument("--country", default=DEFAULT_COUNTRY, metavar="CC",
+                       help="ISO country code the venue filters on (default be). A harvest "
+                            "outside the default is filed under its own id, so it neither "
+                            "overwrites nor is overwritten by the Belgian one.")
+        return p
+
+    p = scoped(common(sub.add_parser("surname", help="every record for one surname, Belgium by default")))
     p.add_argument("surname")
     p.add_argument("--place", help="narrow to one commune")
     p.set_defaults(fn=cmd_surname)
 
-    p = common(sub.add_parser("place", help="every Belgian record for one commune"))
+    p = scoped(common(sub.add_parser("place", help="every record for one commune, Belgium by default")))
     p.add_argument("place")
     p.set_defaults(fn=cmd_place)
 

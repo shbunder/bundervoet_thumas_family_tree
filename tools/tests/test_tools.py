@@ -1230,15 +1230,26 @@ def test_every_validator_check_at_least_runs():
 
     This asserts only that each check is callable against the real tree, not what it concludes;
     the conclusions have their own tests. An ImportError or a signature change fails here.
+
+    THE ARGUMENTS HAVE TO BE THE REAL ONES. `_check_links` takes the set of registered source
+    ids and reports a citation to anything outside it, so passing `set()` here — as this did —
+    quietly asserts that no link anywhere cites a source. That held only while no link ever
+    did. The moment one carried a `source:`, which README documents as the whole point of
+    link-level citation, this failed with a list of sources that are in fact registered. A
+    smoke test stubbed with an empty collection is not testing the check; it is testing the
+    stub, which is the same mistake the docstring above already warns about.
     """
     import check_data
     from familytree.people import children_index, load_config, load_people
+    from familytree.sources import load_sources
     people = load_people(load_config()["roster"])
+    sites, pages = load_sources()
+    source_ids = {s["id"] for s in [*sites, *pages]}
     report = check_data.Report()
     check_data._check_forenames(report)
     check_data._check_plausibility(report, people, children_index(people))
     check_data._check_labels(report, people)
-    check_data._check_links(report, people, load_config()["meta"], set())
+    check_data._check_links(report, people, load_config()["meta"], source_ids)
     assert not report.errors, report.errors
 
 

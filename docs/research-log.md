@@ -4604,3 +4604,99 @@ treats 429 and 5xx as; and `cmd_surname` should take a country rather than hardc
 `country_code: "be"`, which is why the Dutch harvest had to be driven by importing the
 module in the first place. Until the first is fixed, **any large harvest can die silently
 and record nothing**, which is a worse failure than a slow one.
+
+## 80. Two tools fixes: a harvest that can no longer die silently, and a country that is a default rather than a limit
+
+§79 argued for both of these and deliberately did not make them. Made now, on request.
+
+**1. `api()` no longer treats a non-JSON 200 as a crash.** Open Archives under load answers
+with an HTML error page or an empty body and a success status. That was the only failure
+mode `api()` did not catch, and the consequence was out of all proportion to the cause:
+raised inside `fetch_acts`'s thread pool it propagated out of `pool.map`, past
+`save_manifest`, so a harvest recorded **nothing** while leaving its mentions file and
+however many acts it had managed on disk. A later run saw no manifest entry, started over,
+and hit the same wall — which is exactly what happened twice to the Dutch harvest.
+
+It is now retried four times with backoff and then raised as `Blocked`, the class this
+project already uses for "never reached the material". **That is what makes the fix
+work**, and it is worth being precise about why: `fetch_acts`'s inner `fetch()` already
+catches `Blocked` per act and returns it as an error rather than raising. So a bad response
+now costs one act, the run continues, and `save_manifest` still records what was actually
+fetched. A harvest can still come back incomplete — but it says so in the manifest instead
+of claiming it never ran. **Dying slowly is recoverable; dying silently and lying about it
+is not.**
+
+**2. `country_code` is a parameter with `be` as its default.** `cmd_surname` hardcoded
+`"be"`, and one string made 176 Dutch Bundervoet records — including the whole
+17th-century Bergen op Zoom and Rotterdam family — unreachable through the tool at all,
+invisible to `link.py`, to the blocking index and to the scorer. `surname` and `place` now
+take `--country`, defaulting to `be` because that is where every objective in CLAUDE.md
+lives.
+
+The harvest id keeps the default country **out** of the name, so `bundervoet` stays
+`bundervoet` and no harvest recorded before this argument existed is re-fetched;
+`--country nl` files itself as `bundervoet-nl`, which neither overwrites nor is overwritten
+by the Belgian one. `out_of_scope()`'s docstring is corrected too — it used to explain the
+Zeeuws Archief trap by saying every API harvest was filtered `country_code=be`, which is no
+longer true, and the guard it describes still applies to whole-archive `bulk`/`oai` pulls
+rather than to a surname search.
+
+Neither change touches how anything is scored, matched or grafted.
+
+**3. A test that was asserting against a stub.** Fixing the two above surfaced a third
+thing. `test_every_validator_check_at_least_runs` called
+`_check_links(report, people, meta, set())` — and that fourth argument is the set of
+**registered source ids**, against which the check reports any citation it cannot find. An
+empty set therefore asserts that *no link anywhere cites a source*, which was true only
+while no link ever had. Today's records are the first to carry `source:` on a link, which
+`README.md` documents as the entire point of link-level citation, and the test failed
+listing sources that are in fact registered — while `check_data.py` itself stayed green,
+because it passes the real set.
+
+The test now builds that set the way `main()` does. Its own docstring already warns against
+"a test written against a check that had nowhere to report to"; passing a stub collection is
+the same mistake one level up, and it is worth stating because a smoke test that can only
+pass while a feature is unused will go green for years and then fail on the first correct
+use of it.
+
+**The harvest, run through the fixed code, and what it proves.** 176 mentions, 174 acts,
+**two acts skipped with a stated reason** (`ghn:…: non-JSON body after 4 attempts`) and the
+manifest written — where the same run twice recorded nothing. The corpus went 392 → **566**
+Bundervoet mentions, and `link.py` can see the Dutch component for the first time: it scores
+[[bundervoet_livinus_1788]] at **50.0 bits, 2 independent identifiers** against his own
+Rotterdam death act of 1872, and [[bundervoet_egidius]] at 38.0 bits against the 1853 Gent
+death act that names him as Maria Francisca Ledent's husband. Both are facts already
+recorded from the images, so neither is a new graft — what is new is that the scorer can
+reach them at all.
+
+## 81. Something is duplicating files into the working tree, and the build wrote 2,803 bad links before noticing
+
+Not research. An incident, recorded because it will recur and because it came close to
+entering a commit.
+
+**679 copies** appeared in the working tree — `bocklandt_alphonsus 3.md`,
+`bogaert_petronilla 2.md`, `data/lineages 3.json`, `research/labels 2.jsonl`, and a **5 GB
+`research/harvest/corpus 2.db`**. All untracked, all mode 600, names suffixed ` 2`/` 3`,
+mtimes preserved from their originals. That is the signature of a sync or backup client
+making conflict copies (Dropbox and iCloud both do this), not of anything in this
+repository.
+
+**Why they are not harmless.** `people.on_disk()` is `glob("*.md")` with no filter, so the
+roster picked all of them up. Each copy carries the **same `id:` as its original**, so
+`load_people` collapsed 1348 files back to 809 people and the site was never wrong — but
+`build.py` writes edges to `data/people/` **before** validation decides whether to generate.
+That pass walked the copies, resolved their filename stems as ids, and wrote **2,803 sibling
+links across 333 tracked records** — `- id: bocklandt_caesar_1867 2`, and so on — and only
+then failed with "Validation failed — nothing was generated". The generated output was
+correctly withheld; the *source records* had already been mutated.
+
+Recovered by moving all 679 out of the tree — moved, not deleted — and
+`git checkout -- data/people`, which was exact rather than a guess because the preceding
+commit was green and no intended `data/` edit had been made since.
+
+**The finding worth acting on is the ordering.** A build that mutates tracked source records
+before it knows the tree is valid turns any foreign file in `data/people/` into a corruption
+of records that have nothing to do with it. Two cheap defences, neither made here: have
+`on_disk()` ignore filenames that cannot be ids — a stem with a space is never a valid id —
+and write edges only after validation passes. The first alone would have made this incident
+nothing at all.
