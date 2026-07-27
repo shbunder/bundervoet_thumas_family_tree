@@ -26,12 +26,20 @@
     // "Renée & Léon Bundervoet" rather than the surname twice. The names come from the
     // records, not from the markup, so a page cannot go on naming somebody the data no
     // longer calls the root.
-    const rootIds = (meta.roots?.length ? meta.roots : [meta.root]).filter(id => people[id]);
-    const surname = people[rootIds[0]].surname;
-    const shared = surname && rootIds.every(id => people[id].surname === surname);
-    const rootNames = shared
-      ? `${rootIds.map(id => people[id].name.replace(surname, '').trim()).join(' & ')} ${surname}`
-      : rootIds.map(id => people[id].name).join(' & ');
+    //
+    // `named`, not `roots`. A root is an entry point into the forest, and objective 3
+    // adds one every time a disconnected Bundervoet family gets a documented head —
+    // none of which makes this any less Renée and Léon's tree. Reading `roots` here put
+    // a Gent patriarch in the page title; `named` is the short, deliberate list of who
+    // the tree is of, and `roots` only stands in for it if the key is missing.
+    const namedIds = (meta.named?.length ? meta.named : meta.roots || [meta.root]).filter(
+      id => people[id]
+    );
+    const surname = people[namedIds[0]].surname;
+    const shared = surname && namedIds.every(id => people[id].surname === surname);
+    const treeNames = shared
+      ? `${namedIds.map(id => people[id].name.replace(surname, '').trim()).join(' & ')} ${surname}`
+      : namedIds.map(id => people[id].name).join(' & ');
     const rootShort =
       people[meta.root].name.replace(surname || '', '').trim() || people[meta.root].name;
 
@@ -143,7 +151,7 @@
       // Every number the page states about itself comes from the census in the
       // bundle, so nothing here has to be kept in step by hand as people are added.
       const c = meta.census;
-      document.title = i18n.t('treeOf', { names: rootNames });
+      document.title = i18n.t('treeOf', { names: treeNames });
       $('pagetitle').textContent = document.title;
       $('subtitle').textContent = [
         i18n.t('countPeople', { n: c.total }),
@@ -152,8 +160,8 @@
         i18n.t('countMarriedIn', { n: c.others }),
       ].join(' · ');
 
-      $('homeBtn').textContent = `⌂ ${rootNames}`;
-      $('linehint').textContent = i18n.t('lineHint', { names: rootNames });
+      $('homeBtn').textContent = `⌂ ${treeNames}`;
+      $('linehint').textContent = i18n.t('lineHint', { names: treeNames });
       $('tip').textContent = i18n.t(FT.canHover() ? 'hoverTip' : 'tapTip');
 
       // The side panel measures from the root, so it is the root that it names.

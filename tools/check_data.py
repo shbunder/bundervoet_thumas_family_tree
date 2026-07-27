@@ -283,6 +283,17 @@ def main(argv: list[str] | None = None) -> int:
     for r in meta["roots"]:
         if r not in people:
             report.fail(f'meta.json: roots entry "{r}" does not exist')
+
+    # `named` is whose tree the page says it is, and it is deliberately not `roots`:
+    # objective 3 gives every disconnected Bundervoet family a root, and the title is
+    # not theirs. Empty is a failure rather than a fallback — the page would silently
+    # go back to naming itself after all the roots.
+    named = meta.get("named") or []
+    if not named:
+        report.fail("meta.json: named is empty — nobody for the page to say the tree is of")
+    for r in named:
+        if r not in people:
+            report.fail(f'meta.json: named entry "{r}" does not exist')
     if meta["defaultSource"] not in source_ids:
         report.fail(f'meta.json: defaultSource "{meta["defaultSource"]}" is not registered')
 

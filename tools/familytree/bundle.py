@@ -44,6 +44,9 @@ def build_bundle() -> str:
         _call("meta", {
             "root": config["root"],
             "roots": meta["roots"],
+            # Who the tree is OF, which is not the same list as where it starts —
+            # objective 3 keeps adding roots and none of them belongs in the title.
+            "named": meta["named"],
             "defaultSource": resolve(meta["defaultSource"]),
             # Counted here rather than in the browser so that the landing page, which
             # loads no JavaScript at all, and this page cannot disagree about how big

@@ -15,7 +15,7 @@ Markdown prose below it for everything a field cannot hold.
 ```
 data/people/<id>.md     strict frontmatter + prose body
 data/artifacts/<id>.*   a saved primary document + a record describing it
-data/meta.json          roots, the default source, confidence codes
+data/meta.json          roots, who the tree is named for, the default source, confidence codes
 data/lineages.json      the surname chains
 data/forenames.json     forenames that are one name in another language, split by sex
 ```
@@ -40,7 +40,7 @@ Renee-Leon-family-tree.html     the interactive tree (page shell only)
 
 data/people/<id>.md             source of truth: strict frontmatter + prose body
 data/artifacts/<id>.*           a saved primary document + a record describing it
-data/meta.json                  roots, the default source, confidence codes
+data/meta.json                  roots, who the tree is named for, the default source, confidence codes
 data/lineages.json              the surname chains
 data/forenames.json             forenames that are one name in another language, by sex
 

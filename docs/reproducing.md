@@ -100,7 +100,8 @@ The parts that are specific, and what to change:
 
 | What | Where | Note |
 |---|---|---|
-| The roots | `data/meta.json` | Takes a list — a forest is fine |
+| The roots | `data/meta.json` | `roots` takes a list — a forest is fine |
+| Whose tree it is | `data/meta.json` | `named` — the page title, kept apart from `roots` so a new forest root does not rename the site |
 | Surname lineages | `data/lineages.json` | `head` is walked up through father-links |
 | Page wording | `site/labels.json` | Presentation only; carries no facts |
 | Venue registry | `research/sources.json` | Sites and pages, with what each has yielded |
