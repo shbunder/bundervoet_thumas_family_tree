@@ -57,3 +57,8 @@ sixteen days after his father's death on 26 July 1866.
 FamilySearch's ark (3:1:QZ9J-PQZ) and film 001358587 both returned HTTP 403
 unauthenticated this pass — a one-request retry once a session exists, not a miss (the
 material was never reached).
+
+**RE-CONFIRMED A SECOND TIME (2026-07-27)**, independently of the 1868 Pieren remarriage
+act above: [[hermanie_janssen]]'s own 1872 marriage act (Oostende, act nr. 93, RAB ID
+582203) also restates his death as 26/07/1866 Oostende — a third document, wholly
+separate register and volunteer batch, agreeing to the day.

@@ -28,5 +28,10 @@ conflated (see `rab-bs-overlijdens`'s note, and the corrections on [[irma_vincke
 date, so treat it as unverified until a second source is read. He shares
 his first two forenames with an elder brother, [[camillusgustavus_vi05]], born six years
 earlier — a second such reuse in this family is plausible (the pattern is already
-documented twice over on [[theophil_vincke]]'s own children) but no death act for either
-brother has been found, so it is not asserted.
+documented twice over on [[theophil_vincke]]'s own children).
+
+**UPDATE (2026-07-27):** [[camillusgustavus_vi05]]'s own death act has since been found
+(Oostende, 29 November 1905, age about seven months) — see his record. That resolves his
+fate but not this one's: **no death act for Camillus Henricus has been found** in this
+venue's transcribed window, so whether the reuse of "Camillus" followed a death in this
+case too remains open, not asserted.

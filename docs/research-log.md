@@ -3562,3 +3562,164 @@ collection id, with the artifact file as the underlying evidence.
 
 Tree: 508 → 516 people. Build green. Verdict NOT PROVEN — the pass's own headline frontier,
 the parents of [[antoine_vanald]] and [[brigitte_wyllie]], stayed open.
+
+## 71. Autopilot pass 8 (down) — nine different Joannes Vaniseghem, a sibship, and a date that could not be written
+
+Entirely a `vrijwilligersrab` volunteer INDEX/Detail transcription pass on
+[[joannes_vi2]] × [[hermanie_janssen]], Oostende — no register image was read anywhere in
+it, so every fact below is `sup`, never `doc`. Every result reproduces without a login:
+`curl -X POST https://www.vrijwilligersrab.be/en/node/114 --data-urlencode "naam=Van Iseghem"`
+(`/164` for deaths, `/148` for marriages; Detail views are GETs to `/160`, `/168`, `/172`).
+
+**THE IDENTIFIER THAT MAKES THE WHOLE SIBSHIP SAFE.** "Joannes Vaniseghem" is not, alone,
+an identifier in this venue: grouping every VANISEGHEM Joannes father row in the
+province-wide birth index by the named mother turns up **at least nine different men
+recorded identically as "Joannes Vaniseghem"**, paired with nine different wives (Piesens
+Sophia, Werbrouck Barbara, Dekegelaere Philippina, Demeyer Maria, Carette Virginia, Lycke
+Isabelle, Vanhaecke Justine/Christina, and ours). So the father's forename alone does not
+clear CLAUDE.md rule 1 — **the pair, both parents' full names written in full, is the
+two-identifier minimum**, and no row anywhere in the province pairs "Joannes" with any
+mother but Hermania/Hermina Ludovica Janssen. This is what grounds everything below.
+
+**SEVEN NEW SIBLINGS GRAFTED, [[eduardus_vi]] having held only himself before now:**
+[[arthur_vi]] (17/03/1874, act 140, RAB ID 1486295 — m. Elodia Joanna Schellynck 1901,
+remarried Judith Maria Debbaut 1936, the 1936 act's Previous Partners table naming the
+1901 bride so this is the same man remarrying, not a ninth child), [[augustus_vi]]
+(13/08/1875, act 417, ID 1486298 — d. 04/01/1876, age 4mo22d, exact against the birth
+date by computation), [[leontius_vi]] (act 541, ID 2042291 — see below), [[gustavus_vi]]
+(05/01/1878, act 13, ID 1486318 — single-sourced, no second act found), [[joannes_vi83]]
+(21/03/1883, act 232, ID 1486324 — d. 04/09/1883, the death Detail's own Birth Date field
+restating 21/03/1883 exactly), [[ludovicus_vi]] (20/02/1888, act 139, ID 1486336 — d.
+16/06/1889, ongehuwd, Detail Birth Date restating 20/02/1888 exactly) and [[joannes_vi91]]
+(16/05/1891, act 415, ID 1486325 — m. Bertha Martha Coenye 1911, groom's own stated birth
+matching exactly). Six of the eight therefore carry a second, independent identifier from
+a separately-transcribed act; only [[gustavus_vi]] rests on the birth row alone. Filtering
+the province-wide index separately by father-name and by [[hermanie_janssen]]'s own
+surname returns the identical eight RAB IDs on both sides — no ninth child, no rival
+couple. **No sex is stated on any birth row** (Sex/Hour/Street/parents' ages all blank);
+only one Detail view (1486308, [[eduardus_vi]]'s own) was actually fetched to confirm
+this, and it is not asserted for the other seven rows on that basis alone — sex is
+recorded on the new records only where a separate act states it structurally (a death
+Detail's "Sex M", or a marriage act's groom/bride role), never from the birth row and
+never from a forename.
+
+**A DATE THAT COULD NOT BE WRITTEN, the third time today this trap has appeared (after
+§67 and §70).** [[leontius_vi]] (Leontius Josephus)'s row, act 541, RAB ID 2042291, has an
+**empty Birth Date column** and only a Certificate Date of 24/10/1876. No bound is
+recorded — not even "born before 1876-10-24" — because whether this venue's certificates
+were filed same-day or days later is not established; his record holds `birth.place:
+Oostende` and no date field at all, with the certificate date stated only in prose. He
+sits chronologically between siblings born August 1875 and January 1878.
+
+**TWO UNNAMED INFANT DEATHS — no name, no id, no person file (CLAUDE.md rule 5), reached
+only because the death index, unlike the birth or marriage index, carries children who
+never lived to be named.** Oostende 18/11/1878 (act 626, ID 264403): Sex M, father
+comparant "VANISEGHEM Joannes, 26, Werkman … vader", mother 25 — both ages consistent
+with this couple, no age at death given. Oostende 06/11/1879 (act 570, ID 266409):
+Detail entirely blank; 1879 has no Van Iseghem birth row at Oostende at all. Both are
+transcribed "Sn" in the Deceased field. **"Sn" is a name-position code, not a sex
+marker** — the codes compound ("VANISEGHEM Sn Vr", "DEVLOO Sn Ml"), read off the corpus
+itself since the venue's own Vocabularium does not define the code; Sn means registered
+without a forename, and Ml/Vr carry sex separately. **The searcher's count is corrected
+here: only 33 of the claimed 71 "Sn" rows reproduce** on a second read across the Van
+Iseghem and Janssen result sets; the other 38 are not claimed. Zero of the 33 name a
+Partner, most name both parents — the signature of a newborn registration, never an
+adult's. Recorded as **"unnamed child"**, never "stillborn": the death Detail form has no
+"Stillborn" field at all (only the birth form does), so that distinction needs the
+register image. The hypothesis that the 1878 row is [[gustavus_vi]] dying at ten months
+is **rejected**: every other child of this couple who died after being named appears in
+this index *under that name*, so a named child being transcribed "Sn" instead would break
+the venue's own demonstrated convention — "Sn" is consistent only with a child never
+named. Both unnamed infants are recorded as a frontier note on [[joannes_vi2]] and
+[[hermanie_janssen]], not linked.
+
+**TWO NEGATIVES, NARROWED RATHER THAN CLOSED.** (1) [[leontius_vi]] and [[gustavus_vi]]
+have no death and no marriage anywhere in this venue. Scope actually covered: Oostende
+deaths 1800–1939 (corrected from a searcher's stated 1799); Stene carries only 2 rows for
+this surname in the whole file (1933, 1936), too thin to confirm or refute the claimed
+1915 lower bound for Stene coverage; marriages 1872–1936; both parent-side filters run
+each time. Four alternatives remain open: death after 1939; death at Stene before 1915;
+death outside West-Vlaanderen entirely — this family demonstrably moved, since
+[[eduardus_vi]]'s son [[joannes_vi]] was born at Lens, France; or an unmatched name-form.
+(2) "No unrecorded daughter" of this couple: "Hermania Ludovica" appears exactly 5 times
+in the province-wide marriage file — once as a bride, four times as "Mother of the
+Groom", never as "Mother of the Bride". Real, but it overreaches to call it closed: this
+same couple is shown above to have had at least one child die before ever being named —
+exactly what a marriage sweep cannot catch. Recorded as **"no unrecorded daughter who
+lived to marry within this venue's window"**, not as "ruled out".
+
+**THE THREE-GENERATION CHAIN, STATED IN A CIVIL ACT'S OWN WORDS.** [[joannes_vi2]]'s own
+death act — Stene, 13 November 1933, act nr. 40, RAB ID 2184011 — is the only source in
+this tree stating the [[joannes_vi2]] → [[eduardus_vi]] link in a document's own words:
+the two comparants are family, each stating their own relation — "VANISEGHEM Eduard, 50,
+boodschapper, Stene, *zoon*" and "VANISEGHEM Joannes, 30, werkman, Stene, *kleinzoon*".
+The son is [[eduardus_vi]] (whose 1901 brother's own marriage act separately gives him
+the same trade); the grandson, aged 30 in 1933, fits [[joannes_vi]] (b. 11/05/1903)
+almost exactly — a second, previously unclaimed corroboration of the chain, alongside the
+one the act states outright. Eduard's declared age, 50, is two years light (he turned 53
+sixteen days later) — flagged, not smoothed. The Detail's own Birth Date field
+(25/09/1852, Oostende) matches this record to the day, and widowerhood is stated to
+"JANSSEN Hermania Ludovica". [[hermanie_janssen]]'s own death act (Oostende, 13/11/1926,
+act 611, ID 2201502) independently confirms her own birth date and both partner names.
+**A curiosity, explicitly weightless**: the two deaths fall on the same day-of-year,
+seven years apart; a frequency check across 1,521 dated rows shows 13/11 occurring 7
+times, in line with the base rate (9–12 for other day/month pairs) — genuine, not
+evidence of anything.
+
+**BONUS — the couple's own 1872 marriage act, and three re-confirmed deaths a generation
+up.** Oostende, 23 August 1872, act nr. 93, RAB ID 582203, gives both spouses' birth
+dates exactly as held (previously resting on the single Geneanet tree `tree-gverdievel`
+alone) and names all four parents — matching [[joannes_jos_vi]] × [[anna_gautiert]] and
+[[josephus_janssen]] × [[appolonia_huyghebaert]] exactly. It also restates the previous
+generation's own deaths: [[joannes_jos_vi]] 06/11/1861, [[anna_gautiert]] 26/05/1860 and
+[[josephus_janssen]] 26/07/1866 — the last of these an independent *second*
+re-confirmation, since §66 had already corroborated it from a different act (Appolonia's
+1868 remarriage). All three records now cite `rab-bs-huwelijken` alongside
+`tree-gverdievel`.
+
+**A FRAMING CORRECTION.** Camillus Gustavus Van Iseghem is not "a sixth child not in the
+tree" — [[camillusgustavus_vi05]] already held him. What is new is his death: Oostende,
+29/11/1905, act 810, ID 500127, Sex M, Detail Birth Date 25/04/1905 exactly matching his
+held birth — a second identifier the record lacked before. The mother is written "VINCKE
+Emma Coleta" here against "Emma Celesta" elsewhere; `data/forenames.json` folds
+celesta~celestina/celestine but not coleta/colette, so this pair is not covered by that
+table — recorded as a variant, not resolved into the fold file, since the identity does
+not depend on it (the father's rare full name plus the exact date already give two
+identifiers). Both parents are recorded "Ongehuwd", aged 25 — dating their relationship
+to at least 1905, two years before their actual 1907 marriage, which bears on the open
+legitimation frontier on [[joannes_vi]] (b. Lens 1903) and [[flavie_vi]] (b. Diksmuide
+1898 under the surname Vincke) — added to that frontier's evidence, not resolved by it.
+[[camillushenricus_vi11]]'s own record is corrected: it no longer says "no death act has
+been found for either brother" — only Camillus Henricus's own fate is still open.
+
+**NOT PROVEN, NOT GRAFTED — a child of [[joannes_vi]] × [[adrienne_dv]].** "VAN ISEGHEM
+Roger Bernard", Stene, d. 27/02/1929, act 10, RAB ID 2148819, names both parents in full,
+eleven months after their 1928 marriage. Two identifiers are present, but no Detail view
+was fetched — no sex, no birth date, no age — so no record is created; recorded as a
+frontier on both parents' records, naming the one document that would settle it (GET
+`/en/node/172`, ID 2148819).
+
+**A venue fact, partly verified.** "Van Yseghem" is confirmed a genuinely different key
+(25 rows, none this family); "Vaniseghen" confirmed 0 rows; the Janssen double-filter is
+fully verified (all eight RAB IDs appear identically from that side). But the claim that
+"Vaniseghem" and two-word "Van Iseghem" return byte-for-byte the same 1568 rows could
+**not** be verified — only the one-word capture survived in scratch, so there is nothing
+to diff against. Recorded as unconfirmed, not confirmed.
+
+**An open question, not resolved.** `research/labels.jsonl` already carries roughly
+twenty entries using a synthetic ref of the form `vrijwilligersrab-<slug>` for exactly
+this situation (a hit with no harvested act id in the local corpus). This pass followed
+the instruction not to extend that pattern, since none of this pass's RAB IDs exist in
+the corpus `link.py` reads (`evaluate.py refs` would find nothing to label against). The
+two conventions are now in tension and neither is resolved here — no new label added, no
+existing label retro-edited.
+
+**Seven new records:** [[arthur_vi]], [[augustus_vi]], [[leontius_vi]], [[gustavus_vi]],
+[[joannes_vi83]], [[ludovicus_vi]], [[joannes_vi91]]. `research/sources.json` updated on
+`rab-bs-geboorten`, `rab-bs-huwelijken` and `rab-bs-overlijdens` (yield and, for the
+death index, the "Sn" code note); no page-level entries created for the individual RAB
+acts, following the standing convention. No labels recorded (see above).
+
+Tree: 516 → 523 people. Build green. Verdict ACCEPTED for the sibship (on the parent-pair
+identifier), NOT PROVEN for [[leontius_vi]] and [[gustavus_vi]]'s own fates, and for the
+Roger Bernard frontier.

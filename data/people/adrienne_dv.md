@@ -43,3 +43,8 @@ marriage act, S20), and the groom's parents as Eduardus Van Iseghem × Emma Cele
 Vincke, matching [[joannes_vi]]'s own held parents. Both sides were already linked in
 this tree; this act supplies the marriage date and place, not a new link. See
 [[joannes_vi]]'s record for a chronology question this same act raises.
+
+**A CHILD NOT IN THE TREE, NOT GRAFTED (2026-07-27).** See [[joannes_vi]]'s record for a
+death-index row naming this couple as parents of "Roger Bernard", Stene, 27/02/1929 —
+sitting eleven months after this marriage. No Detail view was fetched for the row, so no
+sex, birth date or age can be stated, and no record is created.
